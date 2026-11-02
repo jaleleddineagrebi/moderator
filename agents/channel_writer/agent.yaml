@@ -1,0 +1,7 @@
+title: Channel Settings
+role: Saves the approved niche, languages and style to channel.yaml so every later video run uses them.
+inputs: [approved niche]
+outputs: [channel.yaml]
+tools: [file write]
+strategies: [default]
+timeout_s: 60

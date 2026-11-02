@@ -1,0 +1,7 @@
+title: Demo Worker
+role: Simulates work so the engine and dashboard can be tested without real agents.
+inputs: [upstream outputs]
+outputs: [demo_<step>.json]
+tools: [none]
+strategies: [default, careful]
+timeout_s: 120

@@ -1,0 +1,7 @@
+title: Packaging (SEO + Thumbnail)
+role: Writes the title, description and hashtags for each language and designs a vertical thumbnail for each.
+inputs: [script.json, scene clips]
+outputs: [metadata.json, thumbnail_ar.png, thumbnail_fr.png]
+tools: [Claude, Pillow (Arabic shaping via arabic-reshaper + python-bidi), ffmpeg]
+strategies: [default, plain_thumbnail]
+timeout_s: 900

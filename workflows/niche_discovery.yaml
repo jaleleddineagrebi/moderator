@@ -1,0 +1,19 @@
+name: niche_discovery
+title: Niche discovery
+description: Research and rank Shorts niches for Arabic and French audiences, then save the one you pick.
+params:
+  languages: [ar, fr]
+  style: faceless, fast cuts, bold captions, calm narration
+  budget_usd: null      # Claude runs on your plan; set a number to cap the notional cost
+settings:
+  max_retries: 2
+steps:
+  - id: scout
+    title: Rank niches
+    agent: niche_scout
+    checkpoint: {id: N, title: Pick your channel niche, type: choice}
+  - id: save
+    title: Save channel settings
+    agent: channel_writer
+    depends_on: [scout]
+    with: {checkpoint: N}

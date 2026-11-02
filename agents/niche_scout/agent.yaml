@@ -1,0 +1,7 @@
+title: Niche Scout
+role: Researches YouTube Shorts niches for Arabic and French audiences and ranks the best ones for a faceless channel.
+inputs: [languages, style, optional focus]
+outputs: [niches.json, niches.md]
+tools: [Claude web search, YouTube Data API (if key set)]
+strategies: [web_and_youtube, web_only_broader, web_only_fewer_candidates]
+timeout_s: 1800

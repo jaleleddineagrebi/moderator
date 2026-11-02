@@ -1,0 +1,7 @@
+title: QA Reviewer
+role: Checks length, 9:16 format, caption sync, audio levels, spelling and copyright safety, and sends work back to the responsible agent when something fails.
+inputs: [final videos, captions, timings, script.json, metadata.json, licenses]
+outputs: [qa_report.json, qa_report.md]
+tools: [ffprobe, ffmpeg ebur128, Claude (language review)]
+strategies: [full_review, full_review, technical_only]
+timeout_s: 1200

@@ -1,0 +1,39 @@
+name: demo
+title: Demo pipeline
+description: Fake steps that exercise parallel branches, a retry, a reviewer revision and all checkpoint types.
+settings:
+  max_retries: 2
+  max_revision_rounds: 1
+steps:
+  - id: ideas
+    title: Find ideas
+    agent: demo_worker
+    with: {seconds: 4, choices: 3}
+    checkpoint: {id: A, title: Pick an idea, type: choice}
+  - id: draft
+    title: Write draft
+    agent: demo_worker
+    depends_on: [ideas]
+    with: {seconds: 4}
+    checkpoint: {id: B, title: Approve the draft}
+  - id: images
+    title: Make images
+    agent: demo_worker
+    depends_on: [draft]
+    with: {seconds: 6, fail_first: true}
+  - id: audio
+    title: Make audio
+    agent: demo_worker
+    depends_on: [draft]
+    with: {seconds: 5}
+  - id: assemble
+    title: Assemble
+    agent: demo_worker
+    depends_on: [images, audio]
+    with: {seconds: 4}
+  - id: review
+    title: Review
+    agent: demo_worker
+    depends_on: [assemble]
+    with: {seconds: 3, revise_once: images}
+    checkpoint: {id: C, title: Final approval, route_to: assemble}

@@ -1,0 +1,87 @@
+name: Upload Short
+
+# Runs only when the repository owner comments /approve or /reject on a "short-review" issue.
+# This comment is the human approval required before anything is published.
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: read
+  issues: write
+  actions: read     # download the artifact from the generate run
+
+jobs:
+  decide:
+    if: >-
+      !github.event.issue.pull_request &&
+      contains(github.event.issue.labels.*.name, 'short-review') &&
+      github.event.comment.user.login == github.repository_owner &&
+      (startsWith(github.event.comment.body, '/approve') || startsWith(github.event.comment.body, '/reject'))
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GH_TOKEN: ${{ github.token }}
+      ISSUE: ${{ github.event.issue.number }}
+      COMMENT: ${{ github.event.comment.body }}
+      ISSUE_BODY: ${{ github.event.issue.body }}
+    steps:
+      - name: Read the request
+        id: req
+        run: |
+          run_id=$(printf '%s' "$ISSUE_BODY" | tr -d '\r' | sed -n 's/^<!-- run_id: \([A-Za-z0-9_]*\) -->$/\1/p' | head -1)
+          gh_run_id=$(printf '%s' "$ISSUE_BODY" | tr -d '\r' | sed -n 's/^<!-- gh_run_id: \([0-9]*\) -->$/\1/p' | head -1)
+          first=$(printf '%s' "$COMMENT" | head -1 | tr -d '\r')
+          case "$first" in
+            /reject*) action=reject ;;
+            "/approve public"*) action=approve; privacy=public ;;
+            "/approve unlisted"*) action=approve; privacy=unlisted ;;
+            *) action=approve; privacy=private ;;
+          esac
+          if [ -z "$run_id" ] || [ -z "$gh_run_id" ]; then echo "Issue body has no run markers" >&2; exit 1; fi
+          { echo "run_id=$run_id"; echo "gh_run_id=$gh_run_id"; echo "action=$action"; echo "privacy=${privacy:-private}"; } >> "$GITHUB_OUTPUT"
+
+      - name: Reject
+        if: steps.req.outputs.action == 'reject'
+        run: |
+          gh issue comment "$ISSUE" -R "$GITHUB_REPOSITORY" --body "Rejected. Nothing was uploaded."
+          gh issue close "$ISSUE" -R "$GITHUB_REPOSITORY" --reason "not planned"
+
+      - uses: actions/checkout@v4
+        if: steps.req.outputs.action == 'approve'
+
+      - uses: astral-sh/setup-uv@v6
+        if: steps.req.outputs.action == 'approve'
+        with:
+          python-version: "3.12"
+
+      - name: Download the videos
+        if: steps.req.outputs.action == 'approve'
+        uses: actions/download-artifact@v4
+        with:
+          name: short-${{ steps.req.outputs.run_id }}
+          path: runs/${{ steps.req.outputs.run_id }}
+          run-id: ${{ steps.req.outputs.gh_run_id }}
+          github-token: ${{ github.token }}
+
+      - name: Upload to YouTube
+        if: steps.req.outputs.action == 'approve'
+        env:
+          YOUTUBE_TOKEN_AR: ${{ secrets.YOUTUBE_TOKEN_AR }}
+          YOUTUBE_TOKEN_FR: ${{ secrets.YOUTUBE_TOKEN_FR }}
+          RUN_ID: ${{ steps.req.outputs.run_id }}
+          PRIVACY: ${{ steps.req.outputs.privacy }}
+          APPROVER: ${{ github.event.comment.user.login }}
+          PYTHONIOENCODING: utf-8
+        run: |
+          uv sync -q
+          set -o pipefail
+          uv run python -m moderator upload "runs/$RUN_ID" --approved-by "github:$APPROVER" --privacy "$PRIVACY" | tee result.txt
+          { echo "Uploaded:"; echo; sed 's/^/- /' result.txt; } > reply.md
+          gh issue comment "$ISSUE" -R "$GITHUB_REPOSITORY" --body-file reply.md
+          gh issue close "$ISSUE" -R "$GITHUB_REPOSITORY"
+
+      - name: Report a failed upload
+        if: failure() && steps.req.outputs.action == 'approve'
+        run: |
+          gh issue comment "$ISSUE" -R "$GITHUB_REPOSITORY" --body "Upload failed. Logs: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}. Comment /approve again to retry."

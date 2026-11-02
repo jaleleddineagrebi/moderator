@@ -1,0 +1,10 @@
+# Claude runs through headless Claude Code on your existing plan (no API key, no per-token bill).
+llm:
+  model: opus        # opus | sonnet | haiku
+  timeout_s: 900
+
+server:
+  host: 127.0.0.1
+  port: 8765
+
+# Free API keys go in .env (see .env.example). Agents fall back to keyless sources when one is missing.

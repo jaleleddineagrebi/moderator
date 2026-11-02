@@ -1,0 +1,105 @@
+name: Generate Short
+
+# Twice a day: research, script (auto-approved), visuals, voice, edit, QA. Stops before upload and opens an
+# issue for you to review. Nothing is published until you comment /approve on that issue.
+on:
+  schedule:
+    - cron: "0 5 * * *"    # 05:00 UTC (07:00 Cairo / 06:00 Paris in winter)
+    - cron: "0 14 * * *"   # 14:00 UTC (16:00 Cairo / 15:00 Paris in winter)
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: Optional topic inside the niche
+        required: false
+
+permissions:
+  contents: write   # commit history/topics.jsonl
+  issues: write     # open the review issue
+
+concurrency:
+  group: generate-short
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.12"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install ffmpeg and Claude Code
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          npm install -g @anthropic-ai/claude-code
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Generate both Shorts (stops at the final checkpoint)
+        id: gen
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          TOPIC: ${{ github.event.inputs.topic }}
+          PYTHONIOENCODING: utf-8
+        run: |
+          args=(-p 'auto_approve=[A, B]')
+          if [ -n "$TOPIC" ]; then args+=(-p "topic=$TOPIC"); fi
+          uv run python -m moderator run youtube_short --headless "${args[@]}"
+
+      - name: Keep the run folder (videos, thumbnails, reports)
+        if: always() && steps.gen.outputs.run_dir
+        uses: actions/upload-artifact@v4
+        with:
+          name: short-${{ steps.gen.outputs.run_id }}
+          path: |
+            ${{ steps.gen.outputs.run_dir }}
+            !${{ steps.gen.outputs.run_dir }}/assets/raw
+            !${{ steps.gen.outputs.run_dir }}/audio
+          retention-days: 14
+
+      - name: Save topic history
+        if: always()
+        run: |
+          if [ -n "$(git status --porcelain history)" ]; then
+            git config user.name "moderator-bot"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add history
+            git commit -m "Record Short topic ($(date -u +%F))"
+            git pull --rebase -q && git push -q
+          fi
+
+      - name: Open the review issue
+        if: always() && steps.gen.outputs.run_dir
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_DIR: ${{ steps.gen.outputs.run_dir }}
+          RUN_ID: ${{ steps.gen.outputs.run_id }}
+          OUTCOME: ${{ steps.gen.outputs.outcome }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          PYTHONIOENCODING: utf-8
+        run: |
+          uv run python -m moderator summary "$RUN_DIR" > body.md
+          if [ "$OUTCOME" = "waiting" ]; then
+            label=short-review
+            title="Review Short: $RUN_ID"
+            printf '\n\n---\n**Videos:** download the `short-%s` artifact from %s\n\n' "$RUN_ID" "$RUN_URL" >> body.md
+            printf 'Comment `/approve` to upload (private), `/approve public` or `/approve unlisted`, or `/reject` to discard.\n' >> body.md
+          else
+            label=short-failed
+            title="Short generation failed: $RUN_ID"
+            printf '\n\nLogs: %s\n' "$RUN_URL" >> body.md
+          fi
+          printf '\n<!-- run_id: %s -->\n<!-- gh_run_id: %s -->\n' "$RUN_ID" "${{ github.run_id }}" >> body.md
+          gh label create "$label" --force >/dev/null
+          gh issue create --title "$title" --label "$label" --body-file body.md

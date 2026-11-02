@@ -1,0 +1,15 @@
+# secrets
+.env
+api-key.txt
+tokens/
+client_secret*.json
+
+# generated
+runs/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+body.md
+reply.md
+result.txt
