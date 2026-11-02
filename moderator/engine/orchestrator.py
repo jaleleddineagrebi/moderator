@@ -76,7 +76,18 @@ class Orchestrator:
 
     async def _run_step(self, step_id: str) -> None:
         step = self.workflow.step_map[step_id]
-        agent = self.registry.agent(step.agent)
+        try:
+            agent = self.registry.agent(step.agent)
+        except Exception as e:  # noqa: BLE001 - a broken handler must fail the step, not hang the run
+            with self.store.mutate() as d:
+                d["steps"][step_id]["errors"].append({"ts": now_iso(), "attempt": 0, "strategy": "-",
+                                                      "error": f"could not load agent '{step.agent}': {type(e).__name__}: {e}",
+                                                      "trace": traceback.format_exc(limit=6)[-2000:]})
+                d["steps"][step_id].update(status="failed", ended_at=now_iso())
+            self.store.notify(f"Agent '{step.agent}' could not be loaded: {e}", "error", step_id)
+            self.tasks.pop(step_id, None)
+            self.wake.set()
+            return
         strategies = agent.spec.strategies or ["default"]
         max_retries = self.workflow.settings["max_retries"]
         try:

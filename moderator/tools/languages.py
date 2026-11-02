@@ -7,18 +7,19 @@ LANGS = {
         "audience": "Egyptian and wider Arabic-speaking audience (Egyptian dialect is understood across MENA)",
         "writing": ("Egyptian colloquial Arabic (العامية المصرية) exactly as people speak in Cairo, written in Arabic script, "
                     "no diacritics. Use Egyptian words and grammar (مش، إزاي، ليه، عشان، كده، بيـ، هـ for future, ده/دي), "
-                    "not Modern Standard Arabic. Keep it warm, casual and easy to say aloud."),
+                    "not Modern Standard Arabic. Keep it warm, casual and easy to say aloud. Never use Latin letters: "
+                    "write terms in Arabic script (الذكاء الاصطناعي, not AI; يوتيوب, not YouTube)."),
         # first voice is used normally; the others are retry fallbacks
         "voices": ["ar-EG-ShakirNeural", "ar-EG-SalmaNeural"],
-        # measured with ar-EG-ShakirNeural, including the pauses between scenes
-        "words_per_second": 1.75,
+        # measured on a full run with ar-EG-ShakirNeural, pauses between scenes included
+        "words_per_second": 1.5,
     },
     "fr": {
         "name": "French",
         "audience": "French-speaking audience (France, Belgium, Switzerland, Québec, francophone Africa)",
         "writing": 'Natural spoken French, addressing the viewer as "tu". Short sentences, everyday words.',
         "voices": ["fr-FR-HenriNeural", "fr-FR-DeniseNeural", "fr-FR-RemyMultilingualNeural"],
-        "words_per_second": 2.65,
+        "words_per_second": 2.35,
     },
 }
 

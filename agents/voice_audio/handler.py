@@ -6,6 +6,9 @@ from moderator.engine.agent import Agent, StepContext
 from moderator.tools import ffmpeg, tts
 
 SCENE_GAP = 0.18  # breath between scenes, seconds
+MAX_VOICEOVER = 55.0  # above this, re-record faster (the editor adds a short tail; Shorts must stay under 60s)
+TARGET_VOICEOVER = 53.0
+MAX_SPEEDUP = 15  # percent; faster than this starts to sound rushed
 # A-minor / F / C / G pad, 4 seconds per chord. Generated here, so there is no copyright to worry about.
 CHORDS = [(220.00, 261.63, 329.63), (174.61, 220.00, 261.63), (261.63, 329.63, 392.00), (196.00, 246.94, 293.66)]
 
@@ -30,41 +33,20 @@ class Handler(Agent):
         if ctx.feedback:
             ctx.log(f"Revision feedback: {ctx.feedback[-1]['comment']}")
         outputs = {}
-        n_total = len(langs) * len(script["scenes"])
-        done = 0
-        for lang in langs:
+        for li, lang in enumerate(langs):
             voice = tts.voice_for(lang, voice_idx)
             ctx.log(f"Narrating {lang} with {voice}")
-            parts, timings, t = [], [], 0.0
-            for scene in script["scenes"]:
-                part = ctx.path(f"audio/{lang}/{scene['id']}.mp3")
-                words = await tts.synthesize(scene["vo"][lang], voice, part, rate=rate)
-                dur = await ffmpeg.duration(part)
-                timings.append({"scene": scene["id"], "start": round(t, 3), "end": round(t + dur, 3),
-                                "words": [{**w, "start": round(w["start"] + t, 3), "end": round(w["end"] + t, 3)} for w in words]})
-                parts.append(part.relative_to(ctx.run_dir).as_posix())
-                t += dur + SCENE_GAP
-                done += 1
-                ctx.progress(5 + 70 * done / n_total)
-            # concat scene parts with short silences, resampled to one clean 44.1k track
-            inputs = []
-            for rel in parts:
-                inputs += ["-i", rel]
-            gap = f"aevalsrc=0:d={SCENE_GAP}:s=44100"
-            chains, labels = [], []
-            for i in range(len(parts)):
-                chains.append(f"[{i}:a]aresample=44100,aformat=channel_layouts=mono[a{i}]")
-                labels.append(f"[a{i}]")
-                if i < len(parts) - 1:
-                    chains.append(f"{gap}[g{i}]")
-                    labels.append(f"[g{i}]")
-            graph = ";".join(chains) + ";" + "".join(labels) + f"concat=n={len(labels)}:v=0:a=1[out]"
-            vo = f"voiceover_{lang}.mp3"
-            await ffmpeg.run([*inputs, "-filter_complex", graph, "-map", "[out]", "-c:a", "libmp3lame", "-q:a", "2", vo], ctx.run_dir)
-            total = await ffmpeg.duration(ctx.run_dir / vo)
+            vo, timings, total = await self._narrate(ctx, script, lang, voice, rate)
+            if total > MAX_VOICEOVER:
+                # keep the video under 60s whatever the script estimate was: re-record slightly faster
+                speedup = min(MAX_SPEEDUP, int((total / TARGET_VOICEOVER - 1) * 100) + 1)
+                faster = f"{int(rate.rstrip('%')) + speedup:+d}%"
+                ctx.log(f"{lang} voiceover is {total:.1f}s; re-recording at rate {faster}", "warning")
+                vo, timings, total = await self._narrate(ctx, script, lang, voice, faster)
             outputs[f"voiceover_{lang}"] = vo
             outputs[f"timings_{lang}"] = ctx.write_json(f"timings_{lang}.json", {"voice": voice, "duration": total, "scenes": timings})
             ctx.log(f"{lang} voiceover: {total:.1f}s")
+            ctx.progress(5 + 75 * (li + 1) / len(langs))
 
         outputs["music"], licenses = await self._music(ctx)
         ctx.progress(90)
@@ -75,6 +57,34 @@ class Handler(Agent):
                           "-c:a", "libmp3lame", "-q:a", "4", "sfx/whoosh.mp3"], ctx.run_dir)
         outputs["licenses"] = ctx.write_json("audio/licenses.json", licenses)
         return outputs
+
+    async def _narrate(self, ctx: StepContext, script: dict, lang: str, voice: str, rate: str) -> tuple[str, list, float]:
+        """One mp3 per scene, joined with short pauses. Returns (voiceover path, scene timings, duration)."""
+        parts, timings, t = [], [], 0.0
+        for scene in script["scenes"]:
+            part = ctx.path(f"audio/{lang}/{scene['id']}.mp3")
+            words = await tts.synthesize(scene["vo"][lang], voice, part, rate=rate)
+            dur = await ffmpeg.duration(part)
+            timings.append({"scene": scene["id"], "start": round(t, 3), "end": round(t + dur, 3),
+                            "words": [{**w, "start": round(w["start"] + t, 3), "end": round(w["end"] + t, 3)} for w in words]})
+            parts.append(part.relative_to(ctx.run_dir).as_posix())
+            t += dur + SCENE_GAP
+        # concat scene parts with short silences, resampled to one clean 44.1k track
+        inputs = []
+        for rel in parts:
+            inputs += ["-i", rel]
+        gap = f"aevalsrc=0:d={SCENE_GAP}:s=44100"
+        chains, labels = [], []
+        for i in range(len(parts)):
+            chains.append(f"[{i}:a]aresample=44100,aformat=channel_layouts=mono[a{i}]")
+            labels.append(f"[a{i}]")
+            if i < len(parts) - 1:
+                chains.append(f"{gap}[g{i}]")
+                labels.append(f"[g{i}]")
+        graph = ";".join(chains) + ";" + "".join(labels) + f"concat=n={len(labels)}:v=0:a=1[out]"
+        vo = f"voiceover_{lang}.mp3"
+        await ffmpeg.run([*inputs, "-filter_complex", graph, "-map", "[out]", "-c:a", "libmp3lame", "-q:a", "2", vo], ctx.run_dir)
+        return vo, timings, await ffmpeg.duration(ctx.run_dir / vo)
 
     async def _music(self, ctx: StepContext) -> tuple[str, dict]:
         library = ROOT / "library" / "music"

@@ -50,10 +50,8 @@ class Handler(Agent):
         ctx.progress(25)
 
         done_before = history.recent()
-        avoid = ("ALREADY COVERED (do not propose these or close variations):
-"
-                 + "
-".join(f"- {r['title']}" for r in done_before)) if done_before else ""
+        avoid = ("ALREADY COVERED (do not propose these or close variations):\n"
+                 + "\n".join(f"- {r['title']}" for r in done_before)) if done_before else ""
         tools = [] if ctx.strategy == "no_web" else ["WebSearch", "WebFetch"]
         prompt = f"""You are a YouTube Shorts trend researcher for a faceless channel.
 Niche: {niche}. {p.get('niche_summary', '')}

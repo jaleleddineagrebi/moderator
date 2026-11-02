@@ -9,6 +9,9 @@ from pathlib import Path
 import httpx
 
 TIMEOUT = httpx.Timeout(30, read=120)
+# Clips that look bad behind narration: keyed backgrounds, cartoons, screen captures
+BAD_TAGS = ("green screen", "greenscreen", "chroma", "animation", "cartoon", "screen recording", "screenshot",
+            "text", "code", "loop", "abstract background")
 
 
 def available() -> dict[str, bool]:
@@ -34,12 +37,15 @@ async def search_videos(query: str, provider: str, min_seconds: float = 4) -> li
             return sorted(results, key=lambda x: not x["portrait"])
         if provider == "pixabay":
             r = await client.get("https://pixabay.com/api/videos/",
-                                 params={"key": os.environ["PIXABAY_API_KEY"], "q": query[:100], "per_page": 15, "safesearch": "true"})
+                                 params={"key": os.environ["PIXABAY_API_KEY"], "q": query[:100], "per_page": 30,
+                        "safesearch": "true", "video_type": "film"})
             r.raise_for_status()
             results = []
             for v in r.json().get("hits", []):
                 size = v["videos"].get("large") or v["videos"].get("medium")
                 if not size or not size.get("url") or v["duration"] < min_seconds:
+                    continue
+                if v.get("type", "film") != "film" or any(t in v.get("tags", "").lower() for t in BAD_TAGS):
                     continue
                 results.append({"url": size["url"], "page": v["pageURL"], "author": v["user"], "provider": "pixabay",
                                 "license": "Pixabay Content License (free commercial use, no attribution required)",

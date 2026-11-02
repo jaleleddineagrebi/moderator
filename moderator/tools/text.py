@@ -23,7 +23,10 @@ def font(lang: str, size: int) -> ImageFont.FreeTypeFont:
 
 def visual(text: str, lang: str) -> str:
     """Pillow has no Arabic shaping here (no libraqm), so join letters and reorder right-to-left first."""
-    return get_display(arabic_reshaper.reshape(text)) if lang in RTL else text
+    if lang not in RTL:
+        return text
+    text = text.replace("\u2026", "...")  # Noto Sans Arabic has no ellipsis glyph
+    return get_display(arabic_reshaper.reshape(text))
 
 
 def wrap(draw: ImageDraw.ImageDraw, text: str, fnt, max_width: int) -> list[str]:

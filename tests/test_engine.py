@@ -131,6 +131,23 @@ def test_headless_returns_failed(tmp_path):
     assert asyncio.run(asyncio.wait_for(orch.run(headless=True), 20)) == "failed"
 
 
+def test_agent_that_fails_to_load_fails_the_step(tmp_path, monkeypatch):
+    orch = make_orch(tmp_path)
+
+    def broken(name):
+        raise SyntaxError("bad handler")
+
+    monkeypatch.setattr(orch.registry, "agent", broken)
+    assert asyncio.run(asyncio.wait_for(orch.run(headless=True), 5)) == "failed"
+    assert "could not load agent" in orch.store.data["steps"]["ideas"]["errors"][0]["error"]
+
+
+def test_every_agent_handler_imports():
+    registry = Registry(ROOT, {})
+    for name in registry.specs:
+        registry.agent(name)
+
+
 def test_cycle_is_rejected(tmp_path):
     wf = tmp_path / "bad.yaml"
     wf.write_text("steps:\n  - {id: a, agent: x, depends_on: [b]}\n  - {id: b, agent: x, depends_on: [a]}\n")
