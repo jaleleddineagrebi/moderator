@@ -1,0 +1,21 @@
+# QA report: PASSED
+
+- ✅ **length** [en]: 50.9s (must be under 60s; target 45-55s)
+- ✅ **target length** [en]: 50.9s
+- ✅ **aspect ratio** [en]: 1080x1920
+- ✅ **video codec** [en]: h264
+- ✅ **audio track** [en]: present
+- ✅ **loudness** [en]: -14.1 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)
+- ✅ **hook timing** [en]: scene_01 spoken in 2.7s (target <= 3s)
+- ✅ **caption sync** [en]: 122 words, 45 caption events
+- ✅ **length** [fr]: 47.7s (must be under 60s; target 45-55s)
+- ✅ **target length** [fr]: 47.7s
+- ✅ **aspect ratio** [fr]: 1080x1920
+- ✅ **video codec** [fr]: h264
+- ✅ **audio track** [fr]: present
+- ✅ **loudness** [fr]: -13.9 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)
+- ✅ **hook timing** [fr]: scene_01 spoken in 2.8s (target <= 3s)
+- ✅ **caption sync** [fr]: 126 words, 46 caption events
+- ✅ **visual licenses**: 7 assets: pixabay
+- ✅ **audio licenses**: music: original work, no third-party rights; sfx: original work, no third-party rights; voice: synthetic voice; no third-party performance rights
+- ⚠️ **grammar review** [fr]: In scene_07 VO, the verb 'relaxer' is used as an intransitive verb, which is an anglicism in standard French; it should be reflexive when referring to a person. Fix: Change 'enfin relaxer' to 'enfin te détendre' or 'enfin te relaxer'.
