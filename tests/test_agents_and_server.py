@@ -518,3 +518,82 @@ def test_youtube_upload_credentials_single_and_multi_channel_and_publish(tmp_pat
     assert store.data["checkpoints"]["C"]["status"] == "approved"
     assert store.data["status"] == "done"
     assert (run_dir / "uploads.json").is_file()
+
+
+def test_export_pages_seed_and_run_snapshots_with_pruning(tmp_path):
+    from moderator.pages import export_pages
+
+    site_dir = tmp_path / "gh_pages"
+    empty_runs = tmp_path / "empty_runs"
+    empty_runs.mkdir()
+
+    # 1. Brand-new deployment with 0 runs exports seed_state so the 7-agent DAG renders immediately
+    m0 = export_pages(site_dir, repo="jaleleddineagrebi/moderator", runs_dir=empty_runs)
+    assert m0["runs"] == []
+    assert m0["seed_state"]["is_seed"] is True
+    assert "research" in m0["seed_state"]["steps"]
+    assert (site_dir / ".nojekyll").is_file()
+    html = (site_dir / "index.html").read_text(encoding="utf-8")
+    assert "window.MODERATOR_PAGES" in html
+    assert "jaleleddineagrebi/moderator" in html
+    assert (site_dir / "static" / "app.js").is_file()
+    assert (site_dir / "static" / "styles.css").is_file()
+
+    # 2. Export runs (verifying raw/scene_XX.mp4 skipped, final_short + thumbnail + uploads preserved, max_runs pruned)
+    runs_src = tmp_path / "runs_src"
+    registry = Registry(ROOT, {})
+    wf = registry.workflow("youtube_short")
+    agents_pub = {s.agent: registry.specs[s.agent].public() for s in wf.steps}
+
+    for i in range(4):
+        rid = f"20261103_0{i}0000_youtube_short"
+        rdir = runs_src / rid
+        st = new_state(rid, wf, {"languages": ["en"], "topic": f"Topic {i}"}, agents_pub)
+        st["started_at"] = f"2026-11-03T0{i}:00:00+00:00"
+        st["steps"]["visuals"]["outputs"] = {
+            "contact_sheet": "assets/contact_sheet.jpg",
+            "scenes": ["assets/scene_01.mp4"],
+        }
+        st["steps"]["qa"]["outputs"] = {"video_en": "final_short_en.mp4", "report_md": "qa_report.md"}
+        StateStore.create(rdir, st)
+        (rdir / "assets" / "raw").mkdir(parents=True)
+        (rdir / "assets" / "raw" / "tmp.png").write_bytes(b"raw")
+        (rdir / "assets" / "scene_01.mp4").write_bytes(b"scene")
+        (rdir / "assets" / "contact_sheet.jpg").write_bytes(b"jpg")
+        (rdir / "final_short_en.mp4").write_bytes(b"mp4")
+        (rdir / "qa_report.md").write_text("# QA Passed", encoding="utf-8")
+        if i == 3:
+            (rdir / "uploads.json").write_text(
+                json.dumps([{"lang": "en", "url": "https://youtube.com/shorts/xyz", "privacy": "public", "channel": "Main"}]),
+                encoding="utf-8",
+            )
+
+    m1 = export_pages(
+        site_dir,
+        repo="jaleleddineagrebi/moderator",
+        runs_dir=runs_src,
+        target_run_id="20261103_030000_youtube_short",
+        issue_url="https://github.com/jaleleddineagrebi/moderator/issues/1",
+        max_runs=3,
+        media_runs=2,
+    )
+    assert len(m1["runs"]) == 3
+    assert m1["live_run_id"] == "20261103_030000_youtube_short"
+    assert m1["runs"][0]["has_uploads"] is True
+
+    newest_dir = site_dir / "data" / "runs" / "20261103_030000_youtube_short"
+    assert (newest_dir / "final_short_en.mp4").is_file()
+    assert (newest_dir / "assets" / "contact_sheet.jpg").is_file()
+    assert not (newest_dir / "assets" / "scene_01.mp4").exists()
+    assert not (newest_dir / "assets" / "raw").exists()
+
+    exported_st = json.loads((newest_dir / "state.json").read_text(encoding="utf-8"))
+    # Filtered outputs drop skipped scene_01.mp4 while keeping contact_sheet.jpg
+    assert exported_st["steps"]["visuals"]["outputs"] == {"contact_sheet": "assets/contact_sheet.jpg"}
+    assert exported_st["pages_meta"]["issue_url"] == "https://github.com/jaleleddineagrebi/moderator/issues/1"
+    assert exported_st["pages_meta"]["uploads"][0]["url"] == "https://youtube.com/shorts/xyz"
+
+    # 3rd kept run (index 2 >= media_runs=2) has mp4 stripped to keep gh-pages compact
+    older_dir = site_dir / "data" / "runs" / "20261103_010000_youtube_short"
+    assert not (older_dir / "final_short_en.mp4").exists()
+    assert (older_dir / "qa_report.md").is_file()

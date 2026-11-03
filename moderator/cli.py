@@ -108,9 +108,33 @@ def main() -> None:
     auth_p = sub.add_parser("youtube-auth", help="authorize uploads to a YouTube channel (opens the browser)")
     auth_p.add_argument("--lang", default=None, help="optional language code (en/fr/ar) if using separate channels per language")
     auth_p.add_argument("--client-secret", type=Path, required=True, help="OAuth Desktop client JSON from Google Cloud")
+    pages_p = sub.add_parser("export-pages", help="export static dashboard & run snapshots for GitHub Pages")
+    pages_p.add_argument("site_dir", type=Path, help="output folder (e.g. a gh-pages worktree)")
+    pages_p.add_argument("--repo", default=None, help="GitHub owner/repo slug")
+    pages_p.add_argument("--runs-dir", type=Path, default=None, help="runs folder to read from (default: ./runs)")
+    pages_p.add_argument("--run-id", default=None, help="target run_id for --issue-url / --gh-run-url")
+    pages_p.add_argument("--issue-url", default=None, help="GitHub review issue URL")
+    pages_p.add_argument("--gh-run-url", default=None, help="GitHub Actions run URL")
+    pages_p.add_argument("--max-runs", type=int, default=10, help="maximum historical runs to retain on Pages")
+    pages_p.add_argument("--no-media", action="store_true", help="skip mp4/mp3 files (fast mid-run progress sync)")
     args = parser.parse_args()
 
     config = load_config(ROOT)
+
+    if args.cmd == "export-pages":
+        from .pages import export_pages
+        manifest = export_pages(
+            args.site_dir,
+            repo=args.repo,
+            runs_dir=args.runs_dir,
+            target_run_id=args.run_id,
+            issue_url=args.issue_url,
+            gh_run_url=args.gh_run_url,
+            max_runs=args.max_runs,
+            include_media=not args.no_media,
+        )
+        print(f"Exported GitHub Pages site to {args.site_dir} ({len(manifest['runs'])} run(s)).")
+        return
 
     if args.cmd == "youtube-auth":
         from .tools import youtube_upload

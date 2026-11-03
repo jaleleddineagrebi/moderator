@@ -223,3 +223,23 @@ pre.text { background: var(--surface-2); border-radius: 8px; padding: 10px; max-
   .progress-block { grid-column: 1 / -1; }
   .kv { grid-template-columns: 1fr; }
 }
+
+.link-btn { text-decoration: none; display: inline-flex; align-items: center; gap: 6px; font-size: 13px; padding: 6px 12px; }
+.pages-banner { display: grid; gap: 10px; border-left: 4px solid var(--accent); }
+.pages-banner.is-done { border-left-color: var(--done); }
+.pages-banner.is-waiting { border-left-color: var(--waiting); }
+.pages-banner h2 { margin: 0; }
+.yt-links { display: flex; flex-wrap: wrap; gap: 10px; }
+.yt-pill {
+  display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 8px;
+  background: color-mix(in srgb, var(--done) 14%, transparent); color: var(--done);
+  border: 1px solid color-mix(in srgb, var(--done) 40%, transparent);
+  text-decoration: none; font-weight: 600; font-size: 13px;
+}
+.yt-pill:hover { filter: brightness(1.08); }
+.cmd-chip {
+  font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: 12px;
+  padding: 4px 10px; border-radius: 6px; border: 1px solid var(--border); background: var(--surface-2);
+  color: var(--text);
+}
+.cmd-chip:hover { border-color: var(--accent); }

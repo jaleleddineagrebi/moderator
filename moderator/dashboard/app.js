@@ -1,22 +1,27 @@
 "use strict";
 
-const POLL_MS = 3000;
+const PAGES_CFG = window.MODERATOR_PAGES || null;
+const isStaticMode = () => Boolean(PAGES_CFG && PAGES_CFG.static_mode);
+const POLL_MS = isStaticMode() ? 5000 : 3000;
 let state = null;
 let liveRunId = null;
 let selectedRunId = null; // null = follow live run
 let openStep = null;
-const renderedKeys = { approvals: "", outputs: "", runs: "" };
+const renderedKeys = { approvals: "", outputs: "", runs: "", banner: "" };
 
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const activeRunId = () => selectedRunId || liveRunId || (state && state.run_id) || "";
 const isArchived = () => Boolean(selectedRunId && liveRunId && selectedRunId !== liveRunId);
+const isReadOnly = () => isStaticMode() || isArchived();
 const fileUrl = (rel) => {
   const encoded = rel.split("/").map(encodeURIComponent).join("/");
+  if (isStaticMode()) return `data/runs/${encodeURIComponent(activeRunId())}/${encoded}`;
   return isArchived() ? `/api/runs/${encodeURIComponent(selectedRunId)}/files/${encoded}` : `/files/${encoded}`;
 };
 const STATUS_LABEL = {
   queued: "queued", running: "running", waiting_for_approval: "needs you", done: "done",
-  failed: "failed", needs_revision: "revising", blocked: "blocked",
+  failed: "failed", needs_revision: "revising", blocked: "blocked", idle: "ready",
 };
 
 // Theme
@@ -49,6 +54,28 @@ $("retry-all-btn").addEventListener("click", async () => {
 
 async function poll() {
   try {
+    if (isStaticMode()) {
+      const bust = `t=${Date.now()}`;
+      const runsRes = await fetch(`data/runs.json?${bust}`, { cache: "no-store" });
+      if (!runsRes.ok) throw new Error(runsRes.status);
+      const runsData = await runsRes.json();
+      liveRunId = runsData.live_run_id;
+      renderRunSelect(runsData.runs || []);
+      const targetId = selectedRunId || liveRunId;
+      if (targetId) {
+        const stRes = await fetch(`data/runs/${encodeURIComponent(targetId)}/state.json?${bust}`, { cache: "no-store" });
+        if (!stRes.ok) throw new Error(stRes.status);
+        state = await stRes.json();
+      } else if (runsData.seed_state) {
+        state = runsData.seed_state;
+      } else {
+        throw new Error("no runs exported yet");
+      }
+      $("conn").hidden = true;
+      render();
+      return;
+    }
+
     const endpoint = isArchived() ? `/api/runs/${encodeURIComponent(selectedRunId)}/state` : "/api/state";
     const [res, runsRes] = await Promise.all([
       fetch(endpoint, { cache: "no-store" }),
@@ -80,7 +107,7 @@ function renderRunSelect(runs) {
   sel.hidden = false;
   const active = selectedRunId || liveRunId;
   sel.innerHTML = runs.map((r) => {
-    const tag = r.is_live ? "● live" : r.status;
+    const tag = r.has_uploads ? "published" : (r.is_live ? "● latest" : r.status);
     return `<option value="${esc(r.run_id)}" ${r.run_id === active ? "selected" : ""}>${esc(r.run_id)} (${esc(tag)})</option>`;
   }).join("");
 }
@@ -110,11 +137,20 @@ function stepElapsed(s) {
 function render() {
   document.title = `${state.workflow_title} · Moderator`;
   $("wf-title").textContent = state.workflow_title;
-  $("run-id").textContent = state.run_id;
+  $("run-id").textContent = state.is_seed ? "awaiting first workflow run" : state.run_id;
   $("archive-badge").hidden = !isArchived();
-  $("run-status").className = `badge s-${state.status === "done" ? "done" : state.status === "failed" ? "failed" : "running"}`;
-  $("run-status").textContent = state.status;
-  $("retry-all-btn").hidden = isArchived() || state.status !== "failed";
+  const pagesBadge = $("pages-badge");
+  if (pagesBadge) pagesBadge.hidden = !isStaticMode();
+  const ghBtn = $("gh-actions-btn");
+  if (ghBtn && PAGES_CFG && PAGES_CFG.actions_url) {
+    ghBtn.href = PAGES_CFG.actions_url;
+    ghBtn.hidden = false;
+  }
+  const stCls = state.status === "done" ? "done" : state.status === "failed" ? "failed" : state.status === "idle" ? "queued" : "running";
+  $("run-status").className = `badge s-${stCls}`;
+  $("run-status").textContent = STATUS_LABEL[state.status] || state.status;
+  $("retry-all-btn").hidden = isReadOnly() || state.status !== "failed";
+  renderPagesBanner();
   renderOverview();
   renderApprovals();
   renderCheckpoints();
@@ -122,6 +158,73 @@ function render() {
   renderCards();
   renderNotifications();
   if (openStep && state.steps[openStep]) renderDrawer();
+}
+
+function renderPagesBanner() {
+  const banner = $("pages-banner");
+  if (!banner) return;
+  const pm = state.pages_meta || {};
+  const uploads = pm.uploads || [];
+  const pending = Object.entries(state.checkpoints || {}).filter(([, cp]) => cp.status === "pending");
+  const key = JSON.stringify([state.run_id, state.status, state.is_seed, uploads, pending.map(([k]) => k), pm.issue_url, pm.gh_run_url]);
+  if (key === renderedKeys.banner) return;
+  renderedKeys.banner = key;
+
+  if (uploads.length > 0) {
+    banner.hidden = false;
+    banner.className = "card pages-banner is-done";
+    const pills = uploads.map((u) =>
+      `<a class="yt-pill" href="${esc(u.url)}" target="_blank" rel="noopener">▶ Watch ${esc((u.lang || "").toUpperCase())} Short (${esc(u.privacy)}) · ${esc(u.channel || "YouTube")}</a>`
+    ).join("");
+    banner.innerHTML = `<div class="row-between"><h2>Published to YouTube</h2>${pm.gh_run_url ? `<a class="btn link-btn" href="${esc(pm.gh_run_url)}" target="_blank" rel="noopener">Action Logs</a>` : ""}</div><div class="yt-links">${pills}</div>`;
+    return;
+  }
+
+  if (isStaticMode() && state.is_seed) {
+    banner.hidden = false;
+    banner.className = "card pages-banner";
+    const actUrl = (PAGES_CFG && PAGES_CFG.actions_url) || "#";
+    banner.innerHTML = `<div class="row-between"><h2>Moderator Multi-Agent Pipeline Ready</h2><a class="btn primary link-btn" href="${esc(actUrl)}" target="_blank" rel="noopener">Trigger First YouTube Short →</a></div>
+      <div class="muted">Click any agent in the pipeline or cards below to inspect its tools &amp; fallback strategies. Once you trigger <strong>Generate Short</strong> in GitHub Actions, live agent progress, previews, QA reports, and YouTube links appear here automatically.</div>`;
+    return;
+  }
+
+  if (isStaticMode() && pending.length > 0) {
+    const [cpId, cp] = pending[0];
+    const step = state.steps[cp.step];
+    const stepVer = step.ended_at || step.started_at || step.attempt;
+    const issueHref = pm.issue_url || (PAGES_CFG && PAGES_CFG.issues_url) || "#";
+    banner.hidden = false;
+    banner.className = "card pages-banner is-waiting";
+    banner.innerHTML = `
+      <div class="row-between">
+        <h2>Checkpoint ${esc(cpId)}: ${esc(cp.title)}</h2>
+        <div class="actions">
+          ${pm.gh_run_url ? `<a class="btn link-btn" href="${esc(pm.gh_run_url)}" target="_blank" rel="noopener">Action Run</a>` : ""}
+          <a class="btn primary link-btn" href="${esc(issueHref)}" target="_blank" rel="noopener">Approve or Reject on GitHub Issue →</a>
+        </div>
+      </div>
+      <div class="muted">Preview the generated Short(s), thumbnails, and QA report below, then comment one of these commands on the GitHub Review Issue (click to copy):</div>
+      <div class="actions">
+        <button type="button" class="cmd-chip" data-copy="/approve">/approve (private)</button>
+        <button type="button" class="cmd-chip" data-copy="/approve unlisted">/approve unlisted</button>
+        <button type="button" class="cmd-chip" data-copy="/approve public">/approve public</button>
+        <button type="button" class="cmd-chip" data-copy="/reject">/reject</button>
+      </div>
+      <div class="approval-outputs">${outputsHtml(step.outputs, stepVer, true)}</div>`;
+    banner.querySelectorAll("[data-copy]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        navigator.clipboard?.writeText(btn.dataset.copy);
+        const orig = btn.textContent;
+        btn.textContent = `Copied: ${btn.dataset.copy}`;
+        setTimeout(() => (btn.textContent = orig), 1400);
+      });
+    });
+    wireTextPreviews(banner);
+    return;
+  }
+
+  banner.hidden = true;
 }
 
 function renderOverview() {
@@ -152,6 +255,10 @@ function renderParams() {
 
 function tickElapsed() {
   if (!state) return;
+  if (state.is_seed || !state.started_at) {
+    $("ov-elapsed").textContent = "0:00";
+    return;
+  }
   const end = state.ended_at ? new Date(state.ended_at) : new Date();
   $("ov-elapsed").textContent = formatDuration((end - new Date(state.started_at)) / 1000);
 }
@@ -166,7 +273,7 @@ function upstreamOf(stepId) {
 }
 
 function renderApprovals() {
-  const pending = isArchived() ? [] : Object.entries(state.checkpoints).filter(([, cp]) => cp.status === "pending");
+  const pending = isReadOnly() ? [] : Object.entries(state.checkpoints).filter(([, cp]) => cp.status === "pending");
   const key = JSON.stringify([selectedRunId, pending.map(([id, cp]) => [id, cp.options, state.steps[cp.step].outputs])]);
   if (key === renderedKeys.approvals) return; // keep what the user is typing
   renderedKeys.approvals = key;
@@ -431,7 +538,7 @@ function renderDrawer() {
       <dt>Tools</dt><dd>${esc((agent.tools || []).join(", "))}</dd>
       <dt>Strategies</dt><dd>${esc((agent.strategies || []).join(" → "))}</dd>
     </dl>
-    ${!isArchived() && s.status === "failed" ? `<div class="actions" style="margin-top:12px"><button class="btn primary" id="d-retry">Retry this step</button><span class="error-text"></span></div>` : ""}
+    ${!isReadOnly() && s.status === "failed" ? `<div class="actions" style="margin-top:12px"><button class="btn primary" id="d-retry">Retry this step</button><span class="error-text"></span></div>` : ""}
     </section>
     ${s.feedback.length ? `<section><h2>Feedback received</h2>${s.feedback.map((f) => `<div class="fb" dir="auto"><strong>${esc(f.from)}</strong> <span class="muted">${esc(timeOf(f.ts))}</span>\n${esc(f.comment)}</div>`).join("")}</section>` : ""}
     <section><h2>Inputs received</h2>${Object.keys(s.inputs).length ? `<pre class="text" dir="auto">${esc(JSON.stringify(s.inputs, null, 2))}</pre>` : `<p class="muted">${esc((agent.inputs || []).join(", ")) || "None recorded."}</p>`}</section>

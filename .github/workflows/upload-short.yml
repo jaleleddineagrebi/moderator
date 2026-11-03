@@ -31,7 +31,7 @@ on:
         type: string
 
 permissions:
-  contents: read
+  contents: write   # update GitHub Pages dashboard (gh-pages) with published YouTube links
   issues: write
   actions: read     # download the artifact from the Generate Short workflow run
 
@@ -168,6 +168,7 @@ jobs:
             sed 's/^/- /' result.txt
           } > reply.md
           cat reply.md >> "$GITHUB_STEP_SUMMARY"
+          bash .github/scripts/push-gh-pages.sh --run-id "$RUN_ID" || true
           if [ "$EVENT_NAME" = "issue_comment" ]; then
             gh issue comment "$ISSUE" -R "$GITHUB_REPOSITORY" --body-file reply.md
             gh issue close "$ISSUE" -R "$GITHUB_REPOSITORY"

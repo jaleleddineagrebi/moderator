@@ -75,3 +75,14 @@ In your GitHub repository → **Settings → Secrets and variables → Actions**
 1. Push this repository to GitHub (`git push origin main`).
 2. Open **Actions → Generate Short → Run workflow** (optionally enter a `topic` and `languages: en`).
 3. When the `short-review` issue opens (~3–6 minutes), download the `short-<run_id>` artifact to preview the `.mp4` Short, then comment `/approve` on the issue to publish it to your YouTube channel!
+
+---
+
+## 5. Enable GitHub Pages Live Agent Dashboard
+
+Every push to `main`, `Generate Short` run (streaming every 15 seconds while agents execute!), and `Upload Short` run automatically updates a **`gh-pages`** branch with the full Moderator Dashboard UI, agent progress, thumbnails, playable `.mp4` Shorts, QA reports, and published YouTube links.
+
+To turn on the public dashboard URL once after your first push:
+1. Go to your repo **Settings → Pages**.
+2. Under **Build and deployment → Source**, keep **Deploy from a branch** and select **`gh-pages`** / **`/ (root)`** → **Save**.
+3. Open **`https://<your-username>.github.io/<repo-name>/`**!

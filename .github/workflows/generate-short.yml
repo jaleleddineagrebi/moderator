@@ -67,9 +67,10 @@ jobs:
       - name: Install Python dependencies
         run: uv sync
 
-      - name: Generate Short(s) and pause at Checkpoint C
+      - name: Generate Short(s) and pause at Checkpoint C (streaming progress to GitHub Pages)
         id: gen
         env:
+          GH_TOKEN: ${{ github.token }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
@@ -79,6 +80,7 @@ jobs:
           INPUT_NICHE: ${{ vars.MODERATOR_NICHE }}
           INPUT_VISUAL_MODE: ${{ inputs.visual_mode || vars.MODERATOR_VISUAL_MODE || 'auto' }}
           INPUT_BUDGET: ${{ inputs.budget_usd || vars.MODERATOR_BUDGET_USD || '1.00' }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           PYTHONIOENCODING: utf-8
         run: |
           args=(-p 'auto_approve=[A, B]')
@@ -89,6 +91,22 @@ jobs:
             args+=(-p "visual_mode=$INPUT_VISUAL_MODE")
           fi
           if [ -n "$INPUT_BUDGET" ]; then args+=(-p "budget_usd=$INPUT_BUDGET"); fi
+
+          # Stream live state.json agent progress to GitHub Pages every 15s during execution
+          (
+            last_sig=""
+            while true; do
+              sleep 15
+              sig=$(sha256sum runs/*/state.json 2>/dev/null || true)
+              if [ -n "$sig" ] && [ "$sig" != "$last_sig" ]; then
+                last_sig="$sig"
+                bash .github/scripts/push-gh-pages.sh --no-media --gh-run-url "$RUN_URL" || true
+              fi
+            done
+          ) &
+          WATCHER_PID=$!
+          trap "kill $WATCHER_PID 2>/dev/null || true" EXIT
+
           uv run python -m moderator run youtube_short --headless "${args[@]}"
 
       - name: Upload run artifact (MP4s, thumbnails, captions, QA report, state.json)
@@ -113,7 +131,7 @@ jobs:
             git pull --rebase -q && git push -q
           fi
 
-      - name: Publish Step Summary & Open Checkpoint C Review Issue
+      - name: Publish Step Summary, Review Issue & GitHub Pages Dashboard
         if: always() && steps.gen.outputs.run_dir
         env:
           GH_TOKEN: ${{ github.token }}
@@ -121,17 +139,19 @@ jobs:
           RUN_ID: ${{ steps.gen.outputs.run_id }}
           OUTCOME: ${{ steps.gen.outputs.outcome }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          PAGES_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
           PYTHONIOENCODING: utf-8
         run: |
           uv run python -m moderator summary "$RUN_DIR" > body.md
-          cat body.md >> "$GITHUB_STEP_SUMMARY"
           if [ "$OUTCOME" = "waiting" ]; then
             label=short-review
             title="Review Short: $RUN_ID"
             {
               echo ""
               echo "---"
-              echo "**Preview videos & thumbnails:** download artifact \`short-$RUN_ID\` from $RUN_URL"
+              echo "### Live Agent Dashboard & Video Preview"
+              echo "- **GitHub Pages Dashboard:** $PAGES_URL"
+              echo "- **Action Artifact:** \`short-$RUN_ID\` at $RUN_URL"
               echo ""
               echo "### Publish Commands (Checkpoint C Approval)"
               echo "- \`/approve\` — upload all generated languages as **private**"
@@ -143,8 +163,11 @@ jobs:
           else
             label=short-failed
             title="Short generation failed: $RUN_ID"
-            printf '\n\nLogs: %s\n' "$RUN_URL" >> body.md
+            printf '\n\nDashboard: %s\nLogs: %s\n' "$PAGES_URL" "$RUN_URL" >> body.md
           fi
+          cat body.md >> "$GITHUB_STEP_SUMMARY"
           printf '\n<!-- run_id: %s -->\n<!-- gh_run_id: %s -->\n' "$RUN_ID" "${{ github.run_id }}" >> body.md
           gh label create "$label" --force >/dev/null
-          gh issue create --title "$title" --label "$label" --body-file body.md
+          ISSUE_URL=$(gh issue create --title "$title" --label "$label" --body-file body.md)
+          echo "Review issue created: $ISSUE_URL"
+          bash .github/scripts/push-gh-pages.sh --run-id "$RUN_ID" --issue-url "$ISSUE_URL" --gh-run-url "$RUN_URL" || true

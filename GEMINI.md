@@ -16,6 +16,7 @@ uv run python -m moderator run youtube_short --headless -p 'auto_approve=[A, B]'
 uv run python -m moderator summary runs/<run_id>   # markdown review summary (used for the GitHub issue)
 uv run python -m moderator upload runs/<run_id> --approved-by me --privacy private
 uv run python -m moderator youtube-auth --client-secret client_secret.json [--lang en]
+uv run python -m moderator export-pages _site --repo owner/repo   # static GitHub Pages dashboard export
 ```
 
 Set `PYTHONIOENCODING=utf-8` when printing Arabic to the Windows console. `moderator/tools/ffmpeg.py` automatically checks `PATH`, Homebrew (`/opt/homebrew/bin`, `/usr/local/bin`), and Windows WinGet folders.
