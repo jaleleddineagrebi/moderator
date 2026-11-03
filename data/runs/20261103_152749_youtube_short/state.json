@@ -2,7 +2,7 @@
   "run_id": "20261103_152749_youtube_short",
   "workflow": "youtube_short",
   "workflow_title": "YouTube Short",
-  "status": "running",
+  "status": "done",
   "params": {
     "languages": "en",
     "style": "faceless, fast cuts, bold captions, calm narration",
@@ -24,7 +24,7 @@
     "visual_mode": "stock"
   },
   "started_at": "2026-11-03T15:27:49+00:00",
-  "ended_at": null,
+  "ended_at": "2026-11-03T15:56:55+00:00",
   "revision_rounds": 0,
   "cost": {
     "total_usd": 0.007479,
@@ -674,7 +674,7 @@
         "packaging"
       ],
       "checkpoint": "C",
-      "status": "waiting_for_approval",
+      "status": "done",
       "progress": 100,
       "started_at": "2026-11-03T15:29:27+00:00",
       "ended_at": "2026-11-03T15:30:38+00:00",
@@ -778,11 +778,11 @@
       "type": "approve",
       "step": "qa",
       "route_to": "edit",
-      "status": "pending",
+      "status": "approved",
       "options": [],
       "choice": null,
-      "comment": null,
-      "decided_at": null
+      "comment": "approved by github:jaleleddineagrebi",
+      "decided_at": "2026-11-03T15:56:55+00:00"
     }
   },
   "notifications": [
@@ -791,12 +791,27 @@
       "level": "action",
       "msg": "Approval needed: Approve the final videos (never uploaded without your OK)",
       "step": "qa"
+    },
+    {
+      "ts": "2026-11-03T15:56:57+00:00",
+      "level": "success",
+      "msg": "Uploaded en to 'BBW' as private: https://youtube.com/shorts/qCm9yD0vxlM",
+      "step": null
     }
   ],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-03T15:30:52+00:00",
-    "uploads": [],
+    "exported_at": "2026-11-03T15:56:59+00:00",
+    "uploads": [
+      {
+        "lang": "en",
+        "id": "qCm9yD0vxlM",
+        "url": "https://youtube.com/shorts/qCm9yD0vxlM",
+        "privacy": "private",
+        "channel": "BBW",
+        "thumbnail": "not set: <HttpError 403 when requesting https://youtube.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=qCm9yD0vxlM&alt=json&uploadType=media returned \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\". Details: \"[{'message': \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\", 'domain': 'youtube.thumbnail', 'reason': 'forbidden', 'location': 'Authorization', 'locationType': 'header'}]\">"
+      }
+    ],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/41663923249",
     "issue_url": "https://github.com/jaleleddineagrebi/moderator/issues/2"
   }

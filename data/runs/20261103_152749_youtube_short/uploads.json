@@ -1,0 +1,10 @@
+[
+  {
+    "lang": "en",
+    "id": "qCm9yD0vxlM",
+    "url": "https://youtube.com/shorts/qCm9yD0vxlM",
+    "privacy": "private",
+    "channel": "BBW",
+    "thumbnail": "not set: <HttpError 403 when requesting https://youtube.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=qCm9yD0vxlM&alt=json&uploadType=media returned \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\". Details: \"[{'message': \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\", 'domain': 'youtube.thumbnail', 'reason': 'forbidden', 'location': 'Authorization', 'locationType': 'header'}]\">"
+  }
+]
