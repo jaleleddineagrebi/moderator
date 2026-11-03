@@ -1,0 +1,65 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-233390/",
+    "author": "Yasir1120",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "insomnia person bed"
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-137186/",
+    "author": "u_jorg73foes",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "messy office desk"
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-310093/",
+    "author": "Kanenori",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "brain neurons firing"
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-236256/",
+    "author": "xBriantcx",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "waiter serving coffee"
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-38388/",
+    "author": "Matthias_Groeneveld",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "clock hands spinning"
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-180776/",
+    "author": "Darioguzben",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "writing to-do list"
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-360429/",
+    "author": "Engin_Akyurt",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "peaceful sleep person"
+  }
+]

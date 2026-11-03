@@ -1,0 +1,66 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:02.82,Headline,,0,0,0,,{\fad(150,150)}Can't Stop Thinking?
+Dialogue: 1,0:00:02.92,0:00:09.00,Headline,,0,0,0,,{\fad(150,150)}Unfinished Business
+Dialogue: 1,0:00:09.10,0:00:17.24,Headline,,0,0,0,,{\fad(150,150)}The Zeigarnik Effect
+Dialogue: 1,0:00:17.34,0:00:25.75,Headline,,0,0,0,,{\fad(150,150)}The Waiter Observation
+Dialogue: 1,0:00:25.85,0:00:33.01,Headline,,0,0,0,,{\fad(150,150)}Open Mental Loops
+Dialogue: 1,0:00:33.11,0:00:41.13,Headline,,0,0,0,,{\fad(150,150)}The Shutdown Trick
+Dialogue: 1,0:00:41.23,0:00:50.86,Headline,,0,0,0,,{\fad(150,150)}Close The Loop
+Dialogue: 0,0:00:00.10,0:00:00.86,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You can't stop
+Dialogue: 0,0:00:00.88,0:00:01.80,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}thinking about it
+Dialogue: 0,0:00:02.97,0:00:03.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}That one email
+Dialogue: 0,0:00:03.89,0:00:04.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you forgot to
+Dialogue: 0,0:00:04.53,0:00:05.32,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}send or that
+Dialogue: 0,0:00:05.33,0:00:06.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}project sitting half-finished
+Dialogue: 0,0:00:06.86,0:00:07.41,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}on your desk
+Dialogue: 0,0:00:07.42,0:00:07.98,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}right now
+Dialogue: 0,0:00:09.15,0:00:09.75,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It's called the
+Dialogue: 0,0:00:09.76,0:00:10.90,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Zeigarnik Effect
+Dialogue: 0,0:00:11.76,0:00:12.44,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Our brains are
+Dialogue: 0,0:00:12.45,0:00:13.95,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}hardwired to prioritize
+Dialogue: 0,0:00:13.96,0:00:15.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}incomplete tasks over
+Dialogue: 0,0:00:15.35,0:00:16.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}finished ones
+Dialogue: 0,0:00:17.39,0:00:18.64,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}In the 1920s
+Dialogue: 0,0:00:18.84,0:00:20.22,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}researchers noticed waiters
+Dialogue: 0,0:00:20.23,0:00:21.58,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}remembered unpaid orders
+Dialogue: 0,0:00:21.59,0:00:23.03,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}perfectly but forgot
+Dialogue: 0,0:00:23.04,0:00:23.77,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}them the second
+Dialogue: 0,0:00:23.78,0:00:24.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the bill was
+Dialogue: 0,0:00:24.27,0:00:24.75,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}settled
+Dialogue: 0,0:00:25.90,0:00:26.98,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}This mental tension
+Dialogue: 0,0:00:26.99,0:00:27.90,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}creates an open
+Dialogue: 0,0:00:27.91,0:00:28.62,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}loop that keeps
+Dialogue: 0,0:00:28.64,0:00:29.16,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you awake at
+Dialogue: 0,0:00:29.18,0:00:30.95,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}night constantly reminding
+Dialogue: 0,0:00:30.96,0:00:31.49,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you of what's
+Dialogue: 0,0:00:31.50,0:00:32.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}left
+Dialogue: 0,0:00:33.16,0:00:33.78,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}To stop the
+Dialogue: 0,0:00:33.80,0:00:35.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}overthinking use the
+Dialogue: 0,0:00:35.01,0:00:36.01,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}shutdown trick
+Dialogue: 0,0:00:36.87,0:00:37.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Simply write down
+Dialogue: 0,0:00:37.85,0:00:38.59,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a clear plan
+Dialogue: 0,0:00:38.60,0:00:39.03,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}for what you
+Dialogue: 0,0:00:39.05,0:00:39.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}need to do
+Dialogue: 0,0:00:39.53,0:00:40.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}tomorrow
+Dialogue: 0,0:00:41.28,0:00:42.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}This signals to
+Dialogue: 0,0:00:42.12,0:00:42.73,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your brain that
+Dialogue: 0,0:00:42.75,0:00:43.37,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the task is
+Dialogue: 0,0:00:43.38,0:00:44.60,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}managed letting the
+Dialogue: 0,0:00:44.61,0:00:45.38,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}loop close so
+Dialogue: 0,0:00:45.40,0:00:46.13,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you can finally
+Dialogue: 0,0:00:46.15,0:00:46.77,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}relax
+Dialogue: 0,0:00:47.65,0:00:48.50,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Follow for more
+Dialogue: 0,0:00:48.51,0:00:49.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}brain hacks
