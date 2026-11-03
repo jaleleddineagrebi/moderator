@@ -1,0 +1,69 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:03.03,Headline,,0,0,0,,{\fad(150,150)}Nobody is watching you
+Dialogue: 1,0:00:03.13,0:00:09.93,Headline,,0,0,0,,{\fad(150,150)}The Spotlight Effect
+Dialogue: 1,0:00:10.03,0:00:16.88,Headline,,0,0,0,,{\fad(150,150)}50% less notice
+Dialogue: 1,0:00:16.98,0:00:23.25,Headline,,0,0,0,,{\fad(150,150)}Everyone is self-focused
+Dialogue: 1,0:00:23.35,0:00:31.40,Headline,,0,0,0,,{\fad(150,150)}You forget their mistakes
+Dialogue: 1,0:00:31.50,0:00:37.63,Headline,,0,0,0,,{\fad(150,150)}Our internal universe
+Dialogue: 1,0:00:37.73,0:00:45.59,Headline,,0,0,0,,{\fad(150,150)}The ultimate freedom
+Dialogue: 1,0:00:45.69,0:00:54.85,Headline,,0,0,0,,{\fad(150,150)}Relax and follow
+Dialogue: 0,0:00:00.10,0:00:01.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Nobody is actually
+Dialogue: 0,0:00:01.25,0:00:02.01,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}looking at you
+Dialogue: 0,0:00:03.18,0:00:03.95,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Ever felt like
+Dialogue: 0,0:00:03.96,0:00:04.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a tiny mistake
+Dialogue: 0,0:00:04.83,0:00:05.46,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}was a neon
+Dialogue: 0,0:00:05.47,0:00:06.26,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}sign pointing at
+Dialogue: 0,0:00:06.27,0:00:06.67,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you
+Dialogue: 0,0:00:07.38,0:00:08.37,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}That’s the spotlight
+Dialogue: 0,0:00:08.38,0:00:08.92,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}effect
+Dialogue: 0,0:00:10.08,0:00:10.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}In a famous
+Dialogue: 0,0:00:10.71,0:00:12.31,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}study researchers found
+Dialogue: 0,0:00:12.32,0:00:13.66,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}people overestimate how
+Dialogue: 0,0:00:13.67,0:00:14.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}much others notice
+Dialogue: 0,0:00:14.57,0:00:15.30,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}them by fifty
+Dialogue: 0,0:00:15.31,0:00:15.87,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}percent
+Dialogue: 0,0:00:17.03,0:00:17.97,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}While you’re obsessing
+Dialogue: 0,0:00:17.98,0:00:18.81,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}over that awkward
+Dialogue: 0,0:00:18.82,0:00:19.51,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}thing you said
+Dialogue: 0,0:00:19.77,0:00:20.53,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}everyone else is
+Dialogue: 0,0:00:20.54,0:00:21.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}busy worrying about
+Dialogue: 0,0:00:21.53,0:00:22.26,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}themselves
+Dialogue: 0,0:00:23.40,0:00:24.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Think about it
+Dialogue: 0,0:00:25.13,0:00:25.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Do you remember
+Dialogue: 0,0:00:25.85,0:00:26.45,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the stain on
+Dialogue: 0,0:00:26.47,0:00:27.49,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your coworker’s shirt
+Dialogue: 0,0:00:27.50,0:00:28.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}from three days
+Dialogue: 0,0:00:28.19,0:00:28.59,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}ago
+Dialogue: 0,0:00:29.43,0:00:30.40,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Probably not
+Dialogue: 0,0:00:31.55,0:00:31.99,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}We are the
+Dialogue: 0,0:00:32.00,0:00:32.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}center of our
+Dialogue: 0,0:00:32.71,0:00:34.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}own universe making
+Dialogue: 0,0:00:34.16,0:00:34.73,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}us think we’re
+Dialogue: 0,0:00:34.74,0:00:35.38,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the center of
+Dialogue: 0,0:00:35.39,0:00:36.64,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}everyone else’s too
+Dialogue: 0,0:00:37.78,0:00:38.98,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}This realization is
+Dialogue: 0,0:00:38.99,0:00:40.09,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the ultimate freedom
+Dialogue: 0,0:00:40.95,0:00:41.66,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You can stop
+Dialogue: 0,0:00:41.67,0:00:42.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}performing and just
+Dialogue: 0,0:00:42.73,0:00:43.62,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}exist without the
+Dialogue: 0,0:00:43.63,0:00:44.58,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}constant pressure
+Dialogue: 0,0:00:45.74,0:00:46.49,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You’re far less
+Dialogue: 0,0:00:46.50,0:00:47.17,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}judged than you
+Dialogue: 0,0:00:47.19,0:00:47.64,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}think
+Dialogue: 0,0:00:48.50,0:00:49.29,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Relax
+Dialogue: 0,0:00:50.15,0:00:50.94,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Follow for more
+Dialogue: 0,0:00:50.95,0:00:52.42,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}psychological insights to
+Dialogue: 0,0:00:52.44,0:00:53.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}calm your mind
