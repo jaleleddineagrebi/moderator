@@ -1,9 +1,11 @@
 import json
 import random
+import shutil
 
 from moderator import ROOT
 from moderator.engine.agent import Agent, StepContext
 from moderator.tools import ffmpeg, tts
+from moderator.tools.languages import normalize_langs
 
 SCENE_GAP = 0.18  # breath between scenes, seconds
 # A-minor / F / C / G pad, 4 seconds per chord. Generated here, so there is no copyright to worry about.
@@ -22,7 +24,7 @@ def pad_expression() -> str:
 class Handler(Agent):
     async def run(self, ctx: StepContext) -> dict[str, str]:
         script = ctx.read_json(ctx.upstream("script")["data"])
-        langs = ctx.params.get("languages", ["ar", "fr"])
+        langs = normalize_langs(ctx.params.get("languages"))
         voice_idx = {"primary_voice": 0, "alternate_voice": 1, "third_voice_slower": 2}.get(ctx.strategy, 0)
         rate = "-6%" if ctx.strategy == "third_voice_slower" else "+0%"
         ctx.set_inputs(script=ctx.upstream("script")["data"], languages=langs,
@@ -40,6 +42,9 @@ class Handler(Agent):
                 part = ctx.path(f"audio/{lang}/{scene['id']}.mp3")
                 words = await tts.synthesize(scene["vo"][lang], voice, part, rate=rate)
                 dur = await ffmpeg.duration(part)
+                if not words:
+                    ctx.log(f"{scene['id']} ({lang}): TTS emitted no WordBoundary events; estimating word timings", "warning")
+                    words = tts.fallback_word_timings(scene["vo"][lang], dur)
                 timings.append({"scene": scene["id"], "start": round(t, 3), "end": round(t + dur, 3),
                                 "words": [{**w, "start": round(w["start"] + t, 3), "end": round(w["end"] + t, 3)} for w in words]})
                 parts.append(part.relative_to(ctx.run_dir).as_posix())
@@ -61,6 +66,8 @@ class Handler(Agent):
             graph = ";".join(chains) + ";" + "".join(labels) + f"concat=n={len(labels)}:v=0:a=1[out]"
             vo = f"voiceover_{lang}.mp3"
             await ffmpeg.run([*inputs, "-filter_complex", graph, "-map", "[out]", "-c:a", "libmp3lame", "-q:a", "2", vo], ctx.run_dir)
+            if len(langs) == 1:
+                shutil.copy2(ctx.run_dir / vo, ctx.run_dir / "voiceover.mp3")
             total = await ffmpeg.duration(ctx.run_dir / vo)
             outputs[f"voiceover_{lang}"] = vo
             outputs[f"timings_{lang}"] = ctx.write_json(f"timings_{lang}.json", {"voice": voice, "duration": total, "scenes": timings})

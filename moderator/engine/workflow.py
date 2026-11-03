@@ -72,12 +72,15 @@ def load_workflow(path: Path) -> Workflow:
             checkpoint=Checkpoint(**cp) if cp else None,
             options=item.get("with", {}) or {},
         ))
+    raw_ids = [s.id for s in steps]
+    if len(raw_ids) != len(set(raw_ids)):
+        raise WorkflowError("duplicate step ids")
     wf = Workflow(
         name=raw.get("name", path.stem),
         title=raw.get("title", path.stem),
         description=raw.get("description", ""),
         params=raw.get("params", {}) or {},
-        settings={"max_retries": 2, "max_revision_rounds": 2, **(raw.get("settings") or {})},
+        settings={"max_retries": 2, "max_revision_rounds": 2, "retry_backoff_s": 0.0, **(raw.get("settings") or {})},
         steps=_toposort(steps),
     )
     _validate(wf)

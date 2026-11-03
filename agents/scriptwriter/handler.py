@@ -2,37 +2,37 @@ import json
 
 from moderator.engine.agent import Agent, StepContext
 from moderator.tools import history
-from moderator.tools.languages import LANGS, describe, names
+from moderator.tools.languages import LANGS, describe, lang_schema, names, normalize_langs
 
 BUDGET_SECONDS = (43, 52)  # narration length; leaves room for scene pauses and the outro tail (video target 45-55s)
 
-BILINGUAL = {"type": "object", "additionalProperties": False, "required": ["ar", "fr"],
-             "properties": {"ar": {"type": "string"}, "fr": {"type": "string"}}}
-SCHEMA = {
-    "type": "object",
-    "additionalProperties": False,
-    "required": ["title", "scenes"],
-    "properties": {
-        "title": {"type": "string", "description": "working title in English"},
-        "scenes": {"type": "array", "minItems": 5, "maxItems": 9, "items": {
-            "type": "object",
-            "additionalProperties": False,
-            "required": ["vo", "on_screen", "visual"],
-            "properties": {
-                "vo": {**BILINGUAL, "description": "narration for this scene"},
-                "on_screen": {**BILINGUAL, "description": "bold headline text, max 5 words"},
-                "visual": {"type": "object", "additionalProperties": False,
-                           "required": ["description", "search_terms", "prefer"],
-                           "properties": {
-                               "description": {"type": "string"},
-                               "search_terms": {"type": "array", "items": {"type": "string"},
-                                                "description": "2-4 short English stock-footage queries, most specific first"},
-                               "prefer": {"type": "string", "enum": ["video", "photo"]},
-                           }},
-            },
-        }},
-    },
-}
+
+def make_schema(langs: list[str]) -> dict:
+    return {
+        "type": "object",
+        "additionalProperties": False,
+        "required": ["title", "scenes"],
+        "properties": {
+            "title": {"type": "string", "description": "working title in English"},
+            "scenes": {"type": "array", "minItems": 5, "maxItems": 9, "items": {
+                "type": "object",
+                "additionalProperties": False,
+                "required": ["vo", "on_screen", "visual"],
+                "properties": {
+                    "vo": lang_schema(langs, description="narration for this scene"),
+                    "on_screen": lang_schema(langs, description="bold headline text, max 5 words"),
+                    "visual": {"type": "object", "additionalProperties": False,
+                               "required": ["description", "search_terms", "prefer"],
+                               "properties": {
+                                   "description": {"type": "string"},
+                                   "search_terms": {"type": "array", "items": {"type": "string"},
+                                                    "description": "2-4 short English stock-footage queries, most specific first"},
+                                   "prefer": {"type": "string", "enum": ["video", "photo"]},
+                               }},
+                },
+            }},
+        },
+    }
 
 
 def estimate(script: dict, langs: list[str]) -> dict[str, float]:
@@ -46,10 +46,10 @@ class Handler(Agent):
         idea = ctx.chosen_option("A")
         ideas = ctx.read_json(ctx.upstream("research")["data"])["ideas"]
         full_idea = next((i for i in ideas if idea and i["id"] == idea["id"]), ideas[0])
-        ctx.set_inputs(idea=full_idea["title"], comment_at_selection=ctx.decision("A")["comment"])
+        langs = normalize_langs(p.get("languages"))
+        ctx.set_inputs(idea=full_idea["title"], languages=langs, comment_at_selection=ctx.decision("A")["comment"])
         history.record(ctx.store.data["run_id"], full_idea["title"], full_idea["angle"])
 
-        langs = p.get("languages", ["ar", "fr"])
         budget = {lang: tuple(round(s * LANGS[lang]["words_per_second"]) for s in BUDGET_SECONDS) for lang in langs}
         if ctx.strategy == "tighter_word_budget":
             budget = {lang: (round(lo * 1.03), round(hi * 0.95)) for lang, (lo, hi) in budget.items()}
@@ -60,7 +60,10 @@ class Handler(Agent):
             previous = "PREVIOUS VERSION (revise it, keep what works):\n" + (ctx.run_dir / "script.json").read_text(encoding="utf-8")
 
         word_ranges = "; ".join(f"{LANGS[l]['name']} {lo}-{hi} words" for l, (lo, hi) in budget.items())
-        prompt = f"""Write a YouTube Short script, narrated separately in {names(langs)}.
+        multi_note = ("Write each language natively; do not translate word for word. All versions must say the same facts in the same scene order."
+                      if len(langs) > 1 else "Write natively and conversationally.")
+        schema = make_schema(langs)
+        prompt = f"""Write a YouTube Short script in {names(langs)}.
 
 IDEA: {json.dumps(full_idea, ensure_ascii=False)}
 {f"Owner's note when picking it: {ctx.decision('A')['comment']}" if ctx.decision('A')['comment'] else ''}
@@ -73,8 +76,8 @@ Rules:
 - Each scene covers one beat; the last scene pays off the hook and ends with a short call to follow.
 - Languages (field key = how to write it):
 {describe(langs)}
-  Write each language natively; do not translate word for word. Both versions must say the same facts in the same scene order.
-- on_screen: a punchy headline per scene, max 5 words, same meaning in both languages.
+  {multi_note}
+- on_screen: a punchy headline per scene, max 5 words.
 - visual: describe footage findable on free stock sites (Pexels/Pixabay). No logos, brands, celebrities, film characters.
   search_terms in English, concrete nouns ("honeybee on flower macro", not "nature's wonder").
 - Facts must be accurate. No medical, financial or religious claims that could mislead.
@@ -83,7 +86,7 @@ Rules:
 
 {ctx.revision_notes()}"""
         ctx.progress(10)
-        script = await ctx.llm.ask(prompt, schema=SCHEMA)
+        script = await ctx.llm.ask(prompt, schema=schema)
         est = estimate(script, langs)
         ctx.log("Estimated narration: " + ", ".join(f"{l} {v}s" for l, v in est.items()))
 
@@ -92,7 +95,7 @@ Rules:
             ctx.progress(55)
             fix = (f"{prompt}\n\nYOUR DRAFT (estimated narration seconds: {est}; target {BUDGET_SECONDS[0]}-{BUDGET_SECONDS[1]}s each). "
                    f"Adjust the narration length to fit, keeping everything else:\n{json.dumps(script, ensure_ascii=False)}")
-            script = await ctx.llm.ask(fix, schema=SCHEMA)
+            script = await ctx.llm.ask(fix, schema=schema)
             est = estimate(script, langs)
             ctx.log("Revised estimate: " + ", ".join(f"{l} {v}s" for l, v in est.items()))
             if not all(BUDGET_SECONDS[0] - 4 <= v <= BUDGET_SECONDS[1] + 2 for v in est.values()):
@@ -100,13 +103,14 @@ Rules:
 
         for i, s in enumerate(script["scenes"], 1):
             s["id"] = f"scene_{i:02d}"
-        script.update(idea_id=full_idea["id"], estimated_seconds=est)
+        script.update(idea_id=full_idea["id"], languages=langs, estimated_seconds=est)
         out = ctx.write_json("script.json", script)
 
         md = [f"# {script['title']}", "Estimated narration: " + " · ".join(f"{l} {v}s" for l, v in est.items()), ""]
         for s in script["scenes"]:
-            md += [f"## {s['id']} · {s['visual']['description']}",
-                   f"FR  [{s['on_screen']['fr']}]  {s['vo']['fr']}",
-                   f"AR  [{s['on_screen']['ar']}]  {s['vo']['ar']}", ""]
+            md.append(f"## {s['id']} · {s['visual']['description']}")
+            for code in langs:
+                md.append(f"{code.upper()}  [{s['on_screen'][code]}]  {s['vo'][code]}")
+            md.append("")
         ctx.path("script.md").write_text("\n".join(md), encoding="utf-8")
         return {"script": "script.md", "data": out}

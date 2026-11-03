@@ -1,20 +1,41 @@
 name: Generate Short
 
-# Twice a day: research, script (auto-approved), visuals, voice, edit, QA. Stops before upload and opens an
-# issue for you to review. Nothing is published until you comment /approve on that issue.
+# Runs on schedule (twice daily) or manually via "Run workflow".
+# Executes Research -> Script -> Visuals (Nano Banana) + Audio -> Packaging + Editor -> QA,
+# uploads the finished MP4s & thumbnails as an Action artifact, and opens a `short-review` issue.
+# Nothing is published to YouTube until you approve Checkpoint C (comment `/approve` on the issue
+# or trigger the `Upload Short` workflow).
 on:
   schedule:
-    - cron: "0 5 * * *"    # 05:00 UTC (07:00 Cairo / 06:00 Paris in winter)
-    - cron: "0 14 * * *"   # 14:00 UTC (16:00 Cairo / 15:00 Paris in winter)
+    - cron: "0 5 * * *"    # 05:00 UTC
+    - cron: "0 14 * * *"   # 14:00 UTC
   workflow_dispatch:
     inputs:
       topic:
-        description: Optional topic inside the niche
+        description: "Optional topic inside your niche (leave empty for AI trend research)"
         required: false
+        type: string
+      languages:
+        description: "Optional languages override, e.g. en or en,fr or en,fr,ar (default: channel.yaml)"
+        required: false
+        type: string
+      visual_mode:
+        description: "Scene visual generation mode"
+        required: false
+        default: "auto"
+        type: choice
+        options:
+          - auto
+          - stock
+      budget_usd:
+        description: "Hard Gemini spend cap in USD for this run"
+        required: false
+        default: "1.00"
+        type: string
 
 permissions:
-  contents: write   # commit history/topics.jsonl
-  issues: write     # open the review issue
+  contents: write   # commit history/topics.jsonl so scheduled runs never repeat topics
+  issues: write     # open the Checkpoint C review issue
 
 concurrency:
   group: generate-short
@@ -23,41 +44,54 @@ concurrency:
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 90
     steps:
+      - name: Verify GEMINI_API_KEY secret is configured
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          if [ -z "$GEMINI_API_KEY" ]; then
+            echo "::error::Missing GEMINI_API_KEY repository secret. Add it in GitHub -> Settings -> Secrets and variables -> Actions."
+            exit 1
+          fi
+
       - uses: actions/checkout@v4
 
       - uses: astral-sh/setup-uv@v6
         with:
           python-version: "3.12"
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "22"
+      - name: Install ffmpeg & libass
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg libass9
 
-      - name: Install ffmpeg and Claude Code
-        run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
-          npm install -g @anthropic-ai/claude-code
-
-      - name: Install dependencies
+      - name: Install Python dependencies
         run: uv sync
 
-      - name: Generate both Shorts (stops at the final checkpoint)
+      - name: Generate Short(s) and pause at Checkpoint C
         id: gen
         env:
-          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
-          TOPIC: ${{ github.event.inputs.topic }}
+          INPUT_TOPIC: ${{ inputs.topic }}
+          INPUT_LANGS: ${{ inputs.languages || vars.MODERATOR_LANGUAGES }}
+          INPUT_NICHE: ${{ vars.MODERATOR_NICHE }}
+          INPUT_VISUAL_MODE: ${{ inputs.visual_mode || vars.MODERATOR_VISUAL_MODE || 'auto' }}
+          INPUT_BUDGET: ${{ inputs.budget_usd || vars.MODERATOR_BUDGET_USD || '1.00' }}
           PYTHONIOENCODING: utf-8
         run: |
           args=(-p 'auto_approve=[A, B]')
-          if [ -n "$TOPIC" ]; then args+=(-p "topic=$TOPIC"); fi
+          if [ -n "$INPUT_TOPIC" ]; then args+=(-p "topic=$INPUT_TOPIC"); fi
+          if [ -n "$INPUT_LANGS" ]; then args+=(-p "languages=$INPUT_LANGS"); fi
+          if [ -n "$INPUT_NICHE" ]; then args+=(-p "niche=$INPUT_NICHE"); fi
+          if [ -n "$INPUT_VISUAL_MODE" ] && [ "$INPUT_VISUAL_MODE" != "auto" ]; then
+            args+=(-p "visual_mode=$INPUT_VISUAL_MODE")
+          fi
+          if [ -n "$INPUT_BUDGET" ]; then args+=(-p "budget_usd=$INPUT_BUDGET"); fi
           uv run python -m moderator run youtube_short --headless "${args[@]}"
 
-      - name: Keep the run folder (videos, thumbnails, reports)
+      - name: Upload run artifact (MP4s, thumbnails, captions, QA report, state.json)
         if: always() && steps.gen.outputs.run_dir
         uses: actions/upload-artifact@v4
         with:
@@ -68,7 +102,7 @@ jobs:
             !${{ steps.gen.outputs.run_dir }}/audio
           retention-days: 14
 
-      - name: Save topic history
+      - name: Record topic in history/topics.jsonl
         if: always()
         run: |
           if [ -n "$(git status --porcelain history)" ]; then
@@ -79,7 +113,7 @@ jobs:
             git pull --rebase -q && git push -q
           fi
 
-      - name: Open the review issue
+      - name: Publish Step Summary & Open Checkpoint C Review Issue
         if: always() && steps.gen.outputs.run_dir
         env:
           GH_TOKEN: ${{ github.token }}
@@ -90,11 +124,22 @@ jobs:
           PYTHONIOENCODING: utf-8
         run: |
           uv run python -m moderator summary "$RUN_DIR" > body.md
+          cat body.md >> "$GITHUB_STEP_SUMMARY"
           if [ "$OUTCOME" = "waiting" ]; then
             label=short-review
             title="Review Short: $RUN_ID"
-            printf '\n\n---\n**Videos:** download the `short-%s` artifact from %s\n\n' "$RUN_ID" "$RUN_URL" >> body.md
-            printf 'Comment `/approve` to upload (private), `/approve public` or `/approve unlisted`, or `/reject` to discard.\n' >> body.md
+            {
+              echo ""
+              echo "---"
+              echo "**Preview videos & thumbnails:** download artifact \`short-$RUN_ID\` from $RUN_URL"
+              echo ""
+              echo "### Publish Commands (Checkpoint C Approval)"
+              echo "- \`/approve\` — upload all generated languages as **private**"
+              echo "- \`/approve unlisted\` — upload as **unlisted**"
+              echo "- \`/approve public\` — upload as **public**"
+              echo "- \`/approve public en\` (or \`fr\` / \`ar\`) — upload only specific language(s)"
+              echo "- \`/reject\` — close without uploading"
+            } >> body.md
           else
             label=short-failed
             title="Short generation failed: $RUN_ID"

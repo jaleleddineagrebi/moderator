@@ -1,51 +1,131 @@
 name: Upload Short
 
-# Runs only when the repository owner comments /approve or /reject on a "short-review" issue.
-# This comment is the human approval required before anything is published.
+# Publishes a generated Short to YouTube ONLY after explicit human approval:
+# 1. Comment `/approve [private|unlisted|public] [langs]` (or `/reject`) on a `short-review` issue, OR
+# 2. Manually click "Run workflow" on this workflow with the run_id and gh_run_id.
 on:
   issue_comment:
     types: [created]
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: "Moderator run_id (e.g. 20261103_050012_youtube_short)"
+        required: true
+        type: string
+      gh_run_id:
+        description: "GitHub Actions run ID that produced the short-<run_id> artifact"
+        required: true
+        type: string
+      privacy:
+        description: "YouTube video visibility"
+        required: true
+        default: "private"
+        type: choice
+        options:
+          - private
+          - unlisted
+          - public
+      langs:
+        description: "Optional comma-separated subset of languages to upload (e.g. en or en,fr)"
+        required: false
+        type: string
 
 permissions:
   contents: read
   issues: write
-  actions: read     # download the artifact from the generate run
+  actions: read     # download the artifact from the Generate Short workflow run
 
 jobs:
   decide:
     if: >-
-      !github.event.issue.pull_request &&
-      contains(github.event.issue.labels.*.name, 'short-review') &&
-      github.event.comment.user.login == github.repository_owner &&
-      (startsWith(github.event.comment.body, '/approve') || startsWith(github.event.comment.body, '/reject'))
+      github.event_name == 'workflow_dispatch' ||
+      (
+        !github.event.issue.pull_request &&
+        contains(github.event.issue.labels.*.name, 'short-review') &&
+        (
+          github.event.comment.user.login == github.repository_owner ||
+          github.event.comment.author_association == 'OWNER'
+        ) &&
+        (startsWith(github.event.comment.body, '/approve') || startsWith(github.event.comment.body, '/reject'))
+      )
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
       GH_TOKEN: ${{ github.token }}
+      EVENT_NAME: ${{ github.event_name }}
       ISSUE: ${{ github.event.issue.number }}
       COMMENT: ${{ github.event.comment.body }}
       ISSUE_BODY: ${{ github.event.issue.body }}
+      DISPATCH_RUN_ID: ${{ inputs.run_id }}
+      DISPATCH_GH_RUN_ID: ${{ inputs.gh_run_id }}
+      DISPATCH_PRIVACY: ${{ inputs.privacy }}
+      DISPATCH_LANGS: ${{ inputs.langs }}
     steps:
-      - name: Read the request
+      - name: Parse approval request
         id: req
         run: |
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            {
+              echo "run_id=$DISPATCH_RUN_ID"
+              echo "gh_run_id=$DISPATCH_GH_RUN_ID"
+              echo "action=approve"
+              echo "privacy=${DISPATCH_PRIVACY:-private}"
+              echo "langs=$DISPATCH_LANGS"
+            } >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
           run_id=$(printf '%s' "$ISSUE_BODY" | tr -d '\r' | sed -n 's/^<!-- run_id: \([A-Za-z0-9_]*\) -->$/\1/p' | head -1)
           gh_run_id=$(printf '%s' "$ISSUE_BODY" | tr -d '\r' | sed -n 's/^<!-- gh_run_id: \([0-9]*\) -->$/\1/p' | head -1)
-          first=$(printf '%s' "$COMMENT" | head -1 | tr -d '\r')
-          case "$first" in
-            /reject*) action=reject ;;
-            "/approve public"*) action=approve; privacy=public ;;
-            "/approve unlisted"*) action=approve; privacy=unlisted ;;
-            *) action=approve; privacy=private ;;
-          esac
-          if [ -z "$run_id" ] || [ -z "$gh_run_id" ]; then echo "Issue body has no run markers" >&2; exit 1; fi
-          { echo "run_id=$run_id"; echo "gh_run_id=$gh_run_id"; echo "action=$action"; echo "privacy=${privacy:-private}"; } >> "$GITHUB_OUTPUT"
+          first=$(printf '%s' "$COMMENT" | head -1 | tr -d '\r' | xargs)
 
-      - name: Reject
-        if: steps.req.outputs.action == 'reject'
+          action=approve
+          privacy=private
+          langs=""
+          set -- $first
+          cmd="${1:-}"
+          shift || true
+          if [ "$cmd" = "/reject" ]; then
+            action=reject
+          else
+            for tok in "$@"; do
+              case "$tok" in
+                public|unlisted|private) privacy="$tok" ;;
+                *) langs="${langs:+$langs,}$tok" ;;
+              esac
+            done
+          fi
+
+          if [ -z "$run_id" ] || [ -z "$gh_run_id" ]; then
+            echo "::error::Issue body is missing run_id / gh_run_id markers."
+            exit 1
+          fi
+          {
+            echo "run_id=$run_id"
+            echo "gh_run_id=$gh_run_id"
+            echo "action=$action"
+            echo "privacy=$privacy"
+            echo "langs=$langs"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Handle rejection
+        if: steps.req.outputs.action == 'reject' && github.event_name == 'issue_comment'
         run: |
-          gh issue comment "$ISSUE" -R "$GITHUB_REPOSITORY" --body "Rejected. Nothing was uploaded."
+          gh issue comment "$ISSUE" -R "$GITHUB_REPOSITORY" --body "Rejected. Nothing was uploaded to YouTube."
           gh issue close "$ISSUE" -R "$GITHUB_REPOSITORY" --reason "not planned"
+
+      - name: Verify YouTube OAuth secret is configured
+        if: steps.req.outputs.action == 'approve'
+        env:
+          YOUTUBE_TOKEN: ${{ secrets.YOUTUBE_TOKEN }}
+          YOUTUBE_TOKEN_EN: ${{ secrets.YOUTUBE_TOKEN_EN }}
+          YOUTUBE_TOKEN_FR: ${{ secrets.YOUTUBE_TOKEN_FR }}
+          YOUTUBE_TOKEN_AR: ${{ secrets.YOUTUBE_TOKEN_AR }}
+        run: |
+          if [ -z "$YOUTUBE_TOKEN$YOUTUBE_TOKEN_EN$YOUTUBE_TOKEN_FR$YOUTUBE_TOKEN_AR" ]; then
+            echo "::error::No YouTube OAuth token secret found. Set YOUTUBE_TOKEN (single channel) or YOUTUBE_TOKEN_EN / YOUTUBE_TOKEN_FR / YOUTUBE_TOKEN_AR in GitHub Actions Secrets."
+            exit 1
+          fi
 
       - uses: actions/checkout@v4
         if: steps.req.outputs.action == 'approve'
@@ -55,7 +135,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Download the videos
+      - name: Download Short artifact
         if: steps.req.outputs.action == 'approve'
         uses: actions/download-artifact@v4
         with:
@@ -64,24 +144,36 @@ jobs:
           run-id: ${{ steps.req.outputs.gh_run_id }}
           github-token: ${{ github.token }}
 
-      - name: Upload to YouTube
+      - name: Upload to YouTube Channel(s)
         if: steps.req.outputs.action == 'approve'
         env:
-          YOUTUBE_TOKEN_AR: ${{ secrets.YOUTUBE_TOKEN_AR }}
+          YOUTUBE_TOKEN: ${{ secrets.YOUTUBE_TOKEN }}
+          YOUTUBE_TOKEN_EN: ${{ secrets.YOUTUBE_TOKEN_EN }}
           YOUTUBE_TOKEN_FR: ${{ secrets.YOUTUBE_TOKEN_FR }}
+          YOUTUBE_TOKEN_AR: ${{ secrets.YOUTUBE_TOKEN_AR }}
           RUN_ID: ${{ steps.req.outputs.run_id }}
           PRIVACY: ${{ steps.req.outputs.privacy }}
-          APPROVER: ${{ github.event.comment.user.login }}
+          LANGS: ${{ steps.req.outputs.langs }}
+          APPROVER: ${{ github.actor }}
           PYTHONIOENCODING: utf-8
         run: |
           uv sync -q
           set -o pipefail
-          uv run python -m moderator upload "runs/$RUN_ID" --approved-by "github:$APPROVER" --privacy "$PRIVACY" | tee result.txt
-          { echo "Uploaded:"; echo; sed 's/^/- /' result.txt; } > reply.md
-          gh issue comment "$ISSUE" -R "$GITHUB_REPOSITORY" --body-file reply.md
-          gh issue close "$ISSUE" -R "$GITHUB_REPOSITORY"
+          cmd=(uv run python -m moderator upload "runs/$RUN_ID" --approved-by "github:$APPROVER" --privacy "$PRIVACY")
+          if [ -n "$LANGS" ]; then cmd+=(--langs "$LANGS"); fi
+          "${cmd[@]}" | tee result.txt
+          {
+            echo "### Published to YouTube"
+            echo ""
+            sed 's/^/- /' result.txt
+          } > reply.md
+          cat reply.md >> "$GITHUB_STEP_SUMMARY"
+          if [ "$EVENT_NAME" = "issue_comment" ]; then
+            gh issue comment "$ISSUE" -R "$GITHUB_REPOSITORY" --body-file reply.md
+            gh issue close "$ISSUE" -R "$GITHUB_REPOSITORY"
+          fi
 
-      - name: Report a failed upload
-        if: failure() && steps.req.outputs.action == 'approve'
+      - name: Report failed upload on issue
+        if: failure() && steps.req.outputs.action == 'approve' && github.event_name == 'issue_comment'
         run: |
-          gh issue comment "$ISSUE" -R "$GITHUB_REPOSITORY" --body "Upload failed. Logs: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}. Comment /approve again to retry."
+          gh issue comment "$ISSUE" -R "$GITHUB_REPOSITORY" --body "Upload failed. Logs: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}. Comment \`/approve\` again after fixing secrets/quota to retry."

@@ -1,7 +1,9 @@
-"""Dashboard server: serves the page, the run state, the run's media files, and approval actions."""
+"""Dashboard server: serves the page, the run state, the run's media files, historical runs, and approval actions."""
 
 from __future__ import annotations
 
+import json
+import re
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException
@@ -12,6 +14,7 @@ from pydantic import BaseModel
 from ..engine.orchestrator import Orchestrator
 
 DASHBOARD = Path(__file__).resolve().parent.parent / "dashboard"
+SAFE_RUN_ID = re.compile(r"^[A-Za-z0-9_.-]+$")
 
 
 class Decision(BaseModel):
@@ -25,6 +28,17 @@ def create_app(orch: Orchestrator) -> FastAPI:
     app = FastAPI(title="moderator")
     store = orch.store
     run_dir = store.run_dir.resolve()
+    runs_root = run_dir.parent.resolve()
+
+    def _resolve_run_dir(run_id: str) -> Path:
+        if run_id == store.data["run_id"]:
+            return run_dir
+        if not SAFE_RUN_ID.fullmatch(run_id):
+            raise HTTPException(404, "unknown run")
+        cand = (runs_root / run_id).resolve()
+        if not cand.is_relative_to(runs_root) or not (cand / "state.json").is_file():
+            raise HTTPException(404, "unknown run")
+        return cand
 
     @app.get("/")
     def index():
@@ -34,6 +48,58 @@ def create_app(orch: Orchestrator) -> FastAPI:
     @app.get("/state.json")
     async def state():
         return JSONResponse(store.snapshot(), headers={"Cache-Control": "no-store"})
+
+    @app.get("/api/runs")
+    async def list_runs():
+        live_id = store.data["run_id"]
+        items = []
+        candidates = sorted(runs_root.glob("*/state.json"), reverse=True) if runs_root.is_dir() else []
+        seen = set()
+        for sf in candidates[:40]:
+            rid = sf.parent.name
+            seen.add(rid)
+            if rid == live_id:
+                snap = store.snapshot()
+            else:
+                try:
+                    snap = json.loads(sf.read_text(encoding="utf-8"))
+                except Exception:  # noqa: BLE001
+                    continue
+            items.append({
+                "run_id": snap.get("run_id", rid),
+                "workflow": snap.get("workflow", ""),
+                "workflow_title": snap.get("workflow_title", rid),
+                "status": snap.get("status", "unknown"),
+                "started_at": snap.get("started_at"),
+                "is_live": rid == live_id,
+            })
+        if live_id not in seen:
+            snap = store.snapshot()
+            items.insert(0, {
+                "run_id": live_id,
+                "workflow": snap.get("workflow", ""),
+                "workflow_title": snap.get("workflow_title", live_id),
+                "status": snap.get("status", "running"),
+                "started_at": snap.get("started_at"),
+                "is_live": True,
+            })
+        return JSONResponse({"live_run_id": live_id, "runs": items}, headers={"Cache-Control": "no-store"})
+
+    @app.get("/api/runs/{run_id}/state")
+    async def run_state(run_id: str):
+        if run_id == store.data["run_id"]:
+            return JSONResponse(store.snapshot(), headers={"Cache-Control": "no-store"})
+        target_dir = _resolve_run_dir(run_id)
+        data = json.loads((target_dir / "state.json").read_text(encoding="utf-8"))
+        return JSONResponse(data, headers={"Cache-Control": "no-store"})
+
+    @app.get("/api/runs/{run_id}/files/{rel:path}")
+    def run_files(run_id: str, rel: str):
+        target_dir = _resolve_run_dir(run_id)
+        path = (target_dir / rel).resolve()
+        if not path.is_relative_to(target_dir) or not path.is_file():
+            raise HTTPException(404, "not found")
+        return FileResponse(path, headers={"Cache-Control": "no-store"})
 
     @app.post("/api/checkpoints/{cp_id}")
     async def decide(cp_id: str, body: Decision):  # async: runs on the engine loop, so wake.set() is safe
@@ -55,6 +121,13 @@ def create_app(orch: Orchestrator) -> FastAPI:
         except ValueError as e:
             raise HTTPException(409, str(e))
         return {"ok": True}
+
+    @app.post("/api/retry-failed")
+    async def retry_all():
+        retried = orch.retry_failed()
+        if not retried:
+            raise HTTPException(409, "no failed steps to retry")
+        return {"ok": True, "retried": retried}
 
     @app.get("/files/{rel:path}")
     def files(rel: str):

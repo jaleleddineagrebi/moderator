@@ -4,7 +4,7 @@ description: Research and rank Shorts niches for Arabic and French audiences, th
 params:
   languages: [ar, fr]
   style: faceless, fast cuts, bold captions, calm narration
-  budget_usd: null      # Claude runs on your plan; set a number to cap the notional cost
+  budget_usd: null      # set a number (e.g. 1.00) to cap Gemini API cost
 settings:
   max_retries: 2
 steps:

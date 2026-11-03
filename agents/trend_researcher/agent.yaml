@@ -2,6 +2,6 @@ title: Trend Researcher
 role: Finds current topic angles, hooks and keywords in the channel niche and proposes 3 ranked video ideas.
 inputs: [niche, languages, optional topic]
 outputs: [ideas.json, ideas.md]
-tools: [Claude web search, YouTube Data API (if key set)]
+tools: [Gemini Flash + Google Search grounding, YouTube Data API (if key set)]
 strategies: [web_and_youtube, web_only, no_web]
 timeout_s: 1500

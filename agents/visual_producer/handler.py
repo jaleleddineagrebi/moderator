@@ -5,10 +5,11 @@ import zlib
 
 from PIL import Image, ImageDraw, ImageFilter
 
+from moderator.engine import llm as llm_mod
 from moderator.engine.agent import Agent, StepContext
 from moderator.tools import ffmpeg, stock
 
-TIERS = ["stock_video", "stock_photo", "generated"]
+TIERS = ["nano_banana", "stock_video", "stock_photo", "generated"]
 
 
 def generated_background(path, seed: int) -> None:
@@ -38,15 +39,39 @@ class Handler(Agent):
         script = ctx.read_json(ctx.upstream("script")["data"])
         keys = stock.available()
         providers = [p for p in ("pexels", "pixabay") if keys[p]]
+        has_banana = llm_mod.api_key_available() or hasattr(ctx.llm, "generate_image")
+        visual_mode = str(ctx.params.get("visual_mode") or "").lower()
+
         start = TIERS.index(ctx.strategy) if ctx.strategy in TIERS else 0
-        if not providers:
-            ctx.log("No PEXELS_API_KEY or PIXABAY_API_KEY in .env: using generated backgrounds", "warning")
+        if visual_mode == "stock" and start == 0:
+            start = TIERS.index("stock_video")
+        elif visual_mode == "generated":
             start = TIERS.index("generated")
-        ctx.set_inputs(script=ctx.upstream("script")["data"], providers=providers, starting_tier=TIERS[start])
+
+        available_tiers = [
+            t for t in TIERS[start:]
+            if (t == "generated")
+            or (t == "nano_banana" and llm_mod.api_key_available())
+            or (t in ("stock_video", "stock_photo") and providers)
+        ]
+        if not available_tiers:
+            available_tiers = ["generated"]
+        if available_tiers == ["generated"]:
+            ctx.log("No GEMINI_API_KEY or stock API keys in .env: using procedural generated backgrounds", "warning")
+
+        ctx.set_inputs(script=ctx.upstream("script")["data"], providers=providers,
+                       nano_banana=llm_mod.api_key_available(), starting_tier=available_tiers[0])
         if ctx.feedback:
             ctx.log(f"Revision feedback: {ctx.feedback[-1]['comment']}")
 
         used: set[str] = set()
+        prev_lic_path = ctx.run_dir / "assets/licenses.json"
+        if ctx.feedback and prev_lic_path.exists():
+            for item in ctx.read_json("assets/licenses.json"):
+                if item.get("page"):
+                    used.add(item["page"])
+        pick_lock = asyncio.Lock()
+
         licenses: list[dict] = []
         sem = asyncio.Semaphore(3)
         scenes = script["scenes"]
@@ -56,12 +81,14 @@ class Handler(Agent):
             nonlocal done
             async with sem:
                 out = ctx.path(f"assets/{scene['id']}.mp4")
-                tiers = TIERS[start:]
-                if scene["visual"].get("prefer") == "photo" and "stock_video" in tiers:
-                    tiers = ["stock_photo", "stock_video", "generated"]
+                tiers = list(available_tiers)
+                if scene["visual"].get("prefer") == "photo" and "stock_video" in tiers and "stock_photo" in tiers:
+                    sv, sp = tiers.index("stock_video"), tiers.index("stock_photo")
+                    if sv < sp:
+                        tiers[sv], tiers[sp] = tiers[sp], tiers[sv]
                 for tier in tiers:
                     try:
-                        lic = await self._tier(ctx, tier, scene, i, providers, used, out)
+                        lic = await self._tier(ctx, tier, scene, i, script["title"], providers, used, pick_lock, out)
                     except Exception as e:  # noqa: BLE001 - fall through to the next tier
                         ctx.log(f"{scene['id']}: {tier} failed ({type(e).__name__}: {e})", "warning")
                         continue
@@ -79,10 +106,29 @@ class Handler(Agent):
         sheet = await self._contact_sheet(ctx, clips)
         return {"contact_sheet": sheet, "scenes": clips, "licenses": lic_path}
 
-    async def _tier(self, ctx, tier, scene, i, providers, used, out) -> dict | None:
+    async def _tier(self, ctx, tier, scene, i, title, providers, used, pick_lock, out) -> dict | None:
+        if tier == "nano_banana":
+            png = ctx.path(f"assets/raw/{scene['id']}_banana.png")
+            fb = f"\nRevision note: {ctx.feedback[-1]['comment']}" if ctx.feedback else ""
+            prompt = (
+                f"Vertical 9:16 cinematic visual for a faceless YouTube Short titled '{title}'. "
+                f"Scene {i + 1}: {scene['visual']['description']}. "
+                f"Style: {ctx.params.get('style', 'cinematic, moody lighting, clean composition')}. "
+                "IMPORTANT: Do NOT render any text, letters, numbers, watermarks, brand logos, or recognizable celebrities. "
+                f"Leave clean breathing room in the upper and lower thirds for burned-in captions.{fb}"
+            )
+            used_model = await ctx.llm.generate_image(prompt, png, aspect_ratio="9:16", size=(1080, 1920))
+            await ffmpeg.still_to_clip(png, out, ctx.run_dir, seconds=10, zoom_in=i % 2 == 0)
+            return {
+                "provider": "nano_banana",
+                "model": used_model,
+                "query": scene["visual"]["description"],
+                "license": f"AI-generated original image ({used_model}); no third-party rights",
+            }
         if tier == "generated":
             png = ctx.path(f"assets/raw/{scene['id']}.png")
-            generated_background(png, seed=zlib.crc32(f"{ctx.store.data['run_id']}:{i}".encode()))
+            seed = zlib.crc32(f"{ctx.store.data['run_id']}:{ctx.attempt}:{i}".encode())
+            generated_background(png, seed=seed)
             await ffmpeg.still_to_clip(png, out, ctx.run_dir, seconds=10, zoom_in=i % 2 == 0)
             return {"provider": "generated", "license": "original work, no third-party rights"}
         for term in scene["visual"]["search_terms"]:
@@ -91,10 +137,12 @@ class Handler(Agent):
                     results = await stock.search_videos(term, provider)
                 else:
                     results = await stock.search_photos(term, provider)
-                pick = next((r for r in results if r["page"] not in used), None)
+                async with pick_lock:
+                    pick = next((r for r in results if r["page"] not in used), None)
+                    if pick:
+                        used.add(pick["page"])
                 if not pick:
                     continue
-                used.add(pick["page"])
                 ext = "mp4" if tier == "stock_video" else "jpg"
                 raw = ctx.path(f"assets/raw/{scene['id']}.{ext}")
                 await stock.download(pick["url"], raw)
@@ -110,7 +158,8 @@ class Handler(Agent):
         for rel in clips:
             frame = ctx.path(f"assets/raw/{rel.split('/')[-1]}.jpg")
             await ffmpeg.frame_at(ctx.run_dir / rel, frame, ctx.run_dir, at=1.0)
-            thumbs.append(Image.open(frame).resize((216, 384)))
+            with Image.open(frame) as im:
+                thumbs.append(im.resize((216, 384)))
         cols = min(len(thumbs), 5)
         rows = (len(thumbs) + cols - 1) // cols
         sheet = Image.new("RGB", (cols * 216 + (cols + 1) * 8, rows * 384 + (rows + 1) * 8), (20, 20, 20))

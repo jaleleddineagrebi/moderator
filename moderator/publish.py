@@ -7,6 +7,7 @@ from pathlib import Path
 
 from .engine.state import StateStore, now_iso
 from .tools import youtube_upload
+from .tools.languages import normalize_langs
 
 FINAL_CHECKPOINT = "C"
 
@@ -15,15 +16,15 @@ def review_summary(store: StateStore) -> str:
     """Markdown for the approval request (GitHub issue body or console)."""
     d = store.data
     run_dir = store.run_dir
-    lines = [f"**Run:** `{d['run_id']}` · status `{d['status']}` · notional cost ${d['cost']['total_usd']:.2f}", ""]
+    lines = [f"**Run:** `{d['run_id']}` · status `{d['status']}` · estimated cost ${d['cost']['total_usd']:.2f}", ""]
     failed = [s for s, v in d["steps"].items() if v["status"] == "failed"]
     if failed:
         lines.append(f"❌ Failed steps: {', '.join(failed)}. Last error:")
         err = d["steps"][failed[0]]["errors"][-1]["error"] if d["steps"][failed[0]]["errors"] else "unknown"
         lines += ["```", err[:1500], "```"]
         return "\n".join(lines)
-    meta_rel = d["steps"]["packaging"]["outputs"].get("metadata")
-    if meta_rel:
+    meta_rel = (d["steps"].get("packaging") or {}).get("outputs", {}).get("metadata")
+    if meta_rel and (run_dir / meta_rel).exists():
         meta = json.loads((run_dir / meta_rel).read_text(encoding="utf-8"))
         for lang, m in meta.items():
             lines += [f"### {lang.upper()}: {m['title']}", m["description"], " ".join(m.get("hashtags", [])), ""]
@@ -53,8 +54,9 @@ def approve_and_upload(store: StateStore, approved_by: str, privacy: str, langs:
     run_dir = store.run_dir
     qa_out = d["steps"]["qa"]["outputs"]
     meta = json.loads((run_dir / d["steps"]["packaging"]["outputs"]["metadata"]).read_text(encoding="utf-8"))
+    target_langs = normalize_langs(langs) if langs else normalize_langs(d["params"].get("languages"))
     results = []
-    for lang in langs or d["params"].get("languages", ["ar", "fr"]):
+    for lang in target_langs:
         video = run_dir / qa_out[f"video_{lang}"]
         thumb = qa_out.get(f"thumbnail_{lang}")
         res = youtube_upload.upload(lang, video, meta[lang], privacy, Path(run_dir / thumb) if thumb else None)

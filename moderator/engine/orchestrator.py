@@ -19,6 +19,7 @@ class Orchestrator:
         self.registry = registry
         self.wake = asyncio.Event()
         self.tasks: dict[str, asyncio.Task] = {}
+        self._cancelled_for_reset: set[str] = set()
 
     @property
     def steps(self) -> dict:
@@ -79,8 +80,11 @@ class Orchestrator:
         agent = self.registry.agent(step.agent)
         strategies = agent.spec.strategies or ["default"]
         max_retries = self.workflow.settings["max_retries"]
+        backoff_s = float(self.workflow.settings.get("retry_backoff_s") or 0.0)
         try:
             for retry in range(max_retries + 1):
+                if retry > 0 and backoff_s > 0:
+                    await asyncio.sleep(backoff_s * (2 ** (retry - 1)))
                 strategy = strategies[min(retry, len(strategies) - 1)]
                 with self.store.mutate() as d:
                     st = d["steps"][step_id]
@@ -93,6 +97,9 @@ class Orchestrator:
                 try:
                     outputs = await asyncio.wait_for(agent.run(ctx), agent.spec.timeout_s)
                 except asyncio.CancelledError:
+                    if step_id in self._cancelled_for_reset:
+                        self._cancelled_for_reset.discard(step_id)
+                        return
                     raise
                 except Exception as e:  # noqa: BLE001 - any agent failure is retried
                     msg = f"{type(e).__name__}: {e}"
@@ -112,6 +119,7 @@ class Orchestrator:
             self.store.notify(f"'{step.title}' failed after {max_retries + 1} attempts. "
                               "Open it on the dashboard and press Retry once fixed.", "error", step_id)
         finally:
+            self._cancelled_for_reset.discard(step_id)
             self.tasks.pop(step_id, None)
             self.wake.set()
 
@@ -151,26 +159,37 @@ class Orchestrator:
             return
         with self.store.mutate() as d:
             d["revision_rounds"] += 1
+        all_targets = {t for t, _ in requests}
         for target, feedback in requests:
-            self.send_back(target, feedback, source=reviewer)
+            self.send_back(target, feedback, source=reviewer, preserve_revising=all_targets)
 
-    def send_back(self, target: str, feedback: str, source: str) -> None:
-        """Mark target as needs_revision with feedback and requeue everything that depends on it."""
+    def send_back(self, target: str, feedback: str, source: str, *, preserve_revising: set[str] | None = None) -> None:
+        """Mark target as needs_revision with feedback, cancel in-flight downstream tasks, and requeue downstream."""
         if target not in self.steps:
             raise KeyError(f"unknown step '{target}'")
         reset = self.workflow.downstream(target)
+        keep_rev = preserve_revising or set()
+        for sid in [target, *reset]:
+            task = self.tasks.get(sid)
+            if task and not task.done() and task is not asyncio.current_task():
+                self._cancelled_for_reset.add(sid)
+                task.cancel()
         with self.store.mutate() as d:
             t = d["steps"][target]
             t.update(status="needs_revision", progress=0, retries=0)
             t["feedback"].append({"ts": now_iso(), "from": source, "comment": feedback})
             for sid in reset:
                 s = d["steps"][sid]
-                s.update(status="queued", progress=0, retries=0)
+                next_status = "needs_revision" if (sid in keep_rev and s["status"] == "needs_revision") else "queued"
+                s.update(status=next_status, progress=0, retries=0)
                 s["logs"].append({"ts": now_iso(), "level": "info", "msg": f"Reset: upstream step '{target}' is being revised"})
             for cp in d["checkpoints"].values():
                 keep_request = cp["step"] == target and cp["status"] == "changes_requested"
                 if (cp["step"] in reset or cp["step"] == target) and not keep_request:
                     cp["status"] = "idle"
+            if d["status"] != "running":
+                d["status"] = "running"
+                d["ended_at"] = None
         self.store.log(target, f"Sent back by {source}: {feedback}", "warning")
         self.wake.set()
 
@@ -213,3 +232,18 @@ class Orchestrator:
             d["ended_at"] = None
         self.store.log(step_id, "Manual retry requested")
         self.wake.set()
+
+    def retry_failed(self) -> list[str]:
+        """Requeue every currently failed step."""
+        failed = [sid for sid, st in self.steps.items() if st["status"] == "failed"]
+        if not failed:
+            return []
+        with self.store.mutate() as d:
+            for sid in failed:
+                d["steps"][sid].update(status="queued", retries=0, progress=0)
+            d["status"] = "running"
+            d["ended_at"] = None
+        for sid in failed:
+            self.store.log(sid, "Manual retry requested")
+        self.wake.set()
+        return failed

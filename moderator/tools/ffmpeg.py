@@ -9,6 +9,7 @@ import os
 import re
 import shutil
 import subprocess
+import sys
 from functools import cache
 from pathlib import Path
 
@@ -24,11 +25,19 @@ def binary(name: str = "ffmpeg") -> str:
     found = shutil.which(name)
     if found:
         return found
+    for extra in (Path("/opt/homebrew/bin"), Path("/usr/local/bin")):
+        cand = extra / name
+        if cand.is_file() and os.access(cand, os.X_OK):
+            return str(cand)
     # winget installs ffmpeg here; PATH only picks it up in new shells
     packages = Path(os.environ.get("LOCALAPPDATA", "")) / "Microsoft" / "WinGet" / "Packages"
-    for exe in sorted(packages.glob(f"Gyan.FFmpeg*/*/bin/{name}.exe"), reverse=True):
-        return str(exe)
-    raise FFmpegError(f"{name} not found. Install it with: winget install Gyan.FFmpeg")
+    if packages.exists():
+        for exe in sorted(packages.glob(f"Gyan.FFmpeg*/*/bin/{name}.exe"), reverse=True):
+            return str(exe)
+    hint = ("brew install ffmpeg" if sys.platform == "darwin"
+            else "winget install Gyan.FFmpeg" if sys.platform == "win32"
+            else "sudo apt-get install ffmpeg")
+    raise FFmpegError(f"{name} not found. Install it with: {hint}")
 
 
 async def run(args: list[str], cwd: Path, timeout: int = 900) -> str:

@@ -113,7 +113,7 @@ class StepContext:
     def check_budget(self) -> None:
         cost = self.store.data["cost"]
         budget = cost.get("budget_usd")
-        if budget and cost["total_usd"] >= budget:
+        if budget is not None and cost["total_usd"] >= float(budget):
             raise BudgetExceeded(f"budget of ${budget} reached (spent ${cost['total_usd']:.2f})")
 
     def set_inputs(self, **inputs: Any) -> None:
@@ -123,6 +123,8 @@ class StepContext:
     def offer_choices(self, options: list[dict]) -> None:
         """For a 'choice' checkpoint: options are {id, label, detail} dicts shown in the approval panel."""
         cp_id = self.store.data["steps"][self.step_id]["checkpoint"]
+        if not cp_id:
+            return
         with self.store.mutate() as d:
             d["checkpoints"][cp_id]["options"] = options
 
@@ -144,11 +146,11 @@ class StepContext:
         self.path(rel).write_text(json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
         return rel
 
-    # Claude
+    # Gemini (Flash + Nano Banana)
 
     @property
     def llm(self):
         if self._llm is None:
-            from .llm import ClaudeCLI
-            self._llm = ClaudeCLI(self, self.config.get("llm", {}))
+            from .llm import create_llm
+            self._llm = create_llm(self, self.config.get("llm", {}))
         return self._llm

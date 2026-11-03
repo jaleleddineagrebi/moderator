@@ -1,10 +1,12 @@
 import json
+import shutil
 
 from PIL import Image, ImageDraw, ImageEnhance
 
+from moderator.engine import llm as llm_mod
 from moderator.engine.agent import Agent, StepContext
 from moderator.tools import ffmpeg, text
-from moderator.tools.languages import describe, names
+from moderator.tools.languages import describe, lang_schema, names, normalize_langs
 
 LANG_META = {
     "type": "object",
@@ -18,18 +20,19 @@ LANG_META = {
         "thumbnail_text": {"type": "string", "description": "2-4 words, huge on the thumbnail"},
     },
 }
-SCHEMA = {"type": "object", "additionalProperties": False, "required": ["ar", "fr"], "properties": {"ar": LANG_META, "fr": LANG_META}}
 
 
 class Handler(Agent):
     async def run(self, ctx: StepContext) -> dict[str, str]:
         script = ctx.read_json(ctx.upstream("script")["data"])
         visuals = ctx.upstream("visuals")["scenes"]
-        langs = ctx.params.get("languages", ["ar", "fr"])
-        ctx.set_inputs(script=ctx.upstream("script")["data"], thumbnail_source=visuals[0])
+        langs = normalize_langs(ctx.params.get("languages"))
+        ctx.set_inputs(script=ctx.upstream("script")["data"], languages=langs,
+                       strategy=ctx.strategy, thumbnail_source=visuals[0])
 
         narration = {l: " ".join(s["vo"][l] for s in script["scenes"]) for l in langs}
-        prompt = f"""Write YouTube Shorts packaging for one video published in two versions: {names(langs)}.
+        ar_tag_note = "; Arabic hashtags in Arabic for the ar version" if "ar" in langs else ""
+        prompt = f"""Write YouTube Shorts packaging for {names(langs)}.
 How each language is written:
 {describe(langs)}
 
@@ -41,26 +44,43 @@ FULL NARRATION:
 For each language, write natively (not a literal translation):
 - title: max 70 characters, makes people curious, accurate to the video
 - description: 2-4 short lines; no links; no claims the video does not make
-- hashtags: 3-6, always include #Shorts; Arabic hashtags in Arabic for the ar version
+- hashtags: 3-6, always include #Shorts{ar_tag_note}
 - tags: 8-15 search phrases people actually type
 - thumbnail_text: 2-4 words, punchy
 Avoid trademarked names, celebrity names and anything sensational or misleading.
 
 {ctx.revision_notes()}"""
-        meta = await ctx.llm.ask(prompt, schema=SCHEMA)
+        meta = await ctx.llm.ask(prompt, schema=lang_schema(langs, value_schema=LANG_META))
         for l in langs:
             if not any(h.lower() == "#shorts" for h in meta[l]["hashtags"]):
                 meta[l]["hashtags"].append("#Shorts")
             meta[l]["title"] = meta[l]["title"][:100]
-        ctx.progress(60)
+        ctx.progress(55)
         outputs = {"metadata": ctx.write_json("metadata.json", meta)}
 
-        frame = ctx.path("thumb_src.jpg")
-        await ffmpeg.frame_at(ctx.run_dir / visuals[0], frame, ctx.run_dir, at=1.0)
+        bg_path = ctx.path("thumb_src.png")
+        used_banana = False
+        if ctx.strategy == "banana_thumbnail" and llm_mod.api_key_available() and hasattr(ctx.llm, "generate_image"):
+            try:
+                hook_scene = script["scenes"][0]["visual"]["description"]
+                art_prompt = (
+                    f"Eye-catching vertical 9:16 YouTube Short thumbnail background for '{script['title']}'. "
+                    f"Visual concept: {hook_scene}. Dramatic lighting, high contrast, vivid colors, clean dark focal area in the center "
+                    "for bold headline text overlay. Do NOT include any text, letters, numbers, logos, or celebrity faces."
+                )
+                await ctx.llm.generate_image(art_prompt, bg_path, aspect_ratio="9:16", size=(1080, 1920))
+                used_banana = True
+            except Exception as e:  # noqa: BLE001 - fall back to video frame
+                ctx.log(f"Nano Banana thumbnail background failed ({e}); using scene_01 frame instead", "warning")
+        if not used_banana:
+            bg_path = ctx.path("thumb_src.jpg")
+            await ffmpeg.frame_at(ctx.run_dir / visuals[0], bg_path, ctx.run_dir, at=1.0)
+
         for l in langs:
-            img = Image.open(frame).convert("RGB").resize((1080, 1920))
+            with Image.open(bg_path) as src_im:
+                img = src_im.convert("RGB").resize((1080, 1920))
             if ctx.strategy != "plain_thumbnail":
-                img = ImageEnhance.Contrast(ImageEnhance.Color(img).enhance(1.25)).enhance(1.1)
+                img = ImageEnhance.Contrast(ImageEnhance.Color(img).enhance(1.2)).enhance(1.08)
             shade = Image.new("L", (1, 1920))
             for y in range(1920):  # darken the middle band where the text sits
                 shade.putpixel((0, y), int(170 * max(0.0, 1 - abs(y - 960) / 700)))
@@ -71,6 +91,8 @@ Avoid trademarked names, celebrity names and anything sensational or misleading.
             bar.rectangle([390, 1180, 690, 1196], fill=(255, 229, 0))
             path = f"thumbnail_{l}.png"
             img.save(ctx.path(path))
+            if len(langs) == 1:
+                shutil.copy2(ctx.run_dir / path, ctx.run_dir / "thumbnail.png")
             outputs[f"thumbnail_{l}"] = path
-        frame.unlink(missing_ok=True)
+        bg_path.unlink(missing_ok=True)
         return outputs

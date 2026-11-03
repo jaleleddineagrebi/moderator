@@ -1,14 +1,15 @@
 name: youtube_short
-title: YouTube Short (Egyptian Arabic + French)
-description: One idea, one script, two finished Shorts (Egyptian Arabic and French), stopping for your approval at each checkpoint. Never uploads.
+title: YouTube Short
+description: One idea, one script, finished vertical Short(s) in your target language(s) (en, fr, ar), stopping for your approval at each checkpoint. Never uploads without explicit approval.
 params:
-  languages: [ar, fr]
+  languages: [en, fr]   # overridden by channel.yaml or `-p languages=en,fr` / `-p languages=en`
   style: faceless, fast cuts, bold captions, calm narration
   topic: null           # optional: steer the research to a topic inside the niche
-  budget_usd: null      # Claude runs on your plan; set a number to cap the notional cost
+  budget_usd: null      # set a number (e.g. 2.50) to cap LLM cost
 settings:
   max_retries: 2
   max_revision_rounds: 2
+  retry_backoff_s: 1.0
 steps:
   - id: research
     title: Find 3 video ideas
@@ -39,4 +40,4 @@ steps:
     title: Quality check
     agent: qa_reviewer
     depends_on: [edit, packaging]
-    checkpoint: {id: C, title: Approve the final videos (you upload them yourself), route_to: edit}
+    checkpoint: {id: C, title: Approve the final videos (never uploaded without your OK), route_to: edit}

@@ -1,7 +1,7 @@
 title: Packaging (SEO + Thumbnail)
-role: Writes the title, description and hashtags for each language and designs a vertical thumbnail for each.
+role: Writes the title, description and hashtags with Gemini Flash and designs a 9:16 thumbnail with Nano Banana + Pillow.
 inputs: [script.json, scene clips]
-outputs: [metadata.json, thumbnail_ar.png, thumbnail_fr.png]
-tools: [Claude, Pillow (Arabic shaping via arabic-reshaper + python-bidi), ffmpeg]
-strategies: [default, plain_thumbnail]
+outputs: [metadata.json, thumbnail_<lang>.png]
+tools: [Gemini Flash, Gemini Nano Banana, Pillow (RTL shaping via arabic-reshaper + python-bidi), ffmpeg]
+strategies: [banana_thumbnail, frame_thumbnail, plain_thumbnail]
 timeout_s: 900

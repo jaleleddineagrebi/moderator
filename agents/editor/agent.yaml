@@ -1,7 +1,7 @@
 title: Editor
 role: Cuts the scene clips to each language's narration, adds transitions, burned-in captions, ducked music and SFX, and renders the final Shorts.
 inputs: [assets/scene_XX.mp4, voiceover_<lang>.mp3, timings_<lang>.json, music.mp3, script.json]
-outputs: [final_short_ar.mp4, final_short_fr.mp4, captions_<lang>.ass]
+outputs: [final_short_<lang>.mp4, captions_<lang>.ass]
 tools: [ffmpeg (xfade, libass captions, sidechain ducking, loudnorm)]
 strategies: [transitions, hard_cuts, hard_cuts_no_sfx]
 timeout_s: 2400

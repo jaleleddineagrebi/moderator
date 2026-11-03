@@ -2,32 +2,36 @@ import json
 
 from moderator.engine.agent import Agent, StepContext
 from moderator.tools import youtube
-from moderator.tools.languages import LANGS
+from moderator.tools.languages import LANGS, names, normalize_langs
 
-SCHEMA = {
-    "type": "object",
-    "additionalProperties": False,
-    "required": ["niches"],
-    "properties": {"niches": {"type": "array", "minItems": 5, "maxItems": 5, "items": {
+
+def make_schema(langs: list[str]) -> dict:
+    best_enum = [*langs, "all"] if len(langs) > 1 else list(langs)
+    return {
         "type": "object",
         "additionalProperties": False,
-        "required": ["id", "name", "summary", "scores", "total", "best_language", "example_topics", "risks", "evidence"],
-        "properties": {
-            "id": {"type": "string", "description": "short slug"},
-            "name": {"type": "string"},
-            "summary": {"type": "string", "description": "why this niche, 2-3 sentences"},
-            "scores": {"type": "object", "additionalProperties": False,
-                       "required": ["demand", "competition", "monetization", "faceless_fit", "copyright_safety"],
-                       "properties": {k: {"type": "integer", "minimum": 1, "maximum": 10} for k in
-                                      ("demand", "competition", "monetization", "faceless_fit", "copyright_safety")}},
-            "total": {"type": "number"},
-            "best_language": {"type": "string", "enum": ["ar", "fr", "both"]},
-            "example_topics": {"type": "array", "items": {"type": "string"}, "minItems": 3, "maxItems": 5},
-            "risks": {"type": "string"},
-            "evidence": {"type": "array", "items": {"type": "string"}, "description": "sources and data points (URLs, view counts)"},
-        },
-    }}},
-}
+        "required": ["niches"],
+        "properties": {"niches": {"type": "array", "minItems": 5, "maxItems": 5, "items": {
+            "type": "object",
+            "additionalProperties": False,
+            "required": ["id", "name", "summary", "scores", "total", "best_language", "example_topics", "risks", "evidence"],
+            "properties": {
+                "id": {"type": "string", "description": "short slug"},
+                "name": {"type": "string"},
+                "summary": {"type": "string", "description": "why this niche, 2-3 sentences"},
+                "scores": {"type": "object", "additionalProperties": False,
+                           "required": ["demand", "competition", "monetization", "faceless_fit", "copyright_safety"],
+                           "properties": {k: {"type": "integer", "minimum": 1, "maximum": 10} for k in
+                                          ("demand", "competition", "monetization", "faceless_fit", "copyright_safety")}},
+                "total": {"type": "number"},
+                "best_language": {"type": "string", "enum": best_enum},
+                "example_topics": {"type": "array", "items": {"type": "string"}, "minItems": 3, "maxItems": 5},
+                "risks": {"type": "string"},
+                "evidence": {"type": "array", "items": {"type": "string"}, "description": "sources and data points (URLs, view counts)"},
+            },
+        }}},
+    }
+
 
 SEEDS = ["science facts", "history facts", "psychology facts", "space", "animals facts", "personal finance tips",
          "productivity", "technology explained", "geography facts", "health myths"]
@@ -35,7 +39,7 @@ SEEDS = ["science facts", "history facts", "psychology facts", "space", "animals
 
 class Handler(Agent):
     async def run(self, ctx: StepContext) -> dict[str, str]:
-        langs = ctx.params.get("languages", ["ar", "fr"])
+        langs = normalize_langs(ctx.params.get("languages"))
         focus = ctx.params.get("focus", "")
         ctx.set_inputs(languages=langs, style=ctx.params.get("style"), focus=focus or None)
 
@@ -62,11 +66,11 @@ class Handler(Agent):
         prompt = f"""You are a YouTube Shorts market researcher. Find the 5 best niches for a NEW faceless Shorts channel.
 
 Audience languages: {'; '.join(l + ' = ' + LANGS[l]['name'] + ' (' + LANGS[l]['audience'] + ')' for l in langs)}.
-Each video will be published in both languages from one script, using free stock footage, AI narration and bold captions.
+Each video will be published in {names(langs)} from one script, using free stock footage, AI narration and bold captions.
 Style: {ctx.params.get('style', 'faceless, fast cuts, bold captions, calm narration')}.
 {f'The owner is interested in: {focus}.' if focus else ''}
 
-Use web search to check current demand and competition for Arabic and French Shorts (2026), typical RPM by niche,
+Use web search to check current demand and competition for {names(langs)} Shorts (2026), typical RPM by niche,
 and what successful faceless channels in these languages do. {breadth}
 
 Score each niche 1-10 on: demand, competition (10 = little competition), monetization, faceless_fit
@@ -78,7 +82,7 @@ Rank by total, best first. Cite concrete evidence (URLs, numbers) for each niche
 
 {ctx.revision_notes()}"""
         ctx.progress(45)
-        result = await ctx.llm.ask(prompt, schema=SCHEMA, tools=["WebSearch", "WebFetch"])
+        result = await ctx.llm.ask(prompt, schema=make_schema(langs), tools=["WebSearch", "WebFetch"])
         niches = sorted(result["niches"], key=lambda n: -n["total"])
         ctx.progress(90)
 
