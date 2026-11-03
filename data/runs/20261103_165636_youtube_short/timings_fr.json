@@ -1,0 +1,685 @@
+{
+  "voice": "fr-FR-DeniseNeural",
+  "duration": 46.96805,
+  "scenes": [
+    {
+      "scene": "scene_01",
+      "start": 0.0,
+      "end": 2.76,
+      "words": [
+        {
+          "start": 0.1,
+          "end": 0.238,
+          "text": "Tu"
+        },
+        {
+          "start": 0.25,
+          "end": 0.625,
+          "text": "n'arrives"
+        },
+        {
+          "start": 0.637,
+          "end": 0.762,
+          "text": "pas"
+        },
+        {
+          "start": 0.775,
+          "end": 0.85,
+          "text": "à"
+        },
+        {
+          "start": 0.863,
+          "end": 1.212,
+          "text": "arrêter"
+        },
+        {
+          "start": 1.225,
+          "end": 1.35,
+          "text": "d'y"
+        },
+        {
+          "start": 1.363,
+          "end": 1.888,
+          "text": "penser"
+        }
+      ]
+    },
+    {
+      "scene": "scene_02",
+      "start": 2.94,
+      "end": 8.268,
+      "words": [
+        {
+          "start": 3.04,
+          "end": 3.265,
+          "text": "Ce"
+        },
+        {
+          "start": 3.278,
+          "end": 3.502,
+          "text": "mail"
+        },
+        {
+          "start": 3.515,
+          "end": 3.64,
+          "text": "que"
+        },
+        {
+          "start": 3.653,
+          "end": 3.778,
+          "text": "tu"
+        },
+        {
+          "start": 3.79,
+          "end": 3.928,
+          "text": "n'as"
+        },
+        {
+          "start": 3.94,
+          "end": 4.065,
+          "text": "pas"
+        },
+        {
+          "start": 4.077,
+          "end": 4.59,
+          "text": "envoyé"
+        },
+        {
+          "start": 4.603,
+          "end": 4.715,
+          "text": "ou"
+        },
+        {
+          "start": 4.728,
+          "end": 4.853,
+          "text": "ce"
+        },
+        {
+          "start": 4.865,
+          "end": 5.203,
+          "text": "projet"
+        },
+        {
+          "start": 5.215,
+          "end": 5.29,
+          "text": "à"
+        },
+        {
+          "start": 5.302,
+          "end": 5.677,
+          "text": "moitié"
+        },
+        {
+          "start": 5.69,
+          "end": 6.177,
+          "text": "terminé"
+        },
+        {
+          "start": 6.19,
+          "end": 6.328,
+          "text": "qui"
+        },
+        {
+          "start": 6.34,
+          "end": 6.603,
+          "text": "traîne"
+        },
+        {
+          "start": 6.615,
+          "end": 6.79,
+          "text": "sur"
+        },
+        {
+          "start": 6.802,
+          "end": 6.953,
+          "text": "ton"
+        },
+        {
+          "start": 6.965,
+          "end": 7.39,
+          "text": "bureau"
+        }
+      ]
+    },
+    {
+      "scene": "scene_03",
+      "start": 8.448,
+      "end": 16.056,
+      "words": [
+        {
+          "start": 8.548,
+          "end": 8.748,
+          "text": "C'est"
+        },
+        {
+          "start": 8.76,
+          "end": 9.061,
+          "text": "l'effet"
+        },
+        {
+          "start": 9.073,
+          "end": 9.785,
+          "text": "Zeigarnik"
+        },
+        {
+          "start": 10.648,
+          "end": 11.01,
+          "text": "Notre"
+        },
+        {
+          "start": 11.023,
+          "end": 11.398,
+          "text": "cerveau"
+        },
+        {
+          "start": 11.41,
+          "end": 11.51,
+          "text": "est"
+        },
+        {
+          "start": 11.523,
+          "end": 12.061,
+          "text": "programmé"
+        },
+        {
+          "start": 12.073,
+          "end": 12.248,
+          "text": "pour"
+        },
+        {
+          "start": 12.26,
+          "end": 12.848,
+          "text": "privilégier"
+        },
+        {
+          "start": 12.86,
+          "end": 12.973,
+          "text": "les"
+        },
+        {
+          "start": 12.985,
+          "end": 13.248,
+          "text": "tâches"
+        },
+        {
+          "start": 13.26,
+          "end": 13.748,
+          "text": "inachevées"
+        },
+        {
+          "start": 13.76,
+          "end": 13.911,
+          "text": "par"
+        },
+        {
+          "start": 13.923,
+          "end": 14.31,
+          "text": "rapport"
+        },
+        {
+          "start": 14.323,
+          "end": 14.373,
+          "text": "à"
+        },
+        {
+          "start": 14.386,
+          "end": 14.573,
+          "text": "celles"
+        },
+        {
+          "start": 14.586,
+          "end": 15.173,
+          "text": "terminées"
+        }
+      ]
+    },
+    {
+      "scene": "scene_04",
+      "start": 16.236,
+      "end": 23.652,
+      "words": [
+        {
+          "start": 16.336,
+          "end": 16.548,
+          "text": "Dans"
+        },
+        {
+          "start": 16.561,
+          "end": 16.674,
+          "text": "les"
+        },
+        {
+          "start": 16.686,
+          "end": 16.974,
+          "text": "années"
+        },
+        {
+          "start": 16.986,
+          "end": 17.224,
+          "text": "20"
+        },
+        {
+          "start": 17.586,
+          "end": 17.699,
+          "text": "des"
+        },
+        {
+          "start": 17.711,
+          "end": 18.174,
+          "text": "chercheurs"
+        },
+        {
+          "start": 18.186,
+          "end": 18.274,
+          "text": "ont"
+        },
+        {
+          "start": 18.286,
+          "end": 18.424,
+          "text": "vu"
+        },
+        {
+          "start": 18.436,
+          "end": 18.548,
+          "text": "que"
+        },
+        {
+          "start": 18.561,
+          "end": 18.661,
+          "text": "les"
+        },
+        {
+          "start": 18.674,
+          "end": 19.111,
+          "text": "serveurs"
+        },
+        {
+          "start": 19.124,
+          "end": 19.511,
+          "text": "retenaient"
+        },
+        {
+          "start": 19.524,
+          "end": 19.624,
+          "text": "les"
+        },
+        {
+          "start": 19.636,
+          "end": 20.011,
+          "text": "commandes"
+        },
+        {
+          "start": 20.024,
+          "end": 20.548,
+          "text": "impayées"
+        },
+        {
+          "start": 20.861,
+          "end": 20.999,
+          "text": "puis"
+        },
+        {
+          "start": 21.011,
+          "end": 21.111,
+          "text": "les"
+        },
+        {
+          "start": 21.124,
+          "end": 21.574,
+          "text": "oubliaient"
+        },
+        {
+          "start": 21.586,
+          "end": 21.986,
+          "text": "aussitôt"
+        },
+        {
+          "start": 21.999,
+          "end": 22.098,
+          "text": "la"
+        },
+        {
+          "start": 22.111,
+          "end": 22.324,
+          "text": "note"
+        },
+        {
+          "start": 22.336,
+          "end": 22.786,
+          "text": "réglée"
+        }
+      ]
+    },
+    {
+      "scene": "scene_05",
+      "start": 23.832,
+      "end": 30.456,
+      "words": [
+        {
+          "start": 23.932,
+          "end": 24.182,
+          "text": "Cette"
+        },
+        {
+          "start": 24.194,
+          "end": 24.544,
+          "text": "tension"
+        },
+        {
+          "start": 24.557,
+          "end": 24.932,
+          "text": "mentale"
+        },
+        {
+          "start": 24.945,
+          "end": 25.144,
+          "text": "crée"
+        },
+        {
+          "start": 25.157,
+          "end": 25.282,
+          "text": "une"
+        },
+        {
+          "start": 25.294,
+          "end": 25.544,
+          "text": "boucle"
+        },
+        {
+          "start": 25.557,
+          "end": 25.982,
+          "text": "ouverte"
+        },
+        {
+          "start": 25.995,
+          "end": 26.12,
+          "text": "qui"
+        },
+        {
+          "start": 26.132,
+          "end": 26.257,
+          "text": "te"
+        },
+        {
+          "start": 26.27,
+          "end": 26.495,
+          "text": "tient"
+        },
+        {
+          "start": 26.507,
+          "end": 26.932,
+          "text": "éveillé"
+        },
+        {
+          "start": 27.294,
+          "end": 27.407,
+          "text": "te"
+        },
+        {
+          "start": 27.419,
+          "end": 27.77,
+          "text": "rappelant"
+        },
+        {
+          "start": 27.782,
+          "end": 27.944,
+          "text": "sans"
+        },
+        {
+          "start": 27.957,
+          "end": 28.244,
+          "text": "cesse"
+        },
+        {
+          "start": 28.257,
+          "end": 28.407,
+          "text": "tout"
+        },
+        {
+          "start": 28.42,
+          "end": 28.532,
+          "text": "ce"
+        },
+        {
+          "start": 28.545,
+          "end": 28.707,
+          "text": "qu'il"
+        },
+        {
+          "start": 28.72,
+          "end": 29.007,
+          "text": "reste"
+        },
+        {
+          "start": 29.02,
+          "end": 29.082,
+          "text": "à"
+        },
+        {
+          "start": 29.095,
+          "end": 29.595,
+          "text": "faire"
+        }
+      ]
+    },
+    {
+      "scene": "scene_06",
+      "start": 30.636,
+      "end": 38.676,
+      "words": [
+        {
+          "start": 30.736,
+          "end": 30.974,
+          "text": "Pour"
+        },
+        {
+          "start": 30.986,
+          "end": 31.336,
+          "text": "arrêter"
+        },
+        {
+          "start": 31.349,
+          "end": 31.474,
+          "text": "de"
+        },
+        {
+          "start": 31.486,
+          "end": 31.961,
+          "text": "ruminer"
+        },
+        {
+          "start": 32.261,
+          "end": 32.674,
+          "text": "utilise"
+        },
+        {
+          "start": 32.686,
+          "end": 33.136,
+          "text": "l'astuce"
+        },
+        {
+          "start": 33.149,
+          "end": 33.274,
+          "text": "du"
+        },
+        {
+          "start": 33.386,
+          "end": 34.086,
+          "text": "shutdown"
+        },
+        {
+          "start": 34.948,
+          "end": 35.248,
+          "text": "Note"
+        },
+        {
+          "start": 35.261,
+          "end": 35.824,
+          "text": "simplement"
+        },
+        {
+          "start": 35.836,
+          "end": 35.899,
+          "text": "un"
+        },
+        {
+          "start": 35.911,
+          "end": 36.111,
+          "text": "plan"
+        },
+        {
+          "start": 36.123,
+          "end": 36.461,
+          "text": "clair"
+        },
+        {
+          "start": 36.474,
+          "end": 36.599,
+          "text": "de"
+        },
+        {
+          "start": 36.611,
+          "end": 36.723,
+          "text": "ce"
+        },
+        {
+          "start": 36.736,
+          "end": 36.861,
+          "text": "que"
+        },
+        {
+          "start": 36.873,
+          "end": 36.998,
+          "text": "tu"
+        },
+        {
+          "start": 37.011,
+          "end": 37.173,
+          "text": "dois"
+        },
+        {
+          "start": 37.186,
+          "end": 37.411,
+          "text": "faire"
+        },
+        {
+          "start": 37.423,
+          "end": 37.811,
+          "text": "demain"
+        }
+      ]
+    },
+    {
+      "scene": "scene_07",
+      "start": 38.856,
+      "end": 46.968,
+      "words": [
+        {
+          "start": 38.956,
+          "end": 39.319,
+          "text": "Cela"
+        },
+        {
+          "start": 39.331,
+          "end": 39.768,
+          "text": "signale"
+        },
+        {
+          "start": 39.781,
+          "end": 39.844,
+          "text": "à"
+        },
+        {
+          "start": 39.856,
+          "end": 40.019,
+          "text": "ton"
+        },
+        {
+          "start": 40.031,
+          "end": 40.394,
+          "text": "cerveau"
+        },
+        {
+          "start": 40.406,
+          "end": 40.531,
+          "text": "que"
+        },
+        {
+          "start": 40.544,
+          "end": 40.656,
+          "text": "la"
+        },
+        {
+          "start": 40.668,
+          "end": 40.943,
+          "text": "tâche"
+        },
+        {
+          "start": 40.956,
+          "end": 41.019,
+          "text": "est"
+        },
+        {
+          "start": 41.031,
+          "end": 41.181,
+          "text": "sous"
+        },
+        {
+          "start": 41.193,
+          "end": 41.681,
+          "text": "contrôle"
+        },
+        {
+          "start": 42.044,
+          "end": 42.394,
+          "text": "fermant"
+        },
+        {
+          "start": 42.406,
+          "end": 42.518,
+          "text": "la"
+        },
+        {
+          "start": 42.531,
+          "end": 42.818,
+          "text": "boucle"
+        },
+        {
+          "start": 42.831,
+          "end": 42.994,
+          "text": "pour"
+        },
+        {
+          "start": 43.006,
+          "end": 43.131,
+          "text": "que"
+        },
+        {
+          "start": 43.143,
+          "end": 43.281,
+          "text": "tu"
+        },
+        {
+          "start": 43.294,
+          "end": 43.544,
+          "text": "puisses"
+        },
+        {
+          "start": 43.556,
+          "end": 43.819,
+          "text": "enfin"
+        },
+        {
+          "start": 43.831,
+          "end": 44.481,
+          "text": "relaxer"
+        },
+        {
+          "start": 45.343,
+          "end": 46.093,
+          "text": "Abonne-toi"
+        }
+      ]
+    }
+  ]
+}

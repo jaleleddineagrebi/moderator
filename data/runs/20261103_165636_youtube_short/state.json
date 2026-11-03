@@ -368,7 +368,7 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 0,
+      "progress": 41,
       "started_at": "2026-11-03T16:57:06+00:00",
       "ended_at": null,
       "attempt": 1,
@@ -390,6 +390,21 @@
           "ts": "2026-11-03T16:57:06+00:00",
           "level": "info",
           "msg": "Attempt 1/3, strategy 'nano_banana'"
+        },
+        {
+          "ts": "2026-11-03T16:57:25+00:00",
+          "level": "info",
+          "msg": "scene_01: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-03T16:57:31+00:00",
+          "level": "info",
+          "msg": "scene_02: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-03T16:57:34+00:00",
+          "level": "info",
+          "msg": "scene_04: stock_video (pixabay)"
         }
       ],
       "errors": [],
@@ -404,13 +419,13 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 10,
-      "started_at": "2026-11-03T16:57:06+00:00",
+      "progress": 75,
+      "started_at": "2026-11-03T16:57:14+00:00",
       "ended_at": null,
-      "attempt": 1,
-      "retries": 0,
+      "attempt": 2,
+      "retries": 1,
       "max_retries": 2,
-      "strategy": "primary_voice",
+      "strategy": "alternate_voice",
       "inputs": {
         "script": "script.json",
         "languages": [
@@ -418,8 +433,8 @@
           "fr"
         ],
         "voices": {
-          "en": "en-US-AndrewMultilingualNeural",
-          "fr": "fr-FR-HenriNeural"
+          "en": "en-US-AriaNeural",
+          "fr": "fr-FR-DeniseNeural"
         }
       },
       "outputs": {},
@@ -438,6 +453,36 @@
           "ts": "2026-11-03T16:57:13+00:00",
           "level": "error",
           "msg": "NoAudioReceived: No audio was received. Please verify that your parameters are correct."
+        },
+        {
+          "ts": "2026-11-03T16:57:14+00:00",
+          "level": "info",
+          "msg": "Attempt 2/3, strategy 'alternate_voice'"
+        },
+        {
+          "ts": "2026-11-03T16:57:14+00:00",
+          "level": "info",
+          "msg": "Narrating en with en-US-AriaNeural"
+        },
+        {
+          "ts": "2026-11-03T16:57:26+00:00",
+          "level": "info",
+          "msg": "en voiceover: 50.2s"
+        },
+        {
+          "ts": "2026-11-03T16:57:26+00:00",
+          "level": "info",
+          "msg": "Narrating fr with fr-FR-DeniseNeural"
+        },
+        {
+          "ts": "2026-11-03T16:57:38+00:00",
+          "level": "info",
+          "msg": "fr voiceover: 47.0s"
+        },
+        {
+          "ts": "2026-11-03T16:57:38+00:00",
+          "level": "info",
+          "msg": "Generating an ambient music bed (no library tracks with license files found)"
         }
       ],
       "errors": [
@@ -576,7 +621,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-03T16:57:14+00:00",
+    "exported_at": "2026-11-03T16:57:41+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/41679210174"
   }
