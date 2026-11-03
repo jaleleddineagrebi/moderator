@@ -27,12 +27,13 @@
   "ended_at": null,
   "revision_rounds": 0,
   "cost": {
-    "total_usd": 0.006479,
+    "total_usd": 0.007479,
     "budget_usd": 1.0,
     "by_agent": {
       "trend_researcher": 0.002124,
       "scriptwriter": 0.003498,
-      "packaging": 0.000857
+      "packaging": 0.000857,
+      "qa_reviewer": 0.001
     }
   },
   "agents": {
@@ -466,6 +467,7 @@
         }
       },
       "outputs": {
+        "voiceover_en": "voiceover_en.mp3",
         "timings_en": "timings_en.json"
       },
       "logs": [
@@ -640,6 +642,7 @@
         "strategy": "transitions"
       },
       "outputs": {
+        "video_en": "final_short_en.mp4",
         "captions_en": "captions_en.ass"
       },
       "logs": [
@@ -671,10 +674,10 @@
         "packaging"
       ],
       "checkpoint": "C",
-      "status": "running",
-      "progress": 60,
+      "status": "waiting_for_approval",
+      "progress": 100,
       "started_at": "2026-11-03T15:29:27+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-03T15:30:38+00:00",
       "attempt": 1,
       "retries": 0,
       "max_retries": 2,
@@ -688,7 +691,12 @@
         ],
         "metadata": "metadata.json"
       },
-      "outputs": {},
+      "outputs": {
+        "report": "qa_report.md",
+        "data": "qa_report.json",
+        "video_en": "final_short_en.mp4",
+        "thumbnail_en": "thumbnail_en.png"
+      },
       "logs": [
         {
           "ts": "2026-11-03T15:29:27+00:00",
@@ -704,11 +712,26 @@
           "ts": "2026-11-03T15:29:59+00:00",
           "level": "warning",
           "msg": "Gemini connection timed out on default route; retrying over IPv4"
+        },
+        {
+          "ts": "2026-11-03T15:30:38+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3-flash-preview) answered in 69.0s"
+        },
+        {
+          "ts": "2026-11-03T15:30:38+00:00",
+          "level": "info",
+          "msg": "All checks passed"
+        },
+        {
+          "ts": "2026-11-03T15:30:38+00:00",
+          "level": "info",
+          "msg": "Finished, waiting for your approval"
         }
       ],
       "errors": [],
       "feedback": [],
-      "cost_usd": 0.0
+      "cost_usd": 0.001
     }
   },
   "checkpoints": {
@@ -755,18 +778,26 @@
       "type": "approve",
       "step": "qa",
       "route_to": "edit",
-      "status": "idle",
+      "status": "pending",
       "options": [],
       "choice": null,
       "comment": null,
       "decided_at": null
     }
   },
-  "notifications": [],
+  "notifications": [
+    {
+      "ts": "2026-11-03T15:30:38+00:00",
+      "level": "action",
+      "msg": "Approval needed: Approve the final videos (never uploaded without your OK)",
+      "step": "qa"
+    }
+  ],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-03T15:30:06+00:00",
+    "exported_at": "2026-11-03T15:30:52+00:00",
     "uploads": [],
-    "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/41663923249"
+    "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/41663923249",
+    "issue_url": "https://github.com/jaleleddineagrebi/moderator/issues/2"
   }
 }
