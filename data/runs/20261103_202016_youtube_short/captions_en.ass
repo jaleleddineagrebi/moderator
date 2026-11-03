@@ -1,0 +1,63 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:02.99,Headline,,0,0,0,,{\fad(150,150)}Stop doing favors
+Dialogue: 1,0:00:03.09,0:00:09.67,Headline,,0,0,0,,{\fad(150,150)}The backward logic
+Dialogue: 1,0:00:09.77,0:00:18.63,Headline,,0,0,0,,{\fad(150,150)}Ask for a book
+Dialogue: 1,0:00:18.73,0:00:28.99,Headline,,0,0,0,,{\fad(150,150)}Brain justifies actions
+Dialogue: 1,0:00:29.09,0:00:40.45,Headline,,0,0,0,,{\fad(150,150)}Ask for advice
+Dialogue: 1,0:00:40.55,0:00:52.19,Headline,,0,0,0,,{\fad(150,150)}Build instant trust
+Dialogue: 0,0:00:00.10,0:00:01.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Stop doing favors
+Dialogue: 0,0:00:01.25,0:00:01.99,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to be liked
+Dialogue: 0,0:00:03.14,0:00:04.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}We usually try
+Dialogue: 0,0:00:04.01,0:00:04.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to win people
+Dialogue: 0,0:00:04.74,0:00:05.40,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}over by being
+Dialogue: 0,0:00:05.41,0:00:06.60,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}helpful but that’s
+Dialogue: 0,0:00:06.61,0:00:08.06,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}actually completely backwards
+Dialogue: 0,0:00:08.07,0:00:08.66,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}logic
+Dialogue: 0,0:00:09.82,0:00:10.46,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It’s called the
+Dialogue: 0,0:00:10.47,0:00:11.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Benjamin Franklin effect
+Dialogue: 0,0:00:12.79,0:00:13.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}He famously turned
+Dialogue: 0,0:00:13.83,0:00:14.49,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a rival into
+Dialogue: 0,0:00:14.51,0:00:15.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a loyal friend
+Dialogue: 0,0:00:15.35,0:00:16.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}by simply asking
+Dialogue: 0,0:00:16.37,0:00:16.92,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to borrow a
+Dialogue: 0,0:00:16.93,0:00:17.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}rare book
+Dialogue: 0,0:00:18.78,0:00:19.57,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}When someone does
+Dialogue: 0,0:00:19.58,0:00:20.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you a small
+Dialogue: 0,0:00:20.12,0:00:21.37,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}favor their brain
+Dialogue: 0,0:00:21.38,0:00:22.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}needs to justify
+Dialogue: 0,0:00:22.37,0:00:23.05,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the action
+Dialogue: 0,0:00:23.91,0:00:25.01,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}They tell themselves
+Dialogue: 0,0:00:25.26,0:00:25.85,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}I must like
+Dialogue: 0,0:00:25.86,0:00:26.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}this person or
+Dialogue: 0,0:00:26.85,0:00:27.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}I wouldn't be
+Dialogue: 0,0:00:27.35,0:00:28.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}helping them
+Dialogue: 0,0:00:29.14,0:00:30.10,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Start small
+Dialogue: 0,0:00:30.98,0:00:31.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Ask for their
+Dialogue: 0,0:00:31.64,0:00:32.45,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}opinion or a
+Dialogue: 0,0:00:32.47,0:00:33.66,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}quick recommendation
+Dialogue: 0,0:00:34.54,0:00:36.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It signals vulnerability
+Dialogue: 0,0:00:36.02,0:00:37.20,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and trust making
+Dialogue: 0,0:00:37.22,0:00:38.06,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the other person
+Dialogue: 0,0:00:38.08,0:00:39.45,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}feel genuinely valued
+Dialogue: 0,0:00:40.60,0:00:42.05,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}This psychological shift
+Dialogue: 0,0:00:42.06,0:00:42.73,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}turns a cold
+Dialogue: 0,0:00:42.74,0:00:43.67,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}stranger into a
+Dialogue: 0,0:00:43.69,0:00:44.62,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}warm teammate in
+Dialogue: 0,0:00:44.64,0:00:45.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}seconds
+Dialogue: 0,0:00:46.11,0:00:46.96,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It’s the ultimate
+Dialogue: 0,0:00:46.98,0:00:47.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}social hack
+Dialogue: 0,0:00:48.69,0:00:49.51,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Follow for more
+Dialogue: 0,0:00:49.52,0:00:50.66,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}behavior secrets
