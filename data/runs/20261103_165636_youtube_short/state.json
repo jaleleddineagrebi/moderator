@@ -30,10 +30,11 @@
   "ended_at": null,
   "revision_rounds": 0,
   "cost": {
-    "total_usd": 0.001936,
+    "total_usd": 0.006156,
     "budget_usd": 1.0,
     "by_agent": {
-      "trend_researcher": 0.001936
+      "trend_researcher": 0.001936,
+      "scriptwriter": 0.00422
     }
   },
   "agents": {
@@ -303,10 +304,10 @@
         "research"
       ],
       "checkpoint": "B",
-      "status": "running",
-      "progress": 10,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-03T16:56:52+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-03T16:57:06+00:00",
       "attempt": 1,
       "retries": 0,
       "max_retries": 2,
@@ -319,7 +320,10 @@
         ],
         "comment_at_selection": null
       },
-      "outputs": {},
+      "outputs": {
+        "script": "script.md",
+        "data": "script.json"
+      },
       "logs": [
         {
           "ts": "2026-11-03T16:56:52+00:00",
@@ -330,11 +334,31 @@
           "ts": "2026-11-03T16:56:52+00:00",
           "level": "info",
           "msg": "Asking Gemini Flash (gemini-3.8-flash)"
+        },
+        {
+          "ts": "2026-11-03T16:57:06+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3-flash-preview) answered in 13.6s"
+        },
+        {
+          "ts": "2026-11-03T16:57:06+00:00",
+          "level": "info",
+          "msg": "Estimated narration: en 44.4s, fr 47.5s"
+        },
+        {
+          "ts": "2026-11-03T16:57:06+00:00",
+          "level": "info",
+          "msg": "Finished, waiting for your approval"
+        },
+        {
+          "ts": "2026-11-03T16:57:06+00:00",
+          "level": "info",
+          "msg": "Approved by schedule (auto-approve)"
         }
       ],
       "errors": [],
       "feedback": [],
-      "cost_usd": 0.0
+      "cost_usd": 0.00422
     },
     "visuals": {
       "title": "Source scene visuals",
@@ -343,17 +367,31 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "queued",
+      "status": "running",
       "progress": 0,
-      "started_at": null,
+      "started_at": "2026-11-03T16:57:06+00:00",
       "ended_at": null,
-      "attempt": 0,
+      "attempt": 1,
       "retries": 0,
       "max_retries": 2,
-      "strategy": null,
-      "inputs": {},
+      "strategy": "nano_banana",
+      "inputs": {
+        "script": "script.json",
+        "providers": [
+          "pixabay",
+          "wikimedia"
+        ],
+        "nano_banana": true,
+        "starting_tier": "stock_video"
+      },
       "outputs": {},
-      "logs": [],
+      "logs": [
+        {
+          "ts": "2026-11-03T16:57:06+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'nano_banana'"
+        }
+      ],
       "errors": [],
       "feedback": [],
       "cost_usd": 0.0
@@ -365,18 +403,52 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "queued",
-      "progress": 0,
-      "started_at": null,
+      "status": "running",
+      "progress": 10,
+      "started_at": "2026-11-03T16:57:06+00:00",
       "ended_at": null,
-      "attempt": 0,
+      "attempt": 1,
       "retries": 0,
       "max_retries": 2,
-      "strategy": null,
-      "inputs": {},
+      "strategy": "primary_voice",
+      "inputs": {
+        "script": "script.json",
+        "languages": [
+          "en",
+          "fr"
+        ],
+        "voices": {
+          "en": "en-US-AndrewMultilingualNeural",
+          "fr": "fr-FR-HenriNeural"
+        }
+      },
       "outputs": {},
-      "logs": [],
-      "errors": [],
+      "logs": [
+        {
+          "ts": "2026-11-03T16:57:06+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'primary_voice'"
+        },
+        {
+          "ts": "2026-11-03T16:57:06+00:00",
+          "level": "info",
+          "msg": "Narrating en with en-US-AndrewMultilingualNeural"
+        },
+        {
+          "ts": "2026-11-03T16:57:13+00:00",
+          "level": "error",
+          "msg": "NoAudioReceived: No audio was received. Please verify that your parameters are correct."
+        }
+      ],
+      "errors": [
+        {
+          "ts": "2026-11-03T16:57:13+00:00",
+          "attempt": 1,
+          "strategy": "primary_voice",
+          "error": "NoAudioReceived: No audio was received. Please verify that your parameters are correct.",
+          "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/moderator/moderator/moderator/engine/orchestrator.py\", line 98, in _run_step\n    outputs = await asyncio.wait_for(agent.run(ctx), agent.spec.timeout_s)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.local/share/uv/python/cpython-3.12.16-linux-x86_64-gnu/lib/python3.12/asyncio/tasks.py\", line 520, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/home/runner/work/moderator/moderator/agents/voice_audio/handler.py\", line 43, in run\n    words = await tts.synthesize(scene[\"vo\"][lang], voice, part, rate=rate)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/moderator/moderator/moderator/tools/tts.py\", line 40, in synthesize\n    async for chunk in comm.stream():\n  File \"/home/runner/work/moderator/moderator/.venv/lib/python3.12/site-packages/edge_tts/communicate.py\", line 588, in stream\n    async for message in self.__stream():\n  File \"/home/runner/work/moderator/moderator/.venv/lib/python3.12/site-packages/edge_tts/communicate.py\", line 562, in __stream\n    raise NoAudioReceived(\nedge_tts.exceptions.NoAudioReceived: No audio was received. Please verify that your parameters are correct.\n"
+        }
+      ],
       "feedback": [],
       "cost_usd": 0.0
     },
@@ -483,11 +555,11 @@
       "type": "approve",
       "step": "script",
       "route_to": "script",
-      "status": "idle",
+      "status": "approved",
       "options": [],
       "choice": null,
       "comment": null,
-      "decided_at": null
+      "decided_at": "2026-11-03T16:57:06+00:00"
     },
     "C": {
       "title": "Approve the final videos (never uploaded without your OK)",
@@ -504,7 +576,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-03T16:56:53+00:00",
+    "exported_at": "2026-11-03T16:57:14+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/41679210174"
   }

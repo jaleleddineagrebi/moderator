@@ -1,0 +1,154 @@
+{
+  "title": "Why Your Brain Can't Forget Unfinished Tasks",
+  "scenes": [
+    {
+      "vo": {
+        "en": "You can't stop thinking about it.",
+        "fr": "Tu n'arrives pas à arrêter d'y penser."
+      },
+      "on_screen": {
+        "en": "Can't Stop Thinking?",
+        "fr": "Impossible d'oublier ?"
+      },
+      "visual": {
+        "description": "A person lying in bed at night, eyes wide open, looking at the ceiling in the dark.",
+        "search_terms": [
+          "insomnia person bed",
+          "staring at ceiling",
+          "dark bedroom"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "That one email you forgot to send or that project sitting half-finished on your desk right now.",
+        "fr": "Ce mail que tu n'as pas envoyé ou ce projet à moitié terminé qui traîne sur ton bureau."
+      },
+      "on_screen": {
+        "en": "Unfinished Business",
+        "fr": "Tâches Inachevées"
+      },
+      "visual": {
+        "description": "Close up of a messy office desk with a laptop open and scattered papers.",
+        "search_terms": [
+          "messy office desk",
+          "laptop typing close",
+          "working late"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "It's called the Zeigarnik Effect. Our brains are hardwired to prioritize incomplete tasks over finished ones.",
+        "fr": "C'est l'effet Zeigarnik. Notre cerveau est programmé pour privilégier les tâches inachevées par rapport à celles terminées."
+      },
+      "on_screen": {
+        "en": "The Zeigarnik Effect",
+        "fr": "L'effet Zeigarnik"
+      },
+      "visual": {
+        "description": "Abstract animation of neural pathways lighting up or a digital brain glowing.",
+        "search_terms": [
+          "brain neurons firing",
+          "digital brain animation",
+          "abstract technology"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "In the 1920s, researchers noticed waiters remembered unpaid orders perfectly, but forgot them the second the bill was settled.",
+        "fr": "Dans les années 20, des chercheurs ont vu que les serveurs retenaient les commandes impayées, puis les oubliaient aussitôt la note réglée."
+      },
+      "on_screen": {
+        "en": "The Waiter Observation",
+        "fr": "L'étude des serveurs"
+      },
+      "visual": {
+        "description": "A waiter in a busy cafe writing on a notepad or carrying a tray of drinks.",
+        "search_terms": [
+          "waiter serving coffee",
+          "busy restaurant interior",
+          "cafe atmosphere"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "This mental tension creates an open loop that keeps you awake at night, constantly reminding you of what's left.",
+        "fr": "Cette tension mentale crée une boucle ouverte qui te tient éveillé, te rappelant sans cesse tout ce qu'il reste à faire."
+      },
+      "on_screen": {
+        "en": "Open Mental Loops",
+        "fr": "Boucles Mentales"
+      },
+      "visual": {
+        "description": "A clock with hands spinning fast or a stylized graphic of a loading circle spinning.",
+        "search_terms": [
+          "clock hands spinning",
+          "loading icon animation",
+          "time passing"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "To stop the overthinking, use the 'shutdown' trick. Simply write down a clear plan for what you need to do tomorrow.",
+        "fr": "Pour arrêter de ruminer, utilise l'astuce du 'shutdown'. Note simplement un plan clair de ce que tu dois faire demain."
+      },
+      "on_screen": {
+        "en": "The Shutdown Trick",
+        "fr": "L'astuce Shutdown"
+      },
+      "visual": {
+        "description": "Hand writing a short list on a piece of paper with a pen.",
+        "search_terms": [
+          "writing to-do list",
+          "hand with pen",
+          "office supplies"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "This signals to your brain that the task is managed, letting the loop close so you can finally relax. Follow for more brain hacks.",
+        "fr": "Cela signale à ton cerveau que la tâche est sous contrôle, fermant la boucle pour que tu puisses enfin relaxer. Abonne-toi."
+      },
+      "on_screen": {
+        "en": "Close The Loop",
+        "fr": "Ferme la boucle"
+      },
+      "visual": {
+        "description": "A person sleeping peacefully in a comfortable bed with soft morning light coming through the window.",
+        "search_terms": [
+          "peaceful sleep person",
+          "comfortable bed morning",
+          "relaxing home"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "the-zeigarnik-effect-hack",
+  "languages": [
+    "en",
+    "fr"
+  ],
+  "estimated_seconds": {
+    "en": 44.4,
+    "fr": 47.5
+  }
+}
