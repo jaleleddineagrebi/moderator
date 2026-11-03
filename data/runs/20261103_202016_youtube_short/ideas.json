@@ -1,0 +1,78 @@
+{
+  "niche": "Psychology & human behavior (biases, habits, social dynamics)",
+  "languages": [
+    "en",
+    "fr"
+  ],
+  "ideas": [
+    {
+      "id": "franklin-effect-liking",
+      "title": "The Favor Trick to Make Friends",
+      "angle": "Explain why asking someone for a small favor actually makes them like you more, reversing the common logic that we should do things for others to be liked.",
+      "hook": {
+        "en": "Stop doing favors to be liked.",
+        "fr": "Arrête de rendre service pour plaire."
+      },
+      "keywords": [
+        "psychology hacks",
+        "social dynamics",
+        "Benjamin Franklin effect",
+        "friendship tips",
+        "persuasion",
+        "psychologie",
+        "astuce sociale"
+      ],
+      "reason": "Social engineering and 'dark' psychology hacks are currently peaking on TikTok and Shorts. This specific counter-intuitive advice generates high comments from skeptics.",
+      "sources": [
+        "Jecker & Landy (1969) study on the Benjamin Franklin Effect",
+        "The Autobiography of Benjamin Franklin"
+      ]
+    },
+    {
+      "id": "baader-meinhof-illusion",
+      "title": "Why You See the Same Thing Everywhere",
+      "angle": "Explore the Frequency Illusion: why after you learn a new word or see a new car, it suddenly appears everywhere in your daily life.",
+      "hook": {
+        "en": "You're seeing this everywhere for a reason.",
+        "fr": "Tu vois ça partout pour une raison."
+      },
+      "keywords": [
+        "brain facts",
+        "frequency illusion",
+        "cognitive bias",
+        "perception",
+        "Baader-Meinhof",
+        "cerveau",
+        "psychologie"
+      ],
+      "reason": "This 'glitch in the matrix' style content has high retention because it explains a common eerie experience viewers have all felt but couldn't name.",
+      "sources": [
+        "Stanford University Linguistics (Arnold Zwicky, 2005)",
+        "Selective Attention and Confirmation Bias research"
+      ]
+    },
+    {
+      "id": "pratfall-effect-likable",
+      "title": "Why Being Clumsy is Your Superpower",
+      "angle": "Explain the Pratfall Effect: how making a small mistake or being slightly clumsy makes highly competent people more attractive and relatable to others.",
+      "hook": {
+        "en": "Your mistakes make you more likable.",
+        "fr": "Tes erreurs te rendent plus attirant."
+      },
+      "keywords": [
+        "likability",
+        "social psychology",
+        "clumsiness",
+        "attraction",
+        "Pratfall Effect",
+        "charisme",
+        "relations humaines"
+      ],
+      "reason": "Vulnerability is a trending topic in self-improvement. It provides relief to viewers who feel the pressure of perfectionism, making it highly shareable.",
+      "sources": [
+        "Elliot Aronson (1966) 'The influence of a spill on the evaluation of a person'",
+        "Social Psychology (Myers & Twenge)"
+      ]
+    }
+  ]
+}
