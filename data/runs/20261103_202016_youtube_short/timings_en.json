@@ -1,0 +1,638 @@
+{
+  "voice": "en-US-AriaNeural",
+  "duration": 51.540658,
+  "scenes": [
+    {
+      "scene": "scene_01",
+      "start": 0.0,
+      "end": 2.856,
+      "words": [
+        {
+          "start": 0.1,
+          "end": 0.525,
+          "text": "Stop"
+        },
+        {
+          "start": 0.537,
+          "end": 0.8,
+          "text": "doing"
+        },
+        {
+          "start": 0.812,
+          "end": 1.238,
+          "text": "favors"
+        },
+        {
+          "start": 1.25,
+          "end": 1.337,
+          "text": "to"
+        },
+        {
+          "start": 1.35,
+          "end": 1.475,
+          "text": "be"
+        },
+        {
+          "start": 1.488,
+          "end": 1.988,
+          "text": "liked"
+        }
+      ]
+    },
+    {
+      "scene": "scene_02",
+      "start": 3.036,
+      "end": 9.54,
+      "words": [
+        {
+          "start": 3.136,
+          "end": 3.323,
+          "text": "We"
+        },
+        {
+          "start": 3.336,
+          "end": 3.748,
+          "text": "usually"
+        },
+        {
+          "start": 3.761,
+          "end": 3.998,
+          "text": "try"
+        },
+        {
+          "start": 4.011,
+          "end": 4.111,
+          "text": "to"
+        },
+        {
+          "start": 4.123,
+          "end": 4.373,
+          "text": "win"
+        },
+        {
+          "start": 4.386,
+          "end": 4.724,
+          "text": "people"
+        },
+        {
+          "start": 4.736,
+          "end": 4.986,
+          "text": "over"
+        },
+        {
+          "start": 4.998,
+          "end": 5.136,
+          "text": "by"
+        },
+        {
+          "start": 5.148,
+          "end": 5.398,
+          "text": "being"
+        },
+        {
+          "start": 5.411,
+          "end": 5.949,
+          "text": "helpful"
+        },
+        {
+          "start": 6.224,
+          "end": 6.361,
+          "text": "but"
+        },
+        {
+          "start": 6.373,
+          "end": 6.598,
+          "text": "that’s"
+        },
+        {
+          "start": 6.611,
+          "end": 7.049,
+          "text": "actually"
+        },
+        {
+          "start": 7.061,
+          "end": 7.574,
+          "text": "completely"
+        },
+        {
+          "start": 7.586,
+          "end": 8.061,
+          "text": "backwards"
+        },
+        {
+          "start": 8.073,
+          "end": 8.661,
+          "text": "logic"
+        }
+      ]
+    },
+    {
+      "scene": "scene_03",
+      "start": 9.72,
+      "end": 18.504,
+      "words": [
+        {
+          "start": 9.82,
+          "end": 10.058,
+          "text": "It’s"
+        },
+        {
+          "start": 10.07,
+          "end": 10.357,
+          "text": "called"
+        },
+        {
+          "start": 10.37,
+          "end": 10.458,
+          "text": "the"
+        },
+        {
+          "start": 10.47,
+          "end": 10.945,
+          "text": "Benjamin"
+        },
+        {
+          "start": 10.958,
+          "end": 11.383,
+          "text": "Franklin"
+        },
+        {
+          "start": 11.395,
+          "end": 11.932,
+          "text": "effect"
+        },
+        {
+          "start": 12.795,
+          "end": 12.97,
+          "text": "He"
+        },
+        {
+          "start": 12.983,
+          "end": 13.52,
+          "text": "famously"
+        },
+        {
+          "start": 13.532,
+          "end": 13.82,
+          "text": "turned"
+        },
+        {
+          "start": 13.832,
+          "end": 13.87,
+          "text": "a"
+        },
+        {
+          "start": 13.882,
+          "end": 14.282,
+          "text": "rival"
+        },
+        {
+          "start": 14.295,
+          "end": 14.495,
+          "text": "into"
+        },
+        {
+          "start": 14.507,
+          "end": 14.57,
+          "text": "a"
+        },
+        {
+          "start": 14.582,
+          "end": 14.932,
+          "text": "loyal"
+        },
+        {
+          "start": 14.945,
+          "end": 15.332,
+          "text": "friend"
+        },
+        {
+          "start": 15.345,
+          "end": 15.483,
+          "text": "by"
+        },
+        {
+          "start": 15.495,
+          "end": 15.908,
+          "text": "simply"
+        },
+        {
+          "start": 15.92,
+          "end": 16.358,
+          "text": "asking"
+        },
+        {
+          "start": 16.37,
+          "end": 16.495,
+          "text": "to"
+        },
+        {
+          "start": 16.507,
+          "end": 16.857,
+          "text": "borrow"
+        },
+        {
+          "start": 16.87,
+          "end": 16.92,
+          "text": "a"
+        },
+        {
+          "start": 16.933,
+          "end": 17.22,
+          "text": "rare"
+        },
+        {
+          "start": 17.233,
+          "end": 17.633,
+          "text": "book"
+        }
+      ]
+    },
+    {
+      "scene": "scene_04",
+      "start": 18.684,
+      "end": 28.86,
+      "words": [
+        {
+          "start": 18.784,
+          "end": 19.022,
+          "text": "When"
+        },
+        {
+          "start": 19.034,
+          "end": 19.372,
+          "text": "someone"
+        },
+        {
+          "start": 19.384,
+          "end": 19.571,
+          "text": "does"
+        },
+        {
+          "start": 19.584,
+          "end": 19.672,
+          "text": "you"
+        },
+        {
+          "start": 19.684,
+          "end": 19.746,
+          "text": "a"
+        },
+        {
+          "start": 19.759,
+          "end": 20.109,
+          "text": "small"
+        },
+        {
+          "start": 20.122,
+          "end": 20.547,
+          "text": "favor"
+        },
+        {
+          "start": 20.859,
+          "end": 21.034,
+          "text": "their"
+        },
+        {
+          "start": 21.046,
+          "end": 21.372,
+          "text": "brain"
+        },
+        {
+          "start": 21.384,
+          "end": 21.647,
+          "text": "needs"
+        },
+        {
+          "start": 21.659,
+          "end": 21.759,
+          "text": "to"
+        },
+        {
+          "start": 21.771,
+          "end": 22.359,
+          "text": "justify"
+        },
+        {
+          "start": 22.372,
+          "end": 22.484,
+          "text": "the"
+        },
+        {
+          "start": 22.496,
+          "end": 23.046,
+          "text": "action"
+        },
+        {
+          "start": 23.909,
+          "end": 24.096,
+          "text": "They"
+        },
+        {
+          "start": 24.109,
+          "end": 24.346,
+          "text": "tell"
+        },
+        {
+          "start": 24.359,
+          "end": 25.009,
+          "text": "themselves"
+        },
+        {
+          "start": 25.259,
+          "end": 25.322,
+          "text": "I"
+        },
+        {
+          "start": 25.334,
+          "end": 25.647,
+          "text": "must"
+        },
+        {
+          "start": 25.659,
+          "end": 25.846,
+          "text": "like"
+        },
+        {
+          "start": 25.859,
+          "end": 26.034,
+          "text": "this"
+        },
+        {
+          "start": 26.046,
+          "end": 26.509,
+          "text": "person"
+        },
+        {
+          "start": 26.684,
+          "end": 26.834,
+          "text": "or"
+        },
+        {
+          "start": 26.846,
+          "end": 26.909,
+          "text": "I"
+        },
+        {
+          "start": 26.922,
+          "end": 27.209,
+          "text": "wouldn't"
+        },
+        {
+          "start": 27.221,
+          "end": 27.334,
+          "text": "be"
+        },
+        {
+          "start": 27.346,
+          "end": 27.684,
+          "text": "helping"
+        },
+        {
+          "start": 27.696,
+          "end": 27.996,
+          "text": "them"
+        }
+      ]
+    },
+    {
+      "scene": "scene_05",
+      "start": 29.04,
+      "end": 40.32,
+      "words": [
+        {
+          "start": 29.14,
+          "end": 29.59,
+          "text": "Start"
+        },
+        {
+          "start": 29.602,
+          "end": 30.102,
+          "text": "small"
+        },
+        {
+          "start": 30.978,
+          "end": 31.315,
+          "text": "Ask"
+        },
+        {
+          "start": 31.328,
+          "end": 31.453,
+          "text": "for"
+        },
+        {
+          "start": 31.465,
+          "end": 31.627,
+          "text": "their"
+        },
+        {
+          "start": 31.64,
+          "end": 32.203,
+          "text": "opinion"
+        },
+        {
+          "start": 32.215,
+          "end": 32.39,
+          "text": "or"
+        },
+        {
+          "start": 32.402,
+          "end": 32.452,
+          "text": "a"
+        },
+        {
+          "start": 32.465,
+          "end": 32.752,
+          "text": "quick"
+        },
+        {
+          "start": 32.765,
+          "end": 33.665,
+          "text": "recommendation"
+        },
+        {
+          "start": 34.54,
+          "end": 34.753,
+          "text": "It"
+        },
+        {
+          "start": 34.765,
+          "end": 35.252,
+          "text": "signals"
+        },
+        {
+          "start": 35.265,
+          "end": 36.002,
+          "text": "vulnerability"
+        },
+        {
+          "start": 36.015,
+          "end": 36.115,
+          "text": "and"
+        },
+        {
+          "start": 36.128,
+          "end": 36.64,
+          "text": "trust"
+        },
+        {
+          "start": 36.89,
+          "end": 37.202,
+          "text": "making"
+        },
+        {
+          "start": 37.215,
+          "end": 37.328,
+          "text": "the"
+        },
+        {
+          "start": 37.34,
+          "end": 37.628,
+          "text": "other"
+        },
+        {
+          "start": 37.64,
+          "end": 38.065,
+          "text": "person"
+        },
+        {
+          "start": 38.077,
+          "end": 38.302,
+          "text": "feel"
+        },
+        {
+          "start": 38.315,
+          "end": 38.852,
+          "text": "genuinely"
+        },
+        {
+          "start": 38.865,
+          "end": 39.452,
+          "text": "valued"
+        }
+      ]
+    },
+    {
+      "scene": "scene_06",
+      "start": 40.5,
+      "end": 51.54,
+      "words": [
+        {
+          "start": 40.6,
+          "end": 40.875,
+          "text": "This"
+        },
+        {
+          "start": 40.888,
+          "end": 41.637,
+          "text": "psychological"
+        },
+        {
+          "start": 41.65,
+          "end": 42.05,
+          "text": "shift"
+        },
+        {
+          "start": 42.062,
+          "end": 42.325,
+          "text": "turns"
+        },
+        {
+          "start": 42.337,
+          "end": 42.4,
+          "text": "a"
+        },
+        {
+          "start": 42.413,
+          "end": 42.725,
+          "text": "cold"
+        },
+        {
+          "start": 42.737,
+          "end": 43.275,
+          "text": "stranger"
+        },
+        {
+          "start": 43.288,
+          "end": 43.575,
+          "text": "into"
+        },
+        {
+          "start": 43.587,
+          "end": 43.675,
+          "text": "a"
+        },
+        {
+          "start": 43.688,
+          "end": 44.0,
+          "text": "warm"
+        },
+        {
+          "start": 44.013,
+          "end": 44.463,
+          "text": "teammate"
+        },
+        {
+          "start": 44.475,
+          "end": 44.625,
+          "text": "in"
+        },
+        {
+          "start": 44.638,
+          "end": 45.25,
+          "text": "seconds"
+        },
+        {
+          "start": 46.112,
+          "end": 46.362,
+          "text": "It’s"
+        },
+        {
+          "start": 46.375,
+          "end": 46.475,
+          "text": "the"
+        },
+        {
+          "start": 46.487,
+          "end": 46.962,
+          "text": "ultimate"
+        },
+        {
+          "start": 46.975,
+          "end": 47.375,
+          "text": "social"
+        },
+        {
+          "start": 47.388,
+          "end": 47.825,
+          "text": "hack"
+        },
+        {
+          "start": 48.688,
+          "end": 49.15,
+          "text": "Follow"
+        },
+        {
+          "start": 49.162,
+          "end": 49.287,
+          "text": "for"
+        },
+        {
+          "start": 49.3,
+          "end": 49.513,
+          "text": "more"
+        },
+        {
+          "start": 49.525,
+          "end": 49.988,
+          "text": "behavior"
+        },
+        {
+          "start": 50.0,
+          "end": 50.662,
+          "text": "secrets"
+        }
+      ]
+    }
+  ]
+}
