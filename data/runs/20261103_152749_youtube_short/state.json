@@ -27,11 +27,12 @@
   "ended_at": null,
   "revision_rounds": 0,
   "cost": {
-    "total_usd": 0.005622,
+    "total_usd": 0.006479,
     "budget_usd": 1.0,
     "by_agent": {
       "trend_researcher": 0.002124,
-      "scriptwriter": 0.003498
+      "scriptwriter": 0.003498,
+      "packaging": 0.000857
     }
   },
   "agents": {
@@ -361,10 +362,10 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "running",
-      "progress": 37,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-03T15:28:10+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-03T15:28:31+00:00",
       "attempt": 1,
       "retries": 0,
       "max_retries": 2,
@@ -375,7 +376,10 @@
         "nano_banana": true,
         "starting_tier": "generated"
       },
-      "outputs": {},
+      "outputs": {
+        "contact_sheet": "assets/contact_sheet.jpg",
+        "licenses": "assets/licenses.json"
+      },
       "logs": [
         {
           "ts": "2026-11-03T15:28:10+00:00",
@@ -401,6 +405,36 @@
           "ts": "2026-11-03T15:28:18+00:00",
           "level": "info",
           "msg": "scene_03: generated (generated)"
+        },
+        {
+          "ts": "2026-11-03T15:28:25+00:00",
+          "level": "info",
+          "msg": "scene_04: generated (generated)"
+        },
+        {
+          "ts": "2026-11-03T15:28:25+00:00",
+          "level": "info",
+          "msg": "scene_05: generated (generated)"
+        },
+        {
+          "ts": "2026-11-03T15:28:26+00:00",
+          "level": "info",
+          "msg": "scene_06: generated (generated)"
+        },
+        {
+          "ts": "2026-11-03T15:28:30+00:00",
+          "level": "info",
+          "msg": "scene_07: generated (generated)"
+        },
+        {
+          "ts": "2026-11-03T15:28:30+00:00",
+          "level": "info",
+          "msg": "scene_08: generated (generated)"
+        },
+        {
+          "ts": "2026-11-03T15:28:31+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [],
@@ -415,20 +449,20 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 14,
-      "started_at": "2026-11-03T15:28:10+00:00",
+      "progress": 0,
+      "started_at": "2026-11-03T15:28:40+00:00",
       "ended_at": null,
-      "attempt": 1,
-      "retries": 0,
+      "attempt": 2,
+      "retries": 1,
       "max_retries": 2,
-      "strategy": "primary_voice",
+      "strategy": "alternate_voice",
       "inputs": {
         "script": "script.json",
         "languages": [
           "en"
         ],
         "voices": {
-          "en": "en-US-AndrewMultilingualNeural"
+          "en": "en-US-AriaNeural"
         }
       },
       "outputs": {},
@@ -442,9 +476,32 @@
           "ts": "2026-11-03T15:28:10+00:00",
           "level": "info",
           "msg": "Narrating en with en-US-AndrewMultilingualNeural"
+        },
+        {
+          "ts": "2026-11-03T15:28:39+00:00",
+          "level": "error",
+          "msg": "NoAudioReceived: No audio was received. Please verify that your parameters are correct."
+        },
+        {
+          "ts": "2026-11-03T15:28:40+00:00",
+          "level": "info",
+          "msg": "Attempt 2/3, strategy 'alternate_voice'"
+        },
+        {
+          "ts": "2026-11-03T15:28:41+00:00",
+          "level": "info",
+          "msg": "Narrating en with en-US-AriaNeural"
         }
       ],
-      "errors": [],
+      "errors": [
+        {
+          "ts": "2026-11-03T15:28:39+00:00",
+          "attempt": 1,
+          "strategy": "primary_voice",
+          "error": "NoAudioReceived: No audio was received. Please verify that your parameters are correct.",
+          "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/moderator/moderator/moderator/engine/orchestrator.py\", line 98, in _run_step\n    outputs = await asyncio.wait_for(agent.run(ctx), agent.spec.timeout_s)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.local/share/uv/python/cpython-3.12.16-linux-x86_64-gnu/lib/python3.12/asyncio/tasks.py\", line 520, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/home/runner/work/moderator/moderator/agents/voice_audio/handler.py\", line 43, in run\n    words = await tts.synthesize(scene[\"vo\"][lang], voice, part, rate=rate)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/moderator/moderator/moderator/tools/tts.py\", line 40, in synthesize\n    async for chunk in comm.stream():\n  File \"/home/runner/work/moderator/moderator/.venv/lib/python3.12/site-packages/edge_tts/communicate.py\", line 588, in stream\n    async for message in self.__stream():\n  File \"/home/runner/work/moderator/moderator/.venv/lib/python3.12/site-packages/edge_tts/communicate.py\", line 562, in __stream\n    raise NoAudioReceived(\nedge_tts.exceptions.NoAudioReceived: No audio was received. Please verify that your parameters are correct.\n"
+        }
+      ],
       "feedback": [],
       "cost_usd": 0.0
     },
@@ -456,20 +513,76 @@
         "visuals"
       ],
       "checkpoint": null,
-      "status": "queued",
-      "progress": 0,
-      "started_at": null,
-      "ended_at": null,
-      "attempt": 0,
+      "status": "done",
+      "progress": 100,
+      "started_at": "2026-11-03T15:28:31+00:00",
+      "ended_at": "2026-11-03T15:28:37+00:00",
+      "attempt": 1,
       "retries": 0,
       "max_retries": 2,
-      "strategy": null,
-      "inputs": {},
-      "outputs": {},
-      "logs": [],
+      "strategy": "banana_thumbnail",
+      "inputs": {
+        "script": "script.json",
+        "languages": [
+          "en"
+        ],
+        "strategy": "banana_thumbnail",
+        "thumbnail_source": "assets/scene_01.mp4"
+      },
+      "outputs": {
+        "metadata": "metadata.json",
+        "thumbnail_en": "thumbnail_en.png"
+      },
+      "logs": [
+        {
+          "ts": "2026-11-03T15:28:31+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'banana_thumbnail'"
+        },
+        {
+          "ts": "2026-11-03T15:28:31+00:00",
+          "level": "info",
+          "msg": "Asking Gemini Flash (gemini-3.8-flash)"
+        },
+        {
+          "ts": "2026-11-03T15:28:35+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3-flash-preview) answered in 4.0s"
+        },
+        {
+          "ts": "2026-11-03T15:28:35+00:00",
+          "level": "info",
+          "msg": "Generating 9:16 image with Nano Banana (gemini-nano-banana-2.1)"
+        },
+        {
+          "ts": "2026-11-03T15:28:36+00:00",
+          "level": "warning",
+          "msg": "Model 'gemini-nano-banana-2.1' returned 429; falling back to 'gemini-3.1-flash-image-preview'"
+        },
+        {
+          "ts": "2026-11-03T15:28:36+00:00",
+          "level": "warning",
+          "msg": "Model 'gemini-3.1-flash-image-preview' returned 429; falling back to 'gemini-3.1-flash-image'"
+        },
+        {
+          "ts": "2026-11-03T15:28:37+00:00",
+          "level": "warning",
+          "msg": "Model 'gemini-3.1-flash-image' returned 429; falling back to 'gemini-2.5-flash-image'"
+        },
+        {
+          "ts": "2026-11-03T15:28:37+00:00",
+          "level": "warning",
+          "msg": "Nano Banana thumbnail background failed (Gemini API 429 (gemini-2.5-flash-image): {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-flash-preview-image, description: Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-flash-preview-image, description: Generate content requests per minute limit exceeded); using scene_01 frame instead"
+        },
+        {
+          "ts": "2026-11-03T15:28:37+00:00",
+          "level": "info",
+          "msg": "Finished"
+        }
+      ],
       "errors": [],
       "feedback": [],
-      "cost_usd": 0.0
+      "cost_usd": 0.000857
     },
     "edit": {
       "title": "Edit the final videos",
@@ -572,7 +685,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-03T15:28:23+00:00",
+    "exported_at": "2026-11-03T15:28:41+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/41663923249"
   }
