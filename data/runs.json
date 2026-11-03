@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03T16:57:41+00:00",
+  "updated_at": "2026-11-03T16:58:04+00:00",
   "repo": "jaleleddineagrebi/moderator",
   "live_run_id": "20261103_165636_youtube_short",
   "runs": [
@@ -8,7 +8,7 @@
       "workflow": "youtube_short",
       "workflow_title": "YouTube Short",
       "status": "running",
-      "progress": 45,
+      "progress": 52,
       "started_at": "2026-11-03T16:56:36+00:00",
       "ended_at": null,
       "cost_usd": 0.0062,
