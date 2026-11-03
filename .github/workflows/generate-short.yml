@@ -20,14 +20,14 @@ on:
         required: false
         type: string
       visual_mode:
-        description: "Scene visuals (stock/generated = $0 free, auto = Nano Banana AI first)"
+        description: "Scene visuals: stock = moving B-roll video ($0), auto = AI art + video fallback, generated = gradients"
         required: false
         default: "stock"
         type: choice
         options:
           - stock
-          - generated
           - auto
+          - generated
       budget_usd:
         description: "Safety spend cap only (Free Tier keys always pay $0.00)"
         required: false

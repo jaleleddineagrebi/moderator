@@ -656,3 +656,146 @@ def test_gemini_free_tier_429_search_and_503_model_fallback(tmp_path, monkeypatc
     )
     assert res2 == {"ok": True}
     assert seen == [("gemini-3-flash-preview:generateContent", False)]
+
+
+def test_stock_video_wikimedia_zero_key_and_visual_producer_video_priority(tmp_path, monkeypatch):
+    from agents.visual_producer.handler import Handler as VisualHandler
+    from moderator.tools import ffmpeg, stock
+
+    monkeypatch.delenv("PEXELS_API_KEY", raising=False)
+    monkeypatch.delenv("PIXABAY_API_KEY", raising=False)
+    monkeypatch.delenv("MODERATOR_DISABLE_WIKIMEDIA", raising=False)
+    avail = stock.available()
+    assert avail == {"pexels": False, "pixabay": False, "wikimedia": True}
+
+    # 1. Verify Wikimedia search keeps CC0/PD videos and rejects CC-BY-SA attribution-required videos
+    def mock_commons_handler(request: httpx.Request) -> httpx.Response:
+        return httpx.Response(200, json={
+            "query": {
+                "pages": {
+                    "1": {
+                        "pageid": 1,
+                        "imageinfo": [{
+                            "url": "https://upload.wikimedia.org/commons/cc_by_clip.webm",
+                            "descriptionurl": "https://commons.wikimedia.org/wiki/File:CcBy.webm",
+                            "mime": "video/webm",
+                            "size": 2_000_000,
+                            "duration": 8.0,
+                            "width": 1080,
+                            "height": 1920,
+                            "extmetadata": {"LicenseShortName": {"value": "CC BY-SA 4.0"}},
+                        }],
+                    },
+                    "2": {
+                        "pageid": 2,
+                        "imageinfo": [{
+                            "url": "https://upload.wikimedia.org/commons/pd_street.webm",
+                            "descriptionurl": "https://commons.wikimedia.org/wiki/File:PdStreet.webm",
+                            "mime": "video/webm",
+                            "size": 3_500_000,
+                            "duration": 9.5,
+                            "width": 1920,
+                            "height": 1080,
+                            "extmetadata": {
+                                "LicenseShortName": {"value": "CC0"},
+                                "UsageTerms": {"value": "Creative Commons Zero, Public Domain Dedication"},
+                                "Artist": {"value": "<a href='x'>CityCam</a>"},
+                            },
+                        }],
+                    },
+                }
+            }
+        })
+
+    orig_client = httpx.AsyncClient
+    monkeypatch.setattr(
+        stock.httpx,
+        "AsyncClient",
+        lambda **kw: orig_client(transport=httpx.MockTransport(mock_commons_handler), **{k: v for k, v in kw.items() if k != "transport"}),
+    )
+    hits = asyncio.run(stock.search_videos("crowded street", "wikimedia"))
+    assert len(hits) == 1
+    assert hits[0]["provider"] == "wikimedia"
+    assert hits[0]["ext"] == "webm"
+    assert hits[0]["author"] == "CityCam"
+    assert "no attribution required" in hits[0]["license"]
+
+    # 1b. Verify Pixabay live-action (`video_type=film`) search + portrait-first sorting
+    monkeypatch.setenv("PIXABAY_API_KEY", "test-pixabay-key")
+
+    def mock_pixabay_handler(request: httpx.Request) -> httpx.Response:
+        assert request.url.params.get("per_page") == "50"
+        return httpx.Response(200, json={
+            "hits": [
+                {"pageURL": "https://pixabay.com/v/land", "user": "U1", "duration": 7,
+                 "videos": {"large": {"url": "https://cdn.pixabay.com/land.mp4", "width": 1920, "height": 1080}}},
+                {"pageURL": "https://pixabay.com/v/vert", "user": "U2", "duration": 6,
+                 "videos": {"large": {"url": "https://cdn.pixabay.com/vert.mp4", "width": 1080, "height": 1920}}},
+            ]
+        })
+
+    monkeypatch.setattr(
+        stock.httpx,
+        "AsyncClient",
+        lambda **kw: orig_client(transport=httpx.MockTransport(mock_pixabay_handler), **{k: v for k, v in kw.items() if k != "transport"}),
+    )
+    pix_hits = asyncio.run(stock.search_videos("person thinking", "pixabay"))
+    assert [h["page"] for h in pix_hits] == ["https://pixabay.com/v/vert", "https://pixabay.com/v/land"]
+    monkeypatch.delenv("PIXABAY_API_KEY", raising=False)
+    monkeypatch.setattr(
+        stock.httpx,
+        "AsyncClient",
+        lambda **kw: orig_client(transport=httpx.MockTransport(mock_commons_handler), **{k: v for k, v in kw.items() if k != "transport"}),
+    )
+
+    # 2. Verify visual_producer uses moving stock_video (not stock_photo or generated) even when prefer="photo" and 0 keys set
+    registry = Registry(ROOT, {})
+    wf = registry.workflow("youtube_short")
+    run_dir = tmp_path / "vis_run"
+    st = new_state(
+        "vis_run",
+        wf,
+        {"visual_mode": "stock", "languages": ["en"]},
+        {s.agent: registry.specs[s.agent].public() for s in wf.steps},
+    )
+    st["steps"]["script"]["status"] = "done"
+    st["steps"]["script"]["outputs"] = {"data": "script.json"}
+    store = StateStore.create(run_dir, st)
+    (run_dir / "script.json").write_text(
+        json.dumps({
+            "title": "Test Video Priority",
+            "scenes": [{
+                "id": "scene_01",
+                "vo": {"en": "Watch the crowd."},
+                "on_screen": {"en": "WATCH"},
+                "visual": {"description": "crowded street", "search_terms": ["crowded street"], "prefer": "photo"},
+            }],
+        }),
+        encoding="utf-8",
+    )
+
+    normalized_calls = []
+
+    async def fake_download(url, dest):
+        Path(dest).parent.mkdir(parents=True, exist_ok=True)
+        Path(dest).write_bytes(b"fake-webm")
+
+    async def fake_normalize(src, dst, cwd, max_seconds=12):
+        normalized_calls.append((Path(src).suffix, Path(dst).name))
+        Path(dst).parent.mkdir(parents=True, exist_ok=True)
+        Path(dst).write_bytes(b"fake-mp4")
+
+    async def fake_frame_at(src, dst, cwd, at=1.0):
+        Image.new("RGB", (540, 960), (20, 30, 40)).save(dst)
+
+    monkeypatch.setattr(stock, "download", fake_download)
+    monkeypatch.setattr(ffmpeg, "normalize_clip", fake_normalize)
+    monkeypatch.setattr(ffmpeg, "frame_at", fake_frame_at)
+
+    ctx = StepContext(store=store, step_id="visuals", attempt=1, strategy="nano_banana", options={}, config={})
+    out = asyncio.run(VisualHandler(registry.specs["visual_producer"], {}).run(ctx))
+    assert out["scenes"] == ["assets/scene_01.mp4"]
+    assert normalized_calls == [(".webm", "scene_01.mp4")]
+    lic = json.loads((run_dir / "assets/licenses.json").read_text(encoding="utf-8"))
+    assert lic[0]["tier"] == "stock_video"
+    assert lic[0]["provider"] == "wikimedia"

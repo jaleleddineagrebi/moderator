@@ -50,8 +50,8 @@ In your GitHub repository → **Settings → Secrets and variables → Actions**
 | `GEMINI_API_KEY` | **Required** | API key from [Google AI Studio](https://aistudio.google.com/apikey) (powers Gemini 3.8 Flash + Nano Banana 2.1) |
 | `YOUTUBE_TOKEN` | **Required*** | Entire JSON content of `tokens/youtube.json` (if publishing to **one** YouTube channel) |
 | `YOUTUBE_TOKEN_EN` / `FR` / `AR` | *Optional* | Entire JSON content of `tokens/youtube_<lang>.json` (overrides `YOUTUBE_TOKEN` per language) |
-| `PEXELS_API_KEY` | *Optional* | Free key from <https://www.pexels.com/api/> (stock clip fallback) |
-| `PIXABAY_API_KEY` | *Optional* | Free key from <https://pixabay.com/api/docs/> (stock clip fallback) |
+| `PIXABAY_API_KEY` | *Recommended* | Instant free key from <https://pixabay.com/api/docs/> (HD live-action stock video clips; \$0) |
+| `PEXELS_API_KEY` | *Optional* | Existing key from <https://www.pexels.com/api/> if you have one *(new key issuance is currently paused by Pexels; Wikimedia CC0 + Pixabay cover video automatically)* |
 | `YOUTUBE_API_KEY` | *Optional* | Read-only YouTube Data API v3 key for live trend metrics |
 
 ### Repository Variables (Optional — under the *Variables* tab)

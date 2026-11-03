@@ -78,8 +78,9 @@ Rules:
 {describe(langs)}
   {multi_note}
 - on_screen: a punchy headline per scene, max 5 words.
-- visual: describe footage findable on free stock sites (Pexels/Pixabay). No logos, brands, celebrities, film characters.
-  search_terms in English, concrete nouns ("honeybee on flower macro", not "nature's wonder").
+- visual: describe dynamic moving B-roll footage findable on free stock video sites (Pexels/Pixabay/Commons). No logos, brands, celebrities, film characters.
+  Set `prefer` to `"video"` so scenes use moving video clips rather than static images.
+  Provide 3-4 short (2-3 word) English `search_terms` using concrete filmable subjects with motion ("person scrolling phone", "crowded crosswalk", "clock hands moving"); make the last term a broad 2-word B-roll query ("city street", "ocean waves", "walking crowd") guaranteed to match stock video libraries.
 - Facts must be accurate. No medical, financial or religious claims that could mislead.
 
 {previous}

@@ -2,6 +2,6 @@ title: Visual Producer
 role: Generates custom 9:16 scene visuals with Nano Banana (or sources free stock clips) and records each asset's license.
 inputs: [script.json]
 outputs: [assets/scene_XX.mp4, assets/licenses.json, assets/contact_sheet.jpg]
-tools: [Gemini Nano Banana (9:16 image generation), Pexels API, Pixabay API, Pillow, ffmpeg]
+tools: [Gemini Nano Banana (9:16 image generation), Pexels API, Pixabay API, Wikimedia Commons CC0/PD Video, Pillow, ffmpeg]
 strategies: [nano_banana, stock_video, stock_photo, generated]
 timeout_s: 1800
