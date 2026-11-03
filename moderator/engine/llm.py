@@ -10,6 +10,7 @@ Set `GEMINI_API_KEY` (or `GOOGLE_API_KEY`) in `.env` or the environment.
 
 from __future__ import annotations
 
+import asyncio
 import base64
 import io
 import json
@@ -34,15 +35,26 @@ API_BASE = "https://generativelanguage.googleapis.com/v1beta/models"
 VERTEX_EXPRESS_V1BETA1 = "https://aiplatform.googleapis.com/v1beta1/publishers/google/models"
 VERTEX_EXPRESS_V1 = "https://aiplatform.googleapis.com/v1/publishers/google/models"
 
-# Cache the first endpoint base that succeeds for a given key, and IPv4 fallback if IPv6 blackholes
+# Cache working endpoint, working model, search-tier support, and IPv4 fallback per key
 _WORKING_BASE_BY_KEY: dict[str, str] = {}
+_WORKING_MODEL_BY_KEY: dict[str, str] = {}
+_SEARCH_UNAVAILABLE_KEYS: set[str] = set()
 _FORCE_IPV4: bool = False
 
-# Ordered candidate chains so newest -> fallback is automatic
+# Ordered candidate chains so newest -> fallback is automatic across 404 / 429 / 503
 TEXT_MODEL_CHAINS: dict[str, list[str]] = {
-    "flash": ["gemini-3.8-flash", "gemini-3-flash-preview", "gemini-2.5-flash"],
-    "flash-lite": ["gemini-3.1-flash-lite", "gemini-3.5-flash-lite", "gemini-2.5-flash-lite"],
-    "pro": ["gemini-3.1-pro-preview", "gemini-2.5-pro", "gemini-3.8-flash"],
+    "flash": [
+        "gemini-3.8-flash",
+        "gemini-3-flash-preview",
+        "gemini-3.7-flash",
+        "gemini-3.6-flash",
+        "gemini-3.5-flash",
+        "gemini-3.5-flash-lite",
+        "gemini-3.1-flash-lite",
+        "gemini-2.5-flash",
+    ],
+    "flash-lite": ["gemini-3.5-flash-lite", "gemini-3.1-flash-lite", "gemini-3-flash-preview", "gemini-2.5-flash-lite"],
+    "pro": ["gemini-3.1-pro-preview", "gemini-2.5-pro", "gemini-3-flash-preview", "gemini-3.8-flash"],
 }
 
 IMAGE_MODEL_CHAINS: dict[str, list[str]] = {
@@ -169,8 +181,11 @@ class GeminiClient:
             async with _make_async_client(self.timeout_s, ipv4_only=True) as v4_client:
                 return await v4_client.post(url, headers=headers, json=body)
 
-    async def _post(self, candidates: list[str], body: dict[str, Any]) -> tuple[str, dict[str, Any]]:
+    async def _post(self, candidates: list[str], body: dict[str, Any], *, remember_model: bool = False) -> tuple[str, dict[str, Any]]:
         key = _get_api_key()
+        if remember_model and _WORKING_MODEL_BY_KEY.get(key) in candidates:
+            pref = _WORKING_MODEL_BY_KEY[key]
+            candidates = [pref] + [m for m in candidates if m != pref]
         headers = {"x-goog-api-key": key, "Content-Type": "application/json"}
         bases = _candidate_api_bases(key)
         last_err = ""
@@ -182,9 +197,17 @@ class GeminiClient:
                     r = await self._request_once(client, f"{base}/{model_id}:generateContent", headers, body)
                     if r.status_code == 200:
                         _WORKING_BASE_BY_KEY[key] = base
+                        if remember_model:
+                            _WORKING_MODEL_BY_KEY[key] = model_id
                         return model_id, r.json()
-                    if r.status_code == 404 and idx + 1 < len(candidates):
-                        self.ctx.log(f"Model '{model_id}' unavailable (404); falling back to '{candidates[idx + 1]}'", "warning")
+                    # Fall back to next candidate model on 404 (not enabled), 429 (quota/RPM), or 5xx (503 high demand)
+                    if r.status_code in (404, 429, 500, 502, 503, 504) and idx + 1 < len(candidates):
+                        self.ctx.log(
+                            f"Model '{model_id}' returned {r.status_code}; falling back to '{candidates[idx + 1]}'",
+                            "warning",
+                        )
+                        if r.status_code in (429, 503):
+                            await asyncio.sleep(0.4)
                         continue
                     # If this key belongs to Vertex Express rather than AI Studio, try next base
                     if r.status_code in (400, 401, 403) and b_idx + 1 < len(bases) and (
@@ -206,33 +229,54 @@ class GeminiClient:
                   tools: list[str] | None = None, model: str | None = None) -> Any:
         """Run a Gemini Flash prompt. Returns parsed dict when `schema` is provided, else str."""
         self.ctx.check_budget()
+        key = _get_api_key()
         candidates = resolve_text_models(model or self.model)
-        use_search = bool(tools and any(t.lower() in ("websearch", "web_search", "google_search") for t in tools))
+        requested_search = bool(tools and any(t.lower() in ("websearch", "web_search", "google_search") for t in tools))
+        use_search = requested_search and (key not in _SEARCH_UNAVAILABLE_KEYS)
 
-        user_prompt = prompt
-        gen_cfg: dict[str, Any] = {}
-        if schema and not use_search:
-            gen_cfg["responseMimeType"] = "application/json"
-            gen_cfg["responseSchema"] = sanitize_schema_for_gemini(schema)
-        elif schema and use_search:
-            user_prompt = (
-                f"{prompt}\n\n"
-                "IMPORTANT: Respond with ONLY a valid JSON object matching this exact JSON Schema "
-                "(no markdown fences, no commentary before or after):\n"
-                f"{json.dumps(schema)}"
-            )
+        def _build_body(with_search: bool) -> dict[str, Any]:
+            u_prompt = prompt
+            g_cfg: dict[str, Any] = {}
+            if schema and not with_search:
+                g_cfg["responseMimeType"] = "application/json"
+                g_cfg["responseSchema"] = sanitize_schema_for_gemini(schema)
+            elif schema and with_search:
+                u_prompt = (
+                    f"{prompt}\n\n"
+                    "IMPORTANT: Respond with ONLY a valid JSON object matching this exact JSON Schema "
+                    "(no markdown fences, no commentary before or after):\n"
+                    f"{json.dumps(schema)}"
+                )
+            b: dict[str, Any] = {"contents": [{"role": "user", "parts": [{"text": u_prompt}]}]}
+            if system:
+                b["systemInstruction"] = {"parts": [{"text": system}]}
+            if g_cfg:
+                b["generationConfig"] = g_cfg
+            if with_search:
+                b["tools"] = [{"google_search": {}}]
+            return b
 
-        body: dict[str, Any] = {"contents": [{"role": "user", "parts": [{"text": user_prompt}]}]}
-        if system:
-            body["systemInstruction"] = {"parts": [{"text": system}]}
-        if gen_cfg:
-            body["generationConfig"] = gen_cfg
-        if use_search:
-            body["tools"] = [{"google_search": {}}]
-
-        self.ctx.log(f"Asking Gemini Flash ({candidates[0]}{', google_search' if use_search else ''})")
         t0 = time.monotonic()
-        used_model, data = await self._post(candidates, body)
+        if use_search:
+            self.ctx.log(f"Asking Gemini Flash ({candidates[0]}, google_search)")
+            try:
+                # Probe top 2 candidates with google_search so Free Tier (search=429) degrades fast
+                used_model, data = await self._post(candidates[:2], _build_body(True), remember_model=True)
+            except LLMError as err:
+                if any(code in str(err) for code in ("429", "403", "400", "503")):
+                    _SEARCH_UNAVAILABLE_KEYS.add(key)
+                    use_search = False
+                    self.ctx.log(
+                        "Google Search grounding unavailable on current tier/quota; continuing with Gemini Flash directly",
+                        "warning",
+                    )
+                    used_model, data = await self._post(candidates, _build_body(False), remember_model=True)
+                else:
+                    raise
+        else:
+            self.ctx.log(f"Asking Gemini Flash ({candidates[0]})")
+            used_model, data = await self._post(candidates, _build_body(False), remember_model=True)
+
         usage = data.get("usageMetadata") or {}
         self.ctx.add_cost(_estimate_token_cost(used_model, usage.get("promptTokenCount", 0), usage.get("candidatesTokenCount", 0)))
 

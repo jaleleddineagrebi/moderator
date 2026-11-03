@@ -209,7 +209,8 @@ def test_gemini_flash_and_nano_banana_models_and_image_generation(tmp_path, monk
     import base64
     import io
 
-    assert resolve_text_models("flash") == ["gemini-3.8-flash", "gemini-3-flash-preview", "gemini-2.5-flash"]
+    assert resolve_text_models("flash")[:2] == ["gemini-3.8-flash", "gemini-3-flash-preview"]
+    assert "gemini-3.7-flash" in resolve_text_models("flash")
     assert resolve_image_models("banana") == [
         "gemini-nano-banana-2.1",
         "gemini-3.1-flash-image-preview",
@@ -597,3 +598,61 @@ def test_export_pages_seed_and_run_snapshots_with_pruning(tmp_path):
     older_dir = site_dir / "data" / "runs" / "20261103_010000_youtube_short"
     assert not (older_dir / "final_short_en.mp4").exists()
     assert (older_dir / "qa_report.md").is_file()
+
+
+def test_gemini_free_tier_429_search_and_503_model_fallback(tmp_path, monkeypatch):
+    from moderator.engine import llm as llm_mod
+
+    monkeypatch.setenv("GEMINI_API_KEY", "AQ.free-tier-test-key")
+    llm_mod._WORKING_BASE_BY_KEY.clear()
+    llm_mod._WORKING_MODEL_BY_KEY.clear()
+    llm_mod._SEARCH_UNAVAILABLE_KEYS.clear()
+
+    seen = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        body = json.loads(request.content.decode("utf-8"))
+        url = str(request.url)
+        has_search = "tools" in body
+        seen.append((url.split("/")[-1], has_search))
+        # Simulate Free Tier: google_search returns 429, and gemini-3.8-flash returns 503 high demand
+        if has_search:
+            return httpx.Response(429, json={"error": {"code": 429, "status": "RESOURCE_EXHAUSTED"}})
+        if "gemini-3.8-flash:" in url:
+            return httpx.Response(503, json={"error": {"code": 503, "status": "UNAVAILABLE"}})
+        return httpx.Response(200, json={
+            "candidates": [{"content": {"parts": [{"text": json.dumps({"ok": True})}]}}],
+            "usageMetadata": {"promptTokenCount": 50, "candidatesTokenCount": 10},
+        })
+
+    orig_async_client = httpx.AsyncClient
+    monkeypatch.setattr(
+        llm_mod,
+        "_make_async_client",
+        lambda timeout_s, ipv4_only=False: orig_async_client(transport=httpx.MockTransport(handler), timeout=timeout_s),
+    )
+
+    wf = Workflow("free_wf", "Free", "", {}, {"max_retries": 0, "max_revision_rounds": 0}, [Step("s1", "x", "S1")])
+    store = StateStore.create(tmp_path / "run", new_state("r_free", wf, {}, {}))
+    ctx = StepContext(store=store, step_id="s1", attempt=1, strategy="web_and_youtube", options={}, config={})
+    client = GeminiClient(ctx, {"model": "flash"})
+
+    res = asyncio.run(
+        client.ask(
+            "Find 3 psychology ideas",
+            schema={"type": "object", "properties": {"ok": {"type": "boolean"}}, "required": ["ok"]},
+            tools=["WebSearch"],
+        )
+    )
+    assert res == {"ok": True}
+    # Subsequent call remembers gemini-3-flash-preview and skips google_search immediately!
+    seen.clear()
+    res2 = asyncio.run(
+        client.ask(
+            "Second call",
+            schema={"type": "object", "properties": {"ok": {"type": "boolean"}}, "required": ["ok"]},
+            tools=["WebSearch"],
+        )
+    )
+    assert res2 == {"ok": True}
+    assert seen == [("gemini-3-flash-preview:generateContent", False)]

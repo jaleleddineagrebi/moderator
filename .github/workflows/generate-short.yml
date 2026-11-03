@@ -20,15 +20,16 @@ on:
         required: false
         type: string
       visual_mode:
-        description: "Scene visual generation mode"
+        description: "Scene visuals (stock/generated = $0 free, auto = Nano Banana AI first)"
         required: false
-        default: "auto"
+        default: "stock"
         type: choice
         options:
-          - auto
           - stock
+          - generated
+          - auto
       budget_usd:
-        description: "Hard Gemini spend cap in USD for this run"
+        description: "Safety spend cap only (Free Tier keys always pay $0.00)"
         required: false
         default: "1.00"
         type: string
@@ -78,7 +79,7 @@ jobs:
           INPUT_TOPIC: ${{ inputs.topic }}
           INPUT_LANGS: ${{ inputs.languages || vars.MODERATOR_LANGUAGES }}
           INPUT_NICHE: ${{ vars.MODERATOR_NICHE }}
-          INPUT_VISUAL_MODE: ${{ inputs.visual_mode || vars.MODERATOR_VISUAL_MODE || 'auto' }}
+          INPUT_VISUAL_MODE: ${{ inputs.visual_mode || vars.MODERATOR_VISUAL_MODE || 'stock' }}
           INPUT_BUDGET: ${{ inputs.budget_usd || vars.MODERATOR_BUDGET_USD || '1.00' }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           PYTHONIOENCODING: utf-8
