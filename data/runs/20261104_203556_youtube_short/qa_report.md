@@ -1,22 +1,23 @@
 # QA report: CHANGES NEEDED
 
-- ✅ **length** [en]: 47.8s (must be under 60s; target 32-50s)
-- ✅ **target length** [en]: 47.8s
+- ✅ **length** [en]: 44.8s (must be under 60s; target 32-50s)
+- ✅ **target length** [en]: 44.8s
 - ✅ **aspect ratio** [en]: 1080x1920
 - ✅ **video codec** [en]: h264
 - ✅ **audio track** [en]: present
-- ✅ **loudness** [en]: -14.4 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)
-- ✅ **hook timing** [en]: scene_01 spoken in 2.6s (target <= 3s)
-- ✅ **caption sync** [en]: 120 words, 44 caption events
-- ✅ **length** [fr]: 45.1s (must be under 60s; target 32-50s)
-- ✅ **target length** [fr]: 45.1s
+- ✅ **loudness** [en]: -14.1 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)
+- ✅ **hook timing** [en]: scene_01 spoken in 3.1s (target <= 3s)
+- ✅ **caption sync** [en]: 100 words, 38 caption events
+- ✅ **length** [fr]: 44.6s (must be under 60s; target 32-50s)
+- ✅ **target length** [fr]: 44.6s
 - ✅ **aspect ratio** [fr]: 1080x1920
 - ✅ **video codec** [fr]: h264
 - ✅ **audio track** [fr]: present
-- ✅ **loudness** [fr]: -14.2 LUFS, peak -1.3 dBFS (target -14 LUFS, peak <= -1)
-- ✅ **hook timing** [fr]: scene_01 spoken in 2.7s (target <= 3s)
-- ✅ **caption sync** [fr]: 105 words, 39 caption events
+- ✅ **loudness** [fr]: -14.0 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)
+- ✅ **hook timing** [fr]: scene_01 spoken in 3.0s (target <= 3s)
+- ✅ **caption sync** [fr]: 101 words, 37 caption events
 - ✅ **visual licenses**: 7 assets: pixabay
 - ✅ **audio licenses**: music: original work, no third-party rights; sfx: original work, no third-party rights; voice: synthetic voice; no third-party performance rights
-- ❌ **grammar review** [en]: Scene 06 contains a phrase in French ('ce n'est pas d'avoir toutes les réponses') instead of English. Fix the VO to: 'Real wisdom isn't about having all the answers.' → sent to script
+- ❌ **accuracy review** [en]: The peak of the Dunning-Kruger graph is scientifically known as 'Mount Stupid', not 'Mount Ignorant'. Change narration and on-screen text to 'Mount Stupid'. → sent to script
+- ❌ **accuracy review** [fr]: In French, the Dunning-Kruger peak is colloquially known as 'Le Sommet de la stupidité'. Change 'Sommet de l’ignorance' to 'Sommet de la stupidité' for scientific accuracy. → sent to script
 - ✅ **people rule**: no women beyond face close-ups in 7 scenes and 2 thumbnail(s)
