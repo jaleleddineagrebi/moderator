@@ -1,0 +1,572 @@
+{
+  "voice": "en-US-AriaNeural",
+  "duration": 41.964082,
+  "scenes": [
+    {
+      "scene": "scene_01",
+      "start": 0.0,
+      "end": 3.192,
+      "words": [
+        {
+          "start": 0.1,
+          "end": 0.325,
+          "text": "Your"
+        },
+        {
+          "start": 0.338,
+          "end": 0.637,
+          "text": "best"
+        },
+        {
+          "start": 0.65,
+          "end": 0.975,
+          "text": "friend"
+        },
+        {
+          "start": 0.988,
+          "end": 1.1,
+          "text": "is"
+        },
+        {
+          "start": 1.113,
+          "end": 1.363,
+          "text": "just"
+        },
+        {
+          "start": 1.375,
+          "end": 1.425,
+          "text": "a"
+        },
+        {
+          "start": 1.438,
+          "end": 2.312,
+          "text": "coincidence"
+        }
+      ]
+    },
+    {
+      "scene": "scene_02",
+      "start": 3.372,
+      "end": 8.556,
+      "words": [
+        {
+          "start": 3.472,
+          "end": 3.659,
+          "text": "It"
+        },
+        {
+          "start": 3.672,
+          "end": 3.972,
+          "text": "isn't"
+        },
+        {
+          "start": 3.985,
+          "end": 4.247,
+          "text": "fate"
+        },
+        {
+          "start": 4.259,
+          "end": 4.347,
+          "text": "or"
+        },
+        {
+          "start": 4.36,
+          "end": 4.535,
+          "text": "some"
+        },
+        {
+          "start": 4.547,
+          "end": 5.022,
+          "text": "magical"
+        },
+        {
+          "start": 5.035,
+          "end": 5.622,
+          "text": "connection"
+        },
+        {
+          "start": 5.922,
+          "end": 6.084,
+          "text": "it’s"
+        },
+        {
+          "start": 6.097,
+          "end": 6.422,
+          "text": "simply"
+        },
+        {
+          "start": 6.434,
+          "end": 6.535,
+          "text": "the"
+        },
+        {
+          "start": 6.547,
+          "end": 7.134,
+          "text": "Propinquity"
+        },
+        {
+          "start": 7.147,
+          "end": 7.684,
+          "text": "Effect"
+        }
+      ]
+    },
+    {
+      "scene": "scene_03",
+      "start": 8.736,
+      "end": 15.336,
+      "words": [
+        {
+          "start": 8.836,
+          "end": 9.311,
+          "text": "Famous"
+        },
+        {
+          "start": 9.324,
+          "end": 9.823,
+          "text": "research"
+        },
+        {
+          "start": 9.836,
+          "end": 10.224,
+          "text": "proves"
+        },
+        {
+          "start": 10.236,
+          "end": 10.399,
+          "text": "that"
+        },
+        {
+          "start": 10.411,
+          "end": 10.836,
+          "text": "physical"
+        },
+        {
+          "start": 10.848,
+          "end": 11.336,
+          "text": "distance"
+        },
+        {
+          "start": 11.348,
+          "end": 11.473,
+          "text": "is"
+        },
+        {
+          "start": 11.486,
+          "end": 11.598,
+          "text": "the"
+        },
+        {
+          "start": 11.611,
+          "end": 11.973,
+          "text": "single"
+        },
+        {
+          "start": 11.986,
+          "end": 12.424,
+          "text": "greatest"
+        },
+        {
+          "start": 12.436,
+          "end": 12.911,
+          "text": "predictor"
+        },
+        {
+          "start": 12.924,
+          "end": 12.999,
+          "text": "of"
+        },
+        {
+          "start": 13.011,
+          "end": 13.136,
+          "text": "your"
+        },
+        {
+          "start": 13.148,
+          "end": 13.611,
+          "text": "entire"
+        },
+        {
+          "start": 13.624,
+          "end": 13.973,
+          "text": "social"
+        },
+        {
+          "start": 13.986,
+          "end": 14.461,
+          "text": "circle"
+        }
+      ]
+    },
+    {
+      "scene": "scene_04",
+      "start": 15.516,
+      "end": 21.828,
+      "words": [
+        {
+          "start": 15.616,
+          "end": 15.816,
+          "text": "In"
+        },
+        {
+          "start": 15.828,
+          "end": 16.053,
+          "text": "one"
+        },
+        {
+          "start": 16.066,
+          "end": 16.566,
+          "text": "landmark"
+        },
+        {
+          "start": 16.578,
+          "end": 17.028,
+          "text": "study"
+        },
+        {
+          "start": 17.291,
+          "end": 17.641,
+          "text": "people"
+        },
+        {
+          "start": 17.654,
+          "end": 17.991,
+          "text": "living"
+        },
+        {
+          "start": 18.003,
+          "end": 18.216,
+          "text": "right"
+        },
+        {
+          "start": 18.228,
+          "end": 18.516,
+          "text": "next"
+        },
+        {
+          "start": 18.529,
+          "end": 18.578,
+          "text": "to"
+        },
+        {
+          "start": 18.591,
+          "end": 18.716,
+          "text": "the"
+        },
+        {
+          "start": 18.728,
+          "end": 19.166,
+          "text": "stairs"
+        },
+        {
+          "start": 19.179,
+          "end": 19.353,
+          "text": "had"
+        },
+        {
+          "start": 19.366,
+          "end": 20.078,
+          "text": "significantly"
+        },
+        {
+          "start": 20.091,
+          "end": 20.341,
+          "text": "more"
+        },
+        {
+          "start": 20.354,
+          "end": 20.954,
+          "text": "friends"
+        }
+      ]
+    },
+    {
+      "scene": "scene_05",
+      "start": 22.008,
+      "end": 28.056,
+      "words": [
+        {
+          "start": 22.108,
+          "end": 22.433,
+          "text": "Every"
+        },
+        {
+          "start": 22.446,
+          "end": 22.77,
+          "text": "single"
+        },
+        {
+          "start": 22.783,
+          "end": 23.046,
+          "text": "time"
+        },
+        {
+          "start": 23.058,
+          "end": 23.158,
+          "text": "you"
+        },
+        {
+          "start": 23.171,
+          "end": 23.496,
+          "text": "pass"
+        },
+        {
+          "start": 23.508,
+          "end": 23.946,
+          "text": "someone"
+        },
+        {
+          "start": 24.308,
+          "end": 24.433,
+          "text": "your"
+        },
+        {
+          "start": 24.446,
+          "end": 24.758,
+          "text": "brain"
+        },
+        {
+          "start": 24.771,
+          "end": 25.471,
+          "text": "subconsciously"
+        },
+        {
+          "start": 25.483,
+          "end": 25.82,
+          "text": "marks"
+        },
+        {
+          "start": 25.833,
+          "end": 25.996,
+          "text": "them"
+        },
+        {
+          "start": 26.008,
+          "end": 26.133,
+          "text": "as"
+        },
+        {
+          "start": 26.146,
+          "end": 26.446,
+          "text": "safe"
+        },
+        {
+          "start": 26.458,
+          "end": 26.558,
+          "text": "and"
+        },
+        {
+          "start": 26.57,
+          "end": 27.183,
+          "text": "familiar"
+        }
+      ]
+    },
+    {
+      "scene": "scene_06",
+      "start": 28.236,
+      "end": 33.948,
+      "words": [
+        {
+          "start": 28.336,
+          "end": 28.511,
+          "text": "You"
+        },
+        {
+          "start": 28.523,
+          "end": 28.811,
+          "text": "didn’t"
+        },
+        {
+          "start": 28.824,
+          "end": 29.248,
+          "text": "actually"
+        },
+        {
+          "start": 29.261,
+          "end": 29.548,
+          "text": "choose"
+        },
+        {
+          "start": 29.561,
+          "end": 29.623,
+          "text": "a"
+        },
+        {
+          "start": 29.636,
+          "end": 30.161,
+          "text": "soulmate"
+        },
+        {
+          "start": 30.448,
+          "end": 30.561,
+          "text": "you"
+        },
+        {
+          "start": 30.573,
+          "end": 30.848,
+          "text": "just"
+        },
+        {
+          "start": 30.861,
+          "end": 31.161,
+          "text": "chose"
+        },
+        {
+          "start": 31.174,
+          "end": 31.274,
+          "text": "the"
+        },
+        {
+          "start": 31.286,
+          "end": 31.686,
+          "text": "person"
+        },
+        {
+          "start": 31.698,
+          "end": 31.973,
+          "text": "living"
+        },
+        {
+          "start": 31.986,
+          "end": 32.449,
+          "text": "closest"
+        },
+        {
+          "start": 32.461,
+          "end": 32.523,
+          "text": "to"
+        },
+        {
+          "start": 32.536,
+          "end": 32.648,
+          "text": "your"
+        },
+        {
+          "start": 32.661,
+          "end": 33.073,
+          "text": "door"
+        }
+      ]
+    },
+    {
+      "scene": "scene_07",
+      "start": 34.128,
+      "end": 39.336,
+      "words": [
+        {
+          "start": 34.228,
+          "end": 34.391,
+          "text": "It"
+        },
+        {
+          "start": 34.403,
+          "end": 34.491,
+          "text": "is"
+        },
+        {
+          "start": 34.503,
+          "end": 34.765,
+          "text": "hard"
+        },
+        {
+          "start": 34.778,
+          "end": 34.878,
+          "text": "to"
+        },
+        {
+          "start": 34.89,
+          "end": 35.39,
+          "text": "accept"
+        },
+        {
+          "start": 35.403,
+          "end": 35.515,
+          "text": "that"
+        },
+        {
+          "start": 35.528,
+          "end": 35.665,
+          "text": "your"
+        },
+        {
+          "start": 35.678,
+          "end": 36.103,
+          "text": "deepest"
+        },
+        {
+          "start": 36.116,
+          "end": 36.478,
+          "text": "bonds"
+        },
+        {
+          "start": 36.49,
+          "end": 36.64,
+          "text": "are"
+        },
+        {
+          "start": 36.653,
+          "end": 36.916,
+          "text": "really"
+        },
+        {
+          "start": 36.928,
+          "end": 37.165,
+          "text": "just"
+        },
+        {
+          "start": 37.178,
+          "end": 37.215,
+          "text": "a"
+        },
+        {
+          "start": 37.228,
+          "end": 37.616,
+          "text": "result"
+        },
+        {
+          "start": 37.628,
+          "end": 37.703,
+          "text": "of"
+        },
+        {
+          "start": 37.715,
+          "end": 38.453,
+          "text": "geography"
+        }
+      ]
+    },
+    {
+      "scene": "scene_08",
+      "start": 39.516,
+      "end": 41.964,
+      "words": [
+        {
+          "start": 39.616,
+          "end": 39.891,
+          "text": "This"
+        },
+        {
+          "start": 39.904,
+          "end": 40.028,
+          "text": "is"
+        },
+        {
+          "start": 40.041,
+          "end": 40.204,
+          "text": "why"
+        },
+        {
+          "start": 40.216,
+          "end": 40.428,
+          "text": "you'll"
+        },
+        {
+          "start": 40.441,
+          "end": 41.091,
+          "text": "realize"
+        }
+      ]
+    }
+  ]
+}

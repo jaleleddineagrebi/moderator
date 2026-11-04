@@ -1,0 +1,532 @@
+{
+  "voice": "fr-FR-DeniseNeural",
+  "duration": 37.692086,
+  "scenes": [
+    {
+      "scene": "scene_01",
+      "start": 0.0,
+      "end": 2.928,
+      "words": [
+        {
+          "start": 0.1,
+          "end": 0.275,
+          "text": "Ton"
+        },
+        {
+          "start": 0.287,
+          "end": 0.688,
+          "text": "meilleur"
+        },
+        {
+          "start": 0.7,
+          "end": 0.938,
+          "text": "ami"
+        },
+        {
+          "start": 0.95,
+          "end": 1.0,
+          "text": "est"
+        },
+        {
+          "start": 1.012,
+          "end": 1.2,
+          "text": "une"
+        },
+        {
+          "start": 1.212,
+          "end": 2.05,
+          "text": "coïncidence"
+        }
+      ]
+    },
+    {
+      "scene": "scene_02",
+      "start": 3.108,
+      "end": 7.932,
+      "words": [
+        {
+          "start": 3.208,
+          "end": 3.395,
+          "text": "Ce"
+        },
+        {
+          "start": 3.408,
+          "end": 3.533,
+          "text": "n'est"
+        },
+        {
+          "start": 3.546,
+          "end": 3.683,
+          "text": "pas"
+        },
+        {
+          "start": 3.696,
+          "end": 3.796,
+          "text": "le"
+        },
+        {
+          "start": 3.808,
+          "end": 4.195,
+          "text": "destin"
+        },
+        {
+          "start": 4.208,
+          "end": 4.283,
+          "text": "ou"
+        },
+        {
+          "start": 4.296,
+          "end": 4.396,
+          "text": "la"
+        },
+        {
+          "start": 4.408,
+          "end": 4.833,
+          "text": "magie"
+        },
+        {
+          "start": 5.17,
+          "end": 5.308,
+          "text": "c'est"
+        },
+        {
+          "start": 5.32,
+          "end": 5.82,
+          "text": "simplement"
+        },
+        {
+          "start": 5.833,
+          "end": 6.121,
+          "text": "l'effet"
+        },
+        {
+          "start": 6.133,
+          "end": 6.233,
+          "text": "de"
+        },
+        {
+          "start": 6.246,
+          "end": 7.058,
+          "text": "proximité"
+        }
+      ]
+    },
+    {
+      "scene": "scene_03",
+      "start": 8.112,
+      "end": 13.608,
+      "words": [
+        {
+          "start": 8.212,
+          "end": 8.412,
+          "text": "La"
+        },
+        {
+          "start": 8.424,
+          "end": 8.887,
+          "text": "recherche"
+        },
+        {
+          "start": 8.899,
+          "end": 9.162,
+          "text": "prouve"
+        },
+        {
+          "start": 9.174,
+          "end": 9.275,
+          "text": "que"
+        },
+        {
+          "start": 9.287,
+          "end": 9.387,
+          "text": "la"
+        },
+        {
+          "start": 9.4,
+          "end": 9.825,
+          "text": "distance"
+        },
+        {
+          "start": 9.837,
+          "end": 10.25,
+          "text": "physique"
+        },
+        {
+          "start": 10.262,
+          "end": 10.3,
+          "text": "est"
+        },
+        {
+          "start": 10.312,
+          "end": 10.424,
+          "text": "le"
+        },
+        {
+          "start": 10.437,
+          "end": 10.775,
+          "text": "premier"
+        },
+        {
+          "start": 10.787,
+          "end": 11.412,
+          "text": "prédicteur"
+        },
+        {
+          "start": 11.424,
+          "end": 11.55,
+          "text": "de"
+        },
+        {
+          "start": 11.562,
+          "end": 11.712,
+          "text": "ton"
+        },
+        {
+          "start": 11.724,
+          "end": 12.099,
+          "text": "cercle"
+        },
+        {
+          "start": 12.112,
+          "end": 12.737,
+          "text": "social"
+        }
+      ]
+    },
+    {
+      "scene": "scene_04",
+      "start": 13.788,
+      "end": 19.164,
+      "words": [
+        {
+          "start": 13.888,
+          "end": 14.075,
+          "text": "Une"
+        },
+        {
+          "start": 14.088,
+          "end": 14.413,
+          "text": "étude"
+        },
+        {
+          "start": 14.425,
+          "end": 14.775,
+          "text": "montre"
+        },
+        {
+          "start": 14.788,
+          "end": 14.913,
+          "text": "que"
+        },
+        {
+          "start": 14.925,
+          "end": 15.263,
+          "text": "vivre"
+        },
+        {
+          "start": 15.276,
+          "end": 15.463,
+          "text": "près"
+        },
+        {
+          "start": 15.476,
+          "end": 15.588,
+          "text": "des"
+        },
+        {
+          "start": 15.6,
+          "end": 16.163,
+          "text": "escaliers"
+        },
+        {
+          "start": 16.176,
+          "end": 16.588,
+          "text": "augmente"
+        },
+        {
+          "start": 16.6,
+          "end": 17.213,
+          "text": "radicalement"
+        },
+        {
+          "start": 17.226,
+          "end": 17.375,
+          "text": "tes"
+        },
+        {
+          "start": 17.388,
+          "end": 17.625,
+          "text": "chances"
+        },
+        {
+          "start": 17.638,
+          "end": 18.301,
+          "text": "d'amitié"
+        }
+      ]
+    },
+    {
+      "scene": "scene_05",
+      "start": 19.344,
+      "end": 25.032,
+      "words": [
+        {
+          "start": 19.444,
+          "end": 19.744,
+          "text": "Chaque"
+        },
+        {
+          "start": 19.756,
+          "end": 20.194,
+          "text": "croisement"
+        },
+        {
+          "start": 20.207,
+          "end": 20.732,
+          "text": "habituel"
+        },
+        {
+          "start": 20.744,
+          "end": 20.994,
+          "text": "pousse"
+        },
+        {
+          "start": 21.007,
+          "end": 21.156,
+          "text": "ton"
+        },
+        {
+          "start": 21.169,
+          "end": 21.569,
+          "text": "cerveau"
+        },
+        {
+          "start": 21.581,
+          "end": 21.694,
+          "text": "à"
+        },
+        {
+          "start": 21.706,
+          "end": 22.269,
+          "text": "percevoir"
+        },
+        {
+          "start": 22.282,
+          "end": 22.482,
+          "text": "cette"
+        },
+        {
+          "start": 22.494,
+          "end": 22.919,
+          "text": "personne"
+        },
+        {
+          "start": 22.931,
+          "end": 23.132,
+          "text": "comme"
+        },
+        {
+          "start": 23.144,
+          "end": 23.706,
+          "text": "familière"
+        },
+        {
+          "start": 23.719,
+          "end": 23.769,
+          "text": "et"
+        },
+        {
+          "start": 23.782,
+          "end": 24.169,
+          "text": "sûre"
+        }
+      ]
+    },
+    {
+      "scene": "scene_06",
+      "start": 25.212,
+      "end": 30.036,
+      "words": [
+        {
+          "start": 25.312,
+          "end": 25.475,
+          "text": "Tu"
+        },
+        {
+          "start": 25.487,
+          "end": 25.625,
+          "text": "n'as"
+        },
+        {
+          "start": 25.637,
+          "end": 25.762,
+          "text": "pas"
+        },
+        {
+          "start": 25.774,
+          "end": 26.075,
+          "text": "trouvé"
+        },
+        {
+          "start": 26.087,
+          "end": 26.2,
+          "text": "une"
+        },
+        {
+          "start": 26.212,
+          "end": 26.362,
+          "text": "âme"
+        },
+        {
+          "start": 26.375,
+          "end": 26.8,
+          "text": "sœur"
+        },
+        {
+          "start": 27.112,
+          "end": 27.274,
+          "text": "tu"
+        },
+        {
+          "start": 27.287,
+          "end": 27.362,
+          "text": "as"
+        },
+        {
+          "start": 27.375,
+          "end": 27.762,
+          "text": "juste"
+        },
+        {
+          "start": 27.774,
+          "end": 28.074,
+          "text": "trouvé"
+        },
+        {
+          "start": 28.087,
+          "end": 28.225,
+          "text": "ton"
+        },
+        {
+          "start": 28.237,
+          "end": 28.549,
+          "text": "voisin"
+        },
+        {
+          "start": 28.562,
+          "end": 28.662,
+          "text": "de"
+        },
+        {
+          "start": 28.674,
+          "end": 29.162,
+          "text": "palier"
+        }
+      ]
+    },
+    {
+      "scene": "scene_07",
+      "start": 30.216,
+      "end": 35.16,
+      "words": [
+        {
+          "start": 30.316,
+          "end": 30.541,
+          "text": "C'est"
+        },
+        {
+          "start": 30.554,
+          "end": 30.941,
+          "text": "troublant"
+        },
+        {
+          "start": 30.954,
+          "end": 31.066,
+          "text": "de"
+        },
+        {
+          "start": 31.079,
+          "end": 31.379,
+          "text": "voir"
+        },
+        {
+          "start": 31.391,
+          "end": 31.516,
+          "text": "que"
+        },
+        {
+          "start": 31.528,
+          "end": 31.666,
+          "text": "tes"
+        },
+        {
+          "start": 31.678,
+          "end": 31.916,
+          "text": "liens"
+        },
+        {
+          "start": 31.928,
+          "end": 32.366,
+          "text": "dépendent"
+        },
+        {
+          "start": 32.379,
+          "end": 32.754,
+          "text": "presque"
+        },
+        {
+          "start": 32.766,
+          "end": 33.216,
+          "text": "entièrement"
+        },
+        {
+          "start": 33.229,
+          "end": 33.329,
+          "text": "de"
+        },
+        {
+          "start": 33.341,
+          "end": 33.428,
+          "text": "la"
+        },
+        {
+          "start": 33.441,
+          "end": 34.278,
+          "text": "géographie"
+        }
+      ]
+    },
+    {
+      "scene": "scene_08",
+      "start": 35.34,
+      "end": 37.692,
+      "words": [
+        {
+          "start": 35.44,
+          "end": 35.828,
+          "text": "Voilà"
+        },
+        {
+          "start": 35.84,
+          "end": 36.252,
+          "text": "pourquoi"
+        },
+        {
+          "start": 36.265,
+          "end": 36.365,
+          "text": "on"
+        },
+        {
+          "start": 36.378,
+          "end": 36.528,
+          "text": "dit"
+        },
+        {
+          "start": 36.54,
+          "end": 36.827,
+          "text": "que"
+        }
+      ]
+    }
+  ]
+}
