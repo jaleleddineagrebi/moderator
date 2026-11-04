@@ -81,6 +81,9 @@ uv run python -m moderator run demo
 # 3. Run YouTube Short in English + French (opens live dashboard at http://127.0.0.1:8765)
 uv run python -m moderator run youtube_short -p 'languages=[en, fr]' -p topic="Why we remember embarrassing moments"
 
+# 3b. Same workflow with Claude writing (runs on your Claude plan through the Claude Code CLI; no API key)
+uv run python -m moderator run youtube_short --llm claude
+
 # 4. Single-language English run with a $1.50 budget cap (or `-p visual_mode=stock` to prefer stock video)
 uv run python -m moderator run youtube_short -p languages=en -p budget_usd=1.50
 

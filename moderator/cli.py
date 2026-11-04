@@ -95,6 +95,9 @@ def main() -> None:
     run_p = sub.add_parser("run", help="start a workflow")
     run_p.add_argument("workflow")
     run_p.add_argument("-p", "--param", action="append", default=[], help="key=value (YAML list/dict or scalar), repeatable")
+    run_p.add_argument("--llm", choices=["gemini", "claude"], default=None,
+                       help="text model provider for this run (default: config.yaml llm.provider, else gemini); "
+                            "claude uses your Claude plan via the Claude Code CLI")
     res_p = sub.add_parser("resume", help="resume a run folder")
     res_p.add_argument("run_dir", type=Path)
     res_p.add_argument("--retry-failed", action="store_true", help="requeue any failed steps before resuming")
@@ -211,8 +214,13 @@ def main() -> None:
             print(f"  {spec.name:20} {spec.title}")
         return
 
-    orch = (create_run(registry, args.workflow, parse_params(args.param)) if args.cmd == "run"
-            else resume_run(registry, args.run_dir))
+    if args.cmd == "run":
+        params = parse_params(args.param)
+        if args.llm:
+            params["llm"] = args.llm  # stored with the run, so `resume` keeps the same provider
+        orch = create_run(registry, args.workflow, params)
+    else:
+        orch = resume_run(registry, args.run_dir)
     if args.cmd == "resume" and args.retry_failed:
         orch.retry_failed()
     if args.headless:

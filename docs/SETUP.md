@@ -106,3 +106,21 @@ uv run python -m moderator optimize-channel --preset auto --country US --lang en
 ```
 
 The API cannot change the channel name or `@handle`; the command prints a suggestion to apply in **YouTube Studio → Customization**.
+
+---
+
+## 7. Use Claude Instead of Gemini on GitHub
+
+The same `Generate Short` workflow can write with Claude (Haiku / Sonnet / Opus routed by task complexity) through the Claude Code CLI on your Claude plan.
+
+1. On your computer, create a long-lived token for CI (opens the browser once):
+   ```sh
+   claude setup-token
+   ```
+2. In GitHub → **Settings → Secrets and variables → Actions → Secrets**, add **`CLAUDE_CODE_OAUTH_TOKEN`** with that token. (Or `ANTHROPIC_API_KEY` to pay per token through the API instead of your plan.)
+3. Run it:
+   - **Once:** **Actions → Generate Short → Run workflow**, set **llm** to `claude`.
+   - **Every scheduled run:** add the repository **variable** `MODERATOR_LLM` = `claude` (Variables tab). Remove it to go back to Gemini.
+4. Keep `GEMINI_API_KEY` if you want AI-generated images (Claude cannot make images); without it, visuals use stock footage only.
+
+Publishing is unchanged: comment `/approve` on the `short-review` issue and `Upload Short` uploads to YouTube.

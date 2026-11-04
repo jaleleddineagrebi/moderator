@@ -1,7 +1,9 @@
 import json
 
+from PIL import Image, ImageDraw
+
 from moderator.engine.agent import Agent, StepContext
-from moderator.tools import ffmpeg
+from moderator.tools import ffmpeg, text, visual_rules
 from moderator.tools.languages import describe, names, normalize_langs, sensitivity_guidance
 
 
@@ -24,6 +26,23 @@ def make_review_schema(langs: list[str]) -> dict:
             },
         }}},
     }
+
+
+PEOPLE_SCHEMA = {
+    "type": "object",
+    "additionalProperties": False,
+    "required": ["violations"],
+    "properties": {"violations": {"type": "array", "items": {
+        "type": "object",
+        "additionalProperties": False,
+        "required": ["target", "detail"],
+        "properties": {
+            "target": {"type": "string", "description": "scene id as labelled (e.g. scene_03) or thumbnail_<lang>"},
+            "detail": {"type": "string", "description": "what is visible, in which frame"},
+        },
+    }}},
+}
+FRAME_W, FRAME_H, SCENES_PER_SHEET = 240, 427, 4
 
 
 class Handler(Agent):
@@ -109,6 +128,7 @@ send_to: "script" for narration/on-screen text, "packaging" for title/descriptio
             for issue in review["issues"]:
                 check(f"{issue['area']} review", False, issue["detail"], issue["send_to"],
                       issue["language"], issue["severity"])
+        await self._people_check(ctx, langs, check)
         ctx.progress(90)
 
         blockers = [c for c in checks if not c["ok"] and c["severity"] == "blocker"]
@@ -134,6 +154,62 @@ send_to: "script" for narration/on-screen text, "packaging" for title/descriptio
         outputs.update({f"video_{l}": edit[f"video_{l}"] for l in langs})
         outputs.update({f"thumbnail_{l}": ctx.upstream("packaging")[f"thumbnail_{l}"] for l in langs})
         return outputs
+
+
+    async def _people_check(self, ctx: StepContext, langs: list[str], check) -> None:
+        """Channel rule (moderator/tools/visual_rules.py): look at frames of every scene and at the thumbnails."""
+        scenes = ctx.upstream("visuals")["scenes"]
+        try:
+            sheets = await self._review_sheets(ctx, scenes)
+            thumbs = [ctx.run_dir / ctx.upstream("packaging")[f"thumbnail_{l}"] for l in langs]
+            result = await ctx.llm.ask(
+                "You check a YouTube Short's visuals against the channel's people rule.\n"
+                f"Rule: {visual_rules.PEOPLE_RULE}\n{visual_rules.REVIEW_RULE}\n"
+                "The first images are review sheets: each row is one scene (its id is written on the left) with three "
+                f"frames from start, middle and end. The last images are the thumbnails, in this order: "
+                f"{', '.join(f'thumbnail_{l}' for l in langs)}.\n"
+                "List every violation (scene id or thumbnail name and what is visible). Return an empty list if none.",
+                schema=PEOPLE_SCHEMA, images=[*sheets, *thumbs])
+        except Exception as e:  # noqa: BLE001 - cannot look at the images: warn, a human still approves checkpoint C
+            check("people rule", False, f"could not check images ({type(e).__name__}: {e}); check manually", None, None, "minor")
+            return
+        violations = result.get("violations") or []
+        for v in violations:
+            target = v["target"]
+            send_to = "packaging" if target.startswith("thumbnail") else "visuals"
+            check("people rule", False, f"{target}: {v['detail']}. Replace with footage without women "
+                  "(a face-only close-up is the only exception).", send_to)
+        if not violations:
+            check("people rule", True, f"no women beyond face close-ups in {len(scenes)} scenes and {len(langs)} thumbnail(s)")
+
+    async def _review_sheets(self, ctx: StepContext, scenes: list[str]) -> list:
+        """Up to 4 scenes per sheet; one row per scene with frames at 15%, 50% and 85% of the clip."""
+        rows = []
+        for rel in scenes:
+            src = ctx.run_dir / rel
+            dur = await ffmpeg.duration(src)
+            frames = []
+            for k, frac in enumerate((0.15, 0.5, 0.85)):
+                dst = ctx.path(f"qa/frames/{src.stem}_{k}.jpg")
+                await ffmpeg.frame_at(src, dst, ctx.run_dir, at=round(max(dur * frac, 0.05), 2))
+                with Image.open(dst) as im:
+                    frames.append(im.convert("RGB").resize((FRAME_W, FRAME_H)))
+            rows.append((src.stem, frames))
+        label_w, gap = 150, 8
+        sheets = []
+        for n in range(0, len(rows), SCENES_PER_SHEET):
+            chunk = rows[n:n + SCENES_PER_SHEET]
+            sheet = Image.new("RGB", (label_w + 3 * (FRAME_W + gap) + gap, len(chunk) * (FRAME_H + gap) + gap), (16, 16, 16))
+            draw = ImageDraw.Draw(sheet)
+            for r, (sid, frames) in enumerate(chunk):
+                y = gap + r * (FRAME_H + gap)
+                draw.text((10, y + FRAME_H // 2 - 14), sid, font=text.font("en", 26), fill=(255, 230, 0))
+                for k, fr in enumerate(frames):
+                    sheet.paste(fr, (label_w + gap + k * (FRAME_W + gap), y))
+            path = ctx.path(f"qa/people_sheet_{n // SCENES_PER_SHEET + 1}.jpg")
+            sheet.save(path, quality=85)
+            sheets.append(path)
+        return sheets
 
 
 def parse_ass(path) -> list[tuple[float, float]]:

@@ -334,8 +334,9 @@ class GeminiClient:
         return f"tokens in {prompt_t}, out {out_t}, thinking {think_t}"
 
     async def ask(self, prompt: str, *, system: str | None = None, schema: dict | None = None,
-                  tools: list[str] | None = None, model: str | None = None, complexity: str | None = None) -> Any:
-        """Run a Gemini prompt. Returns parsed dict when `schema` is provided, else str.
+                  tools: list[str] | None = None, model: str | None = None, complexity: str | None = None,
+                  images: list[Path] | None = None) -> Any:
+        """Run a Gemini prompt (optionally with JPEG/PNG images to look at). Returns parsed dict when `schema` is provided, else str.
         The model and thinking level follow the task's complexity (agent.yaml, or `complexity=` here);
         an explicit `model=` overrides the routing."""
         self.ctx.check_budget()
@@ -358,7 +359,11 @@ class GeminiClient:
                     "(no markdown fences, no commentary before or after):\n"
                     f"{json.dumps(schema)}"
                 )
-            b: dict[str, Any] = {"contents": [{"role": "user", "parts": [{"text": u_prompt}]}]}
+            parts: list[dict[str, Any]] = [{"text": u_prompt}]
+            for img in images or []:
+                mime = "image/png" if Path(img).suffix.lower() == ".png" else "image/jpeg"
+                parts.append({"inlineData": {"mimeType": mime, "data": base64.b64encode(Path(img).read_bytes()).decode("ascii")}})
+            b: dict[str, Any] = {"contents": [{"role": "user", "parts": parts}]}
             if system:
                 b["systemInstruction"] = {"parts": [{"text": system}]}
             if g_cfg:
@@ -473,5 +478,21 @@ class GeminiClient:
         return used_model
 
 
-def create_llm(ctx: StepContext, config: dict) -> GeminiClient:
+PROVIDERS = ("gemini", "claude")
+
+
+def provider_for(ctx: StepContext, config: dict) -> str:
+    """Run param `llm` > env MODERATOR_LLM > config.yaml `llm.provider` > gemini."""
+    params = getattr(getattr(ctx, "store", None), "data", {}).get("params", {}) if ctx else {}
+    choice = str(params.get("llm") or os.environ.get("MODERATOR_LLM") or config.get("provider") or "gemini").lower()
+    if choice not in PROVIDERS:
+        raise LLMError(f"unknown llm provider '{choice}' (use one of: {', '.join(PROVIDERS)})")
+    return choice
+
+
+def create_llm(ctx: StepContext, config: dict):
+    if provider_for(ctx, config) == "claude":
+        from .llm_claude import ClaudeCLI
+
+        return ClaudeCLI(ctx, {**(config.get("claude") or {}), "_gemini": config})
     return GeminiClient(ctx, config)

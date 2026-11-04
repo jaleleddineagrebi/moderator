@@ -1,7 +1,8 @@
 name: Generate Short
 
 # Runs on schedule (twice daily) or manually via "Run workflow".
-# Executes Research -> Script -> Visuals (Nano Banana) + Audio -> Packaging + Editor -> QA,
+# Executes Research -> Script -> Visuals + Audio -> Packaging + Editor -> QA,
+# with Gemini (default) or Claude as the text model (input `llm`, or repo variable MODERATOR_LLM),
 # uploads the finished MP4s & thumbnails as an Action artifact, and opens a `short-review` issue.
 # Nothing is published to YouTube until you approve Checkpoint C (comment `/approve` on the issue
 # or trigger the `Upload Short` workflow).
@@ -29,6 +30,15 @@ on:
           - auto
           - ai
           - generated
+      llm:
+        description: "Text model: gemini (GEMINI_API_KEY) or claude (Claude Code CLI with CLAUDE_CODE_OAUTH_TOKEN); default = repo variable MODERATOR_LLM, else gemini"
+        required: false
+        default: "default"
+        type: choice
+        options:
+          - default
+          - gemini
+          - claude
       budget_usd:
         description: "Safety spend cap only (Free Tier keys always pay $0.00)"
         required: false
@@ -48,14 +58,30 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
-      - name: Verify GEMINI_API_KEY secret is configured
+      - name: Choose text model and verify its secret
+        id: llm
         env:
+          INPUT_LLM: ${{ (inputs.llm != 'default' && inputs.llm) || vars.MODERATOR_LLM || 'gemini' }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          if [ -z "$GEMINI_API_KEY" ]; then
-            echo "::error::Missing GEMINI_API_KEY repository secret. Add it in GitHub -> Settings -> Secrets and variables -> Actions."
-            exit 1
-          fi
+          case "$INPUT_LLM" in
+            gemini)
+              if [ -z "$GEMINI_API_KEY" ]; then
+                echo "::error::Missing GEMINI_API_KEY repository secret. Add it in GitHub -> Settings -> Secrets and variables -> Actions."
+                exit 1
+              fi ;;
+            claude)
+              if [ -z "$CLAUDE_CODE_OAUTH_TOKEN$ANTHROPIC_API_KEY" ]; then
+                echo "::error::Missing CLAUDE_CODE_OAUTH_TOKEN secret (run 'claude setup-token' locally) or ANTHROPIC_API_KEY."
+                exit 1
+              fi
+              [ -n "$GEMINI_API_KEY" ] || echo "::notice::No GEMINI_API_KEY: visuals use stock footage only (Claude cannot generate images)." ;;
+            *)
+              echo "::error::Unknown llm '$INPUT_LLM' (use gemini or claude)"; exit 1 ;;
+          esac
+          echo "provider=$INPUT_LLM" >> "$GITHUB_OUTPUT"
 
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
 
@@ -69,11 +95,18 @@ jobs:
       - name: Install Python dependencies
         run: uv sync --locked
 
+      - name: Install Claude Code CLI (pinned)
+        if: steps.llm.outputs.provider == 'claude'
+        run: npm install -g --no-fund --no-audit @anthropic-ai/claude-code@2.1.292 && claude --version
+
       - name: Generate Short(s) and pause at Checkpoint C (streaming progress to GitHub Pages)
         id: gen
         env:
           GH_TOKEN: ${{ github.token }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          INPUT_LLM: ${{ steps.llm.outputs.provider }}
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
@@ -85,7 +118,7 @@ jobs:
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           PYTHONIOENCODING: utf-8
         run: |
-          args=(-p 'auto_approve=[A, B]')
+          args=(-p 'auto_approve=[A, B]' --llm "$INPUT_LLM")
           if [ -n "$INPUT_TOPIC" ]; then args+=(-p "topic=$INPUT_TOPIC"); fi
           if [ -n "$INPUT_LANGS" ]; then args+=(-p "languages=$INPUT_LANGS"); fi
           if [ -n "$INPUT_NICHE" ]; then args+=(-p "niche=$INPUT_NICHE"); fi

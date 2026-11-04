@@ -6,6 +6,7 @@ from PIL import Image, ImageDraw, ImageEnhance
 from moderator.engine import llm as llm_mod
 from moderator.engine.agent import Agent, StepContext
 from moderator.tools import ffmpeg, text
+from moderator.tools.visual_rules import IMAGE_PROMPT_RULE
 from moderator.tools.languages import describe, lang_schema, names, normalize_langs
 
 LANG_META = {
@@ -66,7 +67,8 @@ Avoid trademarked names, celebrity names and anything sensational or misleading.
                 art_prompt = (
                     f"Eye-catching vertical 9:16 YouTube Short thumbnail background for '{script['title']}'. "
                     f"Visual concept: {hook_scene}. Dramatic lighting, high contrast, vivid colors, clean dark focal area in the center "
-                    "for bold headline text overlay. Do NOT include any text, letters, numbers, logos, or celebrity faces."
+                    "for bold headline text overlay. Do NOT include any text, letters, numbers, logos, or celebrity faces. "
+                    + IMAGE_PROMPT_RULE
                 )
                 await ctx.llm.generate_image(art_prompt, bg_path, aspect_ratio="9:16", size=(1080, 1920))
                 used_banana = True

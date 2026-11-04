@@ -1,13 +1,14 @@
 import asyncio
 import colorsys
 import random
+import re
 import zlib
 
 from PIL import Image, ImageDraw, ImageFilter
 
 from moderator.engine import llm as llm_mod
 from moderator.engine.agent import Agent, StepContext
-from moderator.tools import ffmpeg, stock
+from moderator.tools import ffmpeg, stock, visual_rules
 
 # Free stock video first; Nano Banana images (paid per image) only for scenes with no usable clip.
 # visual_mode=ai puts Nano Banana first; visual_mode=stock never uses it.
@@ -17,7 +18,7 @@ FALLBACK_VIDEO_QUERIES = [
     "city street traffic",
     "clouds time lapse",
     "ocean waves",
-    "people walking street",
+    "man walking street",  # not "people": crowds tend to include women (see visual_rules)
     "night city lights",
     "rain falling",
     "train moving",
@@ -29,7 +30,7 @@ def _expand_queries(search_terms: list[str], scene_idx: int) -> tuple[list[str],
     seen: set[str] = set()
     primary: list[str] = []
     for raw in search_terms:
-        q = " ".join((raw or "").split())
+        q = visual_rules.safe_query(" ".join((raw or "").split()))
         if q and q.lower() not in seen:
             seen.add(q.lower())
             primary.append(q)
@@ -105,23 +106,37 @@ class Handler(Agent):
         if ctx.feedback:
             ctx.log(f"Revision feedback: {ctx.feedback[-1]['comment']}")
 
+        scenes = script["scenes"]
         used: set[str] = set()
+        keep: dict[str, dict] = {}  # scene id -> license entry of a clip reused as is
         prev_lic_path = ctx.run_dir / "assets/licenses.json"
         if ctx.feedback and prev_lic_path.exists():
-            for item in ctx.read_json("assets/licenses.json"):
-                if item.get("page"):
-                    used.add(item["page"])
+            previous = ctx.read_json("assets/licenses.json")
+            used.update(item["page"] for item in previous if item.get("page"))
+            # QA names the scenes it rejects (e.g. a woman in the shot): replace only those, keep the rest
+            flagged = set(re.findall(r"scene_\d+", ctx.feedback[-1]["comment"]))
+            if flagged:
+                by_id = {s["id"]: s for s in scenes}
+                for item in previous:
+                    sc = by_id.get(item["scene"])
+                    if (item["scene"] not in flagged and sc and item.get("description") == sc["visual"]["description"]
+                            and (ctx.run_dir / f"assets/{item['scene']}.mp4").exists()):
+                        keep[item["scene"]] = item
+                ctx.log(f"Replacing {', '.join(sorted(flagged))}; keeping {len(keep)} unchanged scene(s)")
         pick_lock = asyncio.Lock()
 
         licenses: list[dict] = []
         sem = asyncio.Semaphore(3)
-        scenes = script["scenes"]
         done = 0
 
         async def produce(i: int, scene: dict) -> str:
             nonlocal done
             async with sem:
                 out = ctx.path(f"assets/{scene['id']}.mp4")
+                if scene["id"] in keep:
+                    licenses.append(keep[scene["id"]])
+                    done += 1
+                    return out.relative_to(ctx.run_dir).as_posix()
                 tiers = list(available_tiers)
                 # Always keep moving stock_video ahead of static stock_photo unless explicitly requested via visual_mode=photo
                 if visual_mode == "photo" and "stock_video" in tiers and "stock_photo" in tiers:
@@ -137,7 +152,8 @@ class Handler(Agent):
                         ctx.log(f"{scene['id']}: {tier} failed ({type(e).__name__}: {e})", "warning")
                         continue
                     if lic:
-                        licenses.append({"scene": scene["id"], "tier": tier, **lic})
+                        licenses.append({"scene": scene["id"], "tier": tier, **lic,
+                                         "description": scene["visual"]["description"]})
                         done += 1
                         ctx.progress(5 + 85 * done / len(scenes))
                         ctx.log(f"{scene['id']}: {tier} ({lic.get('provider', 'generated')})")
@@ -159,7 +175,8 @@ class Handler(Agent):
                 f"Scene {i + 1}: {scene['visual']['description']}. "
                 f"Style: {ctx.params.get('style', 'cinematic, moody lighting, clean composition')}. "
                 "IMPORTANT: Do NOT render any text, letters, numbers, watermarks, brand logos, or recognizable celebrities. "
-                f"Leave clean breathing room in the upper and lower thirds for burned-in captions.{fb}"
+                f"Leave clean breathing room in the upper and lower thirds for burned-in captions. "
+                f"{visual_rules.IMAGE_PROMPT_RULE}{fb}"
             )
             used_model = await ctx.llm.generate_image(prompt, png, aspect_ratio="9:16", size=(1080, 1920))
             await ffmpeg.still_to_clip(png, out, ctx.run_dir, seconds=10, zoom_in=i % 2 == 0)
@@ -202,7 +219,8 @@ class Handler(Agent):
 
                         for attempt_idx in range(2):
                             async with pick_lock:
-                                pick = next((r for r in results if r["page"] not in used), None)
+                                pick = next((r for r in results
+                                             if r["page"] not in used and visual_rules.stock_allowed(r)), None)
                                 if pick:
                                     used.add(pick["page"])
                             if not pick:

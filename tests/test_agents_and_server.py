@@ -325,11 +325,13 @@ def test_youtube_short_full_7_agent_pipeline_single_lang_en(tmp_path, monkeypatc
     monkeypatch.setattr(hist_mod, "PATH", tmp_path / "topics.jsonl")
     monkeypatch.setattr(stock, "available", lambda: {"pexels": False, "pixabay": False})
 
+    seen_images = []
+
     class FakeGemini:
         def __init__(self, ctx, cfg):
             self.ctx = ctx
 
-        async def ask(self, prompt, *, system=None, schema=None, tools=None, model=None):
+        async def ask(self, prompt, *, system=None, schema=None, tools=None, model=None, complexity=None, images=None):
             self.ctx.add_cost(0.002)
             props = (schema or {}).get("properties", {})
             if "ideas" in props:
@@ -360,6 +362,10 @@ def test_youtube_short_full_7_agent_pipeline_single_lang_en(tmp_path, monkeypatc
                 }}
             if "issues" in props:  # QA review
                 return {"issues": []}
+            if "violations" in props:  # QA people rule: sees review sheets + thumbnails
+                assert images and all(Path(i).is_file() for i in images)
+                seen_images.extend(images)
+                return {"violations": []}
             return ""
 
         async def generate_image(self, prompt, dest, *, aspect_ratio="9:16", size=(1080, 1920), model=None):
@@ -436,6 +442,9 @@ def test_youtube_short_full_7_agent_pipeline_single_lang_en(tmp_path, monkeypatc
     assert (run_dir / "thumbnail.png").is_file()
     qa = json.loads((run_dir / "qa_report.json").read_text(encoding="utf-8"))
     assert qa["passed"] is True
+    people = [c for c in qa["checks"] if c["check"] == "people rule"]
+    assert people and people[0]["ok"]
+    assert len(seen_images) == 3  # 5 scenes -> 2 review sheets (4 per sheet) + 1 thumbnail
 
 
 
@@ -485,7 +494,12 @@ def test_youtube_upload_credentials_single_and_multi_channel_and_publish(tmp_pat
         raw = wf_path.read_text(encoding="utf-8")
         parsed = yaml.safe_load(raw)
         assert isinstance(parsed, dict) and "jobs" in parsed
-        assert "ANTHROPIC" not in raw and "claude" not in raw.lower()
+        if wf_name != "generate-short.yml":  # only generation can use Claude, and only when chosen
+            assert "ANTHROPIC" not in raw and "claude" not in raw.lower()
+    gen = yaml.safe_load((ROOT / ".github" / "workflows" / "generate-short.yml").read_text(encoding="utf-8"))
+    steps = {s.get("name"): s for s in gen["jobs"]["generate"]["steps"]}
+    assert "|| 'gemini'" in steps["Choose text model and verify its secret"]["env"]["INPUT_LLM"]
+    assert steps["Install Claude Code CLI (pinned)"]["if"] == "steps.llm.outputs.provider == 'claude'"
     up_raw = (ROOT / ".github" / "workflows" / "upload-short.yml").read_text(encoding="utf-8")
     for secret in ("YOUTUBE_TOKEN", "YOUTUBE_TOKEN_EN", "YOUTUBE_TOKEN_FR", "YOUTUBE_TOKEN_AR"):
         assert secret in up_raw

@@ -134,6 +134,7 @@ async def search_videos(query: str, provider: str, min_seconds: float = 3.5) -> 
                         "url": size["url"],
                         "ext": "mp4",
                         "page": v["pageURL"],
+                        "tags": v.get("tags", ""),
                         "author": v.get("user", "Pixabay contributor"),
                         "provider": "pixabay",
                         "license": "Pixabay Content License (free commercial use, no attribution required)",
@@ -220,14 +221,14 @@ async def search_photos(query: str, provider: str) -> list[dict]:
                                  params={"query": query, "orientation": "portrait", "per_page": 10},
                                  headers={"Authorization": os.environ["PEXELS_API_KEY"]})
             r.raise_for_status()
-            return [{"url": p["src"]["large2x"], "ext": "jpg", "page": p["url"], "author": p["photographer"], "provider": "pexels",
+            return [{"url": p["src"]["large2x"], "ext": "jpg", "page": p["url"], "author": p["photographer"], "provider": "pexels", "alt": p.get("alt", ""),
                      "license": "Pexels License (free commercial use, no attribution required)"} for p in r.json().get("photos", [])]
         if provider == "pixabay":
             r = await client.get("https://pixabay.com/api/",
                                  params={"key": os.environ["PIXABAY_API_KEY"], "q": query[:100], "orientation": "vertical",
                                          "per_page": 10, "safesearch": "true", "image_type": "photo"})
             r.raise_for_status()
-            return [{"url": p["largeImageURL"], "ext": "jpg", "page": p["pageURL"], "author": p["user"], "provider": "pixabay",
+            return [{"url": p["largeImageURL"], "ext": "jpg", "page": p["pageURL"], "author": p["user"], "provider": "pixabay", "tags": p.get("tags", ""),
                      "license": "Pixabay Content License (free commercial use, no attribution required)"} for p in r.json().get("hits", [])]
     raise ValueError(f"unknown provider {provider}")
 

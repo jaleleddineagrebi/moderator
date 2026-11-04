@@ -5,6 +5,16 @@
 # billed as output, so this is the main cost lever). Set `model:` here to force one model for every task.
 # `image_model`: Nano Banana for scene/thumbnail images ("banana", "banana-lite" or "banana-pro").
 llm:
+  provider: gemini   # gemini | claude. Per run: `--llm claude`, `-p llm=claude` or env MODERATOR_LLM=claude
+  # Claude (headless Claude Code on your Claude plan, no API key). Same complexity routing as Gemini.
+  # Effort: low | medium | high | xhigh | max. Images still use Gemini Nano Banana when GEMINI_API_KEY is set.
+  claude:
+    tiers:
+      low:    {model: haiku, effort: low}
+      medium: {model: sonnet, effort: medium}
+      high:   {model: opus, effort: high}
+    timeout_s: 900
+  # Gemini tiers (the default provider)
   tiers:
     low:    {model: flash-lite, thinking: minimal}   # packaging/SEO, JSON formatting
     medium: {model: flash, thinking: low}            # trend research, QA review

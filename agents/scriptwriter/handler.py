@@ -2,6 +2,7 @@ import json
 
 from moderator.engine.agent import Agent, StepContext
 from moderator.tools import history
+from moderator.tools.visual_rules import PEOPLE_RULE
 from moderator.tools.languages import LANGS, describe, lang_schema, names, normalize_langs
 
 BUDGET_SECONDS = (32, 46)  # crisp high-retention Shorts sweet spot (~34-44s final video; >90% completion rate)
@@ -80,6 +81,7 @@ Rules:
   {multi_note}
 - on_screen: a punchy headline per scene, max 5 words.
 - visual: describe dynamic moving B-roll footage findable on free stock video sites (Pexels/Pixabay/Commons). No logos, brands, celebrities, film characters.
+  People rule for every visual and search term: {PEOPLE_RULE} Never put "woman", "girl" or similar in search_terms.
   Set `prefer` to `"video"` so scenes use moving video clips rather than static images.
   Provide 3-4 short (2-3 word) English `search_terms` using concrete filmable subjects with motion ("person scrolling phone", "crowded crosswalk", "clock hands moving"); make the last term a broad 2-word B-roll query ("city street", "ocean waves", "walking crowd") guaranteed to match stock video libraries.
 - Facts must be accurate. No medical, financial or religious claims that could mislead.
