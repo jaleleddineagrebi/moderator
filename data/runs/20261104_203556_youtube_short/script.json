@@ -1,0 +1,154 @@
+{
+  "title": "Why Beginners Feel Like Experts",
+  "scenes": [
+    {
+      "vo": {
+        "en": "The loudest people often know nothing.",
+        "fr": "Les plus bruyants en savent moins."
+      },
+      "on_screen": {
+        "en": "Confidence vs. Knowledge",
+        "fr": "Confiance vs. Savoir"
+      },
+      "visual": {
+        "description": "A man speaking animatedly into a microphone in front of a blurred crowd.",
+        "search_terms": [
+          "man speaking microphone",
+          "businessman talking",
+          "city crowd"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "It's called the Dunning-Kruger effect, a mental glitch where incompetence breeds extreme confidence.",
+        "fr": "C'est l'effet Dunning-Kruger, un biais mental où l'incompétence génère une confiance extrême."
+      },
+      "on_screen": {
+        "en": "The Dunning-Kruger Effect",
+        "fr": "L'effet Dunning-Kruger"
+      },
+      "visual": {
+        "description": "Abstract animation of mechanical gears turning inside a stylized human head.",
+        "search_terms": [
+          "clockwork gears",
+          "abstract brain",
+          "connection lines"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Beginners hit the 'Peak of Mount Ignorant,' feeling like masters because they don't know what they're missing.",
+        "fr": "Les débutants atteignent le 'Sommet de l'ignorance', se croyant experts car ils ignorent leurs lacunes."
+      },
+      "on_screen": {
+        "en": "Peak of Mount Ignorant",
+        "fr": "Le Sommet de l'ignorance"
+      },
+      "visual": {
+        "description": "A man standing triumphantly on a small rocky hill looking out at a horizon.",
+        "search_terms": [
+          "man hiking summit",
+          "mountain peak",
+          "climbing hill"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "But as you learn more, you realize how deep the rabbit hole goes, and your confidence crashes.",
+        "fr": "Mais en apprenant, tu réalises l'étendue du sujet, et ta confiance s'effondre."
+      },
+      "on_screen": {
+        "en": "The Reality Check",
+        "fr": "Le Choc de Réalité"
+      },
+      "visual": {
+        "description": "A man sitting at a desk surrounded by high stacks of books looking overwhelmed.",
+        "search_terms": [
+          "stacks of books",
+          "man studying desk",
+          "searching library"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "True experts actually underestimate themselves, assuming everyone else finds the work just as easy as they do.",
+        "fr": "Les vrais experts se sous-estiment, pensant que tout le monde maîtrise le sujet aussi bien qu'eux."
+      },
+      "on_screen": {
+        "en": "The Expert Paradox",
+        "fr": "Le Paradoxe de l'Expert"
+      },
+      "visual": {
+        "description": "Close up of hands performing a highly skilled craft like watchmaking or wood carving.",
+        "search_terms": [
+          "skilled hands working",
+          "artisan craft",
+          "workshop tools"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "Wisdom isn't about having all the answers, but acknowledging how much you still have to learn.",
+        "fr": "La sagesse n'est pas d'avoir toutes les réponses, mais d'admettre tout ce qu'il reste à apprendre."
+      },
+      "on_screen": {
+        "en": "True Wisdom",
+        "fr": "La Vraie Sagesse"
+      },
+      "visual": {
+        "description": "A person looking through a telescope at a vast starry night sky.",
+        "search_terms": [
+          "telescope lens",
+          "starry night",
+          "ocean waves"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "So next time someone speaks with total certainty, remember that...",
+        "fr": "Alors quand quelqu'un parle avec une certitude absolue, souviens-toi que..."
+      },
+      "on_screen": {
+        "en": "Stay Humble",
+        "fr": "Reste Humble"
+      },
+      "visual": {
+        "description": "A man walking calmly through a busy city sidewalk disappearing into the crowd.",
+        "search_terms": [
+          "man walking street",
+          "city sidewalk",
+          "walking crowd"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "unskilled-confidence-trap",
+  "languages": [
+    "en",
+    "fr"
+  ],
+  "estimated_seconds": {
+    "en": 34.9,
+    "fr": 37.0
+  }
+}
