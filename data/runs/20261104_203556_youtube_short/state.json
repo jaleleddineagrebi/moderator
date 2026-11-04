@@ -563,7 +563,7 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 0,
+      "progress": 42,
       "started_at": "2026-11-04T20:39:09+00:00",
       "ended_at": null,
       "attempt": 3,
@@ -650,6 +650,16 @@
           "ts": "2026-11-04T20:39:09+00:00",
           "level": "info",
           "msg": "Narrating en with en-US-AndrewMultilingualNeural"
+        },
+        {
+          "ts": "2026-11-04T20:40:04+00:00",
+          "level": "info",
+          "msg": "en voiceover: 47.1s"
+        },
+        {
+          "ts": "2026-11-04T20:40:04+00:00",
+          "level": "info",
+          "msg": "Narrating fr with fr-FR-HenriNeural"
         }
       ],
       "errors": [
@@ -1008,7 +1018,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-04T20:39:48+00:00",
+    "exported_at": "2026-11-04T20:40:06+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/41908063516"
   }
