@@ -12,54 +12,48 @@ Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 1,0:00:00.05,0:00:02.72,Headline,,0,0,0,,{\fad(150,150)}Confidence vs. Skill
-Dialogue: 1,0:00:02.82,0:00:11.76,Headline,,0,0,0,,{\fad(150,150)}The Dunning-Kruger Effect
-Dialogue: 1,0:00:11.86,0:00:19.35,Headline,,0,0,0,,{\fad(150,150)}Mount Ignorant
-Dialogue: 1,0:00:19.45,0:00:28.22,Headline,,0,0,0,,{\fad(150,150)}The Reality Check
-Dialogue: 1,0:00:28.32,0:00:36.32,Headline,,0,0,0,,{\fad(150,150)}The Expert Paradox
-Dialogue: 1,0:00:36.42,0:00:43.85,Headline,,0,0,0,,{\fad(150,150)}True Wisdom
-Dialogue: 1,0:00:43.95,0:00:47.74,Headline,,0,0,0,,{\fad(150,150)}Stay Humble
-Dialogue: 0,0:00:00.11,0:00:00.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}The loudest people
-Dialogue: 0,0:00:00.82,0:00:02.23,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}are usually clueless
-Dialogue: 0,0:00:02.87,0:00:03.30,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It’s called the
-Dialogue: 0,0:00:03.31,0:00:04.46,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Dunning-Kruger effect
-Dialogue: 0,0:00:04.87,0:00:06.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}A psychological glitch
-Dialogue: 0,0:00:06.54,0:00:07.40,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}where having very
-Dialogue: 0,0:00:07.40,0:00:08.65,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}little skill actually
-Dialogue: 0,0:00:08.65,0:00:10.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}creates a massive
-Dialogue: 0,0:00:10.04,0:00:11.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}surge of confidence
-Dialogue: 0,0:00:11.91,0:00:13.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Beginners climb Mount
-Dialogue: 0,0:00:13.13,0:00:14.14,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Ignorant They don’t
-Dialogue: 0,0:00:14.14,0:00:14.85,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}know enough yet
-Dialogue: 0,0:00:14.86,0:00:15.53,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to see their
-Dialogue: 0,0:00:15.54,0:00:16.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}own gaps so
-Dialogue: 0,0:00:16.84,0:00:17.41,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}they feel like
-Dialogue: 0,0:00:17.42,0:00:18.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}masters instantly
-Dialogue: 0,0:00:19.50,0:00:19.89,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}But once you
-Dialogue: 0,0:00:19.89,0:00:20.80,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}start learning more
-Dialogue: 0,0:00:21.22,0:00:22.35,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the reality hits
-Dialogue: 0,0:00:22.75,0:00:24.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your confidence crashes
-Dialogue: 0,0:00:24.29,0:00:25.28,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}as you realize
-Dialogue: 0,0:00:25.42,0:00:26.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}how deep the
-Dialogue: 0,0:00:26.25,0:00:27.74,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}subject really goes
-Dialogue: 0,0:00:28.36,0:00:29.48,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}True experts actually
-Dialogue: 0,0:00:29.48,0:00:30.51,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}doubt themselves
-Dialogue: 0,0:00:30.91,0:00:31.57,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}They assume that
-Dialogue: 0,0:00:31.57,0:00:32.17,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}if a task
-Dialogue: 0,0:00:32.28,0:00:33.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is easy for
-Dialogue: 0,0:00:33.12,0:00:33.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}them
-Dialogue: 0,0:00:33.76,0:00:34.20,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}it must be
-Dialogue: 0,0:00:34.21,0:00:35.23,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}easy for everyone
-Dialogue: 0,0:00:35.23,0:00:35.81,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}else too
-Dialogue: 0,0:00:36.47,0:00:37.40,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Real wisdom
-Dialogue: 0,0:00:37.78,0:00:38.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}ce n'est pas
-Dialogue: 0,0:00:38.11,0:00:38.71,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}d'avoir toutes les
-Dialogue: 0,0:00:38.71,0:00:39.35,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}réponses
-Dialogue: 0,0:00:39.75,0:00:40.37,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It’s the quiet
-Dialogue: 0,0:00:40.37,0:00:41.85,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}ability to admit
-Dialogue: 0,0:00:41.87,0:00:42.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}how much you
-Dialogue: 0,0:00:42.45,0:00:42.96,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}still have to
-Dialogue: 0,0:00:42.97,0:00:43.37,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}learn
-Dialogue: 0,0:00:44.00,0:00:44.37,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}So when you
-Dialogue: 0,0:00:44.37,0:00:45.67,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}see total certainty
-Dialogue: 0,0:00:45.96,0:00:46.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}remember that
+Dialogue: 1,0:00:00.05,0:00:03.27,Headline,,0,0,0,,{\fad(150,150)}The Loudest Voices
+Dialogue: 1,0:00:03.37,0:00:11.04,Headline,,0,0,0,,{\fad(150,150)}The Mental Glitch
+Dialogue: 1,0:00:11.14,0:00:19.04,Headline,,0,0,0,,{\fad(150,150)}Mount Ignorant
+Dialogue: 1,0:00:19.14,0:00:26.37,Headline,,0,0,0,,{\fad(150,150)}The Reality Crash
+Dialogue: 1,0:00:26.47,0:00:33.99,Headline,,0,0,0,,{\fad(150,150)}The Expert Paradox
+Dialogue: 1,0:00:34.09,0:00:41.71,Headline,,0,0,0,,{\fad(150,150)}The True Wisdom
+Dialogue: 1,0:00:41.81,0:00:44.71,Headline,,0,0,0,,{\fad(150,150)}Stay Humble
+Dialogue: 0,0:00:00.10,0:00:01.05,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Clueless people are
+Dialogue: 0,0:00:01.06,0:00:02.27,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}usually the loudest
+Dialogue: 0,0:00:03.42,0:00:04.50,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It’s the Dunning-Kruger
+Dialogue: 0,0:00:04.51,0:00:05.04,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}effect
+Dialogue: 0,0:00:05.90,0:00:06.79,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}A mental glitch
+Dialogue: 0,0:00:06.80,0:00:07.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}where knowing very
+Dialogue: 0,0:00:07.57,0:00:08.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}little makes you
+Dialogue: 0,0:00:08.25,0:00:08.89,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}feel like an
+Dialogue: 0,0:00:08.90,0:00:10.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}absolute expert
+Dialogue: 0,0:00:11.19,0:00:12.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Beginners climb Mount
+Dialogue: 0,0:00:12.44,0:00:12.98,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Ignorant
+Dialogue: 0,0:00:13.84,0:00:14.46,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}They lack the
+Dialogue: 0,0:00:14.48,0:00:15.41,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}perspective to see
+Dialogue: 0,0:00:15.43,0:00:16.26,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}their own gaps
+Dialogue: 0,0:00:16.43,0:00:17.57,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}so confidence peaks
+Dialogue: 0,0:00:17.59,0:00:18.05,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}early
+Dialogue: 0,0:00:19.19,0:00:19.75,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}But as soon
+Dialogue: 0,0:00:19.77,0:00:20.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}as you study
+Dialogue: 0,0:00:20.37,0:00:21.77,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}deeper that confidence
+Dialogue: 0,0:00:21.78,0:00:22.44,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}crashes
+Dialogue: 0,0:00:23.30,0:00:24.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You realize just
+Dialogue: 0,0:00:24.25,0:00:24.74,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}how much you
+Dialogue: 0,0:00:24.75,0:00:25.37,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}don't know
+Dialogue: 0,0:00:26.52,0:00:27.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}True experts actually
+Dialogue: 0,0:00:27.84,0:00:28.79,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}doubt themselves
+Dialogue: 0,0:00:29.65,0:00:30.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}They assume if
+Dialogue: 0,0:00:30.35,0:00:31.14,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}something is easy
+Dialogue: 0,0:00:31.15,0:00:31.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}for them it's
+Dialogue: 0,0:00:31.92,0:00:33.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}easy for everyone
+Dialogue: 0,0:00:34.14,0:00:35.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Real wisdom isn't
+Dialogue: 0,0:00:35.26,0:00:35.98,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}about having all
+Dialogue: 0,0:00:35.99,0:00:36.78,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the answers
+Dialogue: 0,0:00:37.64,0:00:38.41,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It's the quiet
+Dialogue: 0,0:00:38.42,0:00:39.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}strength of admitting
+Dialogue: 0,0:00:39.36,0:00:40.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}there's always more
+Dialogue: 0,0:00:40.19,0:00:40.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to learn
+Dialogue: 0,0:00:41.86,0:00:42.38,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}So when you
+Dialogue: 0,0:00:42.40,0:00:43.17,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}wonder why
