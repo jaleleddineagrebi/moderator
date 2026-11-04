@@ -1,11 +1,11 @@
 {
-  "voice": "fr-FR-DeniseNeural",
-  "duration": 37.296054,
+  "voice": "fr-FR-HenriNeural",
+  "duration": 44.376054,
   "scenes": [
     {
       "scene": "scene_01",
       "start": 0.0,
-      "end": 2.52,
+      "end": 2.688,
       "words": [
         {
           "start": 0.1,
@@ -14,474 +14,564 @@
         },
         {
           "start": 0.312,
-          "end": 0.512,
+          "end": 0.487,
           "text": "plus"
         },
         {
-          "start": 0.525,
-          "end": 0.925,
+          "start": 0.5,
+          "end": 0.863,
           "text": "bruyants"
         },
         {
-          "start": 0.938,
-          "end": 1.025,
-          "text": "en"
+          "start": 0.875,
+          "end": 1.05,
+          "text": "sont"
         },
         {
-          "start": 1.038,
-          "end": 1.312,
-          "text": "savent"
+          "start": 1.062,
+          "end": 1.363,
+          "text": "souvent"
         },
         {
-          "start": 1.325,
-          "end": 1.65,
-          "text": "moins"
+          "start": 1.375,
+          "end": 1.812,
+          "text": "ignorants"
         }
       ]
     },
     {
       "scene": "scene_02",
-      "start": 2.7,
-      "end": 8.436,
+      "start": 2.868,
+      "end": 10.044,
       "words": [
         {
-          "start": 2.8,
-          "end": 2.975,
-          "text": "C'est"
+          "start": 2.968,
+          "end": 3.193,
+          "text": "C’est"
         },
         {
-          "start": 2.987,
-          "end": 3.3,
-          "text": "l'effet"
+          "start": 3.206,
+          "end": 3.481,
+          "text": "l’effet"
         },
         {
-          "start": 3.313,
-          "end": 4.1,
+          "start": 3.493,
+          "end": 4.368,
           "text": "Dunning-Kruger"
         },
         {
-          "start": 4.438,
-          "end": 4.488,
-          "text": "un"
+          "start": 5.243,
+          "end": 5.418,
+          "text": "Un"
         },
         {
-          "start": 4.5,
-          "end": 4.7,
+          "start": 5.43,
+          "end": 5.618,
           "text": "biais"
         },
         {
-          "start": 4.713,
-          "end": 5.125,
+          "start": 5.631,
+          "end": 5.993,
           "text": "mental"
         },
         {
-          "start": 5.138,
-          "end": 5.175,
+          "start": 6.006,
+          "end": 6.043,
           "text": "où"
         },
         {
-          "start": 5.187,
-          "end": 5.925,
-          "text": "l'incompétence"
+          "start": 6.056,
+          "end": 6.131,
+          "text": "le"
         },
         {
-          "start": 5.937,
-          "end": 6.35,
+          "start": 6.143,
+          "end": 6.343,
+          "text": "manque"
+        },
+        {
+          "start": 6.355,
+          "end": 6.455,
+          "text": "de"
+        },
+        {
+          "start": 6.468,
+          "end": 6.993,
+          "text": "compétence"
+        },
+        {
+          "start": 7.006,
+          "end": 7.318,
           "text": "génère"
         },
         {
-          "start": 6.363,
-          "end": 6.463,
+          "start": 7.331,
+          "end": 8.081,
+          "text": "paradoxalement"
+        },
+        {
+          "start": 8.093,
+          "end": 8.218,
           "text": "une"
         },
         {
-          "start": 6.475,
-          "end": 6.937,
+          "start": 8.23,
+          "end": 8.693,
           "text": "confiance"
         },
         {
-          "start": 6.95,
-          "end": 7.562,
-          "text": "extrême"
+          "start": 8.706,
+          "end": 9.168,
+          "text": "absolue"
         }
       ]
     },
     {
       "scene": "scene_03",
-      "start": 8.616,
-      "end": 14.952,
+      "start": 10.224,
+      "end": 18.0,
       "words": [
         {
-          "start": 8.716,
-          "end": 8.928,
+          "start": 10.324,
+          "end": 10.536,
           "text": "Les"
         },
         {
-          "start": 8.941,
-          "end": 9.441,
+          "start": 10.549,
+          "end": 10.974,
           "text": "débutants"
         },
         {
-          "start": 9.454,
-          "end": 9.866,
-          "text": "atteignent"
+          "start": 10.986,
+          "end": 11.286,
+          "text": "grimpent"
         },
         {
-          "start": 9.878,
-          "end": 10.003,
-          "text": "le"
+          "start": 11.299,
+          "end": 11.374,
+          "text": "au"
         },
         {
-          "start": 10.116,
-          "end": 10.428,
+          "start": 11.474,
+          "end": 11.749,
           "text": "Sommet"
         },
         {
-          "start": 10.441,
-          "end": 10.554,
+          "start": 11.762,
+          "end": 11.849,
           "text": "de"
         },
         {
-          "start": 10.566,
-          "end": 11.241,
+          "start": 11.861,
+          "end": 12.624,
           "text": "l'ignorance"
         },
         {
-          "start": 11.603,
-          "end": 11.741,
-          "text": "se"
+          "start": 13.499,
+          "end": 13.686,
+          "text": "Ils"
         },
         {
-          "start": 11.754,
-          "end": 12.141,
-          "text": "croyant"
-        },
-        {
-          "start": 12.154,
-          "end": 12.678,
-          "text": "experts"
-        },
-        {
-          "start": 12.691,
-          "end": 12.891,
-          "text": "car"
-        },
-        {
-          "start": 12.903,
-          "end": 13.003,
-          "text": "ils"
-        },
-        {
-          "start": 13.016,
-          "end": 13.379,
+          "start": 13.699,
+          "end": 13.987,
           "text": "ignorent"
         },
         {
-          "start": 13.391,
-          "end": 13.516,
+          "start": 13.999,
+          "end": 14.137,
           "text": "leurs"
         },
         {
-          "start": 13.528,
-          "end": 14.078,
+          "start": 14.149,
+          "end": 14.436,
+          "text": "propres"
+        },
+        {
+          "start": 14.449,
+          "end": 14.886,
           "text": "lacunes"
+        },
+        {
+          "start": 15.237,
+          "end": 15.374,
+          "text": "ce"
+        },
+        {
+          "start": 15.386,
+          "end": 15.524,
+          "text": "qui"
+        },
+        {
+          "start": 15.536,
+          "end": 15.674,
+          "text": "leur"
+        },
+        {
+          "start": 15.687,
+          "end": 15.874,
+          "text": "donne"
+        },
+        {
+          "start": 15.886,
+          "end": 16.261,
+          "text": "l'illusion"
+        },
+        {
+          "start": 16.274,
+          "end": 16.499,
+          "text": "d'être"
+        },
+        {
+          "start": 16.511,
+          "end": 17.124,
+          "text": "experts"
         }
       ]
     },
     {
       "scene": "scene_04",
-      "start": 15.132,
-      "end": 20.676,
+      "start": 18.18,
+      "end": 25.308,
       "words": [
         {
-          "start": 15.232,
-          "end": 15.444,
+          "start": 18.28,
+          "end": 18.48,
           "text": "Mais"
         },
         {
-          "start": 15.457,
-          "end": 15.595,
-          "text": "en"
+          "start": 18.492,
+          "end": 18.592,
+          "text": "dès"
         },
         {
-          "start": 15.607,
-          "end": 16.17,
-          "text": "apprenant"
+          "start": 18.605,
+          "end": 18.742,
+          "text": "que"
         },
         {
-          "start": 16.407,
-          "end": 16.544,
+          "start": 18.755,
+          "end": 18.905,
           "text": "tu"
         },
         {
-          "start": 16.557,
-          "end": 17.007,
-          "text": "réalises"
+          "start": 18.918,
+          "end": 19.293,
+          "text": "apprends"
         },
         {
-          "start": 17.019,
-          "end": 17.469,
-          "text": "l'étendue"
+          "start": 19.642,
+          "end": 19.742,
+          "text": "la"
         },
         {
-          "start": 17.482,
-          "end": 17.607,
-          "text": "du"
+          "start": 19.755,
+          "end": 20.23,
+          "text": "réalité"
         },
         {
-          "start": 17.619,
-          "end": 18.044,
-          "text": "sujet"
+          "start": 20.242,
+          "end": 20.655,
+          "text": "frappe"
         },
         {
-          "start": 18.395,
-          "end": 18.42,
-          "text": "et"
+          "start": 21.53,
+          "end": 21.68,
+          "text": "Ta"
         },
         {
-          "start": 18.432,
-          "end": 18.557,
-          "text": "ta"
-        },
-        {
-          "start": 18.57,
-          "end": 19.082,
+          "start": 21.693,
+          "end": 22.155,
           "text": "confiance"
         },
         {
-          "start": 19.094,
-          "end": 19.794,
+          "start": 22.167,
+          "end": 22.605,
           "text": "s'effondre"
+        },
+        {
+          "start": 22.618,
+          "end": 22.655,
+          "text": "en"
+        },
+        {
+          "start": 22.667,
+          "end": 23.092,
+          "text": "découvrant"
+        },
+        {
+          "start": 23.105,
+          "end": 23.205,
+          "text": "la"
+        },
+        {
+          "start": 23.217,
+          "end": 23.868,
+          "text": "complexité"
+        },
+        {
+          "start": 23.88,
+          "end": 23.992,
+          "text": "du"
+        },
+        {
+          "start": 24.005,
+          "end": 24.43,
+          "text": "sujet"
         }
       ]
     },
     {
       "scene": "scene_05",
-      "start": 20.856,
-      "end": 26.616,
+      "start": 25.488,
+      "end": 32.544,
       "words": [
         {
-          "start": 20.956,
-          "end": 21.168,
+          "start": 25.588,
+          "end": 25.788,
           "text": "Les"
         },
         {
-          "start": 21.181,
-          "end": 21.381,
+          "start": 25.8,
+          "end": 25.963,
           "text": "vrais"
         },
         {
-          "start": 21.393,
-          "end": 21.844,
+          "start": 25.975,
+          "end": 26.55,
           "text": "experts"
         },
         {
-          "start": 21.856,
-          "end": 21.981,
-          "text": "se"
+          "start": 26.838,
+          "end": 26.988,
+          "text": "eux"
         },
         {
-          "start": 21.993,
-          "end": 22.706,
-          "text": "sous-estiment"
+          "start": 27.226,
+          "end": 27.426,
+          "text": "doutent"
         },
         {
-          "start": 23.019,
-          "end": 23.356,
-          "text": "pensant"
+          "start": 27.438,
+          "end": 27.8,
+          "text": "souvent"
         },
         {
-          "start": 23.369,
-          "end": 23.494,
+          "start": 28.663,
+          "end": 28.863,
+          "text": "Ils"
+        },
+        {
+          "start": 28.876,
+          "end": 29.126,
+          "text": "pensent"
+        },
+        {
+          "start": 29.138,
+          "end": 29.276,
           "text": "que"
         },
         {
-          "start": 23.506,
-          "end": 23.644,
+          "start": 29.288,
+          "end": 29.438,
+          "text": "si"
+        },
+        {
+          "start": 29.45,
+          "end": 29.576,
+          "text": "c’est"
+        },
+        {
+          "start": 29.588,
+          "end": 29.988,
+          "text": "facile"
+        },
+        {
+          "start": 30.001,
+          "end": 30.188,
+          "text": "pour"
+        },
+        {
+          "start": 30.201,
+          "end": 30.338,
+          "text": "eux"
+        },
+        {
+          "start": 30.6,
+          "end": 30.713,
+          "text": "ça"
+        },
+        {
+          "start": 30.725,
+          "end": 30.825,
+          "text": "l’est"
+        },
+        {
+          "start": 30.838,
+          "end": 31.038,
+          "text": "pour"
+        },
+        {
+          "start": 31.05,
+          "end": 31.176,
           "text": "tout"
         },
         {
-          "start": 23.656,
-          "end": 23.756,
+          "start": 31.188,
+          "end": 31.263,
           "text": "le"
         },
         {
-          "start": 23.769,
-          "end": 24.031,
+          "start": 31.275,
+          "end": 31.663,
           "text": "monde"
-        },
-        {
-          "start": 24.044,
-          "end": 24.468,
-          "text": "maîtrise"
-        },
-        {
-          "start": 24.481,
-          "end": 24.606,
-          "text": "le"
-        },
-        {
-          "start": 24.619,
-          "end": 24.968,
-          "text": "sujet"
-        },
-        {
-          "start": 24.981,
-          "end": 25.244,
-          "text": "aussi"
-        },
-        {
-          "start": 25.256,
-          "end": 25.456,
-          "text": "bien"
-        },
-        {
-          "start": 25.468,
-          "end": 25.744,
-          "text": "qu'eux"
         }
       ]
     },
     {
       "scene": "scene_06",
-      "start": 26.796,
-      "end": 32.412,
+      "start": 32.724,
+      "end": 40.452,
       "words": [
         {
-          "start": 26.896,
-          "end": 27.096,
+          "start": 32.824,
+          "end": 33.024,
           "text": "La"
         },
         {
-          "start": 27.108,
-          "end": 27.534,
+          "start": 33.036,
+          "end": 33.574,
           "text": "sagesse"
         },
         {
-          "start": 27.546,
-          "end": 27.721,
-          "text": "n'est"
-        },
-        {
-          "start": 27.734,
-          "end": 27.871,
-          "text": "pas"
-        },
-        {
-          "start": 27.883,
-          "end": 28.221,
-          "text": "d'avoir"
-        },
-        {
-          "start": 28.234,
-          "end": 28.446,
-          "text": "toutes"
-        },
-        {
-          "start": 28.459,
-          "end": 28.546,
-          "text": "les"
-        },
-        {
-          "start": 28.558,
-          "end": 29.121,
-          "text": "réponses"
-        },
-        {
-          "start": 29.471,
-          "end": 29.596,
-          "text": "mais"
-        },
-        {
-          "start": 29.608,
-          "end": 30.158,
-          "text": "d'admettre"
-        },
-        {
-          "start": 30.171,
-          "end": 30.309,
-          "text": "tout"
-        },
-        {
-          "start": 30.321,
-          "end": 30.433,
+          "start": 33.849,
+          "end": 33.986,
           "text": "ce"
         },
         {
-          "start": 30.446,
-          "end": 30.608,
-          "text": "qu'il"
+          "start": 33.999,
+          "end": 34.111,
+          "text": "n'est"
         },
         {
-          "start": 30.621,
-          "end": 30.921,
+          "start": 34.124,
+          "end": 34.261,
+          "text": "pas"
+        },
+        {
+          "start": 34.274,
+          "end": 34.612,
+          "text": "d'avoir"
+        },
+        {
+          "start": 34.624,
+          "end": 34.836,
+          "text": "toutes"
+        },
+        {
+          "start": 34.849,
+          "end": 34.936,
+          "text": "les"
+        },
+        {
+          "start": 34.949,
+          "end": 35.612,
+          "text": "réponses"
+        },
+        {
+          "start": 36.487,
+          "end": 36.712,
+          "text": "C’est"
+        },
+        {
+          "start": 36.724,
+          "end": 36.999,
+          "text": "avoir"
+        },
+        {
+          "start": 37.011,
+          "end": 37.486,
+          "text": "l’humilité"
+        },
+        {
+          "start": 37.499,
+          "end": 37.962,
+          "text": "d’admettre"
+        },
+        {
+          "start": 37.974,
+          "end": 38.149,
+          "text": "tout"
+        },
+        {
+          "start": 38.162,
+          "end": 38.274,
+          "text": "ce"
+        },
+        {
+          "start": 38.286,
+          "end": 38.499,
+          "text": "qu’il"
+        },
+        {
+          "start": 38.511,
+          "end": 38.636,
+          "text": "te"
+        },
+        {
+          "start": 38.649,
+          "end": 38.936,
           "text": "reste"
         },
         {
-          "start": 30.934,
-          "end": 30.971,
+          "start": 38.949,
+          "end": 38.999,
           "text": "à"
         },
         {
-          "start": 30.984,
-          "end": 31.533,
+          "start": 39.011,
+          "end": 39.574,
           "text": "apprendre"
         }
       ]
     },
     {
       "scene": "scene_07",
-      "start": 32.592,
-      "end": 37.296,
+      "start": 40.632,
+      "end": 44.376,
       "words": [
         {
-          "start": 32.692,
-          "end": 33.017,
+          "start": 40.732,
+          "end": 41.057,
           "text": "Alors"
         },
         {
-          "start": 33.03,
-          "end": 33.18,
-          "text": "quand"
+          "start": 41.07,
+          "end": 41.294,
+          "text": "devant"
         },
         {
-          "start": 33.192,
-          "end": 33.592,
-          "text": "quelqu'un"
-        },
-        {
-          "start": 33.604,
-          "end": 33.88,
-          "text": "parle"
-        },
-        {
-          "start": 33.892,
-          "end": 34.13,
-          "text": "avec"
-        },
-        {
-          "start": 34.142,
-          "end": 34.255,
+          "start": 41.307,
+          "end": 41.407,
           "text": "une"
         },
         {
-          "start": 34.267,
-          "end": 34.829,
+          "start": 41.419,
+          "end": 41.932,
           "text": "certitude"
         },
         {
-          "start": 34.842,
-          "end": 35.28,
+          "start": 41.944,
+          "end": 42.394,
           "text": "absolue"
         },
         {
-          "start": 35.592,
-          "end": 36.117,
-          "text": "souviens-toi"
+          "start": 42.682,
+          "end": 43.194,
+          "text": "rappelle-toi"
         },
         {
-          "start": 36.13,
-          "end": 36.417,
+          "start": 43.207,
+          "end": 43.482,
           "text": "que"
         }
       ]
