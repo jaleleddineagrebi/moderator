@@ -42,11 +42,11 @@ FULL NARRATION:
 {json.dumps(narration, ensure_ascii=False, indent=1)}
 
 For each language, write natively (not a literal translation):
-- title: max 70 characters, makes people curious, accurate to the video
-- description: 2-4 short lines; no links; no claims the video does not make
-- hashtags: 3-6, always include #Shorts{ar_tag_note}
-- tags: 8-15 search phrases people actually type
-- thumbnail_text: 2-4 words, punchy
+- title: max 55 characters (so it never truncates on mobile Shorts feed), strong curiosity gap ("Why Your Brain...", "The Hidden Trick..."), accurate to the video
+- description: 3-4 short lines; Line 1 MUST be a quick relatable question that sparks viewer comments (e.g., "Has this ever happened to you? 👇"); no links; no claims the video does not make
+- hashtags: 4-6, always include #Shorts first plus high-volume niche hashtags{ar_tag_note}
+- tags: 10-15 high-intent search phrases people actually type on YouTube
+- thumbnail_text: 2-4 words, high-contrast curiosity punchline
 Avoid trademarked names, celebrity names and anything sensational or misleading.
 
 {ctx.revision_notes()}"""

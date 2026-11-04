@@ -799,3 +799,30 @@ def test_stock_video_wikimedia_zero_key_and_visual_producer_video_priority(tmp_p
     lic = json.loads((run_dir / "assets/licenses.json").read_text(encoding="utf-8"))
     assert lic[0]["tier"] == "stock_video"
     assert lic[0]["provider"] == "wikimedia"
+
+
+def test_youtube_channel_optimizer_banner_and_profile(tmp_path):
+    from moderator.tools import youtube_channel
+
+    prof = youtube_channel.build_channel_profile(
+        preset="auto",
+        channel_title="land of ai",
+        channel_cfg={"niche": "Psychology & human behavior (biases, habits, social dynamics)"},
+        country="us",
+    )
+    assert prof["mode"] == "hybrid"
+    assert prof["country"] == "US"
+    assert len(prof["description"]) <= 1000
+    assert len(prof["keywords"]) <= 500
+    assert '"human behavior"' in prof["keywords"]
+    assert "psychology" in prof["keywords"]
+
+    banner = youtube_channel.render_channel_banner(
+        tmp_path / "banner.jpg",
+        prof["banner_headline"],
+        prof["banner_subtitle"],
+    )
+    assert banner.is_file()
+    assert banner.stat().st_size < 6 * 1024 * 1024
+    with Image.open(banner) as im:
+        assert im.size == (2560, 1440)

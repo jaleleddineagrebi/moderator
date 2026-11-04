@@ -61,10 +61,10 @@ Audience: {names(langs)} speakers. How each language is written:
 Style: {p.get('style')}.
 
 {'Use web search to find what is trending or newly discussed in this niche right now.' if tools else 'Use your own knowledge (web search is unavailable).'}
-Propose exactly 3 video ideas, ranked best first. Each must:
-- work as a 45-55 second Short with free stock footage (no film clips, brands, celebrities, or copyrighted characters)
+Propose exactly 3 video ideas, ranked best first for maximum Shorts retention & views. Each must:
+- work as a fast-paced 34-44 second Short with dynamic free stock video footage (no film clips, brands, celebrities, or copyrighted characters)
 - appeal to {names(langs)} audiences ({sensitivity_guidance(langs)})
-- have a strong hook that stops scrolling in under 3 seconds, written natively in each language as described above
+- have an instant pattern-interrupt hook (under 2.5 seconds / max 7 words) targeting a universal everyday experience or counter-intuitive truth so >75% of viewers stay past 3 seconds
 - be factually solid (prefer well-documented facts; note sources)
 
 {evidence}

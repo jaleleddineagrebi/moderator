@@ -4,7 +4,7 @@ from moderator.engine.agent import Agent, StepContext
 from moderator.tools import history
 from moderator.tools.languages import LANGS, describe, lang_schema, names, normalize_langs
 
-BUDGET_SECONDS = (43, 52)  # narration length; leaves room for scene pauses and the outro tail (video target 45-55s)
+BUDGET_SECONDS = (32, 46)  # crisp high-retention Shorts sweet spot (~34-44s final video; >90% completion rate)
 
 
 def make_schema(langs: list[str]) -> dict:
@@ -71,9 +71,10 @@ NICHE: {p.get('niche')}
 STYLE: {p.get('style')}
 
 Rules:
-- Total narration word count (all scenes together): {word_ranges}. Stay inside these ranges: the video must end up 45-55 seconds.
-- {scenes_hint}. Scene 1 is the hook: spoken in under 3 seconds (max 8 words), creates curiosity immediately.
-- Each scene covers one beat; the last scene pays off the hook and ends with a short call to follow.
+- Total narration word count (all scenes together): {word_ranges}. Aim for the crisp 34-42 second sweet spot so viewers watch 100%+ of the Short.
+- {scenes_hint}. Scene 1 is an instant pattern-interrupt hook: spoken in under 2.5 seconds (max 7 words), starting mid-thought ("You...", a shocking contrast, or an immediate relatable moment — NEVER "Did you know").
+- Each scene covers one fast beat (5-6s max per scene) with open curiosity loops so viewers cannot swipe away.
+- Seamless infinite-loop ending: the final scene delivers the payoff and ends with a bridge phrase that flows naturally right back into Scene 1's opening line (do NOT say "Follow for more" or "Subscribe", which makes viewers swipe away early and drops completion rate).
 - Languages (field key = how to write it):
 {describe(langs)}
   {multi_note}

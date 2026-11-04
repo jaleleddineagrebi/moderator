@@ -21,14 +21,20 @@ from googleapiclient.http import MediaFileUpload
 
 from .. import ROOT
 
-SCOPES = ["https://www.googleapis.com/auth/youtube.upload", "https://www.googleapis.com/auth/youtube.readonly"]
+UPLOAD_SCOPES = ["https://www.googleapis.com/auth/youtube.upload", "https://www.googleapis.com/auth/youtube.readonly"]
+AUTH_SCOPES = [
+    "https://www.googleapis.com/auth/youtube",
+    "https://www.googleapis.com/auth/youtube.upload",
+    "https://www.googleapis.com/auth/youtube.readonly",
+]
+SCOPES = AUTH_SCOPES
 TOKENS_DIR = ROOT / "tokens"
 EDUCATION_CATEGORY = "27"
 
 
-def authorize(client_secret: Path, lang: str | None = None) -> tuple[Path, str]:
+def authorize(client_secret: Path, lang: str | None = None, scopes: list[str] | None = None) -> tuple[Path, str]:
     """Opens the browser: sign in and pick the YouTube channel (brand account or main channel)."""
-    flow = InstalledAppFlow.from_client_secrets_file(str(client_secret), SCOPES)
+    flow = InstalledAppFlow.from_client_secrets_file(str(client_secret), scopes or AUTH_SCOPES)
     creds = flow.run_local_server(port=0, prompt="consent", access_type="offline")
     TOKENS_DIR.mkdir(exist_ok=True)
     filename = f"youtube_{lang.lower()}.json" if lang else "youtube.json"
@@ -51,7 +57,9 @@ def credentials(lang: str) -> Credentials:
             f"tokens/youtube_{lang.lower()}.json, tokens/youtube.json). "
             f"Run: python -m moderator youtube-auth --client-secret client_secret.json"
         )
-    creds = Credentials.from_authorized_user_info(json.loads(raw), SCOPES)
+    info = json.loads(raw)
+    granted_scopes = info.get("scopes") or UPLOAD_SCOPES
+    creds = Credentials.from_authorized_user_info(info, granted_scopes)
     if not creds.valid:
         creds.refresh(Request())
     return creds
@@ -72,9 +80,12 @@ def upload(lang: str, video: Path, meta: dict, privacy: str, thumbnail: Path | N
         if size > 480:
             break
         tags.append(tag)
+    raw_title = meta["title"].strip()
+    if "#shorts" not in raw_title.lower() and len(raw_title) <= 91:
+        raw_title = f"{raw_title} #shorts"
     body = {
         "snippet": {
-            "title": meta["title"][:100],
+            "title": raw_title[:100],
             "description": f"{meta['description']}\n\n{' '.join(meta.get('hashtags', []))}"[:4900],
             "tags": tags,
             "categoryId": EDUCATION_CATEGORY,

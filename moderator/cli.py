@@ -108,6 +108,12 @@ def main() -> None:
     auth_p = sub.add_parser("youtube-auth", help="authorize uploads to a YouTube channel (opens the browser)")
     auth_p.add_argument("--lang", default=None, help="optional language code (en/fr/ar) if using separate channels per language")
     auth_p.add_argument("--client-secret", type=Path, required=True, help="OAuth Desktop client JSON from Google Cloud")
+    opt_p = sub.add_parser("optimize-channel", help="apply SEO description, keywords, 2560x1440 banner, playlist & video tweaks")
+    opt_p.add_argument("--preset", choices=["auto", "psychology", "ai", "hybrid"], default="auto")
+    opt_p.add_argument("--country", default="US", help="2-letter target audience country code (default: US)")
+    opt_p.add_argument("--lang", default="en", help="channel default language (default: en)")
+    opt_p.add_argument("--client-secret", type=Path, default=ROOT / "client_secret.json")
+    opt_p.add_argument("--reauth", action="store_true", help="force fresh OAuth consent with channel-management scope")
     pages_p = sub.add_parser("export-pages", help="export static dashboard & run snapshots for GitHub Pages")
     pages_p.add_argument("site_dir", type=Path, help="output folder (e.g. a gh-pages worktree)")
     pages_p.add_argument("--repo", default=None, help="GitHub owner/repo slug")
@@ -143,6 +149,22 @@ def main() -> None:
         target_label = f"language '{args.lang}'" if args.lang else "all languages (default channel)"
         print(f"Authorized channel '{channel}' for {target_label}. Token saved to {path}")
         print(f"For GitHub Actions, store the whole file content as the repository secret {secret_name}.")
+        return
+    if args.cmd == "optimize-channel":
+        from .tools import youtube_channel
+        res = youtube_channel.optimize_channel(
+            lang=args.lang,
+            preset=args.preset,
+            country=args.country,
+            client_secret=args.client_secret,
+            reauth=args.reauth,
+        )
+        print(f"Optimized channel '{res['current_title']}' ({res['channel_url']}) [{res['mode']}]")
+        print(f"  Country / Lang: {res['country']} / {res['default_language']}")
+        print(f"  Banner uploaded: {res['banner_path']}")
+        print(f"  Shorts playlist: {res['playlist_url']}")
+        print(f"  Retroactively optimized videos: {len(res['updated_videos'])} ({', '.join(res['updated_videos']) or 'none needed'})")
+        print(f"  Tip: {res['studio_tip']}")
         return
     if args.cmd == "summary":
         from .publish import review_summary
