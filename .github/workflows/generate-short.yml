@@ -152,7 +152,6 @@ jobs:
           path: |
             ${{ steps.gen.outputs.run_dir }}
             !${{ steps.gen.outputs.run_dir }}/assets/raw
-            !${{ steps.gen.outputs.run_dir }}/audio
           retention-days: 14
 
       - name: Record topic in history/topics.jsonl
@@ -194,6 +193,12 @@ jobs:
               echo "- \`/approve public\` — upload as **public**"
               echo "- \`/approve public en\` (or \`fr\` / \`ar\`) — upload only specific language(s)"
               echo "- \`/reject\` — close without uploading"
+              echo ""
+              echo "### Edit Before Publishing"
+              echo "- \`/edit text make the hook punchier\` — rewrite the script"
+              echo "- \`/edit first image show a man running at sunrise\` (or \`/edit image 3 ...\`, \`/edit images 2,4 ...\`, \`/edit last image\`) — replace scene visuals"
+              echo "- \`/edit title ...\` / \`/edit thumbnail ...\` — title, description, thumbnail"
+              echo "- \`/edit voice slower\` / \`/edit music lower\` — voiceover, mix"
             } >> body.md
           else
             label=short-failed

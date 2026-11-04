@@ -362,6 +362,8 @@ def test_youtube_short_full_7_agent_pipeline_single_lang_en(tmp_path, monkeypatc
                 }}
             if "issues" in props:  # QA review
                 return {"issues": []}
+            if "search_terms" in props:  # owner `/edit image N ...`: rewritten visual brief
+                return {"description": "A calm mountain lake at dawn", "search_terms": ["mountain lake", "calm water"]}
             if "violations" in props:  # QA people rule: sees review sheets + thumbnails
                 assert images and all(Path(i).is_file() for i in images)
                 seen_images.extend(images)
@@ -423,7 +425,7 @@ def test_youtube_short_full_7_agent_pipeline_single_lang_en(tmp_path, monkeypatc
         **wf.params,
         "niche": "Psychology & human behavior",
         "languages": ["en"],
-        "auto_approve": ["A", "B", "C"],
+        "auto_approve": ["A", "B"],
     }
     agents = {s.agent: registry.specs[s.agent].public() for s in wf.steps}
     run_dir = tmp_path / "runs" / "short_en_test"
@@ -431,6 +433,26 @@ def test_youtube_short_full_7_agent_pipeline_single_lang_en(tmp_path, monkeypatc
     orch = Orchestrator(store, wf, registry)
 
     outcome = asyncio.run(asyncio.wait_for(orch.run(headless=True), 20))
+    assert outcome == "waiting" and store.data["checkpoints"]["C"]["status"] == "pending"
+    seen_images.clear()
+
+    # Owner edits from the review issue: replace scene 2 and lower the music, then the run pauses at C again
+    from moderator.edits import apply_edits, parse_edits
+    before = {i["scene"]: i for i in json.loads((run_dir / "assets/licenses.json").read_text(encoding="utf-8"))}
+    orch = Orchestrator(StateStore.load(run_dir), wf, registry)
+    apply_edits(orch, parse_edits("/edit second image: a calm lake\n/edit music lower", 5), by="github:owner")
+    assert orch.store.data["steps"]["visuals"]["status"] == "needs_revision"
+    assert orch.store.data["steps"]["edit"]["status"] == "needs_revision"
+    assert asyncio.run(asyncio.wait_for(orch.run(headless=True), 20)) == "waiting"
+    after = {i["scene"]: i for i in json.loads((run_dir / "assets/licenses.json").read_text(encoding="utf-8"))}
+    assert after["scene_02"]["description"] == "A calm mountain lake at dawn"
+    assert all(after[k] == before[k] for k in before if k != "scene_02")  # other scenes kept as they were
+    assert "scene_02" in json.loads((run_dir / "assets/scene_overrides.json").read_text(encoding="utf-8"))
+    assert any("music" in f["comment"] for f in orch.store.data["steps"]["edit"]["feedback"])
+
+    store = orch.store
+    orch.decide("C", "approve", by="test")
+    outcome = asyncio.run(asyncio.wait_for(Orchestrator(store, wf, registry).run(headless=True), 20))
     assert outcome == "done"
     assert all(s["status"] == "done" for s in store.data["steps"].values())
     # Verify single-language prompt output aliases exist alongside _en files
@@ -489,13 +511,19 @@ def test_youtube_upload_credentials_single_and_multi_channel_and_publish(tmp_pat
     assert creds_en.client_id == "en_client.apps.googleusercontent.com"
 
     # 4. Verify GitHub Actions workflow YAMLs are valid and wire YOUTUBE_TOKEN + GEMINI_API_KEY
-    for wf_name in ("generate-short.yml", "upload-short.yml", "ci.yml"):
+    for wf_name in ("generate-short.yml", "edit-short.yml", "upload-short.yml", "ci.yml"):
         wf_path = ROOT / ".github" / "workflows" / wf_name
         raw = wf_path.read_text(encoding="utf-8")
         parsed = yaml.safe_load(raw)
         assert isinstance(parsed, dict) and "jobs" in parsed
-        if wf_name != "generate-short.yml":  # only generation can use Claude, and only when chosen
+        if wf_name not in ("generate-short.yml", "edit-short.yml"):  # only generation/edits can use Claude, when chosen
             assert "ANTHROPIC" not in raw and "claude" not in raw.lower()
+    edit = yaml.safe_load((ROOT / ".github" / "workflows" / "edit-short.yml").read_text(encoding="utf-8"))
+    edit_steps = {s.get("name"): s for s in edit["jobs"]["edit"]["steps"]}
+    assert "startsWith(github.event.comment.body, '/edit')" in edit["jobs"]["edit"]["if"]
+    assert "github.repository_owner" in edit["jobs"]["edit"]["if"]  # only the owner can trigger edits
+    assert edit_steps["Install Claude Code CLI (pinned)"]["if"] == "steps.llm.outputs.provider == 'claude'"
+    assert "COMMENT" not in edit_steps["Apply the edit and redo the affected steps"]["run"]  # comment read from a file
     gen = yaml.safe_load((ROOT / ".github" / "workflows" / "generate-short.yml").read_text(encoding="utf-8"))
     steps = {s.get("name"): s for s in gen["jobs"]["generate"]["steps"]}
     assert "|| 'gemini'" in steps["Choose text model and verify its secret"]["env"]["INPUT_LLM"]

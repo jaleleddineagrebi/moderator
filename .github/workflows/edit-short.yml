@@ -1,0 +1,164 @@
+name: Edit Short
+
+# Revises a generated Short from a `/edit ...` comment on its `short-review` issue, e.g.
+#   /edit text make the hook punchier
+#   /edit first image show a man running at sunrise
+#   /edit image 2,4 darker city streets
+#   /edit title shorter, ask a question
+#   /edit voice slower
+#   /edit music lower
+# The run is downloaded from its last artifact, the named step(s) and everything after them are redone with the
+# same text model (Gemini or Claude), and the new version is attached to the same issue. Nothing is published:
+# comment `/approve` afterwards to upload it.
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write   # update the GitHub Pages dashboard
+  issues: write
+  actions: read     # download the previous run artifact
+
+concurrency:
+  group: edit-short-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
+jobs:
+  edit:
+    if: >-
+      !github.event.issue.pull_request &&
+      contains(github.event.issue.labels.*.name, 'short-review') &&
+      (
+        github.event.comment.user.login == github.repository_owner ||
+        github.event.comment.author_association == 'OWNER'
+      ) &&
+      startsWith(github.event.comment.body, '/edit')
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      GH_TOKEN: ${{ github.token }}
+      ISSUE: ${{ github.event.issue.number }}
+      COMMENT: ${{ github.event.comment.body }}
+      ISSUE_BODY: ${{ github.event.issue.body }}
+      RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+      PYTHONIOENCODING: utf-8
+    steps:
+      - name: Find the run behind this issue
+        id: req
+        run: |
+          run_id=$(printf '%s' "$ISSUE_BODY" | tr -d '\r' | sed -n 's/^<!-- run_id: \([A-Za-z0-9_]*\) -->$/\1/p' | tail -1)
+          gh_run_id=$(printf '%s' "$ISSUE_BODY" | tr -d '\r' | sed -n 's/^<!-- gh_run_id: \([0-9]*\) -->$/\1/p' | tail -1)
+          if [ -z "$run_id" ] || [ -z "$gh_run_id" ]; then
+            echo "::error::Issue body is missing run_id / gh_run_id markers."
+            exit 1
+          fi
+          echo "run_id=$run_id" >> "$GITHUB_OUTPUT"
+          echo "gh_run_id=$gh_run_id" >> "$GITHUB_OUTPUT"
+          printf '%s\n' "$COMMENT" > "$RUNNER_TEMP/edit_request.txt"
+          gh issue comment "$ISSUE" -R "$GITHUB_REPOSITORY" --body "Working on your edit. This takes a few minutes. Logs: $RUN_URL"
+
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+
+      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6.8.0
+        with:
+          python-version: "3.12"
+
+      - name: Install ffmpeg & libass
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg libass9
+
+      - name: Install Python dependencies
+        run: uv sync --locked
+
+      - name: Download the current version of the Short
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: short-${{ steps.req.outputs.run_id }}
+          path: runs/${{ steps.req.outputs.run_id }}
+          run-id: ${{ steps.req.outputs.gh_run_id }}
+          github-token: ${{ github.token }}
+
+      - name: Check the edit request and the text model of the run
+        id: llm
+        env:
+          RUN_ID: ${{ steps.req.outputs.run_id }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if ! uv run python -m moderator edit "runs/$RUN_ID" --check --request-file "$RUNNER_TEMP/edit_request.txt" 2> err.txt; then
+            gh issue comment "$ISSUE" -R "$GITHUB_REPOSITORY" --body-file err.txt
+            echo "bad_request=1" >> "$GITHUB_OUTPUT"
+            exit 1
+          fi
+          provider=$(uv run python -c "import json,sys; print(json.load(open(sys.argv[1], encoding='utf-8'))['params'].get('llm') or 'gemini')" "runs/$RUN_ID/state.json")
+          case "$provider" in
+            claude) [ -n "$CLAUDE_CODE_OAUTH_TOKEN$ANTHROPIC_API_KEY" ] || { echo "::error::This run uses Claude: add the CLAUDE_CODE_OAUTH_TOKEN secret."; exit 1; } ;;
+            *) [ -n "$GEMINI_API_KEY" ] || { echo "::error::Missing GEMINI_API_KEY secret."; exit 1; } ;;
+          esac
+          echo "provider=$provider" >> "$GITHUB_OUTPUT"
+
+      - name: Install Claude Code CLI (pinned)
+        if: steps.llm.outputs.provider == 'claude'
+        run: npm install -g --no-fund --no-audit @anthropic-ai/claude-code@2.1.292 && claude --version
+
+      - name: Apply the edit and redo the affected steps
+        id: gen
+        env:
+          RUN_ID: ${{ steps.req.outputs.run_id }}
+          APPROVER: ${{ github.event.comment.user.login }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: |
+          uv run python -m moderator edit "runs/$RUN_ID" --request-file "$RUNNER_TEMP/edit_request.txt" --by "github:$APPROVER"
+
+      - name: Upload the new version (MP4s, thumbnails, captions, QA report, state.json)
+        if: always() && steps.gen.outputs.run_dir
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: short-${{ steps.gen.outputs.run_id }}
+          path: |
+            ${{ steps.gen.outputs.run_dir }}
+            !${{ steps.gen.outputs.run_dir }}/assets/raw
+          retention-days: 14
+
+      - name: Post the new version on the issue
+        if: always() && steps.gen.outputs.run_dir
+        env:
+          RUN_DIR: ${{ steps.gen.outputs.run_dir }}
+          RUN_ID: ${{ steps.gen.outputs.run_id }}
+          OUTCOME: ${{ steps.gen.outputs.outcome }}
+          PAGES_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+        run: |
+          {
+            echo "## Edited version"
+            echo ""
+            uv run python -m moderator summary "$RUN_DIR"
+            echo ""
+            echo "---"
+            echo "- **Dashboard:** $PAGES_URL"
+            echo "- **Artifact:** \`short-$RUN_ID\` at $RUN_URL"
+            echo ""
+            if [ "$OUTCOME" = "waiting" ]; then
+              echo "Comment \`/approve\` (or \`/approve public\`) to publish this version, another \`/edit ...\` to change it again, or \`/reject\`."
+            else
+              echo "The edit did not finish ($OUTCOME). The previous version is unchanged: you can still \`/approve\` it or try another \`/edit\`."
+            fi
+          } > reply.md
+          cat reply.md >> "$GITHUB_STEP_SUMMARY"
+          gh issue comment "$ISSUE" -R "$GITHUB_REPOSITORY" --body-file reply.md
+          if [ "$OUTCOME" = "waiting" ]; then
+            # `/approve` and the next `/edit` read the last gh_run_id marker: point them at this version
+            gh issue view "$ISSUE" -R "$GITHUB_REPOSITORY" --json body -q .body > body.md
+            printf '\n<!-- gh_run_id: %s -->\n' "${{ github.run_id }}" >> body.md
+            gh issue edit "$ISSUE" -R "$GITHUB_REPOSITORY" --body-file body.md
+            bash .github/scripts/push-gh-pages.sh --run-id "$RUN_ID" --gh-run-url "$RUN_URL" || true
+          fi
+
+      - name: Report a failed edit on the issue
+        if: failure() && !steps.gen.outputs.run_dir && steps.llm.outputs.bad_request != '1'
+        run: |
+          gh issue comment "$ISSUE" -R "$GITHUB_REPOSITORY" --body "The edit failed before producing a new version. Logs: $RUN_URL. The previous version is unchanged."

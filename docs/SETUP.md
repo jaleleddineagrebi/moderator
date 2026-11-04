@@ -10,6 +10,21 @@ How the automated pipeline works:
 | `/approve unlisted` / `/approve public` | Uploads with that visibility |
 | `/approve public en` (or `fr` / `ar`) | Uploads **only** the specified language(s) |
 | `/reject` | Closes the issue without uploading anything |
+| `/edit ...` | Changes the Short before publishing (see below); the new version is posted on the same issue |
+
+**Edit before publishing** ([`edit-short.yml`](../.github/workflows/edit-short.yml)). Only the step you name and the steps after it are redone, with the same text model as the original run:
+
+| Comment | What is redone |
+| :--- | :--- |
+| `/edit text make the hook punchier` | Script (narration + captions), then everything after it |
+| `/edit first image show a man running at sunrise` | Scene 1 visual only; other scenes are kept |
+| `/edit image 3 a calm lake` / `/edit images 2,4 darker city` / `/edit last image` | Those scenes (no description = just a different clip) |
+| `/edit images warmer colours` | Every scene visual |
+| `/edit title shorter, ask a question` / `/edit thumbnail ...` | Title, description, tags, thumbnail |
+| `/edit voice slower` (or `faster`, `different voice`) | Voiceover |
+| `/edit music lower` (or `louder`, `hard cuts`, `no sfx`) | Final video mix |
+
+Put several `/edit` lines in one comment to apply them together. When the new version is posted, `/approve` publishes **that** version; you can keep editing as many times as you want.
 
 *(You can also trigger **[`upload-short.yml`](../.github/workflows/upload-short.yml)** manually from the GitHub Actions UI using `run_id` and `gh_run_id`.)*
 

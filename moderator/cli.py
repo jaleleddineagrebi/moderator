@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import asyncio
+import json
 import os
 import re
 import sys
@@ -113,6 +114,13 @@ def main() -> None:
     up_p.add_argument("--approved-by", required=True, help="who approved the videos (recorded in state.json)")
     up_p.add_argument("--privacy", choices=["private", "unlisted", "public"], default="private")
     up_p.add_argument("--langs", help="comma-separated, default: the run's languages")
+    edit_p = sub.add_parser("edit", help="apply /edit requests to a run waiting for final approval, then redo it headless")
+    edit_p.add_argument("run_dir", type=Path)
+    edit_req = edit_p.add_mutually_exclusive_group(required=True)
+    edit_req.add_argument("--request", help="one or more '/edit ...' lines (see moderator/edits.py)")
+    edit_req.add_argument("--request-file", type=Path, help="read the /edit lines from a file (e.g. an issue comment)")
+    edit_p.add_argument("--by", default="you", help="who asked for the edit (recorded in state.json)")
+    edit_p.add_argument("--check", action="store_true", help="only parse and print the edits; change nothing")
     auth_p = sub.add_parser("youtube-auth", help="authorize uploads to a YouTube channel (opens the browser)")
     auth_p.add_argument("--lang", default=None, help="optional language code (en/fr/ar) if using separate channels per language")
     auth_p.add_argument("--client-secret", type=Path, required=True, help="OAuth Desktop client JSON from Google Cloud")
@@ -213,6 +221,25 @@ def main() -> None:
         for spec in registry.specs.values():
             print(f"  {spec.name:20} {spec.title}")
         return
+
+    if args.cmd == "edit":
+        from .edits import EditError, apply_edits, parse_edits
+        sys.stdout.reconfigure(encoding="utf-8")
+        request = args.request if args.request is not None else args.request_file.read_text(encoding="utf-8")
+        orch = resume_run(registry, args.run_dir)
+        script_path = orch.store.run_dir / "script.json"
+        n_scenes = len(json.loads(script_path.read_text(encoding="utf-8"))["scenes"]) if script_path.exists() else 0
+        try:
+            edits = parse_edits(request, n_scenes)
+            if not args.check:
+                apply_edits(orch, edits, by=args.by)
+        except EditError as e:
+            print(str(e), file=sys.stderr)
+            sys.exit(2)
+        print("Edits:\n" + "\n".join(f"- {e.describe()}" for e in edits))
+        if args.check:
+            return
+        sys.exit(run_headless(orch))
 
     if args.cmd == "run":
         params = parse_params(args.param)

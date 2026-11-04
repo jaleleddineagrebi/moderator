@@ -8,7 +8,16 @@ from PIL import Image, ImageDraw, ImageFilter
 
 from moderator.engine import llm as llm_mod
 from moderator.engine.agent import Agent, StepContext
+from moderator.edits import DIFFERENT_CLIP, OWNER_PREFIX
 from moderator.tools import ffmpeg, stock, visual_rules
+
+OVERRIDES = "assets/scene_overrides.json"
+OVERRIDE_SCHEMA = {
+    "type": "object",
+    "properties": {"description": {"type": "string"},
+                   "search_terms": {"type": "array", "items": {"type": "string"}}},
+    "required": ["description", "search_terms"],
+}
 
 # Free stock video first; Nano Banana images (paid per image) only for scenes with no usable clip.
 # visual_mode=ai puts Nano Banana first; visual_mode=stock never uses it.
@@ -107,6 +116,7 @@ class Handler(Agent):
             ctx.log(f"Revision feedback: {ctx.feedback[-1]['comment']}")
 
         scenes = script["scenes"]
+        await self._apply_owner_overrides(ctx, scenes)
         used: set[str] = set()
         keep: dict[str, dict] = {}  # scene id -> license entry of a clip reused as is
         prev_lic_path = ctx.run_dir / "assets/licenses.json"
@@ -238,6 +248,42 @@ class Handler(Agent):
                                 ctx.log(f"{scene['id']}: clip normalize failed for {pick['url']} ({e})", "warning")
                                 continue
         return None
+
+    async def _apply_owner_overrides(self, ctx, scenes: list[dict]) -> None:
+        """`/edit image N <what to show>` from the owner: rewrite those scenes' visual brief (kept in
+        assets/scene_overrides.json so later revision rounds don't undo it)."""
+        path = ctx.run_dir / OVERRIDES
+        overrides: dict = ctx.read_json(OVERRIDES) if path.exists() else {}
+        comment = ctx.feedback[-1]["comment"] if ctx.feedback else ""
+        if comment.startswith(OWNER_PREFIX):
+            by_id = {s["id"]: s for s in scenes}
+            if m := re.match(re.escape(OWNER_PREFIX) + r" \(all scenes\): (.+)", comment, re.S):
+                wanted = {sid: m[1].strip() for sid in by_id}
+            else:
+                wanted = dict(re.findall(r"^(scene_\d+): (.+)$", comment, re.M))
+            for sid, instruction in wanted.items():
+                if sid not in by_id or instruction.startswith(DIFFERENT_CLIP):
+                    continue
+                sc = by_id[sid]
+                lang = next(iter(sc.get("vo") or {"en": ""}))
+                prompt = (f"Rewrite the visual brief of one scene of a vertical YouTube Short.\n"
+                          f"Narration: {(sc.get('vo') or {}).get(lang, '')}\n"
+                          f"Current visual: {sc['visual']['description']}\n"
+                          f"Owner's request: {instruction}\n"
+                          "Return a one-sentence description and 3-5 short English stock-footage search terms "
+                          f"(2-3 words each) that match the owner's request. {visual_rules.PEOPLE_RULE}")
+                try:
+                    new = await ctx.llm.ask(prompt, schema=OVERRIDE_SCHEMA, complexity="low")
+                    terms = [t for t in new.get("search_terms") or [] if t.strip()][:5]
+                    overrides[sid] = {"description": new["description"], "search_terms": terms or [instruction[:40]]}
+                except Exception as e:  # noqa: BLE001 - use the owner's words as is
+                    ctx.log(f"{sid}: could not rewrite the visual brief ({e}); using the request as is", "warning")
+                    overrides[sid] = {"description": instruction, "search_terms": [instruction[:40]]}
+                ctx.log(f"{sid}: owner asked for '{instruction}' -> {overrides[sid]['search_terms']}")
+            ctx.write_json(OVERRIDES, overrides)
+        for sc in scenes:
+            if sc["id"] in overrides:
+                sc["visual"] = {**sc["visual"], **overrides[sc["id"]]}
 
     async def _contact_sheet(self, ctx, clips: list[str]) -> str:
         thumbs = []

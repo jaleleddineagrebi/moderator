@@ -30,10 +30,20 @@ class Handler(Agent):
         langs = normalize_langs(ctx.params.get("languages"))
         voice_idx = {"primary_voice": 0, "alternate_voice": 1, "third_voice_slower": 2}.get(ctx.strategy, 0)
         rate = "-6%" if ctx.strategy == "third_voice_slower" else "+0%"
+        if ctx.feedback:
+            fb_low = ctx.feedback[-1]["comment"].lower()
+            ctx.log(f"Revision feedback: {ctx.feedback[-1]['comment']}")
+            # owner `/edit voice ...`: slower / faster / a different voice
+            if any(w in fb_low for w in ("slower", "slow down", "calmer")):
+                rate = f"{int(rate.rstrip('%')) - 8:+d}%"
+            elif any(w in fb_low for w in ("faster", "speed up", "quicker")):
+                rate = f"{int(rate.rstrip('%')) + 8:+d}%"
+            if any(w in fb_low for w in ("different voice", "another voice", "other voice", "change voice",
+                                         "new voice", "change the voice")):
+                voice_idx = 1 if voice_idx == 0 else 0
+            ctx.log(f"Voice settings for this revision: voice #{voice_idx + 1}, rate {rate}")
         ctx.set_inputs(script=ctx.upstream("script")["data"], languages=langs,
                        voices={l: tts.voice_for(l, voice_idx) for l in langs})
-        if ctx.feedback:
-            ctx.log(f"Revision feedback: {ctx.feedback[-1]['comment']}")
         outputs = {}
         for li, lang in enumerate(langs):
             voice = tts.voice_for(lang, voice_idx)
