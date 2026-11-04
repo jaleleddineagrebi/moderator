@@ -1,0 +1,174 @@
+{
+  "title": "The Proximity Bias",
+  "scenes": [
+    {
+      "vo": {
+        "en": "Your best friend is just a coincidence.",
+        "fr": "Ton meilleur ami est une coïncidence."
+      },
+      "on_screen": {
+        "en": "Just a Coincidence",
+        "fr": "Une simple coïncidence"
+      },
+      "visual": {
+        "description": "Two men walking and talking casually in a sunlit park.",
+        "search_terms": [
+          "men walking park",
+          "friends talking walking",
+          "walking crowd"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "It isn't fate or some magical connection, it’s simply the Propinquity Effect.",
+        "fr": "Ce n'est pas le destin ou la magie, c'est simplement l'effet de proximité."
+      },
+      "on_screen": {
+        "en": "The Propinquity Effect",
+        "fr": "L'effet de proximité"
+      },
+      "visual": {
+        "description": "A digital animation of a map with pins popping up close together.",
+        "search_terms": [
+          "map animation pins",
+          "distance markers",
+          "city street"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Famous research proves that physical distance is the single greatest predictor of your entire social circle.",
+        "fr": "La recherche prouve que la distance physique est le premier prédicteur de ton cercle social."
+      },
+      "on_screen": {
+        "en": "Distance Predicts Friendship",
+        "fr": "La distance décide tout"
+      },
+      "visual": {
+        "description": "A long, empty apartment hallway with many doors on both sides.",
+        "search_terms": [
+          "apartment hallway doors",
+          "office corridor",
+          "indoor space"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "In one landmark study, people living right next to the stairs had significantly more friends.",
+        "fr": "Une étude montre que vivre près des escaliers augmente radicalement tes chances d'amitié."
+      },
+      "on_screen": {
+        "en": "Stairs Create Friends",
+        "fr": "L'effet des escaliers"
+      },
+      "visual": {
+        "description": "A man in business casual attire walking up a flight of modern stairs.",
+        "search_terms": [
+          "man climbing stairs",
+          "stairwell motion",
+          "walking stairs"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Every single time you pass someone, your brain subconsciously marks them as safe and familiar.",
+        "fr": "Chaque croisement habituel pousse ton cerveau à percevoir cette personne comme familière et sûre."
+      },
+      "on_screen": {
+        "en": "Familiarity Equals Safety",
+        "fr": "Familier donc sûr"
+      },
+      "visual": {
+        "description": "A tight close-up of a man's eyes blinking and looking thoughtful.",
+        "search_terms": [
+          "man eyes close up",
+          "thinking face male",
+          "looking around"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "You didn’t actually choose a soulmate; you just chose the person living closest to your door.",
+        "fr": "Tu n'as pas trouvé une âme sœur, tu as juste trouvé ton voisin de palier."
+      },
+      "on_screen": {
+        "en": "Hallway Soulmates",
+        "fr": "Âmes sœurs de palier"
+      },
+      "visual": {
+        "description": "A man opening his apartment door and nodding to someone just out of frame.",
+        "search_terms": [
+          "hand opening door",
+          "man greeting neighbor",
+          "doorway entry"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "It is hard to accept that your deepest bonds are really just a result of geography.",
+        "fr": "C'est troublant de voir que tes liens dépendent presque entièrement de la géographie."
+      },
+      "on_screen": {
+        "en": "Geography Rules Life",
+        "fr": "La géographie commande"
+      },
+      "visual": {
+        "description": "An aerial drone view of a dense urban neighborhood and houses.",
+        "search_terms": [
+          "city aerial view",
+          "urban neighborhood",
+          "drone shot city"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    },
+    {
+      "vo": {
+        "en": "This is why you'll realize...",
+        "fr": "Voilà pourquoi on dit que..."
+      },
+      "on_screen": {
+        "en": "The Truth Is...",
+        "fr": "La vérité est..."
+      },
+      "visual": {
+        "description": "A blurred, fast-motion shot of many people walking on a city sidewalk.",
+        "search_terms": [
+          "blurred motion street",
+          "fast walking feet",
+          "time lapse crowd"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_08"
+    }
+  ],
+  "idea_id": "the-proximity-bias",
+  "languages": [
+    "en",
+    "fr"
+  ],
+  "estimated_seconds": {
+    "en": 37.1,
+    "fr": 40.0
+  }
+}
