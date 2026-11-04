@@ -3,19 +3,19 @@
   "scenes": [
     {
       "vo": {
-        "en": "The loudest people often know nothing.",
-        "fr": "Les plus bruyants en savent moins."
+        "en": "The loudest people are usually clueless.",
+        "fr": "Les plus bruyants sont souvent ignorants."
       },
       "on_screen": {
-        "en": "Confidence vs. Knowledge",
-        "fr": "Confiance vs. Savoir"
+        "en": "Confidence vs. Skill",
+        "fr": "Confiance vs. Compétence"
       },
       "visual": {
-        "description": "A man speaking animatedly into a microphone in front of a blurred crowd.",
+        "description": "A man shouting through a megaphone in a public space, appearing very confident.",
         "search_terms": [
-          "man speaking microphone",
-          "businessman talking",
-          "city crowd"
+          "man shouting megaphone",
+          "person arguing loudly",
+          "city street"
         ],
         "prefer": "video"
       },
@@ -23,18 +23,18 @@
     },
     {
       "vo": {
-        "en": "It's called the Dunning-Kruger effect, a mental glitch where incompetence breeds extreme confidence.",
-        "fr": "C'est l'effet Dunning-Kruger, un biais mental où l'incompétence génère une confiance extrême."
+        "en": "It’s called the Dunning-Kruger effect. A psychological glitch where having very little skill actually creates a massive surge of confidence.",
+        "fr": "C’est l’effet Dunning-Kruger. Un biais mental où le manque de compétence génère paradoxalement une confiance absolue."
       },
       "on_screen": {
         "en": "The Dunning-Kruger Effect",
-        "fr": "L'effet Dunning-Kruger"
+        "fr": "L'Effet Dunning-Kruger"
       },
       "visual": {
-        "description": "Abstract animation of mechanical gears turning inside a stylized human head.",
+        "description": "Abstract animation of glowing blue gears and neural connections inside a dark space.",
         "search_terms": [
-          "clockwork gears",
-          "abstract brain",
+          "mechanical gears turning",
+          "abstract brain animation",
           "connection lines"
         ],
         "prefer": "video"
@@ -43,19 +43,19 @@
     },
     {
       "vo": {
-        "en": "Beginners hit the 'Peak of Mount Ignorant,' feeling like masters because they don't know what they're missing.",
-        "fr": "Les débutants atteignent le 'Sommet de l'ignorance', se croyant experts car ils ignorent leurs lacunes."
+        "en": "Beginners climb 'Mount Ignorant.' They don’t know enough yet to see their own gaps, so they feel like masters instantly.",
+        "fr": "Les débutants grimpent au 'Sommet de l'ignorance'. Ils ignorent leurs propres lacunes, ce qui leur donne l'illusion d'être experts."
       },
       "on_screen": {
-        "en": "Peak of Mount Ignorant",
-        "fr": "Le Sommet de l'ignorance"
+        "en": "Mount Ignorant",
+        "fr": "Le Sommet de l'Ignorance"
       },
       "visual": {
-        "description": "A man standing triumphantly on a small rocky hill looking out at a horizon.",
+        "description": "A man standing on top of a small rocky hill, looking out at a wide horizon with arms crossed.",
         "search_terms": [
-          "man hiking summit",
-          "mountain peak",
-          "climbing hill"
+          "man standing peak",
+          "hiker on hill",
+          "mountain landscape"
         ],
         "prefer": "video"
       },
@@ -63,19 +63,19 @@
     },
     {
       "vo": {
-        "en": "But as you learn more, you realize how deep the rabbit hole goes, and your confidence crashes.",
-        "fr": "Mais en apprenant, tu réalises l'étendue du sujet, et ta confiance s'effondre."
+        "en": "But once you start learning more, the reality hits. Your confidence crashes as you realize how deep the subject really goes.",
+        "fr": "Mais dès que tu apprends, la réalité frappe. Ta confiance s'effondre en découvrant la complexité du sujet."
       },
       "on_screen": {
         "en": "The Reality Check",
         "fr": "Le Choc de Réalité"
       },
       "visual": {
-        "description": "A man sitting at a desk surrounded by high stacks of books looking overwhelmed.",
+        "description": "A man sitting at a desk covered in massive stacks of open books, looking overwhelmed and thoughtful.",
         "search_terms": [
-          "stacks of books",
+          "piles of books",
           "man studying desk",
-          "searching library"
+          "library interior"
         ],
         "prefer": "video"
       },
@@ -83,18 +83,18 @@
     },
     {
       "vo": {
-        "en": "True experts actually underestimate themselves, assuming everyone else finds the work just as easy as they do.",
-        "fr": "Les vrais experts se sous-estiment, pensant que tout le monde maîtrise le sujet aussi bien qu'eux."
+        "en": "True experts actually doubt themselves. They assume that if a task is easy for them, it must be easy for everyone else too.",
+        "fr": "Les vrais experts, eux, doutent souvent. Ils pensent que si c’est facile pour eux, ça l’est pour tout le monde."
       },
       "on_screen": {
         "en": "The Expert Paradox",
         "fr": "Le Paradoxe de l'Expert"
       },
       "visual": {
-        "description": "Close up of hands performing a highly skilled craft like watchmaking or wood carving.",
+        "description": "Extreme close-up of a man's hands carefully repairing the tiny parts of a mechanical watch.",
         "search_terms": [
-          "skilled hands working",
-          "artisan craft",
+          "watchmaker hands working",
+          "precision craft work",
           "workshop tools"
         ],
         "prefer": "video"
@@ -103,18 +103,18 @@
     },
     {
       "vo": {
-        "en": "Wisdom isn't about having all the answers, but acknowledging how much you still have to learn.",
-        "fr": "La sagesse n'est pas d'avoir toutes les réponses, mais d'admettre tout ce qu'il reste à apprendre."
+        "en": "Real wisdom, ce n'est pas d'avoir toutes les réponses. It’s the quiet ability to admit how much you still have to learn.",
+        "fr": "La sagesse, ce n'est pas d'avoir toutes les réponses. C’est avoir l’humilité d’admettre tout ce qu’il te reste à apprendre."
       },
       "on_screen": {
         "en": "True Wisdom",
         "fr": "La Vraie Sagesse"
       },
       "visual": {
-        "description": "A person looking through a telescope at a vast starry night sky.",
+        "description": "A man looking through a large telescope at a vast, clear starry sky at night.",
         "search_terms": [
-          "telescope lens",
-          "starry night",
+          "telescope looking sky",
+          "starry night timelapse",
           "ocean waves"
         ],
         "prefer": "video"
@@ -123,18 +123,18 @@
     },
     {
       "vo": {
-        "en": "So next time someone speaks with total certainty, remember that...",
-        "fr": "Alors quand quelqu'un parle avec une certitude absolue, souviens-toi que..."
+        "en": "So when you see total certainty, remember that...",
+        "fr": "Alors devant une certitude absolue, rappelle-toi que..."
       },
       "on_screen": {
         "en": "Stay Humble",
         "fr": "Reste Humble"
       },
       "visual": {
-        "description": "A man walking calmly through a busy city sidewalk disappearing into the crowd.",
+        "description": "A man walking away through a busy city crowd, disappearing into the motion.",
         "search_terms": [
-          "man walking street",
-          "city sidewalk",
+          "man walking crowd",
+          "busy sidewalk motion",
           "walking crowd"
         ],
         "prefer": "video"
@@ -148,7 +148,7 @@
     "fr"
   ],
   "estimated_seconds": {
-    "en": 34.9,
-    "fr": 37.0
+    "en": 43.6,
+    "fr": 44.7
   }
 }

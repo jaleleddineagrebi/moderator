@@ -1,0 +1,182 @@
+{
+  "passed": false,
+  "revision_round": 0,
+  "checks": [
+    {
+      "check": "length",
+      "lang": "en",
+      "ok": true,
+      "detail": "41.7s (must be under 60s; target 32-50s)",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "target length",
+      "lang": "en",
+      "ok": true,
+      "detail": "41.7s",
+      "send_to": null,
+      "severity": "minor"
+    },
+    {
+      "check": "aspect ratio",
+      "lang": "en",
+      "ok": true,
+      "detail": "1080x1920",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "video codec",
+      "lang": "en",
+      "ok": true,
+      "detail": "h264",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "audio track",
+      "lang": "en",
+      "ok": true,
+      "detail": "present",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "loudness",
+      "lang": "en",
+      "ok": true,
+      "detail": "-14.5 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "hook timing",
+      "lang": "en",
+      "ok": true,
+      "detail": "scene_01 spoken in 3.0s (target <= 3s)",
+      "send_to": null,
+      "severity": "minor"
+    },
+    {
+      "check": "caption sync",
+      "lang": "en",
+      "ok": true,
+      "detail": "96 words, 36 caption events",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "length",
+      "lang": "fr",
+      "ok": true,
+      "detail": "38.0s (must be under 60s; target 32-50s)",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "target length",
+      "lang": "fr",
+      "ok": true,
+      "detail": "38.0s",
+      "send_to": null,
+      "severity": "minor"
+    },
+    {
+      "check": "aspect ratio",
+      "lang": "fr",
+      "ok": true,
+      "detail": "1080x1920",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "video codec",
+      "lang": "fr",
+      "ok": true,
+      "detail": "h264",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "audio track",
+      "lang": "fr",
+      "ok": true,
+      "detail": "present",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "loudness",
+      "lang": "fr",
+      "ok": true,
+      "detail": "-13.8 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "hook timing",
+      "lang": "fr",
+      "ok": true,
+      "detail": "scene_01 spoken in 2.5s (target <= 3s)",
+      "send_to": null,
+      "severity": "minor"
+    },
+    {
+      "check": "caption sync",
+      "lang": "fr",
+      "ok": true,
+      "detail": "87 words, 33 caption events",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "visual licenses",
+      "lang": null,
+      "ok": true,
+      "detail": "7 assets: pixabay",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "audio licenses",
+      "lang": null,
+      "ok": true,
+      "detail": "music: original work, no third-party rights; sfx: original work, no third-party rights; voice: synthetic voice; no third-party performance rights",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "accuracy review",
+      "lang": "en",
+      "ok": false,
+      "detail": "The Dunning-Kruger chart commonly refers to the first stage as 'Mount Stupid' rather than 'Mount Ignorant'. Change narration to 'Peak of Mount Stupid' for better recognition.",
+      "send_to": "script",
+      "severity": "minor"
+    },
+    {
+      "check": "accuracy review",
+      "lang": "fr",
+      "ok": false,
+      "detail": "In French, the term is usually 'Mont de la stupidité'. Change 'Sommet de l'ignorance' to 'Mont de la stupidité' to match the scientific term's popular name.",
+      "send_to": "script",
+      "severity": "minor"
+    },
+    {
+      "check": "grammar review",
+      "lang": "fr",
+      "ok": false,
+      "detail": "In scene_06, the French narration says 'La sagesse n'est pas d'avoir toutes les réponses'. To be grammatically correct and natural, use 'La sagesse, ce n'est pas d'avoir toutes les réponses'.",
+      "send_to": "script",
+      "severity": "blocker"
+    },
+    {
+      "check": "people rule",
+      "lang": null,
+      "ok": true,
+      "detail": "no women beyond face close-ups in 7 scenes and 2 thumbnail(s)",
+      "send_to": null,
+      "severity": "blocker"
+    }
+  ]
+}
