@@ -11,10 +11,18 @@ from PIL import ImageDraw, ImageFont
 from .. import ROOT
 
 FONTS_DIR = ROOT / "library" / "fonts"
-FONT_FILES = {"ar": "NotoSansArabic-Black.ttf", "fr": "NotoSans-Black.ttf"}
+FONT_FILES = {"ar": "NotoSansArabic-Black.ttf", "en": "NotoSans-Black.ttf", "fr": "NotoSans-Black.ttf"}
 # Family names as libass sees them in FONTS_DIR
-ASS_FONTS = {"ar": "Noto Sans Arabic Black", "fr": "Noto Sans Black"}
+ASS_FONTS = {"ar": "Noto Sans Arabic Black", "en": "Noto Sans Black", "fr": "Noto Sans Black"}
 RTL = {"ar"}
+
+
+def escape_filter_arg(value: str) -> str:
+    """Escape a file or directory path for ffmpeg filter option values (e.g. subtitles=..., fontsdir=...)."""
+    out = value.replace("\\", "/")
+    for ch in (":", "'", "[", "]", ",", ";"):
+        out = out.replace(ch, f"\\{ch}")
+    return out
 
 
 def font(lang: str, size: int) -> ImageFont.FreeTypeFont:

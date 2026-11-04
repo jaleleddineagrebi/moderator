@@ -5,10 +5,46 @@ import zlib
 
 from PIL import Image, ImageDraw, ImageFilter
 
+from moderator.engine import llm as llm_mod
 from moderator.engine.agent import Agent, StepContext
 from moderator.tools import ffmpeg, stock
 
-TIERS = ["stock_video", "stock_photo", "generated"]
+TIERS = ["nano_banana", "stock_video", "stock_photo", "generated"]
+
+FALLBACK_VIDEO_QUERIES = [
+    "city street traffic",
+    "clouds time lapse",
+    "ocean waves",
+    "people walking street",
+    "night city lights",
+    "rain falling",
+    "train moving",
+    "earth from space",
+]
+
+
+def _expand_queries(search_terms: list[str], scene_idx: int) -> tuple[list[str], list[str]]:
+    seen: set[str] = set()
+    primary: list[str] = []
+    for raw in search_terms:
+        q = " ".join((raw or "").split())
+        if q and q.lower() not in seen:
+            seen.add(q.lower())
+            primary.append(q)
+    for q in list(primary):
+        words = [w for w in q.split() if len(w) > 2]
+        if len(words) > 2:
+            short = " ".join(words[:2])
+            if short.lower() not in seen:
+                seen.add(short.lower())
+                primary.append(short)
+    fallbacks: list[str] = []
+    for offset in range(3):
+        fb = FALLBACK_VIDEO_QUERIES[(scene_idx + offset) % len(FALLBACK_VIDEO_QUERIES)]
+        if fb.lower() not in seen:
+            seen.add(fb.lower())
+            fallbacks.append(fb)
+    return primary, fallbacks
 
 
 def generated_background(path, seed: int) -> None:
@@ -37,16 +73,41 @@ class Handler(Agent):
     async def run(self, ctx: StepContext) -> dict[str, str]:
         script = ctx.read_json(ctx.upstream("script")["data"])
         keys = stock.available()
-        providers = [p for p in ("pexels", "pixabay") if keys[p]]
+        video_providers = [p for p in ("pexels", "pixabay", "wikimedia") if keys.get(p)]
+        photo_providers = [p for p in ("pexels", "pixabay") if keys.get(p)]
+        visual_mode = str(ctx.params.get("visual_mode") or "").lower()
+
         start = TIERS.index(ctx.strategy) if ctx.strategy in TIERS else 0
-        if not providers:
-            ctx.log("No PEXELS_API_KEY or PIXABAY_API_KEY in .env: using generated backgrounds", "warning")
+        if visual_mode in ("stock", "video") and start == 0:
+            start = TIERS.index("stock_video")
+        elif visual_mode == "generated":
             start = TIERS.index("generated")
-        ctx.set_inputs(script=ctx.upstream("script")["data"], providers=providers, starting_tier=TIERS[start])
+
+        available_tiers = [
+            t for t in TIERS[start:]
+            if (t == "generated")
+            or (t == "nano_banana" and llm_mod.api_key_available())
+            or (t == "stock_video" and video_providers)
+            or (t == "stock_photo" and photo_providers)
+        ]
+        if not available_tiers:
+            available_tiers = ["generated"]
+        if available_tiers == ["generated"]:
+            ctx.log("No GEMINI_API_KEY or stock video sources available: using procedural generated backgrounds", "warning")
+
+        ctx.set_inputs(script=ctx.upstream("script")["data"], providers=video_providers,
+                       nano_banana=llm_mod.api_key_available(), starting_tier=available_tiers[0])
         if ctx.feedback:
             ctx.log(f"Revision feedback: {ctx.feedback[-1]['comment']}")
 
         used: set[str] = set()
+        prev_lic_path = ctx.run_dir / "assets/licenses.json"
+        if ctx.feedback and prev_lic_path.exists():
+            for item in ctx.read_json("assets/licenses.json"):
+                if item.get("page"):
+                    used.add(item["page"])
+        pick_lock = asyncio.Lock()
+
         licenses: list[dict] = []
         sem = asyncio.Semaphore(3)
         scenes = script["scenes"]
@@ -56,12 +117,17 @@ class Handler(Agent):
             nonlocal done
             async with sem:
                 out = ctx.path(f"assets/{scene['id']}.mp4")
-                tiers = TIERS[start:]
-                if scene["visual"].get("prefer") == "photo" and "stock_video" in tiers:
-                    tiers = ["stock_photo", "stock_video", "generated"]
+                tiers = list(available_tiers)
+                # Always keep moving stock_video ahead of static stock_photo unless explicitly requested via visual_mode=photo
+                if visual_mode == "photo" and "stock_video" in tiers and "stock_photo" in tiers:
+                    sv, sp = tiers.index("stock_video"), tiers.index("stock_photo")
+                    if sv < sp:
+                        tiers[sv], tiers[sp] = tiers[sp], tiers[sv]
                 for tier in tiers:
                     try:
-                        lic = await self._tier(ctx, tier, scene, i, providers, used, out)
+                        lic = await self._tier(
+                            ctx, tier, scene, i, script["title"], video_providers, photo_providers, used, pick_lock, out
+                        )
                     except Exception as e:  # noqa: BLE001 - fall through to the next tier
                         ctx.log(f"{scene['id']}: {tier} failed ({type(e).__name__}: {e})", "warning")
                         continue
@@ -79,30 +145,75 @@ class Handler(Agent):
         sheet = await self._contact_sheet(ctx, clips)
         return {"contact_sheet": sheet, "scenes": clips, "licenses": lic_path}
 
-    async def _tier(self, ctx, tier, scene, i, providers, used, out) -> dict | None:
+    async def _tier(self, ctx, tier, scene, i, title, video_providers, photo_providers, used, pick_lock, out) -> dict | None:
+        if tier == "nano_banana":
+            png = ctx.path(f"assets/raw/{scene['id']}_banana.png")
+            fb = f"\nRevision note: {ctx.feedback[-1]['comment']}" if ctx.feedback else ""
+            prompt = (
+                f"Vertical 9:16 cinematic visual for a faceless YouTube Short titled '{title}'. "
+                f"Scene {i + 1}: {scene['visual']['description']}. "
+                f"Style: {ctx.params.get('style', 'cinematic, moody lighting, clean composition')}. "
+                "IMPORTANT: Do NOT render any text, letters, numbers, watermarks, brand logos, or recognizable celebrities. "
+                f"Leave clean breathing room in the upper and lower thirds for burned-in captions.{fb}"
+            )
+            used_model = await ctx.llm.generate_image(prompt, png, aspect_ratio="9:16", size=(1080, 1920))
+            await ffmpeg.still_to_clip(png, out, ctx.run_dir, seconds=10, zoom_in=i % 2 == 0)
+            return {
+                "provider": "nano_banana",
+                "model": used_model,
+                "query": scene["visual"]["description"],
+                "license": f"AI-generated original image ({used_model}); no third-party rights",
+            }
         if tier == "generated":
             png = ctx.path(f"assets/raw/{scene['id']}.png")
-            generated_background(png, seed=zlib.crc32(f"{ctx.store.data['run_id']}:{i}".encode()))
+            seed = zlib.crc32(f"{ctx.store.data['run_id']}:{ctx.attempt}:{i}".encode())
+            generated_background(png, seed=seed)
             await ffmpeg.still_to_clip(png, out, ctx.run_dir, seconds=10, zoom_in=i % 2 == 0)
             return {"provider": "generated", "license": "original work, no third-party rights"}
-        for term in scene["visual"]["search_terms"]:
-            for provider in providers:
-                if tier == "stock_video":
-                    results = await stock.search_videos(term, provider)
-                else:
-                    results = await stock.search_photos(term, provider)
-                pick = next((r for r in results if r["page"] not in used), None)
-                if not pick:
-                    continue
-                used.add(pick["page"])
-                ext = "mp4" if tier == "stock_video" else "jpg"
-                raw = ctx.path(f"assets/raw/{scene['id']}.{ext}")
-                await stock.download(pick["url"], raw)
-                if tier == "stock_video":
-                    await ffmpeg.normalize_clip(raw, out, ctx.run_dir)
-                else:
-                    await ffmpeg.still_to_clip(raw, out, ctx.run_dir, seconds=10, zoom_in=i % 2 == 0)
-                return {k: pick[k] for k in ("provider", "page", "author", "license")} | {"query": term}
+
+        primary_terms, fallback_terms = _expand_queries(scene["visual"]["search_terms"], i)
+        if tier == "stock_video":
+            hd_group = [p for p in ("pexels", "pixabay") if p in video_providers]
+            zero_key_group = [p for p in ("wikimedia",) if p in video_providers]
+            groups = [g for g in (hd_group, zero_key_group) if g]
+            term_batches = [primary_terms, fallback_terms]
+        else:
+            groups = [photo_providers] if photo_providers else []
+            term_batches = [primary_terms]
+
+        for group in groups:
+            for batch in term_batches:
+                for term in batch:
+                    for provider in group:
+                        try:
+                            results = (
+                                await stock.search_videos(term, provider)
+                                if tier == "stock_video"
+                                else await stock.search_photos(term, provider)
+                            )
+                        except Exception as e:  # noqa: BLE001
+                            ctx.log(f"{scene['id']}: {provider} search '{term}' failed ({e})", "warning")
+                            continue
+
+                        for attempt_idx in range(2):
+                            async with pick_lock:
+                                pick = next((r for r in results if r["page"] not in used), None)
+                                if pick:
+                                    used.add(pick["page"])
+                            if not pick:
+                                break
+                            ext = pick.get("ext") or ("mp4" if tier == "stock_video" else "jpg")
+                            raw = ctx.path(f"assets/raw/{scene['id']}_{attempt_idx}.{ext}")
+                            try:
+                                await stock.download(pick["url"], raw)
+                                if tier == "stock_video":
+                                    await ffmpeg.normalize_clip(raw, out, ctx.run_dir)
+                                else:
+                                    await ffmpeg.still_to_clip(raw, out, ctx.run_dir, seconds=10, zoom_in=i % 2 == 0)
+                                return {k: pick[k] for k in ("provider", "page", "author", "license")} | {"query": term}
+                            except Exception as e:  # noqa: BLE001
+                                ctx.log(f"{scene['id']}: clip normalize failed for {pick['url']} ({e})", "warning")
+                                continue
         return None
 
     async def _contact_sheet(self, ctx, clips: list[str]) -> str:
@@ -110,7 +221,8 @@ class Handler(Agent):
         for rel in clips:
             frame = ctx.path(f"assets/raw/{rel.split('/')[-1]}.jpg")
             await ffmpeg.frame_at(ctx.run_dir / rel, frame, ctx.run_dir, at=1.0)
-            thumbs.append(Image.open(frame).resize((216, 384)))
+            with Image.open(frame) as im:
+                thumbs.append(im.resize((216, 384)))
         cols = min(len(thumbs), 5)
         rows = (len(thumbs) + cols - 1) // cols
         sheet = Image.new("RGB", (cols * 216 + (cols + 1) * 8, rows * 384 + (rows + 1) * 8), (20, 20, 20))

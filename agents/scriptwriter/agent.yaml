@@ -1,7 +1,7 @@
 title: Scriptwriter
-role: Writes a 45-55 second bilingual script (Egyptian Arabic + French) with a 3-second hook, scene-by-scene visuals and on-screen text.
-inputs: [chosen idea, niche, style]
+role: Writes a 45-55 second script in the target language(s) with a 3-second hook, scene-by-scene visuals and on-screen text.
+inputs: [chosen idea, niche, languages, style]
 outputs: [script.json, script.md]
-tools: [Claude]
+tools: [Gemini Flash]
 strategies: [default, tighter_word_budget, simpler_structure]
 timeout_s: 1200

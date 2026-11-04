@@ -15,6 +15,23 @@ def voice_for(lang: str, index: int) -> str:
     return voices[min(index, len(voices) - 1)]
 
 
+def fallback_word_timings(text: str, duration: float) -> list[dict]:
+    """Synthesize character-weighted word timings if TTS streamed audio without WordBoundary events."""
+    tokens = [w for w in text.split() if w]
+    if not tokens or duration <= 0:
+        return []
+    usable = max(0.2, duration - 0.08)
+    weights = [max(1, len(w)) for w in tokens]
+    total_w = sum(weights)
+    cursor = 0.02
+    out = []
+    for token, weight in zip(tokens, weights):
+        span = usable * (weight / total_w)
+        out.append({"start": round(cursor, 3), "end": round(cursor + span, 3), "text": token})
+        cursor += span
+    return out
+
+
 async def synthesize(text: str, voice: str, out: Path, rate: str = "+0%") -> list[dict]:
     """Write an mp3 and return word timings [{start, end, text}] in seconds."""
     words = []

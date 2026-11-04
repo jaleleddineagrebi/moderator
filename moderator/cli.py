@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import asyncio
 import os
+import re
 import sys
 import webbrowser
 from pathlib import Path
@@ -20,11 +21,37 @@ from .runtime import create_run, resume_run
 from .server.app import create_app
 
 
+def parse_param_value(raw: str):
+    """Parse CLI `-p key=value` without YAML 1.1 sexagesimal ('9:16' -> 556) or Norway ('no' -> False) traps."""
+    val = raw.strip()
+    if not val:
+        return True
+    if (val.startswith("[") and val.endswith("]")) or (val.startswith("{") and val.endswith("}")):
+        return yaml.safe_load(val)
+    low = val.lower()
+    if low == "true":
+        return True
+    if low == "false":
+        return False
+    if low in ("null", "none", "~"):
+        return None
+    if re.fullmatch(r"-?\d+", val):
+        return int(val)
+    if re.fullmatch(r"-?\d+\.\d+", val):
+        return float(val)
+    if (val.startswith('"') and val.endswith('"')) or (val.startswith("'") and val.endswith("'")):
+        return val[1:-1]
+    return val
+
+
 def parse_params(pairs: list[str]) -> dict:
     params = {}
     for pair in pairs:
+        if "=" not in pair:
+            params[pair.strip()] = True
+            continue
         key, _, value = pair.partition("=")
-        params[key.strip()] = yaml.safe_load(value) if value else True
+        params[key.strip()] = parse_param_value(value)
     return params
 
 
@@ -62,9 +89,10 @@ def main() -> None:
     sub = parser.add_subparsers(dest="cmd", required=True)
     run_p = sub.add_parser("run", help="start a workflow")
     run_p.add_argument("workflow")
-    run_p.add_argument("-p", "--param", action="append", default=[], help="key=value (YAML value), repeatable")
+    run_p.add_argument("-p", "--param", action="append", default=[], help="key=value (YAML list/dict or scalar), repeatable")
     res_p = sub.add_parser("resume", help="resume a run folder")
     res_p.add_argument("run_dir", type=Path)
+    res_p.add_argument("--retry-failed", action="store_true", help="requeue any failed steps before resuming")
     for p in (run_p, res_p):
         p.add_argument("--port", type=int)
         p.add_argument("--no-browser", action="store_true")
@@ -77,18 +105,66 @@ def main() -> None:
     up_p.add_argument("--approved-by", required=True, help="who approved the videos (recorded in state.json)")
     up_p.add_argument("--privacy", choices=["private", "unlisted", "public"], default="private")
     up_p.add_argument("--langs", help="comma-separated, default: the run's languages")
-    auth_p = sub.add_parser("youtube-auth", help="authorize uploads to one channel (opens the browser)")
-    auth_p.add_argument("--lang", required=True)
-    auth_p.add_argument("--client-secret", type=Path, required=True, help="OAuth client JSON from Google Cloud")
+    auth_p = sub.add_parser("youtube-auth", help="authorize uploads to a YouTube channel (opens the browser)")
+    auth_p.add_argument("--lang", default=None, help="optional language code (en/fr/ar) if using separate channels per language")
+    auth_p.add_argument("--client-secret", type=Path, required=True, help="OAuth Desktop client JSON from Google Cloud")
+    opt_p = sub.add_parser("optimize-channel", help="apply SEO description, keywords, 2560x1440 banner, playlist & video tweaks")
+    opt_p.add_argument("--preset", choices=["auto", "psychology", "ai", "hybrid"], default="auto")
+    opt_p.add_argument("--country", default="US", help="2-letter target audience country code (default: US)")
+    opt_p.add_argument("--lang", default="en", help="channel default language (default: en)")
+    opt_p.add_argument("--client-secret", type=Path, default=ROOT / "client_secret.json")
+    opt_p.add_argument("--reauth", action="store_true", help="force fresh OAuth consent with channel-management scope")
+    pages_p = sub.add_parser("export-pages", help="export static dashboard & run snapshots for GitHub Pages")
+    pages_p.add_argument("site_dir", type=Path, help="output folder (e.g. a gh-pages worktree)")
+    pages_p.add_argument("--repo", default=None, help="GitHub owner/repo slug")
+    pages_p.add_argument("--runs-dir", type=Path, default=None, help="runs folder to read from (default: ./runs)")
+    pages_p.add_argument("--run-id", default=None, help="target run_id for --issue-url / --gh-run-url")
+    pages_p.add_argument("--issue-url", default=None, help="GitHub review issue URL")
+    pages_p.add_argument("--gh-run-url", default=None, help="GitHub Actions run URL")
+    pages_p.add_argument("--max-runs", type=int, default=10, help="maximum historical runs to retain on Pages")
+    pages_p.add_argument("--no-media", action="store_true", help="skip mp4/mp3 files (fast mid-run progress sync)")
     args = parser.parse_args()
 
     config = load_config(ROOT)
 
+    if args.cmd == "export-pages":
+        from .pages import export_pages
+        manifest = export_pages(
+            args.site_dir,
+            repo=args.repo,
+            runs_dir=args.runs_dir,
+            target_run_id=args.run_id,
+            issue_url=args.issue_url,
+            gh_run_url=args.gh_run_url,
+            max_runs=args.max_runs,
+            include_media=not args.no_media,
+        )
+        print(f"Exported GitHub Pages site to {args.site_dir} ({len(manifest['runs'])} run(s)).")
+        return
+
     if args.cmd == "youtube-auth":
         from .tools import youtube_upload
         path, channel = youtube_upload.authorize(args.client_secret, args.lang)
-        print(f"Authorized channel '{channel}' for '{args.lang}'. Token saved to {path}")
-        print(f"For GitHub Actions, store the whole file content as the secret YOUTUBE_TOKEN_{args.lang.upper()}.")
+        secret_name = f"YOUTUBE_TOKEN_{args.lang.upper()}" if args.lang else "YOUTUBE_TOKEN"
+        target_label = f"language '{args.lang}'" if args.lang else "all languages (default channel)"
+        print(f"Authorized channel '{channel}' for {target_label}. Token saved to {path}")
+        print(f"For GitHub Actions, store the whole file content as the repository secret {secret_name}.")
+        return
+    if args.cmd == "optimize-channel":
+        from .tools import youtube_channel
+        res = youtube_channel.optimize_channel(
+            lang=args.lang,
+            preset=args.preset,
+            country=args.country,
+            client_secret=args.client_secret,
+            reauth=args.reauth,
+        )
+        print(f"Optimized channel '{res['current_title']}' ({res['channel_url']}) [{res['mode']}]")
+        print(f"  Country / Lang: {res['country']} / {res['default_language']}")
+        print(f"  Banner uploaded: {res['banner_path']}")
+        print(f"  Shorts playlist: {res['playlist_url']}")
+        print(f"  Retroactively optimized videos: {len(res['updated_videos'])} ({', '.join(res['updated_videos']) or 'none needed'})")
+        print(f"  Tip: {res['studio_tip']}")
         return
     if args.cmd == "summary":
         from .publish import review_summary
@@ -117,6 +193,8 @@ def main() -> None:
 
     orch = (create_run(registry, args.workflow, parse_params(args.param)) if args.cmd == "run"
             else resume_run(registry, args.run_dir))
+    if args.cmd == "resume" and args.retry_failed:
+        orch.retry_failed()
     if args.headless:
         sys.exit(run_headless(orch))
     srv = config.get("server", {})

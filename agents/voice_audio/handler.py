@@ -1,9 +1,11 @@
 import json
 import random
+import shutil
 
 from moderator import ROOT
 from moderator.engine.agent import Agent, StepContext
 from moderator.tools import ffmpeg, tts
+from moderator.tools.languages import normalize_langs
 
 SCENE_GAP = 0.18  # breath between scenes, seconds
 MAX_VOICEOVER = 55.0  # above this, re-record faster (the editor adds a short tail; Shorts must stay under 60s)
@@ -25,7 +27,7 @@ def pad_expression() -> str:
 class Handler(Agent):
     async def run(self, ctx: StepContext) -> dict[str, str]:
         script = ctx.read_json(ctx.upstream("script")["data"])
-        langs = ctx.params.get("languages", ["ar", "fr"])
+        langs = normalize_langs(ctx.params.get("languages"))
         voice_idx = {"primary_voice": 0, "alternate_voice": 1, "third_voice_slower": 2}.get(ctx.strategy, 0)
         rate = "-6%" if ctx.strategy == "third_voice_slower" else "+0%"
         ctx.set_inputs(script=ctx.upstream("script")["data"], languages=langs,
@@ -43,6 +45,8 @@ class Handler(Agent):
                 faster = f"{int(rate.rstrip('%')) + speedup:+d}%"
                 ctx.log(f"{lang} voiceover is {total:.1f}s; re-recording at rate {faster}", "warning")
                 vo, timings, total = await self._narrate(ctx, script, lang, voice, faster)
+            if len(langs) == 1:
+                shutil.copy2(ctx.run_dir / vo, ctx.run_dir / "voiceover.mp3")
             outputs[f"voiceover_{lang}"] = vo
             outputs[f"timings_{lang}"] = ctx.write_json(f"timings_{lang}.json", {"voice": voice, "duration": total, "scenes": timings})
             ctx.log(f"{lang} voiceover: {total:.1f}s")
@@ -65,6 +69,9 @@ class Handler(Agent):
             part = ctx.path(f"audio/{lang}/{scene['id']}.mp3")
             words = await tts.synthesize(scene["vo"][lang], voice, part, rate=rate)
             dur = await ffmpeg.duration(part)
+            if not words:
+                ctx.log(f"{scene['id']} ({lang}): TTS emitted no WordBoundary events; estimating word timings", "warning")
+                words = tts.fallback_word_timings(scene["vo"][lang], dur)
             timings.append({"scene": scene["id"], "start": round(t, 3), "end": round(t + dur, 3),
                             "words": [{**w, "start": round(w["start"] + t, 3), "end": round(w["end"] + t, 3)} for w in words]})
             parts.append(part.relative_to(ctx.run_dir).as_posix())

@@ -1,7 +1,10 @@
-"""YouTube uploads through the official Data API (OAuth). One token per channel/language.
+"""YouTube uploads through the official Data API (OAuth).
 
-Tokens come from the env var YOUTUBE_TOKEN_<LANG> (JSON, used in GitHub Actions) or tokens/youtube_<lang>.json
-(created locally by `moderator youtube-auth`). Uploading costs 1,600 of the 10,000 daily quota units per video.
+Supports either:
+- One shared channel token: env `YOUTUBE_TOKEN` or `tokens/youtube.json`
+- One token per language channel: env `YOUTUBE_TOKEN_<LANG>` or `tokens/youtube_<lang>.json`
+
+Uploading costs 1,600 of the 10,000 daily quota units per video.
 """
 
 from __future__ import annotations
@@ -18,29 +21,45 @@ from googleapiclient.http import MediaFileUpload
 
 from .. import ROOT
 
-SCOPES = ["https://www.googleapis.com/auth/youtube.upload", "https://www.googleapis.com/auth/youtube.readonly"]
+UPLOAD_SCOPES = ["https://www.googleapis.com/auth/youtube.upload", "https://www.googleapis.com/auth/youtube.readonly"]
+AUTH_SCOPES = [
+    "https://www.googleapis.com/auth/youtube",
+    "https://www.googleapis.com/auth/youtube.upload",
+    "https://www.googleapis.com/auth/youtube.readonly",
+]
+SCOPES = AUTH_SCOPES
 TOKENS_DIR = ROOT / "tokens"
 EDUCATION_CATEGORY = "27"
 
 
-def authorize(client_secret: Path, lang: str) -> tuple[Path, str]:
-    """Opens the browser: sign in and pick the channel (brand account) for this language."""
-    flow = InstalledAppFlow.from_client_secrets_file(str(client_secret), SCOPES)
+def authorize(client_secret: Path, lang: str | None = None, scopes: list[str] | None = None) -> tuple[Path, str]:
+    """Opens the browser: sign in and pick the YouTube channel (brand account or main channel)."""
+    flow = InstalledAppFlow.from_client_secrets_file(str(client_secret), scopes or AUTH_SCOPES)
     creds = flow.run_local_server(port=0, prompt="consent", access_type="offline")
     TOKENS_DIR.mkdir(exist_ok=True)
-    path = TOKENS_DIR / f"youtube_{lang}.json"
+    filename = f"youtube_{lang.lower()}.json" if lang else "youtube.json"
+    path = TOKENS_DIR / filename
     path.write_text(creds.to_json(), encoding="utf-8")
     return path, channel_title(creds)
 
 
 def credentials(lang: str) -> Credentials:
-    raw = os.environ.get(f"YOUTUBE_TOKEN_{lang.upper()}")
-    path = TOKENS_DIR / f"youtube_{lang}.json"
-    if not raw and path.exists():
-        raw = path.read_text(encoding="utf-8")
+    raw = os.environ.get(f"YOUTUBE_TOKEN_{lang.upper()}") or os.environ.get("YOUTUBE_TOKEN")
+    lang_path = TOKENS_DIR / f"youtube_{lang.lower()}.json"
+    shared_path = TOKENS_DIR / "youtube.json"
+    if not raw and lang_path.exists():
+        raw = lang_path.read_text(encoding="utf-8")
+    if not raw and shared_path.exists():
+        raw = shared_path.read_text(encoding="utf-8")
     if not raw:
-        raise RuntimeError(f"No YouTube token for '{lang}'. Run: python -m moderator youtube-auth --lang {lang} --client-secret <file>")
-    creds = Credentials.from_authorized_user_info(json.loads(raw), SCOPES)
+        raise RuntimeError(
+            f"No YouTube token found for '{lang}' (checked YOUTUBE_TOKEN_{lang.upper()}, YOUTUBE_TOKEN, "
+            f"tokens/youtube_{lang.lower()}.json, tokens/youtube.json). "
+            f"Run: python -m moderator youtube-auth --client-secret client_secret.json"
+        )
+    info = json.loads(raw)
+    granted_scopes = info.get("scopes") or UPLOAD_SCOPES
+    creds = Credentials.from_authorized_user_info(info, granted_scopes)
     if not creds.valid:
         creds.refresh(Request())
     return creds
@@ -61,9 +80,12 @@ def upload(lang: str, video: Path, meta: dict, privacy: str, thumbnail: Path | N
         if size > 480:
             break
         tags.append(tag)
+    raw_title = meta["title"].strip()
+    if "#shorts" not in raw_title.lower() and len(raw_title) <= 91:
+        raw_title = f"{raw_title} #shorts"
     body = {
         "snippet": {
-            "title": meta["title"][:100],
+            "title": raw_title[:100],
             "description": f"{meta['description']}\n\n{' '.join(meta.get('hashtags', []))}"[:4900],
             "tags": tags,
             "categoryId": EDUCATION_CATEGORY,

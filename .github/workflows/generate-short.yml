@@ -1,20 +1,42 @@
 name: Generate Short
 
-# Twice a day: research, script (auto-approved), visuals, voice, edit, QA. Stops before upload and opens an
-# issue for you to review. Nothing is published until you comment /approve on that issue.
+# Runs on schedule (twice daily) or manually via "Run workflow".
+# Executes Research -> Script -> Visuals (Nano Banana) + Audio -> Packaging + Editor -> QA,
+# uploads the finished MP4s & thumbnails as an Action artifact, and opens a `short-review` issue.
+# Nothing is published to YouTube until you approve Checkpoint C (comment `/approve` on the issue
+# or trigger the `Upload Short` workflow).
 on:
   schedule:
-    - cron: "0 5 * * *"    # 05:00 UTC (07:00 Cairo / 06:00 Paris in winter)
-    - cron: "0 14 * * *"   # 14:00 UTC (16:00 Cairo / 15:00 Paris in winter)
+    - cron: "0 5 * * *"    # 05:00 UTC
+    - cron: "0 14 * * *"   # 14:00 UTC
   workflow_dispatch:
     inputs:
       topic:
-        description: Optional topic inside the niche
+        description: "Optional topic inside your niche (leave empty for AI trend research)"
         required: false
+        type: string
+      languages:
+        description: "Optional languages override, e.g. en or en,fr or en,fr,ar (default: channel.yaml)"
+        required: false
+        type: string
+      visual_mode:
+        description: "Scene visuals: stock = moving B-roll video ($0), auto = AI art + video fallback, generated = gradients"
+        required: false
+        default: "stock"
+        type: choice
+        options:
+          - stock
+          - auto
+          - generated
+      budget_usd:
+        description: "Safety spend cap only (Free Tier keys always pay $0.00)"
+        required: false
+        default: "1.00"
+        type: string
 
 permissions:
-  contents: write   # commit history/topics.jsonl
-  issues: write     # open the review issue
+  contents: write   # commit history/topics.jsonl so scheduled runs never repeat topics
+  issues: write     # open the Checkpoint C review issue
 
 concurrency:
   group: generate-short
@@ -23,41 +45,72 @@ concurrency:
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 90
     steps:
+      - name: Verify GEMINI_API_KEY secret is configured
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          if [ -z "$GEMINI_API_KEY" ]; then
+            echo "::error::Missing GEMINI_API_KEY repository secret. Add it in GitHub -> Settings -> Secrets and variables -> Actions."
+            exit 1
+          fi
+
       - uses: actions/checkout@v4
 
       - uses: astral-sh/setup-uv@v6
         with:
           python-version: "3.12"
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "22"
+      - name: Install ffmpeg & libass
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg libass9
 
-      - name: Install ffmpeg and Claude Code
-        run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
-          npm install -g @anthropic-ai/claude-code
-
-      - name: Install dependencies
+      - name: Install Python dependencies
         run: uv sync
 
-      - name: Generate both Shorts (stops at the final checkpoint)
+      - name: Generate Short(s) and pause at Checkpoint C (streaming progress to GitHub Pages)
         id: gen
         env:
-          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
-          TOPIC: ${{ github.event.inputs.topic }}
+          INPUT_TOPIC: ${{ inputs.topic }}
+          INPUT_LANGS: ${{ inputs.languages || vars.MODERATOR_LANGUAGES }}
+          INPUT_NICHE: ${{ vars.MODERATOR_NICHE }}
+          INPUT_VISUAL_MODE: ${{ inputs.visual_mode || vars.MODERATOR_VISUAL_MODE || 'stock' }}
+          INPUT_BUDGET: ${{ inputs.budget_usd || vars.MODERATOR_BUDGET_USD || '1.00' }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           PYTHONIOENCODING: utf-8
         run: |
           args=(-p 'auto_approve=[A, B]')
-          if [ -n "$TOPIC" ]; then args+=(-p "topic=$TOPIC"); fi
+          if [ -n "$INPUT_TOPIC" ]; then args+=(-p "topic=$INPUT_TOPIC"); fi
+          if [ -n "$INPUT_LANGS" ]; then args+=(-p "languages=$INPUT_LANGS"); fi
+          if [ -n "$INPUT_NICHE" ]; then args+=(-p "niche=$INPUT_NICHE"); fi
+          if [ -n "$INPUT_VISUAL_MODE" ] && [ "$INPUT_VISUAL_MODE" != "auto" ]; then
+            args+=(-p "visual_mode=$INPUT_VISUAL_MODE")
+          fi
+          if [ -n "$INPUT_BUDGET" ]; then args+=(-p "budget_usd=$INPUT_BUDGET"); fi
+
+          # Stream live state.json agent progress to GitHub Pages every 15s during execution
+          (
+            last_sig=""
+            while true; do
+              sleep 15
+              sig=$(sha256sum runs/*/state.json 2>/dev/null || true)
+              if [ -n "$sig" ] && [ "$sig" != "$last_sig" ]; then
+                last_sig="$sig"
+                bash .github/scripts/push-gh-pages.sh --no-media --gh-run-url "$RUN_URL" || true
+              fi
+            done
+          ) &
+          WATCHER_PID=$!
+          trap "kill $WATCHER_PID 2>/dev/null || true" EXIT
+
           uv run python -m moderator run youtube_short --headless "${args[@]}"
 
-      - name: Keep the run folder (videos, thumbnails, reports)
+      - name: Upload run artifact (MP4s, thumbnails, captions, QA report, state.json)
         if: always() && steps.gen.outputs.run_dir
         uses: actions/upload-artifact@v4
         with:
@@ -68,7 +121,7 @@ jobs:
             !${{ steps.gen.outputs.run_dir }}/audio
           retention-days: 14
 
-      - name: Save topic history
+      - name: Record topic in history/topics.jsonl
         if: always()
         run: |
           if [ -n "$(git status --porcelain history)" ]; then
@@ -79,7 +132,7 @@ jobs:
             git pull --rebase -q && git push -q
           fi
 
-      - name: Open the review issue
+      - name: Publish Step Summary, Review Issue & GitHub Pages Dashboard
         if: always() && steps.gen.outputs.run_dir
         env:
           GH_TOKEN: ${{ github.token }}
@@ -87,19 +140,35 @@ jobs:
           RUN_ID: ${{ steps.gen.outputs.run_id }}
           OUTCOME: ${{ steps.gen.outputs.outcome }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          PAGES_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
           PYTHONIOENCODING: utf-8
         run: |
           uv run python -m moderator summary "$RUN_DIR" > body.md
           if [ "$OUTCOME" = "waiting" ]; then
             label=short-review
             title="Review Short: $RUN_ID"
-            printf '\n\n---\n**Videos:** download the `short-%s` artifact from %s\n\n' "$RUN_ID" "$RUN_URL" >> body.md
-            printf 'Comment `/approve` to upload (private), `/approve public` or `/approve unlisted`, or `/reject` to discard.\n' >> body.md
+            {
+              echo ""
+              echo "---"
+              echo "### Live Agent Dashboard & Video Preview"
+              echo "- **GitHub Pages Dashboard:** $PAGES_URL"
+              echo "- **Action Artifact:** \`short-$RUN_ID\` at $RUN_URL"
+              echo ""
+              echo "### Publish Commands (Checkpoint C Approval)"
+              echo "- \`/approve\` — upload all generated languages as **private**"
+              echo "- \`/approve unlisted\` — upload as **unlisted**"
+              echo "- \`/approve public\` — upload as **public**"
+              echo "- \`/approve public en\` (or \`fr\` / \`ar\`) — upload only specific language(s)"
+              echo "- \`/reject\` — close without uploading"
+            } >> body.md
           else
             label=short-failed
             title="Short generation failed: $RUN_ID"
-            printf '\n\nLogs: %s\n' "$RUN_URL" >> body.md
+            printf '\n\nDashboard: %s\nLogs: %s\n' "$PAGES_URL" "$RUN_URL" >> body.md
           fi
+          cat body.md >> "$GITHUB_STEP_SUMMARY"
           printf '\n<!-- run_id: %s -->\n<!-- gh_run_id: %s -->\n' "$RUN_ID" "${{ github.run_id }}" >> body.md
           gh label create "$label" --force >/dev/null
-          gh issue create --title "$title" --label "$label" --body-file body.md
+          ISSUE_URL=$(gh issue create --title "$title" --label "$label" --body-file body.md)
+          echo "Review issue created: $ISSUE_URL"
+          bash .github/scripts/push-gh-pages.sh --run-id "$RUN_ID" --issue-url "$ISSUE_URL" --gh-run-url "$RUN_URL" || true

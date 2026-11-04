@@ -2,29 +2,29 @@ import json
 
 from moderator.engine.agent import Agent, StepContext
 from moderator.tools import history, youtube
-from moderator.tools.languages import describe, names
+from moderator.tools.languages import describe, lang_schema, names, normalize_langs, sensitivity_guidance
 
-SCHEMA = {
-    "type": "object",
-    "additionalProperties": False,
-    "required": ["ideas"],
-    "properties": {"ideas": {"type": "array", "minItems": 3, "maxItems": 3, "items": {
+
+def make_schema(langs: list[str]) -> dict:
+    return {
         "type": "object",
         "additionalProperties": False,
-        "required": ["id", "title", "angle", "hook", "keywords", "reason", "sources"],
-        "properties": {
-            "id": {"type": "string", "description": "short slug"},
-            "title": {"type": "string", "description": "working title in English"},
-            "angle": {"type": "string", "description": "what the video shows and why it surprises, 1-2 sentences"},
-            "hook": {"type": "object", "additionalProperties": False, "required": ["ar", "fr"],
-                     "properties": {"ar": {"type": "string"}, "fr": {"type": "string"}},
-                     "description": "opening line, under 3 seconds when spoken"},
-            "keywords": {"type": "array", "items": {"type": "string"}, "description": "search keywords (en, ar, fr)"},
-            "reason": {"type": "string", "description": "why this will perform now, with evidence"},
-            "sources": {"type": "array", "items": {"type": "string"}},
-        },
-    }}},
-}
+        "required": ["ideas"],
+        "properties": {"ideas": {"type": "array", "minItems": 3, "maxItems": 3, "items": {
+            "type": "object",
+            "additionalProperties": False,
+            "required": ["id", "title", "angle", "hook", "keywords", "reason", "sources"],
+            "properties": {
+                "id": {"type": "string", "description": "short slug"},
+                "title": {"type": "string", "description": "working title in English"},
+                "angle": {"type": "string", "description": "what the video shows and why it surprises, 1-2 sentences"},
+                "hook": lang_schema(langs, description="opening line, under 3 seconds when spoken"),
+                "keywords": {"type": "array", "items": {"type": "string"}, "description": f"search keywords ({', '.join(langs)})"},
+                "reason": {"type": "string", "description": "why this will perform now, with evidence"},
+                "sources": {"type": "array", "items": {"type": "string"}},
+            },
+        }}},
+    }
 
 
 class Handler(Agent):
@@ -32,9 +32,9 @@ class Handler(Agent):
         p = ctx.params
         niche = p.get("niche")
         if not niche:
-            raise ValueError("No niche set. Run the niche_discovery workflow first, or pass -p niche=\"...\"")
+            raise ValueError('No niche set. Run the niche_discovery workflow first, or pass -p niche="..."')
         topic = p.get("topic")
-        langs = p.get("languages", ["ar", "fr"])
+        langs = normalize_langs(p.get("languages"))
         ctx.set_inputs(niche=niche, topic=topic, languages=langs)
 
         evidence = ""
@@ -56,15 +56,15 @@ class Handler(Agent):
         prompt = f"""You are a YouTube Shorts trend researcher for a faceless channel.
 Niche: {niche}. {p.get('niche_summary', '')}
 {f'Requested topic: {topic}.' if topic else 'Pick topics yourself.'}
-Audience: {names(langs)} speakers. One script is narrated in each language. How each language is written:
+Audience: {names(langs)} speakers. How each language is written:
 {describe(langs)}
 Style: {p.get('style')}.
 
 {'Use web search to find what is trending or newly discussed in this niche right now.' if tools else 'Use your own knowledge (web search is unavailable).'}
-Propose exactly 3 video ideas, ranked best first. Each must:
-- work as a 45-55 second Short with free stock footage (no film clips, brands, celebrities, or copyrighted characters)
-- appeal to both Arabic and French audiences (avoid topics sensitive in MENA: religion debates, politics, alcohol, dating)
-- have a strong hook that stops scrolling in under 3 seconds, written natively in each language as described above
+Propose exactly 3 video ideas, ranked best first for maximum Shorts retention & views. Each must:
+- work as a fast-paced 34-44 second Short with dynamic free stock video footage (no film clips, brands, celebrities, or copyrighted characters)
+- appeal to {names(langs)} audiences ({sensitivity_guidance(langs)})
+- have an instant pattern-interrupt hook (under 2.5 seconds / max 7 words) targeting a universal everyday experience or counter-intuitive truth so >75% of viewers stay past 3 seconds
 - be factually solid (prefer well-documented facts; note sources)
 
 {evidence}
@@ -72,19 +72,25 @@ Propose exactly 3 video ideas, ranked best first. Each must:
 {avoid}
 
 {ctx.revision_notes()}"""
-        result = await ctx.llm.ask(prompt, schema=SCHEMA, tools=tools)
+        result = await ctx.llm.ask(prompt, schema=make_schema(langs), tools=tools)
         ideas = result["ideas"]
         ctx.progress(90)
 
-        out = ctx.write_json("ideas.json", {"niche": niche, "ideas": ideas})
+        out = ctx.write_json("ideas.json", {"niche": niche, "languages": langs, "ideas": ideas})
         md = [f"# Video ideas: {niche}", ""]
         for i, idea in enumerate(ideas, 1):
-            md += [f"## {i}. {idea['title']}", idea["angle"], "", f"Hook (ar): {idea['hook']['ar']}",
-                   f"Hook (fr): {idea['hook']['fr']}", f"Why now: {idea['reason']}",
-                   f"Keywords: {', '.join(idea['keywords'])}", *[f"- {s}" for s in idea["sources"]], ""]
+            hooks_md = [f"Hook ({code}): {idea['hook'][code]}" for code in langs]
+            md += [f"## {i}. {idea['title']}", idea["angle"], "", *hooks_md,
+                   f"Why now: {idea['reason']}", f"Keywords: {', '.join(idea['keywords'])}",
+                   *[f"- {s}" for s in idea["sources"]], ""]
         ctx.path("ideas.md").write_text("\n".join(md), encoding="utf-8")
         ctx.offer_choices([{
-            "id": idea["id"], "label": f"{i}. {idea['title']}",
-            "detail": f"{idea['angle']}\nHook (fr): {idea['hook']['fr']}\nHook (ar): {idea['hook']['ar']}\nWhy: {idea['reason']}",
+            "id": idea["id"],
+            "label": f"{i}. {idea['title']}",
+            "detail": "\n".join([
+                idea["angle"],
+                *(f"Hook ({code}): {idea['hook'][code]}" for code in langs),
+                f"Why: {idea['reason']}",
+            ]),
         } for i, idea in enumerate(ideas, 1)])
         return {"ideas": "ideas.md", "data": out}

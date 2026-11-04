@@ -1,10 +1,15 @@
-# Claude runs through headless Claude Code on your existing plan (no API key, no per-token bill).
+# Powered by Google Gemini:
+# - `model`: Gemini Flash for reasoning, structured JSON & Google Search grounding
+#   ("flash" -> gemini-3.8-flash -> gemini-3-flash-preview -> gemini-2.5-flash; also "flash-lite" or "pro")
+# - `image_model`: Nano Banana for native 9:16 vertical scene & thumbnail generation
+#   ("banana" -> gemini-nano-banana-2.1 -> gemini-3.1-flash-image -> gemini-2.5-flash-image; also "banana-lite" or "banana-pro")
 llm:
-  model: opus        # opus | sonnet | haiku
-  timeout_s: 900
+  model: flash
+  image_model: banana
+  timeout_s: 600
 
 server:
   host: 127.0.0.1
   port: 8765
 
-# Free API keys go in .env (see .env.example). Agents fall back to keyless sources when one is missing.
+# Set GEMINI_API_KEY (and optional free stock/YouTube keys) in .env (see .env.example).

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Moderator Dashboard</title>
-  <link rel="stylesheet" href="/static/styles.css">
+  <link rel="stylesheet" href="static/styles.css">
   <script>
     try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
   </script>
@@ -14,14 +14,21 @@
     <div class="title">
       <h1 id="wf-title">Loading…</h1>
       <span id="run-id" class="muted mono"></span>
+      <span id="archive-badge" class="badge s-queued" hidden>archived view</span>
+      <span id="pages-badge" class="badge s-running" hidden>GitHub Pages</span>
     </div>
     <div class="top-actions">
+      <a id="gh-actions-btn" class="btn primary link-btn" target="_blank" rel="noopener" hidden>＋ Run Workflow</a>
+      <button id="retry-all-btn" class="btn danger-btn" hidden>Retry failed</button>
+      <select id="run-select" class="run-select" title="Switch run" aria-label="Switch workflow run" hidden></select>
       <span id="run-status" class="badge"></span>
       <button id="theme-toggle" class="icon-btn" title="Toggle light/dark" aria-label="Toggle light or dark theme">◐</button>
     </div>
   </header>
 
   <main>
+    <section id="pages-banner" class="card pages-banner" hidden></section>
+
     <section class="overview card">
       <div class="progress-block">
         <div class="row-between"><span class="label">Overall progress</span><span id="ov-pct" class="mono">0%</span></div>
@@ -29,9 +36,10 @@
       </div>
       <div class="stat"><span class="label">Elapsed</span><span id="ov-elapsed" class="stat-value mono">0:00</span></div>
       <div class="stat"><span class="label">Steps done</span><span id="ov-steps" class="stat-value mono">0/0</span></div>
-      <div class="stat" title="Notional cost reported by Claude Code. Included in your Claude plan, nothing is billed.">
-        <span class="label">Cost (equiv.)</span><span id="ov-cost" class="stat-value mono">$0.00</span>
+      <div class="stat" title="Estimated Gemini Flash + Nano Banana API cost for this run.">
+        <span class="label">Cost</span><span id="ov-cost" class="stat-value mono">$0.00</span>
       </div>
+      <div id="ov-params" class="param-strip" hidden></div>
     </section>
 
     <section id="approvals" class="approvals" hidden></section>
@@ -72,6 +80,6 @@
   </dialog>
 
   <div id="conn" class="conn" hidden>Lost connection to the engine. Retrying…</div>
-  <script src="/static/app.js"></script>
+  <script src="static/app.js"></script>
 </body>
 </html>
