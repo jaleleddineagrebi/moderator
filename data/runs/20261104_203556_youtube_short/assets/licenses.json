@@ -6,28 +6,28 @@
     "page": "https://pixabay.com/videos/id-202753/",
     "author": "Matthias_Groeneveld",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "man speaking microphone",
-    "description": "A man speaking animatedly into a microphone in front of a blurred crowd."
+    "query": "man shouting megaphone",
+    "description": "A man shouting through a megaphone in a public space, appearing very confident."
   },
   {
     "scene": "scene_02",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-170294/",
-    "author": "Matthias_Groeneveld",
+    "page": "https://pixabay.com/videos/id-4939/",
+    "author": "motion5",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "clockwork gears",
-    "description": "Abstract animation of mechanical gears turning inside a stylized human head."
+    "query": "mechanical gears turning",
+    "description": "Abstract animation of glowing blue gears and neural connections inside a dark space."
   },
   {
     "scene": "scene_03",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-149452/",
-    "author": "Matthias_Groeneveld",
+    "page": "https://pixabay.com/videos/id-213633/",
+    "author": "LynX_BGW",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "man hiking summit",
-    "description": "A man standing triumphantly on a small rocky hill looking out at a horizon."
+    "query": "man standing peak",
+    "description": "A man standing on top of a small rocky hill, looking out at a wide horizon with arms crossed."
   },
   {
     "scene": "scene_04",
@@ -36,8 +36,8 @@
     "page": "https://pixabay.com/videos/id-135877/",
     "author": "stefaniejockschat",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "stacks of books",
-    "description": "A man sitting at a desk surrounded by high stacks of books looking overwhelmed."
+    "query": "piles of books",
+    "description": "A man sitting at a desk covered in massive stacks of open books, looking overwhelmed and thoughtful."
   },
   {
     "scene": "scene_05",
@@ -46,8 +46,8 @@
     "page": "https://pixabay.com/videos/id-10822/",
     "author": "Coverr-Free-Footage",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "skilled hands working",
-    "description": "Close up of hands performing a highly skilled craft like watchmaking or wood carving."
+    "query": "watchmaker hands working",
+    "description": "Extreme close-up of a man's hands carefully repairing the tiny parts of a mechanical watch."
   },
   {
     "scene": "scene_06",
@@ -56,17 +56,17 @@
     "page": "https://pixabay.com/videos/id-179777/",
     "author": "Matthias_Groeneveld",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "telescope lens",
-    "description": "A person looking through a telescope at a vast starry night sky."
+    "query": "telescope looking sky",
+    "description": "A man looking through a large telescope at a vast, clear starry sky at night."
   },
   {
     "scene": "scene_07",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-215094/",
-    "author": "u_mv4esujzr4",
+    "page": "https://pixabay.com/videos/id-149452/",
+    "author": "Matthias_Groeneveld",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "man walking street",
-    "description": "A man walking calmly through a busy city sidewalk disappearing into the crowd."
+    "query": "man walking crowd",
+    "description": "A man walking away through a busy city crowd, disappearing into the motion."
   }
 ]
