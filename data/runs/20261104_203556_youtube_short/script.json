@@ -3,15 +3,15 @@
   "scenes": [
     {
       "vo": {
-        "en": "The loudest people are usually clueless.",
-        "fr": "Les plus bruyants sont souvent ignorants."
+        "en": "Clueless people are usually the loudest...",
+        "fr": "Les ignorants sont souvent les plus bruyants..."
       },
       "on_screen": {
-        "en": "Confidence vs. Skill",
-        "fr": "Confiance vs. Compétence"
+        "en": "The Loudest Voices",
+        "fr": "Les Voix les Plus Fortes"
       },
       "visual": {
-        "description": "A man shouting through a megaphone in a public space, appearing very confident.",
+        "description": "A man shouting through a megaphone in a crowded city square, looking highly confident.",
         "search_terms": [
           "man shouting megaphone",
           "person arguing loudly",
@@ -23,18 +23,18 @@
     },
     {
       "vo": {
-        "en": "It’s called the Dunning-Kruger effect. A psychological glitch where having very little skill actually creates a massive surge of confidence.",
-        "fr": "C’est l’effet Dunning-Kruger. Un biais mental où le manque de compétence génère paradoxalement une confiance absolue."
+        "en": "It’s the Dunning-Kruger effect. A mental glitch where knowing very little makes you feel like an absolute expert.",
+        "fr": "C’est l’effet Dunning-Kruger. Un court-circuit mental où l'ignorance totale te donne l'illusion du génie."
       },
       "on_screen": {
-        "en": "The Dunning-Kruger Effect",
-        "fr": "L'Effet Dunning-Kruger"
+        "en": "The Mental Glitch",
+        "fr": "Le Court-Circuit Mental"
       },
       "visual": {
-        "description": "Abstract animation of glowing blue gears and neural connections inside a dark space.",
+        "description": "Abstract blue digital data lines and connection points moving across a dark screen.",
         "search_terms": [
-          "mechanical gears turning",
-          "abstract brain animation",
+          "abstract network connection",
+          "data flow digital",
           "connection lines"
         ],
         "prefer": "video"
@@ -43,15 +43,15 @@
     },
     {
       "vo": {
-        "en": "Beginners climb 'Mount Ignorant.' They don’t know enough yet to see their own gaps, so they feel like masters instantly.",
-        "fr": "Les débutants grimpent au 'Sommet de l'ignorance'. Ils ignorent leurs propres lacunes, ce qui leur donne l'illusion d'être experts."
+        "en": "Beginners climb 'Mount Ignorant.' They lack the perspective to see their own gaps, so confidence peaks early.",
+        "fr": "Les débutants grimpent au 'Sommet de l’ignorance'. Ils n'ont pas assez de recul pour voir leurs propres lacunes."
       },
       "on_screen": {
         "en": "Mount Ignorant",
-        "fr": "Le Sommet de l'Ignorance"
+        "fr": "Sommet de l'Ignorance"
       },
       "visual": {
-        "description": "A man standing on top of a small rocky hill, looking out at a wide horizon with arms crossed.",
+        "description": "A man standing triumphantly on top of a small rocky hill, arms spread wide against the horizon.",
         "search_terms": [
           "man standing peak",
           "hiker on hill",
@@ -63,15 +63,15 @@
     },
     {
       "vo": {
-        "en": "But once you start learning more, the reality hits. Your confidence crashes as you realize how deep the subject really goes.",
-        "fr": "Mais dès que tu apprends, la réalité frappe. Ta confiance s'effondre en découvrant la complexité du sujet."
+        "en": "But as soon as you study deeper, that confidence crashes. You realize just how much you don't know.",
+        "fr": "Mais dès que tu approfondis, cette confiance s’effondre. Tu réalises l'immensité de ce qu'il te reste à apprendre."
       },
       "on_screen": {
-        "en": "The Reality Check",
+        "en": "The Reality Crash",
         "fr": "Le Choc de Réalité"
       },
       "visual": {
-        "description": "A man sitting at a desk covered in massive stacks of open books, looking overwhelmed and thoughtful.",
+        "description": "A man at a desk surrounded by massive stacks of old books, looking overwhelmed and thoughtful.",
         "search_terms": [
           "piles of books",
           "man studying desk",
@@ -83,15 +83,15 @@
     },
     {
       "vo": {
-        "en": "True experts actually doubt themselves. They assume that if a task is easy for them, it must be easy for everyone else too.",
-        "fr": "Les vrais experts, eux, doutent souvent. Ils pensent que si c’est facile pour eux, ça l’est pour tout le monde."
+        "en": "True experts actually doubt themselves. They assume if something is easy for them, it's easy for everyone.",
+        "fr": "Les vrais experts, eux, doutent souvent. Ils pensent que si une tâche est facile pour eux, elle l'est pour tous."
       },
       "on_screen": {
         "en": "The Expert Paradox",
         "fr": "Le Paradoxe de l'Expert"
       },
       "visual": {
-        "description": "Extreme close-up of a man's hands carefully repairing the tiny parts of a mechanical watch.",
+        "description": "A man's hands performing extremely precise work on the tiny internal gears of a watch.",
         "search_terms": [
           "watchmaker hands working",
           "precision craft work",
@@ -103,18 +103,18 @@
     },
     {
       "vo": {
-        "en": "Real wisdom, ce n'est pas d'avoir toutes les réponses. It’s the quiet ability to admit how much you still have to learn.",
-        "fr": "La sagesse, ce n'est pas d'avoir toutes les réponses. C’est avoir l’humilité d’admettre tout ce qu’il te reste à apprendre."
+        "en": "Real wisdom isn't about having all the answers. It's the quiet strength of admitting there's always more to learn.",
+        "fr": "La sagesse, ce n'est pas d'avoir toutes les réponses. C’est la force d’admettre que l’apprentissage n’est jamais fini."
       },
       "on_screen": {
-        "en": "True Wisdom",
+        "en": "The True Wisdom",
         "fr": "La Vraie Sagesse"
       },
       "visual": {
-        "description": "A man looking through a large telescope at a vast, clear starry sky at night.",
+        "description": "A man looking through a large telescope at a vast, clear starry sky during the night.",
         "search_terms": [
           "telescope looking sky",
-          "starry night timelapse",
+          "starry night sky",
           "ocean waves"
         ],
         "prefer": "video"
@@ -123,15 +123,15 @@
     },
     {
       "vo": {
-        "en": "So when you see total certainty, remember that...",
-        "fr": "Alors devant une certitude absolue, rappelle-toi que..."
+        "en": "So when you wonder why...",
+        "fr": "Alors, si tu te demandes pourquoi..."
       },
       "on_screen": {
         "en": "Stay Humble",
         "fr": "Reste Humble"
       },
       "visual": {
-        "description": "A man walking away through a busy city crowd, disappearing into the motion.",
+        "description": "A man walking away through a busy urban crowd, becoming part of the motion.",
         "search_terms": [
           "man walking crowd",
           "busy sidewalk motion",
@@ -148,7 +148,7 @@
     "fr"
   ],
   "estimated_seconds": {
-    "en": 43.6,
-    "fr": 44.7
+    "en": 36.4,
+    "fr": 43.0
   }
 }
