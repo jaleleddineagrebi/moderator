@@ -1,0 +1,72 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-202753/",
+    "author": "Matthias_Groeneveld",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man speaking microphone",
+    "description": "A man speaking animatedly into a microphone in front of a blurred crowd."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-170294/",
+    "author": "Matthias_Groeneveld",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "clockwork gears",
+    "description": "Abstract animation of mechanical gears turning inside a stylized human head."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-149452/",
+    "author": "Matthias_Groeneveld",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man hiking summit",
+    "description": "A man standing triumphantly on a small rocky hill looking out at a horizon."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-135877/",
+    "author": "stefaniejockschat",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "stacks of books",
+    "description": "A man sitting at a desk surrounded by high stacks of books looking overwhelmed."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-10822/",
+    "author": "Coverr-Free-Footage",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "skilled hands working",
+    "description": "Close up of hands performing a highly skilled craft like watchmaking or wood carving."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-179777/",
+    "author": "Matthias_Groeneveld",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "telescope lens",
+    "description": "A person looking through a telescope at a vast starry night sky."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-215094/",
+    "author": "u_mv4esujzr4",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man walking street",
+    "description": "A man walking calmly through a busy city sidewalk disappearing into the crowd."
+  }
+]
