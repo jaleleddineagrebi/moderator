@@ -1,12 +1,12 @@
 {
   "passed": false,
-  "revision_round": 0,
+  "revision_round": 1,
   "checks": [
     {
       "check": "length",
       "lang": "en",
       "ok": true,
-      "detail": "41.7s (must be under 60s; target 32-50s)",
+      "detail": "47.8s (must be under 60s; target 32-50s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -14,7 +14,7 @@
       "check": "target length",
       "lang": "en",
       "ok": true,
-      "detail": "41.7s",
+      "detail": "47.8s",
       "send_to": null,
       "severity": "minor"
     },
@@ -46,7 +46,7 @@
       "check": "loudness",
       "lang": "en",
       "ok": true,
-      "detail": "-14.5 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)",
+      "detail": "-14.4 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -54,7 +54,7 @@
       "check": "hook timing",
       "lang": "en",
       "ok": true,
-      "detail": "scene_01 spoken in 3.0s (target <= 3s)",
+      "detail": "scene_01 spoken in 2.6s (target <= 3s)",
       "send_to": null,
       "severity": "minor"
     },
@@ -62,7 +62,7 @@
       "check": "caption sync",
       "lang": "en",
       "ok": true,
-      "detail": "96 words, 36 caption events",
+      "detail": "120 words, 44 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -70,7 +70,7 @@
       "check": "length",
       "lang": "fr",
       "ok": true,
-      "detail": "38.0s (must be under 60s; target 32-50s)",
+      "detail": "45.1s (must be under 60s; target 32-50s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -78,7 +78,7 @@
       "check": "target length",
       "lang": "fr",
       "ok": true,
-      "detail": "38.0s",
+      "detail": "45.1s",
       "send_to": null,
       "severity": "minor"
     },
@@ -110,7 +110,7 @@
       "check": "loudness",
       "lang": "fr",
       "ok": true,
-      "detail": "-13.8 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)",
+      "detail": "-14.2 LUFS, peak -1.3 dBFS (target -14 LUFS, peak <= -1)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -118,7 +118,7 @@
       "check": "hook timing",
       "lang": "fr",
       "ok": true,
-      "detail": "scene_01 spoken in 2.5s (target <= 3s)",
+      "detail": "scene_01 spoken in 2.7s (target <= 3s)",
       "send_to": null,
       "severity": "minor"
     },
@@ -126,7 +126,7 @@
       "check": "caption sync",
       "lang": "fr",
       "ok": true,
-      "detail": "87 words, 33 caption events",
+      "detail": "105 words, 39 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -147,26 +147,10 @@
       "severity": "blocker"
     },
     {
-      "check": "accuracy review",
+      "check": "grammar review",
       "lang": "en",
       "ok": false,
-      "detail": "The Dunning-Kruger chart commonly refers to the first stage as 'Mount Stupid' rather than 'Mount Ignorant'. Change narration to 'Peak of Mount Stupid' for better recognition.",
-      "send_to": "script",
-      "severity": "minor"
-    },
-    {
-      "check": "accuracy review",
-      "lang": "fr",
-      "ok": false,
-      "detail": "In French, the term is usually 'Mont de la stupidité'. Change 'Sommet de l'ignorance' to 'Mont de la stupidité' to match the scientific term's popular name.",
-      "send_to": "script",
-      "severity": "minor"
-    },
-    {
-      "check": "grammar review",
-      "lang": "fr",
-      "ok": false,
-      "detail": "In scene_06, the French narration says 'La sagesse n'est pas d'avoir toutes les réponses'. To be grammatically correct and natural, use 'La sagesse, ce n'est pas d'avoir toutes les réponses'.",
+      "detail": "Scene 06 contains a phrase in French ('ce n'est pas d'avoir toutes les réponses') instead of English. Fix the VO to: 'Real wisdom isn't about having all the answers.'",
       "send_to": "script",
       "severity": "blocker"
     },

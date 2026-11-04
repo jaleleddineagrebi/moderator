@@ -1,24 +1,22 @@
 # QA report: CHANGES NEEDED
 
-- ✅ **length** [en]: 41.7s (must be under 60s; target 32-50s)
-- ✅ **target length** [en]: 41.7s
+- ✅ **length** [en]: 47.8s (must be under 60s; target 32-50s)
+- ✅ **target length** [en]: 47.8s
 - ✅ **aspect ratio** [en]: 1080x1920
 - ✅ **video codec** [en]: h264
 - ✅ **audio track** [en]: present
-- ✅ **loudness** [en]: -14.5 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)
-- ✅ **hook timing** [en]: scene_01 spoken in 3.0s (target <= 3s)
-- ✅ **caption sync** [en]: 96 words, 36 caption events
-- ✅ **length** [fr]: 38.0s (must be under 60s; target 32-50s)
-- ✅ **target length** [fr]: 38.0s
+- ✅ **loudness** [en]: -14.4 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)
+- ✅ **hook timing** [en]: scene_01 spoken in 2.6s (target <= 3s)
+- ✅ **caption sync** [en]: 120 words, 44 caption events
+- ✅ **length** [fr]: 45.1s (must be under 60s; target 32-50s)
+- ✅ **target length** [fr]: 45.1s
 - ✅ **aspect ratio** [fr]: 1080x1920
 - ✅ **video codec** [fr]: h264
 - ✅ **audio track** [fr]: present
-- ✅ **loudness** [fr]: -13.8 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)
-- ✅ **hook timing** [fr]: scene_01 spoken in 2.5s (target <= 3s)
-- ✅ **caption sync** [fr]: 87 words, 33 caption events
+- ✅ **loudness** [fr]: -14.2 LUFS, peak -1.3 dBFS (target -14 LUFS, peak <= -1)
+- ✅ **hook timing** [fr]: scene_01 spoken in 2.7s (target <= 3s)
+- ✅ **caption sync** [fr]: 105 words, 39 caption events
 - ✅ **visual licenses**: 7 assets: pixabay
 - ✅ **audio licenses**: music: original work, no third-party rights; sfx: original work, no third-party rights; voice: synthetic voice; no third-party performance rights
-- ⚠️ **accuracy review** [en]: The Dunning-Kruger chart commonly refers to the first stage as 'Mount Stupid' rather than 'Mount Ignorant'. Change narration to 'Peak of Mount Stupid' for better recognition.
-- ⚠️ **accuracy review** [fr]: In French, the term is usually 'Mont de la stupidité'. Change 'Sommet de l'ignorance' to 'Mont de la stupidité' to match the scientific term's popular name.
-- ❌ **grammar review** [fr]: In scene_06, the French narration says 'La sagesse n'est pas d'avoir toutes les réponses'. To be grammatically correct and natural, use 'La sagesse, ce n'est pas d'avoir toutes les réponses'. → sent to script
+- ❌ **grammar review** [en]: Scene 06 contains a phrase in French ('ce n'est pas d'avoir toutes les réponses') instead of English. Fix the VO to: 'Real wisdom isn't about having all the answers.' → sent to script
 - ✅ **people rule**: no women beyond face close-ups in 7 scenes and 2 thumbnail(s)
