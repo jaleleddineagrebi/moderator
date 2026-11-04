@@ -1,0 +1,76 @@
+{
+  "niche": "Psychology & human behavior (biases, habits, social dynamics)",
+  "languages": [
+    "en",
+    "fr"
+  ],
+  "ideas": [
+    {
+      "id": "unskilled-confidence-trap",
+      "title": "Why Beginners Feel Like Experts",
+      "angle": "This video explains the Dunning-Kruger effect through the 'Peak of Mount Ignorant,' showing why people with the least knowledge often have the most confidence while experts doubt themselves.",
+      "hook": {
+        "en": "Why are the least talented people so confident?",
+        "fr": "Pourquoi les moins doués sont-ils si confiants ?"
+      },
+      "keywords": [
+        "Dunning-Kruger effect",
+        "psychology of confidence",
+        "cognitive bias",
+        "effet Dunning-Kruger",
+        "psychologie confiance en soi",
+        "biais cognitif"
+      ],
+      "reason": "Educational 'aha' moments about social frustrations perform well; the Dunning-Kruger effect currently sees high search volume on TikTok and Reels as people seek to explain online behavior.",
+      "sources": [
+        "Journal of Personality and Social Psychology (Kruger & Dunning, 1999)",
+        "Psychology Today: The Dunning-Kruger Effect"
+      ]
+    },
+    {
+      "id": "choice-paralysis-hack",
+      "title": "Why Having Options Makes You Miserable",
+      "angle": "The Paradox of Choice reveals that more options lead to less satisfaction and higher anxiety. It explains why you can't pick a movie on Netflix or a meal at a restaurant.",
+      "hook": {
+        "en": "Too many choices are ruining your happiness.",
+        "fr": "Trop de choix gâchent ton bonheur."
+      },
+      "keywords": [
+        "Paradox of choice",
+        "decision fatigue",
+        "psychology of happiness",
+        "paradoxe du choix",
+        "fatigue décisionnelle",
+        "psychologie du bonheur"
+      ],
+      "reason": "Universal relatability regarding digital era 'overload.' Shorts focusing on daily frustrations like 'scrolling forever' see high retention rates due to instant recognition.",
+      "sources": [
+        "Barry Schwartz: The Paradox of Choice",
+        "American Psychological Association: Decision Fatigue"
+      ]
+    },
+    {
+      "id": "proprioception-sixth-sense",
+      "title": "Your Hidden Sixth Sense",
+      "angle": "Most people think we only have five senses, but Proprioception—your brain's ability to know where your limbs are without looking—is what actually stops you from falling over.",
+      "hook": {
+        "en": "You actually have a sixth sense.",
+        "fr": "Tu as en réalité un sixième sens."
+      },
+      "keywords": [
+        "Proprioception",
+        "human senses",
+        "brain facts",
+        "body awareness",
+        "proprioception",
+        "sens humains",
+        "faits sur le cerveau"
+      ],
+      "reason": "The 'fact-check' style hook (debunking the 5-senses myth) creates a curiosity gap. Biology-based psychology facts have a high 'shareability' factor on mobile platforms.",
+      "sources": [
+        "Harvard Medical School: The Science of Proprioception",
+        "Nature Neuroscience: Body Awareness"
+      ]
+    }
+  ]
+}
