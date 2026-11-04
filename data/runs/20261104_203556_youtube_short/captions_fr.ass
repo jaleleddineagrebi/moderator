@@ -1,0 +1,54 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:02.65,Headline,,0,0,0,,{\fad(150,150)}Confiance vs. Savoir
+Dialogue: 1,0:00:02.75,0:00:08.57,Headline,,0,0,0,,{\fad(150,150)}L'effet Dunning-Kruger
+Dialogue: 1,0:00:08.67,0:00:15.08,Headline,,0,0,0,,{\fad(150,150)}Le Sommet de l'ignorance
+Dialogue: 1,0:00:15.18,0:00:20.81,Headline,,0,0,0,,{\fad(150,150)}Le Choc de Réalité
+Dialogue: 1,0:00:20.91,0:00:26.75,Headline,,0,0,0,,{\fad(150,150)}Le Paradoxe de l'Expert
+Dialogue: 1,0:00:26.85,0:00:32.54,Headline,,0,0,0,,{\fad(150,150)}La Vraie Sagesse
+Dialogue: 1,0:00:32.64,0:00:37.95,Headline,,0,0,0,,{\fad(150,150)}Reste Humble
+Dialogue: 0,0:00:00.10,0:00:00.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Les plus bruyants
+Dialogue: 0,0:00:00.94,0:00:01.65,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}en savent moins
+Dialogue: 0,0:00:02.80,0:00:04.10,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}C'est l'effet Dunning-Kruger
+Dialogue: 0,0:00:04.44,0:00:05.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}un biais mental
+Dialogue: 0,0:00:05.14,0:00:06.35,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}où l'incompétence génère
+Dialogue: 0,0:00:06.36,0:00:07.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}une confiance extrême
+Dialogue: 0,0:00:08.72,0:00:09.87,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Les débutants atteignent
+Dialogue: 0,0:00:09.88,0:00:10.55,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}le Sommet de
+Dialogue: 0,0:00:10.57,0:00:11.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}l'ignorance
+Dialogue: 0,0:00:11.60,0:00:12.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}se croyant experts
+Dialogue: 0,0:00:12.69,0:00:13.38,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}car ils ignorent
+Dialogue: 0,0:00:13.39,0:00:14.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}leurs lacunes
+Dialogue: 0,0:00:15.23,0:00:16.17,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Mais en apprenant
+Dialogue: 0,0:00:16.41,0:00:17.47,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}tu réalises l'étendue
+Dialogue: 0,0:00:17.48,0:00:18.04,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}du sujet
+Dialogue: 0,0:00:18.39,0:00:19.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}et ta confiance
+Dialogue: 0,0:00:19.09,0:00:19.79,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}s'effondre
+Dialogue: 0,0:00:20.96,0:00:21.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Les vrais experts
+Dialogue: 0,0:00:21.86,0:00:23.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}se sous-estiment pensant
+Dialogue: 0,0:00:23.37,0:00:23.77,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}que tout le
+Dialogue: 0,0:00:23.77,0:00:24.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}monde maîtrise le
+Dialogue: 0,0:00:24.62,0:00:25.46,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}sujet aussi bien
+Dialogue: 0,0:00:25.47,0:00:25.87,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}qu'eux
+Dialogue: 0,0:00:26.90,0:00:27.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}La sagesse n'est
+Dialogue: 0,0:00:27.73,0:00:28.45,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}pas d'avoir toutes
+Dialogue: 0,0:00:28.46,0:00:29.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}les réponses
+Dialogue: 0,0:00:29.47,0:00:30.31,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}mais d'admettre tout
+Dialogue: 0,0:00:30.32,0:00:30.92,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}ce qu'il reste
+Dialogue: 0,0:00:30.93,0:00:31.53,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}à apprendre
+Dialogue: 0,0:00:32.69,0:00:33.59,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Alors quand quelqu'un
+Dialogue: 0,0:00:33.60,0:00:34.26,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}parle avec une
+Dialogue: 0,0:00:34.27,0:00:36.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}certitude absolue souviens-toi
+Dialogue: 0,0:00:36.13,0:00:36.53,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}que
