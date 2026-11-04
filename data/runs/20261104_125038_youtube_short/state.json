@@ -273,6 +273,11 @@
           "ts": "2026-11-04T12:50:38+00:00",
           "level": "warning",
           "msg": "Google Search grounding unavailable on current tier/quota; continuing with Gemini Flash directly"
+        },
+        {
+          "ts": "2026-11-04T12:51:08+00:00",
+          "level": "warning",
+          "msg": "Gemini connection timed out on default route; retrying over IPv4"
         }
       ],
       "errors": [],
@@ -453,7 +458,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-04T12:50:55+00:00",
+    "exported_at": "2026-11-04T12:51:12+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/41832696013"
   }
