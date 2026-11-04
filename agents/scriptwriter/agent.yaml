@@ -5,3 +5,4 @@ outputs: [script.json, script.md]
 tools: [Gemini Flash]
 strategies: [default, tighter_word_budget, simpler_structure]
 timeout_s: 1200
+complexity: high

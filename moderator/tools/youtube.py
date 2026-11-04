@@ -19,9 +19,10 @@ async def top_recent_shorts(query: str, language: str, days: int = 30, limit: in
     """Most viewed short videos for a query over the last `days`, with view counts."""
     key = os.environ["YOUTUBE_API_KEY"]
     after = (datetime.now(timezone.utc) - timedelta(days=days)).strftime("%Y-%m-%dT%H:%M:%SZ")
-    async with httpx.AsyncClient(timeout=30) as client:
+    # key in a header, not the URL, so it never shows up in error messages
+    async with httpx.AsyncClient(timeout=30, headers={"x-goog-api-key": key}) as client:
         r = await client.get(f"{API}/search", params={
-            "key": key, "part": "snippet", "q": query, "type": "video", "videoDuration": "short",
+            "part": "snippet", "q": query, "type": "video", "videoDuration": "short",
             "order": "viewCount", "publishedAfter": after, "relevanceLanguage": language, "maxResults": limit,
         })
         r.raise_for_status()
@@ -29,7 +30,7 @@ async def top_recent_shorts(query: str, language: str, days: int = 30, limit: in
         ids = [i["id"]["videoId"] for i in items]
         if not ids:
             return []
-        r = await client.get(f"{API}/videos", params={"key": key, "part": "statistics,snippet", "id": ",".join(ids)})
+        r = await client.get(f"{API}/videos", params={"part": "statistics,snippet", "id": ",".join(ids)})
         r.raise_for_status()
         return [{
             "title": v["snippet"]["title"],

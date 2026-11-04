@@ -87,6 +87,61 @@ IMAGE_PRICING_USD: dict[str, float] = {
 }
 
 
+# The moderator picks the model per task: each agent declares a `complexity` in agent.yaml (low/medium/high),
+# a call may override it, and every retry moves one level up. config.yaml `llm.tiers` overrides these defaults.
+COMPLEXITY_LEVELS = ["low", "medium", "high"]
+DEFAULT_TIERS: dict[str, dict[str, str]] = {
+    "low": {"model": "flash-lite", "thinking": "minimal"},   # formatting, metadata, simple checks
+    "medium": {"model": "flash", "thinking": "low"},         # research, review
+    "high": {"model": "flash", "thinking": "high"},          # creative writing, strategy
+}
+# Retry the same model once after a transient error (503 high demand / per-minute 429) before moving on
+TRANSIENT_RETRY_DELAY_S = 2.0
+MAX_RETRY_AFTER_S = 60.0
+# Models that hit their daily quota or are not enabled, per API key, for the life of this process (= one run)
+_EXHAUSTED_MODELS: dict[str, set[str]] = {}
+
+
+def escalate(complexity: str, steps: int) -> str:
+    level = complexity if complexity in COMPLEXITY_LEVELS else "medium"
+    return COMPLEXITY_LEVELS[min(COMPLEXITY_LEVELS.index(level) + max(steps, 0), len(COMPLEXITY_LEVELS) - 1)]
+
+
+def thinking_config(model_id: str, level: str | None) -> dict | None:
+    """generationConfig.thinkingConfig for a model: Gemini 3 takes a level, Gemini 2.5 a token budget."""
+    m = model_id.lower()
+    if not level or "image" in m or "banana" in m:
+        return None
+    if m.startswith("gemini-2.5"):
+        budget = {"minimal": 0, "low": 1024, "medium": 4096, "high": -1}.get(level, -1)
+        if "pro" in m and budget == 0:
+            budget = 128  # 2.5 Pro cannot turn thinking off
+        return {"thinkingBudget": budget}
+    if "pro" in m:  # Gemini 3 Pro only has low / high
+        level = "low" if level in ("minimal", "low") else "high"
+    return {"thinkingLevel": level}
+
+
+def classify_429(resp: httpx.Response) -> tuple[bool, float]:
+    """(daily quota exhausted?, suggested retry delay in seconds) from a 429 error body."""
+    try:
+        details = (resp.json().get("error") or {}).get("details") or []
+    except Exception:  # noqa: BLE001 - non-JSON body
+        return False, 0.0
+    daily, delay = False, 0.0
+    for d in details:
+        kind = d.get("@type", "")
+        if kind.endswith("QuotaFailure"):
+            for v in d.get("violations") or []:
+                if "perday" in (v.get("quotaId", "") + v.get("quotaMetric", "")).lower():
+                    daily = True
+        elif kind.endswith("RetryInfo"):
+            m = re.match(r"([\d.]+)s", str(d.get("retryDelay", "")))
+            if m:
+                delay = float(m.group(1))
+    return daily, delay
+
+
 def api_key_available() -> bool:
     return bool(os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY"))
 
@@ -164,9 +219,17 @@ class GeminiClient:
 
     def __init__(self, ctx: StepContext, config: dict):
         self.ctx = ctx
-        self.model = config.get("model", "flash")
+        self.model = config.get("model")  # optional: forces one text model for every task
         self.image_model = config.get("image_model", "banana")
         self.timeout_s = float(config.get("timeout_s", 600))
+        self.tiers = {lvl: {**DEFAULT_TIERS[lvl], **((config.get("tiers") or {}).get(lvl) or {})} for lvl in COMPLEXITY_LEVELS}
+
+    def route(self, complexity: str | None = None) -> tuple[str, str, str]:
+        """(complexity, model alias, thinking level) for this call. Retries escalate one level per attempt."""
+        base = complexity or getattr(self.ctx, "complexity", "medium")
+        level = escalate(base, int(getattr(self.ctx, "attempt", 1) or 1) - 1)
+        tier = self.tiers[level]
+        return level, self.model or tier["model"], tier.get("thinking") or ""
 
     async def _request_once(self, client: httpx.AsyncClient, url: str, headers: dict[str, str], body: dict[str, Any]) -> httpx.Response:
         global _FORCE_IPV4
@@ -181,12 +244,47 @@ class GeminiClient:
             async with _make_async_client(self.timeout_s, ipv4_only=True) as v4_client:
                 return await v4_client.post(url, headers=headers, json=body)
 
-    async def _post(self, candidates: list[str], body: dict[str, Any], *, remember_model: bool = False) -> tuple[str, dict[str, Any]]:
+    @staticmethod
+    def _body_for(body: dict[str, Any], model_id: str, thinking: str | None) -> dict[str, Any]:
+        tc = thinking_config(model_id, thinking)
+        if not tc:
+            return body
+        return {**body, "generationConfig": {**(body.get("generationConfig") or {}), "thinkingConfig": tc}}
+
+    async def _call_model(self, client: httpx.AsyncClient, url: str, headers: dict[str, str],
+                          body: dict[str, Any], model_id: str, searching: bool) -> httpx.Response:
+        """One model, retried once on a transient error (5xx, per-minute 429) or a rejected thinking setting."""
+        r = await self._request_once(client, url, headers, body)
+        if r.status_code == 400 and "thinking" in r.text.lower() and "thinkingConfig" in (body.get("generationConfig") or {}):
+            self.ctx.log(f"'{model_id}' rejected the thinking setting; retrying without it", "warning")
+            gen = {k: v for k, v in body["generationConfig"].items() if k != "thinkingConfig"}
+            return await self._request_once(client, url, headers, {**body, "generationConfig": gen})
+        if r.status_code in (500, 502, 503, 504):
+            self.ctx.log(f"'{model_id}' returned {r.status_code}; retrying once in {TRANSIENT_RETRY_DELAY_S:.0f}s", "warning")
+            await asyncio.sleep(TRANSIENT_RETRY_DELAY_S)
+            return await self._request_once(client, url, headers, body)
+        if r.status_code == 429 and not searching:
+            daily, delay = classify_429(r)
+            if not daily and 0 < delay <= MAX_RETRY_AFTER_S:
+                self.ctx.log(f"'{model_id}' per-minute limit reached; waiting {delay:.0f}s", "warning")
+                await asyncio.sleep(delay)
+                return await self._request_once(client, url, headers, body)
+        return r
+
+    async def _post(self, candidates: list[str], body: dict[str, Any], *, remember_model: bool = False,
+                    thinking: str | None = None) -> tuple[str, dict[str, Any]]:
         key = _get_api_key()
-        if remember_model and _WORKING_MODEL_BY_KEY.get(key) in candidates:
-            pref = _WORKING_MODEL_BY_KEY[key]
+        exhausted = _EXHAUSTED_MODELS.setdefault(key, set())
+        chain_id = f"{key}|{candidates[0]}"  # remember the working model per chain, so tiers never borrow each other's
+        usable = [m for m in candidates if m not in exhausted]
+        if not usable:
+            raise LLMError(f"Gemini API 429: daily quota used up (or model not enabled) for {', '.join(candidates)}")
+        candidates = usable
+        if remember_model and _WORKING_MODEL_BY_KEY.get(chain_id) in candidates:
+            pref = _WORKING_MODEL_BY_KEY[chain_id]
             candidates = [pref] + [m for m in candidates if m != pref]
         headers = {"x-goog-api-key": key, "Content-Type": "application/json"}
+        searching = "tools" in body
         bases = _candidate_api_bases(key)
         last_err = ""
         probe_timeout = min(self.timeout_s, 30.0) if not _FORCE_IPV4 else self.timeout_s
@@ -194,20 +292,21 @@ class GeminiClient:
             for b_idx, base in enumerate(bases):
                 switch_base = False
                 for idx, model_id in enumerate(candidates):
-                    r = await self._request_once(client, f"{base}/{model_id}:generateContent", headers, body)
+                    r = await self._call_model(client, f"{base}/{model_id}:generateContent", headers,
+                                               self._body_for(body, model_id, thinking), model_id, searching)
                     if r.status_code == 200:
                         _WORKING_BASE_BY_KEY[key] = base
                         if remember_model:
-                            _WORKING_MODEL_BY_KEY[key] = model_id
+                            _WORKING_MODEL_BY_KEY[chain_id] = model_id
                         return model_id, r.json()
-                    # Fall back to next candidate model on 404 (not enabled), 429 (quota/RPM), or 5xx (503 high demand)
+                    # Daily quota gone or model not enabled: skip this model for the rest of the run
+                    if r.status_code == 404 or (r.status_code == 429 and not searching and classify_429(r)[0]):
+                        exhausted.add(model_id)
+                        self.ctx.log(f"'{model_id}' is {'not enabled' if r.status_code == 404 else 'out of daily quota'}; "
+                                     "skipping it for the rest of this run", "warning")
                     if r.status_code in (404, 429, 500, 502, 503, 504) and idx + 1 < len(candidates):
-                        self.ctx.log(
-                            f"Model '{model_id}' returned {r.status_code}; falling back to '{candidates[idx + 1]}'",
-                            "warning",
-                        )
-                        if r.status_code in (429, 503):
-                            await asyncio.sleep(0.4)
+                        self.ctx.log(f"Model '{model_id}' returned {r.status_code}; falling back to '{candidates[idx + 1]}'",
+                                     "warning")
                         continue
                     # If this key belongs to Vertex Express rather than AI Studio, try next base
                     if r.status_code in (400, 401, 403) and b_idx + 1 < len(bases) and (
@@ -225,12 +324,24 @@ class GeminiClient:
                     break
         raise LLMError(last_err or "No Gemini models succeeded")
 
+    def _charge(self, model_id: str, data: dict) -> str:
+        """Add the call's cost (thinking tokens are billed as output) and return a short token summary."""
+        usage = data.get("usageMetadata") or {}
+        prompt_t = usage.get("promptTokenCount", 0)
+        out_t = usage.get("candidatesTokenCount", 0)
+        think_t = usage.get("thoughtsTokenCount", 0)
+        self.ctx.add_cost(_estimate_token_cost(model_id, prompt_t, out_t + think_t))
+        return f"tokens in {prompt_t}, out {out_t}, thinking {think_t}"
+
     async def ask(self, prompt: str, *, system: str | None = None, schema: dict | None = None,
-                  tools: list[str] | None = None, model: str | None = None) -> Any:
-        """Run a Gemini Flash prompt. Returns parsed dict when `schema` is provided, else str."""
+                  tools: list[str] | None = None, model: str | None = None, complexity: str | None = None) -> Any:
+        """Run a Gemini prompt. Returns parsed dict when `schema` is provided, else str.
+        The model and thinking level follow the task's complexity (agent.yaml, or `complexity=` here);
+        an explicit `model=` overrides the routing."""
         self.ctx.check_budget()
         key = _get_api_key()
-        candidates = resolve_text_models(model or self.model)
+        level, routed_model, thinking = self.route(complexity)
+        candidates = resolve_text_models(model or routed_model)
         requested_search = bool(tools and any(t.lower() in ("websearch", "web_search", "google_search") for t in tools))
         use_search = requested_search and (key not in _SEARCH_UNAVAILABLE_KEYS)
 
@@ -258,10 +369,10 @@ class GeminiClient:
 
         t0 = time.monotonic()
         if use_search:
-            self.ctx.log(f"Asking Gemini Flash ({candidates[0]}, google_search)")
+            self.ctx.log(f"Asking Gemini ({candidates[0]}, {level} complexity, thinking {thinking}, google_search)")
             try:
                 # Probe top 2 candidates with google_search so Free Tier (search=429) degrades fast
-                used_model, data = await self._post(candidates[:2], _build_body(True), remember_model=True)
+                used_model, data = await self._post(candidates[:2], _build_body(True), remember_model=True, thinking=thinking)
             except LLMError as err:
                 if any(code in str(err) for code in ("429", "403", "400", "503")):
                     _SEARCH_UNAVAILABLE_KEYS.add(key)
@@ -270,22 +381,22 @@ class GeminiClient:
                         "Google Search grounding unavailable on current tier/quota; continuing with Gemini Flash directly",
                         "warning",
                     )
-                    used_model, data = await self._post(candidates, _build_body(False), remember_model=True)
+                    used_model, data = await self._post(candidates, _build_body(False), remember_model=True,
+                                                        thinking=thinking)
                 else:
                     raise
         else:
-            self.ctx.log(f"Asking Gemini Flash ({candidates[0]})")
-            used_model, data = await self._post(candidates, _build_body(False), remember_model=True)
+            self.ctx.log(f"Asking Gemini ({candidates[0]}, {level} complexity, thinking {thinking})")
+            used_model, data = await self._post(candidates, _build_body(False), remember_model=True, thinking=thinking)
 
-        usage = data.get("usageMetadata") or {}
-        self.ctx.add_cost(_estimate_token_cost(used_model, usage.get("promptTokenCount", 0), usage.get("candidatesTokenCount", 0)))
+        tokens = self._charge(used_model, data)
 
         resp_candidates = data.get("candidates") or []
         if not resp_candidates:
             raise LLMError(f"Gemini returned no candidates: {json.dumps(data)[:600]}")
         cand = resp_candidates[0]
         grounded = bool((cand.get("groundingMetadata") or {}).get("webSearchQueries"))
-        self.ctx.log(f"Gemini ({used_model}) answered in {time.monotonic() - t0:.1f}s"
+        self.ctx.log(f"Gemini ({used_model}) answered in {time.monotonic() - t0:.1f}s ({tokens})"
                      + (", grounded with Google Search" if grounded else ""))
 
         parts = (cand.get("content") or {}).get("parts") or []
@@ -307,9 +418,10 @@ class GeminiClient:
                     "responseSchema": sanitize_schema_for_gemini(schema),
                 },
             }
-            fmt_model, fmt_data = await self._post(candidates, fmt_body)
-            fmt_usage = fmt_data.get("usageMetadata") or {}
-            self.ctx.add_cost(_estimate_token_cost(fmt_model, fmt_usage.get("promptTokenCount", 0), fmt_usage.get("candidatesTokenCount", 0)))
+            # reformatting is a simple task: always the cheapest tier
+            fmt_model, fmt_data = await self._post(resolve_text_models(self.model or self.tiers["low"]["model"]), fmt_body,
+                                                   thinking=self.tiers["low"].get("thinking"))
+            self._charge(fmt_model, fmt_data)
             fmt_parts = ((fmt_data.get("candidates") or [{}])[0].get("content") or {}).get("parts") or []
             fmt_text = "".join(p.get("text", "") for p in fmt_parts)
             try:

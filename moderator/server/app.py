@@ -6,7 +6,8 @@ import json
 import re
 from pathlib import Path
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
+from fastapi.middleware.trustedhost import TrustedHostMiddleware
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
@@ -15,6 +16,8 @@ from ..engine.orchestrator import Orchestrator
 
 DASHBOARD = Path(__file__).resolve().parent.parent / "dashboard"
 SAFE_RUN_ID = re.compile(r"^[A-Za-z0-9_.-]+$")
+LOCAL_HOSTS = ["127.0.0.1", "localhost", "::1", "[::1]"]
+WRITE_HEADER = "x-moderator"
 
 
 class Decision(BaseModel):
@@ -24,8 +27,19 @@ class Decision(BaseModel):
     route_to: str | None = None
 
 
-def create_app(orch: Orchestrator) -> FastAPI:
+def create_app(orch: Orchestrator, allowed_hosts: list[str] | None = None) -> FastAPI:
     app = FastAPI(title="moderator")
+    # Host check blocks DNS-rebinding pages from reading or driving the dashboard
+    app.add_middleware(TrustedHostMiddleware, allowed_hosts=allowed_hosts or LOCAL_HOSTS)
+
+    @app.middleware("http")
+    async def require_dashboard_header(request: Request, call_next):
+        """State-changing calls must carry a custom header. Browsers cannot add one to a cross-site form, and a
+        cross-site fetch with it needs a CORS preflight this server never grants, so other websites cannot
+        press the dashboard's buttons."""
+        if request.method not in ("GET", "HEAD", "OPTIONS") and request.headers.get(WRITE_HEADER) != "1":
+            return JSONResponse({"detail": f"missing {WRITE_HEADER} header"}, status_code=403)
+        return await call_next(request)
     store = orch.store
     run_dir = store.run_dir.resolve()
     runs_root = run_dir.parent.resolve()

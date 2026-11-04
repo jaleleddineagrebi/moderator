@@ -280,7 +280,7 @@ def test_server_endpoints_and_path_traversal_protection(tmp_path):
 
     async def exercise_api():
         transport = httpx.ASGITransport(app=app)
-        async with httpx.AsyncClient(transport=transport, base_url="http://test") as client:
+        async with httpx.AsyncClient(transport=transport, base_url="http://127.0.0.1:8765") as client:
             assert (await client.get("/")).status_code == 200
             st = (await client.get("/api/state")).json()
             assert st["run_id"] == "20260102_000000_demo"
@@ -298,8 +298,12 @@ def test_server_endpoints_and_path_traversal_protection(tmp_path):
             assert (await client.get("/files/..%2F20260101_000000_demo/state.json")).status_code == 404
             assert (await client.get("/api/runs/..%2Fsecret/state")).status_code == 404
 
+            # Writes need the dashboard header; foreign Host headers are refused (DNS rebinding)
+            assert (await client.post("/api/retry-failed")).status_code == 403
+            assert (await client.get("/api/state", headers={"host": "evil.example"})).status_code == 400
+
             # Retry all failed endpoint
-            res = await client.post("/api/retry-failed")
+            res = await client.post("/api/retry-failed", headers={"X-Moderator": "1"})
             assert res.status_code == 200
             assert res.json()["retried"] == ["ideas"]
             assert live_store.data["steps"]["ideas"]["status"] == "queued"
@@ -826,3 +830,23 @@ def test_youtube_channel_optimizer_banner_and_profile(tmp_path):
     assert banner.stat().st_size < 6 * 1024 * 1024
     with Image.open(banner) as im:
         assert im.size == (2560, 1440)
+
+
+def test_youtube_channel_video_update_plan_uses_video_language():
+    from moderator.tools import youtube_channel
+
+    fr = youtube_channel.plan_video_update({"title": "Pourquoi ton cerveau ment", "description": "Ligne 1\n#Shorts",
+                                            "defaultAudioLanguage": "fr"})
+    assert fr["title"] == "Pourquoi ton cerveau ment #shorts"
+    assert fr["description"].startswith(youtube_channel.COMMENT_HOOKS["fr"])
+
+    ar = youtube_channel.plan_video_update({"title": "عقلك بيكدب عليك #shorts", "description": "سطر",
+                                            "defaultLanguage": "ar"})
+    assert ar["title"] == "عقلك بيكدب عليك #shorts"
+    assert ar["description"].startswith(youtube_channel.COMMENT_HOOKS["ar"])
+
+    # already optimized, or a language without a hook: leave it alone
+    assert youtube_channel.plan_video_update({"title": "Why #shorts", "description": "Ever felt this? 👇",
+                                              "defaultAudioLanguage": "en"}) is None
+    de = youtube_channel.plan_video_update({"title": "Warum #shorts", "description": "Text", "defaultAudioLanguage": "de"})
+    assert de is None

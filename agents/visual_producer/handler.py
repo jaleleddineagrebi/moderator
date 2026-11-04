@@ -9,7 +9,9 @@ from moderator.engine import llm as llm_mod
 from moderator.engine.agent import Agent, StepContext
 from moderator.tools import ffmpeg, stock
 
-TIERS = ["nano_banana", "stock_video", "stock_photo", "generated"]
+# Free stock video first; Nano Banana images (paid per image) only for scenes with no usable clip.
+# visual_mode=ai puts Nano Banana first; visual_mode=stock never uses it.
+TIERS = ["stock_video", "nano_banana", "stock_photo", "generated"]
 
 FALLBACK_VIDEO_QUERIES = [
     "city street traffic",
@@ -77,14 +79,17 @@ class Handler(Agent):
         photo_providers = [p for p in ("pexels", "pixabay") if keys.get(p)]
         visual_mode = str(ctx.params.get("visual_mode") or "").lower()
 
-        start = TIERS.index(ctx.strategy) if ctx.strategy in TIERS else 0
-        if visual_mode in ("stock", "video") and start == 0:
-            start = TIERS.index("stock_video")
-        elif visual_mode == "generated":
-            start = TIERS.index("generated")
+        order = list(TIERS)
+        if visual_mode in ("ai", "banana", "nano_banana"):
+            order = ["nano_banana"] + [t for t in TIERS if t != "nano_banana"]
+        elif visual_mode in ("stock", "video"):  # $0: never generate images
+            order = [t for t in TIERS if t != "nano_banana"]
+        start = order.index(ctx.strategy) if ctx.strategy in order else 0
+        if visual_mode == "generated":
+            start = order.index("generated")
 
         available_tiers = [
-            t for t in TIERS[start:]
+            t for t in order[start:]
             if (t == "generated")
             or (t == "nano_banana" and llm_mod.api_key_available())
             or (t == "stock_video" and video_providers)

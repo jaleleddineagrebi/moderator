@@ -26,10 +26,13 @@ class AgentSpec:
     # Attempt n runs with strategies[n] (the last one repeats). This is how a retry "changes approach".
     strategies: list[str] = field(default_factory=lambda: ["default"])
     timeout_s: int = 1800
+    # How hard this agent's LLM work is: low | medium | high. The Gemini client maps it to a model and a
+    # thinking level (config.yaml llm.tiers), and moves one level up on each retry.
+    complexity: str = "medium"
     folder: Path | None = None
 
     def public(self) -> dict:
-        return {k: getattr(self, k) for k in ("name", "title", "role", "inputs", "outputs", "tools", "strategies")}
+        return {k: getattr(self, k) for k in ("name", "title", "role", "inputs", "outputs", "tools", "strategies", "complexity")}
 
 
 class Agent:
@@ -46,8 +49,9 @@ class Agent:
 
 class StepContext:
     def __init__(self, *, store: StateStore, step_id: str, attempt: int, strategy: str,
-                 options: dict, config: dict):
+                 options: dict, config: dict, complexity: str = "medium"):
         self.store = store
+        self.complexity = complexity
         self.step_id = step_id
         self.attempt = attempt
         self.strategy = strategy

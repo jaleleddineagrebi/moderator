@@ -104,7 +104,8 @@ class Orchestrator:
                     st["attempt"] += 1
                 self.store.log(step_id, f"Attempt {retry + 1}/{max_retries + 1}, strategy '{strategy}'")
                 ctx = StepContext(store=self.store, step_id=step_id, attempt=retry + 1, strategy=strategy,
-                                  options=step.options, config=self.registry.config)
+                                  options=step.options, config=self.registry.config,
+                                  complexity=agent.spec.complexity)
                 try:
                     outputs = await asyncio.wait_for(agent.run(ctx), agent.spec.timeout_s)
                 except asyncio.CancelledError:

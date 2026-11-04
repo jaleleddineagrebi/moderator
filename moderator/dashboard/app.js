@@ -45,7 +45,7 @@ $("run-select").addEventListener("change", (ev) => {
 
 $("retry-all-btn").addEventListener("click", async () => {
   $("retry-all-btn").disabled = true;
-  await fetch("/api/retry-failed", { method: "POST" }).catch(() => {});
+  await fetch("/api/retry-failed", { method: "POST", headers: { "X-Moderator": "1" } }).catch(() => {});
   $("retry-all-btn").disabled = false;
   poll();
 });
@@ -325,7 +325,7 @@ function wireApproval(form) {
     form.querySelectorAll("button").forEach((b) => (b.disabled = true));
     const cp = form.dataset.cp;
     const res = await fetch(`/api/checkpoints/${encodeURIComponent(cp)}`, {
-      method: "POST", headers: { "Content-Type": "application/json" },
+      method: "POST", headers: { "Content-Type": "application/json", "X-Moderator": "1" },
       body: JSON.stringify({ action, comment: data.get("comment"), choice: data.get(`choice-${cp}`), route_to: data.get("route_to") }),
     });
     if (!res.ok) {
@@ -565,7 +565,7 @@ function renderDrawer() {
   const retry = $("d-retry");
   if (retry) retry.addEventListener("click", async () => {
     retry.disabled = true;
-    const res = await fetch(`/api/steps/${encodeURIComponent(openStep)}/retry`, { method: "POST" });
+    const res = await fetch(`/api/steps/${encodeURIComponent(openStep)}/retry`, { method: "POST", headers: { "X-Moderator": "1" } });
     if (!res.ok) retry.nextElementSibling.textContent = (await res.json().catch(() => ({}))).detail || "Retry failed";
     poll();
   });

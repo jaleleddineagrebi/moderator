@@ -2,7 +2,7 @@
 
 A domain-agnostic Python orchestrator (`moderator/engine/`) powered by **Google Gemini Flash + Nano Banana** that schedules DAGs of specialist agents in parallel, tracks every step in a single atomic `state.json`, pauses at human checkpoints, retries failures with escalating strategies, routes QA or human revision feedback upstream, and serves a live single-page web dashboard.
 
-The flagship workflow (`workflows/youtube_short.yaml`) produces vertical **9:16 YouTube Shorts** (<60s, target 45–55s) in any combination of **English (`en`)**, **French (`fr`)**, and **Egyptian Arabic (`ar`)**, stopping for human approval at idea selection, script review, and final QA before anything is ever uploaded.
+The flagship workflow (`workflows/youtube_short.yaml`) produces vertical **9:16 YouTube Shorts** (<60s, target 34–44s) in any combination of **English (`en`)**, **French (`fr`)**, and **Egyptian Arabic (`ar`)**, stopping for human approval at idea selection, script review, and final QA before anything is ever uploaded.
 
 ---
 
@@ -59,7 +59,7 @@ flowchart LR
 | # | Agent | Role | Strategies (Retry Escalation) | Outputs |
 |---|---|---|---|---|
 | 1 | `trend_researcher` | Finds 3 ranked video ideas, <3s hooks, keywords & sources via Gemini Flash + Google Search | `web_and_youtube` → `web_only` → `no_web` | `ideas.json`, `ideas.md` |
-| 2 | `scriptwriter` | Writes 45–55s scene-by-scene script with <3s hook & on-screen text | `default` → `tighter_word_budget` → `simpler_structure` | `script.json`, `script.md` |
+| 2 | `scriptwriter` | Writes 34–44s scene-by-scene script with <2.5s hook and looping ending & on-screen text | `default` → `tighter_word_budget` → `simpler_structure` | `script.json`, `script.md` |
 | 3 | `visual_producer` | Generates custom 9:16 visuals with Nano Banana (or stock/procedural fallback) + licenses | `nano_banana` → `stock_video` → `stock_photo` → `generated` | `assets/scene_XX.mp4`, `assets/licenses.json` |
 | 4 | `voice_audio` | Synthesizes neural voiceover + word timings, ambient music & SFX | `primary_voice` → `alternate_voice` → `third_voice_slower` | `voiceover_<lang>.mp3`, `music.mp3`, `sfx/whoosh.mp3` |
 | 5 | `editor` | Cuts scenes to narration, adds `xfade` transitions, ASS captions & `-14 LUFS` mix | `transitions` → `hard_cuts` → `hard_cuts_no_sfx` | `final_short_<lang>.mp4`, `captions_<lang>.ass` |

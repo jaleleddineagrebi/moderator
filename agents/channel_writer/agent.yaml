@@ -5,3 +5,4 @@ outputs: [channel.yaml]
 tools: [file write]
 strategies: [default]
 timeout_s: 60
+complexity: low

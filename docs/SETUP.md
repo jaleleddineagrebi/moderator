@@ -30,7 +30,7 @@ How the automated pipeline works:
      ```sh
      uv run python -m moderator youtube-auth --client-secret client_secret.json
      ```
-     Sign in and pick your YouTube channel (or Brand Account). This creates `tokens/youtube.json` → store its contents as the GitHub secret **`YOUTUBE_TOKEN`**.
+     Sign in and pick your YouTube channel (or Brand Account). This creates `tokens/youtube.json` with upload + read-only permission (it cannot edit or delete videos) → store its contents as the GitHub secret **`YOUTUBE_TOKEN`**.
    - **Option B — Separate Channel Per Language (`en`, `fr`, `ar`):**
      ```sh
      uv run python -m moderator youtube-auth --lang en --client-secret client_secret.json
@@ -86,3 +86,23 @@ To turn on the public dashboard URL once after your first push:
 1. Go to your repo **Settings → Pages**.
 2. Under **Build and deployment → Source**, keep **Deploy from a branch** and select **`gh-pages`** / **`/ (root)`** → **Save**.
 3. Open **`https://<your-username>.github.io/<repo-name>/`**!
+
+---
+
+## 6. Optimize the YouTube Channel (One-Time, Local)
+
+`optimize-channel` sets the channel description, keywords, language and country, uploads a 2560x1440 banner, creates a public Shorts playlist with every upload, and adds `#shorts` plus a comment question (in each video's language) to existing Shorts. The copy depends on `--preset` (`auto` picks from the channel title and `channel.yaml`'s niche; or `psychology`, `ai`, `hybrid`).
+
+Preview first. Nothing is written to YouTube; the banner is saved to `runs/channel_banner.jpg`:
+
+```sh
+uv run python -m moderator optimize-channel --dry-run
+```
+
+Then apply it. The first time, a browser opens to grant full channel-management permission. That token is saved separately as `tokens/youtube_manage.json` and stays on this machine: never store it as a GitHub secret (the upload token is enough there).
+
+```sh
+uv run python -m moderator optimize-channel --preset auto --country US --lang en
+```
+
+The API cannot change the channel name or `@handle`; the command prints a suggestion to apply in **YouTube Studio → Customization**.

@@ -5,3 +5,4 @@ outputs: [final_short_<lang>.mp4, captions_<lang>.ass]
 tools: [ffmpeg (xfade, libass captions, sidechain ducking, loudnorm)]
 strategies: [transitions, hard_cuts, hard_cuts_no_sfx]
 timeout_s: 2400
+complexity: low

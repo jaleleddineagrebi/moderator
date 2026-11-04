@@ -5,3 +5,4 @@ outputs: [voiceover_<lang>.mp3, timings_<lang>.json, music.mp3, sfx/whoosh.mp3]
 tools: [edge-tts (free neural voices), ffmpeg audio synthesis, library/music (CC0)]
 strategies: [primary_voice, alternate_voice, third_voice_slower]
 timeout_s: 900
+complexity: low

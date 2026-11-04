@@ -22,25 +22,36 @@ from googleapiclient.http import MediaFileUpload
 from .. import ROOT
 
 UPLOAD_SCOPES = ["https://www.googleapis.com/auth/youtube.upload", "https://www.googleapis.com/auth/youtube.readonly"]
-AUTH_SCOPES = [
+# Full channel management (edit/delete videos, branding). Only `optimize-channel` uses it, with its own
+# local token file; the upload token (also the GitHub secret) keeps UPLOAD_SCOPES so a leak cannot wreck the channel.
+MANAGE_SCOPES = [
     "https://www.googleapis.com/auth/youtube",
     "https://www.googleapis.com/auth/youtube.upload",
     "https://www.googleapis.com/auth/youtube.readonly",
 ]
-SCOPES = AUTH_SCOPES
 TOKENS_DIR = ROOT / "tokens"
+MANAGE_TOKEN = TOKENS_DIR / "youtube_manage.json"
 EDUCATION_CATEGORY = "27"
 
 
-def authorize(client_secret: Path, lang: str | None = None, scopes: list[str] | None = None) -> tuple[Path, str]:
-    """Opens the browser: sign in and pick the YouTube channel (brand account or main channel)."""
-    flow = InstalledAppFlow.from_client_secrets_file(str(client_secret), scopes or AUTH_SCOPES)
+def authorize(client_secret: Path, lang: str | None = None, scopes: list[str] | None = None,
+              path: Path | None = None) -> tuple[Path, str]:
+    """Opens the browser: sign in and pick the YouTube channel (brand account or main channel).
+    Defaults to upload-only scopes; pass MANAGE_SCOPES (and MANAGE_TOKEN) for channel management."""
+    flow = InstalledAppFlow.from_client_secrets_file(str(client_secret), scopes or UPLOAD_SCOPES)
     creds = flow.run_local_server(port=0, prompt="consent", access_type="offline")
     TOKENS_DIR.mkdir(exist_ok=True)
-    filename = f"youtube_{lang.lower()}.json" if lang else "youtube.json"
-    path = TOKENS_DIR / filename
+    path = path or TOKENS_DIR / (f"youtube_{lang.lower()}.json" if lang else "youtube.json")
     path.write_text(creds.to_json(), encoding="utf-8")
     return path, channel_title(creds)
+
+
+def credentials_from_file(path: Path) -> Credentials:
+    info = json.loads(path.read_text(encoding="utf-8"))
+    creds = Credentials.from_authorized_user_info(info, info.get("scopes") or UPLOAD_SCOPES)
+    if not creds.valid:
+        creds.refresh(Request())
+    return creds
 
 
 def credentials(lang: str) -> Credentials:

@@ -18,7 +18,7 @@ from .config import load_config
 from .engine.registry import Registry
 from .engine.state import StateStore
 from .runtime import create_run, resume_run
-from .server.app import create_app
+from .server.app import LOCAL_HOSTS, create_app
 
 
 def parse_param_value(raw: str):
@@ -56,7 +56,12 @@ def parse_params(pairs: list[str]) -> dict:
 
 
 async def serve(orch, host: str, port: int, open_browser: bool) -> None:
-    server = uvicorn.Server(uvicorn.Config(create_app(orch), host=host, port=port, log_level="warning"))
+    if host in ("0.0.0.0", "::"):
+        print("Warning: dashboard is reachable from other machines (no login). Prefer host 127.0.0.1.")
+        allowed = ["*"]
+    else:
+        allowed = list(dict.fromkeys([*LOCAL_HOSTS, host]))
+    server = uvicorn.Server(uvicorn.Config(create_app(orch, allowed), host=host, port=port, log_level="warning"))
     url = f"http://{host}:{port}"
     print(f"Run folder: {orch.store.run_dir}\nDashboard:  {url}\nPress Ctrl+C to stop (the run can be resumed).")
     if open_browser:
@@ -114,6 +119,7 @@ def main() -> None:
     opt_p.add_argument("--lang", default="en", help="channel default language (default: en)")
     opt_p.add_argument("--client-secret", type=Path, default=ROOT / "client_secret.json")
     opt_p.add_argument("--reauth", action="store_true", help="force fresh OAuth consent with channel-management scope")
+    opt_p.add_argument("--dry-run", action="store_true", help="render the banner and print the planned changes without writing to YouTube")
     pages_p = sub.add_parser("export-pages", help="export static dashboard & run snapshots for GitHub Pages")
     pages_p.add_argument("site_dir", type=Path, help="output folder (e.g. a gh-pages worktree)")
     pages_p.add_argument("--repo", default=None, help="GitHub owner/repo slug")
@@ -144,11 +150,12 @@ def main() -> None:
 
     if args.cmd == "youtube-auth":
         from .tools import youtube_upload
-        path, channel = youtube_upload.authorize(args.client_secret, args.lang)
+        path, channel = youtube_upload.authorize(args.client_secret, args.lang, scopes=youtube_upload.UPLOAD_SCOPES)
         secret_name = f"YOUTUBE_TOKEN_{args.lang.upper()}" if args.lang else "YOUTUBE_TOKEN"
         target_label = f"language '{args.lang}'" if args.lang else "all languages (default channel)"
         print(f"Authorized channel '{channel}' for {target_label}. Token saved to {path}")
-        print(f"For GitHub Actions, store the whole file content as the repository secret {secret_name}.")
+        print(f"Scopes: upload + read-only (cannot edit or delete videos). For GitHub Actions, store the whole file "
+              f"content as the repository secret {secret_name}.")
         return
     if args.cmd == "optimize-channel":
         from .tools import youtube_channel
@@ -158,12 +165,25 @@ def main() -> None:
             country=args.country,
             client_secret=args.client_secret,
             reauth=args.reauth,
+            dry_run=args.dry_run,
         )
-        print(f"Optimized channel '{res['current_title']}' ({res['channel_url']}) [{res['mode']}]")
-        print(f"  Country / Lang: {res['country']} / {res['default_language']}")
-        print(f"  Banner uploaded: {res['banner_path']}")
-        print(f"  Shorts playlist: {res['playlist_url']}")
-        print(f"  Retroactively optimized videos: {len(res['updated_videos'])} ({', '.join(res['updated_videos']) or 'none needed'})")
+        sys.stdout.reconfigure(encoding="utf-8")
+        if res["dry_run"]:
+            print(f"DRY RUN for '{res['current_title']}' ({res['channel_url']}) [{res['mode']}]: nothing was changed")
+            print(f"  Country / Lang: {res['country']} / {res['default_language']}")
+            print(f"  Banner preview: {res['banner_path']}")
+            print("  Description:\n    " + res["description"].replace("\n", "\n    "))
+            print(f"  Keywords: {res['keywords']}")
+            print(f"  Video changes ({len(res['video_changes'])}):")
+            for vid, ch in res["video_changes"].items():
+                print(f"    {vid}: {ch['from']!r} -> {ch['title']!r}")
+                print(f"      description starts: {ch['description'].splitlines()[0]!r}")
+        else:
+            print(f"Optimized channel '{res['current_title']}' ({res['channel_url']}) [{res['mode']}]")
+            print(f"  Country / Lang: {res['country']} / {res['default_language']}")
+            print(f"  Banner uploaded: {res['banner_path']}")
+            print(f"  Shorts playlist: {res['playlist_url']}")
+            print(f"  Optimized videos: {len(res['updated_videos'])} ({', '.join(res['updated_videos']) or 'none needed'})")
         print(f"  Tip: {res['studio_tip']}")
         return
     if args.cmd == "summary":

@@ -5,3 +5,4 @@ outputs: [metadata.json, thumbnail_<lang>.png]
 tools: [Gemini Flash, Gemini Nano Banana, Pillow (RTL shaping via arabic-reshaper + python-bidi), ffmpeg]
 strategies: [banana_thumbnail, frame_thumbnail, plain_thumbnail]
 timeout_s: 900
+complexity: low

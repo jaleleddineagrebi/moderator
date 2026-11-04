@@ -13,7 +13,7 @@ LANG_META = {
     "additionalProperties": False,
     "required": ["title", "description", "hashtags", "tags", "thumbnail_text"],
     "properties": {
-        "title": {"type": "string", "description": "max 70 characters, curiosity-driven, no clickbait lies"},
+        "title": {"type": "string", "description": "max 55 characters, curiosity-driven, no clickbait lies"},
         "description": {"type": "string", "description": "2-4 short lines; first line restates the hook"},
         "hashtags": {"type": "array", "items": {"type": "string"}, "description": "3-6 hashtags including #Shorts"},
         "tags": {"type": "array", "items": {"type": "string"}, "description": "8-15 search tags"},

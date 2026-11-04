@@ -5,3 +5,4 @@ outputs: [qa_report.json, qa_report.md]
 tools: [ffprobe, ffmpeg ebur128, Gemini Flash (language & copyright review)]
 strategies: [full_review, full_review, technical_only]
 timeout_s: 1200
+complexity: medium

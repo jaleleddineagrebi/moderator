@@ -9,6 +9,7 @@ from __future__ import annotations
 import copy
 import json
 import os
+import re
 import threading
 import time
 from contextlib import contextmanager
@@ -16,6 +17,22 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from .workflow import Workflow
+
+# Error messages from httpx include the request URL, and some APIs (Pixabay) only accept the key as a query
+# parameter. state.json is published (gh-pages, Actions artifacts, review issues), so secrets are scrubbed on save.
+SECRET_ENV_PREFIXES = ("GEMINI_API_KEY", "GOOGLE_API_KEY", "PIXABAY_API_KEY", "PEXELS_API_KEY", "YOUTUBE_API_KEY",
+                       "YOUTUBE_TOKEN")
+_KEY_PARAM = re.compile(r"([?&](?:key|api_key|apikey|access_token|token)=)[^&\s'\"]+", re.IGNORECASE)
+
+
+def redact(text: str) -> str:
+    """Remove API keys and tokens from text that may be published."""
+    text = _KEY_PARAM.sub(lambda m: m.group(1) + "***", text)
+    for name, value in os.environ.items():
+        if name.startswith(SECRET_ENV_PREFIXES) and len(value) >= 8:
+            text = text.replace(value, "***")
+            text = text.replace(json.dumps(value)[1:-1], "***")  # same value as escaped inside JSON
+    return text
 
 STATUSES = ("queued", "running", "waiting_for_approval", "done", "failed", "needs_revision")
 MAX_LOGS_PER_STEP = 500
@@ -114,7 +131,7 @@ class StateStore:
 
     def save(self) -> None:
         with self._lock:
-            text = json.dumps(self.data, ensure_ascii=False, indent=2)
+            text = redact(json.dumps(self.data, ensure_ascii=False, indent=2))
             tmp = self.path.with_suffix(".json.tmp")
             tmp.write_text(text, encoding="utf-8")
             for attempt in range(5):

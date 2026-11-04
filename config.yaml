@@ -1,10 +1,14 @@
-# Powered by Google Gemini:
-# - `model`: Gemini Flash for reasoning, structured JSON & Google Search grounding
-#   ("flash" -> gemini-3.8-flash -> gemini-3-flash-preview -> gemini-2.5-flash; also "flash-lite" or "pro")
-# - `image_model`: Nano Banana for native 9:16 vertical scene & thumbnail generation
-#   ("banana" -> gemini-nano-banana-2.1 -> gemini-3.1-flash-image -> gemini-2.5-flash-image; also "banana-lite" or "banana-pro")
+# Powered by Google Gemini.
+# Text model routing: each agent declares `complexity: low|medium|high` in agents/<name>/agent.yaml and the
+# moderator picks the tier below; every retry of a step moves one tier up. Models: "flash-lite", "flash", "pro"
+# (fallback chains in moderator/engine/llm.py). Thinking: minimal | low | medium | high (thinking tokens are
+# billed as output, so this is the main cost lever). Set `model:` here to force one model for every task.
+# `image_model`: Nano Banana for scene/thumbnail images ("banana", "banana-lite" or "banana-pro").
 llm:
-  model: flash
+  tiers:
+    low:    {model: flash-lite, thinking: minimal}   # packaging/SEO, JSON formatting
+    medium: {model: flash, thinking: low}            # trend research, QA review
+    high:   {model: flash, thinking: high}           # scriptwriting, niche strategy
   image_model: banana
   timeout_s: 600
 

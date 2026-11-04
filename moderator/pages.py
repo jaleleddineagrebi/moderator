@@ -18,6 +18,7 @@ from typing import Any
 from . import ROOT
 from .config import load_config
 from .engine.registry import Registry
+from .engine.state import redact
 from .engine.state import new_state, now_iso
 from .runtime import channel_params
 
@@ -165,8 +166,11 @@ def export_pages(
             exported_state["pages_meta"] = meta
             for step in exported_state.get("steps", {}).values():
                 step["outputs"] = _filter_outputs_to_existing(step.get("outputs") or {}, dst_run)
+            for step in exported_state.get("steps", {}).values():
+                for err in step.get("errors") or []:
+                    err.pop("trace", None)  # stack traces stay local
             (dst_run / "state.json").write_text(
-                json.dumps(exported_state, ensure_ascii=False, indent=2), encoding="utf-8"
+                redact(json.dumps(exported_state, ensure_ascii=False, indent=2)), encoding="utf-8"
             )
 
     # 3. Collect all runs in `site_dir/data/runs`, prune oldest beyond `max_runs`, and trim heavy media on older runs

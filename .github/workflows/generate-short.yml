@@ -20,13 +20,14 @@ on:
         required: false
         type: string
       visual_mode:
-        description: "Scene visuals: stock = moving B-roll video ($0), auto = AI art + video fallback, generated = gradients"
+        description: "Scene visuals: stock = moving B-roll video only ($0), auto = stock video + AI art where no clip fits, ai = AI art first, generated = gradients"
         required: false
         default: "stock"
         type: choice
         options:
           - stock
           - auto
+          - ai
           - generated
       budget_usd:
         description: "Safety spend cap only (Free Tier keys always pay $0.00)"
@@ -56,9 +57,9 @@ jobs:
             exit 1
           fi
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
 
-      - uses: astral-sh/setup-uv@v6
+      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6.8.0
         with:
           python-version: "3.12"
 
@@ -66,7 +67,7 @@ jobs:
         run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg libass9
 
       - name: Install Python dependencies
-        run: uv sync
+        run: uv sync --locked
 
       - name: Generate Short(s) and pause at Checkpoint C (streaming progress to GitHub Pages)
         id: gen
@@ -112,7 +113,7 @@ jobs:
 
       - name: Upload run artifact (MP4s, thumbnails, captions, QA report, state.json)
         if: always() && steps.gen.outputs.run_dir
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: short-${{ steps.gen.outputs.run_id }}
           path: |

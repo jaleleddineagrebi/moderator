@@ -13,6 +13,7 @@ those two fields are updated manually in YouTube Studio -> Customization.
 from __future__ import annotations
 
 import json
+import os
 import socket
 from pathlib import Path
 
@@ -74,6 +75,12 @@ def build_channel_profile(
     cfg = channel_cfg or {}
     niche = str(cfg.get("niche") or "Psychology & human behavior")
     title_low = (channel_title or "").lower()
+    if channel_title and channel_title.islower():  # "land of ai" -> "Land of AI" for the description
+        small = {"of", "and", "the", "a", "an", "in", "on", "for", "to"}
+        channel_title = " ".join(
+            w.upper() if w in ("ai", "ia") else w if i and w in small else w.capitalize()
+            for i, w in enumerate(channel_title.split())
+        )
     mode = preset.lower()
     if mode == "auto":
         if "ai" in title_low and "psych" in niche.lower():
@@ -216,13 +223,46 @@ def render_channel_banner(dest: Path, headline: str, subtitle: str, badge: str =
     return dest
 
 
+# Line 1 of a Short's description: a question that invites comments, written per video language
+COMMENT_HOOKS = {
+    "en": "Has this ever happened to you? Tell me in the comments 👇",
+    "fr": "Ça t'est déjà arrivé ? Raconte-moi en commentaire 👇",
+    "ar": "حصلك قبل كده؟ احكيلنا في الكومنتات 👇",
+}
+
+
+def manage_token_path(lang: str) -> Path:
+    """Local-only token with full channel-management scope, kept apart from the upload token (the GitHub secret)."""
+    if (youtube_upload.TOKENS_DIR / f"youtube_{lang.lower()}.json").exists():
+        return youtube_upload.TOKENS_DIR / f"youtube_manage_{lang.lower()}.json"
+    return youtube_upload.MANAGE_TOKEN
+
+
 def token_has_manage_scope(lang: str = "en") -> bool:
-    for path in (youtube_upload.TOKENS_DIR / f"youtube_{lang.lower()}.json", youtube_upload.TOKENS_DIR / "youtube.json"):
-        if path.exists():
-            info = json.loads(path.read_text(encoding="utf-8"))
-            scopes = info.get("scopes") or []
-            return MANAGE_SCOPE in scopes or "https://www.googleapis.com/auth/youtube.force-ssl" in scopes
-    return False
+    path = manage_token_path(lang)
+    if not path.exists():
+        return False
+    scopes = json.loads(path.read_text(encoding="utf-8")).get("scopes") or []
+    return MANAGE_SCOPE in scopes or "https://www.googleapis.com/auth/youtube.force-ssl" in scopes
+
+
+def plan_video_update(snippet: dict, fallback_lang: str = "en") -> dict | None:
+    """New title/description for an uploaded Short, or None when it is already optimized.
+    The comment hook is written in the video's own language; unknown languages keep their description."""
+    title = snippet["title"]
+    desc = snippet.get("description", "")
+    new_title = title
+    if "#shorts" not in title.lower() and len(title.rstrip()) <= 91:
+        new_title = f"{title.rstrip()} #shorts"
+    lang = (snippet.get("defaultAudioLanguage") or snippet.get("defaultLanguage") or fallback_lang).split("-")[0].lower()
+    hook = COMMENT_HOOKS.get(lang)
+    first_line = desc.splitlines()[0] if desc else ""
+    new_desc = desc
+    if hook and "?" not in first_line and "؟" not in first_line:
+        new_desc = f"{hook}\n\n{desc}".strip()
+    if new_title == title and new_desc == desc:
+        return None
+    return {"title": new_title[:100], "description": new_desc[:4900]}
 
 
 def optimize_channel(
@@ -233,22 +273,26 @@ def optimize_channel(
     client_secret: Path | None = None,
     reauth: bool = False,
     banner_out: Path | None = None,
+    dry_run: bool = False,
 ) -> dict:
-    """Apply channel SEO, 2560x1440 banner, Shorts binge playlist, and existing video title/description upgrades."""
+    """Apply channel SEO, 2560x1440 banner, Shorts binge playlist, and existing video title/description upgrades.
+    With dry_run, only reads the channel and renders the banner: nothing is written to YouTube."""
     _prefer_ipv4(set_timeout=False)
     socket.gethostbyname("www.googleapis.com")
+    manage_path = manage_token_path(lang)
     if reauth or not token_has_manage_scope(lang):
         secret_path = client_secret or (ROOT / "client_secret.json")
         if not secret_path.exists():
             raise RuntimeError(
-                f"Current YouTube token only has upload/readonly scope; full channel optimization needs '{MANAGE_SCOPE}'. "
+                f"Channel optimization needs a token with '{MANAGE_SCOPE}' ({manage_path} is missing). "
                 f"Pass --client-secret client_secret.json to authorize once."
             )
-        print("Opening browser to grant YouTube channel-management permission (one-time)...", flush=True)
-        youtube_upload.authorize(secret_path, None)
+        print("Opening browser to grant YouTube channel-management permission (one-time, stays on this machine)...",
+              flush=True)
+        youtube_upload.authorize(secret_path, scopes=youtube_upload.MANAGE_SCOPES, path=manage_path)
     _prefer_ipv4(set_timeout=True)
 
-    creds = youtube_upload.credentials(lang)
+    creds = youtube_upload.credentials_from_file(manage_path)
     yt = build("youtube", "v3", credentials=creds, cache_discovery=False)
 
     ch_resp = yt.channels().list(part="snippet,brandingSettings,contentDetails,statistics", mine=True).execute()
@@ -273,6 +317,32 @@ def optimize_channel(
     # 1. Render and upload 2560x1440 UHD channel banner
     banner_path = banner_out or (ROOT / "runs" / "channel_banner.jpg")
     render_channel_banner(banner_path, profile["banner_headline"], profile["banner_subtitle"])
+    result = {
+        "channel_id": channel_id,
+        "channel_url": f"https://www.youtube.com/channel/{channel_id}",
+        "current_title": current_title,
+        "current_handle": custom_url,
+        "mode": profile["mode"],
+        "country": profile["country"],
+        "default_language": profile["default_language"],
+        "description": profile["description"],
+        "keywords": profile["keywords"],
+        "banner_path": str(banner_path),
+        "studio_tip": profile["studio_tip"],
+        "dry_run": dry_run,
+    }
+    uploads_pid = ch["contentDetails"]["relatedPlaylists"]["uploads"]
+    up_items = yt.playlistItems().list(part="contentDetails", playlistId=uploads_pid, maxResults=50).execute().get("items", [])
+    video_ids = [u["contentDetails"]["videoId"] for u in up_items]
+    videos = yt.videos().list(part="snippet,status", id=",".join(video_ids)).execute().get("items", []) if video_ids else []
+    plans = {v["id"]: plan_video_update(v["snippet"], lang) for v in videos}
+    result["video_changes"] = {vid: {"from": next(v["snippet"]["title"] for v in videos if v["id"] == vid), **plan}
+                               for vid, plan in plans.items() if plan}
+    if dry_run:
+        result["playlist_url"] = None
+        result["updated_videos"] = []
+        return result
+
     banner_res = yt.channelBanners().insert(
         media_body=MediaFileUpload(str(banner_path), mimetype="image/jpeg", resumable=True)
     ).execute()
@@ -314,52 +384,23 @@ def optimize_channel(
         for it in yt.playlistItems().list(part="contentDetails", playlistId=playlist_id, maxResults=50).execute().get("items", [])
     }
 
-    # 4. Optimize existing uploaded Shorts (add #shorts to title + top comment prompt + playlist inclusion)
-    uploads_pid = ch["contentDetails"]["relatedPlaylists"]["uploads"]
-    up_items = yt.playlistItems().list(part="contentDetails", playlistId=uploads_pid, maxResults=20).execute().get("items", [])
-    video_ids = [u["contentDetails"]["videoId"] for u in up_items]
+    # 4. Add every upload to the playlist and apply the planned title/description changes
     updated_videos: list[str] = []
-    if video_ids:
-        v_resp = yt.videos().list(part="snippet,status", id=",".join(video_ids)).execute()
-        for v in v_resp.get("items", []):
-            vid = v["id"]
-            if vid not in existing_pl_vids:
-                yt.playlistItems().insert(
-                    part="snippet",
-                    body={
-                        "snippet": {
-                            "playlistId": playlist_id,
-                            "resourceId": {"kind": "youtube#video", "videoId": vid},
-                        }
-                    },
-                ).execute()
+    for v in videos:
+        vid = v["id"]
+        if vid not in existing_pl_vids:
+            yt.playlistItems().insert(
+                part="snippet",
+                body={"snippet": {"playlistId": playlist_id, "resourceId": {"kind": "youtube#video", "videoId": vid}}},
+            ).execute()
+        plan = plans.get(vid)
+        if plan:
             snip = v["snippet"]
-            orig_title = snip["title"]
-            orig_desc = snip.get("description", "")
-            new_title = orig_title
-            if "#shorts" not in new_title.lower() and len(new_title) <= 91:
-                new_title = f"{new_title.rstrip()} #shorts"
-            new_desc = orig_desc
-            if "?" not in orig_desc.splitlines()[0] if orig_desc else True:
-                new_desc = f"Has this ever happened to you? Drop your experience in the comments 👇\n\n{orig_desc}".strip()
-            if new_title != orig_title or new_desc != orig_desc:
-                snip["title"] = new_title[:100]
-                snip["description"] = new_desc[:4900]
-                snip["categoryId"] = snip.get("categoryId") or youtube_upload.EDUCATION_CATEGORY
-                yt.videos().update(part="snippet", body={"id": vid, "snippet": snip}).execute()
-                updated_videos.append(vid)
+            snip.update(plan)
+            snip["categoryId"] = snip.get("categoryId") or youtube_upload.EDUCATION_CATEGORY
+            yt.videos().update(part="snippet", body={"id": vid, "snippet": snip}).execute()
+            updated_videos.append(vid)
 
-    return {
-        "channel_id": channel_id,
-        "channel_url": f"https://www.youtube.com/channel/{channel_id}",
-        "current_title": current_title,
-        "current_handle": custom_url,
-        "mode": profile["mode"],
-        "country": profile["country"],
-        "default_language": profile["default_language"],
-        "keywords": profile["keywords"],
-        "banner_path": str(banner_path),
-        "playlist_url": f"https://www.youtube.com/playlist?list={playlist_id}",
-        "updated_videos": updated_videos,
-        "studio_tip": profile["studio_tip"],
-    }
+    result["playlist_url"] = f"https://www.youtube.com/playlist?list={playlist_id}"
+    result["updated_videos"] = updated_videos
+    return result
