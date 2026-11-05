@@ -31,11 +31,12 @@
   "ended_at": null,
   "revision_rounds": 0,
   "cost": {
-    "total_usd": 0.008771,
+    "total_usd": 0.009559,
     "budget_usd": 1.0,
     "by_agent": {
       "trend_researcher": 0.001852,
-      "scriptwriter": 0.006919
+      "scriptwriter": 0.006919,
+      "packaging": 0.000788
     }
   },
   "agents": {
@@ -385,10 +386,10 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "running",
-      "progress": 78,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-05T20:54:44+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-05T20:55:38+00:00",
       "attempt": 1,
       "retries": 0,
       "max_retries": 2,
@@ -402,7 +403,10 @@
         "nano_banana": true,
         "starting_tier": "stock_video"
       },
-      "outputs": {},
+      "outputs": {
+        "contact_sheet": "assets/contact_sheet.jpg",
+        "licenses": "assets/licenses.json"
+      },
       "logs": [
         {
           "ts": "2026-11-05T20:54:44+00:00",
@@ -438,6 +442,16 @@
           "ts": "2026-11-05T20:55:31+00:00",
           "level": "info",
           "msg": "scene_05: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-05T20:55:37+00:00",
+          "level": "info",
+          "msg": "scene_07: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-05T20:55:38+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [],
@@ -545,20 +559,108 @@
         "visuals"
       ],
       "checkpoint": null,
-      "status": "queued",
-      "progress": 0,
-      "started_at": null,
-      "ended_at": null,
-      "attempt": 0,
+      "status": "done",
+      "progress": 100,
+      "started_at": "2026-11-05T20:55:38+00:00",
+      "ended_at": "2026-11-05T20:55:47+00:00",
+      "attempt": 1,
       "retries": 0,
       "max_retries": 2,
-      "strategy": null,
-      "inputs": {},
-      "outputs": {},
-      "logs": [],
+      "strategy": "banana_thumbnail",
+      "inputs": {
+        "script": "script.json",
+        "languages": [
+          "en",
+          "fr"
+        ],
+        "strategy": "banana_thumbnail",
+        "thumbnail_source": "assets/scene_01.mp4"
+      },
+      "outputs": {
+        "metadata": "metadata.json",
+        "thumbnail_en": "thumbnail_en.png",
+        "thumbnail_fr": "thumbnail_fr.png"
+      },
+      "logs": [
+        {
+          "ts": "2026-11-05T20:55:38+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'banana_thumbnail'"
+        },
+        {
+          "ts": "2026-11-05T20:55:38+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.5-flash-lite, low complexity, thinking minimal)"
+        },
+        {
+          "ts": "2026-11-05T20:55:39+00:00",
+          "level": "warning",
+          "msg": "'gemini-3.5-flash-lite' returned 503; retrying once in 2s"
+        },
+        {
+          "ts": "2026-11-05T20:55:42+00:00",
+          "level": "warning",
+          "msg": "Model 'gemini-3.5-flash-lite' returned 503; falling back to 'gemini-3.1-flash-lite'"
+        },
+        {
+          "ts": "2026-11-05T20:55:44+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3.1-flash-lite) answered in 5.4s (tokens in 547, out 434, thinking 0)"
+        },
+        {
+          "ts": "2026-11-05T20:55:44+00:00",
+          "level": "info",
+          "msg": "Generating 9:16 image with Nano Banana (gemini-nano-banana-2.1)"
+        },
+        {
+          "ts": "2026-11-05T20:55:44+00:00",
+          "level": "warning",
+          "msg": "'gemini-nano-banana-2.1' is out of daily quota; skipping it for the rest of this run"
+        },
+        {
+          "ts": "2026-11-05T20:55:44+00:00",
+          "level": "warning",
+          "msg": "Model 'gemini-nano-banana-2.1' returned 429; falling back to 'gemini-3.1-flash-image-preview'"
+        },
+        {
+          "ts": "2026-11-05T20:55:44+00:00",
+          "level": "warning",
+          "msg": "'gemini-3.1-flash-image-preview' is out of daily quota; skipping it for the rest of this run"
+        },
+        {
+          "ts": "2026-11-05T20:55:44+00:00",
+          "level": "warning",
+          "msg": "Model 'gemini-3.1-flash-image-preview' returned 429; falling back to 'gemini-3.1-flash-image'"
+        },
+        {
+          "ts": "2026-11-05T20:55:44+00:00",
+          "level": "warning",
+          "msg": "'gemini-3.1-flash-image' is out of daily quota; skipping it for the rest of this run"
+        },
+        {
+          "ts": "2026-11-05T20:55:44+00:00",
+          "level": "warning",
+          "msg": "Model 'gemini-3.1-flash-image' returned 429; falling back to 'gemini-2.5-flash-image'"
+        },
+        {
+          "ts": "2026-11-05T20:55:45+00:00",
+          "level": "warning",
+          "msg": "'gemini-2.5-flash-image' is out of daily quota; skipping it for the rest of this run"
+        },
+        {
+          "ts": "2026-11-05T20:55:45+00:00",
+          "level": "warning",
+          "msg": "Nano Banana thumbnail background failed (Gemini API 429 (gemini-2.5-flash-image): {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-flash-preview-image, description: Generate content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-flash-preview-image, description: Generate content requests per minute limit exceeded on Free Tier. S); using scene_01 frame instead"
+        },
+        {
+          "ts": "2026-11-05T20:55:47+00:00",
+          "level": "info",
+          "msg": "Finished"
+        }
+      ],
       "errors": [],
       "feedback": [],
-      "cost_usd": 0.0
+      "cost_usd": 0.000788
     },
     "edit": {
       "title": "Edit the final videos",
@@ -568,17 +670,51 @@
         "audio"
       ],
       "checkpoint": null,
-      "status": "queued",
+      "status": "running",
       "progress": 0,
-      "started_at": null,
+      "started_at": "2026-11-05T20:55:39+00:00",
       "ended_at": null,
-      "attempt": 0,
+      "attempt": 1,
       "retries": 0,
       "max_retries": 2,
-      "strategy": null,
-      "inputs": {},
+      "strategy": "transitions",
+      "inputs": {
+        "scenes": [
+          "assets/scene_01.mp4",
+          "assets/scene_02.mp4",
+          "assets/scene_03.mp4",
+          "assets/scene_04.mp4",
+          "assets/scene_05.mp4",
+          "assets/scene_06.mp4",
+          "assets/scene_07.mp4"
+        ],
+        "audio": {
+          "voiceover_en": "voiceover_en.mp3",
+          "timings_en": "timings_en.json",
+          "voiceover_fr": "voiceover_fr.mp3",
+          "timings_fr": "timings_fr.json",
+          "music": "music.mp3",
+          "whoosh": "sfx/whoosh.mp3"
+        },
+        "languages": [
+          "en",
+          "fr"
+        ],
+        "strategy": "transitions"
+      },
       "outputs": {},
-      "logs": [],
+      "logs": [
+        {
+          "ts": "2026-11-05T20:55:39+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'transitions'"
+        },
+        {
+          "ts": "2026-11-05T20:55:39+00:00",
+          "level": "info",
+          "msg": "Rendering en: 7 scenes, 44.4s, xfade transitions"
+        }
+      ],
       "errors": [],
       "feedback": [],
       "cost_usd": 0.0
@@ -661,7 +797,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-05T20:55:36+00:00",
+    "exported_at": "2026-11-05T20:55:56+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/42107319584"
   }

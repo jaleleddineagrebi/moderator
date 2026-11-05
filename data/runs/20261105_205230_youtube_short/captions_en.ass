@@ -1,0 +1,58 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:02.87,Headline,,0,0,0,,{\fad(150,150)}Your Brain’s Battery
+Dialogue: 1,0:00:02.97,0:00:09.14,Headline,,0,0,0,,{\fad(150,150)}Resist Noon Crave Night
+Dialogue: 1,0:00:09.24,0:00:18.25,Headline,,0,0,0,,{\fad(150,150)}Every Choice Drains You
+Dialogue: 1,0:00:18.35,0:00:25.94,Headline,,0,0,0,,{\fad(150,150)}Willpower Is Finite
+Dialogue: 1,0:00:26.04,0:00:32.24,Headline,,0,0,0,,{\fad(150,150)}Self-Control Breaks Down
+Dialogue: 1,0:00:32.34,0:00:39.89,Headline,,0,0,0,,{\fad(150,150)}Automate Your Decisions
+Dialogue: 1,0:00:39.99,0:00:44.38,Headline,,0,0,0,,{\fad(150,150)}Protect Your Focus
+Dialogue: 0,0:00:00.10,0:00:00.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your brain has
+Dialogue: 0,0:00:00.89,0:00:01.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a daily battery
+Dialogue: 0,0:00:03.02,0:00:03.64,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It’s why you
+Dialogue: 0,0:00:03.65,0:00:04.59,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}can resist donuts
+Dialogue: 0,0:00:04.60,0:00:05.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}at noon but
+Dialogue: 0,0:00:05.55,0:00:06.69,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}find yourself ordering
+Dialogue: 0,0:00:06.70,0:00:07.64,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}late-night pizza by
+Dialogue: 0,0:00:07.65,0:00:08.14,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}nine
+Dialogue: 0,0:00:09.29,0:00:10.64,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Psychologists call this
+Dialogue: 0,0:00:10.65,0:00:11.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}decision fatigue
+Dialogue: 0,0:00:12.54,0:00:13.71,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Every tiny choice
+Dialogue: 0,0:00:13.90,0:00:14.47,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}from picking a
+Dialogue: 0,0:00:14.48,0:00:15.48,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}shirt to answering
+Dialogue: 0,0:00:15.49,0:00:16.65,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}emails saps your
+Dialogue: 0,0:00:16.67,0:00:17.23,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}energy
+Dialogue: 0,0:00:18.40,0:00:19.40,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Think of willpower
+Dialogue: 0,0:00:19.41,0:00:20.05,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}as a finite
+Dialogue: 0,0:00:20.06,0:00:20.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}muscle
+Dialogue: 0,0:00:21.40,0:00:22.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}By the time
+Dialogue: 0,0:00:22.01,0:00:23.16,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}evening hits that
+Dialogue: 0,0:00:23.18,0:00:24.21,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}muscle is completely
+Dialogue: 0,0:00:24.23,0:00:24.95,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}exhausted
+Dialogue: 0,0:00:26.09,0:00:27.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}This is exactly
+Dialogue: 0,0:00:27.02,0:00:27.95,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}when your self-control
+Dialogue: 0,0:00:27.97,0:00:29.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}breaks leading to
+Dialogue: 0,0:00:29.09,0:00:30.20,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}impulse buys and
+Dialogue: 0,0:00:30.22,0:00:31.22,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}mindless scrolling
+Dialogue: 0,0:00:32.39,0:00:32.97,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}To save your
+Dialogue: 0,0:00:32.98,0:00:34.29,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}sanity automate your
+Dialogue: 0,0:00:34.30,0:00:34.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}mornings
+Dialogue: 0,0:00:35.79,0:00:36.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Preset your meals
+Dialogue: 0,0:00:36.85,0:00:37.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and clothes to
+Dialogue: 0,0:00:37.53,0:00:38.42,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}preserve your mental
+Dialogue: 0,0:00:38.43,0:00:38.89,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}fuel
+Dialogue: 0,0:00:40.04,0:00:40.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You have to
+Dialogue: 0,0:00:40.57,0:00:41.65,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}protect your focus
+Dialogue: 0,0:00:41.79,0:00:42.86,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}because every morning
