@@ -1,0 +1,540 @@
+{
+  "voice": "en-US-AriaNeural",
+  "duration": 43.728073,
+  "scenes": [
+    {
+      "scene": "scene_01",
+      "start": 0.0,
+      "end": 2.736,
+      "words": [
+        {
+          "start": 0.1,
+          "end": 0.338,
+          "text": "Your"
+        },
+        {
+          "start": 0.35,
+          "end": 0.675,
+          "text": "brain"
+        },
+        {
+          "start": 0.688,
+          "end": 0.875,
+          "text": "has"
+        },
+        {
+          "start": 0.887,
+          "end": 0.962,
+          "text": "a"
+        },
+        {
+          "start": 0.975,
+          "end": 1.3,
+          "text": "daily"
+        },
+        {
+          "start": 1.312,
+          "end": 1.875,
+          "text": "battery"
+        }
+      ]
+    },
+    {
+      "scene": "scene_02",
+      "start": 2.916,
+      "end": 9.012,
+      "words": [
+        {
+          "start": 3.016,
+          "end": 3.254,
+          "text": "It’s"
+        },
+        {
+          "start": 3.266,
+          "end": 3.466,
+          "text": "why"
+        },
+        {
+          "start": 3.478,
+          "end": 3.641,
+          "text": "you"
+        },
+        {
+          "start": 3.654,
+          "end": 3.804,
+          "text": "can"
+        },
+        {
+          "start": 3.816,
+          "end": 4.191,
+          "text": "resist"
+        },
+        {
+          "start": 4.204,
+          "end": 4.591,
+          "text": "donuts"
+        },
+        {
+          "start": 4.604,
+          "end": 4.691,
+          "text": "at"
+        },
+        {
+          "start": 4.704,
+          "end": 5.029,
+          "text": "noon"
+        },
+        {
+          "start": 5.366,
+          "end": 5.541,
+          "text": "but"
+        },
+        {
+          "start": 5.554,
+          "end": 5.841,
+          "text": "find"
+        },
+        {
+          "start": 5.854,
+          "end": 6.266,
+          "text": "yourself"
+        },
+        {
+          "start": 6.278,
+          "end": 6.691,
+          "text": "ordering"
+        },
+        {
+          "start": 6.704,
+          "end": 7.179,
+          "text": "late-night"
+        },
+        {
+          "start": 7.191,
+          "end": 7.529,
+          "text": "pizza"
+        },
+        {
+          "start": 7.541,
+          "end": 7.641,
+          "text": "by"
+        },
+        {
+          "start": 7.653,
+          "end": 8.141,
+          "text": "nine"
+        }
+      ]
+    },
+    {
+      "scene": "scene_03",
+      "start": 9.192,
+      "end": 18.12,
+      "words": [
+        {
+          "start": 9.292,
+          "end": 10.204,
+          "text": "Psychologists"
+        },
+        {
+          "start": 10.217,
+          "end": 10.467,
+          "text": "call"
+        },
+        {
+          "start": 10.48,
+          "end": 10.642,
+          "text": "this"
+        },
+        {
+          "start": 10.654,
+          "end": 11.104,
+          "text": "decision"
+        },
+        {
+          "start": 11.117,
+          "end": 11.679,
+          "text": "fatigue"
+        },
+        {
+          "start": 12.542,
+          "end": 12.88,
+          "text": "Every"
+        },
+        {
+          "start": 12.892,
+          "end": 13.242,
+          "text": "tiny"
+        },
+        {
+          "start": 13.254,
+          "end": 13.705,
+          "text": "choice"
+        },
+        {
+          "start": 13.905,
+          "end": 14.067,
+          "text": "from"
+        },
+        {
+          "start": 14.08,
+          "end": 14.405,
+          "text": "picking"
+        },
+        {
+          "start": 14.417,
+          "end": 14.467,
+          "text": "a"
+        },
+        {
+          "start": 14.479,
+          "end": 14.842,
+          "text": "shirt"
+        },
+        {
+          "start": 14.854,
+          "end": 14.954,
+          "text": "to"
+        },
+        {
+          "start": 14.967,
+          "end": 15.48,
+          "text": "answering"
+        },
+        {
+          "start": 15.492,
+          "end": 15.967,
+          "text": "emails"
+        },
+        {
+          "start": 16.167,
+          "end": 16.479,
+          "text": "saps"
+        },
+        {
+          "start": 16.492,
+          "end": 16.654,
+          "text": "your"
+        },
+        {
+          "start": 16.667,
+          "end": 17.229,
+          "text": "energy"
+        }
+      ]
+    },
+    {
+      "scene": "scene_04",
+      "start": 18.3,
+      "end": 25.812,
+      "words": [
+        {
+          "start": 18.4,
+          "end": 18.638,
+          "text": "Think"
+        },
+        {
+          "start": 18.65,
+          "end": 18.775,
+          "text": "of"
+        },
+        {
+          "start": 18.787,
+          "end": 19.4,
+          "text": "willpower"
+        },
+        {
+          "start": 19.413,
+          "end": 19.525,
+          "text": "as"
+        },
+        {
+          "start": 19.538,
+          "end": 19.612,
+          "text": "a"
+        },
+        {
+          "start": 19.625,
+          "end": 20.05,
+          "text": "finite"
+        },
+        {
+          "start": 20.062,
+          "end": 20.537,
+          "text": "muscle"
+        },
+        {
+          "start": 21.4,
+          "end": 21.575,
+          "text": "By"
+        },
+        {
+          "start": 21.588,
+          "end": 21.688,
+          "text": "the"
+        },
+        {
+          "start": 21.7,
+          "end": 22.0,
+          "text": "time"
+        },
+        {
+          "start": 22.012,
+          "end": 22.337,
+          "text": "evening"
+        },
+        {
+          "start": 22.35,
+          "end": 22.775,
+          "text": "hits"
+        },
+        {
+          "start": 22.95,
+          "end": 23.163,
+          "text": "that"
+        },
+        {
+          "start": 23.175,
+          "end": 23.55,
+          "text": "muscle"
+        },
+        {
+          "start": 23.563,
+          "end": 23.675,
+          "text": "is"
+        },
+        {
+          "start": 23.688,
+          "end": 24.213,
+          "text": "completely"
+        },
+        {
+          "start": 24.225,
+          "end": 24.95,
+          "text": "exhausted"
+        }
+      ]
+    },
+    {
+      "scene": "scene_05",
+      "start": 25.992,
+      "end": 32.112,
+      "words": [
+        {
+          "start": 26.092,
+          "end": 26.355,
+          "text": "This"
+        },
+        {
+          "start": 26.367,
+          "end": 26.467,
+          "text": "is"
+        },
+        {
+          "start": 26.479,
+          "end": 27.004,
+          "text": "exactly"
+        },
+        {
+          "start": 27.017,
+          "end": 27.154,
+          "text": "when"
+        },
+        {
+          "start": 27.167,
+          "end": 27.292,
+          "text": "your"
+        },
+        {
+          "start": 27.304,
+          "end": 27.954,
+          "text": "self-control"
+        },
+        {
+          "start": 27.967,
+          "end": 28.392,
+          "text": "breaks"
+        },
+        {
+          "start": 28.667,
+          "end": 28.967,
+          "text": "leading"
+        },
+        {
+          "start": 28.979,
+          "end": 29.079,
+          "text": "to"
+        },
+        {
+          "start": 29.092,
+          "end": 29.579,
+          "text": "impulse"
+        },
+        {
+          "start": 29.592,
+          "end": 29.98,
+          "text": "buys"
+        },
+        {
+          "start": 29.992,
+          "end": 30.205,
+          "text": "and"
+        },
+        {
+          "start": 30.217,
+          "end": 30.654,
+          "text": "mindless"
+        },
+        {
+          "start": 30.667,
+          "end": 31.217,
+          "text": "scrolling"
+        }
+      ]
+    },
+    {
+      "scene": "scene_06",
+      "start": 32.292,
+      "end": 39.756,
+      "words": [
+        {
+          "start": 32.392,
+          "end": 32.542,
+          "text": "To"
+        },
+        {
+          "start": 32.555,
+          "end": 32.83,
+          "text": "save"
+        },
+        {
+          "start": 32.842,
+          "end": 32.967,
+          "text": "your"
+        },
+        {
+          "start": 32.98,
+          "end": 33.53,
+          "text": "sanity"
+        },
+        {
+          "start": 33.742,
+          "end": 34.167,
+          "text": "automate"
+        },
+        {
+          "start": 34.179,
+          "end": 34.292,
+          "text": "your"
+        },
+        {
+          "start": 34.305,
+          "end": 34.93,
+          "text": "mornings"
+        },
+        {
+          "start": 35.792,
+          "end": 36.279,
+          "text": "Preset"
+        },
+        {
+          "start": 36.292,
+          "end": 36.417,
+          "text": "your"
+        },
+        {
+          "start": 36.43,
+          "end": 36.842,
+          "text": "meals"
+        },
+        {
+          "start": 36.854,
+          "end": 36.98,
+          "text": "and"
+        },
+        {
+          "start": 36.992,
+          "end": 37.404,
+          "text": "clothes"
+        },
+        {
+          "start": 37.417,
+          "end": 37.517,
+          "text": "to"
+        },
+        {
+          "start": 37.529,
+          "end": 37.942,
+          "text": "preserve"
+        },
+        {
+          "start": 37.954,
+          "end": 38.079,
+          "text": "your"
+        },
+        {
+          "start": 38.092,
+          "end": 38.417,
+          "text": "mental"
+        },
+        {
+          "start": 38.43,
+          "end": 38.892,
+          "text": "fuel"
+        }
+      ]
+    },
+    {
+      "scene": "scene_07",
+      "start": 39.936,
+      "end": 43.728,
+      "words": [
+        {
+          "start": 40.036,
+          "end": 40.211,
+          "text": "You"
+        },
+        {
+          "start": 40.223,
+          "end": 40.448,
+          "text": "have"
+        },
+        {
+          "start": 40.461,
+          "end": 40.561,
+          "text": "to"
+        },
+        {
+          "start": 40.573,
+          "end": 40.986,
+          "text": "protect"
+        },
+        {
+          "start": 40.998,
+          "end": 41.099,
+          "text": "your"
+        },
+        {
+          "start": 41.111,
+          "end": 41.648,
+          "text": "focus"
+        },
+        {
+          "start": 41.786,
+          "end": 42.136,
+          "text": "because"
+        },
+        {
+          "start": 42.148,
+          "end": 42.361,
+          "text": "every"
+        },
+        {
+          "start": 42.374,
+          "end": 42.861,
+          "text": "morning"
+        }
+      ]
+    }
+  ]
+}
