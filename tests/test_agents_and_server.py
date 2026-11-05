@@ -528,6 +528,13 @@ def test_youtube_upload_credentials_single_and_multi_channel_and_publish(tmp_pat
     steps = {s.get("name"): s for s in gen["jobs"]["generate"]["steps"]}
     assert "|| 'gemini'" in steps["Choose text model and verify its secret"]["env"]["INPUT_LLM"]
     assert steps["Install Claude Code CLI (pinned)"]["if"] == "steps.llm.outputs.provider == 'claude'"
+    # main only accepts pull requests: topic history goes to its own branch, nothing pushes to main
+    gen_runs = "\n".join(s.get("run", "") for s in gen["jobs"]["generate"]["steps"])
+    assert "topics-history.sh load" in gen_runs and "topics-history.sh save" in gen_runs
+    assert "git push" not in gen_runs
+    ruleset = json.loads((ROOT / ".github" / "rulesets" / "protect-main.json").read_text(encoding="utf-8"))
+    assert ruleset["bypass_actors"] == []  # personal repos can't exempt the Actions bot
+    assert {"pull_request", "non_fast_forward", "deletion"} <= {r["type"] for r in ruleset["rules"]}
     up_raw = (ROOT / ".github" / "workflows" / "upload-short.yml").read_text(encoding="utf-8")
     for secret in ("YOUTUBE_TOKEN", "YOUTUBE_TOKEN_EN", "YOUTUBE_TOKEN_FR", "YOUTUBE_TOKEN_AR"):
         assert secret in up_raw

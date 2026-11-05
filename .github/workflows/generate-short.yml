@@ -46,7 +46,7 @@ on:
         type: string
 
 permissions:
-  contents: write   # commit history/topics.jsonl so scheduled runs never repeat topics
+  contents: write   # save topic history to the topics-history branch and update GitHub Pages
   issues: write     # open the Checkpoint C review issue
 
 concurrency:
@@ -94,6 +94,9 @@ jobs:
 
       - name: Install Python dependencies
         run: uv sync --locked
+
+      - name: Load topic history (so scheduled runs never repeat a topic)
+        run: bash .github/scripts/topics-history.sh load
 
       - name: Install Claude Code CLI (pinned)
         if: steps.llm.outputs.provider == 'claude'
@@ -154,16 +157,9 @@ jobs:
             !${{ steps.gen.outputs.run_dir }}/assets/raw
           retention-days: 14
 
-      - name: Record topic in history/topics.jsonl
+      - name: Save topic history (topics-history branch; main only accepts pull requests)
         if: always()
-        run: |
-          if [ -n "$(git status --porcelain history)" ]; then
-            git config user.name "moderator-bot"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add history
-            git commit -m "Record Short topic ($(date -u +%F))"
-            git pull --rebase -q && git push -q
-          fi
+        run: bash .github/scripts/topics-history.sh save
 
       - name: Publish Step Summary, Review Issue & GitHub Pages Dashboard
         if: always() && steps.gen.outputs.run_dir

@@ -149,7 +149,9 @@ Publishing is unchanged: comment `/approve` on the `short-review` issue and `Upl
 - every change goes through a pull request, and the `test` CI check must pass before it can be merged
 - force-pushes and deleting `main` are blocked
 - only people with write access (you and the collaborators you invite) can merge
-- the only exception is the GitHub Actions bot, so scheduled runs can still commit `history/topics.jsonl`
+- there are no exceptions, not even for you or the GitHub Actions bot. Scheduled runs save their topic history to the separate `topics-history` branch instead of `main`, so a run never repeats a topic and never conflicts with your PRs.
+
+To see GitHub's topics on this PC before a local run: `git fetch origin topics-history && git show origin/topics-history:topics.jsonl > history/topics.jsonl`
 
 To turn it on:
 
