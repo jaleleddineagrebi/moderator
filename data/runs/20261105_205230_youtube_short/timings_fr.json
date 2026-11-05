@@ -1,0 +1,465 @@
+{
+  "voice": "fr-FR-DeniseNeural",
+  "duration": 37.512902,
+  "scenes": [
+    {
+      "scene": "scene_01",
+      "start": 0.0,
+      "end": 2.376,
+      "words": [
+        {
+          "start": 0.1,
+          "end": 0.275,
+          "text": "Ton"
+        },
+        {
+          "start": 0.287,
+          "end": 0.75,
+          "text": "cerveau"
+        },
+        {
+          "start": 0.762,
+          "end": 0.875,
+          "text": "a"
+        },
+        {
+          "start": 0.887,
+          "end": 1.012,
+          "text": "une"
+        },
+        {
+          "start": 1.025,
+          "end": 1.5,
+          "text": "batterie"
+        }
+      ]
+    },
+    {
+      "scene": "scene_02",
+      "start": 2.556,
+      "end": 7.284,
+      "words": [
+        {
+          "start": 2.656,
+          "end": 2.894,
+          "text": "C’est"
+        },
+        {
+          "start": 2.906,
+          "end": 3.268,
+          "text": "pourquoi"
+        },
+        {
+          "start": 3.281,
+          "end": 3.419,
+          "text": "tu"
+        },
+        {
+          "start": 3.431,
+          "end": 3.868,
+          "text": "résistes"
+        },
+        {
+          "start": 3.881,
+          "end": 3.931,
+          "text": "à"
+        },
+        {
+          "start": 3.943,
+          "end": 4.306,
+          "text": "midi"
+        },
+        {
+          "start": 4.668,
+          "end": 4.781,
+          "text": "mais"
+        },
+        {
+          "start": 4.793,
+          "end": 5.156,
+          "text": "craques"
+        },
+        {
+          "start": 5.168,
+          "end": 5.331,
+          "text": "pour"
+        },
+        {
+          "start": 5.344,
+          "end": 5.469,
+          "text": "une"
+        },
+        {
+          "start": 5.481,
+          "end": 5.831,
+          "text": "pizza"
+        },
+        {
+          "start": 5.844,
+          "end": 5.893,
+          "text": "à"
+        },
+        {
+          "start": 5.906,
+          "end": 6.418,
+          "text": "minuit"
+        }
+      ]
+    },
+    {
+      "scene": "scene_03",
+      "start": 7.464,
+      "end": 14.064,
+      "words": [
+        {
+          "start": 7.564,
+          "end": 7.727,
+          "text": "C'est"
+        },
+        {
+          "start": 7.739,
+          "end": 7.864,
+          "text": "la"
+        },
+        {
+          "start": 7.876,
+          "end": 8.289,
+          "text": "fatigue"
+        },
+        {
+          "start": 8.302,
+          "end": 9.202,
+          "text": "décisionnelle"
+        },
+        {
+          "start": 10.064,
+          "end": 10.414,
+          "text": "Chaque"
+        },
+        {
+          "start": 10.426,
+          "end": 10.726,
+          "text": "petit"
+        },
+        {
+          "start": 10.739,
+          "end": 10.951,
+          "text": "choix"
+        },
+        {
+          "start": 10.964,
+          "end": 11.352,
+          "text": "épuise"
+        },
+        {
+          "start": 11.364,
+          "end": 11.526,
+          "text": "ton"
+        },
+        {
+          "start": 11.539,
+          "end": 11.914,
+          "text": "précieux"
+        },
+        {
+          "start": 11.927,
+          "end": 12.452,
+          "text": "réservoir"
+        },
+        {
+          "start": 12.464,
+          "end": 12.552,
+          "text": "de"
+        },
+        {
+          "start": 12.564,
+          "end": 13.189,
+          "text": "volonté"
+        }
+      ]
+    },
+    {
+      "scene": "scene_04",
+      "start": 14.244,
+      "end": 20.436,
+      "words": [
+        {
+          "start": 14.344,
+          "end": 14.607,
+          "text": "Vois"
+        },
+        {
+          "start": 14.619,
+          "end": 14.731,
+          "text": "la"
+        },
+        {
+          "start": 14.744,
+          "end": 15.219,
+          "text": "volonté"
+        },
+        {
+          "start": 15.232,
+          "end": 15.457,
+          "text": "comme"
+        },
+        {
+          "start": 15.469,
+          "end": 15.532,
+          "text": "un"
+        },
+        {
+          "start": 15.544,
+          "end": 16.032,
+          "text": "muscle"
+        },
+        {
+          "start": 16.894,
+          "end": 17.119,
+          "text": "Le"
+        },
+        {
+          "start": 17.132,
+          "end": 17.419,
+          "text": "soir"
+        },
+        {
+          "start": 17.432,
+          "end": 17.794,
+          "text": "venu"
+        },
+        {
+          "start": 18.081,
+          "end": 18.231,
+          "text": "ce"
+        },
+        {
+          "start": 18.244,
+          "end": 18.594,
+          "text": "muscle"
+        },
+        {
+          "start": 18.606,
+          "end": 18.644,
+          "text": "est"
+        },
+        {
+          "start": 18.656,
+          "end": 19.156,
+          "text": "totalement"
+        },
+        {
+          "start": 19.169,
+          "end": 19.231,
+          "text": "à"
+        },
+        {
+          "start": 19.244,
+          "end": 19.556,
+          "text": "plat"
+        }
+      ]
+    },
+    {
+      "scene": "scene_05",
+      "start": 20.616,
+      "end": 26.208,
+      "words": [
+        {
+          "start": 20.716,
+          "end": 20.903,
+          "text": "C'est"
+        },
+        {
+          "start": 20.916,
+          "end": 21.041,
+          "text": "là"
+        },
+        {
+          "start": 21.054,
+          "end": 21.191,
+          "text": "que"
+        },
+        {
+          "start": 21.204,
+          "end": 21.354,
+          "text": "ton"
+        },
+        {
+          "start": 21.366,
+          "end": 21.753,
+          "text": "contrôle"
+        },
+        {
+          "start": 21.766,
+          "end": 22.178,
+          "text": "lâche"
+        },
+        {
+          "start": 22.479,
+          "end": 22.928,
+          "text": "provoquant"
+        },
+        {
+          "start": 22.941,
+          "end": 23.066,
+          "text": "des"
+        },
+        {
+          "start": 23.078,
+          "end": 23.404,
+          "text": "achats"
+        },
+        {
+          "start": 23.416,
+          "end": 24.066,
+          "text": "impulsifs"
+        },
+        {
+          "start": 24.078,
+          "end": 24.128,
+          "text": "et"
+        },
+        {
+          "start": 24.141,
+          "end": 24.253,
+          "text": "du"
+        },
+        {
+          "start": 24.266,
+          "end": 24.741,
+          "text": "défilement"
+        },
+        {
+          "start": 24.754,
+          "end": 25.329,
+          "text": "infini"
+        }
+      ]
+    },
+    {
+      "scene": "scene_06",
+      "start": 26.388,
+      "end": 33.444,
+      "words": [
+        {
+          "start": 26.488,
+          "end": 26.688,
+          "text": "Pour"
+        },
+        {
+          "start": 26.7,
+          "end": 26.851,
+          "text": "t'en"
+        },
+        {
+          "start": 26.863,
+          "end": 27.438,
+          "text": "sortir"
+        },
+        {
+          "start": 27.638,
+          "end": 28.2,
+          "text": "automatise"
+        },
+        {
+          "start": 28.213,
+          "end": 28.326,
+          "text": "tes"
+        },
+        {
+          "start": 28.338,
+          "end": 28.788,
+          "text": "matins"
+        },
+        {
+          "start": 29.651,
+          "end": 30.088,
+          "text": "Prépare"
+        },
+        {
+          "start": 30.1,
+          "end": 30.225,
+          "text": "tout"
+        },
+        {
+          "start": 30.238,
+          "end": 30.688,
+          "text": "d'avance"
+        },
+        {
+          "start": 30.7,
+          "end": 30.888,
+          "text": "pour"
+        },
+        {
+          "start": 30.901,
+          "end": 31.526,
+          "text": "économiser"
+        },
+        {
+          "start": 31.538,
+          "end": 31.676,
+          "text": "ta"
+        },
+        {
+          "start": 31.688,
+          "end": 31.975,
+          "text": "force"
+        },
+        {
+          "start": 31.988,
+          "end": 32.576,
+          "text": "mentale"
+        }
+      ]
+    },
+    {
+      "scene": "scene_07",
+      "start": 33.624,
+      "end": 37.512,
+      "words": [
+        {
+          "start": 33.724,
+          "end": 33.887,
+          "text": "Tu"
+        },
+        {
+          "start": 33.899,
+          "end": 34.062,
+          "text": "dois"
+        },
+        {
+          "start": 34.074,
+          "end": 34.549,
+          "text": "protéger"
+        },
+        {
+          "start": 34.562,
+          "end": 34.686,
+          "text": "ta"
+        },
+        {
+          "start": 34.699,
+          "end": 35.486,
+          "text": "concentration"
+        },
+        {
+          "start": 35.724,
+          "end": 35.924,
+          "text": "car"
+        },
+        {
+          "start": 35.936,
+          "end": 36.149,
+          "text": "chaque"
+        },
+        {
+          "start": 36.162,
+          "end": 36.637,
+          "text": "matin"
+        }
+      ]
+    }
+  ]
+}
