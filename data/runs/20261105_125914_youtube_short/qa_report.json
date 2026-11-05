@@ -1,0 +1,166 @@
+{
+  "passed": false,
+  "revision_round": 0,
+  "checks": [
+    {
+      "check": "length",
+      "lang": "en",
+      "ok": true,
+      "detail": "45.5s (must be under 60s; target 32-50s)",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "target length",
+      "lang": "en",
+      "ok": true,
+      "detail": "45.5s",
+      "send_to": null,
+      "severity": "minor"
+    },
+    {
+      "check": "aspect ratio",
+      "lang": "en",
+      "ok": true,
+      "detail": "1080x1920",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "video codec",
+      "lang": "en",
+      "ok": true,
+      "detail": "h264",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "audio track",
+      "lang": "en",
+      "ok": true,
+      "detail": "present",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "loudness",
+      "lang": "en",
+      "ok": true,
+      "detail": "-14.2 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "hook timing",
+      "lang": "en",
+      "ok": true,
+      "detail": "scene_01 spoken in 3.1s (target <= 3s)",
+      "send_to": null,
+      "severity": "minor"
+    },
+    {
+      "check": "caption sync",
+      "lang": "en",
+      "ok": true,
+      "detail": "103 words, 37 caption events",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "length",
+      "lang": "fr",
+      "ok": true,
+      "detail": "40.0s (must be under 60s; target 32-50s)",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "target length",
+      "lang": "fr",
+      "ok": true,
+      "detail": "40.0s",
+      "send_to": null,
+      "severity": "minor"
+    },
+    {
+      "check": "aspect ratio",
+      "lang": "fr",
+      "ok": true,
+      "detail": "1080x1920",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "video codec",
+      "lang": "fr",
+      "ok": true,
+      "detail": "h264",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "audio track",
+      "lang": "fr",
+      "ok": true,
+      "detail": "present",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "loudness",
+      "lang": "fr",
+      "ok": true,
+      "detail": "-14.2 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "hook timing",
+      "lang": "fr",
+      "ok": true,
+      "detail": "scene_01 spoken in 2.7s (target <= 3s)",
+      "send_to": null,
+      "severity": "minor"
+    },
+    {
+      "check": "caption sync",
+      "lang": "fr",
+      "ok": true,
+      "detail": "91 words, 34 caption events",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "visual licenses",
+      "lang": null,
+      "ok": true,
+      "detail": "7 assets: pixabay",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "audio licenses",
+      "lang": null,
+      "ok": true,
+      "detail": "music: original work, no third-party rights; sfx: original work, no third-party rights; voice: synthetic voice; no third-party performance rights",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "visual_fit review",
+      "lang": "all",
+      "ok": false,
+      "detail": "The query for scene_04 is 'messy office desk', but the narration mentions an 'unwashed dish'. Change visual query to 'dirty dishes in sink' to match the specific example in the script.",
+      "send_to": "visuals",
+      "severity": "minor"
+    },
+    {
+      "check": "people rule",
+      "lang": null,
+      "ok": false,
+      "detail": "scene_04: A woman is visible in all frames, showing her head, shoulder, and arm as she works at a laptop.. Replace with footage without women (a face-only close-up is the only exception).",
+      "send_to": "visuals",
+      "severity": "blocker"
+    }
+  ]
+}

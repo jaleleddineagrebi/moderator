@@ -1,0 +1,22 @@
+# QA report: CHANGES NEEDED
+
+- ✅ **length** [en]: 45.5s (must be under 60s; target 32-50s)
+- ✅ **target length** [en]: 45.5s
+- ✅ **aspect ratio** [en]: 1080x1920
+- ✅ **video codec** [en]: h264
+- ✅ **audio track** [en]: present
+- ✅ **loudness** [en]: -14.2 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)
+- ✅ **hook timing** [en]: scene_01 spoken in 3.1s (target <= 3s)
+- ✅ **caption sync** [en]: 103 words, 37 caption events
+- ✅ **length** [fr]: 40.0s (must be under 60s; target 32-50s)
+- ✅ **target length** [fr]: 40.0s
+- ✅ **aspect ratio** [fr]: 1080x1920
+- ✅ **video codec** [fr]: h264
+- ✅ **audio track** [fr]: present
+- ✅ **loudness** [fr]: -14.2 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)
+- ✅ **hook timing** [fr]: scene_01 spoken in 2.7s (target <= 3s)
+- ✅ **caption sync** [fr]: 91 words, 34 caption events
+- ✅ **visual licenses**: 7 assets: pixabay
+- ✅ **audio licenses**: music: original work, no third-party rights; sfx: original work, no third-party rights; voice: synthetic voice; no third-party performance rights
+- ⚠️ **visual_fit review** [all]: The query for scene_04 is 'messy office desk', but the narration mentions an 'unwashed dish'. Change visual query to 'dirty dishes in sink' to match the specific example in the script.
+- ❌ **people rule**: scene_04: A woman is visible in all frames, showing her head, shoulder, and arm as she works at a laptop.. Replace with footage without women (a face-only close-up is the only exception). → sent to visuals
