@@ -30,7 +30,7 @@ jobs:
       contains(github.event.issue.labels.*.name, 'short-review') &&
       (
         github.event.comment.user.login == github.repository_owner ||
-        github.event.comment.author_association == 'OWNER'
+        contains(fromJSON('["OWNER", "COLLABORATOR"]'), github.event.comment.author_association)
       ) &&
       startsWith(github.event.comment.body, '/edit')
     runs-on: ubuntu-latest
