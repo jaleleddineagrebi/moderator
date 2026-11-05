@@ -17,7 +17,7 @@ import tempfile
 from pathlib import Path
 from typing import TYPE_CHECKING, Any
 
-from .llm import COMPLEXITY_LEVELS, LLMError, escalate
+from .llm import COMPLEXITY_LEVELS, LLMError, escalate, run_overrides
 
 if TYPE_CHECKING:
     from .agent import StepContext
@@ -47,7 +47,7 @@ class ClaudeCLI:
     def route(self, complexity: str | None = None) -> tuple[str, str, str]:
         base = complexity or getattr(self.ctx, "complexity", "medium")
         level = escalate(base, int(getattr(self.ctx, "attempt", 1) or 1) - 1)
-        tier = self.tiers[level]
+        tier = {**self.tiers[level], **run_overrides(self.ctx, "effort").get(level, {})}
         return level, self.model or tier["model"], tier.get("effort") or ""
 
     def command(self, model: str, effort: str, tools: list[str] | None, system: str | None,

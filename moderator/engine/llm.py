@@ -93,13 +93,38 @@ COMPLEXITY_LEVELS = ["low", "medium", "high"]
 DEFAULT_TIERS: dict[str, dict[str, str]] = {
     "low": {"model": "flash-lite", "thinking": "minimal"},   # formatting, metadata, simple checks
     "medium": {"model": "flash", "thinking": "low"},         # research, review
-    "high": {"model": "flash", "thinking": "high"},          # creative writing, strategy
+    "high": {"model": "pro", "thinking": "high"},            # creative writing, strategy (falls back to flash)
 }
 # Retry the same model once after a transient error (503 high demand / per-minute 429) before moving on
 TRANSIENT_RETRY_DELAY_S = 2.0
 MAX_RETRY_AFTER_S = 60.0
 # Models that hit their daily quota or are not enabled, per API key, for the life of this process (= one run)
 _EXHAUSTED_MODELS: dict[str, set[str]] = {}
+
+
+def run_overrides(ctx: Any, setting: str = "thinking") -> dict[str, dict[str, str]]:
+    """Per-run model choice by complexity, from the run param `models` (CLI `-p models=...`, GitHub input):
+    "high=pro,medium=flash,low=flash-lite", "all=flash", "high=pro:high" (model:thinking or model:effort),
+    or a YAML dict {high: pro, low: {model: flash-lite, thinking: minimal}}. Unknown levels are ignored."""
+    raw = (getattr(ctx, "params", None) or {}).get("models")
+    if not raw:
+        return {}
+    if isinstance(raw, str):
+        raw = dict(part.split("=", 1) for part in re.split(r"[,\s]+", raw.strip()) if "=" in part)
+    out: dict[str, dict[str, str]] = {}
+    for level, value in raw.items():
+        level = str(level).strip().lower()
+        if isinstance(value, dict):
+            tier = {k: str(v) for k, v in value.items() if v}
+        else:
+            model, _, extra = str(value).strip().partition(":")
+            tier = {"model": model.strip()} | ({setting: extra.strip()} if extra.strip() else {})
+        if not tier.get("model") and "model" in tier:
+            continue
+        for lvl in (COMPLEXITY_LEVELS if level == "all" else [level]):
+            if lvl in COMPLEXITY_LEVELS:
+                out[lvl] = {**out.get(lvl, {}), **tier}
+    return out
 
 
 def escalate(complexity: str, steps: int) -> str:
@@ -228,7 +253,7 @@ class GeminiClient:
         """(complexity, model alias, thinking level) for this call. Retries escalate one level per attempt."""
         base = complexity or getattr(self.ctx, "complexity", "medium")
         level = escalate(base, int(getattr(self.ctx, "attempt", 1) or 1) - 1)
-        tier = self.tiers[level]
+        tier = {**self.tiers[level], **run_overrides(self.ctx, "thinking").get(level, {})}
         return level, self.model or tier["model"], tier.get("thinking") or ""
 
     async def _request_once(self, client: httpx.AsyncClient, url: str, headers: dict[str, str], body: dict[str, Any]) -> httpx.Response:

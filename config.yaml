@@ -14,11 +14,12 @@ llm:
       medium: {model: sonnet, effort: medium}
       high:   {model: opus, effort: high}
     timeout_s: 900
-  # Gemini tiers (the default provider)
+  # Gemini tiers (the default provider). Each agent's complexity (agents/*/agent.yaml) picks its tier; a retry
+  # moves one tier up. Override per run: -p models=high=pro,medium=flash,low=flash-lite  (or all=flash).
   tiers:
     low:    {model: flash-lite, thinking: minimal}   # packaging/SEO, JSON formatting
     medium: {model: flash, thinking: low}            # trend research, QA review
-    high:   {model: flash, thinking: high}           # scriptwriting, niche strategy
+    high:   {model: pro, thinking: high}             # scriptwriting, niche strategy (falls back to flash without Pro quota)
   image_model: banana
   timeout_s: 600
 

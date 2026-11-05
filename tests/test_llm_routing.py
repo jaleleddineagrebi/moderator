@@ -17,9 +17,9 @@ OK = {"candidates": [{"content": {"parts": [{"text": json.dumps({"ok": True})}]}
       "usageMetadata": {"promptTokenCount": 1000, "candidatesTokenCount": 100, "thoughtsTokenCount": 4000}}
 
 
-def make_ctx(tmp_path, complexity="medium", attempt=1):
+def make_ctx(tmp_path, complexity="medium", attempt=1, params=None):
     wf = Workflow("w", "W", "", {}, {"max_retries": 0, "max_revision_rounds": 0}, [Step("s1", "x", "S1")])
-    store = StateStore.create(tmp_path / "run", new_state("r", wf, {}, {}))
+    store = StateStore.create(tmp_path / "run", new_state("r", wf, params or {}, {}))
     return StepContext(store=store, step_id="s1", attempt=attempt, strategy="default", options={}, config={},
                        complexity=complexity)
 
@@ -75,8 +75,12 @@ def test_complexity_picks_model_and_thinking(tmp_path, gemini):
     high = GeminiClient(make_ctx(tmp_path / "b", "high"), {})
     asyncio.run(high.ask("x", schema=SCHEMA))
     model, body = gemini["calls"][-1]
-    assert model == llm_mod.TEXT_MODEL_CHAINS["flash"][0]
+    assert model == llm_mod.TEXT_MODEL_CHAINS["pro"][0]  # hard tasks use Pro, not Flash
     assert body["generationConfig"]["thinkingConfig"] == {"thinkingLevel": "high"}
+
+    medium = GeminiClient(make_ctx(tmp_path / "m", "medium"), {})
+    asyncio.run(medium.ask("x", schema=SCHEMA))
+    assert gemini["calls"][-1][0] == llm_mod.TEXT_MODEL_CHAINS["flash"][0]
 
     # a per-call override and config tiers both apply
     custom = GeminiClient(make_ctx(tmp_path / "c", "high"), {"tiers": {"low": {"model": "pro", "thinking": "low"}}})
@@ -152,3 +156,24 @@ def test_state_and_pages_never_store_api_keys(tmp_path, monkeypatch):
     ctx = make_ctx(tmp_path)
     ctx.store.log("s1", msg, "error")
     assert "pixabay-secret" not in (ctx.store.run_dir / "state.json").read_text(encoding="utf-8")
+
+
+def test_run_param_models_overrides_tiers_per_complexity(tmp_path):
+    from moderator.engine.llm import run_overrides
+    from moderator.engine.llm_claude import ClaudeCLI
+
+    ctx = make_ctx(tmp_path / "a", "high", params={"models": "high=flash:medium, low=pro"})
+    assert run_overrides(ctx) == {"high": {"model": "flash", "thinking": "medium"}, "low": {"model": "pro"}}
+    assert GeminiClient(ctx, {}).route() == ("high", "flash", "medium")
+    assert GeminiClient(ctx, {}).route("low") == ("low", "pro", "minimal")  # thinking kept from the tier
+    assert GeminiClient(ctx, {}).route("medium") == ("medium", "flash", "low")  # untouched level
+
+    every = make_ctx(tmp_path / "b", "high", params={"models": "all=flash-lite"})
+    assert {GeminiClient(every, {}).route(lvl)[1] for lvl in ("low", "medium", "high")} == {"flash-lite"}
+
+    yaml_dict = make_ctx(tmp_path / "c", "medium", params={"models": {"medium": {"model": "pro", "thinking": "high"}, "bogus": "x"}})
+    assert GeminiClient(yaml_dict, {}).route() == ("medium", "pro", "high")
+
+    claude = make_ctx(tmp_path / "d", "high", params={"models": "high=sonnet:medium"})
+    assert ClaudeCLI(claude, {}).route() == ("high", "sonnet", "medium")
+    assert ClaudeCLI(claude, {}).route("low") == ("low", "haiku", "low")

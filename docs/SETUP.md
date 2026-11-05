@@ -164,3 +164,23 @@ Then, under **Settings → Actions → General**:
 - keep **Workflow permissions** at *Read repository contents* (each workflow asks for the extra permissions it needs)
 
 Only you and your collaborators can use `/approve`, `/edit` and `/reject` on review issues, and only they can click **Run workflow**. Comments from anyone else are ignored.
+
+---
+
+## 10. Choose the Model per Task Complexity
+
+Each agent has a complexity in `agents/*/agent.yaml`, and the complexity picks the model. A retry moves one tier up.
+
+| Complexity | Agents | Gemini (default) | Claude |
+| :--- | :--- | :--- | :--- |
+| `low` | packaging revisions, visual edits | `flash-lite` | `haiku` |
+| `medium` | trend research, QA review | `flash` | `sonnet` |
+| `high` | scriptwriter, niche scout | `pro` (falls back to `flash` without Pro quota) | `opus` |
+
+- **Permanently:** edit `llm.tiers` (Gemini) or `llm.claude.tiers` (Claude) in `config.yaml`.
+- **For one run:**
+  - Locally: `uv run python -m moderator run youtube_short -p models=high=pro,medium=flash,low=flash-lite`
+  - On GitHub: fill **models** in *Run workflow*. For every scheduled run, set the repository variable `MODERATOR_MODELS`.
+  - `all=flash` uses one model for everything.
+  - `high=pro:medium` also sets the thinking level (Gemini) or effort (Claude).
+  - With Claude, use Claude names, for example `high=opus,medium=sonnet,low=haiku`.
