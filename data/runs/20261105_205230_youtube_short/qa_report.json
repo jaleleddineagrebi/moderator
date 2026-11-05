@@ -1,12 +1,12 @@
 {
-  "passed": false,
-  "revision_round": 0,
+  "passed": true,
+  "revision_round": 1,
   "checks": [
     {
       "check": "length",
       "lang": "en",
       "ok": true,
-      "detail": "44.4s (must be under 60s; target 32-50s)",
+      "detail": "47.3s (must be under 60s; target 32-50s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -14,7 +14,7 @@
       "check": "target length",
       "lang": "en",
       "ok": true,
-      "detail": "44.4s",
+      "detail": "47.3s",
       "send_to": null,
       "severity": "minor"
     },
@@ -54,7 +54,7 @@
       "check": "hook timing",
       "lang": "en",
       "ok": true,
-      "detail": "scene_01 spoken in 2.7s (target <= 3s)",
+      "detail": "scene_01 spoken in 2.3s (target <= 3s)",
       "send_to": null,
       "severity": "minor"
     },
@@ -62,7 +62,7 @@
       "check": "caption sync",
       "lang": "en",
       "ok": true,
-      "detail": "97 words, 37 caption events",
+      "detail": "107 words, 38 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -70,7 +70,7 @@
       "check": "length",
       "lang": "fr",
       "ok": true,
-      "detail": "38.2s (must be under 60s; target 32-50s)",
+      "detail": "42.7s (must be under 60s; target 32-50s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -78,7 +78,7 @@
       "check": "target length",
       "lang": "fr",
       "ok": true,
-      "detail": "38.2s",
+      "detail": "42.7s",
       "send_to": null,
       "severity": "minor"
     },
@@ -126,7 +126,7 @@
       "check": "caption sync",
       "lang": "fr",
       "ok": true,
-      "detail": "82 words, 30 caption events",
+      "detail": "96 words, 36 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -147,18 +147,10 @@
       "severity": "blocker"
     },
     {
-      "check": "accuracy review",
-      "lang": "all",
-      "ok": false,
-      "detail": "The concept of 'ego depletion' or willpower being a finite muscle has failed to replicate in modern psychological studies. The script should frame this as a subjective feeling of fatigue or mental exhaustion rather than a biological/scientific certainty. Change 'Psychologists call this' to 'Some call this' or 'It's like...'.",
-      "send_to": "script",
-      "severity": "blocker"
-    },
-    {
       "check": "grammar review",
       "lang": "fr",
       "ok": false,
-      "detail": "In scene_02 VO, 'C’est pourquoi tu résistes à midi' is missing the object. Fix to: 'C’est pourquoi tu résistes aux donuts à midi'.",
+      "detail": "In scene_02 VO, 'Voilà pourquoi tu résistes sans effort à midi' is missing the object of resistance found in the English source (donuts). Suggest changing to: 'Voilà pourquoi tu résistes sans effort aux donuts à midi'.",
       "send_to": "script",
       "severity": "minor"
     },
@@ -166,7 +158,7 @@
       "check": "grammar review",
       "lang": "fr",
       "ok": false,
-      "detail": "In scene_06 VO, 'automatise tes matins' is correct, but 'Prépare tout d'avance' should be 'Prépare tout à l'avance' for better flow.",
+      "detail": "In scene_04 VO, 'des chaussettes au moindre e-mail' sounds slightly clipped. Suggest adding 'du choix de tes' for better flow: 'du choix de tes chaussettes au moindre e-mail'.",
       "send_to": "script",
       "severity": "minor"
     },
