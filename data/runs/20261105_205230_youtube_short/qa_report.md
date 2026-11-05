@@ -1,0 +1,24 @@
+# QA report: CHANGES NEEDED
+
+- ✅ **length** [en]: 44.4s (must be under 60s; target 32-50s)
+- ✅ **target length** [en]: 44.4s
+- ✅ **aspect ratio** [en]: 1080x1920
+- ✅ **video codec** [en]: h264
+- ✅ **audio track** [en]: present
+- ✅ **loudness** [en]: -14.1 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)
+- ✅ **hook timing** [en]: scene_01 spoken in 2.7s (target <= 3s)
+- ✅ **caption sync** [en]: 97 words, 37 caption events
+- ✅ **length** [fr]: 38.2s (must be under 60s; target 32-50s)
+- ✅ **target length** [fr]: 38.2s
+- ✅ **aspect ratio** [fr]: 1080x1920
+- ✅ **video codec** [fr]: h264
+- ✅ **audio track** [fr]: present
+- ✅ **loudness** [fr]: -13.9 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)
+- ✅ **hook timing** [fr]: scene_01 spoken in 2.4s (target <= 3s)
+- ✅ **caption sync** [fr]: 82 words, 30 caption events
+- ✅ **visual licenses**: 7 assets: pixabay
+- ✅ **audio licenses**: music: original work, no third-party rights; sfx: original work, no third-party rights; voice: synthetic voice; no third-party performance rights
+- ❌ **accuracy review** [all]: The concept of 'ego depletion' or willpower being a finite muscle has failed to replicate in modern psychological studies. The script should frame this as a subjective feeling of fatigue or mental exhaustion rather than a biological/scientific certainty. Change 'Psychologists call this' to 'Some call this' or 'It's like...'. → sent to script
+- ⚠️ **grammar review** [fr]: In scene_02 VO, 'C’est pourquoi tu résistes à midi' is missing the object. Fix to: 'C’est pourquoi tu résistes aux donuts à midi'.
+- ⚠️ **grammar review** [fr]: In scene_06 VO, 'automatise tes matins' is correct, but 'Prépare tout d'avance' should be 'Prépare tout à l'avance' for better flow.
+- ✅ **people rule**: no women beyond face close-ups in 7 scenes and 2 thumbnail(s)
