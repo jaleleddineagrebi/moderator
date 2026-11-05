@@ -31,11 +31,11 @@
   "ended_at": null,
   "revision_rounds": 1,
   "cost": {
-    "total_usd": 0.013374,
+    "total_usd": 0.024769,
     "budget_usd": 1.0,
     "by_agent": {
       "trend_researcher": 0.001852,
-      "scriptwriter": 0.006919,
+      "scriptwriter": 0.018314,
       "packaging": 0.000788,
       "qa_reviewer": 0.003816
     }
@@ -325,7 +325,7 @@
       ],
       "checkpoint": "B",
       "status": "running",
-      "progress": 10,
+      "progress": 55,
       "started_at": "2026-11-05T20:57:48+00:00",
       "ended_at": null,
       "attempt": 2,
@@ -389,6 +389,26 @@
           "ts": "2026-11-05T20:57:48+00:00",
           "level": "info",
           "msg": "Asking Gemini (gemini-3.8-flash, high complexity, thinking high)"
+        },
+        {
+          "ts": "2026-11-05T20:58:01+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3-flash-preview) answered in 12.6s (tokens in 2300, out 1194, thinking 2221)"
+        },
+        {
+          "ts": "2026-11-05T20:58:01+00:00",
+          "level": "info",
+          "msg": "Estimated narration: en 29.1s, fr 30.6s"
+        },
+        {
+          "ts": "2026-11-05T20:58:01+00:00",
+          "level": "warning",
+          "msg": "Length outside 45-55s, asking for a fix"
+        },
+        {
+          "ts": "2026-11-05T20:58:01+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.8-flash, high complexity, thinking high)"
         }
       ],
       "errors": [],
@@ -399,7 +419,7 @@
           "comment": "QA found:\n[all] accuracy review: The concept of 'ego depletion' or willpower being a finite muscle has failed to replicate in modern psychological studies. The script should frame this as a subjective feeling of fatigue or mental exhaustion rather than a biological/scientific certainty. Change 'Psychologists call this' to 'Some call this' or 'It's like...'."
         }
       ],
-      "cost_usd": 0.006919
+      "cost_usd": 0.018314
     },
     "visuals": {
       "title": "Source scene visuals",
@@ -908,7 +928,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-05T20:57:52+00:00",
+    "exported_at": "2026-11-05T20:58:11+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/42107319584"
   }
