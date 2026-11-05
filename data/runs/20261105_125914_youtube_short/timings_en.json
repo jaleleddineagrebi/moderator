@@ -1,0 +1,570 @@
+{
+  "voice": "en-US-AriaNeural",
+  "duration": 44.832041,
+  "scenes": [
+    {
+      "scene": "scene_01",
+      "start": 0.0,
+      "end": 3.12,
+      "words": [
+        {
+          "start": 0.1,
+          "end": 0.275,
+          "text": "You"
+        },
+        {
+          "start": 0.287,
+          "end": 0.55,
+          "text": "can't"
+        },
+        {
+          "start": 0.562,
+          "end": 1.012,
+          "text": "forget"
+        },
+        {
+          "start": 1.025,
+          "end": 1.612,
+          "text": "unfinished"
+        },
+        {
+          "start": 1.625,
+          "end": 2.237,
+          "text": "tasks"
+        }
+      ]
+    },
+    {
+      "scene": "scene_02",
+      "start": 3.3,
+      "end": 10.308,
+      "words": [
+        {
+          "start": 3.4,
+          "end": 3.7,
+          "text": "That"
+        },
+        {
+          "start": 3.712,
+          "end": 4.175,
+          "text": "lingering"
+        },
+        {
+          "start": 4.187,
+          "end": 4.562,
+          "text": "feeling"
+        },
+        {
+          "start": 4.575,
+          "end": 4.637,
+          "text": "of"
+        },
+        {
+          "start": 4.65,
+          "end": 4.7,
+          "text": "a"
+        },
+        {
+          "start": 4.713,
+          "end": 5.225,
+          "text": "half-sent"
+        },
+        {
+          "start": 5.238,
+          "end": 5.762,
+          "text": "email"
+        },
+        {
+          "start": 5.775,
+          "end": 5.925,
+          "text": "or"
+        },
+        {
+          "start": 5.938,
+          "end": 5.975,
+          "text": "a"
+        },
+        {
+          "start": 5.988,
+          "end": 6.325,
+          "text": "messy"
+        },
+        {
+          "start": 6.338,
+          "end": 6.725,
+          "text": "desk"
+        },
+        {
+          "start": 6.738,
+          "end": 7.012,
+          "text": "isn't"
+        },
+        {
+          "start": 7.025,
+          "end": 7.262,
+          "text": "just"
+        },
+        {
+          "start": 7.275,
+          "end": 7.712,
+          "text": "annoying"
+        },
+        {
+          "start": 8.0,
+          "end": 8.125,
+          "text": "it’s"
+        },
+        {
+          "start": 8.138,
+          "end": 8.563,
+          "text": "actually"
+        },
+        {
+          "start": 8.575,
+          "end": 8.875,
+          "text": "mental"
+        },
+        {
+          "start": 8.888,
+          "end": 9.425,
+          "text": "tension"
+        }
+      ]
+    },
+    {
+      "scene": "scene_03",
+      "start": 10.488,
+      "end": 18.936,
+      "words": [
+        {
+          "start": 10.588,
+          "end": 11.488,
+          "text": "Psychologists"
+        },
+        {
+          "start": 11.5,
+          "end": 11.75,
+          "text": "call"
+        },
+        {
+          "start": 11.763,
+          "end": 11.963,
+          "text": "this"
+        },
+        {
+          "start": 11.976,
+          "end": 12.088,
+          "text": "the"
+        },
+        {
+          "start": 12.101,
+          "end": 12.676,
+          "text": "Zeigarnik"
+        },
+        {
+          "start": 12.688,
+          "end": 13.226,
+          "text": "Effect"
+        },
+        {
+          "start": 14.088,
+          "end": 14.325,
+          "text": "Your"
+        },
+        {
+          "start": 14.338,
+          "end": 14.663,
+          "text": "brain"
+        },
+        {
+          "start": 14.676,
+          "end": 14.951,
+          "text": "keeps"
+        },
+        {
+          "start": 14.963,
+          "end": 15.176,
+          "text": "these"
+        },
+        {
+          "start": 15.188,
+          "end": 15.475,
+          "text": "loops"
+        },
+        {
+          "start": 15.488,
+          "end": 15.876,
+          "text": "open"
+        },
+        {
+          "start": 16.088,
+          "end": 16.676,
+          "text": "constantly"
+        },
+        {
+          "start": 16.688,
+          "end": 17.163,
+          "text": "reminding"
+        },
+        {
+          "start": 17.176,
+          "end": 17.288,
+          "text": "you"
+        },
+        {
+          "start": 17.3,
+          "end": 17.388,
+          "text": "to"
+        },
+        {
+          "start": 17.4,
+          "end": 17.763,
+          "text": "finish"
+        },
+        {
+          "start": 17.775,
+          "end": 18.075,
+          "text": "them"
+        }
+      ]
+    },
+    {
+      "scene": "scene_04",
+      "start": 19.116,
+      "end": 26.556,
+      "words": [
+        {
+          "start": 19.216,
+          "end": 19.441,
+          "text": "It’s"
+        },
+        {
+          "start": 19.454,
+          "end": 19.678,
+          "text": "why"
+        },
+        {
+          "start": 19.691,
+          "end": 19.816,
+          "text": "an"
+        },
+        {
+          "start": 19.829,
+          "end": 20.379,
+          "text": "unwashed"
+        },
+        {
+          "start": 20.391,
+          "end": 20.653,
+          "text": "dish"
+        },
+        {
+          "start": 20.666,
+          "end": 20.979,
+          "text": "feels"
+        },
+        {
+          "start": 20.991,
+          "end": 21.391,
+          "text": "heavier"
+        },
+        {
+          "start": 21.404,
+          "end": 21.529,
+          "text": "than"
+        },
+        {
+          "start": 21.541,
+          "end": 21.641,
+          "text": "it"
+        },
+        {
+          "start": 21.654,
+          "end": 22.066,
+          "text": "is"
+        },
+        {
+          "start": 22.941,
+          "end": 23.141,
+          "text": "Your"
+        },
+        {
+          "start": 23.153,
+          "end": 23.491,
+          "text": "mind"
+        },
+        {
+          "start": 23.504,
+          "end": 23.816,
+          "text": "uses"
+        },
+        {
+          "start": 23.829,
+          "end": 24.266,
+          "text": "precious"
+        },
+        {
+          "start": 24.278,
+          "end": 24.691,
+          "text": "energy"
+        },
+        {
+          "start": 24.704,
+          "end": 24.954,
+          "text": "just"
+        },
+        {
+          "start": 24.966,
+          "end": 25.028,
+          "text": "to"
+        },
+        {
+          "start": 25.041,
+          "end": 25.366,
+          "text": "track"
+        },
+        {
+          "start": 25.379,
+          "end": 25.678,
+          "text": "it"
+        }
+      ]
+    },
+    {
+      "scene": "scene_05",
+      "start": 26.736,
+      "end": 33.096,
+      "words": [
+        {
+          "start": 26.836,
+          "end": 27.123,
+          "text": "This"
+        },
+        {
+          "start": 27.136,
+          "end": 27.661,
+          "text": "background"
+        },
+        {
+          "start": 27.674,
+          "end": 27.948,
+          "text": "noise"
+        },
+        {
+          "start": 27.961,
+          "end": 28.324,
+          "text": "drains"
+        },
+        {
+          "start": 28.336,
+          "end": 28.449,
+          "text": "your"
+        },
+        {
+          "start": 28.461,
+          "end": 28.986,
+          "text": "focus"
+        },
+        {
+          "start": 29.261,
+          "end": 29.586,
+          "text": "making"
+        },
+        {
+          "start": 29.598,
+          "end": 29.736,
+          "text": "you"
+        },
+        {
+          "start": 29.749,
+          "end": 30.011,
+          "text": "feel"
+        },
+        {
+          "start": 30.024,
+          "end": 30.298,
+          "text": "burnt"
+        },
+        {
+          "start": 30.311,
+          "end": 30.574,
+          "text": "out"
+        },
+        {
+          "start": 30.586,
+          "end": 30.949,
+          "text": "before"
+        },
+        {
+          "start": 30.961,
+          "end": 31.061,
+          "text": "you"
+        },
+        {
+          "start": 31.074,
+          "end": 31.411,
+          "text": "even"
+        },
+        {
+          "start": 31.424,
+          "end": 31.723,
+          "text": "start"
+        },
+        {
+          "start": 31.736,
+          "end": 32.211,
+          "text": "working"
+        }
+      ]
+    },
+    {
+      "scene": "scene_06",
+      "start": 33.276,
+      "end": 40.74,
+      "words": [
+        {
+          "start": 33.376,
+          "end": 33.551,
+          "text": "The"
+        },
+        {
+          "start": 33.563,
+          "end": 33.889,
+          "text": "fix"
+        },
+        {
+          "start": 33.901,
+          "end": 34.026,
+          "text": "is"
+        },
+        {
+          "start": 34.038,
+          "end": 34.439,
+          "text": "simple"
+        },
+        {
+          "start": 34.651,
+          "end": 34.826,
+          "text": "write"
+        },
+        {
+          "start": 34.838,
+          "end": 34.951,
+          "text": "it"
+        },
+        {
+          "start": 34.964,
+          "end": 35.426,
+          "text": "down"
+        },
+        {
+          "start": 36.289,
+          "end": 36.851,
+          "text": "Offloading"
+        },
+        {
+          "start": 36.863,
+          "end": 36.951,
+          "text": "the"
+        },
+        {
+          "start": 36.964,
+          "end": 37.364,
+          "text": "task"
+        },
+        {
+          "start": 37.376,
+          "end": 37.476,
+          "text": "to"
+        },
+        {
+          "start": 37.489,
+          "end": 37.876,
+          "text": "paper"
+        },
+        {
+          "start": 37.888,
+          "end": 38.301,
+          "text": "closes"
+        },
+        {
+          "start": 38.313,
+          "end": 38.426,
+          "text": "the"
+        },
+        {
+          "start": 38.438,
+          "end": 38.726,
+          "text": "loop"
+        },
+        {
+          "start": 38.739,
+          "end": 38.864,
+          "text": "and"
+        },
+        {
+          "start": 38.876,
+          "end": 39.201,
+          "text": "kills"
+        },
+        {
+          "start": 39.214,
+          "end": 39.313,
+          "text": "the"
+        },
+        {
+          "start": 39.326,
+          "end": 39.876,
+          "text": "stress"
+        }
+      ]
+    },
+    {
+      "scene": "scene_07",
+      "start": 40.92,
+      "end": 44.832,
+      "words": [
+        {
+          "start": 41.02,
+          "end": 41.42,
+          "text": "Stop"
+        },
+        {
+          "start": 41.432,
+          "end": 41.732,
+          "text": "letting"
+        },
+        {
+          "start": 41.745,
+          "end": 41.882,
+          "text": "your"
+        },
+        {
+          "start": 41.895,
+          "end": 42.158,
+          "text": "list"
+        },
+        {
+          "start": 42.17,
+          "end": 42.408,
+          "text": "haunt"
+        },
+        {
+          "start": 42.42,
+          "end": 42.62,
+          "text": "you"
+        },
+        {
+          "start": 42.895,
+          "end": 43.407,
+          "text": "especially"
+        },
+        {
+          "start": 43.42,
+          "end": 43.958,
+          "text": "since"
+        }
+      ]
+    }
+  ]
+}
