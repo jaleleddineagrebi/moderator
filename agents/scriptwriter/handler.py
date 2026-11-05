@@ -5,6 +5,18 @@ from moderator.tools import history
 from moderator.tools.visual_rules import PEOPLE_RULE
 from moderator.tools.languages import LANGS, describe, lang_schema, names, normalize_langs
 
+SEO = {  # packaging data written in the same call, so the packaging step needs no LLM call of its own
+    "type": "object",
+    "additionalProperties": False,
+    "required": ["title", "question", "hashtags", "tags"],
+    "properties": {
+        "title": {"type": "string", "description": "published title, max 55 characters, curiosity gap, accurate"},
+        "question": {"type": "string", "description": "first description line: a short relatable question that invites comments"},
+        "hashtags": {"type": "array", "items": {"type": "string"}, "description": "3-5 niche hashtags, without #Shorts"},
+        "tags": {"type": "array", "items": {"type": "string"}, "description": "8-12 search phrases people type"},
+    },
+}
+
 BUDGET_SECONDS = (32, 46)  # crisp high-retention Shorts sweet spot (~34-44s final video; >90% completion rate)
 
 
@@ -12,9 +24,10 @@ def make_schema(langs: list[str]) -> dict:
     return {
         "type": "object",
         "additionalProperties": False,
-        "required": ["title", "scenes"],
+        "required": ["title", "seo", "scenes"],
         "properties": {
             "title": {"type": "string", "description": "working title in English"},
+            "seo": lang_schema(langs, value_schema=SEO, description="YouTube/TikTok packaging per language"),
             "scenes": {"type": "array", "minItems": 5, "maxItems": 9, "items": {
                 "type": "object",
                 "additionalProperties": False,
@@ -85,6 +98,7 @@ Rules:
   Set `prefer` to `"video"` so scenes use moving video clips rather than static images.
   Provide 3-4 short (2-3 word) English `search_terms` using concrete filmable subjects with motion ("person scrolling phone", "crowded crosswalk", "clock hands moving"); make the last term a broad 2-word B-roll query ("city street", "ocean waves", "walking crowd") guaranteed to match stock video libraries.
 - Facts must be accurate. No medical, financial or religious claims that could mislead.
+- seo (per language, written natively): title max 55 characters with a strong curiosity gap and no false claims; question = a relatable one-line question that sparks comments; 3-5 niche hashtags (no #Shorts); 8-12 search tags. No trademarks or celebrity names.
 
 {previous}
 

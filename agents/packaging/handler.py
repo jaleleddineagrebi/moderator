@@ -1,4 +1,5 @@
 import json
+import re
 import shutil
 
 from PIL import Image, ImageDraw, ImageEnhance
@@ -23,6 +24,55 @@ LANG_META = {
 }
 
 
+COMMENT_QUESTION = {
+    "en": "Has this ever happened to you? 👇",
+    "fr": "Ça t'est déjà arrivé ? 👇",
+    "ar": "حصلك قبل كده؟ 👇",
+}
+
+
+def _short(text_: str, limit: int) -> str:
+    """Cut at a word boundary so titles never end mid-word."""
+    text_ = " ".join(text_.split())
+    if len(text_) <= limit:
+        return text_
+    cut = text_[:limit + 1].rsplit(" ", 1)[0].rstrip(" ,;:-")
+    return cut or text_[:limit]
+
+
+def _hashtag(word: str) -> str:
+    word = word.strip().lstrip("#")
+    tag = "".join(p[:1].upper() + p[1:] for p in re.split(r"[\s\-_]+", word) if p)
+    return f"#{re.sub(r'[^\w]', '', tag)}" if tag else ""
+
+
+def build_meta(script: dict, lang: str) -> dict:
+    """Packaging from the script alone: the scriptwriter wrote title/question/hashtags/tags in its own call."""
+    seo = (script.get("seo") or {}).get(lang) or {}
+    scenes = script["scenes"]
+    title = _short(seo.get("title") or script["title"], 55)
+    question = (seo.get("question") or COMMENT_QUESTION.get(lang, COMMENT_QUESTION["en"])).strip()
+    payoff = scenes[-1]["vo"][lang] if len(scenes) > 1 else ""
+    description = "\n".join(line for line in (question, scenes[0]["vo"][lang], payoff) if line)
+    hashtags, seen = ["#Shorts"], {"#shorts"}
+    for h in seo.get("hashtags") or []:
+        tag = _hashtag(h)
+        if tag and tag.lower() not in seen:
+            hashtags.append(tag)
+            seen.add(tag.lower())
+    tags = [t.strip() for t in seo.get("tags") or [] if t.strip()] or [script["title"]]
+    words = scenes[0]["on_screen"][lang].split()
+    return {"title": title, "description": description, "hashtags": hashtags[:6], "tags": tags[:15],
+            "thumbnail_text": " ".join(words[:5]) or _short(title, 30)}
+
+
+def tiktok_caption(meta: dict) -> str:
+    """TikTok has no title field: title + question + hashtags (YouTube-only #Shorts swapped for #fyp)."""
+    tags = [h for h in meta["hashtags"] if h.lower() != "#shorts"] + ["#fyp"]
+    question = meta["description"].splitlines()[0] if meta.get("description") else ""
+    return _short(f"{meta['title']}\n{question}\n\n{' '.join(tags)}", 2000)
+
+
 class Handler(Agent):
     async def run(self, ctx: StepContext) -> dict[str, str]:
         script = ctx.read_json(ctx.upstream("script")["data"])
@@ -31,8 +81,26 @@ class Handler(Agent):
         ctx.set_inputs(script=ctx.upstream("script")["data"], languages=langs,
                        strategy=ctx.strategy, thumbnail_source=visuals[0])
 
+        if ctx.feedback:  # a reviewer or the owner asked for changes in words: that needs the LLM
+            meta = await self._llm_meta(ctx, script, langs)
+        else:  # first pass: built in Python from what the scriptwriter already wrote (no LLM call)
+            meta = {l: build_meta(script, l) for l in langs}
+            ctx.log("Packaging built from the script (no LLM call)")
+        for l in langs:
+            if not any(h.lower() == "#shorts" for h in meta[l]["hashtags"]):
+                meta[l]["hashtags"].insert(0, "#Shorts")
+            meta[l]["title"] = meta[l]["title"][:100]
+            meta[l]["tiktok_caption"] = tiktok_caption(meta[l])
+        ctx.progress(55)
+        outputs = {"metadata": ctx.write_json("metadata.json", meta)}
+        return await self._thumbnails(ctx, script, visuals, langs, meta, outputs)
+
+    async def _llm_meta(self, ctx: StepContext, script: dict, langs: list[str]) -> dict:
         narration = {l: " ".join(s["vo"][l] for s in script["scenes"]) for l in langs}
         ar_tag_note = "; Arabic hashtags in Arabic for the ar version" if "ar" in langs else ""
+        current = ""
+        if (ctx.run_dir / "metadata.json").exists():
+            current = "CURRENT PACKAGING (revise it, keep what works):\n" + (ctx.run_dir / "metadata.json").read_text(encoding="utf-8")
         prompt = f"""Write YouTube Shorts packaging for {names(langs)}.
 How each language is written:
 {describe(langs)}
@@ -50,15 +118,13 @@ For each language, write natively (not a literal translation):
 - thumbnail_text: 2-4 words, high-contrast curiosity punchline
 Avoid trademarked names, celebrity names and anything sensational or misleading.
 
-{ctx.revision_notes()}"""
-        meta = await ctx.llm.ask(prompt, schema=lang_schema(langs, value_schema=LANG_META))
-        for l in langs:
-            if not any(h.lower() == "#shorts" for h in meta[l]["hashtags"]):
-                meta[l]["hashtags"].append("#Shorts")
-            meta[l]["title"] = meta[l]["title"][:100]
-        ctx.progress(55)
-        outputs = {"metadata": ctx.write_json("metadata.json", meta)}
+{current}
 
+{ctx.revision_notes()}"""
+        return await ctx.llm.ask(prompt, schema=lang_schema(langs, value_schema=LANG_META))
+
+    async def _thumbnails(self, ctx: StepContext, script: dict, visuals: list[str], langs: list[str],
+                          meta: dict, outputs: dict) -> dict[str, str]:
         bg_path = ctx.path("thumb_src.png")
         used_banana = False
         if ctx.strategy == "banana_thumbnail" and llm_mod.api_key_available() and hasattr(ctx.llm, "generate_image"):

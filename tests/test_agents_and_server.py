@@ -326,6 +326,7 @@ def test_youtube_short_full_7_agent_pipeline_single_lang_en(tmp_path, monkeypatc
     monkeypatch.setattr(stock, "available", lambda: {"pexels": False, "pixabay": False})
 
     seen_images = []
+    calls = {"packaging": 0, "qa": 0}
 
     class FakeGemini:
         def __init__(self, ctx, cfg):
@@ -351,8 +352,13 @@ def test_youtube_short_full_7_agent_pipeline_single_lang_en(tmp_path, monkeypatc
                      "visual": {"description": "crowded street", "search_terms": ["crowd walking"], "prefer": "video"}}
                     for i in range(5)
                 ]
-                return {"title": "The Spotlight Effect", "scenes": scenes}
-            if "en" in props:  # packaging metadata
+                seo = {"en": {"title": "Why Nobody Notices Your Mistakes (The Spotlight Effect Explained Simply)",
+                              "question": "Ever replayed an awkward moment for days?",
+                              "hashtags": ["psychology", "#spotlight effect", "#Psychology"],
+                              "tags": ["spotlight effect", "social anxiety tips"]}}
+                return {"title": "The Spotlight Effect", "seo": seo, "scenes": scenes}
+            if "en" in props:  # packaging metadata (only on revisions now)
+                calls["packaging"] += 1
                 return {"en": {
                     "title": "Why Nobody Notices Your Mistakes",
                     "description": "Your brain exaggerates how much people watch you.\nPsychology calls this the spotlight effect.",
@@ -360,8 +366,11 @@ def test_youtube_short_full_7_agent_pipeline_single_lang_en(tmp_path, monkeypatc
                     "tags": ["psychology", "spotlight effect"],
                     "thumbnail_text": "NOBODY NOTICED",
                 }}
-            if "issues" in props:  # QA review
-                return {"issues": []}
+            if "issues" in props:  # QA: text review + people rule in ONE call
+                calls["qa"] += 1
+                assert "violations" in props and images and all(Path(i).is_file() for i in images)
+                seen_images.extend(images)
+                return {"issues": [], "violations": []}
             if "search_terms" in props:  # owner `/edit image N ...`: rewritten visual brief
                 return {"description": "A calm mountain lake at dawn", "search_terms": ["mountain lake", "calm water"]}
             if "violations" in props:  # QA people rule: sees review sheets + thumbnails
@@ -434,6 +443,13 @@ def test_youtube_short_full_7_agent_pipeline_single_lang_en(tmp_path, monkeypatc
 
     outcome = asyncio.run(asyncio.wait_for(orch.run(headless=True), 20))
     assert outcome == "waiting" and store.data["checkpoints"]["C"]["status"] == "pending"
+    assert calls == {"packaging": 0, "qa": 1}  # packaging built in Python; one QA call
+    meta = json.loads((run_dir / "metadata.json").read_text(encoding="utf-8"))["en"]
+    assert meta["title"] == "Why Nobody Notices Your Mistakes (The Spotlight Effect" and len(meta["title"]) <= 55
+    assert meta["hashtags"] == ["#Shorts", "#Psychology", "#SpotlightEffect"]
+    assert meta["description"].startswith("Ever replayed an awkward moment for days?\n")
+    assert meta["thumbnail_text"] == "BEAT 1"
+    assert "#fyp" in meta["tiktok_caption"] and "#Shorts" not in meta["tiktok_caption"]
     seen_images.clear()
 
     # Owner edits from the review issue: replace scene 2 and lower the music, then the run pauses at C again

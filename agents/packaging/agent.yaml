@@ -1,8 +1,8 @@
 title: Packaging (SEO + Thumbnail)
-role: Writes the title, description and hashtags with Gemini Flash and designs a 9:16 thumbnail with Nano Banana + Pillow.
+role: Builds the title, description, hashtags and TikTok caption in Python from the script (the LLM is only used to revise them) and designs a 9:16 thumbnail from a video frame with Pillow.
 inputs: [script.json, scene clips]
 outputs: [metadata.json, thumbnail_<lang>.png]
-tools: [Gemini Flash, Gemini Nano Banana, Pillow (RTL shaping via arabic-reshaper + python-bidi), ffmpeg]
-strategies: [banana_thumbnail, frame_thumbnail, plain_thumbnail]
+tools: [Python templates, LLM on revisions only, Gemini Nano Banana (fallback), Pillow (RTL shaping via arabic-reshaper + python-bidi), ffmpeg]
+strategies: [frame_thumbnail, banana_thumbnail, plain_thumbnail]  # frame first: no image-model cost
 timeout_s: 900
 complexity: low

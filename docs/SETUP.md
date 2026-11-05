@@ -164,3 +164,37 @@ Then, under **Settings → Actions → General**:
 - keep **Workflow permissions** at *Read repository contents* (each workflow asks for the extra permissions it needs)
 
 Only you and your collaborators can use `/approve`, `/edit` and `/reject` on review issues, and only they can click **Run workflow**. Comments from anyone else are ignored.
+
+---
+
+## 9. Publish the Same Video to TikTok
+
+TikTok publishing is separate from YouTube: [`tiktok-upload.yml`](../.github/workflows/tiktok-upload.yml) sends the approved video when you comment `/tiktok` on the review issue. The issue can still be open, or already closed by `/approve`.
+
+| Comment | Effect |
+| :--- | :--- |
+| `/tiktok` | **Draft:** the video lands in your TikTok inbox. Open the notification in the app and post it, with the caption the bot posts on the issue. Works before TikTok reviews your app. |
+| `/tiktok direct` | Posted straight away as **private** (`SELF_ONLY`). Until TikTok audits your app, it only works on a private TikTok account. |
+| `/tiktok direct public` | Posted publicly. Needs an app that TikTok has audited. |
+
+**One-time setup**
+
+1. Go to [developers.tiktok.com](https://developers.tiktok.com/) → **Manage apps → Connect an app** and add these products:
+   - **Login Kit** with the **Desktop** platform. Set the redirect URI to `http://127.0.0.1:3455/callback/`.
+   - **Content Posting API**. Turn on *Direct Post* if you want `/tiktok direct`.
+2. Ask for the scopes `user.info.basic`, `video.upload` and `video.publish`. While the app is in **Sandbox**, add your TikTok account under *Sandbox → Target users*.
+3. On your computer, log in to TikTok. This opens the browser and saves `tokens/tiktok.json`:
+   ```sh
+   uv run python -m moderator tiktok-auth --client-key <CLIENT_KEY> --client-secret <CLIENT_SECRET>
+   ```
+4. Try it locally on a finished run:
+   ```sh
+   uv run python -m moderator tiktok-upload runs/<run_id> --approved-by local:owner            # draft
+   uv run python -m moderator tiktok-upload runs/<run_id> --approved-by local:owner --mode direct
+   ```
+5. Add these GitHub secrets:
+   - `TIKTOK_CLIENT_KEY` and `TIKTOK_CLIENT_SECRET`
+   - `TIKTOK_TOKEN`: the whole content of `tokens/tiktok.json`
+   - `SECRETS_PAT`: a [fine-grained token](https://github.com/settings/personal-access-tokens/new) for **this repository only**, with the permission **Secrets: Read and write**. TikTok replaces the refresh token every time it is used, and the workflow needs this to save the new one back into `TIKTOK_TOKEN`. Without it, the next upload fails until you run `tiktok-auth` again.
+
+The TikTok caption is built without an LLM: title, the comment question and the hashtags, with `#Shorts` swapped for `#fyp`. When a scene uses AI-generated images, the post is marked as AI-generated content.

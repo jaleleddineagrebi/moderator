@@ -110,25 +110,7 @@ class Handler(Agent):
         check("audio licenses", all(v.get("license") for v in audio_lic.values()),
               "; ".join(f"{k}: {v.get('license')}" for k, v in audio_lic.items()), "audio")
 
-        if ctx.strategy != "technical_only":
-            payload = {"script": [{"id": s["id"], "vo": s["vo"], "on_screen": s["on_screen"]} for s in script["scenes"]],
-                       "metadata": meta, "visual_sources": [{k: l.get(k) for k in ("scene", "provider", "query")} for l in licenses]}
-            review = await ctx.llm.ask(f"""You are the final QA reviewer for a YouTube Short published in {names(langs)}.
-Intended writing style per language (do NOT flag dialect words or spellings that match it as errors):
-{describe(langs)}
-Check the narration, on-screen text, visual queries and metadata for:
-- spelling and grammar mistakes in each language
-- factual errors
-- copyright or trademark problems (brands, celebrities, copyrighted characters, song names)
-- content sensitivity: {sensitivity_guidance(langs)}
-Only report real problems with an exact fix. Use severity "blocker" only for errors a viewer would notice or that create risk.
-send_to: "script" for narration/on-screen text, "packaging" for title/description/hashtags/thumbnail text, "visuals" for problematic stock queries/clips, "edit" for caption/pacing problems.
-
-{json.dumps(payload, ensure_ascii=False, indent=1)}""", schema=make_review_schema(langs))
-            for issue in review["issues"]:
-                check(f"{issue['area']} review", False, issue["detail"], issue["send_to"],
-                      issue["language"], issue["severity"])
-        await self._people_check(ctx, langs, check)
+        await self._review(ctx, langs, script, meta, licenses, check)
         ctx.progress(90)
 
         blockers = [c for c in checks if not c["ok"] and c["severity"] == "blocker"]
@@ -156,22 +138,63 @@ send_to: "script" for narration/on-screen text, "packaging" for title/descriptio
         return outputs
 
 
-    async def _people_check(self, ctx: StepContext, langs: list[str], check) -> None:
-        """Channel rule (moderator/tools/visual_rules.py): look at frames of every scene and at the thumbnails."""
+    async def _review(self, ctx: StepContext, langs: list[str], script: dict, meta: dict, licenses: list, check) -> None:
+        """One LLM call for the whole editorial review: text (spelling, facts, rights, sensitivity) and the
+        channel's people rule on frames of every scene and the thumbnails (moderator/tools/visual_rules.py)."""
         scenes = ctx.upstream("visuals")["scenes"]
+        text_review = ctx.strategy != "technical_only"
+        images: list = []
         try:
-            sheets = await self._review_sheets(ctx, scenes)
-            thumbs = [ctx.run_dir / ctx.upstream("packaging")[f"thumbnail_{l}"] for l in langs]
-            result = await ctx.llm.ask(
-                "You check a YouTube Short's visuals against the channel's people rule.\n"
+            images = [*await self._review_sheets(ctx, scenes),
+                      *(ctx.run_dir / ctx.upstream("packaging")[f"thumbnail_{l}"] for l in langs)]
+        except Exception as e:  # noqa: BLE001 - review the text anyway; a human still approves checkpoint C
+            check("people rule", False, f"could not build review frames ({type(e).__name__}: {e}); check manually",
+                  None, None, "minor")
+        parts = [f"You are the final QA reviewer for a YouTube Short published in {names(langs)}."]
+        if text_review:
+            payload = {"script": [{"id": s["id"], "vo": s["vo"], "on_screen": s["on_screen"]} for s in script["scenes"]],
+                       "metadata": meta,
+                       "visual_sources": [{k: l.get(k) for k in ("scene", "provider", "query")} for l in licenses]}
+            parts.append(f"""TEXT REVIEW -> "issues".
+Intended writing style per language (do NOT flag dialect words or spellings that match it as errors):
+{describe(langs)}
+Check the narration, on-screen text, visual queries and metadata for:
+- spelling and grammar mistakes in each language
+- factual errors
+- copyright or trademark problems (brands, celebrities, copyrighted characters, song names)
+- content sensitivity: {sensitivity_guidance(langs)}
+Only report real problems with an exact fix. Use severity "blocker" only for errors a viewer would notice or that create risk.
+send_to: "script" for narration/on-screen text, "packaging" for title/description/hashtags/thumbnail text, "visuals" for problematic stock queries/clips, "edit" for caption/pacing problems.
+
+{json.dumps(payload, ensure_ascii=False, indent=1)}""")
+        if images:
+            parts.append(
+                'PEOPLE RULE -> "violations".\n'
                 f"Rule: {visual_rules.PEOPLE_RULE}\n{visual_rules.REVIEW_RULE}\n"
                 "The first images are review sheets: each row is one scene (its id is written on the left) with three "
-                f"frames from start, middle and end. The last images are the thumbnails, in this order: "
+                "frames from start, middle and end. The last images are the thumbnails, in this order: "
                 f"{', '.join(f'thumbnail_{l}' for l in langs)}.\n"
-                "List every violation (scene id or thumbnail name and what is visible). Return an empty list if none.",
-                schema=PEOPLE_SCHEMA, images=[*sheets, *thumbs])
-        except Exception as e:  # noqa: BLE001 - cannot look at the images: warn, a human still approves checkpoint C
-            check("people rule", False, f"could not check images ({type(e).__name__}: {e}); check manually", None, None, "minor")
+                "List every violation (scene id or thumbnail name and what is visible). Return an empty list if none.")
+        if len(parts) == 1:
+            return
+        schema = {"type": "object", "additionalProperties": False, "required": [], "properties": {}}
+        if text_review:
+            schema["properties"]["issues"] = make_review_schema(langs)["properties"]["issues"]
+            schema["required"].append("issues")
+        if images:
+            schema["properties"]["violations"] = PEOPLE_SCHEMA["properties"]["violations"]
+            schema["required"].append("violations")
+        try:
+            result = await ctx.llm.ask("\n\n".join(parts), schema=schema, images=images or None)
+        except Exception as e:  # noqa: BLE001
+            if text_review:
+                raise  # retried by the orchestrator (one model tier up), as before
+            check("people rule", False, f"could not check images ({type(e).__name__}: {e}); check manually",
+                  None, None, "minor")
+            return
+        for issue in result.get("issues") or []:
+            check(f"{issue['area']} review", False, issue["detail"], issue["send_to"], issue["language"], issue["severity"])
+        if not images:
             return
         violations = result.get("violations") or []
         for v in violations:

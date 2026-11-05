@@ -1,0 +1,181 @@
+name: TikTok Upload
+
+# Sends the same finished Short to TikTok, ONLY after explicit human approval:
+# 1. Comment on the `short-review` issue (open or already closed by /approve):
+#      /tiktok                 -> draft: the video lands in your TikTok inbox, you post it from the app (default)
+#      /tiktok direct          -> posted directly as private (SELF_ONLY) - the only option before TikTok audits your app
+#      /tiktok direct public   -> posted publicly (needs an audited TikTok app)
+# 2. Or click "Run workflow" here with the run_id and gh_run_id.
+# Secrets: TIKTOK_CLIENT_KEY, TIKTOK_CLIENT_SECRET, TIKTOK_TOKEN (from `python -m moderator tiktok-auth`), and
+# SECRETS_PAT (fine-grained token, this repo only, "Secrets: read and write") so the rotated TikTok token is saved back.
+on:
+  issue_comment:
+    types: [created]
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: "Moderator run_id (e.g. 20261105_141814_youtube_short)"
+        required: true
+        type: string
+      gh_run_id:
+        description: "GitHub Actions run ID that produced the short-<run_id> artifact"
+        required: true
+        type: string
+      mode:
+        description: "draft = TikTok inbox (you post from the app), direct = post now"
+        required: true
+        default: "draft"
+        type: choice
+        options:
+          - draft
+          - direct
+      privacy:
+        description: "direct mode only (unaudited TikTok apps: private only)"
+        required: true
+        default: "private"
+        type: choice
+        options:
+          - private
+          - followers
+          - friends
+          - public
+
+permissions:
+  contents: read
+  issues: write
+  actions: read     # download the artifact from the Generate Short / Edit Short run
+
+concurrency:
+  group: tiktok-upload
+  cancel-in-progress: false
+
+jobs:
+  tiktok:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (
+        !github.event.issue.pull_request &&
+        contains(github.event.issue.labels.*.name, 'short-review') &&
+        (
+          github.event.comment.user.login == github.repository_owner ||
+          contains(fromJSON('["OWNER", "COLLABORATOR"]'), github.event.comment.author_association)
+        ) &&
+        startsWith(github.event.comment.body, '/tiktok')
+      )
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ github.token }}
+      EVENT_NAME: ${{ github.event_name }}
+      ISSUE: ${{ github.event.issue.number }}
+      COMMENT: ${{ github.event.comment.body }}
+      ISSUE_BODY: ${{ github.event.issue.body }}
+      DISPATCH_RUN_ID: ${{ inputs.run_id }}
+      DISPATCH_GH_RUN_ID: ${{ inputs.gh_run_id }}
+      DISPATCH_MODE: ${{ inputs.mode }}
+      DISPATCH_PRIVACY: ${{ inputs.privacy }}
+      RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+    steps:
+      - name: Parse request
+        id: req
+        run: |
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            run_id="$DISPATCH_RUN_ID"; gh_run_id="$DISPATCH_GH_RUN_ID"
+            mode="${DISPATCH_MODE:-draft}"; privacy="${DISPATCH_PRIVACY:-private}"
+          else
+            run_id=$(printf '%s' "$ISSUE_BODY" | tr -d '\r' | sed -n 's/^<!-- run_id: \([A-Za-z0-9_]*\) -->$/\1/p' | tail -1)
+            gh_run_id=$(printf '%s' "$ISSUE_BODY" | tr -d '\r' | sed -n 's/^<!-- gh_run_id: \([0-9]*\) -->$/\1/p' | tail -1)
+            mode=draft; privacy=private
+            set -- $(printf '%s' "$COMMENT" | head -1 | tr -d '\r')
+            shift || true
+            for tok in "$@"; do
+              case "$tok" in
+                draft|direct) mode="$tok" ;;
+                private|followers|friends|public) privacy="$tok" ;;
+              esac
+            done
+          fi
+          case "$run_id" in (*[!A-Za-z0-9_]*|"") echo "::error::Missing or invalid run_id"; exit 1 ;; esac
+          case "$gh_run_id" in (*[!0-9]*|"") echo "::error::Missing or invalid gh_run_id"; exit 1 ;; esac
+          {
+            echo "run_id=$run_id"
+            echo "gh_run_id=$gh_run_id"
+            echo "mode=$mode"
+            echo "privacy=$privacy"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Verify TikTok secrets are configured
+        env:
+          TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+          TIKTOK_TOKEN: ${{ secrets.TIKTOK_TOKEN }}
+          SECRETS_PAT: ${{ secrets.SECRETS_PAT }}
+        run: |
+          if [ -z "$TIKTOK_CLIENT_KEY" ] || [ -z "$TIKTOK_CLIENT_SECRET" ] || [ -z "$TIKTOK_TOKEN" ]; then
+            echo "::error::Add TIKTOK_CLIENT_KEY, TIKTOK_CLIENT_SECRET and TIKTOK_TOKEN repository secrets (see docs/SETUP.md, TikTok section)."
+            exit 1
+          fi
+          [ -n "$SECRETS_PAT" ] || echo "::warning::No SECRETS_PAT: the refreshed TikTok token cannot be saved back to TIKTOK_TOKEN, so the next upload may fail."
+
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+
+      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6.8.0
+        with:
+          python-version: "3.12"
+
+      - name: Download Short artifact
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: short-${{ steps.req.outputs.run_id }}
+          path: runs/${{ steps.req.outputs.run_id }}
+          run-id: ${{ steps.req.outputs.gh_run_id }}
+          github-token: ${{ github.token }}
+
+      - name: Send to TikTok
+        env:
+          TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+          TIKTOK_TOKEN: ${{ secrets.TIKTOK_TOKEN }}
+          RUN_ID: ${{ steps.req.outputs.run_id }}
+          MODE: ${{ steps.req.outputs.mode }}
+          PRIVACY: ${{ steps.req.outputs.privacy }}
+          APPROVER: ${{ github.actor }}
+          PYTHONIOENCODING: utf-8
+        run: |
+          uv sync --locked -q
+          set -o pipefail
+          uv run python -m moderator tiktok-upload "runs/$RUN_ID" --approved-by "github:$APPROVER" \
+            --mode "$MODE" --privacy "$PRIVACY" | tee result.txt
+          {
+            echo "### Sent to TikTok"
+            echo ""
+            sed 's/^/- /' result.txt
+            if [ "$MODE" = "draft" ]; then
+              echo ""
+              echo "Open TikTok → inbox notification to finish and post it. Caption to paste:"
+              echo ""
+              echo '```'
+              uv run python -c "import json,sys; print('\n\n'.join(r['caption'] for r in json.load(open(sys.argv[1], encoding='utf-8'))))" "runs/$RUN_ID/tiktok_uploads.json"
+              echo '```'
+            fi
+          } > reply.md
+          cat reply.md >> "$GITHUB_STEP_SUMMARY"
+          if [ "$EVENT_NAME" = "issue_comment" ]; then
+            gh issue comment "$ISSUE" -R "$GITHUB_REPOSITORY" --body-file reply.md
+          fi
+
+      - name: Save the rotated TikTok token
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.SECRETS_PAT }}
+        run: |
+          if [ -f tokens/tiktok.json ] && [ -n "$GH_TOKEN" ]; then
+            gh secret set TIKTOK_TOKEN -R "$GITHUB_REPOSITORY" < tokens/tiktok.json
+            echo "TIKTOK_TOKEN secret updated"
+          fi
+          rm -f tokens/tiktok.json
+
+      - name: Report failed upload on issue
+        if: failure() && github.event_name == 'issue_comment'
+        run: |
+          gh issue comment "$ISSUE" -R "$GITHUB_REPOSITORY" --body "TikTok upload failed. Logs: $RUN_URL"

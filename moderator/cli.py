@@ -121,6 +121,18 @@ def main() -> None:
     edit_req.add_argument("--request-file", type=Path, help="read the /edit lines from a file (e.g. an issue comment)")
     edit_p.add_argument("--by", default="you", help="who asked for the edit (recorded in state.json)")
     edit_p.add_argument("--check", action="store_true", help="only parse and print the edits; change nothing")
+    tt_p = sub.add_parser("tiktok-upload", help="send the approved video of a youtube_short run to TikTok")
+    tt_p.add_argument("run_dir", type=Path)
+    tt_p.add_argument("--approved-by", required=True, help="who approved the video (recorded in state.json)")
+    tt_p.add_argument("--mode", choices=["draft", "direct"], default="draft",
+                      help="draft = TikTok app inbox, you post it (default; works before app audit); direct = post now")
+    tt_p.add_argument("--privacy", choices=["private", "friends", "followers", "public"], default="private",
+                      help="direct mode only; unaudited apps can only post private")
+    tt_p.add_argument("--langs", help="comma-separated, default: the run's languages")
+    ttauth_p = sub.add_parser("tiktok-auth", help="connect a TikTok account (opens the browser)")
+    ttauth_p.add_argument("--client-key", default=os.environ.get("TIKTOK_CLIENT_KEY"), help="TikTok app client key")
+    ttauth_p.add_argument("--client-secret", default=os.environ.get("TIKTOK_CLIENT_SECRET"), help="TikTok app client secret")
+    ttauth_p.add_argument("--port", type=int, default=3455, help="local callback port (redirect URI http://127.0.0.1:<port>/callback/)")
     auth_p = sub.add_parser("youtube-auth", help="authorize uploads to a YouTube channel (opens the browser)")
     auth_p.add_argument("--lang", default=None, help="optional language code (en/fr/ar) if using separate channels per language")
     auth_p.add_argument("--client-secret", type=Path, required=True, help="OAuth Desktop client JSON from Google Cloud")
@@ -159,6 +171,23 @@ def main() -> None:
         print(f"Exported GitHub Pages site to {args.site_dir} ({len(manifest['runs'])} run(s)).")
         return
 
+    if args.cmd == "tiktok-auth":
+        from .tools import tiktok_upload
+        if not (args.client_key and args.client_secret):
+            parser.error("--client-key and --client-secret are required (or TIKTOK_CLIENT_KEY / TIKTOK_CLIENT_SECRET)")
+        token = tiktok_upload.authorize(args.client_key, args.client_secret, port=args.port)
+        print(f"TikTok connected (scopes: {token['scope']}). Token saved to {tiktok_upload.TOKEN_PATH}")
+        print("For GitHub Actions, store the whole file content as the repository secret TIKTOK_TOKEN, "
+              "plus TIKTOK_CLIENT_KEY and TIKTOK_CLIENT_SECRET.")
+        return
+    if args.cmd == "tiktok-upload":
+        from .publish import approve_and_upload_tiktok
+        sys.stdout.reconfigure(encoding="utf-8")
+        results = approve_and_upload_tiktok(StateStore.load(args.run_dir), args.approved_by, args.mode, args.privacy,
+                                            args.langs.split(",") if args.langs else None)
+        for r in results:
+            print(f"{r['lang']}: TikTok {r['mode']} -> {r['status']} ({r['privacy']}), publish_id {r['publish_id']}")
+        return
     if args.cmd == "youtube-auth":
         from .tools import youtube_upload
         path, channel = youtube_upload.authorize(args.client_secret, args.lang, scopes=youtube_upload.UPLOAD_SCOPES)

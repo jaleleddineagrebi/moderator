@@ -5,12 +5,12 @@ from moderator.tools import history, youtube
 from moderator.tools.languages import describe, lang_schema, names, normalize_langs, sensitivity_guidance
 
 
-def make_schema(langs: list[str]) -> dict:
+def make_schema(langs: list[str], count: int = 3) -> dict:
     return {
         "type": "object",
         "additionalProperties": False,
         "required": ["ideas"],
-        "properties": {"ideas": {"type": "array", "minItems": 3, "maxItems": 3, "items": {
+        "properties": {"ideas": {"type": "array", "minItems": count, "maxItems": count, "items": {
             "type": "object",
             "additionalProperties": False,
             "required": ["id", "title", "angle", "hook", "keywords", "reason", "sources"],
@@ -53,6 +53,8 @@ class Handler(Agent):
         avoid = ("ALREADY COVERED (do not propose these or close variations):\n"
                  + "\n".join(f"- {r['title']}" for r in done_before)) if done_before else ""
         tools = [] if ctx.strategy == "no_web" else ["WebSearch", "WebFetch"]
+        # nobody picks between ideas when checkpoint A is auto-approved (scheduled runs): ask for one, not three
+        count = 1 if "A" in (p.get("auto_approve") or []) else 3
         prompt = f"""You are a YouTube Shorts trend researcher for a faceless channel.
 Niche: {niche}. {p.get('niche_summary', '')}
 {f'Requested topic: {topic}.' if topic else 'Pick topics yourself.'}
@@ -61,7 +63,7 @@ Audience: {names(langs)} speakers. How each language is written:
 Style: {p.get('style')}.
 
 {'Use web search to find what is trending or newly discussed in this niche right now.' if tools else 'Use your own knowledge (web search is unavailable).'}
-Propose exactly 3 video ideas, ranked best first for maximum Shorts retention & views. Each must:
+Propose exactly {count} video idea{'s, ranked best first' if count > 1 else ', the strongest you can find'} for maximum Shorts retention & views. Each must:
 - work as a fast-paced 34-44 second Short with dynamic free stock video footage (no film clips, brands, celebrities, or copyrighted characters)
 - appeal to {names(langs)} audiences ({sensitivity_guidance(langs)})
 - have an instant pattern-interrupt hook (under 2.5 seconds / max 7 words) targeting a universal everyday experience or counter-intuitive truth so >75% of viewers stay past 3 seconds
@@ -72,7 +74,7 @@ Propose exactly 3 video ideas, ranked best first for maximum Shorts retention & 
 {avoid}
 
 {ctx.revision_notes()}"""
-        result = await ctx.llm.ask(prompt, schema=make_schema(langs), tools=tools)
+        result = await ctx.llm.ask(prompt, schema=make_schema(langs, count), tools=tools)
         ideas = result["ideas"]
         ctx.progress(90)
 
