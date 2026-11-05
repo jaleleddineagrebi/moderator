@@ -12,40 +12,46 @@ Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 1,0:00:00.05,0:00:02.51,Headline,,0,0,0,,{\fad(150,150)}La batterie du cerveau
-Dialogue: 1,0:00:02.61,0:00:07.41,Headline,,0,0,0,,{\fad(150,150)}Résister puis craquer
-Dialogue: 1,0:00:07.51,0:00:14.19,Headline,,0,0,0,,{\fad(150,150)}Chaque choix t'épuise
-Dialogue: 1,0:00:14.29,0:00:20.57,Headline,,0,0,0,,{\fad(150,150)}La volonté est limitée
-Dialogue: 1,0:00:20.67,0:00:26.34,Headline,,0,0,0,,{\fad(150,150)}Le contrôle lâche
-Dialogue: 1,0:00:26.44,0:00:33.57,Headline,,0,0,0,,{\fad(150,150)}Automatise tes décisions
-Dialogue: 1,0:00:33.67,0:00:38.16,Headline,,0,0,0,,{\fad(150,150)}Protège ton focus
-Dialogue: 0,0:00:00.10,0:00:00.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Ton cerveau a
-Dialogue: 0,0:00:00.89,0:00:01.50,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}une batterie
-Dialogue: 0,0:00:02.66,0:00:03.42,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}C’est pourquoi tu
-Dialogue: 0,0:00:03.43,0:00:04.31,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}résistes à midi
-Dialogue: 0,0:00:04.67,0:00:05.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}mais craques pour
-Dialogue: 0,0:00:05.34,0:00:05.89,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}une pizza à
-Dialogue: 0,0:00:05.91,0:00:06.42,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}minuit
-Dialogue: 0,0:00:07.56,0:00:08.29,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}C'est la fatigue
-Dialogue: 0,0:00:08.30,0:00:09.20,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}décisionnelle
-Dialogue: 0,0:00:10.06,0:00:10.95,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Chaque petit choix
-Dialogue: 0,0:00:10.96,0:00:11.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}épuise ton précieux
-Dialogue: 0,0:00:11.93,0:00:13.19,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}réservoir de volonté
-Dialogue: 0,0:00:14.34,0:00:15.22,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Vois la volonté
-Dialogue: 0,0:00:15.23,0:00:16.03,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}comme un muscle
-Dialogue: 0,0:00:16.89,0:00:17.79,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Le soir venu
-Dialogue: 0,0:00:18.08,0:00:18.64,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}ce muscle est
-Dialogue: 0,0:00:18.66,0:00:19.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}totalement à plat
-Dialogue: 0,0:00:20.72,0:00:21.19,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}C'est là que
-Dialogue: 0,0:00:21.20,0:00:22.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}ton contrôle lâche
-Dialogue: 0,0:00:22.48,0:00:23.40,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}provoquant des achats
-Dialogue: 0,0:00:23.42,0:00:24.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}impulsifs et du
-Dialogue: 0,0:00:24.27,0:00:25.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}défilement infini
-Dialogue: 0,0:00:26.49,0:00:27.44,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Pour t'en sortir
-Dialogue: 0,0:00:27.64,0:00:28.79,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}automatise tes matins
-Dialogue: 0,0:00:29.65,0:00:30.69,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Prépare tout d'avance
-Dialogue: 0,0:00:30.70,0:00:31.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}pour économiser ta
-Dialogue: 0,0:00:31.69,0:00:32.58,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}force mentale
-Dialogue: 0,0:00:33.72,0:00:34.55,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Tu dois protéger
-Dialogue: 0,0:00:34.56,0:00:35.92,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}ta concentration car
-Dialogue: 0,0:00:35.94,0:00:36.64,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}chaque matin
+Dialogue: 1,0:00:00.05,0:00:02.55,Headline,,0,0,0,,{\fad(150,150)}Ta batterie mentale
+Dialogue: 1,0:00:02.65,0:00:08.90,Headline,,0,0,0,,{\fad(150,150)}Midi contre minuit
+Dialogue: 1,0:00:09.00,0:00:15.42,Headline,,0,0,0,,{\fad(150,150)}Fatigue décisionnelle
+Dialogue: 1,0:00:15.52,0:00:21.77,Headline,,0,0,0,,{\fad(150,150)}Choisir t'épuise
+Dialogue: 1,0:00:21.87,0:00:30.23,Headline,,0,0,0,,{\fad(150,150)}Le contrôle lâche
+Dialogue: 1,0:00:30.33,0:00:37.89,Headline,,0,0,0,,{\fad(150,150)}Automatise tes choix
+Dialogue: 1,0:00:37.99,0:00:42.67,Headline,,0,0,0,,{\fad(150,150)}Économise ta force
+Dialogue: 0,0:00:00.10,0:00:00.94,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Tu démarres avec
+Dialogue: 0,0:00:00.95,0:00:01.55,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}une batterie
+Dialogue: 0,0:00:02.70,0:00:03.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Voilà pourquoi tu
+Dialogue: 0,0:00:03.64,0:00:04.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}résistes sans effort
+Dialogue: 0,0:00:04.69,0:00:05.10,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}à midi
+Dialogue: 0,0:00:05.48,0:00:06.07,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}mais tu finis
+Dialogue: 0,0:00:06.08,0:00:06.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}par craquer pour
+Dialogue: 0,0:00:06.83,0:00:07.37,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}une pizza à
+Dialogue: 0,0:00:07.38,0:00:07.89,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}minuit
+Dialogue: 0,0:00:09.05,0:00:09.78,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}C'est la fatigue
+Dialogue: 0,0:00:09.79,0:00:10.55,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}décisionnelle
+Dialogue: 0,0:00:10.93,0:00:11.75,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}cette impression de
+Dialogue: 0,0:00:11.76,0:00:12.62,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}brouillard quand ton
+Dialogue: 0,0:00:12.63,0:00:13.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}cerveau n'en peut
+Dialogue: 0,0:00:13.34,0:00:14.41,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}plus de réfléchir
+Dialogue: 0,0:00:15.57,0:00:16.51,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Chaque petit choix
+Dialogue: 0,0:00:16.91,0:00:17.51,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}des chaussettes au
+Dialogue: 0,0:00:17.52,0:00:18.20,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}moindre e-mail
+Dialogue: 0,0:00:18.57,0:00:19.64,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}vide progressivement tes
+Dialogue: 0,0:00:19.66,0:00:20.77,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}réserves d'énergie
+Dialogue: 0,0:00:21.92,0:00:23.20,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Quand l'énergie s'épuise
+Dialogue: 0,0:00:23.48,0:00:24.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}ton contrôle lâche
+Dialogue: 0,0:00:25.39,0:00:26.55,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Le défilement infini
+Dialogue: 0,0:00:26.57,0:00:27.13,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}et les achats
+Dialogue: 0,0:00:27.14,0:00:28.42,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}impulsifs deviennent alors
+Dialogue: 0,0:00:28.43,0:00:29.22,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}inévitables
+Dialogue: 0,0:00:30.38,0:00:31.86,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Pour lutter automatise
+Dialogue: 0,0:00:31.88,0:00:32.65,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}ton quotidien
+Dialogue: 0,0:00:33.51,0:00:34.58,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Prépare tes vêtements
+Dialogue: 0,0:00:34.59,0:00:35.13,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}et tes repas
+Dialogue: 0,0:00:35.14,0:00:35.73,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}avant même que
+Dialogue: 0,0:00:35.74,0:00:36.29,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}le soleil ne
+Dialogue: 0,0:00:36.30,0:00:36.89,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}se couche
+Dialogue: 0,0:00:38.04,0:00:39.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Arrête de gaspiller
+Dialogue: 0,0:00:39.13,0:00:40.29,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}ton attention pour
+Dialogue: 0,0:00:40.31,0:00:41.14,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}que demain matin
