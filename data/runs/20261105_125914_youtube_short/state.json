@@ -581,6 +581,11 @@
           "ts": "2026-11-05T13:00:36+00:00",
           "level": "info",
           "msg": "Asking Gemini (gemini-3.5-flash-lite, low complexity, thinking minimal)"
+        },
+        {
+          "ts": "2026-11-05T13:01:06+00:00",
+          "level": "warning",
+          "msg": "Gemini connection timed out on default route; retrying over IPv4"
         }
       ],
       "errors": [],
@@ -722,7 +727,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-05T13:00:54+00:00",
+    "exported_at": "2026-11-05T13:01:13+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/42031641751"
   }
