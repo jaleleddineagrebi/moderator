@@ -491,9 +491,7 @@
         }
       },
       "outputs": {
-        "voiceover_en": "voiceover_en.mp3",
         "timings_en": "timings_en.json",
-        "voiceover_fr": "voiceover_fr.mp3",
         "timings_fr": "timings_fr.json"
       },
       "logs": [
@@ -702,9 +700,7 @@
         "strategy": "transitions"
       },
       "outputs": {
-        "video_en": "final_short_en.mp4",
         "captions_en": "captions_en.ass",
-        "video_fr": "final_short_fr.mp4",
         "captions_fr": "captions_fr.ass"
       },
       "logs": [
@@ -763,8 +759,6 @@
       "outputs": {
         "report": "qa_report.md",
         "data": "qa_report.json",
-        "video_en": "final_short_en.mp4",
-        "video_fr": "final_short_fr.mp4",
         "thumbnail_en": "thumbnail_en.png",
         "thumbnail_fr": "thumbnail_fr.png"
       },
