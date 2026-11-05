@@ -1,0 +1,154 @@
+{
+  "title": "Decision Fatigue: Why You Buy Junk at Night",
+  "scenes": [
+    {
+      "vo": {
+        "en": "Your brain has a daily battery.",
+        "fr": "Ton cerveau a une batterie."
+      },
+      "on_screen": {
+        "en": "Your Brain’s Battery",
+        "fr": "La batterie du cerveau"
+      },
+      "visual": {
+        "description": "A close-up shot of a smartphone battery charging icon on a dark screen, transitioning to an abstract glowing light.",
+        "search_terms": [
+          "battery charging icon",
+          "glowing light abstract",
+          "electronic screen"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "It’s why you can resist donuts at noon, but find yourself ordering late-night pizza by nine.",
+        "fr": "C’est pourquoi tu résistes à midi, mais craques pour une pizza à minuit."
+      },
+      "on_screen": {
+        "en": "Resist Noon Crave Night",
+        "fr": "Résister puis craquer"
+      },
+      "visual": {
+        "description": "A man in a kitchen looking at a salad at a table, then a fast cut to a man opening a pizza box in a dark room.",
+        "search_terms": [
+          "man eating pizza",
+          "fast food box",
+          "kitchen night"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Psychologists call this decision fatigue. Every tiny choice, from picking a shirt to answering emails, saps your energy.",
+        "fr": "C'est la fatigue décisionnelle. Chaque petit choix épuise ton précieux réservoir de volonté."
+      },
+      "on_screen": {
+        "en": "Every Choice Drains You",
+        "fr": "Chaque choix t'épuise"
+      },
+      "visual": {
+        "description": "A man’s hands rapidly scrolling through a closet of clothes, then quickly typing on a laptop keyboard.",
+        "search_terms": [
+          "man choosing clothes",
+          "typing fast laptop",
+          "office work"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "Think of willpower as a finite muscle. By the time evening hits, that muscle is completely exhausted.",
+        "fr": "Vois la volonté comme un muscle. Le soir venu, ce muscle est totalement à plat."
+      },
+      "on_screen": {
+        "en": "Willpower Is Finite",
+        "fr": "La volonté est limitée"
+      },
+      "visual": {
+        "description": "Close-up of a car's fuel gauge moving from full to empty, followed by a tired man rubbing his eyes.",
+        "search_terms": [
+          "fuel gauge empty",
+          "tired man face",
+          "clock hands spinning"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "This is exactly when your self-control breaks, leading to impulse buys and mindless scrolling.",
+        "fr": "C'est là que ton contrôle lâche, provoquant des achats impulsifs et du défilement infini."
+      },
+      "on_screen": {
+        "en": "Self-Control Breaks Down",
+        "fr": "Le contrôle lâche"
+      },
+      "visual": {
+        "description": "A man’s hand holding a credit card over a laptop at night, then fingers scrolling quickly on a phone.",
+        "search_terms": [
+          "credit card laptop",
+          "scrolling phone dark",
+          "online shopping"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "To save your sanity, automate your mornings. Preset your meals and clothes to preserve your mental fuel.",
+        "fr": "Pour t'en sortir, automatise tes matins. Prépare tout d'avance pour économiser ta force mentale."
+      },
+      "on_screen": {
+        "en": "Automate Your Decisions",
+        "fr": "Automatise tes décisions"
+      },
+      "visual": {
+        "description": "A man setting out a pre-packed lunch and a neatly folded outfit on a bed in the early morning light.",
+        "search_terms": [
+          "meal prep containers",
+          "clothes folded bed",
+          "morning sunlight room"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "You have to protect your focus, because every morning...",
+        "fr": "Tu dois protéger ta concentration, car chaque matin..."
+      },
+      "on_screen": {
+        "en": "Protect Your Focus",
+        "fr": "Protège ton focus"
+      },
+      "visual": {
+        "description": "A macro shot of a human eye opening wide, then an abstract animation of neural pathways lighting up.",
+        "search_terms": [
+          "eye opening close-up",
+          "neural network animation",
+          "abstract blue light"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "the-illusion-of-choice-exhaustion",
+  "languages": [
+    "en",
+    "fr"
+  ],
+  "estimated_seconds": {
+    "en": 35.3,
+    "fr": 34.9
+  }
+}
