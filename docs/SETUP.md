@@ -139,3 +139,26 @@ The same `Generate Short` workflow can write with Claude (Haiku / Sonnet / Opus 
 4. Keep `GEMINI_API_KEY` if you want AI-generated images (Claude cannot make images); without it, visuals use stock footage only.
 
 Publishing is unchanged: comment `/approve` on the `short-review` issue and `Upload Short` uploads to YouTube.
+
+---
+
+## 8. Protect `main` (Pull Requests Only)
+
+[`.github/rulesets/protect-main.json`](../.github/rulesets/protect-main.json) blocks direct pushes to `main`:
+
+- every change goes through a pull request, and the `test` CI check must pass before it can be merged
+- force-pushes and deleting `main` are blocked
+- only people with write access (you and the collaborators you invite) can merge
+- the only exception is the GitHub Actions bot, so scheduled runs can still commit `history/topics.jsonl`
+
+To turn it on:
+
+1. Go to GitHub → **Settings → Rules → Rulesets → New ruleset → Import a ruleset**.
+2. Pick `.github/rulesets/protect-main.json`, then click **Create**.
+
+Then, under **Settings → Actions → General**:
+
+- set **Approval for running fork pull request workflows from contributors** to **Require approval for all external contributors**, so outsiders' PRs never run workflows without your OK
+- keep **Workflow permissions** at *Read repository contents* (each workflow asks for the extra permissions it needs)
+
+Only you and your collaborators can use `/approve`, `/edit` and `/reject` on review issues, and only they can click **Run workflow**. Comments from anyone else are ignored.
