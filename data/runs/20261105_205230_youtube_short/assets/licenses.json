@@ -7,7 +7,7 @@
     "author": "AttilaPergel",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
     "query": "battery charging icon",
-    "description": "A close-up shot of a smartphone battery charging icon on a dark screen, transitioning to an abstract glowing light."
+    "description": "A close-up of a digital battery icon on a dark screen, glowing with energy and slowly depleting."
   },
   {
     "scene": "scene_02",
@@ -17,7 +17,7 @@
     "author": "samirsmier",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
     "query": "man eating pizza",
-    "description": "A man in a kitchen looking at a salad at a table, then a fast cut to a man opening a pizza box in a dark room."
+    "description": "A man in a kitchen looking at a healthy salad, then a fast cut to a man opening a pizza box in a dark room."
   },
   {
     "scene": "scene_03",
@@ -26,28 +26,28 @@
     "page": "https://pixabay.com/videos/id-202753/",
     "author": "Matthias_Groeneveld",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "man choosing clothes",
-    "description": "A man’s hands rapidly scrolling through a closet of clothes, then quickly typing on a laptop keyboard."
+    "query": "tired man face",
+    "description": "A man rubbing his temples in a dimly lit office, looking exhausted and staring at a screen."
   },
   {
     "scene": "scene_04",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-43629/",
-    "author": "GreenCardShow",
+    "page": "https://pixabay.com/videos/id-218954/",
+    "author": "xBriantcx",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "fuel gauge empty",
-    "description": "Close-up of a car's fuel gauge moving from full to empty, followed by a tired man rubbing his eyes."
+    "query": "man choosing clothes",
+    "description": "Fast cuts of a man's hands choosing clothes from a closet, then typing rapidly on a laptop keyboard."
   },
   {
     "scene": "scene_05",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-10822/",
-    "author": "Coverr-Free-Footage",
+    "page": "https://pixabay.com/videos/id-233382/",
+    "author": "Yasir1120",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "credit card laptop",
-    "description": "A man’s hand holding a credit card over a laptop at night, then fingers scrolling quickly on a phone."
+    "query": "credit card payment",
+    "description": "A man's hand holding a credit card over a laptop at night, followed by fingers scrolling quickly on a phone."
   },
   {
     "scene": "scene_06",
@@ -57,16 +57,16 @@
     "author": "kurt_BID",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
     "query": "meal prep containers",
-    "description": "A man setting out a pre-packed lunch and a neatly folded outfit on a bed in the early morning light."
+    "description": "A man setting out a pre-packed lunch container and a neatly folded outfit on a bed."
   },
   {
     "scene": "scene_07",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-240531/",
-    "author": "Kaffeesüchtig",
+    "page": "https://pixabay.com/videos/id-210934/",
+    "author": "Nerd_Nonsense",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "eye opening close-up",
-    "description": "A macro shot of a human eye opening wide, then an abstract animation of neural pathways lighting up."
+    "query": "eye opening macro",
+    "description": "A cinematic shot of a city sunrise transitioning to a macro shot of a human eye opening."
   }
 ]
