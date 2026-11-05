@@ -1,0 +1,10 @@
+[
+  {
+    "lang": "en",
+    "id": "e9NlCTHaxXQ",
+    "url": "https://youtube.com/shorts/e9NlCTHaxXQ",
+    "privacy": "private",
+    "channel": "land of ai",
+    "thumbnail": "not set: <HttpError 403 when requesting https://youtube.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=e9NlCTHaxXQ&alt=json&uploadType=media returned \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\". Details: \"[{'message': \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\", 'domain': 'youtube.thumbnail', 'reason': 'forbidden', 'location': 'Authorization', 'locationType': 'header'}]\">"
+  }
+]

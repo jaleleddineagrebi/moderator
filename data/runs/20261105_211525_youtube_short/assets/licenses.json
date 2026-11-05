@@ -1,0 +1,62 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-202753/",
+    "author": "Matthias_Groeneveld",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man checking pocket",
+    "description": "Close up of a man feeling his empty pants pocket with a look of confusion."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-1971/",
+    "author": "RelaxVideos",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "neural network glowing",
+    "description": "Abstract shot of brain neural network animation or glowing synapses."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-142641/",
+    "author": "u_etjkkdz15b",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man checking phone",
+    "description": "A man constantly glancing at his wrist and checking his phone screen."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-232641/",
+    "author": "Engin_Akyurt",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "fabric texture moving",
+    "description": "Macro shot of fabric moving against skin or human muscle twitch."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-218954/",
+    "author": "xBriantcx",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man confused expression",
+    "description": "Man looking down at his pocket, thinking he feels something but finding nothing."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-73847/",
+    "author": "JustYøu",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hand inside pocket",
+    "description": "A hand reaching into a pocket and pulling out nothing, then pausing."
+  }
+]
