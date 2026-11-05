@@ -743,7 +743,7 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 0,
+      "progress": 50,
       "started_at": "2026-11-05T13:02:58+00:00",
       "ended_at": null,
       "attempt": 2,
@@ -813,6 +813,11 @@
           "ts": "2026-11-05T13:02:58+00:00",
           "level": "info",
           "msg": "Rendering en: 7 scenes, 45.5s, xfade transitions"
+        },
+        {
+          "ts": "2026-11-05T13:03:56+00:00",
+          "level": "info",
+          "msg": "Rendering fr: 7 scenes, 40.0s, xfade transitions"
         }
       ],
       "errors": [],
@@ -953,7 +958,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-05T13:03:21+00:00",
+    "exported_at": "2026-11-05T13:04:10+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/42031641751"
   }
