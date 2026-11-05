@@ -1,30 +1,30 @@
 # Decision Fatigue: Why You Buy Junk at Night
-Estimated narration: en 35.3s · fr 34.9s
+Estimated narration: en 38.5s · fr 41.3s
 
-## scene_01 · A close-up shot of a smartphone battery charging icon on a dark screen, transitioning to an abstract glowing light.
-EN  [Your Brain’s Battery]  Your brain has a daily battery.
-FR  [La batterie du cerveau]  Ton cerveau a une batterie.
+## scene_01 · A close-up of a digital battery icon on a dark screen, glowing with energy and slowly depleting.
+EN  [Your Mental Battery]  You start with a battery.
+FR  [Ta batterie mentale]  Tu démarres avec une batterie.
 
-## scene_02 · A man in a kitchen looking at a salad at a table, then a fast cut to a man opening a pizza box in a dark room.
-EN  [Resist Noon Crave Night]  It’s why you can resist donuts at noon, but find yourself ordering late-night pizza by nine.
-FR  [Résister puis craquer]  C’est pourquoi tu résistes à midi, mais craques pour une pizza à minuit.
+## scene_02 · A man in a kitchen looking at a healthy salad, then a fast cut to a man opening a pizza box in a dark room.
+EN  [Noon vs Midnight]  It’s why you easily resist donuts at noon, but find yourself face-first in a late-night pizza by midnight.
+FR  [Midi contre minuit]  Voilà pourquoi tu résistes sans effort à midi, mais tu finis par craquer pour une pizza à minuit.
 
-## scene_03 · A man’s hands rapidly scrolling through a closet of clothes, then quickly typing on a laptop keyboard.
-EN  [Every Choice Drains You]  Psychologists call this decision fatigue. Every tiny choice, from picking a shirt to answering emails, saps your energy.
-FR  [Chaque choix t'épuise]  C'est la fatigue décisionnelle. Chaque petit choix épuise ton précieux réservoir de volonté.
+## scene_03 · A man rubbing his temples in a dimly lit office, looking exhausted and staring at a screen.
+EN  [Decision Fatigue]  Many call this decision fatigue—that heavy, foggy feeling when your brain’s processing power is simply exhausted.
+FR  [Fatigue décisionnelle]  C'est la fatigue décisionnelle : cette impression de brouillard quand ton cerveau n'en peut plus de réfléchir.
 
-## scene_04 · Close-up of a car's fuel gauge moving from full to empty, followed by a tired man rubbing his eyes.
-EN  [Willpower Is Finite]  Think of willpower as a finite muscle. By the time evening hits, that muscle is completely exhausted.
-FR  [La volonté est limitée]  Vois la volonté comme un muscle. Le soir venu, ce muscle est totalement à plat.
+## scene_04 · Fast cuts of a man's hands choosing clothes from a closet, then typing rapidly on a laptop keyboard.
+EN  [Small Choices Cost Energy]  Every tiny choice, from choosing your socks to replying to one last email, slowly saps your mental reserves.
+FR  [Choisir t'épuise]  Chaque petit choix, des chaussettes au moindre e-mail, vide progressivement tes réserves d'énergie.
 
-## scene_05 · A man’s hand holding a credit card over a laptop at night, then fingers scrolling quickly on a phone.
-EN  [Self-Control Breaks Down]  This is exactly when your self-control breaks, leading to impulse buys and mindless scrolling.
-FR  [Le contrôle lâche]  C'est là que ton contrôle lâche, provoquant des achats impulsifs et du défilement infini.
+## scene_05 · A man's hand holding a credit card over a laptop at night, followed by fingers scrolling quickly on a phone.
+EN  [Self-Control Fails]  Once your energy hits zero, your self-control snaps. Suddenly, mindless scrolling and impulse buying feel impossible to stop.
+FR  [Le contrôle lâche]  Quand l'énergie s'épuise, ton contrôle lâche. Le défilement infini et les achats impulsifs deviennent alors inévitables.
 
-## scene_06 · A man setting out a pre-packed lunch and a neatly folded outfit on a bed in the early morning light.
-EN  [Automate Your Decisions]  To save your sanity, automate your mornings. Preset your meals and clothes to preserve your mental fuel.
-FR  [Automatise tes décisions]  Pour t'en sortir, automatise tes matins. Prépare tout d'avance pour économiser ta force mentale.
+## scene_06 · A man setting out a pre-packed lunch container and a neatly folded outfit on a bed.
+EN  [Automate Your Decisions]  To fight back, automate your routine. Lay out your clothes and prep your meals before the sun even goes down.
+FR  [Automatise tes choix]  Pour lutter, automatise ton quotidien. Prépare tes vêtements et tes repas avant même que le soleil ne se couche.
 
-## scene_07 · A macro shot of a human eye opening wide, then an abstract animation of neural pathways lighting up.
-EN  [Protect Your Focus]  You have to protect your focus, because every morning...
-FR  [Protège ton focus]  Tu dois protéger ta concentration, car chaque matin...
+## scene_07 · A cinematic shot of a city sunrise transitioning to a macro shot of a human eye opening.
+EN  [Save Your Energy]  Stop wasting your focus on the small stuff, so tomorrow morning...
+FR  [Économise ta force]  Arrête de gaspiller ton attention, pour que demain matin...
