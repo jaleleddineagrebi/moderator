@@ -591,10 +591,10 @@
         "visuals"
       ],
       "checkpoint": null,
-      "status": "running",
-      "progress": 55,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-05T13:02:58+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-05T13:03:02+00:00",
       "attempt": 2,
       "retries": 0,
       "max_retries": 2,
@@ -723,6 +723,11 @@
           "ts": "2026-11-05T13:03:00+00:00",
           "level": "warning",
           "msg": "Nano Banana thumbnail background failed (Gemini API 429: daily quota used up (or model not enabled) for gemini-nano-banana-2.1, gemini-3.1-flash-image-preview, gemini-3.1-flash-image, gemini-2.5-flash-image); using scene_01 frame instead"
+        },
+        {
+          "ts": "2026-11-05T13:03:02+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [],
@@ -948,7 +953,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-05T13:03:01+00:00",
+    "exported_at": "2026-11-05T13:03:21+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/42031641751"
   }
