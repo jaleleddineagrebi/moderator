@@ -578,13 +578,13 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 0,
-      "started_at": "2026-11-05T20:58:12+00:00",
+      "progress": 42,
+      "started_at": "2026-11-05T20:59:15+00:00",
       "ended_at": null,
-      "attempt": 3,
-      "retries": 0,
+      "attempt": 4,
+      "retries": 1,
       "max_retries": 2,
-      "strategy": "primary_voice",
+      "strategy": "alternate_voice",
       "inputs": {
         "script": "script.json",
         "languages": [
@@ -592,8 +592,8 @@
           "fr"
         ],
         "voices": {
-          "en": "en-US-AndrewMultilingualNeural",
-          "fr": "fr-FR-HenriNeural"
+          "en": "en-US-AriaNeural",
+          "fr": "fr-FR-DeniseNeural"
         }
       },
       "outputs": {
@@ -665,11 +665,42 @@
           "ts": "2026-11-05T20:58:12+00:00",
           "level": "info",
           "msg": "Narrating en with en-US-AndrewMultilingualNeural"
+        },
+        {
+          "ts": "2026-11-05T20:59:14+00:00",
+          "level": "error",
+          "msg": "NoAudioReceived: No audio was received. Please verify that your parameters are correct."
+        },
+        {
+          "ts": "2026-11-05T20:59:15+00:00",
+          "level": "info",
+          "msg": "Attempt 2/3, strategy 'alternate_voice'"
+        },
+        {
+          "ts": "2026-11-05T20:59:15+00:00",
+          "level": "info",
+          "msg": "Narrating en with en-US-AriaNeural"
+        },
+        {
+          "ts": "2026-11-05T20:59:23+00:00",
+          "level": "info",
+          "msg": "en voiceover: 46.6s"
+        },
+        {
+          "ts": "2026-11-05T20:59:23+00:00",
+          "level": "info",
+          "msg": "Narrating fr with fr-FR-DeniseNeural"
         }
       ],
       "errors": [
         {
           "ts": "2026-11-05T20:54:52+00:00",
+          "attempt": 1,
+          "strategy": "primary_voice",
+          "error": "NoAudioReceived: No audio was received. Please verify that your parameters are correct."
+        },
+        {
+          "ts": "2026-11-05T20:59:14+00:00",
           "attempt": 1,
           "strategy": "primary_voice",
           "error": "NoAudioReceived: No audio was received. Please verify that your parameters are correct."
@@ -1033,7 +1064,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-05T20:59:12+00:00",
+    "exported_at": "2026-11-05T20:59:31+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/42107319584"
   }
