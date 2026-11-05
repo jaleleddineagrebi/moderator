@@ -1,4 +1,4 @@
-# QA report: CHANGES NEEDED
+# QA report: PASSED
 
 - ✅ **length** [en]: 45.5s (must be under 60s; target 32-50s)
 - ✅ **target length** [en]: 45.5s
@@ -18,5 +18,6 @@
 - ✅ **caption sync** [fr]: 91 words, 34 caption events
 - ✅ **visual licenses**: 7 assets: pixabay
 - ✅ **audio licenses**: music: original work, no third-party rights; sfx: original work, no third-party rights; voice: synthetic voice; no third-party performance rights
-- ⚠️ **visual_fit review** [all]: The query for scene_04 is 'messy office desk', but the narration mentions an 'unwashed dish'. Change visual query to 'dirty dishes in sink' to match the specific example in the script.
-- ❌ **people rule**: scene_04: A woman is visible in all frames, showing her head, shoulder, and arm as she works at a laptop.. Replace with footage without women (a face-only close-up is the only exception). → sent to visuals
+- ⚠️ **grammar review** [fr]: The word 'Productivite' in hashtags is missing the accent. Change to #Productivité.
+- ⚠️ **grammar review** [fr]: The word 'Etre' in #BienEtre is missing the circumflex accent. Change to #BienÊtre.
+- ✅ **people rule**: no women beyond face close-ups in 7 scenes and 2 thumbnail(s)

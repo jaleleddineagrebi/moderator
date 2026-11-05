@@ -1,6 +1,6 @@
 {
-  "passed": false,
-  "revision_round": 0,
+  "passed": true,
+  "revision_round": 1,
   "checks": [
     {
       "check": "length",
@@ -147,19 +147,27 @@
       "severity": "blocker"
     },
     {
-      "check": "visual_fit review",
-      "lang": "all",
+      "check": "grammar review",
+      "lang": "fr",
       "ok": false,
-      "detail": "The query for scene_04 is 'messy office desk', but the narration mentions an 'unwashed dish'. Change visual query to 'dirty dishes in sink' to match the specific example in the script.",
-      "send_to": "visuals",
+      "detail": "The word 'Productivite' in hashtags is missing the accent. Change to #Productivité.",
+      "send_to": "packaging",
+      "severity": "minor"
+    },
+    {
+      "check": "grammar review",
+      "lang": "fr",
+      "ok": false,
+      "detail": "The word 'Etre' in #BienEtre is missing the circumflex accent. Change to #BienÊtre.",
+      "send_to": "packaging",
       "severity": "minor"
     },
     {
       "check": "people rule",
       "lang": null,
-      "ok": false,
-      "detail": "scene_04: A woman is visible in all frames, showing her head, shoulder, and arm as she works at a laptop.. Replace with footage without women (a face-only close-up is the only exception).",
-      "send_to": "visuals",
+      "ok": true,
+      "detail": "no women beyond face close-ups in 7 scenes and 2 thumbnail(s)",
+      "send_to": null,
       "severity": "blocker"
     }
   ]
