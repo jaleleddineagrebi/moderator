@@ -110,12 +110,12 @@ def build_channel_profile(
         studio_tip = "Recommended @handle in YouTube Studio -> Customization: @LandOfAIShorts (instead of @bbw-e7w)."
     elif mode == "hybrid":
         headline = (channel_title or "LAND OF AI & MIND").upper()
-        subtitle = "HUMAN PSYCHOLOGY · BRAIN SCIENCE · AI & BEHAVIOR"
+        subtitle = "HUMAN PSYCHOLOGY · BRAIN BIAS CHECKS · AI & BEHAVIOR"
         description = (
             f"Welcome to {channel_title or 'Land of AI'} — daily bite-sized Shorts decoding human psychology, "
             "cognitive biases, brain hacks, and how modern technology & AI shape the way you think and act.\n\n"
             "🧠 Understand your mind in under 45 seconds a day.\n"
-            "⚡ Subscribe for daily psychology, mindset & brain-science Shorts!\n\n"
+            "⚡ Follow for a daily brain bias check & psychology insights!\n\n"
             "#Shorts #Psychology #HumanBehavior #Mindset #BrainFacts #AI"
         )
         kw_list = [
@@ -132,12 +132,12 @@ def build_channel_profile(
         )
     else:
         headline = "MIND DECODED"
-        subtitle = "DAILY PSYCHOLOGY · HUMAN BEHAVIOR · BRAIN HACKS"
+        subtitle = "DAILY PSYCHOLOGY · BRAIN BIAS CHECKS · HUMAN BEHAVIOR"
         description = (
             "Why does your brain remember embarrassing moments for years, fall for manipulation, or crave dopamine?\n\n"
             "Every day we break down real psychology, cognitive biases, habits, and social dynamics in under 45 seconds "
             "— backed by behavioral science and zero fluff.\n\n"
-            "🧠 Subscribe for daily psychology & mindset Shorts!\n\n"
+            "🧠 Follow for a daily brain bias check & mindset breakdowns!\n\n"
             "#Shorts #Psychology #HumanBehavior #Mindset #SelfImprovement #BrainFacts"
         )
         kw_list = [

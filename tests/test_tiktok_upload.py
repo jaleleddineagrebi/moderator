@@ -40,6 +40,13 @@ def test_pick_privacy_falls_back_to_private():
 
 
 def test_caption_is_capped():
+    caption = tt.build_caption({"title": "Why You Forget Everything", "hashtags": ["#Shorts", "#Psychology"]})
+    assert "daily brain bias check" in caption
+    assert "#Shorts" in caption
+
+    caption_fr = tt.build_caption({"title": "Pourquoi ton cerveau ment", "hashtags": ["#Shorts"]}, lang="fr")
+    assert "check-up mental" in caption_fr
+
     assert len(tt.build_caption({"title": "t" * 3000, "hashtags": ["#a"]})) == tt.MAX_CAPTION
 
 
