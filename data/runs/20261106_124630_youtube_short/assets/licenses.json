@@ -1,0 +1,62 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-202753/",
+    "author": "Matthias_Groeneveld",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man rubbing forehead",
+    "description": "A man looking frustrated and tired while working at a messy desk."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-27539/",
+    "author": "socialsudo",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "men shaking hands",
+    "description": "Two men in business casual attire performing a firm handshake in a sunny park."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-107189/",
+    "author": "Placidplace",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "vintage library books",
+    "description": "A close-up of old, leather-bound books on a dark wooden library shelf."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-210934/",
+    "author": "Nerd_Nonsense",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "human eye macro",
+    "description": "An extreme close-up of a human eye blinking with abstract light reflections."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-26771/",
+    "author": "SecretPoems",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "handing over pen",
+    "description": "Close up of a hand handing a silver pen to another person's hand."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-215094/",
+    "author": "u_mv4esujzr4",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man walking street",
+    "description": "A confident man walking through a modern city towards the camera."
+  }
+]
