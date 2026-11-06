@@ -1,0 +1,62 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-3608/",
+    "author": "Coverr-Free-Footage",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man reading menu",
+    "description": "Close up of a man looking confused while examining a restaurant menu."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-236256/",
+    "author": "xBriantcx",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "holding coffee cups",
+    "description": "A man's hands holding coffee cups of different sizes on a wooden table."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-14869/",
+    "author": "moshehar",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "looking at prices",
+    "description": "A man pointing at price tags on a display board in a store."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-111280/",
+    "author": "AttilaPergel",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "scrolling pricing plans",
+    "description": "A man tapping on a smartphone screen while reviewing subscription plans."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-202753/",
+    "author": "Matthias_Groeneveld",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man thinking hard",
+    "description": "A man touching his head in realization while working at a desk."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-149452/",
+    "author": "Matthias_Groeneveld",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "walking through station",
+    "description": "A man walking away through a busy subway station corridor."
+  }
+]

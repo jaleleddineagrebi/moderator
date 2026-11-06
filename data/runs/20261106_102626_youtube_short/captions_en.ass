@@ -1,0 +1,52 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:02.34,Headline,,0,0,0,,{\fad(150,150)}You are being tricked!
+Dialogue: 1,0:00:02.44,0:00:08.13,Headline,,0,0,0,,{\fad(150,150)}The Middle Option Trap
+Dialogue: 1,0:00:08.23,0:00:14.41,Headline,,0,0,0,,{\fad(150,150)}The Decoy Effect
+Dialogue: 1,0:00:14.51,0:00:21.21,Headline,,0,0,0,,{\fad(150,150)}Useless Third Option
+Dialogue: 1,0:00:21.31,0:00:27.95,Headline,,0,0,0,,{\fad(150,150)}Your Brain Anchors
+Dialogue: 1,0:00:28.05,0:00:34.17,Headline,,0,0,0,,{\fad(150,150)}Follow for part 2
+Dialogue: 0,0:00:00.09,0:00:00.46,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You are being
+Dialogue: 0,0:00:00.46,0:00:01.45,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}tricked into spending
+Dialogue: 0,0:00:01.45,0:00:01.85,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}more
+Dialogue: 0,0:00:02.49,0:00:03.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Ever wonder why
+Dialogue: 0,0:00:03.15,0:00:03.96,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you never pick
+Dialogue: 0,0:00:03.98,0:00:04.94,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the cheapest coffee
+Dialogue: 0,0:00:05.36,0:00:06.16,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}but always shy
+Dialogue: 0,0:00:06.18,0:00:06.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}away from the
+Dialogue: 0,0:00:06.70,0:00:07.64,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}most expensive one
+Dialogue: 0,0:00:08.27,0:00:08.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Companies use a
+Dialogue: 0,0:00:08.85,0:00:10.60,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}psychological glitch called
+Dialogue: 0,0:00:10.60,0:00:11.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the decoy effect
+Dialogue: 0,0:00:11.93,0:00:12.87,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to manipulate your
+Dialogue: 0,0:00:12.87,0:00:13.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}daily choices
+Dialogue: 0,0:00:14.55,0:00:15.95,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}They purposely introduce
+Dialogue: 0,0:00:16.09,0:00:17.22,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a useless third
+Dialogue: 0,0:00:17.23,0:00:18.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}option that makes
+Dialogue: 0,0:00:18.34,0:00:19.21,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the middle choice
+Dialogue: 0,0:00:19.30,0:00:19.76,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}look like an
+Dialogue: 0,0:00:19.77,0:00:20.71,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}absolute bargain
+Dialogue: 0,0:00:21.35,0:00:22.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Suddenly your brain
+Dialogue: 0,0:00:22.89,0:00:23.58,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}anchors to the
+Dialogue: 0,0:00:23.58,0:00:24.64,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}highest price
+Dialogue: 0,0:00:25.08,0:00:25.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}making you feel
+Dialogue: 0,0:00:25.85,0:00:26.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}smart for settling
+Dialogue: 0,0:00:26.93,0:00:27.44,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}on the middle
+Dialogue: 0,0:00:28.13,0:00:28.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Follow
+Dialogue: 0,0:00:29.07,0:00:29.90,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}part two drops
+Dialogue: 0,0:00:29.90,0:00:30.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}tomorrow because
+Dialogue: 0,0:00:31.33,0:00:31.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you are being
+Dialogue: 0,0:00:31.83,0:00:32.77,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}tricked into spending
+Dialogue: 0,0:00:32.77,0:00:33.17,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}more

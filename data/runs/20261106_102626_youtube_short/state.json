@@ -1,5 +1,5 @@
 {
-  "run_id": "20261103_152749_youtube_short",
+  "run_id": "20261106_102626_youtube_short",
   "workflow": "youtube_short",
   "workflow_title": "YouTube Short",
   "status": "done",
@@ -7,7 +7,7 @@
     "languages": "en",
     "style": "faceless, fast cuts, bold captions, calm narration",
     "topic": null,
-    "budget_usd": 1.0,
+    "budget_usd": 0.2,
     "niche": "Psychology & human behavior (biases, habits, social dynamics)",
     "niche_summary": "Short, curiosity-driven explanations (\"why your brain does X\") work well in Shorts. Generic people and city stock footage plus calm narration carries them fully. Arabic in particular has few serious psychology channels: the largest Arabic psychology/body-language channel still hasn't reached 1M subscribers.",
     "example_topics": [
@@ -21,19 +21,20 @@
       "A",
       "B"
     ],
-    "visual_mode": "stock"
+    "visual_mode": "stock",
+    "llm": "gemini"
   },
-  "started_at": "2026-11-03T15:27:49+00:00",
-  "ended_at": "2026-11-03T15:56:55+00:00",
-  "revision_rounds": 0,
+  "started_at": "2026-11-06T10:26:26+00:00",
+  "ended_at": "2026-11-06T10:38:14+00:00",
+  "revision_rounds": 1,
   "cost": {
-    "total_usd": 0.007479,
-    "budget_usd": 1.0,
+    "total_usd": 0.006841,
+    "budget_usd": 0.2,
     "by_agent": {
-      "trend_researcher": 0.002124,
-      "scriptwriter": 0.003498,
-      "packaging": 0.000857,
-      "qa_reviewer": 0.001
+      "trend_researcher": 0.000992,
+      "scriptwriter": 0.002486,
+      "packaging": 0.000871,
+      "qa_reviewer": 0.002493
     }
   },
   "agents": {
@@ -58,7 +59,8 @@
         "web_and_youtube",
         "web_only",
         "no_web"
-      ]
+      ],
+      "complexity": "medium"
     },
     "scriptwriter": {
       "name": "scriptwriter",
@@ -81,7 +83,8 @@
         "default",
         "tighter_word_budget",
         "simpler_structure"
-      ]
+      ],
+      "complexity": "high"
     },
     "visual_producer": {
       "name": "visual_producer",
@@ -99,15 +102,17 @@
         "Gemini Nano Banana (9:16 image generation)",
         "Pexels API",
         "Pixabay API",
+        "Wikimedia Commons CC0/PD Video",
         "Pillow",
         "ffmpeg"
       ],
       "strategies": [
-        "nano_banana",
         "stock_video",
+        "nano_banana",
         "stock_photo",
         "generated"
-      ]
+      ],
+      "complexity": "low"
     },
     "voice_audio": {
       "name": "voice_audio",
@@ -131,7 +136,8 @@
         "primary_voice",
         "alternate_voice",
         "third_voice_slower"
-      ]
+      ],
+      "complexity": "low"
     },
     "packaging": {
       "name": "packaging",
@@ -155,7 +161,8 @@
         "banana_thumbnail",
         "frame_thumbnail",
         "plain_thumbnail"
-      ]
+      ],
+      "complexity": "low"
     },
     "editor": {
       "name": "editor",
@@ -182,7 +189,8 @@
         "transitions",
         "hard_cuts",
         "hard_cuts_no_sfx"
-      ]
+      ],
+      "complexity": "low"
     },
     "qa_reviewer": {
       "name": "qa_reviewer",
@@ -209,7 +217,8 @@
         "full_review",
         "full_review",
         "technical_only"
-      ]
+      ],
+      "complexity": "medium"
     }
   },
   "pipeline": {
@@ -231,8 +240,8 @@
       "checkpoint": "A",
       "status": "done",
       "progress": 100,
-      "started_at": "2026-11-03T15:27:49+00:00",
-      "ended_at": "2026-11-03T15:27:59+00:00",
+      "started_at": "2026-11-06T10:26:26+00:00",
+      "ended_at": "2026-11-06T10:26:29+00:00",
       "attempt": 1,
       "retries": 0,
       "max_retries": 2,
@@ -250,49 +259,44 @@
       },
       "logs": [
         {
-          "ts": "2026-11-03T15:27:49+00:00",
+          "ts": "2026-11-06T10:26:26+00:00",
           "level": "info",
           "msg": "Attempt 1/3, strategy 'web_and_youtube'"
         },
         {
-          "ts": "2026-11-03T15:27:49+00:00",
+          "ts": "2026-11-06T10:26:26+00:00",
           "level": "info",
-          "msg": "Asking Gemini Flash (gemini-3.8-flash, google_search)"
+          "msg": "Asking Gemini (gemini-3.5-flash-lite, medium complexity, thinking minimal, google_search)"
         },
         {
-          "ts": "2026-11-03T15:27:50+00:00",
+          "ts": "2026-11-06T10:26:26+00:00",
           "level": "warning",
-          "msg": "Model 'gemini-3.8-flash' returned 429; falling back to 'gemini-3-flash-preview'"
+          "msg": "Model 'gemini-3.5-flash-lite' returned 429; falling back to 'gemini-3.1-flash-lite'"
         },
         {
-          "ts": "2026-11-03T15:27:50+00:00",
+          "ts": "2026-11-06T10:26:26+00:00",
           "level": "warning",
           "msg": "Google Search grounding unavailable on current tier/quota; continuing with Gemini Flash directly"
         },
         {
-          "ts": "2026-11-03T15:27:51+00:00",
-          "level": "warning",
-          "msg": "Model 'gemini-3.8-flash' returned 503; falling back to 'gemini-3-flash-preview'"
-        },
-        {
-          "ts": "2026-11-03T15:27:59+00:00",
+          "ts": "2026-11-06T10:26:29+00:00",
           "level": "info",
-          "msg": "Gemini (gemini-3-flash-preview) answered in 10.2s"
+          "msg": "Gemini (gemini-3.5-flash-lite) answered in 2.8s (tokens in 434, out 589, thinking 0)"
         },
         {
-          "ts": "2026-11-03T15:27:59+00:00",
+          "ts": "2026-11-06T10:26:29+00:00",
           "level": "info",
           "msg": "Finished, waiting for your approval"
         },
         {
-          "ts": "2026-11-03T15:27:59+00:00",
+          "ts": "2026-11-06T10:26:29+00:00",
           "level": "info",
-          "msg": "Approved by schedule (auto-approve) (choice: spotlight-effect-anxiety)"
+          "msg": "Approved by schedule (auto-approve) (choice: decoy-effect-pricing)"
         }
       ],
       "errors": [],
       "feedback": [],
-      "cost_usd": 0.002124
+      "cost_usd": 0.000992
     },
     "script": {
       "title": "Write the script",
@@ -303,14 +307,14 @@
       "checkpoint": "B",
       "status": "done",
       "progress": 100,
-      "started_at": "2026-11-03T15:27:59+00:00",
-      "ended_at": "2026-11-03T15:28:10+00:00",
+      "started_at": "2026-11-06T10:26:29+00:00",
+      "ended_at": "2026-11-06T10:26:33+00:00",
       "attempt": 1,
       "retries": 0,
       "max_retries": 2,
       "strategy": "default",
       "inputs": {
-        "idea": "Why Nobody Noticed Your Mistake",
+        "idea": "Why You Always Pick the Middle Option",
         "languages": [
           "en"
         ],
@@ -322,39 +326,59 @@
       },
       "logs": [
         {
-          "ts": "2026-11-03T15:27:59+00:00",
+          "ts": "2026-11-06T10:26:29+00:00",
           "level": "info",
           "msg": "Attempt 1/3, strategy 'default'"
         },
         {
-          "ts": "2026-11-03T15:27:59+00:00",
+          "ts": "2026-11-06T10:26:29+00:00",
           "level": "info",
-          "msg": "Asking Gemini Flash (gemini-3.8-flash)"
+          "msg": "Asking Gemini (gemini-3.5-flash-lite, high complexity, thinking minimal)"
         },
         {
-          "ts": "2026-11-03T15:28:10+00:00",
+          "ts": "2026-11-06T10:26:31+00:00",
           "level": "info",
-          "msg": "Gemini (gemini-3-flash-preview) answered in 10.6s"
+          "msg": "Gemini (gemini-3.5-flash-lite) answered in 2.5s (tokens in 785, out 783, thinking 0)"
         },
         {
-          "ts": "2026-11-03T15:28:10+00:00",
+          "ts": "2026-11-06T10:26:31+00:00",
           "level": "info",
-          "msg": "Estimated narration: en 45.5s"
+          "msg": "Estimated narration: en 29.8s"
         },
         {
-          "ts": "2026-11-03T15:28:10+00:00",
+          "ts": "2026-11-06T10:26:31+00:00",
+          "level": "warning",
+          "msg": "Length outside 45-55s, asking for a fix"
+        },
+        {
+          "ts": "2026-11-06T10:26:31+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.5-flash-lite, high complexity, thinking minimal)"
+        },
+        {
+          "ts": "2026-11-06T10:26:33+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3.5-flash-lite) answered in 2.1s (tokens in 1340, out 520, thinking 0)"
+        },
+        {
+          "ts": "2026-11-06T10:26:33+00:00",
+          "level": "info",
+          "msg": "Revised estimate: en 31.3s"
+        },
+        {
+          "ts": "2026-11-06T10:26:33+00:00",
           "level": "info",
           "msg": "Finished, waiting for your approval"
         },
         {
-          "ts": "2026-11-03T15:28:10+00:00",
+          "ts": "2026-11-06T10:26:33+00:00",
           "level": "info",
           "msg": "Approved by schedule (auto-approve)"
         }
       ],
       "errors": [],
       "feedback": [],
-      "cost_usd": 0.003498
+      "cost_usd": 0.002486
     },
     "visuals": {
       "title": "Source scene visuals",
@@ -365,17 +389,20 @@
       "checkpoint": null,
       "status": "done",
       "progress": 100,
-      "started_at": "2026-11-03T15:28:10+00:00",
-      "ended_at": "2026-11-03T15:28:31+00:00",
-      "attempt": 1,
+      "started_at": "2026-11-06T10:28:07+00:00",
+      "ended_at": "2026-11-06T10:28:14+00:00",
+      "attempt": 2,
       "retries": 0,
       "max_retries": 2,
-      "strategy": "nano_banana",
+      "strategy": "stock_video",
       "inputs": {
         "script": "script.json",
-        "providers": [],
+        "providers": [
+          "pixabay",
+          "wikimedia"
+        ],
         "nano_banana": true,
-        "starting_tier": "generated"
+        "starting_tier": "stock_video"
       },
       "outputs": {
         "contact_sheet": "assets/contact_sheet.jpg",
@@ -383,63 +410,84 @@
       },
       "logs": [
         {
-          "ts": "2026-11-03T15:28:10+00:00",
+          "ts": "2026-11-06T10:26:33+00:00",
           "level": "info",
-          "msg": "Attempt 1/3, strategy 'nano_banana'"
+          "msg": "Attempt 1/3, strategy 'stock_video'"
         },
         {
-          "ts": "2026-11-03T15:28:10+00:00",
+          "ts": "2026-11-06T10:26:44+00:00",
+          "level": "info",
+          "msg": "scene_02: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-06T10:26:45+00:00",
+          "level": "info",
+          "msg": "scene_01: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-06T10:26:49+00:00",
+          "level": "info",
+          "msg": "scene_03: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-06T10:26:59+00:00",
+          "level": "info",
+          "msg": "scene_05: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-06T10:27:00+00:00",
+          "level": "info",
+          "msg": "scene_06: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-06T10:27:01+00:00",
+          "level": "info",
+          "msg": "scene_04: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-06T10:27:02+00:00",
+          "level": "info",
+          "msg": "Finished"
+        },
+        {
+          "ts": "2026-11-06T10:28:07+00:00",
           "level": "warning",
-          "msg": "No GEMINI_API_KEY or stock API keys in .env: using procedural generated backgrounds"
+          "msg": "Sent back by qa: QA found:\n[all] people rule: scene_01: A young woman/girl is visible sitting at a desk, showing her upper body and full figure across all frames.. Replace with footage without women (a face-only close-up is the only exception)."
         },
         {
-          "ts": "2026-11-03T15:28:17+00:00",
+          "ts": "2026-11-06T10:28:07+00:00",
           "level": "info",
-          "msg": "scene_01: generated (generated)"
+          "msg": "Attempt 1/3, strategy 'stock_video'"
         },
         {
-          "ts": "2026-11-03T15:28:18+00:00",
+          "ts": "2026-11-06T10:28:07+00:00",
           "level": "info",
-          "msg": "scene_02: generated (generated)"
+          "msg": "Revision feedback: QA found:\n[all] people rule: scene_01: A young woman/girl is visible sitting at a desk, showing her upper body and full figure across all frames.. Replace with footage without women (a face-only close-up is the only exception)."
         },
         {
-          "ts": "2026-11-03T15:28:18+00:00",
+          "ts": "2026-11-06T10:28:07+00:00",
           "level": "info",
-          "msg": "scene_03: generated (generated)"
+          "msg": "Replacing scene_01; keeping 5 unchanged scene(s)"
         },
         {
-          "ts": "2026-11-03T15:28:25+00:00",
+          "ts": "2026-11-06T10:28:13+00:00",
           "level": "info",
-          "msg": "scene_04: generated (generated)"
+          "msg": "scene_01: stock_video (pixabay)"
         },
         {
-          "ts": "2026-11-03T15:28:25+00:00",
-          "level": "info",
-          "msg": "scene_05: generated (generated)"
-        },
-        {
-          "ts": "2026-11-03T15:28:26+00:00",
-          "level": "info",
-          "msg": "scene_06: generated (generated)"
-        },
-        {
-          "ts": "2026-11-03T15:28:30+00:00",
-          "level": "info",
-          "msg": "scene_07: generated (generated)"
-        },
-        {
-          "ts": "2026-11-03T15:28:30+00:00",
-          "level": "info",
-          "msg": "scene_08: generated (generated)"
-        },
-        {
-          "ts": "2026-11-03T15:28:31+00:00",
+          "ts": "2026-11-06T10:28:14+00:00",
           "level": "info",
           "msg": "Finished"
         }
       ],
       "errors": [],
-      "feedback": [],
+      "feedback": [
+        {
+          "ts": "2026-11-06T10:28:07+00:00",
+          "from": "qa",
+          "comment": "QA found:\n[all] people rule: scene_01: A young woman/girl is visible sitting at a desk, showing her upper body and full figure across all frames.. Replace with footage without women (a face-only close-up is the only exception)."
+        }
+      ],
       "cost_usd": 0.0
     },
     "audio": {
@@ -451,75 +499,53 @@
       "checkpoint": null,
       "status": "done",
       "progress": 100,
-      "started_at": "2026-11-03T15:28:40+00:00",
-      "ended_at": "2026-11-03T15:28:53+00:00",
-      "attempt": 2,
-      "retries": 1,
+      "started_at": "2026-11-06T10:26:34+00:00",
+      "ended_at": "2026-11-06T10:27:19+00:00",
+      "attempt": 1,
+      "retries": 0,
       "max_retries": 2,
-      "strategy": "alternate_voice",
+      "strategy": "primary_voice",
       "inputs": {
         "script": "script.json",
         "languages": [
           "en"
         ],
         "voices": {
-          "en": "en-US-AriaNeural"
+          "en": "en-US-AndrewMultilingualNeural"
         }
       },
       "outputs": {
+        "voiceover_en": "voiceover_en.mp3",
         "timings_en": "timings_en.json"
       },
       "logs": [
         {
-          "ts": "2026-11-03T15:28:10+00:00",
+          "ts": "2026-11-06T10:26:34+00:00",
           "level": "info",
           "msg": "Attempt 1/3, strategy 'primary_voice'"
         },
         {
-          "ts": "2026-11-03T15:28:10+00:00",
+          "ts": "2026-11-06T10:26:34+00:00",
           "level": "info",
           "msg": "Narrating en with en-US-AndrewMultilingualNeural"
         },
         {
-          "ts": "2026-11-03T15:28:39+00:00",
-          "level": "error",
-          "msg": "NoAudioReceived: No audio was received. Please verify that your parameters are correct."
-        },
-        {
-          "ts": "2026-11-03T15:28:40+00:00",
+          "ts": "2026-11-06T10:27:16+00:00",
           "level": "info",
-          "msg": "Attempt 2/3, strategy 'alternate_voice'"
+          "msg": "en voiceover: 33.5s"
         },
         {
-          "ts": "2026-11-03T15:28:41+00:00",
-          "level": "info",
-          "msg": "Narrating en with en-US-AriaNeural"
-        },
-        {
-          "ts": "2026-11-03T15:28:50+00:00",
-          "level": "info",
-          "msg": "en voiceover: 54.2s"
-        },
-        {
-          "ts": "2026-11-03T15:28:50+00:00",
+          "ts": "2026-11-06T10:27:16+00:00",
           "level": "info",
           "msg": "Generating an ambient music bed (no library tracks with license files found)"
         },
         {
-          "ts": "2026-11-03T15:28:53+00:00",
+          "ts": "2026-11-06T10:27:19+00:00",
           "level": "info",
           "msg": "Finished"
         }
       ],
-      "errors": [
-        {
-          "ts": "2026-11-03T15:28:39+00:00",
-          "attempt": 1,
-          "strategy": "primary_voice",
-          "error": "NoAudioReceived: No audio was received. Please verify that your parameters are correct.",
-          "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/moderator/moderator/moderator/engine/orchestrator.py\", line 98, in _run_step\n    outputs = await asyncio.wait_for(agent.run(ctx), agent.spec.timeout_s)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.local/share/uv/python/cpython-3.12.16-linux-x86_64-gnu/lib/python3.12/asyncio/tasks.py\", line 520, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/home/runner/work/moderator/moderator/agents/voice_audio/handler.py\", line 43, in run\n    words = await tts.synthesize(scene[\"vo\"][lang], voice, part, rate=rate)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/moderator/moderator/moderator/tools/tts.py\", line 40, in synthesize\n    async for chunk in comm.stream():\n  File \"/home/runner/work/moderator/moderator/.venv/lib/python3.12/site-packages/edge_tts/communicate.py\", line 588, in stream\n    async for message in self.__stream():\n  File \"/home/runner/work/moderator/moderator/.venv/lib/python3.12/site-packages/edge_tts/communicate.py\", line 562, in __stream\n    raise NoAudioReceived(\nedge_tts.exceptions.NoAudioReceived: No audio was received. Please verify that your parameters are correct.\n"
-        }
-      ],
+      "errors": [],
       "feedback": [],
       "cost_usd": 0.0
     },
@@ -533,9 +559,9 @@
       "checkpoint": null,
       "status": "done",
       "progress": 100,
-      "started_at": "2026-11-03T15:28:31+00:00",
-      "ended_at": "2026-11-03T15:28:37+00:00",
-      "attempt": 1,
+      "started_at": "2026-11-06T10:28:14+00:00",
+      "ended_at": "2026-11-06T10:28:18+00:00",
+      "attempt": 2,
       "retries": 0,
       "max_retries": 2,
       "strategy": "banana_thumbnail",
@@ -553,54 +579,120 @@
       },
       "logs": [
         {
-          "ts": "2026-11-03T15:28:31+00:00",
+          "ts": "2026-11-06T10:27:02+00:00",
           "level": "info",
           "msg": "Attempt 1/3, strategy 'banana_thumbnail'"
         },
         {
-          "ts": "2026-11-03T15:28:31+00:00",
+          "ts": "2026-11-06T10:27:02+00:00",
           "level": "info",
-          "msg": "Asking Gemini Flash (gemini-3.8-flash)"
+          "msg": "Asking Gemini (gemini-3.5-flash-lite, low complexity, thinking minimal)"
         },
         {
-          "ts": "2026-11-03T15:28:35+00:00",
+          "ts": "2026-11-06T10:27:03+00:00",
           "level": "info",
-          "msg": "Gemini (gemini-3-flash-preview) answered in 4.0s"
+          "msg": "Gemini (gemini-3.5-flash-lite) answered in 1.4s (tokens in 400, out 213, thinking 0)"
         },
         {
-          "ts": "2026-11-03T15:28:35+00:00",
+          "ts": "2026-11-06T10:27:03+00:00",
           "level": "info",
           "msg": "Generating 9:16 image with Nano Banana (gemini-nano-banana-2.1)"
         },
         {
-          "ts": "2026-11-03T15:28:36+00:00",
+          "ts": "2026-11-06T10:27:03+00:00",
+          "level": "warning",
+          "msg": "'gemini-nano-banana-2.1' is out of daily quota; skipping it for the rest of this run"
+        },
+        {
+          "ts": "2026-11-06T10:27:03+00:00",
           "level": "warning",
           "msg": "Model 'gemini-nano-banana-2.1' returned 429; falling back to 'gemini-3.1-flash-image-preview'"
         },
         {
-          "ts": "2026-11-03T15:28:36+00:00",
+          "ts": "2026-11-06T10:27:04+00:00",
+          "level": "warning",
+          "msg": "'gemini-3.1-flash-image-preview' is out of daily quota; skipping it for the rest of this run"
+        },
+        {
+          "ts": "2026-11-06T10:27:04+00:00",
           "level": "warning",
           "msg": "Model 'gemini-3.1-flash-image-preview' returned 429; falling back to 'gemini-3.1-flash-image'"
         },
         {
-          "ts": "2026-11-03T15:28:37+00:00",
+          "ts": "2026-11-06T10:27:04+00:00",
+          "level": "warning",
+          "msg": "'gemini-3.1-flash-image' is out of daily quota; skipping it for the rest of this run"
+        },
+        {
+          "ts": "2026-11-06T10:27:04+00:00",
           "level": "warning",
           "msg": "Model 'gemini-3.1-flash-image' returned 429; falling back to 'gemini-2.5-flash-image'"
         },
         {
-          "ts": "2026-11-03T15:28:37+00:00",
+          "ts": "2026-11-06T10:27:04+00:00",
+          "level": "warning",
+          "msg": "'gemini-2.5-flash-image' is out of daily quota; skipping it for the rest of this run"
+        },
+        {
+          "ts": "2026-11-06T10:27:04+00:00",
           "level": "warning",
           "msg": "Nano Banana thumbnail background failed (Gemini API 429 (gemini-2.5-flash-image): {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-flash-preview-image, description: Generate content input tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-flash-preview-image, description: Generate content requests per minute limit exceeded); using scene_01 frame instead"
         },
         {
-          "ts": "2026-11-03T15:28:37+00:00",
+          "ts": "2026-11-06T10:27:04+00:00",
+          "level": "info",
+          "msg": "Finished"
+        },
+        {
+          "ts": "2026-11-06T10:28:07+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'visuals' is being revised"
+        },
+        {
+          "ts": "2026-11-06T10:28:07+00:00",
+          "level": "warning",
+          "msg": "Sent back by qa: QA found:\n[all] people rule: thumbnail_en: A young woman/girl is visible sitting at a desk, showing her upper body, arms, and lower body.. Replace with footage without women (a face-only close-up is the only exception)."
+        },
+        {
+          "ts": "2026-11-06T10:28:14+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'banana_thumbnail'"
+        },
+        {
+          "ts": "2026-11-06T10:28:14+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.5-flash-lite, low complexity, thinking minimal)"
+        },
+        {
+          "ts": "2026-11-06T10:28:17+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3.5-flash-lite) answered in 2.7s (tokens in 473, out 222, thinking 0)"
+        },
+        {
+          "ts": "2026-11-06T10:28:17+00:00",
+          "level": "info",
+          "msg": "Generating 9:16 image with Nano Banana (gemini-nano-banana-2.1)"
+        },
+        {
+          "ts": "2026-11-06T10:28:17+00:00",
+          "level": "warning",
+          "msg": "Nano Banana thumbnail background failed (Gemini API 429: daily quota used up (or model not enabled) for gemini-nano-banana-2.1, gemini-3.1-flash-image-preview, gemini-3.1-flash-image, gemini-2.5-flash-image); using scene_01 frame instead"
+        },
+        {
+          "ts": "2026-11-06T10:28:18+00:00",
           "level": "info",
           "msg": "Finished"
         }
       ],
       "errors": [],
-      "feedback": [],
-      "cost_usd": 0.000857
+      "feedback": [
+        {
+          "ts": "2026-11-06T10:28:07+00:00",
+          "from": "qa",
+          "comment": "QA found:\n[all] people rule: thumbnail_en: A young woman/girl is visible sitting at a desk, showing her upper body, arms, and lower body.. Replace with footage without women (a face-only close-up is the only exception)."
+        }
+      ],
+      "cost_usd": 0.000871
     },
     "edit": {
       "title": "Edit the final videos",
@@ -612,9 +704,9 @@
       "checkpoint": null,
       "status": "done",
       "progress": 100,
-      "started_at": "2026-11-03T15:28:53+00:00",
-      "ended_at": "2026-11-03T15:29:27+00:00",
-      "attempt": 1,
+      "started_at": "2026-11-06T10:28:14+00:00",
+      "ended_at": "2026-11-06T10:28:50+00:00",
+      "attempt": 2,
       "retries": 0,
       "max_retries": 2,
       "strategy": "transitions",
@@ -625,9 +717,7 @@
           "assets/scene_03.mp4",
           "assets/scene_04.mp4",
           "assets/scene_05.mp4",
-          "assets/scene_06.mp4",
-          "assets/scene_07.mp4",
-          "assets/scene_08.mp4"
+          "assets/scene_06.mp4"
         ],
         "audio": {
           "voiceover_en": "voiceover_en.mp3",
@@ -641,21 +731,42 @@
         "strategy": "transitions"
       },
       "outputs": {
+        "video_en": "final_short_en.mp4",
         "captions_en": "captions_en.ass"
       },
       "logs": [
         {
-          "ts": "2026-11-03T15:28:53+00:00",
+          "ts": "2026-11-06T10:27:19+00:00",
           "level": "info",
           "msg": "Attempt 1/3, strategy 'transitions'"
         },
         {
-          "ts": "2026-11-03T15:28:53+00:00",
+          "ts": "2026-11-06T10:27:19+00:00",
           "level": "info",
-          "msg": "Rendering en: 8 scenes, 54.9s, xfade transitions"
+          "msg": "Rendering en: 6 scenes, 34.2s, xfade transitions"
         },
         {
-          "ts": "2026-11-03T15:29:27+00:00",
+          "ts": "2026-11-06T10:27:56+00:00",
+          "level": "info",
+          "msg": "Finished"
+        },
+        {
+          "ts": "2026-11-06T10:28:07+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'visuals' is being revised"
+        },
+        {
+          "ts": "2026-11-06T10:28:14+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'transitions'"
+        },
+        {
+          "ts": "2026-11-06T10:28:14+00:00",
+          "level": "info",
+          "msg": "Rendering en: 6 scenes, 34.2s, xfade transitions"
+        },
+        {
+          "ts": "2026-11-06T10:28:50+00:00",
           "level": "info",
           "msg": "Finished"
         }
@@ -674,9 +785,9 @@
       "checkpoint": "C",
       "status": "done",
       "progress": 100,
-      "started_at": "2026-11-03T15:29:27+00:00",
-      "ended_at": "2026-11-03T15:30:38+00:00",
-      "attempt": 1,
+      "started_at": "2026-11-06T10:28:50+00:00",
+      "ended_at": "2026-11-06T10:29:02+00:00",
+      "attempt": 2,
       "retries": 0,
       "max_retries": 2,
       "strategy": "full_review",
@@ -692,43 +803,94 @@
       "outputs": {
         "report": "qa_report.md",
         "data": "qa_report.json",
+        "video_en": "final_short_en.mp4",
         "thumbnail_en": "thumbnail_en.png"
       },
       "logs": [
         {
-          "ts": "2026-11-03T15:29:27+00:00",
+          "ts": "2026-11-06T10:27:56+00:00",
           "level": "info",
           "msg": "Attempt 1/3, strategy 'full_review'"
         },
         {
-          "ts": "2026-11-03T15:29:29+00:00",
+          "ts": "2026-11-06T10:27:58+00:00",
           "level": "info",
-          "msg": "Asking Gemini Flash (gemini-3.8-flash)"
+          "msg": "Asking Gemini (gemini-3.5-flash-lite, medium complexity, thinking minimal)"
         },
         {
-          "ts": "2026-11-03T15:29:59+00:00",
+          "ts": "2026-11-06T10:27:59+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3.5-flash-lite) answered in 0.7s (tokens in 1092, out 9, thinking 0)"
+        },
+        {
+          "ts": "2026-11-06T10:28:04+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.5-flash-lite, medium complexity, thinking minimal)"
+        },
+        {
+          "ts": "2026-11-06T10:28:07+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3.5-flash-lite) answered in 2.2s (tokens in 3499, out 103, thinking 0)"
+        },
+        {
+          "ts": "2026-11-06T10:28:07+00:00",
           "level": "warning",
-          "msg": "Gemini connection timed out on default route; retrying over IPv4"
+          "msg": "2 blocking issue(s); sending back to: visuals, packaging"
         },
         {
-          "ts": "2026-11-03T15:30:38+00:00",
+          "ts": "2026-11-06T10:28:07+00:00",
           "level": "info",
-          "msg": "Gemini (gemini-3-flash-preview) answered in 69.0s"
+          "msg": "Finished, waiting for your approval"
         },
         {
-          "ts": "2026-11-03T15:30:38+00:00",
+          "ts": "2026-11-06T10:28:07+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'visuals' is being revised"
+        },
+        {
+          "ts": "2026-11-06T10:28:07+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'packaging' is being revised"
+        },
+        {
+          "ts": "2026-11-06T10:28:50+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'full_review'"
+        },
+        {
+          "ts": "2026-11-06T10:28:53+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.5-flash-lite, medium complexity, thinking minimal)"
+        },
+        {
+          "ts": "2026-11-06T10:28:53+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3.5-flash-lite) answered in 0.8s (tokens in 1101, out 9, thinking 0)"
+        },
+        {
+          "ts": "2026-11-06T10:29:00+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.5-flash-lite, medium complexity, thinking minimal)"
+        },
+        {
+          "ts": "2026-11-06T10:29:02+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3.5-flash-lite) answered in 2.3s (tokens in 3499, out 9, thinking 0)"
+        },
+        {
+          "ts": "2026-11-06T10:29:02+00:00",
           "level": "info",
           "msg": "All checks passed"
         },
         {
-          "ts": "2026-11-03T15:30:38+00:00",
+          "ts": "2026-11-06T10:29:02+00:00",
           "level": "info",
           "msg": "Finished, waiting for your approval"
         }
       ],
       "errors": [],
       "feedback": [],
-      "cost_usd": 0.001
+      "cost_usd": 0.002493
     }
   },
   "checkpoints": {
@@ -740,24 +902,24 @@
       "status": "approved",
       "options": [
         {
-          "id": "spotlight-effect-anxiety",
-          "label": "1. Why Nobody Noticed Your Mistake",
-          "detail": "The video reveals that others notice our flaws 50% less than we think due to the Spotlight Effect. It uses generic city footage of crowds to show how everyone is focused on themselves, not you.\nHook (en): Nobody is actually looking at you.\nWhy: Search interest in social anxiety and 'main character syndrome' is peaking. This provides a psychological 'relief' that encourages saves and repeats."
+          "id": "decoy-effect-pricing",
+          "label": "1. Why You Always Pick the Middle Option",
+          "detail": "This video exposes the Decoy Effect, showing how companies deliberately introduce a useless third option to trick your brain into buying the most expensive item. It surprises viewers by revealing that their purchasing choices are heavily manipulated by simple spatial framing.\nHook (en): You are being tricked into spending more.\nWhy: Behavioral economics and pricing tricks are performing exceptionally well on Shorts right now because viewers instantly relate to making purchases and feeling manipulated."
         },
         {
-          "id": "zeigarnik-effect-loops",
-          "label": "2. Why Your Brain Won't Shut Up",
-          "detail": "It explains the Zeigarnik Effect—why unfinished tasks haunt your thoughts while finished ones are forgotten. It shows how 'open loops' create mental tension that keeps you awake.\nHook (en): Your brain hates unfinished business.\nWhy: The 'productivity' and 'sleep' niches are massive. Explaining the 'why' behind a common frustration like 'racing thoughts' drives high engagement."
+          "id": "spotlight-effect",
+          "label": "2. Why Everyone Is Not Staring At You",
+          "detail": "This video explains the Spotlight Effect, proving that people remember your embarrassing moments a fraction as much as you think they do. It provides immediate relief and taps into universal social anxiety.\nHook (en): Nobody noticed your most embarrassing moment.\nWhy: Self-improvement and social anxiety shorts consistently drive high retention and comment engagement as viewers reflect on their own insecurities."
         },
         {
-          "id": "ben-franklin-likability",
-          "label": "3. The Secret to Making People Like You",
-          "detail": "This flips social logic by explaining that people like you more after they do YOU a favor. It uses the Ben Franklin Effect to show how the brain justifies its actions through cognitive dissonance.\nHook (en): Want someone to like you? Ask for a favor.\nWhy: Counter-intuitive social 'hacks' perform exceptionally well in the 'dark psychology' and self-improvement sub-niches on YouTube Shorts."
+          "id": "ben-franklin-effect",
+          "label": "3. Make Someone Like You By Asking This",
+          "detail": "This video breaks down the Benjamin Franklin Effect, demonstrating the counterintuitive truth that asking someone for a small favor actually makes them like you more, rather than annoying them.\nHook (en): Want them to like you? Ask this.\nWhy: Actionable social psychology hacks that alter interpersonal relationships have viral potential because viewers immediately want to test them in real life."
         }
       ],
-      "choice": "spotlight-effect-anxiety",
+      "choice": "decoy-effect-pricing",
       "comment": null,
-      "decided_at": "2026-11-03T15:27:59+00:00"
+      "decided_at": "2026-11-06T10:26:29+00:00"
     },
     "B": {
       "title": "Approve the script",
@@ -768,7 +930,7 @@
       "options": [],
       "choice": null,
       "comment": null,
-      "decided_at": "2026-11-03T15:28:10+00:00"
+      "decided_at": "2026-11-06T10:26:33+00:00"
     },
     "C": {
       "title": "Approve the final videos (never uploaded without your OK)",
@@ -779,37 +941,35 @@
       "options": [],
       "choice": null,
       "comment": "approved by github:jaleleddineagrebi",
-      "decided_at": "2026-11-03T15:56:55+00:00"
+      "decided_at": "2026-11-06T10:38:14+00:00"
     }
   },
   "notifications": [
     {
-      "ts": "2026-11-03T15:30:38+00:00",
+      "ts": "2026-11-06T10:29:02+00:00",
       "level": "action",
       "msg": "Approval needed: Approve the final videos (never uploaded without your OK)",
       "step": "qa"
     },
     {
-      "ts": "2026-11-03T15:56:57+00:00",
+      "ts": "2026-11-06T10:38:17+00:00",
       "level": "success",
-      "msg": "Uploaded en to 'BBW' as private: https://youtube.com/shorts/qCm9yD0vxlM",
+      "msg": "Uploaded en to 'land of ai' as private: https://youtube.com/shorts/xFrXf-lEOHg",
       "step": null
     }
   ],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-03T15:56:59+00:00",
+    "exported_at": "2026-11-06T10:38:22+00:00",
     "uploads": [
       {
         "lang": "en",
-        "id": "qCm9yD0vxlM",
-        "url": "https://youtube.com/shorts/qCm9yD0vxlM",
+        "id": "xFrXf-lEOHg",
+        "url": "https://youtube.com/shorts/xFrXf-lEOHg",
         "privacy": "private",
-        "channel": "BBW",
-        "thumbnail": "not set: <HttpError 403 when requesting https://youtube.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=qCm9yD0vxlM&alt=json&uploadType=media returned \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\". Details: \"[{'message': \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\", 'domain': 'youtube.thumbnail', 'reason': 'forbidden', 'location': 'Authorization', 'locationType': 'header'}]\">"
+        "channel": "land of ai",
+        "thumbnail": "not set: <HttpError 403 when requesting https://youtube.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=xFrXf-lEOHg&alt=json&uploadType=media returned \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\". Details: \"[{'message': \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\", 'domain': 'youtube.thumbnail', 'reason': 'forbidden', 'location': 'Authorization', 'locationType': 'header'}]\">"
       }
-    ],
-    "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/41663923249",
-    "issue_url": "https://github.com/jaleleddineagrebi/moderator/issues/2"
+    ]
   }
 }

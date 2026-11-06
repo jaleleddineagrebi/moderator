@@ -1,0 +1,478 @@
+{
+  "voice": "en-US-AndrewMultilingualNeural",
+  "duration": 33.516168,
+  "scenes": [
+    {
+      "scene": "scene_01",
+      "start": 0.0,
+      "end": 2.208,
+      "words": [
+        {
+          "start": 0.087,
+          "end": 0.162,
+          "text": "You"
+        },
+        {
+          "start": 0.163,
+          "end": 0.237,
+          "text": "are"
+        },
+        {
+          "start": 0.237,
+          "end": 0.45,
+          "text": "being"
+        },
+        {
+          "start": 0.463,
+          "end": 0.9,
+          "text": "tricked"
+        },
+        {
+          "start": 0.912,
+          "end": 1.038,
+          "text": "into"
+        },
+        {
+          "start": 1.05,
+          "end": 1.45,
+          "text": "spending"
+        },
+        {
+          "start": 1.45,
+          "end": 1.837,
+          "text": "more"
+        }
+      ]
+    },
+    {
+      "scene": "scene_02",
+      "start": 2.388,
+      "end": 8.004,
+      "words": [
+        {
+          "start": 2.488,
+          "end": 2.688,
+          "text": "Ever"
+        },
+        {
+          "start": 2.688,
+          "end": 2.988,
+          "text": "wonder"
+        },
+        {
+          "start": 3.001,
+          "end": 3.151,
+          "text": "why"
+        },
+        {
+          "start": 3.15,
+          "end": 3.288,
+          "text": "you"
+        },
+        {
+          "start": 3.288,
+          "end": 3.725,
+          "text": "never"
+        },
+        {
+          "start": 3.725,
+          "end": 3.963,
+          "text": "pick"
+        },
+        {
+          "start": 3.975,
+          "end": 4.05,
+          "text": "the"
+        },
+        {
+          "start": 4.051,
+          "end": 4.475,
+          "text": "cheapest"
+        },
+        {
+          "start": 4.475,
+          "end": 4.938,
+          "text": "coffee"
+        },
+        {
+          "start": 5.363,
+          "end": 5.488,
+          "text": "but"
+        },
+        {
+          "start": 5.5,
+          "end": 5.888,
+          "text": "always"
+        },
+        {
+          "start": 5.901,
+          "end": 6.163,
+          "text": "shy"
+        },
+        {
+          "start": 6.176,
+          "end": 6.526,
+          "text": "away"
+        },
+        {
+          "start": 6.526,
+          "end": 6.663,
+          "text": "from"
+        },
+        {
+          "start": 6.663,
+          "end": 6.7,
+          "text": "the"
+        },
+        {
+          "start": 6.7,
+          "end": 6.938,
+          "text": "most"
+        },
+        {
+          "start": 6.95,
+          "end": 7.375,
+          "text": "expensive"
+        },
+        {
+          "start": 7.388,
+          "end": 7.638,
+          "text": "one"
+        }
+      ]
+    },
+    {
+      "scene": "scene_03",
+      "start": 8.184,
+      "end": 14.28,
+      "words": [
+        {
+          "start": 8.271,
+          "end": 8.659,
+          "text": "Companies"
+        },
+        {
+          "start": 8.659,
+          "end": 8.797,
+          "text": "use"
+        },
+        {
+          "start": 8.797,
+          "end": 8.834,
+          "text": "a"
+        },
+        {
+          "start": 8.846,
+          "end": 9.709,
+          "text": "psychological"
+        },
+        {
+          "start": 9.709,
+          "end": 10.184,
+          "text": "glitch"
+        },
+        {
+          "start": 10.372,
+          "end": 10.597,
+          "text": "called"
+        },
+        {
+          "start": 10.597,
+          "end": 10.722,
+          "text": "the"
+        },
+        {
+          "start": 10.734,
+          "end": 11.234,
+          "text": "decoy"
+        },
+        {
+          "start": 11.246,
+          "end": 11.722,
+          "text": "effect"
+        },
+        {
+          "start": 11.934,
+          "end": 12.034,
+          "text": "to"
+        },
+        {
+          "start": 12.034,
+          "end": 12.772,
+          "text": "manipulate"
+        },
+        {
+          "start": 12.772,
+          "end": 12.872,
+          "text": "your"
+        },
+        {
+          "start": 12.872,
+          "end": 13.209,
+          "text": "daily"
+        },
+        {
+          "start": 13.221,
+          "end": 13.909,
+          "text": "choices"
+        }
+      ]
+    },
+    {
+      "scene": "scene_04",
+      "start": 14.46,
+      "end": 21.084,
+      "words": [
+        {
+          "start": 14.547,
+          "end": 14.635,
+          "text": "They"
+        },
+        {
+          "start": 14.635,
+          "end": 15.248,
+          "text": "purposely"
+        },
+        {
+          "start": 15.247,
+          "end": 15.947,
+          "text": "introduce"
+        },
+        {
+          "start": 16.085,
+          "end": 16.135,
+          "text": "a"
+        },
+        {
+          "start": 16.148,
+          "end": 16.873,
+          "text": "useless"
+        },
+        {
+          "start": 16.885,
+          "end": 17.222,
+          "text": "third"
+        },
+        {
+          "start": 17.235,
+          "end": 17.71,
+          "text": "option"
+        },
+        {
+          "start": 17.873,
+          "end": 18.035,
+          "text": "that"
+        },
+        {
+          "start": 18.047,
+          "end": 18.335,
+          "text": "makes"
+        },
+        {
+          "start": 18.335,
+          "end": 18.398,
+          "text": "the"
+        },
+        {
+          "start": 18.398,
+          "end": 18.723,
+          "text": "middle"
+        },
+        {
+          "start": 18.723,
+          "end": 19.21,
+          "text": "choice"
+        },
+        {
+          "start": 19.298,
+          "end": 19.46,
+          "text": "look"
+        },
+        {
+          "start": 19.46,
+          "end": 19.622,
+          "text": "like"
+        },
+        {
+          "start": 19.622,
+          "end": 19.76,
+          "text": "an"
+        },
+        {
+          "start": 19.772,
+          "end": 20.272,
+          "text": "absolute"
+        },
+        {
+          "start": 20.285,
+          "end": 20.71,
+          "text": "bargain"
+        }
+      ]
+    },
+    {
+      "scene": "scene_05",
+      "start": 21.264,
+      "end": 27.816,
+      "words": [
+        {
+          "start": 21.351,
+          "end": 21.952,
+          "text": "Suddenly"
+        },
+        {
+          "start": 22.227,
+          "end": 22.364,
+          "text": "your"
+        },
+        {
+          "start": 22.364,
+          "end": 22.877,
+          "text": "brain"
+        },
+        {
+          "start": 22.889,
+          "end": 23.376,
+          "text": "anchors"
+        },
+        {
+          "start": 23.389,
+          "end": 23.476,
+          "text": "to"
+        },
+        {
+          "start": 23.489,
+          "end": 23.576,
+          "text": "the"
+        },
+        {
+          "start": 23.576,
+          "end": 24.027,
+          "text": "highest"
+        },
+        {
+          "start": 24.027,
+          "end": 24.639,
+          "text": "price"
+        },
+        {
+          "start": 25.076,
+          "end": 25.352,
+          "text": "making"
+        },
+        {
+          "start": 25.364,
+          "end": 25.514,
+          "text": "you"
+        },
+        {
+          "start": 25.514,
+          "end": 25.839,
+          "text": "feel"
+        },
+        {
+          "start": 25.852,
+          "end": 26.264,
+          "text": "smart"
+        },
+        {
+          "start": 26.264,
+          "end": 26.414,
+          "text": "for"
+        },
+        {
+          "start": 26.414,
+          "end": 26.914,
+          "text": "settling"
+        },
+        {
+          "start": 26.926,
+          "end": 27.014,
+          "text": "on"
+        },
+        {
+          "start": 27.014,
+          "end": 27.051,
+          "text": "the"
+        },
+        {
+          "start": 27.051,
+          "end": 27.439,
+          "text": "middle"
+        }
+      ]
+    },
+    {
+      "scene": "scene_06",
+      "start": 27.996,
+      "end": 33.516,
+      "words": [
+        {
+          "start": 28.134,
+          "end": 28.684,
+          "text": "Follow"
+        },
+        {
+          "start": 29.071,
+          "end": 29.346,
+          "text": "part"
+        },
+        {
+          "start": 29.359,
+          "end": 29.558,
+          "text": "two"
+        },
+        {
+          "start": 29.571,
+          "end": 29.896,
+          "text": "drops"
+        },
+        {
+          "start": 29.896,
+          "end": 30.346,
+          "text": "tomorrow"
+        },
+        {
+          "start": 30.346,
+          "end": 30.884,
+          "text": "because"
+        },
+        {
+          "start": 31.333,
+          "end": 31.471,
+          "text": "you"
+        },
+        {
+          "start": 31.471,
+          "end": 31.546,
+          "text": "are"
+        },
+        {
+          "start": 31.558,
+          "end": 31.821,
+          "text": "being"
+        },
+        {
+          "start": 31.833,
+          "end": 32.233,
+          "text": "tricked"
+        },
+        {
+          "start": 32.246,
+          "end": 32.346,
+          "text": "into"
+        },
+        {
+          "start": 32.358,
+          "end": 32.771,
+          "text": "spending"
+        },
+        {
+          "start": 32.771,
+          "end": 33.159,
+          "text": "more"
+        }
+      ]
+    }
+  ]
+}
