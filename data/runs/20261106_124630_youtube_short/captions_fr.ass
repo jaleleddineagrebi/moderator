@@ -1,0 +1,55 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:02.39,Headline,,0,0,0,,{\fad(150,150)}Arrête d'être gentil
+Dialogue: 1,0:00:02.49,0:00:08.35,Headline,,0,0,0,,{\fad(150,150)}Le mythe de l'amitié
+Dialogue: 1,0:00:08.45,0:00:15.39,Headline,,0,0,0,,{\fad(150,150)}L'effet Franklin
+Dialogue: 1,0:00:15.49,0:00:23.30,Headline,,0,0,0,,{\fad(150,150)}Logique du cerveau
+Dialogue: 1,0:00:23.40,0:00:30.39,Headline,,0,0,0,,{\fad(150,150)}Demande un service
+Dialogue: 1,0:00:30.49,0:00:38.53,Headline,,0,0,0,,{\fad(150,150)}Prochaine astuce
+Dialogue: 0,0:00:00.10,0:00:00.89,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Arrête d'être trop
+Dialogue: 0,0:00:00.90,0:00:01.39,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}gentil
+Dialogue: 0,0:00:02.54,0:00:03.26,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}On pense souvent
+Dialogue: 0,0:00:03.27,0:00:04.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}que rendre service
+Dialogue: 0,0:00:04.12,0:00:04.74,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}crée des liens
+Dialogue: 0,0:00:05.60,0:00:06.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Mais c'est l'inverse
+Dialogue: 0,0:00:06.35,0:00:07.01,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}qui fonctionne le
+Dialogue: 0,0:00:07.02,0:00:07.42,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}mieux
+Dialogue: 0,0:00:08.50,0:00:09.22,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}C'est l'effet Ben
+Dialogue: 0,0:00:09.24,0:00:09.74,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Franklin
+Dialogue: 0,0:00:10.60,0:00:11.44,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Il a transformé
+Dialogue: 0,0:00:11.45,0:00:12.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}ses ennemis en
+Dialogue: 0,0:00:12.01,0:00:12.55,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}alliés en leur
+Dialogue: 0,0:00:12.56,0:00:13.90,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}demandant simplement d'emprunter
+Dialogue: 0,0:00:13.91,0:00:14.40,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}un livre
+Dialogue: 0,0:00:15.54,0:00:16.47,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Ton cerveau déteste
+Dialogue: 0,0:00:16.48,0:00:17.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}l'incohérence
+Dialogue: 0,0:00:18.21,0:00:18.71,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Si tu aides
+Dialogue: 0,0:00:18.72,0:00:19.96,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}quelqu'un ton esprit
+Dialogue: 0,0:00:19.97,0:00:20.94,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}conclut forcément que
+Dialogue: 0,0:00:20.96,0:00:21.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}tu apprécies cette
+Dialogue: 0,0:00:21.73,0:00:22.31,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}personne
+Dialogue: 0,0:00:23.45,0:00:24.23,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Demande un petit
+Dialogue: 0,0:00:24.24,0:00:25.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}service comme un
+Dialogue: 0,0:00:25.34,0:00:25.86,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}stylo ou un
+Dialogue: 0,0:00:25.88,0:00:26.50,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}conseil
+Dialogue: 0,0:00:27.38,0:00:28.01,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Cela crée un
+Dialogue: 0,0:00:28.03,0:00:28.74,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}lien immédiat sans
+Dialogue: 0,0:00:28.75,0:00:29.38,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}effort
+Dialogue: 0,0:00:30.54,0:00:31.13,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Ils te feront
+Dialogue: 0,0:00:31.14,0:00:32.16,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}plus confiance
+Dialogue: 0,0:00:33.03,0:00:34.19,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Maîtrise d'autres astuces
+Dialogue: 0,0:00:34.21,0:00:34.94,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}sociales ici
+Dialogue: 0,0:00:35.81,0:00:36.67,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Voilà pourquoi tu
+Dialogue: 0,0:00:36.68,0:00:37.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}dois
