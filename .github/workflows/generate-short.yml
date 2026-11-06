@@ -8,8 +8,8 @@ name: Generate Short
 # or trigger the `Upload Short` workflow).
 on:
   schedule:
-    - cron: "0 5 * * *"    # 05:00 UTC
-    - cron: "0 14 * * *"   # 14:00 UTC
+    - cron: "17 5 * * *"    # 05:17 UTC (off-peak minute to avoid GitHub's top-of-the-hour queue delay)
+    - cron: "23 14 * * *"   # 14:23 UTC
   workflow_dispatch:
     inputs:
       topic:
@@ -134,12 +134,12 @@ jobs:
           (
             last_sig=""
             while true; do
-              sleep 15
               sig=$(sha256sum runs/*/state.json 2>/dev/null || true)
               if [ -n "$sig" ] && [ "$sig" != "$last_sig" ]; then
                 last_sig="$sig"
                 bash .github/scripts/push-gh-pages.sh --no-media --gh-run-url "$RUN_URL" || true
               fi
+              sleep 15
             done
           ) &
           WATCHER_PID=$!

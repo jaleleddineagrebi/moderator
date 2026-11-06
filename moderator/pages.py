@@ -208,17 +208,22 @@ def export_pages(
     for idx, (_, folder, st) in enumerate(kept):
         steps = list((st.get("steps") or {}).values())
         pct = round(sum(100 if s.get("status") == "done" else (s.get("progress") or 0) for s in steps) / len(steps)) if steps else 0
+        pm = st.get("pages_meta") or {}
+        params = st.get("params") or {}
         runs_manifest.append({
             "run_id": st.get("run_id", folder.name),
             "workflow": st.get("workflow", ""),
             "workflow_title": st.get("workflow_title", st.get("workflow", "")),
+            "topic": params.get("topic") or "",
             "status": st.get("status", "unknown"),
             "progress": pct,
             "started_at": st.get("started_at"),
             "ended_at": st.get("ended_at"),
             "cost_usd": round((st.get("cost") or {}).get("total_usd", 0.0), 4),
             "is_live": idx == 0,
-            "has_uploads": bool((st.get("pages_meta") or {}).get("uploads")),
+            "has_uploads": bool(pm.get("uploads")),
+            "issue_url": pm.get("issue_url", ""),
+            "gh_run_url": pm.get("gh_run_url", ""),
         })
 
     live_run_id = runs_manifest[0]["run_id"] if runs_manifest else None
