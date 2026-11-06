@@ -1,0 +1,72 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-202753/",
+    "author": "Matthias_Groeneveld",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man fixing tie",
+    "description": "A man in a sharp suit adjusting his tie in a mirror looking serious."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-46989/",
+    "author": "NickyPe",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "spilling coffee office",
+    "description": "Coffee splashing onto a white table next to a laptop and papers."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-39125/",
+    "author": "Josh_Malic",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "shaking hands close-up",
+    "description": "A close-up of hands fumbling with keys or dropping a metal pen."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-367164/",
+    "author": "Kanenori",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "rope bridge jungle",
+    "description": "A wooden suspension bridge spanning across a lush green forest canyon."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-13100/",
+    "author": "StefWithAnF",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "pouring juice splash",
+    "description": "Orange juice splashing out of a glass in slow motion on a wooden table."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-185728/",
+    "author": "Matthias_Groeneveld",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man smiling outdoors",
+    "description": "A man laughing naturally and gesturing with his hands in an outdoor setting."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-197/",
+    "author": "Life-Of-Vids",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "typing phone screen",
+    "description": "Close up of a hand scrolling through a smartphone screen in a dark room."
+  }
+]
