@@ -174,6 +174,36 @@ jobs:
             gh issue close "$ISSUE" -R "$GITHUB_REPOSITORY"
           fi
 
+      - name: Post to TikTok (only if TikTok secrets are configured)
+        if: steps.req.outputs.action == 'approve'
+        continue-on-error: true   # a TikTok problem must never undo or re-trigger the YouTube upload
+        env:
+          TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+          TIKTOK_TOKEN: ${{ secrets.TIKTOK_TOKEN }}
+          TIKTOK_TOKEN_EN: ${{ secrets.TIKTOK_TOKEN_EN }}
+          TIKTOK_TOKEN_FR: ${{ secrets.TIKTOK_TOKEN_FR }}
+          TIKTOK_TOKEN_AR: ${{ secrets.TIKTOK_TOKEN_AR }}
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ steps.req.outputs.run_id }}
+          PRIVACY: ${{ steps.req.outputs.privacy }}
+          LANGS: ${{ steps.req.outputs.langs }}
+          PYTHONIOENCODING: utf-8
+        run: |
+          if [ -z "$TIKTOK_TOKEN$TIKTOK_TOKEN_EN$TIKTOK_TOKEN_FR$TIKTOK_TOKEN_AR" ]; then
+            echo "::notice::No TikTok token secret configured; skipping TikTok."
+            exit 0
+          fi
+          set -o pipefail
+          cmd=(uv run python -m moderator upload-tiktok "runs/$RUN_ID" --privacy "$PRIVACY")
+          if [ -n "$LANGS" ]; then cmd+=(--langs "$LANGS"); fi
+          "${cmd[@]}" | tee tiktok.txt
+          { echo "### Posted to TikTok"; echo ""; sed 's/^/- /' tiktok.txt; } > tiktok_reply.md
+          cat tiktok_reply.md >> "$GITHUB_STEP_SUMMARY"
+          if [ "$EVENT_NAME" = "issue_comment" ]; then
+            gh issue comment "$ISSUE" -R "$GITHUB_REPOSITORY" --body-file tiktok_reply.md
+          fi
+
       - name: Report failed upload on issue
         if: failure() && steps.req.outputs.action == 'approve' && github.event_name == 'issue_comment'
         run: |

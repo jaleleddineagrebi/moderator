@@ -64,3 +64,24 @@ def approve_and_upload(store: StateStore, approved_by: str, privacy: str, langs:
         store.notify(f"Uploaded {lang} to '{res['channel']}' as {res['privacy']}: {res['url']}", "success")
     (run_dir / "uploads.json").write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
     return results
+
+
+def upload_tiktok(store: StateStore, privacy: str, langs: list[str] | None = None) -> list[dict]:
+    """Posts the already-approved run to TikTok. Refuses unless checkpoint C was approved (by approve_and_upload
+    or the `Upload Short` workflow), so nothing reaches TikTok without a human decision."""
+    from .tools import tiktok_upload
+
+    d = store.data
+    if d["checkpoints"][FINAL_CHECKPOINT]["status"] != "approved":
+        raise RuntimeError("final checkpoint is not approved; refusing to post to TikTok")
+    run_dir = store.run_dir
+    qa_out = d["steps"]["qa"]["outputs"]
+    meta = json.loads((run_dir / d["steps"]["packaging"]["outputs"]["metadata"]).read_text(encoding="utf-8"))
+    target_langs = normalize_langs(langs) if langs else normalize_langs(d["params"].get("languages"))
+    results = []
+    for lang in target_langs:
+        res = tiktok_upload.upload(lang, run_dir / qa_out[f"video_{lang}"], meta[lang], privacy)
+        results.append({"lang": lang, **res})
+        store.notify(f"Posted {lang} to TikTok ({res['privacy']}), publish_id {res['publish_id']}", "success")
+    (run_dir / "tiktok_uploads.json").write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
+    return results
