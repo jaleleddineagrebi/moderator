@@ -114,6 +114,13 @@ def main() -> None:
     up_p.add_argument("--approved-by", required=True, help="who approved the videos (recorded in state.json)")
     up_p.add_argument("--privacy", choices=["private", "unlisted", "public"], default="private")
     up_p.add_argument("--langs", help="comma-separated, default: the run's languages")
+    tup_p = sub.add_parser("upload-tiktok", help="post an already-approved youtube_short run to TikTok")
+    tup_p.add_argument("run_dir", type=Path)
+    tup_p.add_argument("--privacy", choices=["private", "unlisted", "public"], default="private")
+    tup_p.add_argument("--langs", help="comma-separated, default: the run's languages")
+    tauth_p = sub.add_parser("tiktok-auth", help="authorize posting to a TikTok account (manual browser flow)")
+    tauth_p.add_argument("--redirect-uri", required=True, help="a redirect URI registered in your TikTok app")
+    tauth_p.add_argument("--lang", default=None, help="optional language code if using one TikTok account per language")
     edit_p = sub.add_parser("edit", help="apply /edit requests to a run waiting for final approval, then redo it headless")
     edit_p.add_argument("run_dir", type=Path)
     edit_req = edit_p.add_mutually_exclusive_group(required=True)
@@ -167,6 +174,19 @@ def main() -> None:
         print(f"Authorized channel '{channel}' for {target_label}. Token saved to {path}")
         print(f"Scopes: upload + read-only (cannot edit or delete videos). For GitHub Actions, store the whole file "
               f"content as the repository secret {secret_name}.")
+        return
+    if args.cmd == "tiktok-auth":
+        from .tools import tiktok_upload
+        path = tiktok_upload.authorize(args.redirect_uri, args.lang)
+        secret_name = f"TIKTOK_TOKEN_{args.lang.upper()}" if args.lang else "TIKTOK_TOKEN"
+        print(f"Token saved to {path}. For GitHub Actions store the whole file content as the repository secret "
+              f"{secret_name}, plus TIKTOK_CLIENT_KEY and TIKTOK_CLIENT_SECRET.")
+        return
+    if args.cmd == "upload-tiktok":
+        from .publish import upload_tiktok
+        for r in upload_tiktok(StateStore.load(args.run_dir), args.privacy,
+                               args.langs.split(",") if args.langs else None):
+            print(f"{r['lang']}: TikTok {r['status']} ({r['privacy']}), publish_id {r['publish_id']}")
         return
     if args.cmd == "optimize-channel":
         from .tools import youtube_channel

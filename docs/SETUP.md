@@ -164,3 +164,14 @@ Then, under **Settings → Actions → General**:
 - keep **Workflow permissions** at *Read repository contents* (each workflow asks for the extra permissions it needs)
 
 Only you and your collaborators can use `/approve`, `/edit` and `/reject` on review issues, and only they can click **Run workflow**. Comments from anyone else are ignored.
+
+## TikTok (optional)
+
+Posting uses the official Content Posting API. It runs after YouTube in `Upload Short`, only for runs a human approved, and is skipped when no TikTok secret exists.
+
+1. In the TikTok developer portal, add **Login Kit** and **Content Posting API** to your app, request the scopes `user.info.basic`, `video.upload`, `video.publish`, and register a **redirect URI** (any https page you control, e.g. `https://<user>.github.io/<repo>/`).
+2. Locally: `export TIKTOK_CLIENT_KEY=... TIKTOK_CLIENT_SECRET=...` then `uv run python -m moderator tiktok-auth --redirect-uri <that URI>`. Log in with the publishing account, then paste back the address you were redirected to. The token is saved to `tokens/tiktok.json`.
+3. GitHub secrets: `TIKTOK_CLIENT_KEY`, `TIKTOK_CLIENT_SECRET`, and `TIKTOK_TOKEN` (the whole `tokens/tiktok.json`). Use `TIKTOK_TOKEN_EN/FR/AR` for one account per language.
+4. Manual post of an approved run: `uv run python -m moderator upload-tiktok runs/<run_id> --privacy private`.
+
+Until TikTok audits your app, TikTok forces every post to private (`SELF_ONLY`). The refresh token lasts about a year, so repeat step 2 and update the secret then.
