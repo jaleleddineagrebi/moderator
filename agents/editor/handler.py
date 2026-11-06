@@ -34,6 +34,10 @@ class Handler(Agent):
                 transitions = False
             if "no sfx" in fb_low or "remove sfx" in fb_low or "no whoosh" in fb_low:
                 sfx = False
+        follow_button = bool(ctx.options.get("follow_button", True))
+        follow_start = float(ctx.options.get("follow_button_start", 3.0))
+        follow_y = int(ctx.options.get("follow_button_y", 1440))
+        follow_label = ctx.options.get("follow_button_label") or {}  # optional per-language override
         fonts_dir = text.escape_filter_arg(os.path.relpath(text.FONTS_DIR, ctx.run_dir))
 
         outputs = {}
@@ -73,10 +77,19 @@ class Handler(Agent):
                 prev = "x"
             else:
                 prev = "v0"
-            chains.append(f"[{prev}]subtitles='{ass_escaped}':fontsdir='{fonts_dir}'[vout]")
-
             vo_i, mu_i, wh_i = n, n + 1, n + 2
             args += ["-i", audio[f"voiceover_{lang}"], "-stream_loop", "-1", "-i", audio["music"], "-i", audio["whoosh"]]
+            if follow_button:
+                # follow button pill pops in after the hook and stays to the end, between captions and the YouTube UI
+                png = f"follow_button_{lang}.png"
+                text.write_follow_button(ctx.run_dir / png, lang, follow_label.get(lang))
+                btn_i = n + 3
+                args += ["-loop", "1", "-i", png]
+                chains.append(f"[{prev}]subtitles='{ass_escaped}':fontsdir='{fonts_dir}'[sub]")
+                chains.append(f"[{btn_i}:v]format=rgba,fade=t=in:st={follow_start:.2f}:d=0.4:alpha=1[btn]")
+                chains.append(f"[sub][btn]overlay=x=(W-w)/2:y={follow_y}:shortest=1:eof_action=pass,format=yuv420p[vout]")
+            else:
+                chains.append(f"[{prev}]subtitles='{ass_escaped}':fontsdir='{fonts_dir}'[vout]")
             chains.append(f"[{vo_i}:a]aresample=44100,aformat=channel_layouts=stereo,apad=whole_dur={total:.3f}[vo]")
             chains.append("[vo]asplit=2[vo1][vokey]")
             chains.append(f"[{mu_i}:a]aresample=44100,aformat=channel_layouts=stereo,atrim=0:{total:.3f},volume={music_vol},"
