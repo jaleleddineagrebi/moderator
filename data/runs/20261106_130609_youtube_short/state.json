@@ -423,7 +423,7 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 0,
+      "progress": 33,
       "started_at": "2026-11-06T13:06:25+00:00",
       "ended_at": null,
       "attempt": 1,
@@ -445,6 +445,16 @@
           "ts": "2026-11-06T13:06:25+00:00",
           "level": "info",
           "msg": "Attempt 1/3, strategy 'stock_video'"
+        },
+        {
+          "ts": "2026-11-06T13:06:38+00:00",
+          "level": "info",
+          "msg": "scene_01: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-06T13:06:40+00:00",
+          "level": "info",
+          "msg": "scene_02: stock_video (pixabay)"
         }
       ],
       "errors": [],
@@ -616,7 +626,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-06T13:06:26+00:00",
+    "exported_at": "2026-11-06T13:06:49+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/42222696811"
   }
