@@ -32,10 +32,11 @@
   "ended_at": null,
   "revision_rounds": 0,
   "cost": {
-    "total_usd": 0.007784,
+    "total_usd": 0.022336,
     "budget_usd": 1.0,
     "by_agent": {
-      "trend_researcher": 0.007784
+      "trend_researcher": 0.007784,
+      "scriptwriter": 0.014552
     }
   },
   "agents": {
@@ -370,10 +371,10 @@
         "research"
       ],
       "checkpoint": "B",
-      "status": "running",
-      "progress": 10,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-06T20:41:05+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-06T20:41:22+00:00",
       "attempt": 1,
       "retries": 0,
       "max_retries": 2,
@@ -386,7 +387,10 @@
         ],
         "comment_at_selection": null
       },
-      "outputs": {},
+      "outputs": {
+        "script": "script.md",
+        "data": "script.json"
+      },
       "logs": [
         {
           "ts": "2026-11-06T20:41:05+00:00",
@@ -397,11 +401,31 @@
           "ts": "2026-11-06T20:41:05+00:00",
           "level": "info",
           "msg": "Asking Gemini (gemini-3.8-flash, high complexity, thinking high)"
+        },
+        {
+          "ts": "2026-11-06T20:41:22+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3-flash-preview) answered in 17.5s (tokens in 904, out 1240, thinking 3460)"
+        },
+        {
+          "ts": "2026-11-06T20:41:22+00:00",
+          "level": "info",
+          "msg": "Estimated narration: en 36.4s, fr 41.3s"
+        },
+        {
+          "ts": "2026-11-06T20:41:22+00:00",
+          "level": "info",
+          "msg": "Finished, waiting for your approval"
+        },
+        {
+          "ts": "2026-11-06T20:41:22+00:00",
+          "level": "info",
+          "msg": "Approved by schedule (auto-approve)"
         }
       ],
       "errors": [],
       "feedback": [],
-      "cost_usd": 0.0
+      "cost_usd": 0.014552
     },
     "visuals": {
       "title": "Source scene visuals",
@@ -410,17 +434,36 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "queued",
-      "progress": 0,
-      "started_at": null,
+      "status": "running",
+      "progress": 17,
+      "started_at": "2026-11-06T20:41:22+00:00",
       "ended_at": null,
-      "attempt": 0,
+      "attempt": 1,
       "retries": 0,
       "max_retries": 2,
-      "strategy": null,
-      "inputs": {},
+      "strategy": "stock_video",
+      "inputs": {
+        "script": "script.json",
+        "providers": [
+          "pixabay",
+          "wikimedia"
+        ],
+        "nano_banana": true,
+        "starting_tier": "stock_video"
+      },
       "outputs": {},
-      "logs": [],
+      "logs": [
+        {
+          "ts": "2026-11-06T20:41:22+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'stock_video'"
+        },
+        {
+          "ts": "2026-11-06T20:41:35+00:00",
+          "level": "info",
+          "msg": "scene_01: stock_video (pixabay)"
+        }
+      ],
       "errors": [],
       "feedback": [],
       "cost_usd": 0.0
@@ -432,17 +475,38 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "queued",
+      "status": "running",
       "progress": 0,
-      "started_at": null,
+      "started_at": "2026-11-06T20:41:22+00:00",
       "ended_at": null,
-      "attempt": 0,
+      "attempt": 1,
       "retries": 0,
       "max_retries": 2,
-      "strategy": null,
-      "inputs": {},
+      "strategy": "primary_voice",
+      "inputs": {
+        "script": "script.json",
+        "languages": [
+          "en",
+          "fr"
+        ],
+        "voices": {
+          "en": "en-US-AndrewMultilingualNeural",
+          "fr": "fr-FR-HenriNeural"
+        }
+      },
       "outputs": {},
-      "logs": [],
+      "logs": [
+        {
+          "ts": "2026-11-06T20:41:22+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'primary_voice'"
+        },
+        {
+          "ts": "2026-11-06T20:41:22+00:00",
+          "level": "info",
+          "msg": "Narrating en with en-US-AndrewMultilingualNeural"
+        }
+      ],
       "errors": [],
       "feedback": [],
       "cost_usd": 0.0
@@ -550,11 +614,11 @@
       "type": "approve",
       "step": "script",
       "route_to": "script",
-      "status": "idle",
+      "status": "approved",
       "options": [],
       "choice": null,
       "comment": null,
-      "decided_at": null
+      "decided_at": "2026-11-06T20:41:22+00:00"
     },
     "C": {
       "title": "Approve the final videos (never uploaded without your OK)",
@@ -571,7 +635,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-06T20:41:15+00:00",
+    "exported_at": "2026-11-06T20:41:36+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/42288676519"
   }

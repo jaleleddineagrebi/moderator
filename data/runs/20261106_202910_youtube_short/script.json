@@ -1,0 +1,154 @@
+{
+  "title": "The Pratfall Effect: Why Mistakes Make You Likable",
+  "scenes": [
+    {
+      "vo": {
+        "en": "Stop trying to be perfect.",
+        "fr": "Arrête de vouloir être parfait."
+      },
+      "on_screen": {
+        "en": "BEING PERFECT IS OVERRATED",
+        "fr": "LA PERFECTION EST SURCOUTÉE"
+      },
+      "visual": {
+        "description": "A man in a sharp suit adjusting his tie in a mirror looking serious.",
+        "search_terms": [
+          "man fixing tie",
+          "suit adjustment",
+          "mirror reflection"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Here is why: when a highly competent person makes a tiny blunder, we actually like them much more.",
+        "fr": "Voici pourquoi : quand quelqu'un de brillant fait une petite gaffe, on finit par l'apprécier encore plus."
+      },
+      "on_screen": {
+        "en": "MISTAKES INCREASE LIKABILITY",
+        "fr": "L'ERREUR REND ATTRAYANT"
+      },
+      "visual": {
+        "description": "Coffee splashing onto a white table next to a laptop and papers.",
+        "search_terms": [
+          "spilling coffee office",
+          "liquid desk spill",
+          "clumsy businessman"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "It’s called the Pratfall Effect. These small mistakes make you seem human and far more approachable.",
+        "fr": "C'est l'Effet de Chute. Tes erreurs te rendent simplement plus humain et beaucoup plus accessible."
+      },
+      "on_screen": {
+        "en": "THE PRATFALL EFFECT",
+        "fr": "L'EFFET DE CHUTE"
+      },
+      "visual": {
+        "description": "A close-up of hands fumbling with keys or dropping a metal pen.",
+        "search_terms": [
+          "shaking hands close-up",
+          "dropping car keys",
+          "fumbling hands"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "Total perfection acts like a wall, but showing vulnerability is the bridge that builds instant social trust.",
+        "fr": "La perfection est un mur, alors que la vulnérabilité est un pont qui crée une confiance immédiate."
+      },
+      "on_screen": {
+        "en": "VULNERABILITY BUILDS TRUST",
+        "fr": "LA CONFIANCE PAR L'ERREUR"
+      },
+      "visual": {
+        "description": "A wooden suspension bridge spanning across a lush green forest canyon.",
+        "search_terms": [
+          "rope bridge jungle",
+          "walking across bridge",
+          "hanging bridge"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Psychologists discovered that audiences preferred an expert who spilled coffee over one who was completely flawless.",
+        "fr": "Des psychologues ont prouvé qu'on préfère un expert maladroit à une personne qui ne se trompe jamais."
+      },
+      "on_screen": {
+        "en": "FLAWS ARE ATTRACTIVE",
+        "fr": "LES FAILLES SÉDUISENT"
+      },
+      "visual": {
+        "description": "Orange juice splashing out of a glass in slow motion on a wooden table.",
+        "search_terms": [
+          "pouring juice splash",
+          "messy drink table",
+          "slow motion splash"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "So stop hiding your slips and trips. They are exactly what make others feel safe around you.",
+        "fr": "Ne cache plus tes maladresses. Ce sont elles qui mettent les autres à l'aise à tes côtés."
+      },
+      "on_screen": {
+        "en": "SHOW YOUR HUMAN SIDE",
+        "fr": "SOIS TOI-MÊME"
+      },
+      "visual": {
+        "description": "A man laughing naturally and gesturing with his hands in an outdoor setting.",
+        "search_terms": [
+          "man smiling outdoors",
+          "genuine male laughter",
+          "friendly face close-up"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Follow for a daily brain bias check. Because honestly, you should...",
+        "fr": "Abonne-toi pour ton check-up mental. Car franchement, tu devrais..."
+      },
+      "on_screen": {
+        "en": "CHECK YOUR BRAIN",
+        "fr": "CHECK-UP MENTAL"
+      },
+      "visual": {
+        "description": "Close up of a hand scrolling through a smartphone screen in a dark room.",
+        "search_terms": [
+          "typing phone screen",
+          "man scrolling mobile",
+          "smartphone hand interaction"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "clumsy-likability",
+  "languages": [
+    "en",
+    "fr"
+  ],
+  "estimated_seconds": {
+    "en": 36.4,
+    "fr": 41.3
+  }
+}
