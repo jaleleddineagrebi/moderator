@@ -31,9 +31,11 @@
   "ended_at": null,
   "revision_rounds": 0,
   "cost": {
-    "total_usd": 0.0,
+    "total_usd": 0.006513,
     "budget_usd": 1.0,
-    "by_agent": {}
+    "by_agent": {
+      "trend_researcher": 0.006513
+    }
   },
   "agents": {
     "trend_researcher": {
@@ -236,14 +238,14 @@
       "agent": "trend_researcher",
       "depends_on": [],
       "checkpoint": "A",
-      "status": "running",
-      "progress": 25,
-      "started_at": "2026-11-06T12:46:30+00:00",
-      "ended_at": null,
-      "attempt": 1,
-      "retries": 0,
+      "status": "done",
+      "progress": 100,
+      "started_at": "2026-11-06T12:47:40+00:00",
+      "ended_at": "2026-11-06T12:47:56+00:00",
+      "attempt": 2,
+      "retries": 1,
       "max_retries": 2,
-      "strategy": "web_and_youtube",
+      "strategy": "web_only",
       "inputs": {
         "niche": "Psychology & human behavior (biases, habits, social dynamics)",
         "topic": null,
@@ -252,7 +254,10 @@
           "fr"
         ]
       },
-      "outputs": {},
+      "outputs": {
+        "ideas": "ideas.md",
+        "data": "ideas.json"
+      },
       "logs": [
         {
           "ts": "2026-11-06T12:46:30+00:00",
@@ -288,6 +293,41 @@
           "ts": "2026-11-06T12:47:39+00:00",
           "level": "error",
           "msg": "ReadTimeout: "
+        },
+        {
+          "ts": "2026-11-06T12:47:40+00:00",
+          "level": "info",
+          "msg": "Attempt 2/3, strategy 'web_only'"
+        },
+        {
+          "ts": "2026-11-06T12:47:40+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.8-flash, high complexity, thinking high)"
+        },
+        {
+          "ts": "2026-11-06T12:47:43+00:00",
+          "level": "warning",
+          "msg": "'gemini-3.8-flash' returned 503; retrying once in 2s"
+        },
+        {
+          "ts": "2026-11-06T12:47:47+00:00",
+          "level": "warning",
+          "msg": "Model 'gemini-3.8-flash' returned 503; falling back to 'gemini-3-flash-preview'"
+        },
+        {
+          "ts": "2026-11-06T12:47:56+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3-flash-preview) answered in 16.0s (tokens in 504, out 724, thinking 1363)"
+        },
+        {
+          "ts": "2026-11-06T12:47:56+00:00",
+          "level": "info",
+          "msg": "Finished, waiting for your approval"
+        },
+        {
+          "ts": "2026-11-06T12:47:56+00:00",
+          "level": "info",
+          "msg": "Approved by schedule (auto-approve) (choice: ben-franklin-likability)"
         }
       ],
       "errors": [
@@ -299,7 +339,7 @@
         }
       ],
       "feedback": [],
-      "cost_usd": 0.0
+      "cost_usd": 0.006513
     },
     "script": {
       "title": "Write the script",
@@ -308,17 +348,35 @@
         "research"
       ],
       "checkpoint": "B",
-      "status": "queued",
-      "progress": 0,
-      "started_at": null,
+      "status": "running",
+      "progress": 10,
+      "started_at": "2026-11-06T12:47:56+00:00",
       "ended_at": null,
-      "attempt": 0,
+      "attempt": 1,
       "retries": 0,
       "max_retries": 2,
-      "strategy": null,
-      "inputs": {},
+      "strategy": "default",
+      "inputs": {
+        "idea": "Why Favors Make Friends",
+        "languages": [
+          "en",
+          "fr"
+        ],
+        "comment_at_selection": null
+      },
       "outputs": {},
-      "logs": [],
+      "logs": [
+        {
+          "ts": "2026-11-06T12:47:56+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'default'"
+        },
+        {
+          "ts": "2026-11-06T12:47:56+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.8-flash, high complexity, thinking high)"
+        }
+      ],
       "errors": [],
       "feedback": [],
       "cost_usd": 0.0
@@ -443,11 +501,27 @@
       "type": "choice",
       "step": "research",
       "route_to": "research",
-      "status": "idle",
-      "options": [],
-      "choice": null,
+      "status": "approved",
+      "options": [
+        {
+          "id": "ben-franklin-likability",
+          "label": "1. Why Favors Make Friends",
+          "detail": "It reveals the counter-intuitive truth that asking someone for a small favor actually makes them like you more, rather than doing a favor for them.\nHook (en): Ask for a favor to be liked.\nHook (fr): Demande un service pour être aimé.\nWhy: Social hack videos are currently viral on TikTok and Shorts because they offer immediate 'cheat codes' for social life. The Ben Franklin effect is a classic curiosity gap topic."
+        },
+        {
+          "id": "clumsy-attraction-pratfall",
+          "label": "2. Why Your Flaws Are Attractive",
+          "detail": "It explains the Pratfall Effect: how highly competent people become significantly more likable and relatable when they make a small mistake or show a flaw.\nHook (en): Your mistakes make you more likable.\nHook (fr): Tes erreurs te rendent plus apprécié.\nWhy: Relatable content regarding social anxiety and the pressure to be perfect performs well. This provides 'relief' to the viewer, encouraging shares and saves."
+        },
+        {
+          "id": "ikea-effect-valuation",
+          "label": "3. Why You Overvalue Your Work",
+          "detail": "It breaks down why we feel a stronger emotional bond and higher perceived value for things we had a hand in creating, even if they are objectively low quality.\nHook (en): You love it because you built it.\nHook (fr): Tu l'aimes car tu l'as construit.\nWhy: The 'IKEA effect' is a trending search term in behavioral economics. It explains common household arguments and consumer habits, making it highly relatable for a general audience."
+        }
+      ],
+      "choice": "ben-franklin-likability",
       "comment": null,
-      "decided_at": null
+      "decided_at": "2026-11-06T12:47:56+00:00"
     },
     "B": {
       "title": "Approve the script",
@@ -475,7 +549,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-06T12:47:40+00:00",
+    "exported_at": "2026-11-06T12:47:57+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/42220193935"
   }
