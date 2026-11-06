@@ -207,3 +207,4 @@ export class HeaderComponent {
     this.dialog.open(AuthDialogComponent, { width: '420px' });
   }
 }
+

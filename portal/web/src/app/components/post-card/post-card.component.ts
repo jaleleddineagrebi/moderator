@@ -221,3 +221,4 @@ import { Post } from '../../models/post.model';
 export class PostCardComponent {
   @Input({ required: true }) post!: Post;
 }
+

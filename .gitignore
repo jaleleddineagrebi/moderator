@@ -14,3 +14,7 @@ __pycache__/
 body.md
 reply.md
 result.txt
+node_modules/
+.angular/
+dist/
+package-lock.json

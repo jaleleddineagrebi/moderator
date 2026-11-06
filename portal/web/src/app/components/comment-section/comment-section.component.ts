@@ -332,3 +332,4 @@ export class CommentSectionComponent {
     this.dialog.open(AuthDialogComponent, { width: '420px' });
   }
 }
+

@@ -215,3 +215,4 @@ export class FeedComponent implements OnInit {
     return this.posts().filter(p => p.tags.some(t => t.toLowerCase().includes(topic.toLowerCase())));
   }
 }
+

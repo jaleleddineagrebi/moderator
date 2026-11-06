@@ -64,3 +64,4 @@ export interface Post {
     reactions: number;
   };
 }
+

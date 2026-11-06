@@ -53,3 +53,4 @@ export class PostService {
     return this.http.post<Comment>(`${this.apiUrl}/${postId}/comments`, { content, parentId });
   }
 }
+

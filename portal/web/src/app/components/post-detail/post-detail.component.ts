@@ -419,3 +419,4 @@ export class PostDetailComponent implements OnInit {
       .replace(/\n/g, '<br/>');
   }
 }
+
