@@ -1,0 +1,57 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:02.63,Headline,,0,0,0,,{\fad(150,150)}LA PERFECTION EST SURCOUTÉE
+Dialogue: 1,0:00:02.73,0:00:08.95,Headline,,0,0,0,,{\fad(150,150)}L'ERREUR REND ATTRAYANT
+Dialogue: 1,0:00:09.05,0:00:15.13,Headline,,0,0,0,,{\fad(150,150)}L'EFFET DE CHUTE
+Dialogue: 1,0:00:15.23,0:00:21.09,Headline,,0,0,0,,{\fad(150,150)}LA CONFIANCE PAR L'ERREUR
+Dialogue: 1,0:00:21.19,0:00:26.53,Headline,,0,0,0,,{\fad(150,150)}LES FAILLES SÉDUISENT
+Dialogue: 1,0:00:26.63,0:00:32.52,Headline,,0,0,0,,{\fad(150,150)}SOIS TOI-MÊME
+Dialogue: 1,0:00:32.62,0:00:38.52,Headline,,0,0,0,,{\fad(150,150)}CHECK-UP MENTAL
+Dialogue: 0,0:00:00.10,0:00:00.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Arrête de vouloir
+Dialogue: 0,0:00:00.94,0:00:01.60,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}être parfait
+Dialogue: 0,0:00:02.78,0:00:04.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Voici pourquoi quand
+Dialogue: 0,0:00:04.09,0:00:04.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}quelqu'un de brillant
+Dialogue: 0,0:00:04.89,0:00:05.46,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}fait une petite
+Dialogue: 0,0:00:05.48,0:00:06.49,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}gaffe on finit
+Dialogue: 0,0:00:06.50,0:00:07.39,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}par l'apprécier encore
+Dialogue: 0,0:00:07.40,0:00:07.95,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}plus
+Dialogue: 0,0:00:09.10,0:00:09.75,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}C'est l'Effet de
+Dialogue: 0,0:00:09.76,0:00:10.21,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Chute
+Dialogue: 0,0:00:11.09,0:00:11.69,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Tes erreurs te
+Dialogue: 0,0:00:11.70,0:00:12.51,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}rendent simplement plus
+Dialogue: 0,0:00:12.53,0:00:13.21,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}humain et beaucoup
+Dialogue: 0,0:00:13.22,0:00:14.14,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}plus accessible
+Dialogue: 0,0:00:15.28,0:00:16.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}La perfection est
+Dialogue: 0,0:00:16.09,0:00:17.09,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}un mur alors
+Dialogue: 0,0:00:17.11,0:00:18.07,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}que la vulnérabilité
+Dialogue: 0,0:00:18.08,0:00:18.48,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}est un pont
+Dialogue: 0,0:00:18.48,0:00:18.98,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}qui crée une
+Dialogue: 0,0:00:18.99,0:00:20.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}confiance immédiate
+Dialogue: 0,0:00:21.24,0:00:22.04,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Des psychologues ont
+Dialogue: 0,0:00:22.06,0:00:22.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}prouvé qu'on préfère
+Dialogue: 0,0:00:22.94,0:00:23.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}un expert maladroit
+Dialogue: 0,0:00:23.86,0:00:24.44,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}à une personne
+Dialogue: 0,0:00:24.46,0:00:24.86,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}qui ne se
+Dialogue: 0,0:00:24.86,0:00:25.51,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}trompe jamais
+Dialogue: 0,0:00:26.68,0:00:27.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Ne cache plus
+Dialogue: 0,0:00:27.34,0:00:28.22,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}tes maladresses
+Dialogue: 0,0:00:29.09,0:00:29.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Ce sont elles
+Dialogue: 0,0:00:29.72,0:00:30.23,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}qui mettent les
+Dialogue: 0,0:00:30.24,0:00:30.80,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}autres à l'aise
+Dialogue: 0,0:00:30.82,0:00:31.50,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}à tes côtés
+Dialogue: 0,0:00:32.67,0:00:33.59,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Abonne-toi pour ton
+Dialogue: 0,0:00:33.61,0:00:34.57,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}check-up mental
+Dialogue: 0,0:00:35.43,0:00:36.55,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Car franchement tu
+Dialogue: 0,0:00:36.57,0:00:36.99,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}devrais
