@@ -16,20 +16,17 @@
       <span id="run-id" class="muted mono"></span>
       <span id="archive-badge" class="badge s-queued" hidden>archived view</span>
       <span id="pages-badge" class="badge s-running" hidden>GitHub Pages</span>
-      <span id="action-live-indicator" class="badge s-running pulsing" hidden>⚡ Action Running</span>
     </div>
     <div class="top-actions">
       <a id="gh-actions-btn" class="btn primary link-btn" target="_blank" rel="noopener" hidden>＋ Run Workflow</a>
       <button id="retry-all-btn" class="btn danger-btn" hidden>Retry failed</button>
       <select id="run-select" class="run-select" title="Switch run" aria-label="Switch workflow run" hidden></select>
       <span id="run-status" class="badge"></span>
-      <button id="refresh-btn" class="icon-btn" title="Refresh dashboard" aria-label="Refresh dashboard">↻</button>
       <button id="theme-toggle" class="icon-btn" title="Toggle light/dark" aria-label="Toggle light or dark theme">◐</button>
     </div>
   </header>
 
   <main>
-    <section id="live-action-banner" class="card live-action-banner" hidden></section>
     <section id="pages-banner" class="card pages-banner" hidden></section>
 
     <section class="overview card">
@@ -43,29 +40,6 @@
         <span class="label">Cost</span><span id="ov-cost" class="stat-value mono">$0.00</span>
       </div>
       <div id="ov-params" class="param-strip" hidden></div>
-    </section>
-
-    <section id="runs-history-section" class="card" hidden>
-      <div class="section-head">
-        <h2>Generation Runs History</h2>
-        <span id="runs-history-meta" class="muted" style="font-size:12px;"></span>
-      </div>
-      <div style="overflow-x: auto; margin-top: 8px;">
-        <table class="runs-history-table">
-          <thead>
-            <tr>
-              <th>Status</th>
-              <th>Run ID</th>
-              <th>Topic / Title</th>
-              <th>Progress</th>
-              <th>Started</th>
-              <th>Cost</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody id="runs-history-body"></tbody>
-        </table>
-      </div>
     </section>
 
     <section id="approvals" class="approvals" hidden></section>
@@ -106,7 +80,7 @@
   </dialog>
 
   <div id="conn" class="conn" hidden>Lost connection to the engine. Retrying…</div>
-  <script>window.MODERATOR_PAGES = {"static_mode": true, "repo": "", "actions_url": "", "issues_url": ""};</script>
+  <script>window.MODERATOR_PAGES = {"static_mode": true, "repo": "jaleleddineagrebi/moderator", "actions_url": "https://github.com/jaleleddineagrebi/moderator/actions/workflows/generate-short.yml", "issues_url": "https://github.com/jaleleddineagrebi/moderator/issues?q=is%3Aissue+label%3Ashort-review"};</script>
   <script src="static/app.js"></script>
 </body>
 </html>
