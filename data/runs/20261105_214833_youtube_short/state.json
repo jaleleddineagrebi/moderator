@@ -1,13 +1,16 @@
 {
-  "run_id": "20261103_150559_youtube_short",
+  "run_id": "20261105_214833_youtube_short",
   "workflow": "youtube_short",
   "workflow_title": "YouTube Short",
-  "status": "failed",
+  "status": "running",
   "params": {
-    "languages": "en",
+    "languages": [
+      "en",
+      "fr"
+    ],
     "style": "faceless, fast cuts, bold captions, calm narration",
     "topic": null,
-    "budget_usd": 1.0,
+    "budget_usd": null,
     "niche": "Psychology & human behavior (biases, habits, social dynamics)",
     "niche_summary": "Short, curiosity-driven explanations (\"why your brain does X\") work well in Shorts. Generic people and city stock footage plus calm narration carries them fully. Arabic in particular has few serious psychology channels: the largest Arabic psychology/body-language channel still hasn't reached 1M subscribers.",
     "example_topics": [
@@ -16,19 +19,14 @@
       "The 2-minute rule that beats procrastination",
       "Why crowds make smart people act dumb",
       "What your phone habits say about your dopamine"
-    ],
-    "auto_approve": [
-      "A",
-      "B"
-    ],
-    "visual_mode": "stock"
+    ]
   },
-  "started_at": "2026-11-03T15:05:59+00:00",
-  "ended_at": "2026-11-03T15:06:04+00:00",
+  "started_at": "2026-11-05T20:48:33+00:00",
+  "ended_at": null,
   "revision_rounds": 0,
   "cost": {
     "total_usd": 0.0,
-    "budget_usd": 1.0,
+    "budget_usd": null,
     "by_agent": {}
   },
   "agents": {
@@ -53,7 +51,8 @@
         "web_and_youtube",
         "web_only",
         "no_web"
-      ]
+      ],
+      "complexity": "medium"
     },
     "scriptwriter": {
       "name": "scriptwriter",
@@ -76,7 +75,8 @@
         "default",
         "tighter_word_budget",
         "simpler_structure"
-      ]
+      ],
+      "complexity": "high"
     },
     "visual_producer": {
       "name": "visual_producer",
@@ -94,15 +94,17 @@
         "Gemini Nano Banana (9:16 image generation)",
         "Pexels API",
         "Pixabay API",
+        "Wikimedia Commons CC0/PD Video",
         "Pillow",
         "ffmpeg"
       ],
       "strategies": [
-        "nano_banana",
         "stock_video",
+        "nano_banana",
         "stock_photo",
         "generated"
-      ]
+      ],
+      "complexity": "low"
     },
     "voice_audio": {
       "name": "voice_audio",
@@ -126,7 +128,8 @@
         "primary_voice",
         "alternate_voice",
         "third_voice_slower"
-      ]
+      ],
+      "complexity": "low"
     },
     "packaging": {
       "name": "packaging",
@@ -150,7 +153,8 @@
         "banana_thumbnail",
         "frame_thumbnail",
         "plain_thumbnail"
-      ]
+      ],
+      "complexity": "low"
     },
     "editor": {
       "name": "editor",
@@ -177,7 +181,8 @@
         "transitions",
         "hard_cuts",
         "hard_cuts_no_sfx"
-      ]
+      ],
+      "complexity": "low"
     },
     "qa_reviewer": {
       "name": "qa_reviewer",
@@ -204,7 +209,8 @@
         "full_review",
         "full_review",
         "technical_only"
-      ]
+      ],
+      "complexity": "medium"
     }
   },
   "pipeline": {
@@ -224,10 +230,10 @@
       "agent": "trend_researcher",
       "depends_on": [],
       "checkpoint": "A",
-      "status": "failed",
+      "status": "running",
       "progress": 25,
-      "started_at": "2026-11-03T15:06:03+00:00",
-      "ended_at": "2026-11-03T15:06:04+00:00",
+      "started_at": "2026-11-05T20:51:07+00:00",
+      "ended_at": null,
       "attempt": 3,
       "retries": 2,
       "max_retries": 2,
@@ -236,78 +242,80 @@
         "niche": "Psychology & human behavior (biases, habits, social dynamics)",
         "topic": null,
         "languages": [
-          "en"
+          "en",
+          "fr"
         ]
       },
       "outputs": {},
       "logs": [
         {
-          "ts": "2026-11-03T15:05:59+00:00",
+          "ts": "2026-11-05T20:48:33+00:00",
           "level": "info",
           "msg": "Attempt 1/3, strategy 'web_and_youtube'"
         },
         {
-          "ts": "2026-11-03T15:05:59+00:00",
+          "ts": "2026-11-05T20:48:33+00:00",
           "level": "info",
-          "msg": "Asking Gemini Flash (gemini-3.8-flash, google_search)"
+          "msg": "Asking Gemini (gemini-3.8-flash, medium complexity, thinking low, google_search)"
         },
         {
-          "ts": "2026-11-03T15:06:00+00:00",
+          "ts": "2026-11-05T20:48:33+00:00",
+          "level": "warning",
+          "msg": "Model 'gemini-3.8-flash' returned 429; falling back to 'gemini-3-flash-preview'"
+        },
+        {
+          "ts": "2026-11-05T20:48:33+00:00",
+          "level": "warning",
+          "msg": "Google Search grounding unavailable on current tier/quota; continuing with Gemini Flash directly"
+        },
+        {
+          "ts": "2026-11-05T20:49:03+00:00",
+          "level": "warning",
+          "msg": "Gemini connection timed out on default route; retrying over IPv4"
+        },
+        {
+          "ts": "2026-11-05T20:50:04+00:00",
           "level": "error",
-          "msg": "LLMError: Gemini API 429 (gemini-3.8-flash): {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n          }\n        ]\n      }\n    ]\n  }\n}\n"
+          "msg": "RemoteProtocolError: Server disconnected without sending a response."
         },
         {
-          "ts": "2026-11-03T15:06:01+00:00",
+          "ts": "2026-11-05T20:50:05+00:00",
           "level": "info",
           "msg": "Attempt 2/3, strategy 'web_only'"
         },
         {
-          "ts": "2026-11-03T15:06:01+00:00",
+          "ts": "2026-11-05T20:50:05+00:00",
           "level": "info",
-          "msg": "Asking Gemini Flash (gemini-3.8-flash, google_search)"
+          "msg": "Asking Gemini (gemini-3.8-flash, high complexity, thinking high)"
         },
         {
-          "ts": "2026-11-03T15:06:01+00:00",
+          "ts": "2026-11-05T20:51:05+00:00",
           "level": "error",
-          "msg": "LLMError: Gemini API 429 (gemini-3.8-flash): {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n          }\n        ]\n      }\n    ]\n  }\n}\n"
+          "msg": "RemoteProtocolError: Server disconnected without sending a response."
         },
         {
-          "ts": "2026-11-03T15:06:03+00:00",
+          "ts": "2026-11-05T20:51:07+00:00",
           "level": "info",
           "msg": "Attempt 3/3, strategy 'no_web'"
         },
         {
-          "ts": "2026-11-03T15:06:03+00:00",
+          "ts": "2026-11-05T20:51:07+00:00",
           "level": "info",
-          "msg": "Asking Gemini Flash (gemini-3.8-flash)"
-        },
-        {
-          "ts": "2026-11-03T15:06:04+00:00",
-          "level": "error",
-          "msg": "LLMError: Gemini API 503 (gemini-3.8-flash): {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n"
+          "msg": "Asking Gemini (gemini-3.8-flash, high complexity, thinking high)"
         }
       ],
       "errors": [
         {
-          "ts": "2026-11-03T15:06:00+00:00",
+          "ts": "2026-11-05T20:50:03+00:00",
           "attempt": 1,
           "strategy": "web_and_youtube",
-          "error": "LLMError: Gemini API 429 (gemini-3.8-flash): {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n          }\n        ]\n      }\n    ]\n  }\n}\n",
-          "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/moderator/moderator/moderator/engine/orchestrator.py\", line 98, in _run_step\n    outputs = await asyncio.wait_for(agent.run(ctx), agent.spec.timeout_s)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.local/share/uv/python/cpython-3.12.16-linux-x86_64-gnu/lib/python3.12/asyncio/tasks.py\", line 520, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/home/runner/work/moderator/moderator/agents/trend_researcher/handler.py\", line 75, in run\n    result = await ctx.llm.ask(prompt, schema=make_schema(langs), tools=tools)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/moderator/moderator/moderator/engine/llm.py\", line 235, in ask\n    used_model, data = await self._post(candidates, body)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/moderator/moderator/moderator/engine/llm.py\", line 200, in _post\n    raise LLMError(last_err)\nmoderator.engine.llm.LLMError: Gemini API 429 (gemini-3.8-flash): {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n          }\n        ]\n      }\n    ]\n  }\n}\n\n"
+          "error": "RemoteProtocolError: Server disconnected without sending a response."
         },
         {
-          "ts": "2026-11-03T15:06:01+00:00",
+          "ts": "2026-11-05T20:51:05+00:00",
           "attempt": 2,
           "strategy": "web_only",
-          "error": "LLMError: Gemini API 429 (gemini-3.8-flash): {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n          }\n        ]\n      }\n    ]\n  }\n}\n",
-          "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/moderator/moderator/moderator/engine/orchestrator.py\", line 98, in _run_step\n    outputs = await asyncio.wait_for(agent.run(ctx), agent.spec.timeout_s)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.local/share/uv/python/cpython-3.12.16-linux-x86_64-gnu/lib/python3.12/asyncio/tasks.py\", line 520, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/home/runner/work/moderator/moderator/agents/trend_researcher/handler.py\", line 75, in run\n    result = await ctx.llm.ask(prompt, schema=make_schema(langs), tools=tools)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/moderator/moderator/moderator/engine/llm.py\", line 235, in ask\n    used_model, data = await self._post(candidates, body)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/moderator/moderator/moderator/engine/llm.py\", line 200, in _post\n    raise LLMError(last_err)\nmoderator.engine.llm.LLMError: Gemini API 429 (gemini-3.8-flash): {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n          }\n        ]\n      }\n    ]\n  }\n}\n\n"
-        },
-        {
-          "ts": "2026-11-03T15:06:04+00:00",
-          "attempt": 3,
-          "strategy": "no_web",
-          "error": "LLMError: Gemini API 503 (gemini-3.8-flash): {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
-          "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/moderator/moderator/moderator/engine/orchestrator.py\", line 98, in _run_step\n    outputs = await asyncio.wait_for(agent.run(ctx), agent.spec.timeout_s)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.local/share/uv/python/cpython-3.12.16-linux-x86_64-gnu/lib/python3.12/asyncio/tasks.py\", line 520, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/home/runner/work/moderator/moderator/agents/trend_researcher/handler.py\", line 75, in run\n    result = await ctx.llm.ask(prompt, schema=make_schema(langs), tools=tools)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/moderator/moderator/moderator/engine/llm.py\", line 235, in ask\n    used_model, data = await self._post(candidates, body)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/moderator/moderator/moderator/engine/llm.py\", line 200, in _post\n    raise LLMError(last_err)\nmoderator.engine.llm.LLMError: Gemini API 503 (gemini-3.8-flash): {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n\n"
+          "error": "RemoteProtocolError: Server disconnected without sending a response."
         }
       ],
       "feedback": [],
@@ -484,19 +492,10 @@
       "decided_at": null
     }
   },
-  "notifications": [
-    {
-      "ts": "2026-11-03T15:06:04+00:00",
-      "level": "error",
-      "msg": "'Find 3 video ideas' failed after 3 attempts. Open it on the dashboard and press Retry once fixed.",
-      "step": "research"
-    }
-  ],
+  "notifications": [],
   "pages_meta": {
-    "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-03T15:06:14+00:00",
-    "uploads": [],
-    "issue_url": "https://github.com/jaleleddineagrebi/moderator/issues/1",
-    "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/41660179342"
+    "repo": "",
+    "exported_at": "2026-11-06T09:25:18+00:00",
+    "uploads": []
   }
 }
