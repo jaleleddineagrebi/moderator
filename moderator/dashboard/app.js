@@ -7,7 +7,11 @@ let state = null;
 let liveRunId = null;
 let selectedRunId = null; // null = follow live run
 let openStep = null;
-const renderedKeys = { approvals: "", outputs: "", runs: "", banner: "" };
+let latestRunsList = [];
+let activeActionRun = null;
+let latestActionRun = null;
+let lastActionCheck = 0;
+const renderedKeys = { approvals: "", outputs: "", runs: "", banner: "", history: "" };
 
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -50,6 +54,16 @@ $("retry-all-btn").addEventListener("click", async () => {
   poll();
 });
 
+const refreshBtn = $("refresh-btn");
+if (refreshBtn) {
+  refreshBtn.addEventListener("click", async () => {
+    refreshBtn.classList.add("pulsing");
+    lastActionCheck = 0;
+    await poll();
+    setTimeout(() => refreshBtn.classList.remove("pulsing"), 600);
+  });
+}
+
 // Polling
 
 async function poll() {
@@ -60,7 +74,10 @@ async function poll() {
       if (!runsRes.ok) throw new Error(runsRes.status);
       const runsData = await runsRes.json();
       liveRunId = runsData.live_run_id;
-      renderRunSelect(runsData.runs || []);
+      latestRunsList = runsData.runs || [];
+      renderRunSelect(latestRunsList);
+      renderRunsHistory(latestRunsList);
+      checkGitHubActions();
       const targetId = selectedRunId || liveRunId;
       if (targetId) {
         const stRes = await fetch(`data/runs/${encodeURIComponent(targetId)}/state.json?${bust}`, { cache: "no-store" });
@@ -86,7 +103,9 @@ async function poll() {
     if (runsRes && runsRes.ok) {
       const runsData = await runsRes.json();
       liveRunId = runsData.live_run_id;
-      renderRunSelect(runsData.runs || []);
+      latestRunsList = runsData.runs || [];
+      renderRunSelect(latestRunsList);
+      renderRunsHistory(latestRunsList);
     }
     $("conn").hidden = true;
     render();
@@ -128,6 +147,18 @@ function formatDuration(secs) {
   return (h ? h + ":" + String(m).padStart(2, "0") : m) + ":" + String(s).padStart(2, "0");
 }
 
+function timeAgo(iso) {
+  if (!iso) return "—";
+  const sec = Math.max(0, Math.floor((Date.now() - new Date(iso).getTime()) / 1000));
+  if (sec < 45) return "just now";
+  const min = Math.floor(sec / 60);
+  if (min < 60) return `${min}m ago`;
+  const hr = Math.floor(min / 60);
+  if (hr < 24) return `${hr}h ago`;
+  const day = Math.floor(hr / 24);
+  return `${day}d ago`;
+}
+
 function stepElapsed(s) {
   if (!s.started_at) return "";
   const end = s.ended_at ? new Date(s.ended_at) : new Date();
@@ -150,14 +181,168 @@ function render() {
   $("run-status").className = `badge s-${stCls}`;
   $("run-status").textContent = STATUS_LABEL[state.status] || state.status;
   $("retry-all-btn").hidden = isReadOnly() || state.status !== "failed";
+  renderLiveActionBanner();
   renderPagesBanner();
   renderOverview();
+  renderRunsHistory(latestRunsList);
   renderApprovals();
   renderCheckpoints();
   renderPipeline();
   renderCards();
   renderNotifications();
   if (openStep && state.steps[openStep]) renderDrawer();
+}
+
+async function checkGitHubActions() {
+  if (!isStaticMode() || !PAGES_CFG || !PAGES_CFG.repo) return;
+  const now = Date.now();
+  if (now - lastActionCheck < 10000) return;
+  lastActionCheck = now;
+  try {
+    const res = await fetch(`https://api.github.com/repos/${PAGES_CFG.repo}/actions/runs?per_page=5`, {
+      headers: { Accept: "application/vnd.github.v3+json" },
+      cache: "no-store",
+    });
+    if (!res.ok) return;
+    const data = await res.json();
+    const runs = data.workflow_runs || [];
+    activeActionRun = runs.find((r) => r.status === "in_progress" || r.status === "queued") || null;
+    latestActionRun = runs[0] || null;
+    renderLiveActionBanner();
+  } catch (e) {
+    // ignore network rate limit errors
+  }
+}
+
+function renderLiveActionBanner() {
+  const banner = $("live-action-banner");
+  const indicator = $("action-live-indicator");
+  if (!banner) return;
+
+  if (activeActionRun) {
+    if (indicator) indicator.hidden = false;
+    banner.hidden = false;
+    const isQueued = activeActionRun.status === "queued";
+    banner.className = `card live-action-banner ${isQueued ? "is-queued" : ""}`;
+    const statusText = isQueued ? "QUEUED ON GITHUB ACTIONS" : "RUNNING ON GITHUB ACTIONS";
+    const statusBadgeCls = isQueued ? "s-waiting" : "s-running";
+    const eventName = activeActionRun.event === "schedule" ? "scheduled cron" : activeActionRun.event;
+    banner.innerHTML = `
+      <div class="row-between">
+        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+          <span class="badge ${statusBadgeCls} pulsing">● ${statusText}</span>
+          <h2>${esc(activeActionRun.name)} #${esc(activeActionRun.run_number)}</h2>
+        </div>
+        <div class="actions">
+          <a class="btn primary link-btn" href="${esc(activeActionRun.html_url)}" target="_blank" rel="noopener">📺 View Live GitHub Action Logs →</a>
+        </div>
+      </div>
+      <div class="muted">
+        Triggered via <strong>${esc(eventName)}</strong> · Started ${timeAgo(activeActionRun.created_at)} (${esc(new Date(activeActionRun.created_at).toLocaleTimeString())}).
+        Pipeline agents stream live updates here every 15s. Click <strong>↻</strong> in topbar to refresh immediately.
+      </div>
+    `;
+    return;
+  }
+
+  if (indicator) indicator.hidden = true;
+
+  if (state && (state.status === "running" || state.status === "queued") && !state.is_seed) {
+    banner.hidden = false;
+    banner.className = "card live-action-banner";
+    const ghUrl = state.pages_meta && state.pages_meta.gh_run_url;
+    banner.innerHTML = `
+      <div class="row-between">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <span class="badge s-running pulsing">● AGENTS RUNNING</span>
+          <h2>Short Generation: ${esc(state.run_id)}</h2>
+        </div>
+        <div class="actions">
+          ${ghUrl ? `<a class="btn link-btn" href="${esc(ghUrl)}" target="_blank" rel="noopener">Action Logs →</a>` : ""}
+        </div>
+      </div>
+      <div class="muted">Multi-agent pipeline is actively processing research, script, audio, and visuals. Updates stream automatically.</div>
+    `;
+    return;
+  }
+
+  banner.hidden = true;
+}
+
+function renderRunsHistory(runs) {
+  const section = $("runs-history-section");
+  const tbody = $("runs-history-body");
+  const meta = $("runs-history-meta");
+  if (!section || !tbody) return;
+  if (!runs || runs.length === 0) {
+    section.hidden = true;
+    return;
+  }
+  section.hidden = false;
+  if (meta) meta.textContent = `${runs.length} recorded run(s)`;
+  const activeId = selectedRunId || liveRunId || (state && state.run_id);
+  const key = JSON.stringify([activeId, runs.map((r) => [r.run_id, r.status, r.progress])]);
+  if (key === renderedKeys.history) return;
+  renderedKeys.history = key;
+
+  tbody.innerHTML = runs.map((r) => {
+    const isCur = r.run_id === activeId;
+    const st = r.status || "unknown";
+    const stBadge = `<span class="badge s-${st}">${esc(STATUS_LABEL[st] || st)}</span>`;
+    const started = r.started_at ? timeAgo(r.started_at) : "—";
+    const cost = r.cost_usd != null ? `$${r.cost_usd.toFixed(2)}` : "—";
+    const topic = r.topic ? esc(r.topic) : (r.workflow_title ? esc(r.workflow_title) : "Short Generation");
+    const progressFillCls = st === "done" ? "is-done" : st === "failed" ? "is-failed" : "";
+    const pct = r.progress != null ? r.progress : 0;
+    
+    return `
+      <tr class="${isCur ? "is-selected" : ""}" data-run="${esc(r.run_id)}" style="cursor: pointer;">
+        <td>${stBadge}</td>
+        <td class="mono" style="font-size: 11px;">
+          ${r.has_uploads ? "🎬 " : ""}${esc(r.run_id)} ${isCur ? '<span class="muted">(viewing)</span>' : ""}
+        </td>
+        <td title="${topic}" style="max-width: 220px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${topic}</td>
+        <td>
+          <div class="mini-progress">
+            <div class="mini-bar"><div class="mini-fill ${progressFillCls}" style="width: ${pct}%"></div></div>
+            <span class="mono" style="font-size: 11px;">${pct}%</span>
+          </div>
+        </td>
+        <td class="muted">${started}</td>
+        <td class="mono">${cost}</td>
+        <td>
+          <button type="button" class="btn" style="padding: 2px 8px; font-size: 11px;" data-select-run="${esc(r.run_id)}">
+            ${isCur ? "Active" : "Inspect"}
+          </button>
+        </td>
+      </tr>
+    `;
+  }).join("");
+
+  tbody.querySelectorAll("[data-select-run]").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const rid = btn.dataset.selectRun;
+      selectedRunId = (rid === liveRunId) ? null : rid;
+      renderedKeys.approvals = "";
+      renderedKeys.outputs = "";
+      const sel = $("run-select");
+      if (sel) sel.value = rid;
+      poll();
+    });
+  });
+
+  tbody.querySelectorAll("tr[data-run]").forEach((tr) => {
+    tr.addEventListener("click", () => {
+      const rid = tr.dataset.run;
+      selectedRunId = (rid === liveRunId) ? null : rid;
+      renderedKeys.approvals = "";
+      renderedKeys.outputs = "";
+      const sel = $("run-select");
+      if (sel) sel.value = rid;
+      poll();
+    });
+  });
 }
 
 function renderPagesBanner() {

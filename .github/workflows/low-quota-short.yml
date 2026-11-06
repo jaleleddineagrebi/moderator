@@ -85,12 +85,29 @@ jobs:
           INPUT_LANG: ${{ inputs.language }}
           INPUT_BUDGET: ${{ inputs.budget_usd }}
           INPUT_NICHE: ${{ vars.MODERATOR_NICHE }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           PYTHONIOENCODING: utf-8
         run: |
           args=(-p 'auto_approve=[A, B]' --llm gemini -p visual_mode=stock \
                 -p "languages=$INPUT_LANG" -p "budget_usd=$INPUT_BUDGET")
           if [ -n "$INPUT_TOPIC" ]; then args+=(-p "topic=$INPUT_TOPIC"); fi
           if [ -n "$INPUT_NICHE" ]; then args+=(-p "niche=$INPUT_NICHE"); fi
+
+          # Stream live state.json agent progress to GitHub Pages every 15s
+          (
+            last_sig=""
+            while true; do
+              sig=$(sha256sum runs/*/state.json 2>/dev/null || true)
+              if [ -n "$sig" ] && [ "$sig" != "$last_sig" ]; then
+                last_sig="$sig"
+                bash .github/scripts/push-gh-pages.sh --no-media --gh-run-url "$RUN_URL" || true
+              fi
+              sleep 15
+            done
+          ) &
+          WATCHER_PID=$!
+          trap "kill $WATCHER_PID 2>/dev/null || true" EXIT
+
           uv run python -m moderator run youtube_short --headless "${args[@]}"
 
       - name: Upload run artifact
@@ -129,3 +146,4 @@ jobs:
           cat body.md >> "$GITHUB_STEP_SUMMARY"
           gh label create "$label" --force >/dev/null
           gh issue create --title "$title" --label "$label" --body-file body.md
+          bash .github/scripts/push-gh-pages.sh --run-id "$RUN_ID" --issue-url "https://github.com/${{ github.repository }}/issues" --gh-run-url "$RUN_URL" || true
