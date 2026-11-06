@@ -477,10 +477,10 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "running",
-      "progress": 48,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-06T20:44:22+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-06T20:45:07+00:00",
       "attempt": 2,
       "retries": 0,
       "max_retries": 2,
@@ -573,6 +573,26 @@
           "ts": "2026-11-06T20:44:50+00:00",
           "level": "info",
           "msg": "scene_04: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-06T20:44:53+00:00",
+          "level": "info",
+          "msg": "scene_02: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-06T20:45:05+00:00",
+          "level": "info",
+          "msg": "scene_05: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-06T20:45:06+00:00",
+          "level": "info",
+          "msg": "scene_06: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-06T20:45:07+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [],
@@ -586,10 +606,10 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "running",
-      "progress": 42,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-06T20:44:42+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-06T20:45:07+00:00",
       "attempt": 3,
       "retries": 1,
       "max_retries": 2,
@@ -684,6 +704,21 @@
           "ts": "2026-11-06T20:44:51+00:00",
           "level": "info",
           "msg": "Narrating fr with fr-FR-DeniseNeural"
+        },
+        {
+          "ts": "2026-11-06T20:45:00+00:00",
+          "level": "info",
+          "msg": "fr voiceover: 40.6s"
+        },
+        {
+          "ts": "2026-11-06T20:45:00+00:00",
+          "level": "info",
+          "msg": "Generating an ambient music bed (no library tracks with license files found)"
+        },
+        {
+          "ts": "2026-11-06T20:45:07+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [
@@ -705,11 +740,11 @@
         "visuals"
       ],
       "checkpoint": null,
-      "status": "queued",
+      "status": "running",
       "progress": 0,
-      "started_at": "2026-11-06T20:42:13+00:00",
-      "ended_at": "2026-11-06T20:42:16+00:00",
-      "attempt": 1,
+      "started_at": "2026-11-06T20:45:07+00:00",
+      "ended_at": null,
+      "attempt": 2,
       "retries": 0,
       "max_retries": 2,
       "strategy": "banana_thumbnail",
@@ -797,6 +832,16 @@
           "ts": "2026-11-06T20:44:06+00:00",
           "level": "info",
           "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-06T20:45:07+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'banana_thumbnail'"
+        },
+        {
+          "ts": "2026-11-06T20:45:07+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.5-flash-lite, low complexity, thinking minimal)"
         }
       ],
       "errors": [],
@@ -811,11 +856,11 @@
         "audio"
       ],
       "checkpoint": null,
-      "status": "queued",
+      "status": "running",
       "progress": 0,
-      "started_at": "2026-11-06T20:42:25+00:00",
-      "ended_at": "2026-11-06T20:43:48+00:00",
-      "attempt": 1,
+      "started_at": "2026-11-06T20:45:07+00:00",
+      "ended_at": null,
+      "attempt": 2,
       "retries": 0,
       "max_retries": 2,
       "strategy": "transitions",
@@ -826,8 +871,7 @@
           "assets/scene_03.mp4",
           "assets/scene_04.mp4",
           "assets/scene_05.mp4",
-          "assets/scene_06.mp4",
-          "assets/scene_07.mp4"
+          "assets/scene_06.mp4"
         ],
         "audio": {
           "voiceover_en": "voiceover_en.mp3",
@@ -872,6 +916,16 @@
           "ts": "2026-11-06T20:44:06+00:00",
           "level": "info",
           "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-06T20:45:07+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'transitions'"
+        },
+        {
+          "ts": "2026-11-06T20:45:07+00:00",
+          "level": "info",
+          "msg": "Rendering en: 6 scenes, 44.5s, xfade transitions"
         }
       ],
       "errors": [],
@@ -1012,7 +1066,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-06T20:44:52+00:00",
+    "exported_at": "2026-11-06T20:45:12+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/42288676519"
   }

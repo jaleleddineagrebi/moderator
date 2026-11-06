@@ -12,48 +12,44 @@ Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 1,0:00:00.05,0:00:02.00,Headline,,0,0,0,,{\fad(150,150)}BEING PERFECT IS OVERRATED
-Dialogue: 1,0:00:02.10,0:00:08.78,Headline,,0,0,0,,{\fad(150,150)}MISTAKES INCREASE LIKABILITY
-Dialogue: 1,0:00:08.88,0:00:15.13,Headline,,0,0,0,,{\fad(150,150)}THE PRATFALL EFFECT
-Dialogue: 1,0:00:15.23,0:00:22.56,Headline,,0,0,0,,{\fad(150,150)}VULNERABILITY BUILDS TRUST
-Dialogue: 1,0:00:22.66,0:00:30.25,Headline,,0,0,0,,{\fad(150,150)}FLAWS ARE ATTRACTIVE
-Dialogue: 1,0:00:30.35,0:00:36.14,Headline,,0,0,0,,{\fad(150,150)}SHOW YOUR HUMAN SIDE
-Dialogue: 1,0:00:36.24,0:00:41.26,Headline,,0,0,0,,{\fad(150,150)}CHECK YOUR BRAIN
-Dialogue: 0,0:00:00.09,0:00:00.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Stop trying to
-Dialogue: 0,0:00:00.62,0:00:01.27,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}be perfect
-Dialogue: 0,0:00:02.18,0:00:03.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Here is why
-Dialogue: 0,0:00:03.54,0:00:04.05,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}when a highly
-Dialogue: 0,0:00:04.05,0:00:05.39,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}competent person makes
-Dialogue: 0,0:00:05.39,0:00:06.40,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a tiny blunder
-Dialogue: 0,0:00:06.82,0:00:07.48,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}we actually like
-Dialogue: 0,0:00:07.49,0:00:08.29,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}them much more
-Dialogue: 0,0:00:08.92,0:00:09.26,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It’s called the
-Dialogue: 0,0:00:09.26,0:00:10.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Pratfall Effect
-Dialogue: 0,0:00:10.66,0:00:11.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}These small mistakes
-Dialogue: 0,0:00:11.79,0:00:12.47,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}make you seem
-Dialogue: 0,0:00:12.48,0:00:13.89,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}human and far
-Dialogue: 0,0:00:13.89,0:00:14.64,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}more approachable
-Dialogue: 0,0:00:15.28,0:00:16.55,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Total perfection acts
-Dialogue: 0,0:00:16.55,0:00:17.16,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}like a wall
-Dialogue: 0,0:00:17.59,0:00:18.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}but showing vulnerability
-Dialogue: 0,0:00:19.27,0:00:20.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is the bridge
-Dialogue: 0,0:00:20.02,0:00:21.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}that builds instant
-Dialogue: 0,0:00:21.12,0:00:22.05,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}social trust
-Dialogue: 0,0:00:22.71,0:00:24.53,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Psychologists discovered that
-Dialogue: 0,0:00:24.55,0:00:25.73,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}audiences preferred an
-Dialogue: 0,0:00:25.83,0:00:27.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}expert who spilled
-Dialogue: 0,0:00:27.00,0:00:28.21,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}coffee over one
-Dialogue: 0,0:00:28.22,0:00:29.05,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}who was completely
-Dialogue: 0,0:00:29.06,0:00:29.75,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}flawless
-Dialogue: 0,0:00:30.41,0:00:31.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}So stop hiding
-Dialogue: 0,0:00:31.11,0:00:31.77,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your slips and
-Dialogue: 0,0:00:31.79,0:00:32.39,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}trips
-Dialogue: 0,0:00:32.79,0:00:33.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}They are exactly
-Dialogue: 0,0:00:33.54,0:00:34.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}what make others
-Dialogue: 0,0:00:34.34,0:00:35.44,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}feel safe around
-Dialogue: 0,0:00:35.45,0:00:35.85,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you
-Dialogue: 0,0:00:36.35,0:00:36.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Follow for a
-Dialogue: 0,0:00:36.84,0:00:38.10,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}daily brain bias
-Dialogue: 0,0:00:38.10,0:00:38.55,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}check
-Dialogue: 0,0:00:38.97,0:00:39.89,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Because honestly you
-Dialogue: 0,0:00:39.89,0:00:40.29,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}should
+Dialogue: 1,0:00:00.05,0:00:02.72,Headline,,0,0,0,,{\fad(150,150)}Stop Being Perfect
+Dialogue: 1,0:00:02.82,0:00:09.36,Headline,,0,0,0,,{\fad(150,150)}Perfection Kills Trust
+Dialogue: 1,0:00:09.46,0:00:17.12,Headline,,0,0,0,,{\fad(150,150)}Mistakes Build Charisma
+Dialogue: 1,0:00:17.22,0:00:25.53,Headline,,0,0,0,,{\fad(150,150)}The Pratfall Effect
+Dialogue: 1,0:00:25.63,0:00:34.55,Headline,,0,0,0,,{\fad(150,150)}Be Relatable
+Dialogue: 1,0:00:34.65,0:00:44.49,Headline,,0,0,0,,{\fad(150,150)}Daily Bias Check
+Dialogue: 0,0:00:00.10,0:00:00.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Stop trying to
+Dialogue: 0,0:00:00.93,0:00:01.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}be perfect
+Dialogue: 0,0:00:02.87,0:00:03.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You might think
+Dialogue: 0,0:00:03.55,0:00:04.41,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a flawless image
+Dialogue: 0,0:00:04.42,0:00:05.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is impressive but
+Dialogue: 0,0:00:05.55,0:00:06.50,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}it actually creates
+Dialogue: 0,0:00:06.51,0:00:07.17,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a cold wall
+Dialogue: 0,0:00:07.18,0:00:07.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}between you and
+Dialogue: 0,0:00:07.85,0:00:08.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}others
+Dialogue: 0,0:00:09.51,0:00:10.85,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Psychology shows that
+Dialogue: 0,0:00:10.86,0:00:11.41,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}when a highly
+Dialogue: 0,0:00:11.42,0:00:12.60,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}competent person makes
+Dialogue: 0,0:00:12.61,0:00:13.66,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a clumsy mistake
+Dialogue: 0,0:00:13.92,0:00:15.22,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}their likability actually
+Dialogue: 0,0:00:15.23,0:00:16.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}skyrockets
+Dialogue: 0,0:00:17.27,0:00:18.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It’s the Pratfall
+Dialogue: 0,0:00:18.14,0:00:18.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Effect
+Dialogue: 0,0:00:19.56,0:00:20.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Spilling coffee or
+Dialogue: 0,0:00:20.62,0:00:21.77,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}tripping slightly makes
+Dialogue: 0,0:00:21.78,0:00:22.66,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}an expert seem
+Dialogue: 0,0:00:22.67,0:00:23.75,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}approachable rather than
+Dialogue: 0,0:00:23.76,0:00:24.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}intimidating
+Dialogue: 0,0:00:25.68,0:00:26.80,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Total perfection is
+Dialogue: 0,0:00:26.81,0:00:28.22,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}boring and unrelatable
+Dialogue: 0,0:00:29.08,0:00:30.21,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Vulnerability is the
+Dialogue: 0,0:00:30.22,0:00:31.23,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}secret bridge that
+Dialogue: 0,0:00:31.25,0:00:32.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}builds instant social
+Dialogue: 0,0:00:32.37,0:00:33.53,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}trust and connection
+Dialogue: 0,0:00:34.70,0:00:35.55,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}So embrace your
+Dialogue: 0,0:00:35.56,0:00:36.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}small blunders they
+Dialogue: 0,0:00:36.70,0:00:37.48,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}make you real
+Dialogue: 0,0:00:38.35,0:00:39.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Follow to spot
+Dialogue: 0,0:00:39.26,0:00:40.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your mental blindspots
+Dialogue: 0,0:00:41.47,0:00:42.47,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Because really you
+Dialogue: 0,0:00:42.48,0:00:42.97,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}should
