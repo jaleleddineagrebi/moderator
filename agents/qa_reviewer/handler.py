@@ -106,6 +106,20 @@ class Handler(Agent):
         check("visual licenses", not bad and not missing,
               f"{len(licenses)} assets: " + ", ".join(sorted({l['provider'] for l in licenses}))
               + (f"; unlicensed {bad}" if bad else "") + (f"; missing {missing}" if missing else ""), "visuals")
+
+        # Visual diversity check: ensure no two scenes in the Short duplicate the same footage
+        seen_pages: dict[str, str] = {}
+        visual_dupes = []
+        for l in licenses:
+            page = l.get("page")
+            if page:
+                if page in seen_pages:
+                    visual_dupes.append(f"{l['scene']} repeats footage from {seen_pages[page]} ({page})")
+                else:
+                    seen_pages[page] = l["scene"]
+        check("visual diversity", not visual_dupes,
+              "all scenes use distinct footage" if not visual_dupes else "; ".join(visual_dupes),
+              send_to="visuals", severity="blocker")
         audio_lic = ctx.read_json(audio["licenses"])
         check("audio licenses", all(v.get("license") for v in audio_lic.values()),
               "; ".join(f"{k}: {v.get('license')}" for k, v in audio_lic.items()), "audio")
