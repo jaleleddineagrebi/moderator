@@ -1,0 +1,131 @@
+name: Generate Short (Low Quota)
+
+# Manual-only, minimal Gemini usage for when the free-tier quota is tight (429s):
+#  - every text call is forced to gemini flash-lite (config.yaml llm.model) with minimal thinking
+#  - one language, stock footage only (no Nano Banana image calls)
+#  - small spend cap
+# Stops at Checkpoint C; nothing is uploaded until you approve (see upload-short.yml).
+on:
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: "Optional topic inside your niche (empty = trend research)"
+        required: false
+        type: string
+      language:
+        description: "Single language"
+        required: false
+        default: "en"
+        type: choice
+        options: [en, fr, ar]
+      budget_usd:
+        description: "Safety spend cap"
+        required: false
+        default: "0.20"
+        type: string
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: generate-short
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Verify GEMINI_API_KEY
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          if [ -z "$GEMINI_API_KEY" ]; then
+            echo "::error::Missing GEMINI_API_KEY repository secret."
+            exit 1
+          fi
+
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+
+      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6.8.0
+        with:
+          python-version: "3.12"
+
+      - name: Install ffmpeg & libass
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg libass9
+
+      - name: Install Python dependencies
+        run: uv sync --locked
+
+      - name: Force low-quota model (flash-lite, minimal thinking) for this run only
+        run: |
+          python3 - <<'PY'
+          import re, pathlib
+          p = pathlib.Path("config.yaml")
+          s = p.read_text(encoding="utf-8")
+          s = re.sub(r"^llm:\n", "llm:\n  model: flash-lite\n", s, count=1, flags=re.M)
+          s = re.sub(r"(low|medium|high):(\s+)\{model: [\w-]+, thinking: \w+\}", r"\1:\2{model: flash-lite, thinking: minimal}", s)
+          p.write_text(s, encoding="utf-8")
+          PY
+          grep -n -A2 "^llm:" config.yaml
+
+      - name: Load topic history
+        run: bash .github/scripts/topics-history.sh load
+
+      - name: Generate Short and pause at Checkpoint C
+        id: gen
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          INPUT_TOPIC: ${{ inputs.topic }}
+          INPUT_LANG: ${{ inputs.language }}
+          INPUT_BUDGET: ${{ inputs.budget_usd }}
+          INPUT_NICHE: ${{ vars.MODERATOR_NICHE }}
+          PYTHONIOENCODING: utf-8
+        run: |
+          args=(-p 'auto_approve=[A, B]' --llm gemini -p visual_mode=stock \
+                -p "languages=$INPUT_LANG" -p "budget_usd=$INPUT_BUDGET")
+          if [ -n "$INPUT_TOPIC" ]; then args+=(-p "topic=$INPUT_TOPIC"); fi
+          if [ -n "$INPUT_NICHE" ]; then args+=(-p "niche=$INPUT_NICHE"); fi
+          uv run python -m moderator run youtube_short --headless "${args[@]}"
+
+      - name: Upload run artifact
+        if: always() && steps.gen.outputs.run_dir
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: short-${{ steps.gen.outputs.run_id }}
+          path: |
+            ${{ steps.gen.outputs.run_dir }}
+            !${{ steps.gen.outputs.run_dir }}/assets/raw
+          retention-days: 14
+
+      - name: Save topic history
+        if: always()
+        run: bash .github/scripts/topics-history.sh save
+
+      - name: Open review issue
+        if: always() && steps.gen.outputs.run_dir
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_DIR: ${{ steps.gen.outputs.run_dir }}
+          RUN_ID: ${{ steps.gen.outputs.run_id }}
+          OUTCOME: ${{ steps.gen.outputs.outcome }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          PYTHONIOENCODING: utf-8
+        run: |
+          uv run python -m moderator summary "$RUN_DIR" > body.md
+          if [ "$OUTCOME" = "waiting" ]; then
+            label=short-review; title="Review Short (low quota): $RUN_ID"
+            printf '\n---\nArtifact `short-%s`: %s\n\nReply `/approve` (private), `/approve public`, or `/reject`.\n' "$RUN_ID" "$RUN_URL" >> body.md
+          else
+            label=short-failed; title="Short generation failed (low quota): $RUN_ID"
+            printf '\n\nLogs: %s\n' "$RUN_URL" >> body.md
+          fi
+          printf '\n<!-- run_id: %s -->\n<!-- gh_run_id: %s -->\n' "$RUN_ID" "${{ github.run_id }}" >> body.md
+          cat body.md >> "$GITHUB_STEP_SUMMARY"
+          gh label create "$label" --force >/dev/null
+          gh issue create --title "$title" --label "$label" --body-file body.md

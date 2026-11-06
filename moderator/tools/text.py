@@ -76,6 +76,37 @@ def _ass_escape(text: str) -> str:
     return text.replace("\\", "\\\\").replace("{", "(").replace("}", ")").replace("\n", " ")
 
 
+FOLLOW_LABELS = {"en": "FOLLOW", "fr": "S'ABONNER", "ar": "اشترك"}
+
+
+def write_follow_button(path: Path, lang: str, label: str | None = None) -> tuple[int, int]:
+    """Render a transparent PNG 'follow' pill (red, white label, bell) for the editor to overlay.
+    Returns (width, height)."""
+    from PIL import Image
+
+    label = label or FOLLOW_LABELS.get(lang, FOLLOW_LABELS["en"])
+    fnt = font(lang, 58)
+    shown = visual(label, lang)
+    probe = ImageDraw.Draw(Image.new("RGBA", (1, 1)))
+    text_w = int(probe.textlength(shown, font=fnt))
+    pad_x, bell_w, h = 56, 70, 128
+    w = text_w + bell_w + pad_x * 2
+    img = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    d.rounded_rectangle((0, 0, w - 1, h - 1), radius=h // 2, fill=(255, 0, 0, 255), outline=(255, 255, 255, 255), width=5)
+    # bell glyph drawn with shapes (no emoji font needed), on the reading-start side of the label
+    bx = w - pad_x - bell_w + 10 if lang in RTL else pad_x
+    cx, cy = bx + 25, h // 2
+    d.pieslice((cx - 22, cy - 28, cx + 22, cy + 16), 180, 360, fill="white")
+    d.rectangle((cx - 22, cy - 6, cx + 22, cy + 16), fill="white")
+    d.rectangle((cx - 28, cy + 14, cx + 28, cy + 21), fill="white")
+    d.ellipse((cx - 7, cy + 22, cx + 7, cy + 34), fill="white")
+    tx = pad_x if lang in RTL else pad_x + bell_w
+    d.text((tx, (h - 58) // 2 - 8), shown, font=fnt, fill="white")
+    img.save(path)
+    return w, h
+
+
 def write_ass(path: Path, lang: str, captions: list[dict], headlines: list[dict]) -> None:
     """captions/headlines: [{start, end, text}] in seconds. Captions sit in the lower third,
     scene headlines (on-screen text) near the top. libass handles Arabic shaping and direction."""

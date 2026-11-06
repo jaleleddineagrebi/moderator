@@ -35,4 +35,3 @@ Requested scopes: `user.info.basic` (to confirm which account is connected), `vi
 
 ## Notes for the reviewer
 The demo video shows: idea and script generation, the finished short, the owner's approval step, TikTok login and consent, and the upload to the owner's account.
-

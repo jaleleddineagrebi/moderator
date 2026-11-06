@@ -6,6 +6,7 @@
 # `image_model`: Nano Banana for scene/thumbnail images ("banana", "banana-lite" or "banana-pro").
 llm:
   provider: gemini   # gemini | claude. Per run: `--llm claude`, `-p llm=claude` or env MODERATOR_LLM=claude
+  cache_enabled: true
   # Claude (headless Claude Code on your Claude plan, no API key). Same complexity routing as Gemini.
   # Effort: low | medium | high | xhigh | max. Images still use Gemini Nano Banana when GEMINI_API_KEY is set.
   claude:
