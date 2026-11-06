@@ -28,3 +28,14 @@ def test_safe_json_extract():
     res = NativeOptimizer.safe_json_extract(wrapped)
     assert res["title"] == "AI Psychology"
     assert res["score"] == 42
+
+
+import asyncio
+from portal.automation.storage_service import StorageService
+
+
+def test_storage_fallback_without_credentials():
+    svc = StorageService()
+    url = "https://images.unsplash.com/photo-123?w=800"
+    persisted = asyncio.run(svc.persist_image_from_url(url, "test-slug"))
+    assert persisted == url

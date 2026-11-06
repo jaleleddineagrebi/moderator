@@ -1,0 +1,64 @@
+name: Daily Psychology & AI Content Pipeline
+
+on:
+  schedule:
+    # Runs twice daily: 08:00 UTC (Morning Focus) and 18:00 UTC (Evening Insight)
+    - cron: '0 8,18 * * *'
+  workflow_dispatch:
+    inputs:
+      force_rerun:
+        description: 'Force immediate crawling and publishing'
+        required: false
+        default: 'true'
+
+concurrency:
+  group: daily-portal-content
+  cancel-in-progress: false
+
+jobs:
+  crawl-synthesize-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install Pipeline Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r portal/automation/requirements.txt
+
+      - name: Run Twice-Daily Content Automation Pipeline
+        env:
+          PORTAL_API_ENDPOINT: ${{ secrets.PORTAL_API_ENDPOINT }}
+          INTERNAL_API_SECRET: ${{ secrets.INTERNAL_API_SECRET }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          SUPABASE_STORAGE_BUCKET: ${{ secrets.SUPABASE_STORAGE_BUCKET || 'portal-covers' }}
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        run: |
+          python -m portal.automation.pipeline
+
+      - name: Commit Daily Content Audit Trail
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add history/daily_posts/
+          if git diff --cached --quiet; then
+            echo "No new daily post files to commit."
+          else
+            git commit -m "Auto-archive daily Psychology & AI posts [skip ci]"
+            git push origin HEAD:${{ github.ref }}
+          fi
