@@ -660,10 +660,10 @@
         "audio"
       ],
       "checkpoint": null,
-      "status": "running",
-      "progress": 50,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-06T12:49:08+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-06T12:50:32+00:00",
       "attempt": 1,
       "retries": 0,
       "max_retries": 2,
@@ -691,7 +691,10 @@
         ],
         "strategy": "transitions"
       },
-      "outputs": {},
+      "outputs": {
+        "captions_en": "captions_en.ass",
+        "captions_fr": "captions_fr.ass"
+      },
       "logs": [
         {
           "ts": "2026-11-06T12:49:08+00:00",
@@ -707,6 +710,11 @@
           "ts": "2026-11-06T12:49:49+00:00",
           "level": "info",
           "msg": "Rendering fr: 6 scenes, 38.6s, xfade transitions"
+        },
+        {
+          "ts": "2026-11-06T12:50:32+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [],
@@ -721,17 +729,33 @@
         "packaging"
       ],
       "checkpoint": "C",
-      "status": "queued",
-      "progress": 0,
-      "started_at": null,
+      "status": "running",
+      "progress": 35,
+      "started_at": "2026-11-06T12:50:32+00:00",
       "ended_at": null,
-      "attempt": 0,
+      "attempt": 1,
       "retries": 0,
       "max_retries": 2,
-      "strategy": null,
-      "inputs": {},
+      "strategy": "full_review",
+      "inputs": {
+        "videos": {
+          "en": "final_short_en.mp4",
+          "fr": "final_short_fr.mp4"
+        },
+        "languages": [
+          "en",
+          "fr"
+        ],
+        "metadata": "metadata.json"
+      },
       "outputs": {},
-      "logs": [],
+      "logs": [
+        {
+          "ts": "2026-11-06T12:50:32+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'full_review'"
+        }
+      ],
       "errors": [],
       "feedback": [],
       "cost_usd": 0.0
@@ -791,7 +815,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-06T12:50:03+00:00",
+    "exported_at": "2026-11-06T12:50:36+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/42220193935"
   }
