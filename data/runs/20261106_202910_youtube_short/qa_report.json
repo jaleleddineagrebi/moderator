@@ -1,12 +1,12 @@
 {
-  "passed": false,
-  "revision_round": 0,
+  "passed": true,
+  "revision_round": 1,
   "checks": [
     {
       "check": "length",
       "lang": "en",
       "ok": true,
-      "detail": "41.3s (must be under 60s; target 32-50s)",
+      "detail": "44.5s (must be under 60s; target 32-50s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -14,7 +14,7 @@
       "check": "target length",
       "lang": "en",
       "ok": true,
-      "detail": "41.3s",
+      "detail": "44.5s",
       "send_to": null,
       "severity": "minor"
     },
@@ -54,7 +54,7 @@
       "check": "hook timing",
       "lang": "en",
       "ok": true,
-      "detail": "scene_01 spoken in 1.9s (target <= 3s)",
+      "detail": "scene_01 spoken in 2.6s (target <= 3s)",
       "send_to": null,
       "severity": "minor"
     },
@@ -62,7 +62,7 @@
       "check": "caption sync",
       "lang": "en",
       "ok": true,
-      "detail": "100 words, 38 caption events",
+      "detail": "94 words, 35 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -70,7 +70,7 @@
       "check": "length",
       "lang": "fr",
       "ok": true,
-      "detail": "38.6s (must be under 60s; target 32-50s)",
+      "detail": "41.3s (must be under 60s; target 32-50s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -78,7 +78,7 @@
       "check": "target length",
       "lang": "fr",
       "ok": true,
-      "detail": "38.6s",
+      "detail": "41.3s",
       "send_to": null,
       "severity": "minor"
     },
@@ -110,7 +110,7 @@
       "check": "loudness",
       "lang": "fr",
       "ok": true,
-      "detail": "-14.2 LUFS, peak -1.3 dBFS (target -14 LUFS, peak <= -1)",
+      "detail": "-13.9 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -118,7 +118,7 @@
       "check": "hook timing",
       "lang": "fr",
       "ok": true,
-      "detail": "scene_01 spoken in 2.5s (target <= 3s)",
+      "detail": "scene_01 spoken in 2.7s (target <= 3s)",
       "send_to": null,
       "severity": "minor"
     },
@@ -126,7 +126,7 @@
       "check": "caption sync",
       "lang": "fr",
       "ok": true,
-      "detail": "96 words, 36 caption events",
+      "detail": "91 words, 35 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -134,7 +134,7 @@
       "check": "visual licenses",
       "lang": null,
       "ok": true,
-      "detail": "7 assets: pixabay",
+      "detail": "6 assets: pixabay",
       "send_to": null,
       "severity": "blocker"
     },
@@ -155,34 +155,18 @@
       "severity": "blocker"
     },
     {
-      "check": "grammar review",
-      "lang": "fr",
-      "ok": false,
-      "detail": "In scene_01 on-screen text, 'SURCOUTÉE' is an incorrect translation of overrated. Use 'SURESTIMÉE'.",
-      "send_to": "script",
-      "severity": "blocker"
-    },
-    {
       "check": "accuracy review",
       "lang": "fr",
       "ok": false,
-      "detail": "In scene_03, 'L'effet de chute' is a literal translation. The established psychological term in French is 'L'effet de gaffe' or 'Effet Pratfall'. Fix to 'L'EFFET DE GAFFE'.",
+      "detail": "The term 'Effet de Chute' is a literal translation of 'Pratfall Effect'. In French psychology, it is more commonly referred to as 'Effet de Bévue' or 'Effet Pratfall'. Change 'Effet de Chute' to 'Effet de Bévue' for better accuracy.",
       "send_to": "script",
-      "severity": "minor"
-    },
-    {
-      "check": "spelling review",
-      "lang": "fr",
-      "ok": false,
-      "detail": "In the French tags metadata, 'sympatique' is misspelled. The correct spelling is 'sympathique'.",
-      "send_to": "packaging",
       "severity": "minor"
     },
     {
       "check": "people rule",
       "lang": null,
       "ok": true,
-      "detail": "no women beyond face close-ups in 7 scenes and 2 thumbnail(s)",
+      "detail": "no women beyond face close-ups in 6 scenes and 2 thumbnail(s)",
       "send_to": null,
       "severity": "blocker"
     }

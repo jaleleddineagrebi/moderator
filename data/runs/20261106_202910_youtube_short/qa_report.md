@@ -1,25 +1,23 @@
-# QA report: CHANGES NEEDED
+# QA report: PASSED
 
-- ✅ **length** [en]: 41.3s (must be under 60s; target 32-50s)
-- ✅ **target length** [en]: 41.3s
+- ✅ **length** [en]: 44.5s (must be under 60s; target 32-50s)
+- ✅ **target length** [en]: 44.5s
 - ✅ **aspect ratio** [en]: 1080x1920
 - ✅ **video codec** [en]: h264
 - ✅ **audio track** [en]: present
 - ✅ **loudness** [en]: -14.4 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)
-- ✅ **hook timing** [en]: scene_01 spoken in 1.9s (target <= 3s)
-- ✅ **caption sync** [en]: 100 words, 38 caption events
-- ✅ **length** [fr]: 38.6s (must be under 60s; target 32-50s)
-- ✅ **target length** [fr]: 38.6s
+- ✅ **hook timing** [en]: scene_01 spoken in 2.6s (target <= 3s)
+- ✅ **caption sync** [en]: 94 words, 35 caption events
+- ✅ **length** [fr]: 41.3s (must be under 60s; target 32-50s)
+- ✅ **target length** [fr]: 41.3s
 - ✅ **aspect ratio** [fr]: 1080x1920
 - ✅ **video codec** [fr]: h264
 - ✅ **audio track** [fr]: present
-- ✅ **loudness** [fr]: -14.2 LUFS, peak -1.3 dBFS (target -14 LUFS, peak <= -1)
-- ✅ **hook timing** [fr]: scene_01 spoken in 2.5s (target <= 3s)
-- ✅ **caption sync** [fr]: 96 words, 36 caption events
-- ✅ **visual licenses**: 7 assets: pixabay
+- ✅ **loudness** [fr]: -13.9 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)
+- ✅ **hook timing** [fr]: scene_01 spoken in 2.7s (target <= 3s)
+- ✅ **caption sync** [fr]: 91 words, 35 caption events
+- ✅ **visual licenses**: 6 assets: pixabay
 - ✅ **visual diversity**: all scenes use distinct footage
 - ✅ **audio licenses**: music: original work, no third-party rights; sfx: original work, no third-party rights; voice: synthetic voice; no third-party performance rights
-- ❌ **grammar review** [fr]: In scene_01 on-screen text, 'SURCOUTÉE' is an incorrect translation of overrated. Use 'SURESTIMÉE'. → sent to script
-- ⚠️ **accuracy review** [fr]: In scene_03, 'L'effet de chute' is a literal translation. The established psychological term in French is 'L'effet de gaffe' or 'Effet Pratfall'. Fix to 'L'EFFET DE GAFFE'.
-- ⚠️ **spelling review** [fr]: In the French tags metadata, 'sympatique' is misspelled. The correct spelling is 'sympathique'.
-- ✅ **people rule**: no women beyond face close-ups in 7 scenes and 2 thumbnail(s)
+- ⚠️ **accuracy review** [fr]: The term 'Effet de Chute' is a literal translation of 'Pratfall Effect'. In French psychology, it is more commonly referred to as 'Effet de Bévue' or 'Effet Pratfall'. Change 'Effet de Chute' to 'Effet de Bévue' for better accuracy.
+- ✅ **people rule**: no women beyond face close-ups in 6 scenes and 2 thumbnail(s)
