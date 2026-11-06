@@ -181,7 +181,9 @@ class Handler(Agent):
         clips = await asyncio.gather(*(produce(i, s) for i, s in enumerate(scenes)))
         licenses.sort(key=lambda x: x["scene"])
         lic_path = ctx.write_json("assets/licenses.json", licenses)
-        visual_history.record_visuals(ctx.store.data["run_id"], licenses)
+        run_id = ctx.store.data.get("run_id", "")
+        if not run_id.startswith(("test_", "vis_run")):
+            visual_history.record_visuals(run_id, licenses)
         sheet = await self._contact_sheet(ctx, clips)
         return {"contact_sheet": sheet, "scenes": clips, "licenses": lic_path}
 
