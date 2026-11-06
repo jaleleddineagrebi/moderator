@@ -197,3 +197,4 @@ def upload(lang: str, video: Path, meta: dict, privacy: str, client: httpx.Clien
         raise TikTokError(f"timed out waiting for TikTok (last status: {status.get('status')})")
     return {"publish_id": init["publish_id"], "status": status["status"], "privacy": chosen,
             "post_ids": status.get("publicaly_available_post_id", [])}
+
