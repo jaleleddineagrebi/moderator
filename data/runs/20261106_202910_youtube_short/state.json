@@ -239,12 +239,12 @@
       "checkpoint": "A",
       "status": "running",
       "progress": 25,
-      "started_at": "2026-11-06T20:30:27+00:00",
+      "started_at": "2026-11-06T20:40:29+00:00",
       "ended_at": null,
-      "attempt": 2,
-      "retries": 1,
+      "attempt": 3,
+      "retries": 2,
       "max_retries": 2,
-      "strategy": "web_only",
+      "strategy": "no_web",
       "inputs": {
         "niche": "Psychology & human behavior (biases, habits, social dynamics)",
         "topic": null,
@@ -299,6 +299,21 @@
           "ts": "2026-11-06T20:30:27+00:00",
           "level": "info",
           "msg": "Asking Gemini (gemini-3.8-flash, high complexity, thinking high)"
+        },
+        {
+          "ts": "2026-11-06T20:40:27+00:00",
+          "level": "error",
+          "msg": "ReadTimeout: "
+        },
+        {
+          "ts": "2026-11-06T20:40:29+00:00",
+          "level": "info",
+          "msg": "Attempt 3/3, strategy 'no_web'"
+        },
+        {
+          "ts": "2026-11-06T20:40:29+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.8-flash, high complexity, thinking high)"
         }
       ],
       "errors": [
@@ -306,6 +321,12 @@
           "ts": "2026-11-06T20:30:26+00:00",
           "attempt": 1,
           "strategy": "web_and_youtube",
+          "error": "ReadTimeout: "
+        },
+        {
+          "ts": "2026-11-06T20:40:27+00:00",
+          "attempt": 2,
+          "strategy": "web_only",
           "error": "ReadTimeout: "
         }
       ],
@@ -486,7 +507,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-06T20:30:37+00:00",
+    "exported_at": "2026-11-06T20:40:40+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/42288676519"
   }
