@@ -75,7 +75,7 @@ Rules:
 - Total narration word count (all scenes together): {word_ranges}. Aim for the crisp 34-42 second sweet spot so viewers watch 100%+ of the Short.
 - {scenes_hint}. Scene 1 is an instant pattern-interrupt hook: spoken in under 2.5 seconds (max 7 words), starting mid-thought ("You...", a shocking contrast, or an immediate relatable moment — NEVER "Did you know").
 - Each scene covers one fast beat (5-6s max per scene) with open curiosity loops so viewers cannot swipe away.
-- Follow nudge (required in every Short): in the final scene, AFTER the payoff lands, add one short, in-story reason to follow the channel (max 6 words, e.g. a teaser tied to this topic such as "Follow, part two drops tomorrow"). Make it a promise of value, never a bare "Subscribe" or "Follow for more", and set the final scene's `on_screen` to a 2-3 word follow prompt (e.g. "Follow for part 2").
+- Follow nudge (required in every Short): in the final scene, AFTER the payoff lands, add one punchy reason to follow for a daily brain bias check (max 7 words, e.g. "Follow for a daily brain bias check" or "Follow to spot your mental blindspots"). Make it an irresistible promise of value, never a bare "Subscribe" or "Follow for more". Set the final scene's `on_screen` to a bold 2-4 word follow prompt (e.g. "Daily Bias Check" or "Check Your Brain"; in French: "Check-up mental", in Arabic: "اختبر عقلك").
 - Seamless infinite-loop ending: after the follow nudge, end with a bridge phrase that flows naturally right back into Scene 1's opening line, so the loop still works.
 - Languages (field key = how to write it):
 {describe(langs)}

@@ -148,9 +148,16 @@ def access_token(lang: str, client: httpx.Client | None = None, now=time.time) -
 
 # --- posting ----------------------------------------------------------------------------------
 
-def build_caption(meta: dict) -> str:
+def build_caption(meta: dict, lang: str = "en") -> str:
     tags = " ".join(meta.get("hashtags", []))
-    text = f"{meta['title'].strip()}\n{tags}".strip()
+    title = meta.get("title", "").strip()
+    cta = {
+        "fr": "🧠 Abonne-toi pour ton check-up mental quotidien",
+        "ar": "🧠 تابع لاختبار انحياز عقلك يومياً",
+    }.get(lang, "🧠 Follow for a daily brain bias check")
+    text = f"{title}\n\n{cta}\n\n{tags}".strip()
+    if len(text) > MAX_CAPTION:
+        text = f"{title}\n\n{tags}".strip()
     return text[:MAX_CAPTION]
 
 
@@ -172,7 +179,7 @@ def upload(lang: str, video: Path, meta: dict, privacy: str, client: httpx.Clien
     if size > MAX_SINGLE_CHUNK:
         raise TikTokError(f"{video.name} is {size >> 20} MB; chunked upload above 64 MB is not implemented")
     init = _check(c.post(f"{API}/v2/post/publish/video/init/", headers=headers, json={
-        "post_info": {"title": build_caption(meta), "privacy_level": chosen, "disable_duet": False,
+        "post_info": {"title": build_caption(meta, lang), "privacy_level": chosen, "disable_duet": False,
                       "disable_comment": False, "disable_stitch": False},
         "source_info": {"source": "FILE_UPLOAD", "video_size": size, "chunk_size": size, "total_chunk_count": 1},
     }))["data"]

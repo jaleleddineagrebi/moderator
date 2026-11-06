@@ -44,7 +44,7 @@ FULL NARRATION:
 
 For each language, write natively (not a literal translation):
 - title: max 55 characters (so it never truncates on mobile Shorts feed), strong curiosity gap ("Why Your Brain...", "The Hidden Trick..."), accurate to the video
-- description: 3-4 short lines; Line 1 MUST be a quick relatable question that sparks viewer comments (e.g., "Has this ever happened to you? 👇"); the last line MUST be a short, specific invitation to follow the channel for more (tied to the topic, e.g. "Follow for the next one 🔔"); no links; no claims the video does not make
+- description: 3-4 short lines; Line 1 MUST be a quick relatable question that sparks viewer comments (e.g., "Has this ever happened to you? 👇"); the last line MUST be an engaging, high-converting call-to-action to follow for a daily brain bias check (e.g. "🧠 Follow for a daily brain bias check 👇", in FR: "🧠 Abonne-toi pour ton check-up mental quotidien 👇", in AR: "🧠 تابع لاختبار انحياز عقلك يومياً 👇"); no links; no claims the video does not make
 - hashtags: 4-6, always include #Shorts first plus high-volume niche hashtags{ar_tag_note}
 - tags: 10-15 high-intent search phrases people actually type on YouTube
 - thumbnail_text: 2-4 words, high-contrast curiosity punchline
