@@ -1,0 +1,555 @@
+{
+  "voice": "en-US-AndrewMultilingualNeural",
+  "duration": 40.608073,
+  "scenes": [
+    {
+      "scene": "scene_01",
+      "start": 0.0,
+      "end": 1.872,
+      "words": [
+        {
+          "start": 0.087,
+          "end": 0.387,
+          "text": "Stop"
+        },
+        {
+          "start": 0.388,
+          "end": 0.575,
+          "text": "trying"
+        },
+        {
+          "start": 0.575,
+          "end": 0.612,
+          "text": "to"
+        },
+        {
+          "start": 0.625,
+          "end": 0.713,
+          "text": "be"
+        },
+        {
+          "start": 0.713,
+          "end": 1.275,
+          "text": "perfect"
+        }
+      ]
+    },
+    {
+      "scene": "scene_02",
+      "start": 2.052,
+      "end": 8.652,
+      "words": [
+        {
+          "start": 2.177,
+          "end": 2.377,
+          "text": "Here"
+        },
+        {
+          "start": 2.39,
+          "end": 2.54,
+          "text": "is"
+        },
+        {
+          "start": 2.539,
+          "end": 3.002,
+          "text": "why"
+        },
+        {
+          "start": 3.54,
+          "end": 3.627,
+          "text": "when"
+        },
+        {
+          "start": 3.627,
+          "end": 3.677,
+          "text": "a"
+        },
+        {
+          "start": 3.689,
+          "end": 4.052,
+          "text": "highly"
+        },
+        {
+          "start": 4.052,
+          "end": 4.539,
+          "text": "competent"
+        },
+        {
+          "start": 4.539,
+          "end": 4.977,
+          "text": "person"
+        },
+        {
+          "start": 5.215,
+          "end": 5.389,
+          "text": "makes"
+        },
+        {
+          "start": 5.389,
+          "end": 5.439,
+          "text": "a"
+        },
+        {
+          "start": 5.44,
+          "end": 5.864,
+          "text": "tiny"
+        },
+        {
+          "start": 5.864,
+          "end": 6.402,
+          "text": "blunder"
+        },
+        {
+          "start": 6.815,
+          "end": 6.952,
+          "text": "we"
+        },
+        {
+          "start": 6.952,
+          "end": 7.252,
+          "text": "actually"
+        },
+        {
+          "start": 7.252,
+          "end": 7.477,
+          "text": "like"
+        },
+        {
+          "start": 7.49,
+          "end": 7.627,
+          "text": "them"
+        },
+        {
+          "start": 7.627,
+          "end": 7.852,
+          "text": "much"
+        },
+        {
+          "start": 7.864,
+          "end": 8.289,
+          "text": "more"
+        }
+      ]
+    },
+    {
+      "scene": "scene_03",
+      "start": 8.832,
+      "end": 15.0,
+      "words": [
+        {
+          "start": 8.919,
+          "end": 9.007,
+          "text": "It’s"
+        },
+        {
+          "start": 9.007,
+          "end": 9.182,
+          "text": "called"
+        },
+        {
+          "start": 9.182,
+          "end": 9.257,
+          "text": "the"
+        },
+        {
+          "start": 9.257,
+          "end": 9.757,
+          "text": "Pratfall"
+        },
+        {
+          "start": 9.757,
+          "end": 10.245,
+          "text": "Effect"
+        },
+        {
+          "start": 10.657,
+          "end": 10.857,
+          "text": "These"
+        },
+        {
+          "start": 10.87,
+          "end": 11.182,
+          "text": "small"
+        },
+        {
+          "start": 11.182,
+          "end": 11.682,
+          "text": "mistakes"
+        },
+        {
+          "start": 11.794,
+          "end": 11.982,
+          "text": "make"
+        },
+        {
+          "start": 11.982,
+          "end": 12.094,
+          "text": "you"
+        },
+        {
+          "start": 12.095,
+          "end": 12.47,
+          "text": "seem"
+        },
+        {
+          "start": 12.482,
+          "end": 13.007,
+          "text": "human"
+        },
+        {
+          "start": 13.357,
+          "end": 13.457,
+          "text": "and"
+        },
+        {
+          "start": 13.457,
+          "end": 13.894,
+          "text": "far"
+        },
+        {
+          "start": 13.894,
+          "end": 14.057,
+          "text": "more"
+        },
+        {
+          "start": 14.057,
+          "end": 14.644,
+          "text": "approachable"
+        }
+      ]
+    },
+    {
+      "scene": "scene_04",
+      "start": 15.18,
+      "end": 22.428,
+      "words": [
+        {
+          "start": 15.28,
+          "end": 15.543,
+          "text": "Total"
+        },
+        {
+          "start": 15.542,
+          "end": 16.205,
+          "text": "perfection"
+        },
+        {
+          "start": 16.205,
+          "end": 16.555,
+          "text": "acts"
+        },
+        {
+          "start": 16.555,
+          "end": 16.705,
+          "text": "like"
+        },
+        {
+          "start": 16.705,
+          "end": 16.767,
+          "text": "a"
+        },
+        {
+          "start": 16.767,
+          "end": 17.155,
+          "text": "wall"
+        },
+        {
+          "start": 17.593,
+          "end": 17.718,
+          "text": "but"
+        },
+        {
+          "start": 17.718,
+          "end": 18.055,
+          "text": "showing"
+        },
+        {
+          "start": 18.055,
+          "end": 18.93,
+          "text": "vulnerability"
+        },
+        {
+          "start": 19.268,
+          "end": 19.368,
+          "text": "is"
+        },
+        {
+          "start": 19.368,
+          "end": 19.48,
+          "text": "the"
+        },
+        {
+          "start": 19.492,
+          "end": 20.018,
+          "text": "bridge"
+        },
+        {
+          "start": 20.018,
+          "end": 20.23,
+          "text": "that"
+        },
+        {
+          "start": 20.23,
+          "end": 20.63,
+          "text": "builds"
+        },
+        {
+          "start": 20.755,
+          "end": 21.118,
+          "text": "instant"
+        },
+        {
+          "start": 21.118,
+          "end": 21.467,
+          "text": "social"
+        },
+        {
+          "start": 21.48,
+          "end": 22.055,
+          "text": "trust"
+        }
+      ]
+    },
+    {
+      "scene": "scene_05",
+      "start": 22.608,
+      "end": 30.12,
+      "words": [
+        {
+          "start": 22.708,
+          "end": 23.433,
+          "text": "Psychologists"
+        },
+        {
+          "start": 23.433,
+          "end": 24.12,
+          "text": "discovered"
+        },
+        {
+          "start": 24.358,
+          "end": 24.533,
+          "text": "that"
+        },
+        {
+          "start": 24.546,
+          "end": 25.158,
+          "text": "audiences"
+        },
+        {
+          "start": 25.17,
+          "end": 25.608,
+          "text": "preferred"
+        },
+        {
+          "start": 25.608,
+          "end": 25.733,
+          "text": "an"
+        },
+        {
+          "start": 25.833,
+          "end": 26.345,
+          "text": "expert"
+        },
+        {
+          "start": 26.358,
+          "end": 26.546,
+          "text": "who"
+        },
+        {
+          "start": 26.546,
+          "end": 26.996,
+          "text": "spilled"
+        },
+        {
+          "start": 26.996,
+          "end": 27.595,
+          "text": "coffee"
+        },
+        {
+          "start": 27.608,
+          "end": 27.871,
+          "text": "over"
+        },
+        {
+          "start": 27.883,
+          "end": 28.208,
+          "text": "one"
+        },
+        {
+          "start": 28.22,
+          "end": 28.308,
+          "text": "who"
+        },
+        {
+          "start": 28.308,
+          "end": 28.458,
+          "text": "was"
+        },
+        {
+          "start": 28.47,
+          "end": 29.046,
+          "text": "completely"
+        },
+        {
+          "start": 29.058,
+          "end": 29.746,
+          "text": "flawless"
+        }
+      ]
+    },
+    {
+      "scene": "scene_06",
+      "start": 30.3,
+      "end": 36.012,
+      "words": [
+        {
+          "start": 30.413,
+          "end": 30.563,
+          "text": "So"
+        },
+        {
+          "start": 30.563,
+          "end": 30.838,
+          "text": "stop"
+        },
+        {
+          "start": 30.837,
+          "end": 31.112,
+          "text": "hiding"
+        },
+        {
+          "start": 31.112,
+          "end": 31.212,
+          "text": "your"
+        },
+        {
+          "start": 31.225,
+          "end": 31.688,
+          "text": "slips"
+        },
+        {
+          "start": 31.7,
+          "end": 31.775,
+          "text": "and"
+        },
+        {
+          "start": 31.788,
+          "end": 32.387,
+          "text": "trips"
+        },
+        {
+          "start": 32.787,
+          "end": 32.862,
+          "text": "They"
+        },
+        {
+          "start": 32.862,
+          "end": 32.938,
+          "text": "are"
+        },
+        {
+          "start": 32.95,
+          "end": 33.525,
+          "text": "exactly"
+        },
+        {
+          "start": 33.537,
+          "end": 33.65,
+          "text": "what"
+        },
+        {
+          "start": 33.65,
+          "end": 33.875,
+          "text": "make"
+        },
+        {
+          "start": 34.0,
+          "end": 34.338,
+          "text": "others"
+        },
+        {
+          "start": 34.337,
+          "end": 34.662,
+          "text": "feel"
+        },
+        {
+          "start": 34.675,
+          "end": 35.075,
+          "text": "safe"
+        },
+        {
+          "start": 35.075,
+          "end": 35.438,
+          "text": "around"
+        },
+        {
+          "start": 35.45,
+          "end": 35.65,
+          "text": "you"
+        }
+      ]
+    },
+    {
+      "scene": "scene_07",
+      "start": 36.192,
+      "end": 40.608,
+      "words": [
+        {
+          "start": 36.355,
+          "end": 36.63,
+          "text": "Follow"
+        },
+        {
+          "start": 36.63,
+          "end": 36.78,
+          "text": "for"
+        },
+        {
+          "start": 36.78,
+          "end": 36.83,
+          "text": "a"
+        },
+        {
+          "start": 36.842,
+          "end": 37.142,
+          "text": "daily"
+        },
+        {
+          "start": 37.155,
+          "end": 37.642,
+          "text": "brain"
+        },
+        {
+          "start": 37.754,
+          "end": 38.105,
+          "text": "bias"
+        },
+        {
+          "start": 38.105,
+          "end": 38.555,
+          "text": "check"
+        },
+        {
+          "start": 38.967,
+          "end": 39.267,
+          "text": "Because"
+        },
+        {
+          "start": 39.279,
+          "end": 39.73,
+          "text": "honestly"
+        },
+        {
+          "start": 39.742,
+          "end": 39.892,
+          "text": "you"
+        },
+        {
+          "start": 39.892,
+          "end": 40.254,
+          "text": "should"
+        }
+      ]
+    }
+  ]
+}
