@@ -9,7 +9,7 @@ from PIL import Image, ImageDraw, ImageFilter
 from moderator.engine import llm as llm_mod
 from moderator.engine.agent import Agent, StepContext
 from moderator.edits import DIFFERENT_CLIP, OWNER_PREFIX
-from moderator.tools import ffmpeg, stock, visual_rules
+from moderator.tools import ffmpeg, stock, visual_history, visual_rules
 
 OVERRIDES = "assets/scene_overrides.json"
 OVERRIDE_SCHEMA = {
@@ -63,8 +63,11 @@ def generated_background(path, seed: int) -> None:
     """Soft gradient with blurred light blobs: neutral, original, safe behind bold captions."""
     rnd = random.Random(seed)
     hue = rnd.random()
-    top = tuple(int(c * 255) for c in colorsys.hsv_to_rgb(hue, 0.55, 0.35))
-    bottom = tuple(int(c * 255) for c in colorsys.hsv_to_rgb((hue + 0.12) % 1, 0.65, 0.12))
+    sat = rnd.uniform(0.45, 0.75)
+    val = rnd.uniform(0.25, 0.45)
+    top = tuple(int(c * 255) for c in colorsys.hsv_to_rgb(hue, sat, val))
+    bottom_hue = (hue + rnd.uniform(0.12, 0.35)) % 1
+    bottom = tuple(int(c * 255) for c in colorsys.hsv_to_rgb(bottom_hue, min(1.0, sat + 0.1), val * 0.4))
     img = Image.new("RGB", (1080, 1920))
     draw = ImageDraw.Draw(img)
     for y in range(1920):
@@ -72,12 +75,14 @@ def generated_background(path, seed: int) -> None:
         draw.line([(0, y), (1080, y)], fill=tuple(int(top[i] * (1 - k) + bottom[i] * k) for i in range(3)))
     glow = Image.new("RGB", (1080, 1920))
     gd = ImageDraw.Draw(glow)
-    for _ in range(9):
-        r = rnd.randint(120, 360)
-        x, y = rnd.randint(-100, 1180), rnd.randint(-100, 2020)
-        c = tuple(int(v * 255) for v in colorsys.hsv_to_rgb((hue + rnd.uniform(-0.1, 0.2)) % 1, 0.5, 0.9))
+    blob_count = rnd.randint(6, 12)
+    for _ in range(blob_count):
+        r = rnd.randint(120, 380)
+        x, y = rnd.randint(-120, 1200), rnd.randint(-120, 2040)
+        blob_hue = (hue + rnd.uniform(-0.25, 0.25)) % 1
+        c = tuple(int(v * 255) for v in colorsys.hsv_to_rgb(blob_hue, rnd.uniform(0.4, 0.8), rnd.uniform(0.6, 0.95)))
         gd.ellipse([x - r, y - r, x + r, y + r], fill=c)
-    img = Image.blend(img, glow.filter(ImageFilter.GaussianBlur(120)), 0.35)
+    img = Image.blend(img, glow.filter(ImageFilter.GaussianBlur(120)), 0.38)
     img.save(path)
 
 
@@ -117,7 +122,10 @@ class Handler(Agent):
 
         scenes = script["scenes"]
         await self._apply_owner_overrides(ctx, scenes)
-        used: set[str] = set()
+        historical_used = visual_history.recent_used_pages()
+        used: set[str] = set(historical_used)
+        if historical_used:
+            ctx.log(f"Visual diversity: excluding {len(historical_used)} footage sources used in recent Shorts")
         keep: dict[str, dict] = {}  # scene id -> license entry of a clip reused as is
         prev_lic_path = ctx.run_dir / "assets/licenses.json"
         if ctx.feedback and prev_lic_path.exists():
@@ -173,6 +181,7 @@ class Handler(Agent):
         clips = await asyncio.gather(*(produce(i, s) for i, s in enumerate(scenes)))
         licenses.sort(key=lambda x: x["scene"])
         lic_path = ctx.write_json("assets/licenses.json", licenses)
+        visual_history.record_visuals(ctx.store.data["run_id"], licenses)
         sheet = await self._contact_sheet(ctx, clips)
         return {"contact_sheet": sheet, "scenes": clips, "licenses": lic_path}
 
@@ -180,9 +189,25 @@ class Handler(Agent):
         if tier == "nano_banana":
             png = ctx.path(f"assets/raw/{scene['id']}_banana.png")
             fb = f"\nRevision note: {ctx.feedback[-1]['comment']}" if ctx.feedback else ""
+            camera_angles = [
+                "cinematic wide establishing shot, detailed environment",
+                "dynamic eye-level depth of field, focused subject",
+                "dramatic low-angle upward perspective",
+                "intimate atmospheric macro close-up detail",
+                "elevated overhead aerial viewpoint",
+            ]
+            lightings = [
+                "warm golden-hour rim lighting with moody shadows",
+                "crisp volumetric daylight with natural highlights",
+                "deep twilight ambient lighting with rich contrast",
+                "clean minimalist studio lighting with soft diffusion",
+            ]
+            angle = camera_angles[i % len(camera_angles)]
+            lighting = lightings[(i + zlib.crc32(title.encode())) % len(lightings)]
             prompt = (
                 f"Vertical 9:16 cinematic visual for a faceless YouTube Short titled '{title}'. "
                 f"Scene {i + 1}: {scene['visual']['description']}. "
+                f"Composition: {angle}, {lighting}. "
                 f"Style: {ctx.params.get('style', 'cinematic, moody lighting, clean composition')}. "
                 "IMPORTANT: Do NOT render any text, letters, numbers, watermarks, brand logos, or recognizable celebrities. "
                 f"Leave clean breathing room in the upper and lower thirds for burned-in captions. "
@@ -229,9 +254,15 @@ class Handler(Agent):
 
                         for attempt_idx in range(2):
                             async with pick_lock:
-                                pick = next((r for r in results
-                                             if r["page"] not in used and visual_rules.stock_allowed(r)), None)
-                                if pick:
+                                candidates = [
+                                    r for r in results
+                                    if r["page"] not in used and visual_rules.stock_allowed(r)
+                                ]
+                                pick = None
+                                if candidates:
+                                    # Vary index among allowable candidates so identical queries don't always pick candidate 0
+                                    pick_idx = (i + zlib.crc32(f"{title}:{term}".encode())) % min(len(candidates), 3)
+                                    pick = candidates[pick_idx]
                                     used.add(pick["page"])
                             if not pick:
                                 break

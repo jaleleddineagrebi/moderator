@@ -84,7 +84,7 @@ Rules:
 - visual: describe dynamic moving B-roll footage findable on free stock video sites (Pexels/Pixabay/Commons). No logos, brands, celebrities, film characters.
   People rule for every visual and search term: {PEOPLE_RULE} Never put "woman", "girl" or similar in search_terms.
   Set `prefer` to `"video"` so scenes use moving video clips rather than static images.
-  Provide 3-4 short (2-3 word) English `search_terms` using concrete filmable subjects with motion ("person scrolling phone", "crowded crosswalk", "clock hands moving"); make the last term a broad 2-word B-roll query ("city street", "ocean waves", "walking crowd") guaranteed to match stock video libraries.
+  Visual diversity requirement: Ensure each scene has completely distinct visual subjects, environments, and metaphors. Provide 3-4 short (2-3 word) English `search_terms` using concrete filmable subjects with motion tailored strictly to that scene's unique narrative beat (e.g. "person typing keyboard", "crowded metro train", "hourglass sand falling"). NEVER reuse the same search term across different scenes, and avoid repetitive clichés.
 - Facts must be accurate. No medical, financial or religious claims that could mislead.
 
 {previous}
