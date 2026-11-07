@@ -19,4 +19,6 @@ result.txt
 node_modules/
 .angular/
 dist/
+_site/
+plugins/
 package-lock.json
