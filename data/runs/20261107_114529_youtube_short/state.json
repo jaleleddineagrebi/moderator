@@ -32,13 +32,13 @@
   "ended_at": null,
   "revision_rounds": 0,
   "cost": {
-    "total_usd": 0.027736,
+    "total_usd": 0.03006,
     "budget_usd": 1.0,
     "by_agent": {
       "trend_researcher": 0.006675,
       "scriptwriter": 0.018485,
       "packaging": 0.000873,
-      "qa_reviewer": 0.001703
+      "qa_reviewer": 0.004027
     }
   },
   "agents": {
@@ -524,7 +524,9 @@
         }
       },
       "outputs": {
+        "voiceover_en": "voiceover_en.mp3",
         "timings_en": "timings_en.json",
+        "voiceover_fr": "voiceover_fr.mp3",
         "timings_fr": "timings_fr.json"
       },
       "logs": [
@@ -711,7 +713,9 @@
         "strategy": "transitions"
       },
       "outputs": {
+        "video_en": "final_short_en.mp4",
         "captions_en": "captions_en.ass",
+        "video_fr": "final_short_fr.mp4",
         "captions_fr": "captions_fr.ass"
       },
       "logs": [
@@ -748,10 +752,10 @@
         "packaging"
       ],
       "checkpoint": "C",
-      "status": "running",
-      "progress": 60,
+      "status": "waiting_for_approval",
+      "progress": 100,
       "started_at": "2026-11-07T11:50:40+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-07T11:51:11+00:00",
       "attempt": 1,
       "retries": 0,
       "max_retries": 2,
@@ -767,7 +771,14 @@
         ],
         "metadata": "metadata.json"
       },
-      "outputs": {},
+      "outputs": {
+        "report": "qa_report.md",
+        "data": "qa_report.json",
+        "video_en": "final_short_en.mp4",
+        "video_fr": "final_short_fr.mp4",
+        "thumbnail_en": "thumbnail_en.png",
+        "thumbnail_fr": "thumbnail_fr.png"
+      },
       "logs": [
         {
           "ts": "2026-11-07T11:50:40+00:00",
@@ -788,11 +799,26 @@
           "ts": "2026-11-07T11:50:52+00:00",
           "level": "info",
           "msg": "Asking Gemini (gemini-3.8-flash, medium complexity, thinking low)"
+        },
+        {
+          "ts": "2026-11-07T11:51:11+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3-flash-preview) answered in 19.3s (tokens in 4618, out 5, thinking 0)"
+        },
+        {
+          "ts": "2026-11-07T11:51:11+00:00",
+          "level": "info",
+          "msg": "All checks passed"
+        },
+        {
+          "ts": "2026-11-07T11:51:11+00:00",
+          "level": "info",
+          "msg": "Finished, waiting for your approval"
         }
       ],
       "errors": [],
       "feedback": [],
-      "cost_usd": 0.001703
+      "cost_usd": 0.004027
     }
   },
   "checkpoints": {
@@ -839,18 +865,26 @@
       "type": "approve",
       "step": "qa",
       "route_to": "edit",
-      "status": "idle",
+      "status": "pending",
       "options": [],
       "choice": null,
       "comment": null,
       "decided_at": null
     }
   },
-  "notifications": [],
+  "notifications": [
+    {
+      "ts": "2026-11-07T11:51:11+00:00",
+      "level": "action",
+      "msg": "Approval needed: Approve the final videos (never uploaded without your OK)",
+      "step": "qa"
+    }
+  ],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-07T11:50:52+00:00",
+    "exported_at": "2026-11-07T11:51:23+00:00",
     "uploads": [],
-    "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/42369489469"
+    "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/42369489469",
+    "issue_url": "https://github.com/jaleleddineagrebi/moderator/issues/29"
   }
 }
