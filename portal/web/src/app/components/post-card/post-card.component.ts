@@ -24,7 +24,7 @@ import { Post } from '../../models/post.model';
         />
         <div class="image-overlay-chips">
           <mat-chip-set>
-            <mat-chip *ngFor="let tag of post.tags.slice(0, 2)" class="tag-chip">
+            <mat-chip *ngFor="let tag of (post.tags || []).slice(0, 2)" class="tag-chip">
               #{{ tag }}
             </mat-chip>
           </mat-chip-set>
