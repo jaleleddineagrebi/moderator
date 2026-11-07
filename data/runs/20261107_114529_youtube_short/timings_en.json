@@ -1,0 +1,542 @@
+{
+  "voice": "en-US-AndrewMultilingualNeural",
+  "duration": 39.780045,
+  "scenes": [
+    {
+      "scene": "scene_01",
+      "start": 0.0,
+      "end": 1.92,
+      "words": [
+        {
+          "start": 0.1,
+          "end": 0.213,
+          "text": "You"
+        },
+        {
+          "start": 0.212,
+          "end": 0.338,
+          "text": "aren't"
+        },
+        {
+          "start": 0.338,
+          "end": 0.912,
+          "text": "imagining"
+        },
+        {
+          "start": 0.912,
+          "end": 1.575,
+          "text": "things"
+        }
+      ]
+    },
+    {
+      "scene": "scene_02",
+      "start": 2.1,
+      "end": 5.82,
+      "words": [
+        {
+          "start": 2.2,
+          "end": 2.288,
+          "text": "That"
+        },
+        {
+          "start": 2.3,
+          "end": 2.812,
+          "text": "specific"
+        },
+        {
+          "start": 2.813,
+          "end": 3.038,
+          "text": "car"
+        },
+        {
+          "start": 3.05,
+          "end": 3.525,
+          "text": "model"
+        },
+        {
+          "start": 3.862,
+          "end": 4.125,
+          "text": "or"
+        },
+        {
+          "start": 4.125,
+          "end": 4.425,
+          "text": "rare"
+        },
+        {
+          "start": 4.437,
+          "end": 4.662,
+          "text": "word"
+        },
+        {
+          "start": 4.662,
+          "end": 4.738,
+          "text": "you"
+        },
+        {
+          "start": 4.738,
+          "end": 4.912,
+          "text": "just"
+        },
+        {
+          "start": 4.925,
+          "end": 5.45,
+          "text": "discovered"
+        }
+      ]
+    },
+    {
+      "scene": "scene_03",
+      "start": 6.0,
+      "end": 10.656,
+      "words": [
+        {
+          "start": 6.1,
+          "end": 6.425,
+          "text": "Suddenly"
+        },
+        {
+          "start": 6.425,
+          "end": 6.525,
+          "text": "it’s"
+        },
+        {
+          "start": 6.537,
+          "end": 6.887,
+          "text": "popping"
+        },
+        {
+          "start": 6.9,
+          "end": 7.038,
+          "text": "up"
+        },
+        {
+          "start": 7.038,
+          "end": 7.213,
+          "text": "on"
+        },
+        {
+          "start": 7.337,
+          "end": 7.625,
+          "text": "every"
+        },
+        {
+          "start": 7.625,
+          "end": 7.95,
+          "text": "street"
+        },
+        {
+          "start": 7.962,
+          "end": 8.387,
+          "text": "corner"
+        },
+        {
+          "start": 8.663,
+          "end": 9.013,
+          "text": "book"
+        },
+        {
+          "start": 9.288,
+          "end": 9.363,
+          "text": "and"
+        },
+        {
+          "start": 9.375,
+          "end": 9.788,
+          "text": "screen"
+        },
+        {
+          "start": 9.788,
+          "end": 9.875,
+          "text": "you"
+        },
+        {
+          "start": 9.875,
+          "end": 10.275,
+          "text": "see"
+        }
+      ]
+    },
+    {
+      "scene": "scene_04",
+      "start": 10.836,
+      "end": 15.876,
+      "words": [
+        {
+          "start": 10.936,
+          "end": 11.036,
+          "text": "It"
+        },
+        {
+          "start": 11.036,
+          "end": 11.311,
+          "text": "feels"
+        },
+        {
+          "start": 11.311,
+          "end": 11.424,
+          "text": "like"
+        },
+        {
+          "start": 11.424,
+          "end": 11.486,
+          "text": "a"
+        },
+        {
+          "start": 11.498,
+          "end": 11.999,
+          "text": "glitch"
+        },
+        {
+          "start": 12.011,
+          "end": 12.086,
+          "text": "in"
+        },
+        {
+          "start": 12.086,
+          "end": 12.148,
+          "text": "the"
+        },
+        {
+          "start": 12.148,
+          "end": 12.923,
+          "text": "matrix"
+        },
+        {
+          "start": 13.124,
+          "end": 13.236,
+          "text": "but"
+        },
+        {
+          "start": 13.236,
+          "end": 13.336,
+          "text": "it's"
+        },
+        {
+          "start": 13.349,
+          "end": 13.749,
+          "text": "actually"
+        },
+        {
+          "start": 13.761,
+          "end": 13.861,
+          "text": "the"
+        },
+        {
+          "start": 13.874,
+          "end": 14.749,
+          "text": "Baader-Meinhof"
+        },
+        {
+          "start": 14.761,
+          "end": 15.511,
+          "text": "phenomenon"
+        }
+      ]
+    },
+    {
+      "scene": "scene_05",
+      "start": 16.056,
+      "end": 22.488,
+      "words": [
+        {
+          "start": 16.143,
+          "end": 16.218,
+          "text": "Your"
+        },
+        {
+          "start": 16.219,
+          "end": 16.581,
+          "text": "brain"
+        },
+        {
+          "start": 16.581,
+          "end": 16.681,
+          "text": "is"
+        },
+        {
+          "start": 16.693,
+          "end": 17.318,
+          "text": "constantly"
+        },
+        {
+          "start": 17.331,
+          "end": 18.006,
+          "text": "bombarded"
+        },
+        {
+          "start": 18.006,
+          "end": 18.181,
+          "text": "with"
+        },
+        {
+          "start": 18.194,
+          "end": 18.569,
+          "text": "data"
+        },
+        {
+          "start": 18.944,
+          "end": 19.118,
+          "text": "so"
+        },
+        {
+          "start": 19.118,
+          "end": 19.194,
+          "text": "it"
+        },
+        {
+          "start": 19.206,
+          "end": 19.718,
+          "text": "filters"
+        },
+        {
+          "start": 19.719,
+          "end": 19.844,
+          "text": "out"
+        },
+        {
+          "start": 19.856,
+          "end": 20.319,
+          "text": "almost"
+        },
+        {
+          "start": 20.456,
+          "end": 21.081,
+          "text": "everything"
+        },
+        {
+          "start": 21.156,
+          "end": 21.244,
+          "text": "to"
+        },
+        {
+          "start": 21.244,
+          "end": 21.644,
+          "text": "save"
+        },
+        {
+          "start": 21.656,
+          "end": 22.106,
+          "text": "energy"
+        }
+      ]
+    },
+    {
+      "scene": "scene_06",
+      "start": 22.668,
+      "end": 29.484,
+      "words": [
+        {
+          "start": 22.768,
+          "end": 22.918,
+          "text": "Once"
+        },
+        {
+          "start": 22.918,
+          "end": 23.043,
+          "text": "you"
+        },
+        {
+          "start": 23.056,
+          "end": 23.368,
+          "text": "label"
+        },
+        {
+          "start": 23.368,
+          "end": 23.843,
+          "text": "something"
+        },
+        {
+          "start": 23.843,
+          "end": 24.143,
+          "text": "as"
+        },
+        {
+          "start": 24.143,
+          "end": 24.556,
+          "text": "new"
+        },
+        {
+          "start": 24.555,
+          "end": 24.693,
+          "text": "or"
+        },
+        {
+          "start": 24.706,
+          "end": 25.393,
+          "text": "interesting"
+        },
+        {
+          "start": 25.818,
+          "end": 25.918,
+          "text": "your"
+        },
+        {
+          "start": 25.918,
+          "end": 26.768,
+          "text": "subconscious"
+        },
+        {
+          "start": 26.931,
+          "end": 27.243,
+          "text": "starts"
+        },
+        {
+          "start": 27.243,
+          "end": 27.905,
+          "text": "highlighting"
+        },
+        {
+          "start": 28.043,
+          "end": 28.381,
+          "text": "every"
+        },
+        {
+          "start": 28.393,
+          "end": 28.805,
+          "text": "instance"
+        },
+        {
+          "start": 28.818,
+          "end": 28.931,
+          "text": "of"
+        },
+        {
+          "start": 28.931,
+          "end": 29.106,
+          "text": "it"
+        }
+      ]
+    },
+    {
+      "scene": "scene_07",
+      "start": 29.664,
+      "end": 35.304,
+      "words": [
+        {
+          "start": 29.764,
+          "end": 29.914,
+          "text": "These"
+        },
+        {
+          "start": 29.914,
+          "end": 30.102,
+          "text": "things"
+        },
+        {
+          "start": 30.102,
+          "end": 30.214,
+          "text": "were"
+        },
+        {
+          "start": 30.214,
+          "end": 30.664,
+          "text": "always"
+        },
+        {
+          "start": 30.664,
+          "end": 30.952,
+          "text": "there"
+        },
+        {
+          "start": 31.452,
+          "end": 31.552,
+          "text": "your"
+        },
+        {
+          "start": 31.551,
+          "end": 31.939,
+          "text": "brain"
+        },
+        {
+          "start": 31.952,
+          "end": 32.327,
+          "text": "simply"
+        },
+        {
+          "start": 32.339,
+          "end": 32.701,
+          "text": "stopped"
+        },
+        {
+          "start": 32.714,
+          "end": 33.176,
+          "text": "treating"
+        },
+        {
+          "start": 33.177,
+          "end": 33.439,
+          "text": "them"
+        },
+        {
+          "start": 33.639,
+          "end": 33.776,
+          "text": "as"
+        },
+        {
+          "start": 33.789,
+          "end": 34.377,
+          "text": "background"
+        },
+        {
+          "start": 34.377,
+          "end": 34.952,
+          "text": "noise"
+        }
+      ]
+    },
+    {
+      "scene": "scene_08",
+      "start": 35.484,
+      "end": 39.78,
+      "words": [
+        {
+          "start": 35.622,
+          "end": 35.897,
+          "text": "Follow"
+        },
+        {
+          "start": 35.896,
+          "end": 35.946,
+          "text": "to"
+        },
+        {
+          "start": 35.959,
+          "end": 36.309,
+          "text": "spot"
+        },
+        {
+          "start": 36.309,
+          "end": 36.422,
+          "text": "your"
+        },
+        {
+          "start": 36.422,
+          "end": 36.834,
+          "text": "mental"
+        },
+        {
+          "start": 36.834,
+          "end": 37.822,
+          "text": "blindspots"
+        },
+        {
+          "start": 38.009,
+          "end": 38.221,
+          "text": "and"
+        },
+        {
+          "start": 38.296,
+          "end": 38.971,
+          "text": "understand"
+        },
+        {
+          "start": 38.971,
+          "end": 39.409,
+          "text": "why"
+        }
+      ]
+    }
+  ]
+}
