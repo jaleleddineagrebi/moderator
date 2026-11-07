@@ -1,0 +1,433 @@
+{
+  "voice": "fr-FR-DeniseNeural",
+  "duration": 36.180658,
+  "scenes": [
+    {
+      "scene": "scene_01",
+      "start": 0.0,
+      "end": 2.784,
+      "words": [
+        {
+          "start": 0.1,
+          "end": 0.488,
+          "text": "Arrête"
+        },
+        {
+          "start": 0.5,
+          "end": 0.637,
+          "text": "de"
+        },
+        {
+          "start": 0.65,
+          "end": 1.012,
+          "text": "forcer"
+        },
+        {
+          "start": 1.025,
+          "end": 1.162,
+          "text": "tes"
+        },
+        {
+          "start": 1.175,
+          "end": 1.913,
+          "text": "réflexions"
+        }
+      ]
+    },
+    {
+      "scene": "scene_02",
+      "start": 2.964,
+      "end": 8.676,
+      "words": [
+        {
+          "start": 3.064,
+          "end": 3.239,
+          "text": "Tu"
+        },
+        {
+          "start": 3.251,
+          "end": 3.564,
+          "text": "bloques"
+        },
+        {
+          "start": 3.577,
+          "end": 3.714,
+          "text": "des"
+        },
+        {
+          "start": 3.726,
+          "end": 3.964,
+          "text": "heures"
+        },
+        {
+          "start": 3.976,
+          "end": 4.252,
+          "text": "devant"
+        },
+        {
+          "start": 4.264,
+          "end": 4.414,
+          "text": "ton"
+        },
+        {
+          "start": 4.426,
+          "end": 4.826,
+          "text": "écran"
+        },
+        {
+          "start": 5.102,
+          "end": 5.276,
+          "text": "puis"
+        },
+        {
+          "start": 5.289,
+          "end": 5.689,
+          "text": "soudain"
+        },
+        {
+          "start": 6.014,
+          "end": 6.676,
+          "text": "l'illumination"
+        },
+        {
+          "start": 6.689,
+          "end": 7.026,
+          "text": "jaillit"
+        },
+        {
+          "start": 7.039,
+          "end": 7.177,
+          "text": "sous"
+        },
+        {
+          "start": 7.189,
+          "end": 7.326,
+          "text": "l'eau"
+        },
+        {
+          "start": 7.339,
+          "end": 7.814,
+          "text": "chaude"
+        }
+      ]
+    },
+    {
+      "scene": "scene_03",
+      "start": 8.856,
+      "end": 16.56,
+      "words": [
+        {
+          "start": 8.956,
+          "end": 9.131,
+          "text": "C'est"
+        },
+        {
+          "start": 9.143,
+          "end": 9.469,
+          "text": "l'effet"
+        },
+        {
+          "start": 9.481,
+          "end": 9.931,
+          "text": "douche"
+        },
+        {
+          "start": 10.794,
+          "end": 10.943,
+          "text": "Quand"
+        },
+        {
+          "start": 10.956,
+          "end": 11.156,
+          "text": "une"
+        },
+        {
+          "start": 11.168,
+          "end": 11.406,
+          "text": "tâche"
+        },
+        {
+          "start": 11.418,
+          "end": 12.006,
+          "text": "automatique"
+        },
+        {
+          "start": 12.019,
+          "end": 12.394,
+          "text": "libère"
+        },
+        {
+          "start": 12.406,
+          "end": 12.544,
+          "text": "ton"
+        },
+        {
+          "start": 12.556,
+          "end": 13.144,
+          "text": "attention"
+        },
+        {
+          "start": 13.468,
+          "end": 13.619,
+          "text": "ton"
+        },
+        {
+          "start": 13.631,
+          "end": 13.944,
+          "text": "réseau"
+        },
+        {
+          "start": 13.956,
+          "end": 14.518,
+          "text": "cérébral"
+        },
+        {
+          "start": 14.531,
+          "end": 14.706,
+          "text": "par"
+        },
+        {
+          "start": 14.718,
+          "end": 15.018,
+          "text": "défaut"
+        },
+        {
+          "start": 15.031,
+          "end": 15.693,
+          "text": "s'active"
+        }
+      ]
+    },
+    {
+      "scene": "scene_04",
+      "start": 16.74,
+      "end": 21.972,
+      "words": [
+        {
+          "start": 16.84,
+          "end": 17.052,
+          "text": "La"
+        },
+        {
+          "start": 17.065,
+          "end": 17.59,
+          "text": "dopamine"
+        },
+        {
+          "start": 17.603,
+          "end": 17.903,
+          "text": "monte"
+        },
+        {
+          "start": 17.915,
+          "end": 17.965,
+          "text": "et"
+        },
+        {
+          "start": 17.978,
+          "end": 18.14,
+          "text": "ton"
+        },
+        {
+          "start": 18.153,
+          "end": 18.74,
+          "text": "subconscient"
+        },
+        {
+          "start": 18.753,
+          "end": 19.24,
+          "text": "connecte"
+        },
+        {
+          "start": 19.253,
+          "end": 19.39,
+          "text": "des"
+        },
+        {
+          "start": 19.403,
+          "end": 19.678,
+          "text": "idées"
+        },
+        {
+          "start": 19.69,
+          "end": 20.14,
+          "text": "lointaines"
+        },
+        {
+          "start": 20.153,
+          "end": 20.228,
+          "text": "en"
+        },
+        {
+          "start": 20.24,
+          "end": 20.452,
+          "text": "toute"
+        },
+        {
+          "start": 20.465,
+          "end": 21.09,
+          "text": "liberté"
+        }
+      ]
+    },
+    {
+      "scene": "scene_05",
+      "start": 22.152,
+      "end": 28.344,
+      "words": [
+        {
+          "start": 22.252,
+          "end": 22.439,
+          "text": "Si"
+        },
+        {
+          "start": 22.452,
+          "end": 22.59,
+          "text": "tu"
+        },
+        {
+          "start": 22.602,
+          "end": 22.914,
+          "text": "bloques"
+        },
+        {
+          "start": 22.927,
+          "end": 23.14,
+          "text": "sur"
+        },
+        {
+          "start": 23.152,
+          "end": 23.214,
+          "text": "un"
+        },
+        {
+          "start": 23.227,
+          "end": 23.777,
+          "text": "problème"
+        },
+        {
+          "start": 24.077,
+          "end": 24.315,
+          "text": "arrête"
+        },
+        {
+          "start": 24.327,
+          "end": 25.014,
+          "text": "d'insister"
+        },
+        {
+          "start": 25.877,
+          "end": 26.065,
+          "text": "Pars"
+        },
+        {
+          "start": 26.077,
+          "end": 26.477,
+          "text": "marcher"
+        },
+        {
+          "start": 26.49,
+          "end": 26.577,
+          "text": "ou"
+        },
+        {
+          "start": 26.59,
+          "end": 26.727,
+          "text": "fais"
+        },
+        {
+          "start": 26.74,
+          "end": 26.84,
+          "text": "la"
+        },
+        {
+          "start": 26.852,
+          "end": 27.477,
+          "text": "vaisselle"
+        }
+      ]
+    },
+    {
+      "scene": "scene_06",
+      "start": 28.524,
+      "end": 36.18,
+      "words": [
+        {
+          "start": 28.624,
+          "end": 29.199,
+          "text": "L'éclair"
+        },
+        {
+          "start": 29.212,
+          "end": 29.336,
+          "text": "de"
+        },
+        {
+          "start": 29.349,
+          "end": 29.636,
+          "text": "génie"
+        },
+        {
+          "start": 29.649,
+          "end": 29.962,
+          "text": "frappe"
+        },
+        {
+          "start": 29.974,
+          "end": 30.124,
+          "text": "quand"
+        },
+        {
+          "start": 30.137,
+          "end": 30.274,
+          "text": "tu"
+        },
+        {
+          "start": 30.286,
+          "end": 30.537,
+          "text": "lâches"
+        },
+        {
+          "start": 30.549,
+          "end": 31.024,
+          "text": "prise"
+        },
+        {
+          "start": 31.886,
+          "end": 32.499,
+          "text": "Abonne-toi"
+        },
+        {
+          "start": 32.511,
+          "end": 32.699,
+          "text": "pour"
+        },
+        {
+          "start": 32.712,
+          "end": 33.049,
+          "text": "déjouer"
+        },
+        {
+          "start": 33.061,
+          "end": 33.199,
+          "text": "tes"
+        },
+        {
+          "start": 33.212,
+          "end": 33.424,
+          "text": "biais"
+        },
+        {
+          "start": 33.436,
+          "end": 33.861,
+          "text": "mentaux"
+        },
+        {
+          "start": 34.724,
+          "end": 35.299,
+          "text": "Alors"
+        }
+      ]
+    }
+  ]
+}
