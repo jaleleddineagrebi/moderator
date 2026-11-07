@@ -1,0 +1,52 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:02.96,Headline,,0,0,0,,{\fad(150,150)}Stop Forcing It
+Dialogue: 1,0:00:03.06,0:00:09.57,Headline,,0,0,0,,{\fad(150,150)}Shower Epiphanies
+Dialogue: 1,0:00:09.67,0:00:18.39,Headline,,0,0,0,,{\fad(150,150)}Default Mode Network
+Dialogue: 1,0:00:18.49,0:00:25.75,Headline,,0,0,0,,{\fad(150,150)}Subconscious Connections
+Dialogue: 1,0:00:25.85,0:00:33.47,Headline,,0,0,0,,{\fad(150,150)}Change The Task
+Dialogue: 1,0:00:33.57,0:00:42.49,Headline,,0,0,0,,{\fad(150,150)}Check Your Brain
+Dialogue: 0,0:00:00.10,0:00:01.07,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Stop forcing your
+Dialogue: 0,0:00:01.09,0:00:01.96,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}brain to think
+Dialogue: 0,0:00:03.11,0:00:03.71,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You stare at
+Dialogue: 0,0:00:03.73,0:00:04.40,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a screen for
+Dialogue: 0,0:00:04.41,0:00:05.26,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}hours with zero
+Dialogue: 0,0:00:05.28,0:00:06.71,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}answers then boom
+Dialogue: 0,0:00:06.94,0:00:07.92,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}pure genius under
+Dialogue: 0,0:00:07.94,0:00:08.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the shower
+Dialogue: 0,0:00:09.72,0:00:10.76,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Science calls this
+Dialogue: 0,0:00:10.77,0:00:11.85,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the shower effect
+Dialogue: 0,0:00:12.71,0:00:13.41,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}When a routine
+Dialogue: 0,0:00:13.42,0:00:14.60,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}task demands zero
+Dialogue: 0,0:00:14.61,0:00:15.94,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}focus your Default
+Dialogue: 0,0:00:15.95,0:00:17.40,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Mode Network activates
+Dialogue: 0,0:00:18.54,0:00:19.74,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Warm water releases
+Dialogue: 0,0:00:19.76,0:00:21.17,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}dopamine allowing your
+Dialogue: 0,0:00:21.18,0:00:22.01,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}resting mind to
+Dialogue: 0,0:00:22.02,0:00:23.32,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}connect distant ideas
+Dialogue: 0,0:00:23.33,0:00:24.76,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}in unexpected ways
+Dialogue: 0,0:00:25.90,0:00:26.69,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}So whenever you
+Dialogue: 0,0:00:26.70,0:00:27.76,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}get completely stuck
+Dialogue: 0,0:00:27.77,0:00:28.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}on a problem
+Dialogue: 0,0:00:28.62,0:00:29.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}stop grinding
+Dialogue: 0,0:00:30.40,0:00:30.94,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Go for a
+Dialogue: 0,0:00:30.95,0:00:31.80,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}walk or wash
+Dialogue: 0,0:00:31.81,0:00:32.48,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the dishes
+Dialogue: 0,0:00:33.62,0:00:34.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}True breakthroughs strike
+Dialogue: 0,0:00:34.84,0:00:35.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}when your attention
+Dialogue: 0,0:00:35.55,0:00:36.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}drifts
+Dialogue: 0,0:00:36.98,0:00:37.97,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Follow to master
+Dialogue: 0,0:00:37.98,0:00:39.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your mental blindspots
+Dialogue: 0,0:00:40.20,0:00:40.95,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Above all
