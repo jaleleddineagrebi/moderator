@@ -4,7 +4,7 @@ import { prisma } from "./prisma";
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
     // 1. Seed YouTube Shorts from Engine History
-    const short1 = await prisma.youtubeShort.upsert({
+    const short1 = await prisma.youTubeShort.upsert({
       where: { id: "20261102_171413_youtube_short" },
       update: {},
       create: {
@@ -18,7 +18,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       },
     });
 
-    const short2 = await prisma.youtubeShort.upsert({
+    const short2 = await prisma.youTubeShort.upsert({
       where: { id: "20261103_152749_youtube_short" },
       update: {},
       create: {
@@ -101,3 +101,4 @@ Introduce artificial friction: force yourself to identify at least one flaw in e
     return res.status(500).json({ error: error.message });
   }
 }
+
