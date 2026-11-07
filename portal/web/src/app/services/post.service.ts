@@ -22,14 +22,14 @@ export class PostService {
   }
 
   getPostBySlug(slug: string): Observable<Post | null> {
-    return this.http.get<Post>(`${this.apiUrl}/${slug}`).pipe(
+    return this.http.get<Post>(`${this.apiUrl}?slug=${slug}`).pipe(
       catchError(() => of(null))
     );
   }
 
   getReactions(postId: string): Observable<{ tallies: ReactionTally; userReaction: ReactionType | null }> {
     return this.http.get<{ tallies: ReactionTally; userReaction: ReactionType | null }>(
-      `${this.apiUrl}/${postId}/reactions`
+      `/api/reactions?postId=${postId}`
     ).pipe(
       catchError(() => of({
         tallies: { LIKE: 0, MIND_BLOWN: 0, INSIGHTFUL: 0, BRAIN_CHECK: 0 },
@@ -39,18 +39,18 @@ export class PostService {
   }
 
   toggleReaction(postId: string, type: ReactionType): Observable<any> {
-    return this.http.post(`${this.apiUrl}/${postId}/reactions`, { type });
+    return this.http.post('/api/reactions', { postId, type });
   }
 
   getComments(postId: string): Observable<Comment[]> {
-    return this.http.get<{ data: Comment[] }>(`${this.apiUrl}/${postId}/comments`).pipe(
+    return this.http.get<{ data: Comment[] }>(`/api/comments?postId=${postId}`).pipe(
       map(res => res.data),
       catchError(() => of([]))
     );
   }
 
   addComment(postId: string, content: string, parentId?: string): Observable<Comment> {
-    return this.http.post<Comment>(`${this.apiUrl}/${postId}/comments`, { content, parentId });
+    return this.http.post<Comment>('/api/comments', { postId, content, parentId });
   }
 }
 
