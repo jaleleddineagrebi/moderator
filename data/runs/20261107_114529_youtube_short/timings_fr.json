@@ -1,0 +1,487 @@
+{
+  "voice": "fr-FR-HenriNeural",
+  "duration": 34.500068,
+  "scenes": [
+    {
+      "scene": "scene_01",
+      "start": 0.0,
+      "end": 2.4,
+      "words": [
+        {
+          "start": 0.1,
+          "end": 0.25,
+          "text": "Tu"
+        },
+        {
+          "start": 0.263,
+          "end": 0.7,
+          "text": "n'imagines"
+        },
+        {
+          "start": 0.713,
+          "end": 0.85,
+          "text": "pas"
+        },
+        {
+          "start": 0.863,
+          "end": 1.025,
+          "text": "ces"
+        },
+        {
+          "start": 1.038,
+          "end": 1.513,
+          "text": "choses"
+        }
+      ]
+    },
+    {
+      "scene": "scene_02",
+      "start": 2.58,
+      "end": 6.228,
+      "words": [
+        {
+          "start": 2.68,
+          "end": 2.955,
+          "text": "Cette"
+        },
+        {
+          "start": 2.968,
+          "end": 3.318,
+          "text": "voiture"
+        },
+        {
+          "start": 3.33,
+          "end": 3.743,
+          "text": "précise"
+        },
+        {
+          "start": 3.755,
+          "end": 3.83,
+          "text": "ou"
+        },
+        {
+          "start": 3.842,
+          "end": 3.967,
+          "text": "ce"
+        },
+        {
+          "start": 3.98,
+          "end": 4.105,
+          "text": "mot"
+        },
+        {
+          "start": 4.118,
+          "end": 4.318,
+          "text": "rare"
+        },
+        {
+          "start": 4.33,
+          "end": 4.443,
+          "text": "que"
+        },
+        {
+          "start": 4.455,
+          "end": 4.58,
+          "text": "tu"
+        },
+        {
+          "start": 4.593,
+          "end": 4.743,
+          "text": "viens"
+        },
+        {
+          "start": 4.755,
+          "end": 5.355,
+          "text": "d'apprendre"
+        }
+      ]
+    },
+    {
+      "scene": "scene_03",
+      "start": 6.408,
+      "end": 11.112,
+      "words": [
+        {
+          "start": 6.508,
+          "end": 6.996,
+          "text": "Soudain"
+        },
+        {
+          "start": 7.258,
+          "end": 7.383,
+          "text": "tu"
+        },
+        {
+          "start": 7.396,
+          "end": 7.47,
+          "text": "les"
+        },
+        {
+          "start": 7.483,
+          "end": 7.646,
+          "text": "vois"
+        },
+        {
+          "start": 7.658,
+          "end": 8.096,
+          "text": "partout"
+        },
+        {
+          "start": 8.358,
+          "end": 8.433,
+          "text": "à"
+        },
+        {
+          "start": 8.446,
+          "end": 8.683,
+          "text": "chaque"
+        },
+        {
+          "start": 8.696,
+          "end": 8.896,
+          "text": "coin"
+        },
+        {
+          "start": 8.908,
+          "end": 9.02,
+          "text": "de"
+        },
+        {
+          "start": 9.033,
+          "end": 9.196,
+          "text": "rue"
+        },
+        {
+          "start": 9.208,
+          "end": 9.27,
+          "text": "et"
+        },
+        {
+          "start": 9.283,
+          "end": 9.483,
+          "text": "sur"
+        },
+        {
+          "start": 9.495,
+          "end": 9.645,
+          "text": "tous"
+        },
+        {
+          "start": 9.658,
+          "end": 9.783,
+          "text": "tes"
+        },
+        {
+          "start": 9.796,
+          "end": 10.233,
+          "text": "écrans"
+        }
+      ]
+    },
+    {
+      "scene": "scene_04",
+      "start": 11.292,
+      "end": 16.02,
+      "words": [
+        {
+          "start": 11.392,
+          "end": 11.617,
+          "text": "C'est"
+        },
+        {
+          "start": 11.63,
+          "end": 12.005,
+          "text": "l'illusion"
+        },
+        {
+          "start": 12.017,
+          "end": 12.13,
+          "text": "de"
+        },
+        {
+          "start": 12.142,
+          "end": 12.792,
+          "text": "fréquence"
+        },
+        {
+          "start": 13.092,
+          "end": 13.379,
+          "text": "aussi"
+        },
+        {
+          "start": 13.392,
+          "end": 13.642,
+          "text": "appelée"
+        },
+        {
+          "start": 13.654,
+          "end": 13.779,
+          "text": "le"
+        },
+        {
+          "start": 13.792,
+          "end": 14.23,
+          "text": "phénomène"
+        },
+        {
+          "start": 14.242,
+          "end": 15.13,
+          "text": "Baader-Meinhof"
+        }
+      ]
+    },
+    {
+      "scene": "scene_05",
+      "start": 16.2,
+      "end": 20.736,
+      "words": [
+        {
+          "start": 16.3,
+          "end": 16.475,
+          "text": "Ton"
+        },
+        {
+          "start": 16.487,
+          "end": 16.837,
+          "text": "cerveau"
+        },
+        {
+          "start": 16.85,
+          "end": 17.175,
+          "text": "filtre"
+        },
+        {
+          "start": 17.188,
+          "end": 17.275,
+          "text": "des"
+        },
+        {
+          "start": 17.287,
+          "end": 17.562,
+          "text": "milliers"
+        },
+        {
+          "start": 17.575,
+          "end": 18.213,
+          "text": "d'informations"
+        },
+        {
+          "start": 18.225,
+          "end": 18.5,
+          "text": "chaque"
+        },
+        {
+          "start": 18.512,
+          "end": 18.925,
+          "text": "seconde"
+        },
+        {
+          "start": 18.937,
+          "end": 19.087,
+          "text": "pour"
+        },
+        {
+          "start": 19.1,
+          "end": 19.187,
+          "text": "ne"
+        },
+        {
+          "start": 19.2,
+          "end": 19.325,
+          "text": "pas"
+        },
+        {
+          "start": 19.338,
+          "end": 19.875,
+          "text": "saturer"
+        }
+      ]
+    },
+    {
+      "scene": "scene_06",
+      "start": 20.916,
+      "end": 25.74,
+      "words": [
+        {
+          "start": 21.016,
+          "end": 21.228,
+          "text": "Dès"
+        },
+        {
+          "start": 21.241,
+          "end": 21.441,
+          "text": "qu'une"
+        },
+        {
+          "start": 21.453,
+          "end": 21.678,
+          "text": "info"
+        },
+        {
+          "start": 21.691,
+          "end": 21.991,
+          "text": "devient"
+        },
+        {
+          "start": 22.003,
+          "end": 22.591,
+          "text": "importante"
+        },
+        {
+          "start": 22.891,
+          "end": 23.016,
+          "text": "ton"
+        },
+        {
+          "start": 23.028,
+          "end": 23.516,
+          "text": "inconscient"
+        },
+        {
+          "start": 23.528,
+          "end": 23.666,
+          "text": "se"
+        },
+        {
+          "start": 23.679,
+          "end": 23.804,
+          "text": "met"
+        },
+        {
+          "start": 23.816,
+          "end": 23.866,
+          "text": "à"
+        },
+        {
+          "start": 23.878,
+          "end": 23.978,
+          "text": "la"
+        },
+        {
+          "start": 23.991,
+          "end": 24.329,
+          "text": "traquer"
+        },
+        {
+          "start": 24.341,
+          "end": 24.878,
+          "text": "activement"
+        }
+      ]
+    },
+    {
+      "scene": "scene_07",
+      "start": 25.92,
+      "end": 30.432,
+      "words": [
+        {
+          "start": 26.02,
+          "end": 26.183,
+          "text": "Tout"
+        },
+        {
+          "start": 26.195,
+          "end": 26.432,
+          "text": "était"
+        },
+        {
+          "start": 26.445,
+          "end": 26.745,
+          "text": "déjà"
+        },
+        {
+          "start": 26.758,
+          "end": 26.958,
+          "text": "là"
+        },
+        {
+          "start": 27.307,
+          "end": 27.445,
+          "text": "mais"
+        },
+        {
+          "start": 27.458,
+          "end": 27.583,
+          "text": "ton"
+        },
+        {
+          "start": 27.595,
+          "end": 27.933,
+          "text": "esprit"
+        },
+        {
+          "start": 27.945,
+          "end": 28.307,
+          "text": "l'ignorait"
+        },
+        {
+          "start": 28.32,
+          "end": 28.732,
+          "text": "simplement"
+        },
+        {
+          "start": 28.745,
+          "end": 29.07,
+          "text": "jusqu'à"
+        },
+        {
+          "start": 29.083,
+          "end": 29.558,
+          "text": "maintenant"
+        }
+      ]
+    },
+    {
+      "scene": "scene_08",
+      "start": 30.612,
+      "end": 34.5,
+      "words": [
+        {
+          "start": 30.712,
+          "end": 31.262,
+          "text": "Abonne-toi"
+        },
+        {
+          "start": 31.274,
+          "end": 31.437,
+          "text": "pour"
+        },
+        {
+          "start": 31.45,
+          "end": 31.874,
+          "text": "démasquer"
+        },
+        {
+          "start": 31.887,
+          "end": 31.999,
+          "text": "tes"
+        },
+        {
+          "start": 32.012,
+          "end": 32.199,
+          "text": "biais"
+        },
+        {
+          "start": 32.212,
+          "end": 32.787,
+          "text": "cognitifs"
+        },
+        {
+          "start": 32.8,
+          "end": 32.837,
+          "text": "et"
+        },
+        {
+          "start": 32.849,
+          "end": 33.337,
+          "text": "comprendre"
+        },
+        {
+          "start": 33.349,
+          "end": 33.624,
+          "text": "que"
+        }
+      ]
+    }
+  ]
+}

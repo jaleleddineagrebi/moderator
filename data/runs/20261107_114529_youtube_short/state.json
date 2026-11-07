@@ -503,10 +503,10 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "running",
-      "progress": 42,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-07T11:48:55+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-07T11:49:47+00:00",
       "attempt": 1,
       "retries": 0,
       "max_retries": 2,
@@ -522,7 +522,10 @@
           "fr": "fr-FR-HenriNeural"
         }
       },
-      "outputs": {},
+      "outputs": {
+        "timings_en": "timings_en.json",
+        "timings_fr": "timings_fr.json"
+      },
       "logs": [
         {
           "ts": "2026-11-07T11:48:55+00:00",
@@ -543,6 +546,21 @@
           "ts": "2026-11-07T11:49:40+00:00",
           "level": "info",
           "msg": "Narrating fr with fr-FR-HenriNeural"
+        },
+        {
+          "ts": "2026-11-07T11:49:46+00:00",
+          "level": "info",
+          "msg": "fr voiceover: 34.5s"
+        },
+        {
+          "ts": "2026-11-07T11:49:46+00:00",
+          "level": "info",
+          "msg": "Generating an ambient music bed (no library tracks with license files found)"
+        },
+        {
+          "ts": "2026-11-07T11:49:47+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [],
@@ -658,17 +676,52 @@
         "audio"
       ],
       "checkpoint": null,
-      "status": "queued",
+      "status": "running",
       "progress": 0,
-      "started_at": null,
+      "started_at": "2026-11-07T11:49:47+00:00",
       "ended_at": null,
-      "attempt": 0,
+      "attempt": 1,
       "retries": 0,
       "max_retries": 2,
-      "strategy": null,
-      "inputs": {},
+      "strategy": "transitions",
+      "inputs": {
+        "scenes": [
+          "assets/scene_01.mp4",
+          "assets/scene_02.mp4",
+          "assets/scene_03.mp4",
+          "assets/scene_04.mp4",
+          "assets/scene_05.mp4",
+          "assets/scene_06.mp4",
+          "assets/scene_07.mp4",
+          "assets/scene_08.mp4"
+        ],
+        "audio": {
+          "voiceover_en": "voiceover_en.mp3",
+          "timings_en": "timings_en.json",
+          "voiceover_fr": "voiceover_fr.mp3",
+          "timings_fr": "timings_fr.json",
+          "music": "music.mp3",
+          "whoosh": "sfx/whoosh.mp3"
+        },
+        "languages": [
+          "en",
+          "fr"
+        ],
+        "strategy": "transitions"
+      },
       "outputs": {},
-      "logs": [],
+      "logs": [
+        {
+          "ts": "2026-11-07T11:49:47+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'transitions'"
+        },
+        {
+          "ts": "2026-11-07T11:49:47+00:00",
+          "level": "info",
+          "msg": "Rendering en: 8 scenes, 40.5s, xfade transitions"
+        }
+      ],
       "errors": [],
       "feedback": [],
       "cost_usd": 0.0
@@ -751,7 +804,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-07T11:49:44+00:00",
+    "exported_at": "2026-11-07T11:50:02+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/42369489469"
   }

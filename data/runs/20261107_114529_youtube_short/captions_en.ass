@@ -1,0 +1,58 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:02.05,Headline,,0,0,0,,{\fad(150,150)}Not Your Imagination
+Dialogue: 1,0:00:02.15,0:00:05.95,Headline,,0,0,0,,{\fad(150,150)}New Information Found
+Dialogue: 1,0:00:06.05,0:00:10.79,Headline,,0,0,0,,{\fad(150,150)}It's Everywhere Now
+Dialogue: 1,0:00:10.89,0:00:16.01,Headline,,0,0,0,,{\fad(150,150)}The Frequency Illusion
+Dialogue: 1,0:00:16.11,0:00:22.62,Headline,,0,0,0,,{\fad(150,150)}Filtering The Noise
+Dialogue: 1,0:00:22.72,0:00:29.61,Headline,,0,0,0,,{\fad(150,150)}Subconscious Hunting
+Dialogue: 1,0:00:29.71,0:00:35.43,Headline,,0,0,0,,{\fad(150,150)}Always Been There
+Dialogue: 1,0:00:35.53,0:00:40.43,Headline,,0,0,0,,{\fad(150,150)}Daily Bias Check
+Dialogue: 0,0:00:00.10,0:00:00.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You aren't imagining
+Dialogue: 0,0:00:00.91,0:00:01.57,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}things
+Dialogue: 0,0:00:02.20,0:00:03.04,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}That specific car
+Dialogue: 0,0:00:03.05,0:00:04.42,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}model or rare
+Dialogue: 0,0:00:04.44,0:00:04.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}word you just
+Dialogue: 0,0:00:04.92,0:00:05.45,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}discovered
+Dialogue: 0,0:00:06.10,0:00:06.89,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Suddenly it’s popping
+Dialogue: 0,0:00:06.90,0:00:07.62,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}up on every
+Dialogue: 0,0:00:07.62,0:00:09.01,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}street corner book
+Dialogue: 0,0:00:09.29,0:00:09.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and screen you
+Dialogue: 0,0:00:09.88,0:00:10.28,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}see
+Dialogue: 0,0:00:10.94,0:00:11.42,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It feels like
+Dialogue: 0,0:00:11.42,0:00:12.09,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a glitch in
+Dialogue: 0,0:00:12.09,0:00:13.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the matrix but
+Dialogue: 0,0:00:13.24,0:00:13.86,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}it's actually the
+Dialogue: 0,0:00:13.87,0:00:15.51,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Baader-Meinhof phenomenon
+Dialogue: 0,0:00:16.14,0:00:16.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your brain is
+Dialogue: 0,0:00:16.69,0:00:18.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}constantly bombarded with
+Dialogue: 0,0:00:18.19,0:00:18.59,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}data
+Dialogue: 0,0:00:18.94,0:00:19.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}so it filters
+Dialogue: 0,0:00:19.72,0:00:21.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}out almost everything
+Dialogue: 0,0:00:21.16,0:00:22.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to save energy
+Dialogue: 0,0:00:22.77,0:00:23.37,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Once you label
+Dialogue: 0,0:00:23.37,0:00:24.55,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}something as new
+Dialogue: 0,0:00:24.55,0:00:25.39,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}or interesting
+Dialogue: 0,0:00:25.82,0:00:27.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your subconscious starts
+Dialogue: 0,0:00:27.24,0:00:28.80,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}highlighting every instance
+Dialogue: 0,0:00:28.82,0:00:29.22,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}of it
+Dialogue: 0,0:00:29.76,0:00:30.21,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}These things were
+Dialogue: 0,0:00:30.21,0:00:30.95,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}always there
+Dialogue: 0,0:00:31.45,0:00:32.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your brain simply
+Dialogue: 0,0:00:32.34,0:00:33.44,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}stopped treating them
+Dialogue: 0,0:00:33.64,0:00:34.95,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}as background noise
+Dialogue: 0,0:00:35.62,0:00:36.31,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Follow to spot
+Dialogue: 0,0:00:36.31,0:00:37.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your mental blindspots
+Dialogue: 0,0:00:38.01,0:00:39.41,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and understand why
