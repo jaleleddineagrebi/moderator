@@ -1,0 +1,188 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+// ==========================================
+// Authentication (NextAuth.js / Auth.js v5)
+// ==========================================
+
+enum UserRole {
+  USER
+  MODERATOR
+  ADMIN
+}
+
+model User {
+  id            String     @id @default(cuid())
+  name          String?
+  email         String?    @unique
+  emailVerified DateTime?
+  image         String?
+  role          UserRole   @default(USER)
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+
+  accounts      Account[]
+  sessions      Session[]
+  comments      Comment[]
+  reactions     Reaction[]
+
+  @@index([email])
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String  // "google" | "facebook"
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@index([userId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+// ==========================================
+// Daily AI & Psychology Content Pipeline
+// ==========================================
+
+enum PostStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+model Post {
+  id               String       @id @default(cuid())
+  slug             String       @unique
+  title            String
+  hook             String       // Fast 1-2 sentence pattern-interrupt hook
+  summary          String       @db.Text
+  contentMarkdown  String       @db.Text
+  coverImageUrl    String
+  imageCredit      String?
+  tags             String[]     // e.g. ["Cognitive Bias", "Human-AI Interaction", "Neuroscience"]
+  sourceUrls       String[]     // Primary scientific or media references crawled
+  status           PostStatus   @default(PUBLISHED)
+  
+  // Cost tracking & routing transparency
+  aiModelUsed      String?      // e.g. "llama-3-8b" | "gemini-3.8-flash"
+  synthesisCostUsd Float        @default(0.0)
+
+  publishedAt      DateTime     @default(now())
+  createdAt        DateTime     @default(now())
+  updatedAt        DateTime     @updatedAt
+
+  // YouTube Shorts Pipeline Cross-Reference
+  youtubeShortId   String?
+  youtubeShort     YouTubeShort? @relation(fields: [youtubeShortId], references: [id], onDelete: SetNull)
+
+  comments         Comment[]
+  reactions        Reaction[]
+
+  @@index([status, publishedAt(sort: Desc)])
+  @@index([slug])
+  @@index([youtubeShortId])
+}
+
+// ==========================================
+// Community Interactions (Comments & Reactions)
+// ==========================================
+
+enum ReactionType {
+  LIKE           // Quick appreciation
+  MIND_BLOWN     // Surprising cognitive insight
+  INSIGHTFUL     // Deep psychological value
+  BRAIN_CHECK    // Prompted personal bias self-reflection
+}
+
+model Reaction {
+  id        String       @id @default(cuid())
+  postId    String
+  userId    String
+  type      ReactionType @default(LIKE)
+  createdAt DateTime     @default(now())
+
+  post Post @relation(fields: [postId], references: [id], onDelete: Cascade)
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Enforces 1 reaction of a specific type per user per post
+  @@unique([postId, userId, type])
+  @@index([postId, type])
+  @@index([userId])
+}
+
+model Comment {
+  id        String    @id @default(cuid())
+  postId    String
+  userId    String
+  content   String    @db.Text
+  
+  // Nested comments support (1 level of replies)
+  parentId  String?
+  parent    Comment?  @relation("CommentReplies", fields: [parentId], references: [id], onDelete: Cascade)
+  replies   Comment[] @relation("CommentReplies")
+
+  isDeleted Boolean   @default(false)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  post Post @relation(fields: [postId], references: [id], onDelete: Cascade)
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([postId, createdAt])
+  @@index([parentId])
+  @@index([userId])
+}
+
+// ==========================================
+// YouTube Shorts Cross-Reference Integration
+// ==========================================
+
+model YouTubeShort {
+  id          String   @id // YouTube Video ID (e.g. "dQw4w9WgXcQ") or Moderator run_id
+  title       String
+  youtubeUrl  String
+  embedUrl    String
+  topic       String
+  hookAngle   String?
+  runId       String?  // Reference to engine run (e.g. "20261106_143133_youtube_short")
+  publishedAt DateTime @default(now())
+  createdAt   DateTime @default(now())
+
+  posts       Post[]
+
+  @@index([runId])
+}

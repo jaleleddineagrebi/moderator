@@ -1,5 +1,7 @@
 # secrets
 .env
+.env.*
+*.env*
 api-key.txt
 tokens/
 client_secret*.json
@@ -14,3 +16,7 @@ __pycache__/
 body.md
 reply.md
 result.txt
+node_modules/
+.angular/
+dist/
+package-lock.json

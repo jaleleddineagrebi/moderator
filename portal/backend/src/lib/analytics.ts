@@ -32,3 +32,4 @@ export function trackEvent(name: AnalyticsEvent, properties?: Record<string, any
     console.warn("Analytics dispatch error:", err);
   }
 }
+
