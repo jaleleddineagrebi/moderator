@@ -1,0 +1,134 @@
+{
+  "title": "Why You Get Great Ideas in the Shower",
+  "scenes": [
+    {
+      "vo": {
+        "en": "Stop forcing your brain to think.",
+        "fr": "Arrête de forcer tes réflexions."
+      },
+      "on_screen": {
+        "en": "Stop Forcing It",
+        "fr": "Arrête de Forcer"
+      },
+      "visual": {
+        "description": "A stressed young man sitting alone at a messy wooden desk with his head in his hands.",
+        "search_terms": [
+          "man frustrated at desk",
+          "stressed office worker",
+          "cluttered desk paper"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "You stare at a screen for hours with zero answers, then boom: pure genius under the shower.",
+        "fr": "Tu bloques des heures devant ton écran, puis soudain, l'illumination jaillit sous l'eau chaude."
+      },
+      "on_screen": {
+        "en": "Shower Epiphanies",
+        "fr": "L'Éclair Sous L'Eau"
+      },
+      "visual": {
+        "description": "Close-up slow motion of water drops cascading from a chrome showerhead with warm steam rising.",
+        "search_terms": [
+          "water dripping showerhead",
+          "steamy shower water",
+          "running water drops"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Science calls this the shower effect. When a routine task demands zero focus, your Default Mode Network activates.",
+        "fr": "C'est l'effet douche. Quand une tâche automatique libère ton attention, ton réseau cérébral par défaut s'active."
+      },
+      "on_screen": {
+        "en": "Default Mode Network",
+        "fr": "Réseau Par Défaut"
+      },
+      "visual": {
+        "description": "Futuristic 3D neural brain map with glowing electrical pulses firing across interconnected pathways.",
+        "search_terms": [
+          "brain neural network",
+          "glowing synapses firing",
+          "abstract brain activity"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "Warm water releases dopamine, allowing your resting mind to connect distant ideas in unexpected ways.",
+        "fr": "La dopamine monte et ton subconscient connecte des idées lointaines en toute liberté."
+      },
+      "on_screen": {
+        "en": "Subconscious Connections",
+        "fr": "Connexions Cachées"
+      },
+      "visual": {
+        "description": "Macro footage of colorful ink clouds colliding and branching smoothly in crystal-clear water.",
+        "search_terms": [
+          "ink swirling in water",
+          "colorful liquid mixing",
+          "abstract fluid motion"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "So whenever you get completely stuck on a problem, stop grinding. Go for a walk or wash the dishes.",
+        "fr": "Si tu bloques sur un problème, arrête d'insister. Pars marcher ou fais la vaisselle."
+      },
+      "on_screen": {
+        "en": "Change The Task",
+        "fr": "Change D'Activité"
+      },
+      "visual": {
+        "description": "A man's hands washing a ceramic dish under a flowing kitchen tap with white soap bubbles.",
+        "search_terms": [
+          "hands washing dishes",
+          "kitchen sink soap",
+          "running tap kitchen"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "True breakthroughs strike when your attention drifts. Follow to master your mental blindspots. Above all...",
+        "fr": "L'éclair de génie frappe quand tu lâches prise. Abonne-toi pour déjouer tes biais mentaux. Alors..."
+      },
+      "on_screen": {
+        "en": "Check Your Brain",
+        "fr": "Check-up Mental"
+      },
+      "visual": {
+        "description": "Silhouette of a man walking at dusk along a quiet foggy park path toward soft golden sunlight.",
+        "search_terms": [
+          "man walking park path",
+          "silhouette walking sunset",
+          "solitary morning walk"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    }
+  ],
+  "idea_id": "dark-shower-overthinking",
+  "languages": [
+    "en",
+    "fr"
+  ],
+  "estimated_seconds": {
+    "en": 32.7,
+    "fr": 32.8
+  }
+}
