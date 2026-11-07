@@ -1,5 +1,7 @@
 # secrets
 .env
+.env.*
+*.env*
 api-key.txt
 tokens/
 client_secret*.json
