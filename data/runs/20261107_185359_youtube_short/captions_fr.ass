@@ -1,0 +1,49 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:02.91,Headline,,0,0,0,,{\fad(150,150)}Arrête de Forcer
+Dialogue: 1,0:00:03.01,0:00:08.81,Headline,,0,0,0,,{\fad(150,150)}L'Éclair Sous L'Eau
+Dialogue: 1,0:00:08.91,0:00:16.69,Headline,,0,0,0,,{\fad(150,150)}Réseau Par Défaut
+Dialogue: 1,0:00:16.79,0:00:22.10,Headline,,0,0,0,,{\fad(150,150)}Connexions Cachées
+Dialogue: 1,0:00:22.20,0:00:28.47,Headline,,0,0,0,,{\fad(150,150)}Change D'Activité
+Dialogue: 1,0:00:28.57,0:00:36.83,Headline,,0,0,0,,{\fad(150,150)}Check-up Mental
+Dialogue: 0,0:00:00.10,0:00:01.01,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Arrête de forcer
+Dialogue: 0,0:00:01.02,0:00:01.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}tes réflexions
+Dialogue: 0,0:00:03.06,0:00:03.71,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Tu bloques des
+Dialogue: 0,0:00:03.73,0:00:04.41,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}heures devant ton
+Dialogue: 0,0:00:04.43,0:00:05.69,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}écran puis soudain
+Dialogue: 0,0:00:06.01,0:00:07.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}l'illumination jaillit sous
+Dialogue: 0,0:00:07.19,0:00:07.81,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}l'eau chaude
+Dialogue: 0,0:00:08.96,0:00:09.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}C'est l'effet douche
+Dialogue: 0,0:00:10.79,0:00:11.41,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Quand une tâche
+Dialogue: 0,0:00:11.42,0:00:12.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}automatique libère ton
+Dialogue: 0,0:00:12.56,0:00:13.94,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}attention ton réseau
+Dialogue: 0,0:00:13.96,0:00:15.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}cérébral par défaut
+Dialogue: 0,0:00:15.03,0:00:15.69,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}s'active
+Dialogue: 0,0:00:16.84,0:00:17.90,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}La dopamine monte
+Dialogue: 0,0:00:17.91,0:00:18.74,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}et ton subconscient
+Dialogue: 0,0:00:18.75,0:00:19.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}connecte des idées
+Dialogue: 0,0:00:19.69,0:00:20.45,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}lointaines en toute
+Dialogue: 0,0:00:20.46,0:00:21.09,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}liberté
+Dialogue: 0,0:00:22.25,0:00:22.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Si tu bloques
+Dialogue: 0,0:00:22.93,0:00:23.78,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}sur un problème
+Dialogue: 0,0:00:24.08,0:00:25.01,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}arrête d'insister
+Dialogue: 0,0:00:25.88,0:00:26.58,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Pars marcher ou
+Dialogue: 0,0:00:26.59,0:00:27.48,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}fais la vaisselle
+Dialogue: 0,0:00:28.62,0:00:29.64,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}L'éclair de génie
+Dialogue: 0,0:00:29.65,0:00:30.27,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}frappe quand tu
+Dialogue: 0,0:00:30.29,0:00:31.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}lâches prise
+Dialogue: 0,0:00:31.89,0:00:33.05,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Abonne-toi pour déjouer
+Dialogue: 0,0:00:33.06,0:00:33.86,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}tes biais mentaux
+Dialogue: 0,0:00:34.72,0:00:35.30,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Alors
