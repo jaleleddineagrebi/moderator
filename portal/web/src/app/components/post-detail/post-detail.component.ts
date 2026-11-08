@@ -28,11 +28,14 @@ import { CommentSectionComponent } from '../comment-section/comment-section.comp
   ],
   template: `
     <div class="post-detail-container container" *ngIf="post(); else loadingState">
-      <!-- Breadcrumb -->
+      <!-- Breadcrumb Navigation -->
       <nav class="breadcrumb">
-        <a routerLink="/">Home</a>
+        <a routerLink="/" class="bc-link">
+          <mat-icon class="bc-home-icon">home</mat-icon>
+          <span>Daily Insights</span>
+        </a>
         <mat-icon class="bc-arrow">chevron_right</mat-icon>
-        <span class="bc-current">Article</span>
+        <span class="bc-current">{{ post()!.title }}</span>
       </nav>
 
       <!-- Category Tags -->
@@ -47,25 +50,50 @@ import { CommentSectionComponent } from '../comment-section/comment-section.comp
       <!-- Article Header -->
       <h1 class="article-title">{{ post()!.title }}</h1>
 
+      <!-- Hook / Subtitle -->
       <p class="article-hook">{{ post()!.hook }}</p>
 
+      <!-- Meta Bar -->
       <div class="article-meta-bar">
-        <div class="author-info">
-          <mat-icon class="author-icon">psychology</mat-icon>
-          <span>Published on {{ post()!.publishedAt | date:'longDate' }}</span>
+        <div class="meta-left">
+          <div class="author-info">
+            <mat-icon class="meta-icon">calendar_today</mat-icon>
+            <span>{{ post()!.publishedAt | date:'longDate' }}</span>
+          </div>
+          <span class="meta-dot">·</span>
+          <div class="read-time-badge">
+            <mat-icon class="meta-icon">schedule</mat-icon>
+            <span>{{ estimatedReadingTime }} min read</span>
+          </div>
         </div>
+
         <div class="model-badge">
-          <span>Synthesized with {{ post()!.aiModelUsed || 'Frontier AI' }}</span>
+          <mat-icon class="sparkle-icon">auto_awesome</mat-icon>
+          <span>Synthesized via {{ post()!.aiModelUsed || 'Frontier AI' }}</span>
         </div>
       </div>
 
-      <!-- Cover Image -->
+      <!-- Cover Image with Fallback -->
       <figure class="article-cover-figure">
-        <img [src]="post()!.coverImageUrl" [alt]="post()!.title" class="cover-image" />
+        <img
+          [src]="post()!.coverImageUrl"
+          [alt]="post()!.title"
+          (error)="onImageError($event)"
+          class="cover-image"
+        />
         <figcaption *ngIf="post()!.imageCredit" class="image-credit">
           {{ post()!.imageCredit }}
         </figcaption>
       </figure>
+
+      <!-- Summary Key Takeaway Box -->
+      <div class="summary-box" *ngIf="post()!.summary">
+        <div class="summary-badge">
+          <mat-icon class="summary-icon">lightbulb</mat-icon>
+          <span>EXECUTIVE TAKEAWAY</span>
+        </div>
+        <p class="summary-text">{{ post()!.summary }}</p>
+      </div>
 
       <!-- Reactions Bar -->
       <div class="reactions-bar mat-elevation-z1">
@@ -113,8 +141,8 @@ import { CommentSectionComponent } from '../comment-section/comment-section.comp
         </div>
       </div>
 
-      <!-- Markdown Body -->
-      <div class="article-body" [innerHTML]="formatContent(post()!.contentMarkdown)"></div>
+      <!-- Formatted Markdown Body -->
+      <article class="article-body" [innerHTML]="formattedHtml"></article>
 
       <!-- Companion YouTube Short Video Card -->
       <app-youtube-short-card
@@ -124,7 +152,7 @@ import { CommentSectionComponent } from '../comment-section/comment-section.comp
       ></app-youtube-short-card>
 
       <!-- Scientific Reference Citation -->
-      <div *ngIf="post()!.sourceUrls.length > 0" class="reference-box">
+      <div *ngIf="post()!.sourceUrls && post()!.sourceUrls.length > 0" class="reference-box">
         <mat-icon class="ref-icon">menu_book</mat-icon>
         <div class="ref-content">
           <strong>Primary Scientific Reference:</strong>
@@ -140,7 +168,7 @@ import { CommentSectionComponent } from '../comment-section/comment-section.comp
 
     <ng-template #loadingState>
       <div class="loading-wrapper container">
-        <mat-spinner diameter="48"></mat-spinner>
+        <mat-spinner diameter="44"></mat-spinner>
         <p>Loading psychological synthesis...</p>
       </div>
     </ng-template>
@@ -155,25 +183,41 @@ import { CommentSectionComponent } from '../comment-section/comment-section.comp
       display: flex;
       align-items: center;
       gap: 6px;
-      font-size: 14px;
+      font-size: 13px;
       color: #64748b;
       margin-bottom: 20px;
+      flex-wrap: wrap;
 
-      a {
+      .bc-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
         color: #64748b;
         text-decoration: none;
+        font-weight: 500;
         &:hover { color: #2563eb; }
+      }
+
+      .bc-home-icon {
+        font-size: 16px;
+        width: 16px;
+        height: 16px;
       }
 
       .bc-arrow {
         font-size: 16px;
         width: 16px;
         height: 16px;
+        color: #94a3b8;
       }
 
       .bc-current {
         color: #0f172a;
-        font-weight: 500;
+        font-weight: 600;
+        max-width: 380px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
     }
 
@@ -189,173 +233,289 @@ import { CommentSectionComponent } from '../comment-section/comment-section.comp
     }
 
     .article-title {
-      font-size: 36px;
+      font-size: 34px;
       font-weight: 800;
       color: #0f172a;
       line-height: 1.25;
       margin: 0 0 16px 0;
+      letter-spacing: -0.02em;
 
       @media (min-width: 768px) {
-        font-size: 44px;
+        font-size: 42px;
       }
     }
 
     .article-hook {
-      font-size: 20px;
-      font-weight: 500;
+      font-size: 18px;
       color: #475569;
       line-height: 1.6;
       margin: 0 0 24px 0;
+      font-weight: 400;
+      border-left: 3px solid #3b82f6;
+      padding-left: 16px;
     }
 
     .article-meta-bar {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 14px 0;
-      border-top: 1px solid #e2e8f0;
-      border-bottom: 1px solid #e2e8f0;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 12px 0;
+      border-top: 1px solid #f1f5f9;
+      border-bottom: 1px solid #f1f5f9;
+      margin-bottom: 28px;
       font-size: 13px;
       color: #64748b;
-      margin-bottom: 32px;
     }
 
-    .author-info {
+    .meta-left {
       display: flex;
       align-items: center;
       gap: 8px;
+    }
 
-      .author-icon {
-        font-size: 20px;
-        width: 20px;
-        height: 20px;
-        color: #3b82f6;
-      }
+    .meta-icon {
+      font-size: 16px;
+      width: 16px;
+      height: 16px;
+      color: #94a3b8;
+    }
+
+    .author-info, .read-time-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .meta-dot {
+      color: #cbd5e1;
     }
 
     .model-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
       font-size: 12px;
-      color: #94a3b8;
+      font-weight: 600;
+      color: #6366f1;
+      background-color: #eef2ff;
+      padding: 4px 12px;
+      border-radius: 9999px;
+
+      .sparkle-icon {
+        font-size: 14px;
+        width: 14px;
+        height: 14px;
+      }
     }
 
     .article-cover-figure {
-      margin: 0 0 36px 0;
+      margin: 0 0 32px 0;
       border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
       background-color: #0f172a;
+
+      .cover-image {
+        width: 100%;
+        max-height: 480px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .image-credit {
+        padding: 8px 16px;
+        font-size: 12px;
+        color: #94a3b8;
+        background-color: #f8fafc;
+        text-align: right;
+      }
     }
 
-    .cover-image {
-      width: 100%;
-      max-height: 480px;
-      object-fit: cover;
-      display: block;
-    }
+    .summary-box {
+      background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+      border: 1px solid #bbf7d0;
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin-bottom: 32px;
 
-    .image-credit {
-      padding: 8px 16px;
-      text-align: right;
-      font-size: 12px;
-      color: #94a3b8;
-      background-color: #ffffff;
+      .summary-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 11px;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: #15803d;
+        letter-spacing: 0.05em;
+        margin-bottom: 8px;
+
+        .summary-icon {
+          font-size: 16px;
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+      .summary-text {
+        font-size: 15px;
+        color: #166534;
+        line-height: 1.6;
+        margin: 0;
+        font-weight: 500;
+      }
     }
 
     .reactions-bar {
       background-color: #ffffff;
+      border: 1px solid #e2e8f0;
       border-radius: 16px;
       padding: 16px 20px;
       margin-bottom: 36px;
-      border: 1px solid #e2e8f0;
       display: flex;
       flex-direction: column;
       gap: 12px;
 
-      @media (min-width: 600px) {
+      @media (min-width: 640px) {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
       }
-    }
 
-    .reactions-label {
-      font-size: 14px;
-      font-weight: 600;
-      color: #334155;
-    }
+      .reactions-label {
+        font-size: 13px;
+        font-weight: 600;
+        color: #64748b;
+      }
 
-    .reaction-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
+      .reaction-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
 
-    .react-btn {
-      border-radius: 12px;
-      font-size: 13px;
-      font-weight: 600;
+      .react-btn {
+        border-radius: 9999px;
+        font-size: 13px;
+        font-weight: 600;
+        border-color: #e2e8f0;
+        padding: 4px 12px;
 
-      &.active-reaction {
-        background-color: #eff6ff;
-        border-color: #3b82f6;
-        color: #1d4ed8;
+        .reaction-count {
+          margin-left: 4px;
+          font-size: 12px;
+          opacity: 0.7;
+        }
+
+        &.active-reaction {
+          background-color: #eff6ff;
+          border-color: #2563eb;
+          color: #1d4ed8;
+        }
+
+        &.brain-check-btn.active-reaction {
+          background-color: #f3e8ff;
+          border-color: #7c3aed;
+          color: #6d28d9;
+        }
       }
     }
 
-    .brain-check-btn.active-reaction {
-      background-color: #fef2f2;
-      border-color: #ef4444;
-      color: #b91c1c;
-    }
-
-    .reaction-count {
-      margin-left: 4px;
-      font-size: 12px;
-      opacity: 0.8;
-    }
-
-    .article-body {
-      font-size: 18px;
-      line-height: 1.75;
+    ::ng-deep .article-body {
       color: #1e293b;
+      font-size: 17px;
+      line-height: 1.8;
       margin-bottom: 40px;
 
-      ::ng-deep h2 {
-        font-size: 26px;
-        font-weight: 700;
+      h2 {
+        font-size: 24px;
+        font-weight: 800;
         color: #0f172a;
-        margin-top: 36px;
-        margin-bottom: 16px;
+        margin: 36px 0 16px 0;
+        letter-spacing: -0.01em;
+        padding-bottom: 8px;
+        border-bottom: 2px solid #f1f5f9;
       }
 
-      ::ng-deep p {
-        margin-bottom: 20px;
+      h3 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #1e293b;
+        margin: 28px 0 12px 0;
+      }
+
+      p {
+        margin: 0 0 20px 0;
+      }
+
+      strong {
+        color: #0f172a;
+        font-weight: 700;
+      }
+
+      blockquote {
+        margin: 28px 0;
+        padding: 18px 24px;
+        background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 100%);
+        border-left: 4px solid #2563eb;
+        border-radius: 0 14px 14px 0;
+        font-style: italic;
+        color: #1e40af;
+        box-shadow: 0 2px 6px rgba(37, 99, 235, 0.05);
+
+        p {
+          margin: 0;
+        }
+      }
+
+      ul, ol {
+        margin: 0 0 24px 20px;
+        padding: 0;
+
+        li {
+          margin-bottom: 8px;
+          padding-left: 4px;
+        }
+      }
+
+      code {
+        font-size: 14px;
+        background-color: #f1f5f9;
+        color: #0f172a;
+        padding: 2px 6px;
+        border-radius: 4px;
       }
     }
 
     .reference-box {
       display: flex;
+      align-items: flex-start;
       gap: 12px;
+      padding: 16px 20px;
       background-color: #f8fafc;
       border: 1px solid #e2e8f0;
       border-radius: 14px;
-      padding: 16px;
       margin: 32px 0;
+      font-size: 13px;
+      color: #64748b;
 
       .ref-icon {
-        color: #3b82f6;
+        color: #2563eb;
+        font-size: 20px;
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        margin-top: 2px;
       }
 
       .ref-content {
-        font-size: 13px;
-        color: #475569;
-
         a {
-          display: block;
           color: #2563eb;
           text-decoration: underline;
           word-break: break-all;
-          margin-top: 4px;
+          display: block;
+          margin-top: 2px;
         }
       }
     }
@@ -380,11 +540,25 @@ export class PostDetailComponent implements OnInit {
   reactionTallies = signal<ReactionTally>({ LIKE: 0, MIND_BLOWN: 0, INSIGHTFUL: 0, BRAIN_CHECK: 0 });
   userReaction = signal<ReactionType | null>(null);
 
+  get formattedHtml(): string {
+    const p = this.post();
+    if (!p || !p.contentMarkdown) return '';
+    return this.parseMarkdown(p.contentMarkdown);
+  }
+
+  get estimatedReadingTime(): number {
+    const text = this.post()?.contentMarkdown || '';
+    const wordCount = text.split(/\s+/).length;
+    return Math.max(1, Math.ceil(wordCount / 200));
+  }
+
   ngOnInit(): void {
-    const slug = this.route.snapshot.paramMap.get('slug');
-    if (slug) {
-      this.loadPost(slug);
-    }
+    this.route.paramMap.subscribe(params => {
+      const slug = params.get('slug');
+      if (slug) {
+        this.loadPost(slug);
+      }
+    });
   }
 
   loadPost(slug: string): void {
@@ -412,11 +586,76 @@ export class PostDetailComponent implements OnInit {
     });
   }
 
-  formatContent(md: string): string {
-    return md
-      .replace(/## (.*)/g, '<h2>$1</h2>')
-      .replace(/\n\n/g, '<p></p>')
-      .replace(/\n/g, '<br/>');
+  onImageError(event: Event): void {
+    const target = event.target as HTMLImageElement;
+    target.src = 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80';
+  }
+
+  private parseMarkdown(md: string): string {
+    const lines = md.split('\n');
+    const result: string[] = [];
+    let inList = false;
+
+    for (let i = 0; i < lines.length; i++) {
+      let line = lines[i].trim();
+
+      if (!line) {
+        if (inList) {
+          result.push('</ul>');
+          inList = false;
+        }
+        continue;
+      }
+
+      // Headers
+      if (line.startsWith('### ')) {
+        if (inList) { result.push('</ul>'); inList = false; }
+        result.push(`<h3>${this.inlineFormat(line.slice(4))}</h3>`);
+        continue;
+      }
+      if (line.startsWith('## ')) {
+        if (inList) { result.push('</ul>'); inList = false; }
+        result.push(`<h2>${this.inlineFormat(line.slice(3))}</h2>`);
+        continue;
+      }
+
+      // Blockquotes
+      if (line.startsWith('> ')) {
+        if (inList) { result.push('</ul>'); inList = false; }
+        result.push(`<blockquote><p>${this.inlineFormat(line.slice(2))}</p></blockquote>`);
+        continue;
+      }
+
+      // Bullet lists
+      if (line.startsWith('- ') || line.startsWith('* ')) {
+        if (!inList) {
+          result.push('<ul>');
+          inList = true;
+        }
+        result.push(`<li>${this.inlineFormat(line.slice(2))}</li>`);
+        continue;
+      }
+
+      if (inList) {
+        result.push('</ul>');
+        inList = false;
+      }
+
+      // Paragraphs
+      result.push(`<p>${this.inlineFormat(line)}</p>`);
+    }
+
+    if (inList) {
+      result.push('</ul>');
+    }
+
+    return result.join('\n');
+  }
+
+  private inlineFormat(text: string): string {
+    return text
+      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*(.*?)\*/g, '<em>$1</em>')
+      .replace(/`([^`]+)`/g, '<code>$1</code>');
   }
 }
-

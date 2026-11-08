@@ -16,12 +16,20 @@ import { Post } from '../../models/post.model';
       <!-- Cover Image with Aspect Ratio -->
       <div class="card-image-wrapper" [routerLink]="['/posts', post.slug]">
         <img
+          *ngIf="!imageFailed && post.coverImageUrl; else fallbackVisual"
           mat-card-image
           [src]="post.coverImageUrl"
           [alt]="post.title"
           class="cover-img"
           loading="lazy"
+          (error)="onImageError()"
         />
+        <ng-template #fallbackVisual>
+          <div class="fallback-cover">
+            <mat-icon class="fallback-icon">psychology</mat-icon>
+            <span class="fallback-tag">Cognitive Science & AI</span>
+          </div>
+        </ng-template>
         <div class="image-overlay-chips">
           <mat-chip-set>
             <mat-chip *ngFor="let tag of (post.tags || []).slice(0, 2)" class="tag-chip">
@@ -33,7 +41,14 @@ import { Post } from '../../models/post.model';
 
       <mat-card-content class="card-content">
         <div class="card-meta">
-          <span class="meta-date">{{ post.publishedAt | date:'mediumDate' }}</span>
+          <div class="meta-left">
+            <span class="meta-date">{{ post.publishedAt | date:'mediumDate' }}</span>
+            <span class="meta-dot">•</span>
+            <span class="meta-read-time">
+              <mat-icon class="time-icon">schedule</mat-icon>
+              <span>{{ estimatedReadingTime }} min read</span>
+            </span>
+          </div>
           <span *ngIf="post.youtubeShortId" class="short-indicator">
             <mat-icon class="yt-icon">smart_display</mat-icon>
             <span>Short Included</span>
@@ -106,6 +121,33 @@ import { Post } from '../../models/post.model';
       transform: scale(1.04);
     }
 
+    .fallback-cover {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #312e81 100%);
+      color: #93c5fd;
+      gap: 8px;
+
+      .fallback-icon {
+        font-size: 40px;
+        width: 40px;
+        height: 40px;
+        opacity: 0.8;
+      }
+
+      .fallback-tag {
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        opacity: 0.9;
+      }
+    }
+
     .image-overlay-chips {
       position: absolute;
       bottom: 12px;
@@ -132,10 +174,36 @@ import { Post } from '../../models/post.model';
       margin-bottom: 8px;
     }
 
+    .meta-left {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
     .meta-date {
       font-size: 12px;
       color: #94a3b8;
       font-weight: 500;
+    }
+
+    .meta-dot {
+      color: #cbd5e1;
+      font-size: 12px;
+    }
+
+    .meta-read-time {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      font-size: 12px;
+      color: #64748b;
+      font-weight: 500;
+
+      .time-icon {
+        font-size: 14px;
+        width: 14px;
+        height: 14px;
+      }
     }
 
     .short-indicator {
@@ -220,5 +288,16 @@ import { Post } from '../../models/post.model';
 })
 export class PostCardComponent {
   @Input({ required: true }) post!: Post;
+  imageFailed = false;
+
+  get estimatedReadingTime(): number {
+    const text = this.post?.contentMarkdown || this.post?.summary || this.post?.hook || '';
+    const wordCount = text.trim().split(/\s+/).filter(Boolean).length;
+    return Math.max(2, Math.ceil(wordCount / 180));
+  }
+
+  onImageError(): void {
+    this.imageFailed = true;
+  }
 }
 

@@ -56,7 +56,7 @@ import { AuthDialogComponent } from '../auth-dialog/auth-dialog.component';
             <mat-icon class="guest-icon">lock</mat-icon>
             <div class="guest-text">
               <strong>Join the conversation</strong>
-              <p>Sign in with Google or Facebook to share your reflection on this topic.</p>
+              <p>Sign in with Google to share your reflection on this topic.</p>
             </div>
             <button mat-stroked-button color="primary" (click)="openAuthDialog()">
               Sign In
