@@ -374,7 +374,7 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 0,
+      "progress": 41,
       "started_at": "2026-11-08T23:48:22+00:00",
       "ended_at": null,
       "attempt": 1,
@@ -401,6 +401,21 @@
           "ts": "2026-11-08T23:48:22+00:00",
           "level": "info",
           "msg": "Visual diversity: excluding 20 footage sources used in recent Shorts"
+        },
+        {
+          "ts": "2026-11-08T23:48:34+00:00",
+          "level": "info",
+          "msg": "scene_03: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-08T23:48:37+00:00",
+          "level": "info",
+          "msg": "scene_02: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-08T23:48:41+00:00",
+          "level": "info",
+          "msg": "scene_01: stock_video (pixabay)"
         }
       ],
       "errors": [],
@@ -572,7 +587,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-08T23:48:29+00:00",
+    "exported_at": "2026-11-08T23:48:51+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/42536558719"
   }
