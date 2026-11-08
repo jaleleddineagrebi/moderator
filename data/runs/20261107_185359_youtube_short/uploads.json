@@ -1,0 +1,18 @@
+[
+  {
+    "lang": "en",
+    "id": "atsPaBl94qA",
+    "url": "https://youtube.com/shorts/atsPaBl94qA",
+    "privacy": "private",
+    "channel": "land of ai",
+    "thumbnail": "not set: <HttpError 403 when requesting https://youtube.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=atsPaBl94qA&alt=json&uploadType=media returned \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\". Details: \"[{'message': \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\", 'domain': 'youtube.thumbnail', 'reason': 'forbidden', 'location': 'Authorization', 'locationType': 'header'}]\">"
+  },
+  {
+    "lang": "fr",
+    "id": "RutaWpfgmmU",
+    "url": "https://youtube.com/shorts/RutaWpfgmmU",
+    "privacy": "private",
+    "channel": "land of ai",
+    "thumbnail": "not set: <HttpError 403 when requesting https://youtube.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=RutaWpfgmmU&alt=json&uploadType=media returned \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\". Details: \"[{'message': \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\", 'domain': 'youtube.thumbnail', 'reason': 'forbidden', 'location': 'Authorization', 'locationType': 'header'}]\">"
+  }
+]
