@@ -15,6 +15,9 @@ concurrency:
   group: daily-portal-content
   cancel-in-progress: false
 
+permissions:
+  contents: write
+
 jobs:
   crawl-synthesize-publish:
     runs-on: ubuntu-latest
@@ -24,7 +27,8 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 1
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
 
       - name: Set up Python 3.12
         uses: actions/setup-python@v5
@@ -62,5 +66,6 @@ jobs:
             echo "No new daily post files to commit."
           else
             git commit -m "Auto-archive daily Psychology & AI posts [skip ci]"
+            git pull --rebase origin ${{ github.ref_name }} || true
             git push origin HEAD:${{ github.ref }}
           fi
