@@ -1,0 +1,138 @@
+{
+  "title": "Why You Hate Your Recorded Voice",
+  "scenes": [
+    {
+      "vo": {
+        "en": "You don't actually sound like that."
+      },
+      "on_screen": {
+        "en": "Not Your Real Voice"
+      },
+      "visual": {
+        "description": "Extreme close-up of a vintage condenser microphone in a dark moody studio with a glowing red recording light.",
+        "search_terms": [
+          "vintage studio microphone",
+          "sound recording booth",
+          "audio condenser mic"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Every time you hear your voice on video, you cringe and hate it."
+      },
+      "on_screen": {
+        "en": "Why You Cringe"
+      },
+      "visual": {
+        "description": "A man sitting at an editing desk wearing studio headphones, pausing his smartphone playback and wincing in mild embarrassment.",
+        "search_terms": [
+          "man wearing headphones",
+          "listening to smartphone",
+          "frustrated man desk"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Here is the secret: you hear yourself through your own skull bones."
+      },
+      "on_screen": {
+        "en": "Hearing Through Bone"
+      },
+      "visual": {
+        "description": "Cinematic scientific 3D render showing sound vibration ripples conducting through the structure of a human skull.",
+        "search_terms": [
+          "human skull anatomy",
+          "audio frequency animation",
+          "sound wave visualization"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "Your bones act like an acoustic filter, boosting low frequencies so you sound deeper inside your head."
+      },
+      "on_screen": {
+        "en": "Deeper In Your Head"
+      },
+      "visual": {
+        "description": "Macro slow motion shot of thick acoustic cello strings vibrating heavily, creating rich resonant physical motion.",
+        "search_terms": [
+          "bass guitar string",
+          "cello string vibration",
+          "slow motion instruments"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "A microphone only picks up sound traveling through the air, completely stripping away that warm bass."
+      },
+      "on_screen": {
+        "en": "Air Sound Only"
+      },
+      "visual": {
+        "description": "Cinematic shot of illuminated dust motes floating through a ray of light across an audio equalizer board.",
+        "search_terms": [
+          "dust particles light",
+          "sound waves air",
+          "audio equalizer meter"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "The wild part? Everyone else has heard this higher version your whole life, and they find it completely normal."
+      },
+      "on_screen": {
+        "en": "Normal To Everyone Else"
+      },
+      "visual": {
+        "description": "Two men chatting and laughing naturally together outdoors on a sunny park bench, completely unbothered.",
+        "search_terms": [
+          "men talking cafe",
+          "friends laughing outdoor",
+          "casual conversation men"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Psychologists call this voice confrontation. Follow to uncover daily mental blindspots. Because in reality..."
+      },
+      "on_screen": {
+        "en": "Daily Bias Check"
+      },
+      "visual": {
+        "description": "Glowing abstract neural network pulses firing across an artistic brain model, rotating smoothly in dark space.",
+        "search_terms": [
+          "digital brain animation",
+          "neural network glow",
+          "abstract brain connections"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "why-you-hate-hearing-your-own-voice",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 35.3
+  }
+}
