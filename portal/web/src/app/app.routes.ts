@@ -9,6 +9,11 @@ export const routes: Routes = [
     title: 'Mind Decoded | Daily Psychology & Artificial Intelligence'
   },
   {
+    path: 'shorts',
+    component: FeedComponent,
+    title: 'YouTube Shorts | Mind Decoded'
+  },
+  {
     path: 'posts/:slug',
     component: PostDetailComponent,
     title: 'Article Reflection | Psychology & AI Portal'

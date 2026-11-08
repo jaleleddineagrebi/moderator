@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, ViewChild, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
@@ -11,20 +11,28 @@ import { AuthService } from '../../services/auth.service';
   imports: [CommonModule, MatDialogModule, MatButtonModule, MatIconModule],
   template: `
     <div class="auth-dialog-wrapper">
-      <h2 mat-dialog-title class="dialog-title">
-        <mat-icon color="primary">psychology</mat-icon>
-        <span>Join the Psychology & AI Community</span>
-      </h2>
-
-      <mat-dialog-content class="dialog-content">
+      <div class="dialog-header">
+        <div class="icon-badge">
+          <mat-icon>psychology</mat-icon>
+        </div>
+        <h2 mat-dialog-title class="dialog-title">Welcome to Mind Decoded</h2>
         <p class="dialog-subtitle">
           Sign in to react, discuss cognitive science, and save your daily bias reflections.
         </p>
+      </div>
 
-        <div class="oauth-buttons">
-          <!-- Google OAuth Button -->
-          <button mat-stroked-button class="oauth-btn google-btn" (click)="loginGoogle()">
-            <svg class="oauth-icon" viewBox="0 0 24 24" width="20" height="20">
+      <mat-dialog-content class="dialog-content">
+        <!-- Google Sign In Container -->
+        <div class="google-auth-container">
+          <div #googleBtnContainer class="google-btn-slot"></div>
+
+          <!-- Fallback direct button if GIS script is delayed -->
+          <button
+            mat-stroked-button
+            class="fallback-google-btn"
+            (click)="loginGoogleDirect()"
+          >
+            <svg class="google-svg" viewBox="0 0 24 24" width="20" height="20">
               <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
               <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
               <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
@@ -32,90 +40,170 @@ import { AuthService } from '../../services/auth.service';
             </svg>
             <span>Continue with Google</span>
           </button>
+        </div>
 
-          <!-- Facebook OAuth Button -->
-          <button mat-flat-button class="oauth-btn facebook-btn" (click)="loginFacebook()">
-            <svg class="oauth-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-            </svg>
-            <span>Continue with Facebook</span>
-          </button>
+        <div class="dialog-privacy-note">
+          <mat-icon class="shield-icon">security</mat-icon>
+          <span>Fast, secure sign-in via Google. We only use your name and email to identify your comments.</span>
         </div>
       </mat-dialog-content>
 
-      <mat-dialog-actions align="end">
-        <button mat-button (click)="dialogRef.close()">Cancel</button>
+      <mat-dialog-actions align="end" class="dialog-actions">
+        <button mat-button (click)="dialogRef.close()" class="cancel-btn">Close</button>
       </mat-dialog-actions>
     </div>
   `,
   styles: [`
     .auth-dialog-wrapper {
-      padding: 16px;
-      min-width: 320px;
-      max-width: 440px;
+      padding: 12px 16px 20px 16px;
+      max-width: 420px;
+      text-align: center;
+    }
+
+    .dialog-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .icon-badge {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+      color: #2563eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+
+      mat-icon {
+        font-size: 26px;
+        width: 26px;
+        height: 26px;
+      }
     }
 
     .dialog-title {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 20px;
-      font-weight: 700;
+      font-size: 22px;
+      font-weight: 800;
       color: #0f172a;
-      margin-bottom: 8px;
+      margin: 0 0 8px 0;
+      letter-spacing: -0.02em;
     }
 
     .dialog-subtitle {
       font-size: 14px;
       color: #64748b;
       line-height: 1.5;
-      margin-bottom: 20px;
+      margin: 0;
+      max-width: 320px;
     }
 
-    .oauth-buttons {
+    .dialog-content {
+      padding: 0 !important;
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      align-items: center;
+      gap: 20px;
     }
 
-    .oauth-btn {
+    .google-auth-container {
+      width: 100%;
       display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 44px;
+    }
+
+    .google-btn-slot {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      &:empty {
+        display: none;
+      }
+    }
+
+    .fallback-google-btn {
+      display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 12px;
-      height: 48px;
-      border-radius: 12px;
-      font-size: 15px;
-      font-weight: 600;
-    }
-
-    .google-btn {
+      width: 100%;
+      max-width: 320px;
+      height: 44px;
+      border-radius: 9999px;
       border-color: #cbd5e1;
-      color: #334155;
+      color: #1e293b;
+      font-weight: 600;
+      font-size: 14px;
+      background-color: #ffffff;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+
+      &:hover {
+        background-color: #f8fafc;
+        border-color: #94a3b8;
+      }
+
+      .google-svg {
+        flex-shrink: 0;
+      }
     }
 
-    .facebook-btn {
-      background-color: #1877f2;
-      color: #ffffff;
+    .google-btn-slot:not(:empty) + .fallback-google-btn {
+      display: none;
     }
 
-    .oauth-icon {
-      flex-shrink: 0;
+    .dialog-privacy-note {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: #94a3b8;
+      line-height: 1.4;
+      text-align: left;
+      padding: 10px 14px;
+      background-color: #f8fafc;
+      border-radius: 10px;
+
+      .shield-icon {
+        font-size: 16px;
+        width: 16px;
+        height: 16px;
+        color: #64748b;
+        flex-shrink: 0;
+      }
+    }
+
+    .dialog-actions {
+      margin-top: 8px;
+      padding: 0 !important;
+    }
+
+    .cancel-btn {
+      color: #64748b;
     }
   `]
 })
-export class AuthDialogComponent {
+export class AuthDialogComponent implements AfterViewInit {
+  @ViewChild('googleBtnContainer') googleBtnContainer!: ElementRef<HTMLDivElement>;
+
   readonly dialogRef = inject(MatDialogRef<AuthDialogComponent>);
   private readonly auth = inject(AuthService);
 
-  loginGoogle(): void {
-    this.auth.loginWithGoogle();
-    this.dialogRef.close();
+  ngAfterViewInit(): void {
+    if (this.googleBtnContainer?.nativeElement) {
+      this.auth.renderGoogleButton(this.googleBtnContainer.nativeElement, () => {
+        this.dialogRef.close();
+      });
+    }
   }
 
-  loginFacebook(): void {
-    this.auth.loginWithFacebook();
-    this.dialogRef.close();
+  loginGoogleDirect(): void {
+    this.auth.loginWithGoogle(() => {
+      this.dialogRef.close();
+    });
   }
 }
-

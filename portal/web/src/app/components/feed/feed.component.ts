@@ -1,5 +1,6 @@
 import { Component, OnInit, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
@@ -55,7 +56,7 @@ import { PostCardComponent } from '../post-card/post-card.component';
             <div class="empty-feed">
               <mat-icon class="empty-icon">search_off</mat-icon>
               <h3>No articles found</h3>
-              <p>Check back after today's automated morning and evening crawler cycles!</p>
+              <p>Check back after today's automated daily AI publication schedule!</p>
             </div>
           </ng-template>
         </ng-container>
@@ -112,6 +113,12 @@ import { PostCardComponent } from '../post-card/post-card.component';
       @media (min-width: 768px) {
         font-size: 52px;
       }
+    }
+
+    .text-gradient {
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #7c3aed 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .hero-description {
@@ -180,13 +187,22 @@ import { PostCardComponent } from '../post-card/post-card.component';
 })
 export class FeedComponent implements OnInit {
   private readonly postService = inject(PostService);
+  private readonly route = inject(ActivatedRoute);
 
-  readonly topics = ['All Insights', 'Cognitive Bias', 'Human-AI Teaming', 'Neuroscience', 'Habits'];
+  readonly topics = ['All Insights', 'YouTube Shorts', 'Cognitive Bias', 'Human-AI Teaming', 'Neuroscience', 'Habits'];
   selectedTopic = signal<string>('All Insights');
   posts = signal<Post[]>([]);
   isLoading = signal<boolean>(true);
 
   ngOnInit(): void {
+    if (this.route.snapshot.routeConfig?.path === 'shorts') {
+      this.selectedTopic.set('YouTube Shorts');
+    }
+    this.route.queryParams.subscribe(params => {
+      if (params['filter'] === 'shorts') {
+        this.selectedTopic.set('YouTube Shorts');
+      }
+    });
     this.loadPosts();
   }
 
@@ -211,6 +227,9 @@ export class FeedComponent implements OnInit {
     const topic = this.selectedTopic();
     if (topic === 'All Insights') {
       return this.posts();
+    }
+    if (topic === 'YouTube Shorts') {
+      return this.posts().filter(p => !!p.youtubeShortId);
     }
     return this.posts().filter(p => p.tags.some(t => t.toLowerCase().includes(topic.toLowerCase())));
   }
