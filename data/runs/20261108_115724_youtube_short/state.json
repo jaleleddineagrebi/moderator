@@ -2,7 +2,7 @@
   "run_id": "20261108_115724_youtube_short",
   "workflow": "youtube_short",
   "workflow_title": "YouTube Short",
-  "status": "running",
+  "status": "failed",
   "params": {
     "languages": [
       "en",
@@ -29,7 +29,7 @@
     "llm": "gemini"
   },
   "started_at": "2026-11-08T11:57:24+00:00",
-  "ended_at": null,
+  "ended_at": "2026-11-08T12:12:56+00:00",
   "revision_rounds": 0,
   "cost": {
     "total_usd": 0.003611,
@@ -312,10 +312,10 @@
         "research"
       ],
       "checkpoint": "B",
-      "status": "running",
+      "status": "failed",
       "progress": 10,
       "started_at": "2026-11-08T12:08:37+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-08T12:12:56+00:00",
       "attempt": 3,
       "retries": 2,
       "max_retries": 2,
@@ -369,6 +369,11 @@
           "ts": "2026-11-08T12:08:37+00:00",
           "level": "info",
           "msg": "Asking Gemini (gemini-3.8-flash, high complexity, thinking high)"
+        },
+        {
+          "ts": "2026-11-08T12:12:56+00:00",
+          "level": "error",
+          "msg": "ReadError: "
         }
       ],
       "errors": [
@@ -382,6 +387,12 @@
           "ts": "2026-11-08T12:08:35+00:00",
           "attempt": 2,
           "strategy": "tighter_word_budget",
+          "error": "ReadError: "
+        },
+        {
+          "ts": "2026-11-08T12:12:56+00:00",
+          "attempt": 3,
+          "strategy": "simpler_structure",
           "error": "ReadError: "
         }
       ],
@@ -553,11 +564,19 @@
       "decided_at": null
     }
   },
-  "notifications": [],
+  "notifications": [
+    {
+      "ts": "2026-11-08T12:12:56+00:00",
+      "level": "error",
+      "msg": "'Write the script' failed after 3 attempts. Open it on the dashboard and press Retry once fixed.",
+      "step": "script"
+    }
+  ],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-08T12:08:43+00:00",
+    "exported_at": "2026-11-08T12:13:07+00:00",
     "uploads": [],
-    "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/42477958561"
+    "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/42477958561",
+    "issue_url": "https://github.com/jaleleddineagrebi/moderator/issues/39"
   }
 }
