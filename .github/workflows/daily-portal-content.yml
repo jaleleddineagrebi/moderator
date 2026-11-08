@@ -41,6 +41,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r portal/automation/requirements.txt
 
+      - name: Load Past Daily Posts History
+        run: bash .github/scripts/portal-history.sh load
+
       - name: Run Twice-Daily Content Automation Pipeline
         env:
           PORTAL_API_ENDPOINT: ${{ secrets.PORTAL_API_ENDPOINT }}
@@ -57,15 +60,6 @@ jobs:
         run: |
           python -m portal.automation.pipeline
 
-      - name: Commit Daily Content Audit Trail
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add history/daily_posts/
-          if git diff --cached --quiet; then
-            echo "No new daily post files to commit."
-          else
-            git commit -m "Auto-archive daily Psychology & AI posts [skip ci]"
-            git pull --rebase origin ${{ github.ref_name }} || true
-            git push origin HEAD:${{ github.ref }}
-          fi
+      - name: Save Daily Posts History (portal-history branch; main only accepts pull requests)
+        if: always()
+        run: bash .github/scripts/portal-history.sh save
