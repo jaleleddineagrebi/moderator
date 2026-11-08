@@ -314,12 +314,12 @@
       "checkpoint": "B",
       "status": "running",
       "progress": 10,
-      "started_at": "2026-11-08T11:59:58+00:00",
+      "started_at": "2026-11-08T12:04:17+00:00",
       "ended_at": null,
-      "attempt": 1,
-      "retries": 0,
+      "attempt": 2,
+      "retries": 1,
       "max_retries": 2,
-      "strategy": "default",
+      "strategy": "tighter_word_budget",
       "inputs": {
         "idea": "Why Switching Apps Makes You Tired",
         "languages": [
@@ -339,9 +339,31 @@
           "ts": "2026-11-08T11:59:58+00:00",
           "level": "info",
           "msg": "Asking Gemini (gemini-3.8-flash, high complexity, thinking high)"
+        },
+        {
+          "ts": "2026-11-08T12:04:16+00:00",
+          "level": "error",
+          "msg": "ReadError: "
+        },
+        {
+          "ts": "2026-11-08T12:04:17+00:00",
+          "level": "info",
+          "msg": "Attempt 2/3, strategy 'tighter_word_budget'"
+        },
+        {
+          "ts": "2026-11-08T12:04:17+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.8-flash, high complexity, thinking high)"
         }
       ],
-      "errors": [],
+      "errors": [
+        {
+          "ts": "2026-11-08T12:04:16+00:00",
+          "attempt": 1,
+          "strategy": "default",
+          "error": "ReadError: "
+        }
+      ],
       "feedback": [],
       "cost_usd": 0.0
     },
@@ -513,7 +535,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-08T12:00:07+00:00",
+    "exported_at": "2026-11-08T12:04:25+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/42477958561"
   }
