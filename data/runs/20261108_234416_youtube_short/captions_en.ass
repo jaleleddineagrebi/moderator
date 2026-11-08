@@ -1,0 +1,57 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:01.98,Headline,,0,0,0,,{\fad(150,150)}Not Your Real Voice
+Dialogue: 1,0:00:02.08,0:00:06.09,Headline,,0,0,0,,{\fad(150,150)}Why You Cringe
+Dialogue: 1,0:00:06.19,0:00:10.83,Headline,,0,0,0,,{\fad(150,150)}Hearing Through Bone
+Dialogue: 1,0:00:10.93,0:00:17.66,Headline,,0,0,0,,{\fad(150,150)}Deeper In Your Head
+Dialogue: 1,0:00:17.76,0:00:25.07,Headline,,0,0,0,,{\fad(150,150)}Air Sound Only
+Dialogue: 1,0:00:25.17,0:00:31.58,Headline,,0,0,0,,{\fad(150,150)}Normal To Everyone Else
+Dialogue: 1,0:00:31.68,0:00:40.39,Headline,,0,0,0,,{\fad(150,150)}Daily Bias Check
+Dialogue: 0,0:00:00.10,0:00:00.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You don't actually
+Dialogue: 0,0:00:00.61,0:00:01.49,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}sound like that
+Dialogue: 0,0:00:02.13,0:00:02.58,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Every time you
+Dialogue: 0,0:00:02.58,0:00:03.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}hear your voice
+Dialogue: 0,0:00:03.13,0:00:04.13,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}on video you
+Dialogue: 0,0:00:04.13,0:00:05.42,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}cringe and hate
+Dialogue: 0,0:00:05.43,0:00:05.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}it
+Dialogue: 0,0:00:06.26,0:00:06.99,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Here is the
+Dialogue: 0,0:00:07.01,0:00:07.57,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}secret
+Dialogue: 0,0:00:08.11,0:00:08.86,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you hear yourself
+Dialogue: 0,0:00:08.86,0:00:09.48,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}through your own
+Dialogue: 0,0:00:09.49,0:00:10.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}skull bones
+Dialogue: 0,0:00:10.98,0:00:11.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your bones act
+Dialogue: 0,0:00:11.82,0:00:12.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}like an acoustic
+Dialogue: 0,0:00:12.56,0:00:14.16,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}filter boosting low
+Dialogue: 0,0:00:14.16,0:00:15.46,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}frequencies so you
+Dialogue: 0,0:00:15.47,0:00:16.73,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}sound deeper inside
+Dialogue: 0,0:00:16.73,0:00:17.17,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your head
+Dialogue: 0,0:00:17.80,0:00:19.04,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}A microphone only
+Dialogue: 0,0:00:19.05,0:00:20.29,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}picks up sound
+Dialogue: 0,0:00:20.39,0:00:21.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}traveling through the
+Dialogue: 0,0:00:21.24,0:00:21.67,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}air
+Dialogue: 0,0:00:22.11,0:00:23.48,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}completely stripping away
+Dialogue: 0,0:00:23.48,0:00:24.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}that warm bass
+Dialogue: 0,0:00:25.22,0:00:25.87,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}The wild part
+Dialogue: 0,0:00:26.25,0:00:27.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Everyone else has
+Dialogue: 0,0:00:27.09,0:00:28.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}heard this higher
+Dialogue: 0,0:00:28.00,0:00:28.62,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}version your whole
+Dialogue: 0,0:00:28.62,0:00:29.04,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}life
+Dialogue: 0,0:00:29.47,0:00:29.92,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and they find
+Dialogue: 0,0:00:29.92,0:00:31.09,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}it completely normal
+Dialogue: 0,0:00:31.75,0:00:32.98,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Psychologists call this
+Dialogue: 0,0:00:32.99,0:00:34.21,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}voice confrontation
+Dialogue: 0,0:00:34.67,0:00:35.73,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Follow to uncover
+Dialogue: 0,0:00:35.88,0:00:37.73,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}daily mental blindspots
+Dialogue: 0,0:00:38.15,0:00:39.37,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Because in reality
