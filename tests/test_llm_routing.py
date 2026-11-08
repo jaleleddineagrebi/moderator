@@ -29,6 +29,7 @@ def gemini(monkeypatch):
     """Mock Gemini endpoint: `handler(model_id, body) -> httpx.Response`; records (model, body) per request."""
     monkeypatch.setenv("GEMINI_API_KEY", "AIza-routing-test")
     monkeypatch.setenv("GEMINI_API_BASE", "https://gemini.test/v1beta/models")
+    monkeypatch.setenv("MODERATOR_LLM_CACHE", "0")
     monkeypatch.setattr(llm_mod, "TRANSIENT_RETRY_DELAY_S", 0)
     for cache in (llm_mod._WORKING_BASE_BY_KEY, llm_mod._WORKING_MODEL_BY_KEY, llm_mod._SEARCH_UNAVAILABLE_KEYS,
                   llm_mod._EXHAUSTED_MODELS):

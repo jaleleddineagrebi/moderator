@@ -68,20 +68,38 @@ class ClaudeCLI:
 
     async def ask(self, prompt: str, *, system: str | None = None, schema: dict | None = None,
                   tools: list[str] | None = None, model: str | None = None, complexity: str | None = None,
-                  images: list[Path] | None = None) -> Any:
+                  images: list[Path] | None = None, cache: bool = True) -> Any:
         """Run one prompt. Returns the parsed object when `schema` is given, else the text.
         `images` are opened by Claude with its Read tool (only their folders are made readable)."""
         self.ctx.check_budget()
+        level, routed_model, effort = self.route(complexity)
+        is_claude_model = bool(model) and (model in ("haiku", "sonnet", "opus") or model.startswith("claude"))
+        use_model = model if is_claude_model else routed_model
+
+        from .llm_cache import default_cache
+
+        cache_key = ""
+        if cache:
+            cache_key = default_cache.compute_key(
+                provider="claude",
+                model=use_model,
+                prompt=prompt,
+                system=system,
+                schema=schema,
+                tools=tools,
+                images=images,
+            )
+            cached_val = default_cache.get(cache_key)
+            if cached_val is not None:
+                self.ctx.log(f"Claude ({use_model}) answered from CACHE (0 tokens consumed, $0.00 cost)")
+                return cached_val
+
         extra_dirs: list[str] = []
         if images:
             paths = [str(Path(p).resolve()) for p in images]
             tools = [*(tools or []), "Read"]
             extra_dirs = sorted({str(Path(p).parent) for p in paths})
             prompt += "\n\nImages to inspect (open every one with the Read tool before answering):\n" + "\n".join(paths)
-        level, routed_model, effort = self.route(complexity)
-        # an explicit Claude model wins; Gemini names ("flash", "gemini-...") fall back to the routed tier
-        is_claude_model = bool(model) and (model in ("haiku", "sonnet", "opus") or model.startswith("claude"))
-        use_model = model if is_claude_model else routed_model
         cmd = self.command(use_model, effort, tools, system, schema)
         for d in extra_dirs:
             cmd += ["--add-dir", d]
@@ -111,8 +129,21 @@ class ClaudeCLI:
         if schema:
             if out.get("structured_output") is None:
                 raise LLMError("claude returned no structured output")
-            return out["structured_output"]
-        return out.get("result", "")
+            res = out["structured_output"]
+        else:
+            res = out.get("result", "")
+
+        if cache and cache_key:
+            default_cache.set(
+                cache_key=cache_key,
+                provider="claude",
+                model=use_model,
+                response=res,
+                tokens_in=usage.get("input_tokens", 0),
+                tokens_out=usage.get("output_tokens", 0),
+                cost_usd=float(out.get("total_cost_usd") or 0),
+            )
+        return res
 
     async def generate_image(self, prompt: str, dest: Path, **kwargs) -> str:
         """Claude has no image model: delegate to Gemini Nano Banana (needs GEMINI_API_KEY)."""

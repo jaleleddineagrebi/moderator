@@ -22,3 +22,6 @@ dist/
 _site/
 plugins/
 package-lock.json
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm

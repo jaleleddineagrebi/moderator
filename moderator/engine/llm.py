@@ -345,7 +345,7 @@ class GeminiClient:
 
     async def ask(self, prompt: str, *, system: str | None = None, schema: dict | None = None,
                   tools: list[str] | None = None, model: str | None = None, complexity: str | None = None,
-                  images: list[Path] | None = None) -> Any:
+                  images: list[Path] | None = None, cache: bool = True) -> Any:
         """Run a Gemini prompt (optionally with JPEG/PNG images to look at). Returns parsed dict when `schema` is provided, else str.
         The model and thinking level follow the task's complexity (agent.yaml, or `complexity=` here);
         an explicit `model=` overrides the routing."""
@@ -353,6 +353,25 @@ class GeminiClient:
         key = _get_api_key()
         level, routed_model, thinking = self.route(complexity)
         candidates = resolve_text_models(model or routed_model)
+
+        from .llm_cache import default_cache
+
+        cache_key = ""
+        if cache:
+            cache_key = default_cache.compute_key(
+                provider="gemini",
+                model=candidates[0],
+                prompt=prompt,
+                system=system,
+                schema=schema,
+                tools=tools,
+                images=images,
+            )
+            cached_val = default_cache.get(cache_key)
+            if cached_val is not None:
+                self.ctx.log(f"Gemini ({candidates[0]}) answered from CACHE (0 API tokens consumed, $0.00 cost)")
+                return cached_val
+
         requested_search = bool(tools and any(t.lower() in ("websearch", "web_search", "google_search") for t in tools))
         use_search = requested_search and (key not in _SEARCH_UNAVAILABLE_KEYS)
 
@@ -417,32 +436,48 @@ class GeminiClient:
         parts = (cand.get("content") or {}).get("parts") or []
         text = "".join(p.get("text", "") for p in parts)
         if not schema:
-            return text
-
-        try:
-            return extract_json(text)
-        except Exception:
-            if not use_search:
-                raise LLMError(f"Gemini JSON parse failed: {text[:500]}")
-            # Grounded search occasionally wraps prose; run a fast strict-schema extraction pass without search
-            self.ctx.log("Formatting grounded research into strict JSON schema")
-            fmt_body: dict[str, Any] = {
-                "contents": [{"role": "user", "parts": [{"text": f"Convert the following research into JSON matching the schema:\n\n{text}"}]}],
-                "generationConfig": {
-                    "responseMimeType": "application/json",
-                    "responseSchema": sanitize_schema_for_gemini(schema),
-                },
-            }
-            # reformatting is a simple task: always the cheapest tier
-            fmt_model, fmt_data = await self._post(resolve_text_models(self.model or self.tiers["low"]["model"]), fmt_body,
-                                                   thinking=self.tiers["low"].get("thinking"))
-            self._charge(fmt_model, fmt_data)
-            fmt_parts = ((fmt_data.get("candidates") or [{}])[0].get("content") or {}).get("parts") or []
-            fmt_text = "".join(p.get("text", "") for p in fmt_parts)
+            final_res = text
+        else:
             try:
-                return extract_json(fmt_text)
-            except Exception as e:
-                raise LLMError(f"Gemini structured extraction failed: {e}: {fmt_text[:500]}") from e
+                final_res = extract_json(text)
+            except Exception:
+                if not use_search:
+                    raise LLMError(f"Gemini JSON parse failed: {text[:500]}")
+                # Grounded search occasionally wraps prose; run a fast strict-schema extraction pass without search
+                self.ctx.log("Formatting grounded research into strict JSON schema")
+                fmt_body: dict[str, Any] = {
+                    "contents": [{"role": "user", "parts": [{"text": f"Convert the following research into JSON matching the schema:\n\n{text}"}]}],
+                    "generationConfig": {
+                        "responseMimeType": "application/json",
+                        "responseSchema": sanitize_schema_for_gemini(schema),
+                    },
+                }
+                # reformatting is a simple task: always the cheapest tier
+                fmt_model, fmt_data = await self._post(resolve_text_models(self.model or self.tiers["low"]["model"]), fmt_body,
+                                                       thinking=self.tiers["low"].get("thinking"))
+                self._charge(fmt_model, fmt_data)
+                fmt_parts = ((fmt_data.get("candidates") or [{}])[0].get("content") or {}).get("parts") or []
+                fmt_text = "".join(p.get("text", "") for p in fmt_parts)
+                try:
+                    final_res = extract_json(fmt_text)
+                except Exception as e:
+                    raise LLMError(f"Gemini structured extraction failed: {e}: {fmt_text[:500]}") from e
+
+        if cache and cache_key:
+            usage = data.get("usageMetadata") or {}
+            p_tokens = usage.get("promptTokenCount", 0)
+            c_tokens = usage.get("candidatesTokenCount", 0) + usage.get("thoughtsTokenCount", 0)
+            c_cost = _estimate_token_cost(used_model, p_tokens, c_tokens)
+            default_cache.set(
+                cache_key=cache_key,
+                provider="gemini",
+                model=used_model,
+                response=final_res,
+                tokens_in=p_tokens,
+                tokens_out=c_tokens,
+                cost_usd=c_cost,
+            )
+        return final_res
 
     async def generate_image(self, prompt: str, dest: Path, *, aspect_ratio: str = "9:16",
                              size: tuple[int, int] | None = (1080, 1920), model: str | None = None) -> str:
