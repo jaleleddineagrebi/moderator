@@ -31,9 +31,11 @@
   "ended_at": null,
   "revision_rounds": 0,
   "cost": {
-    "total_usd": 0.0,
+    "total_usd": 0.003629,
     "budget_usd": 1.0,
-    "by_agent": {}
+    "by_agent": {
+      "trend_researcher": 0.003629
+    }
   },
   "agents": {
     "trend_researcher": {
@@ -236,10 +238,10 @@
       "agent": "trend_researcher",
       "depends_on": [],
       "checkpoint": "A",
-      "status": "running",
-      "progress": 25,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-08T23:44:16+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-08T23:46:23+00:00",
       "attempt": 1,
       "retries": 0,
       "max_retries": 2,
@@ -251,7 +253,10 @@
           "en"
         ]
       },
-      "outputs": {},
+      "outputs": {
+        "ideas": "ideas.md",
+        "data": "ideas.json"
+      },
       "logs": [
         {
           "ts": "2026-11-08T23:44:16+00:00",
@@ -277,11 +282,26 @@
           "ts": "2026-11-08T23:44:46+00:00",
           "level": "warning",
           "msg": "Gemini connection timed out on default route; retrying over IPv4"
+        },
+        {
+          "ts": "2026-11-08T23:46:23+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3.8-flash) answered in 127.1s (tokens in 499, out 868, thinking 0)"
+        },
+        {
+          "ts": "2026-11-08T23:46:23+00:00",
+          "level": "info",
+          "msg": "Finished, waiting for your approval"
+        },
+        {
+          "ts": "2026-11-08T23:46:23+00:00",
+          "level": "info",
+          "msg": "Approved by schedule (auto-approve) (choice: why-you-hate-hearing-your-own-voice)"
         }
       ],
       "errors": [],
       "feedback": [],
-      "cost_usd": 0.0
+      "cost_usd": 0.003629
     },
     "script": {
       "title": "Write the script",
@@ -290,17 +310,34 @@
         "research"
       ],
       "checkpoint": "B",
-      "status": "queued",
-      "progress": 0,
-      "started_at": null,
+      "status": "running",
+      "progress": 10,
+      "started_at": "2026-11-08T23:46:23+00:00",
       "ended_at": null,
-      "attempt": 0,
+      "attempt": 1,
       "retries": 0,
       "max_retries": 2,
-      "strategy": null,
-      "inputs": {},
+      "strategy": "default",
+      "inputs": {
+        "idea": "Why You Hate Your Recorded Voice",
+        "languages": [
+          "en"
+        ],
+        "comment_at_selection": null
+      },
       "outputs": {},
-      "logs": [],
+      "logs": [
+        {
+          "ts": "2026-11-08T23:46:23+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'default'"
+        },
+        {
+          "ts": "2026-11-08T23:46:23+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.8-flash, high complexity, thinking high)"
+        }
+      ],
       "errors": [],
       "feedback": [],
       "cost_usd": 0.0
@@ -425,11 +462,27 @@
       "type": "choice",
       "step": "research",
       "route_to": "research",
-      "status": "idle",
-      "options": [],
-      "choice": null,
+      "status": "approved",
+      "options": [
+        {
+          "id": "why-you-hate-hearing-your-own-voice",
+          "label": "1. Why You Hate Your Recorded Voice",
+          "detail": "Explains why hearing a recording of yourself makes you cringe due to bone conduction vibrating your skull, making your internal voice sound deeper and richer than it actually is. It surprises viewers by revealing everyone else hears the 'cringe' version and thinks it is completely normal.\nHook (en): You don't sound like that.\nWhy: Voice confrontation is a universally relatable everyday shock that triggers instant self-reflection and debate in the comments. Audio-perceptual phenomena reliably achieve high completion and share rates on YouTube Shorts because viewers immediately test it against their own experience."
+        },
+        {
+          "id": "why-eating-lunch-at-your-desk-keeps-you-hungry",
+          "label": "2. Why Eating While Distracted Never Fills You Up",
+          "detail": "Unpacks why eating while scrolling or working leaves you craving snacks an hour later, revealing that your brain requires visual and sensory memory formation to encode fullness signals. It surprises viewers by showing satiety is just as much a cognitive memory process as a stomach reaction.\nHook (en): Stop eating at your desk.\nWhy: Millions eat daily while staring at screens and struggle with mid-afternoon cravings without realizing the cognitive link. Health-adjacent behavioral insights consistently generate high save-rates and re-watches on short-form platforms."
+        },
+        {
+          "id": "why-cleaning-before-studying-is-productive-procrastination",
+          "label": "3. Why You Suddenly Clean When Stressed",
+          "detail": "Breaks down why high-stakes deadlines suddenly make organizing your desk or doing laundry intensely appealing, exposing it as structured procrastination where the brain swaps emotional threat for an easy dopaminergic win. Viewers feel validated yet called out by the psychological explanation.\nHook (en): Your clean room is hiding something.\nWhy: Structured procrastination is an acute shared experience among students and remote professionals. Calling out this subconscious coping mechanism creates immediate emotional resonance and sparks active comment sections sharing personal habits."
+        }
+      ],
+      "choice": "why-you-hate-hearing-your-own-voice",
       "comment": null,
-      "decided_at": null
+      "decided_at": "2026-11-08T23:46:23+00:00"
     },
     "B": {
       "title": "Approve the script",
@@ -457,7 +510,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-08T23:44:50+00:00",
+    "exported_at": "2026-11-08T23:46:38+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/42536558719"
   }
