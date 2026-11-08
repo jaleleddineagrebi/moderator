@@ -147,9 +147,32 @@ def main() -> None:
     pages_p.add_argument("--gh-run-url", default=None, help="GitHub Actions run URL")
     pages_p.add_argument("--max-runs", type=int, default=10, help="maximum historical runs to retain on Pages")
     pages_p.add_argument("--no-media", action="store_true", help="skip mp4/mp3 files (fast mid-run progress sync)")
+    sub.add_parser("cache-stats", help="inspect LLM response cache hit rates and USD savings")
+    cc_p = sub.add_parser("cache-clear", help="purge cached LLM responses to free disk space")
+    cc_p.add_argument("--expired-only", action="store_true", help="only delete expired cache entries")
     args = parser.parse_args()
 
     config = load_config(ROOT)
+
+    if args.cmd == "cache-stats":
+        from .engine.llm_cache import default_cache
+        stats = default_cache.get_stats()
+        print("LLM Response Cache Statistics:")
+        print(f"  Status:         {'Enabled' if stats.get('enabled') else 'Disabled'}")
+        print(f"  Database Path:  {stats.get('db_path')}")
+        print(f"  Total Entries:  {stats.get('total_entries', 0)}")
+        print(f"  Active Entries: {stats.get('active_entries', 0)}")
+        print(f"  Cache Hits:     {stats.get('total_hits', 0)}")
+        print(f"  Tokens Saved:   {stats.get('tokens_saved', 0):,}")
+        print(f"  Cost Saved:     ${stats.get('usd_saved', 0.0):.4f}")
+        return
+
+    if args.cmd == "cache-clear":
+        from .engine.llm_cache import default_cache
+        deleted = default_cache.clear(expired_only=args.expired_only)
+        scope = "expired" if args.expired_only else "all"
+        print(f"Cleared {deleted} {scope} cache entries from LLM cache.")
+        return
 
     if args.cmd == "export-pages":
         from .pages import export_pages

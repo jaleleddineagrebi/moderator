@@ -19,6 +19,8 @@ uv run python -m moderator upload runs/<run_id> --approved-by me --privacy priva
 uv run python -m moderator youtube-auth --client-secret client_secret.json [--lang en]
 uv run python -m moderator optimize-channel --dry-run   # preview channel SEO/banner/playlist changes; drop --dry-run to apply
 uv run python -m moderator export-pages _site --repo owner/repo   # static GitHub Pages dashboard export
+uv run python -m moderator cache-stats             # inspect LLM response cache hit rates and saved USD
+uv run python -m moderator cache-clear [--expired-only]  # purge cached LLM responses to free disk space
 ```
 
 Set `PYTHONIOENCODING=utf-8` when printing Arabic to the Windows console. `moderator/tools/ffmpeg.py` automatically checks `PATH`, Homebrew (`/opt/homebrew/bin`, `/usr/local/bin`), and Windows WinGet folders.

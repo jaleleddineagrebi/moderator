@@ -98,15 +98,55 @@ class CostOptimizedLLMRouter:
         system_prompt: str = "",
         complexity: TaskComplexity = "low",
         json_output: bool = False,
+        cache: bool = True,
     ) -> LLMResponse:
         """Route prompt through available LLM providers with automatic cross-provider fallback."""
+        try:
+            from moderator.engine.llm_cache import default_cache
+        except Exception:
+            default_cache = None
+
+        cache_key = ""
+        if cache and default_cache:
+            cache_key = default_cache.compute_key(
+                provider="router",
+                model=str(complexity),
+                prompt=prompt,
+                system=system_prompt,
+                json_output=json_output,
+            )
+            cached_val = default_cache.get(cache_key)
+            if cached_val is not None:
+                logger.info("LLMRouter: CACHE HIT! Reusing previously synthesized output (0 API tokens, $0.00 cost)")
+                return LLMResponse(
+                    content=cached_val if isinstance(cached_val, str) else json.dumps(cached_val),
+                    model=f"cache:{complexity}",
+                    tokens_in=0,
+                    tokens_out=0,
+                    cost_usd=0.0,
+                    parsed_json=cached_val if isinstance(cached_val, dict) else None,
+                )
+
         errors: list[str] = []
+
+        def _remember(resp: LLMResponse) -> LLMResponse:
+            if cache and default_cache and cache_key:
+                default_cache.set(
+                    cache_key=cache_key,
+                    provider="router",
+                    model=resp.model,
+                    response=resp.parsed_json if resp.parsed_json else resp.content,
+                    tokens_in=resp.tokens_in,
+                    tokens_out=resp.tokens_out,
+                    cost_usd=resp.cost_usd,
+                )
+            return resp
 
         # 1. Primary Provider: Google Gemini (Active modern models)
         if self.gemini_api_key:
             try:
                 gemini_model = "gemini-flash-latest" if complexity == "high" else "gemini-flash-lite-latest"
-                return await self._call_gemini(prompt, system_prompt, model=gemini_model, json_output=json_output)
+                return _remember(await self._call_gemini(prompt, system_prompt, model=gemini_model, json_output=json_output))
             except Exception as e:
                 msg = f"Gemini provider failed: {e}"
                 logger.warning(f"{msg}. Falling back to next available LLM provider...")
@@ -116,7 +156,7 @@ class CostOptimizedLLMRouter:
         if self.anthropic_api_key:
             try:
                 claude_model = "claude-3-5-sonnet-20241022" if complexity == "high" else "claude-3-5-haiku-20241022"
-                return await self._call_anthropic(prompt, system_prompt, model=claude_model, json_output=json_output)
+                return _remember(await self._call_anthropic(prompt, system_prompt, model=claude_model, json_output=json_output))
             except Exception as e:
                 msg = f"Anthropic provider failed: {e}"
                 logger.warning(f"{msg}. Falling back to next available LLM provider...")
@@ -126,7 +166,7 @@ class CostOptimizedLLMRouter:
         if self.openai_api_key:
             try:
                 openai_model = "gpt-4o" if complexity == "high" else "gpt-4o-mini"
-                return await self._call_openai(prompt, system_prompt, model=openai_model, json_output=json_output)
+                return _remember(await self._call_openai(prompt, system_prompt, model=openai_model, json_output=json_output))
             except Exception as e:
                 msg = f"OpenAI provider failed: {e}"
                 logger.warning(f"{msg}. Falling back to next available LLM provider...")
@@ -135,7 +175,7 @@ class CostOptimizedLLMRouter:
         # 4. Quaternary Provider: Groq
         if self.groq_api_key:
             try:
-                return await self._call_groq(prompt, system_prompt, model="llama-3.3-70b-versatile", json_output=json_output)
+                return _remember(await self._call_groq(prompt, system_prompt, model="llama-3.3-70b-versatile", json_output=json_output))
             except Exception as e:
                 msg = f"Groq provider failed: {e}"
                 logger.warning(f"{msg}. Falling back to local Ollama...")
@@ -145,7 +185,7 @@ class CostOptimizedLLMRouter:
         ollama_available = await self._check_ollama()
         if ollama_available:
             try:
-                return await self._call_ollama(prompt, system_prompt, model="llama3:latest", json_output=json_output)
+                return _remember(await self._call_ollama(prompt, system_prompt, model="llama3:latest", json_output=json_output))
             except Exception as e:
                 msg = f"Local Ollama failed: {e}"
                 errors.append(msg)
