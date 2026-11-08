@@ -93,3 +93,4 @@ To maximize both local cache hits and Google Gemini's server-side implicit conte
 1. **Keep System Instructions Static**: Avoid interpolating timestamps, random nonces, or dynamic counters into `systemInstruction`.
 2. **Put Dynamic Data in User Prompts**: Pass dates, run IDs, or transient data inside the user prompt rather than the system prompt.
 3. **Use Canonical JSON Schemas**: Sort and declare fixed properties in `schema` so fingerprints remain identical across runs.
+

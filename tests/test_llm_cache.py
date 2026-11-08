@@ -79,3 +79,4 @@ def test_cache_clear(tmp_path: Path):
     deleted = cache.clear()
     assert deleted == 2
     assert cache.get_stats()["total_entries"] == 0
+
