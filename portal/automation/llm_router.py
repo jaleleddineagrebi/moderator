@@ -1,12 +1,16 @@
-"""Cost-Optimized LLM Router for Psychology & AI Automation.
+"""Cost-Optimized Multi-Provider LLM Router for Psychology & AI Automation.
 
 Architecture Rules:
 1. Pure Logic Tier ($0): Data sanitization, regex, slug creation, keyword deduping,
    and JSON parsing are handled natively in Python without calling an LLM.
-2. Lightweight/Free Tier: Keyword extraction, taxonomy classification, and basic
-   formatting use local Ollama (Llama-3/Mistral) or ultra-low-cost APIs (Gemini Flash Lite / GPT-4o-mini).
-3. Frontier Tier: Complex synthesis, nuanced psychological framing, and cognitive
-   bias breakdowns use Gemini Flash / Claude Sonnet / GPT-4o only when necessary.
+2. Cross-Provider Fallback Cascade:
+   - Primary: Google Gemini (Modern active models: gemini-flash-latest, 3.8-flash, 3.5-flash, 3.1-flash-lite).
+   - Secondary: Anthropic Claude (claude-3-5-sonnet, claude-3-5-haiku).
+   - Tertiary: OpenAI (gpt-4o, gpt-4o-mini).
+   - Quaternary: Groq (llama-3.3-70b-versatile).
+   - Local: Ollama (llama3) if running locally for $0.
+3. Automatic Failover: If any provider is rate-limited (429), quota-depleted, or 404s,
+   the router logs the event and automatically cascades to the next available provider.
 """
 
 from __future__ import annotations
@@ -58,34 +62,35 @@ class NativeOptimizer:
             "the", "and", "in", "to", "of", "a", "with", "for", "is", "on", "that", "this",
             "are", "as", "by", "from", "at", "it", "an", "be", "how", "why", "what", "their"
         }
-        words = re.findall(r"\b[A-Za-z]{4,}\b", f"{title} {body}".lower())
-        freq: dict[str, int] = {}
-        for w in words:
-            if w not in stopwords:
-                freq[w] = freq.get(w, 0) + 1
-        return [k for k, _ in sorted(freq.items(), key=lambda item: item[1], reverse=True)[:top_n]]
+        words = re.findall(r"\b[a-z]{4,}\b", (title + " " + body).lower())
+        meaningful = [w for w in words if w not in stopwords]
+        counts: dict[str, int] = {}
+        for w in meaningful:
+            counts[w] = counts.get(w, 0) + 1
+        return sorted(counts.keys(), key=lambda k: counts[k], reverse=True)[:top_n]
 
     @staticmethod
     def safe_json_extract(text: str) -> dict[str, Any]:
-        """Robustly extract JSON block from model responses without extra LLM re-prompts."""
-        if match := re.search(r"```(?:json)?\s*([\s\S]*?)\s*```", text):
-            text = match.group(1)
-        text = text.strip()
+        """Robust parser that strips markdown fences and trailing text."""
+        cleaned = re.sub(r"```json\s*", "", text)
+        cleaned = re.sub(r"```\s*", "", cleaned).strip()
         try:
-            return json.loads(text)
+            return json.loads(cleaned)
         except json.JSONDecodeError:
-            start = text.find("{")
-            end = text.rfind("}")
+            start = cleaned.find("{")
+            end = cleaned.rfind("}")
             if start != -1 and end != -1:
-                return json.loads(text[start : end + 1])
+                return json.loads(cleaned[start : end + 1])
             raise
 
 
 class CostOptimizedLLMRouter:
     def __init__(self):
-        self.ollama_base_url = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
         self.gemini_api_key = os.getenv("GEMINI_API_KEY", "")
+        self.anthropic_api_key = os.getenv("ANTHROPIC_API_KEY", "")
         self.openai_api_key = os.getenv("OPENAI_API_KEY", "")
+        self.groq_api_key = os.getenv("GROQ_API_KEY", "")
+        self.ollama_base_url = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
 
     async def route_and_generate(
         self,
@@ -94,30 +99,59 @@ class CostOptimizedLLMRouter:
         complexity: TaskComplexity = "low",
         json_output: bool = False,
     ) -> LLMResponse:
-        """Route prompt based on required complexity to maintain minimum costs."""
-        # Route 1: High complexity (Deep synthesis, cognitive bias framing) -> Frontier API
-        if complexity == "high":
-            if self.gemini_api_key:
-                return await self._call_gemini(prompt, system_prompt, model="gemini-2.5-flash", json_output=json_output)
-            elif self.openai_api_key:
-                return await self._call_openai(prompt, system_prompt, model="gpt-4o", json_output=json_output)
+        """Route prompt through available LLM providers with automatic cross-provider fallback."""
+        errors: list[str] = []
 
-        # Route 2: Low complexity (Drafting, summarization, categorization) -> Ollama local or Flash Lite
-        # Try local Ollama first for true $0 cost if running
+        # 1. Primary Provider: Google Gemini (Active modern models)
+        if self.gemini_api_key:
+            try:
+                gemini_model = "gemini-flash-latest" if complexity == "high" else "gemini-flash-lite-latest"
+                return await self._call_gemini(prompt, system_prompt, model=gemini_model, json_output=json_output)
+            except Exception as e:
+                msg = f"Gemini provider failed: {e}"
+                logger.warning(f"{msg}. Falling back to next available LLM provider...")
+                errors.append(msg)
+
+        # 2. Secondary Provider: Anthropic Claude
+        if self.anthropic_api_key:
+            try:
+                claude_model = "claude-3-5-sonnet-20241022" if complexity == "high" else "claude-3-5-haiku-20241022"
+                return await self._call_anthropic(prompt, system_prompt, model=claude_model, json_output=json_output)
+            except Exception as e:
+                msg = f"Anthropic provider failed: {e}"
+                logger.warning(f"{msg}. Falling back to next available LLM provider...")
+                errors.append(msg)
+
+        # 3. Tertiary Provider: OpenAI
+        if self.openai_api_key:
+            try:
+                openai_model = "gpt-4o" if complexity == "high" else "gpt-4o-mini"
+                return await self._call_openai(prompt, system_prompt, model=openai_model, json_output=json_output)
+            except Exception as e:
+                msg = f"OpenAI provider failed: {e}"
+                logger.warning(f"{msg}. Falling back to next available LLM provider...")
+                errors.append(msg)
+
+        # 4. Quaternary Provider: Groq
+        if self.groq_api_key:
+            try:
+                return await self._call_groq(prompt, system_prompt, model="llama-3.3-70b-versatile", json_output=json_output)
+            except Exception as e:
+                msg = f"Groq provider failed: {e}"
+                logger.warning(f"{msg}. Falling back to local Ollama...")
+                errors.append(msg)
+
+        # 5. Local Fallback: Ollama ($0)
         ollama_available = await self._check_ollama()
         if ollama_available:
             try:
                 return await self._call_ollama(prompt, system_prompt, model="llama3:latest", json_output=json_output)
             except Exception as e:
-                logger.warning(f"Local Ollama failed ({e}), falling back to lightweight cloud model")
+                msg = f"Local Ollama failed: {e}"
+                errors.append(msg)
 
-        # Fallback to lightweight cloud model
-        if self.gemini_api_key:
-            return await self._call_gemini(prompt, system_prompt, model="gemini-2.5-flash-lite", json_output=json_output)
-        elif self.openai_api_key:
-            return await self._call_openai(prompt, system_prompt, model="gpt-4o-mini", json_output=json_output)
-
-        raise RuntimeError("No LLM provider available (check OLLAMA_BASE_URL, GEMINI_API_KEY, or OPENAI_API_KEY)")
+        error_summary = "\n- ".join(errors) if errors else "No LLM API keys configured."
+        raise RuntimeError(f"All LLM providers failed or exhausted quota:\n- {error_summary}")
 
     async def _check_ollama(self) -> bool:
         try:
@@ -151,7 +185,15 @@ class CostOptimizedLLMRouter:
 
     async def _call_gemini(self, prompt: str, system: str, model: str, json_output: bool) -> LLMResponse:
         candidates = [model]
-        for fallback in ["gemini-2.5-flash", "gemini-2.5-flash-lite", "gemini-1.5-flash", "gemini-1.5-flash-8b"]:
+        for fallback in [
+            "gemini-flash-latest",
+            "gemini-3.8-flash",
+            "gemini-3-flash-preview",
+            "gemini-3.5-flash",
+            "gemini-3.1-flash-lite",
+            "gemini-flash-lite-latest",
+            "gemini-2.5-flash",
+        ]:
             if fallback not in candidates:
                 candidates.append(fallback)
 
@@ -173,7 +215,9 @@ class CostOptimizedLLMRouter:
                     logger.info(f"Routing to Google Gemini API ({cand_model})")
                     resp = await client.post(url, json=body)
                     if resp.status_code in (429, 404, 500, 502, 503, 504):
-                        logger.warning(f"Gemini model '{cand_model}' returned HTTP {resp.status_code} ({resp.text[:120]}); falling back to next available model...")
+                        logger.warning(
+                            f"Gemini model '{cand_model}' returned HTTP {resp.status_code} ({resp.text[:120]}); falling back to next available model..."
+                        )
                         continue
                     resp.raise_for_status()
                     data = resp.json()
@@ -197,13 +241,49 @@ class CostOptimizedLLMRouter:
 
         if last_error:
             raise last_error
-        raise RuntimeError("All Gemini candidate models failed or exhausted rate limit/budget.")
+        raise RuntimeError("All Gemini candidate models failed or returned 404/429.")
+
+    async def _call_anthropic(self, prompt: str, system: str, model: str, json_output: bool) -> LLMResponse:
+        logger.info(f"Routing to Anthropic API ({model})")
+        url = "https://api.anthropic.com/v1/messages"
+        headers = {
+            "x-api-key": self.anthropic_api_key,
+            "anthropic-version": "2023-06-01",
+            "content-type": "application/json",
+        }
+        user_prompt = prompt
+        if json_output:
+            user_prompt = f"{prompt}\n\nIMPORTANT: Respond with ONLY a valid raw JSON object (no markdown code blocks, no other text)."
+
+        body: dict[str, Any] = {
+            "model": model,
+            "max_tokens": 4096,
+            "messages": [{"role": "user", "content": user_prompt}],
+        }
+        if system:
+            body["system"] = system
+
+        async with httpx.AsyncClient(timeout=45.0) as client:
+            resp = await client.post(url, headers=headers, json=body)
+            resp.raise_for_status()
+            data = resp.json()
+            content = data["content"][0]["text"]
+            usage = data.get("usage", {})
+            in_toks = usage.get("input_tokens", 0)
+            out_toks = usage.get("output_tokens", 0)
+            cost = (in_toks * 0.000003) + (out_toks * 0.000015)
+            return LLMResponse(
+                content=content.strip(),
+                model_used=f"anthropic/{model}",
+                estimated_cost_usd=round(cost, 6),
+                raw_tokens=usage,
+            )
 
     async def _call_openai(self, prompt: str, system: str, model: str, json_output: bool) -> LLMResponse:
         logger.info(f"Routing to OpenAI API ({model})")
         url = "https://api.openai.com/v1/chat/completions"
         headers = {"Authorization": f"Bearer {self.openai_api_key}", "Content-Type": "application/json"}
-        
+
         messages = []
         if system:
             messages.append({"role": "system", "content": system})
@@ -224,5 +304,32 @@ class CostOptimizedLLMRouter:
                 content=content.strip(),
                 model_used=model,
                 estimated_cost_usd=cost,
+                raw_tokens=usage,
+            )
+
+    async def _call_groq(self, prompt: str, system: str, model: str, json_output: bool) -> LLMResponse:
+        logger.info(f"Routing to Groq API ({model})")
+        url = "https://api.groq.com/openai/v1/chat/completions"
+        headers = {"Authorization": f"Bearer {self.groq_api_key}", "Content-Type": "application/json"}
+
+        messages = []
+        if system:
+            messages.append({"role": "system", "content": system})
+        messages.append({"role": "user", "content": prompt})
+
+        body: dict[str, Any] = {"model": model, "messages": messages}
+        if json_output:
+            body["response_format"] = {"type": "json_object"}
+
+        async with httpx.AsyncClient(timeout=45.0) as client:
+            resp = await client.post(url, headers=headers, json=body)
+            resp.raise_for_status()
+            data = resp.json()
+            content = data["choices"][0]["message"]["content"]
+            usage = data.get("usage", {})
+            return LLMResponse(
+                content=content.strip(),
+                model_used=f"groq/{model}",
+                estimated_cost_usd=0.0001,
                 raw_tokens=usage,
             )
