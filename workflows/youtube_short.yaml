@@ -2,7 +2,7 @@ name: youtube_short
 title: YouTube Short
 description: One idea, one script, finished vertical Short(s) in your target language(s) (en, fr, ar), stopping for your approval at each checkpoint. Never uploads without explicit approval.
 params:
-  languages: [en, fr]   # overridden by channel.yaml or `-p languages=en,fr` / `-p languages=en`
+  languages: [en]   # overridden by channel.yaml or `-p languages=en`
   style: faceless, fast cuts, bold captions, calm narration
   topic: null           # optional: steer the research to a topic inside the niche
   budget_usd: null      # set a number (e.g. 2.50) to cap LLM cost
