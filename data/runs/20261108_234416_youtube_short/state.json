@@ -374,7 +374,7 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 41,
+      "progress": 78,
       "started_at": "2026-11-08T23:48:22+00:00",
       "ended_at": null,
       "attempt": 1,
@@ -416,6 +416,21 @@
           "ts": "2026-11-08T23:48:41+00:00",
           "level": "info",
           "msg": "scene_01: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-08T23:48:55+00:00",
+          "level": "info",
+          "msg": "scene_06: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-08T23:48:58+00:00",
+          "level": "info",
+          "msg": "scene_04: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-08T23:49:07+00:00",
+          "level": "info",
+          "msg": "scene_07: stock_video (pixabay)"
         }
       ],
       "errors": [],
@@ -430,7 +445,7 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 0,
+      "progress": 80,
       "started_at": "2026-11-08T23:48:22+00:00",
       "ended_at": null,
       "attempt": 1,
@@ -457,6 +472,16 @@
           "ts": "2026-11-08T23:48:22+00:00",
           "level": "info",
           "msg": "Narrating en with en-US-AndrewMultilingualNeural"
+        },
+        {
+          "ts": "2026-11-08T23:49:04+00:00",
+          "level": "info",
+          "msg": "en voiceover: 39.7s"
+        },
+        {
+          "ts": "2026-11-08T23:49:05+00:00",
+          "level": "info",
+          "msg": "Generating an ambient music bed (no library tracks with license files found)"
         }
       ],
       "errors": [],
@@ -587,7 +612,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-08T23:48:51+00:00",
+    "exported_at": "2026-11-08T23:49:10+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/42536558719"
   }
