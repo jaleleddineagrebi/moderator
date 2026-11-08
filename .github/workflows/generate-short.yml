@@ -8,8 +8,10 @@ name: Generate Short
 # or trigger the `Upload Short` workflow).
 on:
   schedule:
-    - cron: "17 5 * * *"    # 05:17 UTC (off-peak minute to avoid GitHub's top-of-the-hour queue delay)
-    - cron: "23 14 * * *"   # 14:23 UTC
+    - cron: "17 2 * * *"    # 02:17 UTC (Slot 1: Early Morning)
+    - cron: "17 8 * * *"    # 08:17 UTC (Slot 2: Morning Prime)
+    - cron: "17 14 * * *"   # 14:17 UTC (Slot 3: Afternoon Prime)
+    - cron: "17 20 * * *"   # 20:17 UTC (Slot 4: Evening Prime)
   workflow_dispatch:
     inputs:
       topic:
@@ -162,7 +164,7 @@ jobs:
         run: bash .github/scripts/topics-history.sh save
 
       - name: Publish Step Summary, Review Issue & GitHub Pages Dashboard
-        if: always() && steps.gen.outputs.run_dir
+        if: always()
         env:
           GH_TOKEN: ${{ github.token }}
           RUN_DIR: ${{ steps.gen.outputs.run_dir }}
@@ -172,38 +174,68 @@ jobs:
           PAGES_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
           PYTHONIOENCODING: utf-8
         run: |
-          uv run python -m moderator summary "$RUN_DIR" > body.md
-          if [ "$OUTCOME" = "waiting" ]; then
-            label=short-review
-            title="Review Short: $RUN_ID"
-            {
-              echo ""
-              echo "---"
-              echo "### Live Agent Dashboard & Video Preview"
-              echo "- **GitHub Pages Dashboard:** $PAGES_URL"
-              echo "- **Action Artifact:** \`short-$RUN_ID\` at $RUN_URL"
-              echo ""
-              echo "### Publish Commands (Checkpoint C Approval)"
-              echo "- \`/approve\` — upload all generated languages as **private**"
-              echo "- \`/approve unlisted\` — upload as **unlisted**"
-              echo "- \`/approve public\` — upload as **public**"
-              echo "- \`/approve public en\` (or \`fr\` / \`ar\`) — upload only specific language(s)"
-              echo "- \`/reject\` — close without uploading"
-              echo ""
-              echo "### Edit Before Publishing"
-              echo "- \`/edit text make the hook punchier\` — rewrite the script"
-              echo "- \`/edit first image show a man running at sunrise\` (or \`/edit image 3 ...\`, \`/edit images 2,4 ...\`, \`/edit last image\`) — replace scene visuals"
-              echo "- \`/edit title ...\` / \`/edit thumbnail ...\` — title, description, thumbnail"
-              echo "- \`/edit voice slower\` / \`/edit music lower\` — voiceover, mix"
-            } >> body.md
+          TARGET_DIR="$RUN_DIR"
+          if [ -z "$TARGET_DIR" ] || [ ! -d "$TARGET_DIR" ]; then
+            # Find the latest run folder if run_dir output was not captured
+            LATEST_RUN=$(ls -td runs/*/ 2>/dev/null | head -1 || true)
+            if [ -n "$LATEST_RUN" ] && [ -f "${LATEST_RUN}state.json" ]; then
+              TARGET_DIR="${LATEST_RUN%/}"
+            fi
+          fi
+
+          if [ -n "$TARGET_DIR" ] && [ -f "$TARGET_DIR/state.json" ]; then
+            CURR_RUN_ID=$(python3 -c "import json; print(json.load(open('$TARGET_DIR/state.json'))['run_id'])")
+            uv run python -m moderator summary "$TARGET_DIR" > body.md
+            if [ "$OUTCOME" = "waiting" ]; then
+              label=short-review
+              title="Review Short: $CURR_RUN_ID"
+              {
+                echo ""
+                echo "---"
+                echo "### Live Agent Dashboard & Video Preview"
+                echo "- **GitHub Pages Dashboard:** $PAGES_URL"
+                echo "- **Action Artifact:** \`short-$CURR_RUN_ID\` at $RUN_URL"
+                echo ""
+                echo "### Publish Commands (Checkpoint C Approval)"
+                echo "- \`/approve\` — upload all generated languages as **private**"
+                echo "- \`/approve unlisted\` — upload as **unlisted**"
+                echo "- \`/approve public\` — upload as **public**"
+                echo "- \`/approve public en\` — upload only specific language(s)"
+                echo "- \`/reject\` — close without uploading"
+                echo ""
+                echo "### Edit Before Publishing"
+                echo "- \`/edit text make the hook punchier\` — rewrite the script"
+                echo "- \`/edit first image show a man running at sunrise\` — replace scene visuals"
+                echo "- \`/edit title ...\` / \`/edit thumbnail ...\` — title, description, thumbnail"
+                echo "- \`/edit voice slower\` / \`/edit music lower\` — voiceover, mix"
+              } >> body.md
+            else
+              label=short-failed
+              title="Short generation failed: $CURR_RUN_ID"
+              printf '\n\nDashboard: %s\nLogs: %s\n' "$PAGES_URL" "$RUN_URL" >> body.md
+            fi
           else
             label=short-failed
-            title="Short generation failed: $RUN_ID"
-            printf '\n\nDashboard: %s\nLogs: %s\n' "$PAGES_URL" "$RUN_URL" >> body.md
+            CURR_RUN_ID="gh-${{ github.run_id }}"
+            title="Short generation pipeline failed: $CURR_RUN_ID"
+            {
+              echo "## ❌ Pipeline Startup Failure"
+              echo ""
+              echo "> [!CAUTION]"
+              echo "> **The workflow terminated before the agent run could initialize or save state.**"
+              echo "> Common causes: API rate limits/quota on initial probe, missing environment credentials, or dependency install issues."
+              echo ""
+              echo "- **Action Run Logs:** $RUN_URL"
+              echo "- **Workflow:** \`Generate Short\`"
+              echo "- **Commit:** \`${{ github.sha }}\`"
+            } > body.md
           fi
+
           cat body.md >> "$GITHUB_STEP_SUMMARY"
-          printf '\n<!-- run_id: %s -->\n<!-- gh_run_id: %s -->\n' "$RUN_ID" "${{ github.run_id }}" >> body.md
+          printf '\n<!-- run_id: %s -->\n<!-- gh_run_id: %s -->\n' "$CURR_RUN_ID" "${{ github.run_id }}" >> body.md
           gh label create "$label" --force >/dev/null
           ISSUE_URL=$(gh issue create --title "$title" --label "$label" --body-file body.md)
-          echo "Review issue created: $ISSUE_URL"
-          bash .github/scripts/push-gh-pages.sh --run-id "$RUN_ID" --issue-url "$ISSUE_URL" --gh-run-url "$RUN_URL" || true
+          echo "Issue created: $ISSUE_URL"
+          if [ -n "$TARGET_DIR" ] && [ -f "$TARGET_DIR/state.json" ]; then
+            bash .github/scripts/push-gh-pages.sh --run-id "$CURR_RUN_ID" --issue-url "$ISSUE_URL" --gh-run-url "$RUN_URL" || true
+          fi

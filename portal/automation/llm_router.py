@@ -150,9 +150,11 @@ class CostOptimizedLLMRouter:
             )
 
     async def _call_gemini(self, prompt: str, system: str, model: str, json_output: bool) -> LLMResponse:
-        logger.info(f"Routing to Google Gemini API ({model})")
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={self.gemini_api_key}"
-        
+        candidates = [model]
+        for fallback in ["gemini-2.5-flash", "gemini-2.5-flash-lite", "gemini-1.5-flash", "gemini-1.5-flash-8b"]:
+            if fallback not in candidates:
+                candidates.append(fallback)
+
         contents = []
         if system:
             contents.append({"role": "user", "parts": [{"text": f"SYSTEM INSTRUCTION: {system}\n\nUSER PROMPT: {prompt}"}]})
@@ -163,24 +165,39 @@ class CostOptimizedLLMRouter:
         if json_output:
             body["generationConfig"] = {"responseMimeType": "application/json"}
 
+        last_error: Exception | None = None
         async with httpx.AsyncClient(timeout=45.0) as client:
-            resp = await client.post(url, json=body)
-            resp.raise_for_status()
-            data = resp.json()
-            candidate = data["candidates"][0]["content"]["parts"][0]["text"]
-            
-            # Simple notional cost calculation
-            usage = data.get("usageMetadata", {})
-            prompt_toks = usage.get("promptTokenCount", 0)
-            candidate_toks = usage.get("candidatesTokenCount", 0)
-            cost = (prompt_toks * 0.00000015) + (candidate_toks * 0.0000006)
+            for cand_model in candidates:
+                url = f"https://generativelanguage.googleapis.com/v1beta/models/{cand_model}:generateContent?key={self.gemini_api_key}"
+                try:
+                    logger.info(f"Routing to Google Gemini API ({cand_model})")
+                    resp = await client.post(url, json=body)
+                    if resp.status_code in (429, 404, 500, 502, 503, 504):
+                        logger.warning(f"Gemini model '{cand_model}' returned HTTP {resp.status_code} ({resp.text[:120]}); falling back to next available model...")
+                        continue
+                    resp.raise_for_status()
+                    data = resp.json()
+                    candidate = data["candidates"][0]["content"]["parts"][0]["text"]
 
-            return LLMResponse(
-                content=candidate.strip(),
-                model_used=model,
-                estimated_cost_usd=round(cost, 6),
-                raw_tokens=usage,
-            )
+                    # Notional cost calculation
+                    usage = data.get("usageMetadata", {})
+                    prompt_toks = usage.get("promptTokenCount", 0)
+                    candidate_toks = usage.get("candidatesTokenCount", 0)
+                    cost = (prompt_toks * 0.00000015) + (candidate_toks * 0.0000006)
+
+                    return LLMResponse(
+                        content=candidate.strip(),
+                        model_used=cand_model,
+                        estimated_cost_usd=round(cost, 6),
+                        raw_tokens=usage,
+                    )
+                except httpx.HTTPError as e:
+                    last_error = e
+                    logger.warning(f"Error calling '{cand_model}': {e}. Trying fallback model...")
+
+        if last_error:
+            raise last_error
+        raise RuntimeError("All Gemini candidate models failed or exhausted rate limit/budget.")
 
     async def _call_openai(self, prompt: str, system: str, model: str, json_output: bool) -> LLMResponse:
         logger.info(f"Routing to OpenAI API ({model})")

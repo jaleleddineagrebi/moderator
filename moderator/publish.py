@@ -19,9 +19,37 @@ def review_summary(store: StateStore) -> str:
     lines = [f"**Run:** `{d['run_id']}` · status `{d['status']}` · estimated cost ${d['cost']['total_usd']:.2f}", ""]
     failed = [s for s, v in d["steps"].items() if v["status"] == "failed"]
     if failed:
-        lines.append(f"❌ Failed steps: {', '.join(failed)}. Last error:")
-        err = d["steps"][failed[0]]["errors"][-1]["error"] if d["steps"][failed[0]]["errors"] else "unknown"
-        lines += ["```", err[:1500], "```"]
+        step_name = failed[0]
+        step_data = d["steps"][step_name]
+        err = step_data["errors"][-1]["error"] if step_data.get("errors") else "unknown"
+        spent = d.get("cost", {}).get("total_usd", 0.0)
+        budget = d.get("params", {}).get("budget_usd") or d.get("cost", {}).get("budget_usd")
+        
+        lines.append(f"## ❌ Step '{step_name}' Failed")
+        
+        # 1. Budget Exceeded
+        if "budget of" in err.lower() or "budgetexceeded" in err.lower():
+            lines += [
+                "",
+                "> [!WARNING]",
+                f"> **Safety Spend Cap Exceeded:** Spent ${spent:.2f} (budget cap was ${budget}).",
+                "> ",
+                "> **Resolution:** Re-run with a higher spend cap using `-p budget_usd=2.50` or adjust `INPUT_BUDGET` in GitHub Actions. Free tier Gemini API keys pay $0.00.",
+                ""
+            ]
+        # 2. Rate Limit (429) or Quota Exhaustion
+        elif "429" in err or "quota" in err.lower() or "exhausted" in err.lower() or "rate limit" in err.lower():
+            lines += [
+                "",
+                "> [!CAUTION]",
+                "> **API Rate Limit / Quota Exhausted:** Candidate models exhausted their request limits or daily quota.",
+                "> ",
+                f"> **Current Spent:** ${spent:.2f}",
+                "> **Resolution:** The engine automatically cascades through fallback models. If all models are exhausted, wait for the per-minute or daily quota reset, or verify your API keys at Google AI Studio.",
+                ""
+            ]
+
+        lines += ["### Error Traceback", "```text", err[:1800], "```"]
         return "\n".join(lines)
     meta_rel = (d["steps"].get("packaging") or {}).get("outputs", {}).get("metadata")
     if meta_rel and (run_dir / meta_rel).exists():
