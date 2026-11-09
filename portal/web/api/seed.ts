@@ -3,36 +3,10 @@ import { prisma } from "./prisma";
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
-    // 1. Seed YouTube Shorts from Engine History
-    const short1 = await prisma.youTubeShort.upsert({
-      where: { id: "20261102_171413_youtube_short" },
-      update: {},
-      create: {
-        id: "20261102_171413_youtube_short",
-        title: "AI Makes You Better at the Task, But Your Brain Learns Nothing",
-        youtubeUrl: "https://youtube.com/shorts/20261102_171413_youtube_short",
-        embedUrl: "https://www.youtube.com/embed/20261102_171413_youtube_short",
-        topic: "Temporary Upskilling vs Genuine Learning",
-        hookAngle: "Why relying on AI without self-testing leaves your brain at zero.",
-        runId: "20261102_171413_youtube_short",
-      },
-    });
+    // Shorts are NOT seeded: a Short needs a real YouTube video ID, and the daily pipeline links the
+    // channel's real Shorts to articles (see portal/automation/youtube_shorts.py).
 
-    const short2 = await prisma.youTubeShort.upsert({
-      where: { id: "20261103_152749_youtube_short" },
-      update: {},
-      create: {
-        id: "20261103_152749_youtube_short",
-        title: "Why Nobody Noticed Your Mistake",
-        youtubeUrl: "https://youtube.com/shorts/20261103_152749_youtube_short",
-        embedUrl: "https://www.youtube.com/embed/20261103_152749_youtube_short",
-        topic: "The Spotlight Effect & Social Anxiety",
-        hookAngle: "Others notice your flaws 50% less than you think.",
-        runId: "20261103_152749_youtube_short",
-      },
-    });
-
-    // 2. Seed Initial Articles
+    // Seed Initial Articles
     await prisma.post.upsert({
       where: { slug: "ai-makes-you-better-at-the-task-but-your-brain-learns-nothing" },
       update: {},
@@ -60,7 +34,6 @@ Always attempt the problem for 3 minutes yourself before prompting the model. Us
         sourceUrls: ["https://arxiv.org/abs/2309.10691"],
         aiModelUsed: "Gemini 2.5 Flash",
         synthesisCostUsd: 0.00042,
-        youtubeShortId: short1.id,
         status: "PUBLISHED",
       },
     });
@@ -90,7 +63,6 @@ Introduce artificial friction: force yourself to identify at least one flaw in e
         sourceUrls: ["https://psypost.org/automation-bias-study"],
         aiModelUsed: "Gemini 2.5 Flash",
         synthesisCostUsd: 0.00038,
-        youtubeShortId: short2.id,
         status: "PUBLISHED",
       },
     });

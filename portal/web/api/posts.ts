@@ -1,5 +1,6 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import { prisma } from "./prisma";
+import { cleanPost, ensureShort } from "./_shorts";
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   // Enable CORS
@@ -36,7 +37,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         if (!post) {
           return res.status(404).json({ error: "Post not found" });
         }
-        return res.status(200).json(post);
+        return res.status(200).json(cleanPost(post));
       }
 
       // 2. Paginated Feed
@@ -61,7 +62,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       ]);
 
       return res.status(200).json({
-        data: posts,
+        data: posts.map(cleanPost),
         meta: {
           page,
           limit,
@@ -101,11 +102,15 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         aiModelUsed,
         synthesisCostUsd,
         youtubeShortId,
+        youtubeShort,
       } = body;
 
       if (!title || !slug || !contentMarkdown || !coverImageUrl) {
         return res.status(400).json({ error: "Missing required fields" });
       }
+
+      // The Short must exist before a post can reference it (foreign key), and must be a real YouTube ID
+      const shortId = await ensureShort(youtubeShortId, youtubeShort);
 
       const post = await prisma.post.upsert({
         where: { slug },
@@ -120,7 +125,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           sourceUrls,
           aiModelUsed,
           synthesisCostUsd: synthesisCostUsd || 0,
-          youtubeShortId,
+          youtubeShortId: shortId,
         },
         create: {
           slug,
@@ -134,7 +139,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           sourceUrls,
           aiModelUsed,
           synthesisCostUsd: synthesisCostUsd || 0,
-          youtubeShortId,
+          youtubeShortId: shortId,
         },
       });
 

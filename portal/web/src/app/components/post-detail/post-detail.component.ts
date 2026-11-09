@@ -3,10 +3,9 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { MatChipsModule } from '@angular/material/chips';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatBadgeModule } from '@angular/material/badge';
-import { Post, ReactionTally, ReactionType } from '../../models/post.model';
+import { Post, ReactionTally, ReactionType, isYouTubeId } from '../../models/post.model';
 import { PostService } from '../../services/post.service';
 import { AuthService } from '../../services/auth.service';
 import { YouTubeShortCardComponent } from '../youtube-short-card/youtube-short-card.component';
@@ -20,7 +19,6 @@ import { CommentSectionComponent } from '../comment-section/comment-section.comp
     RouterModule,
     MatButtonModule,
     MatIconModule,
-    MatChipsModule,
     MatProgressSpinnerModule,
     MatBadgeModule,
     YouTubeShortCardComponent,
@@ -40,11 +38,7 @@ import { CommentSectionComponent } from '../comment-section/comment-section.comp
 
       <!-- Category Tags -->
       <div class="tags-wrapper">
-        <mat-chip-set>
-          <mat-chip *ngFor="let tag of post()!.tags" class="detail-tag">
-            #{{ tag }}
-          </mat-chip>
-        </mat-chip-set>
+        <span *ngFor="let tag of post()!.tags" class="detail-tag">#{{ tag }}</span>
       </div>
 
       <!-- Article Header -->
@@ -146,7 +140,7 @@ import { CommentSectionComponent } from '../comment-section/comment-section.comp
 
       <!-- Companion YouTube Short Video Card -->
       <app-youtube-short-card
-        *ngIf="post()!.youtubeShort"
+        *ngIf="post()!.youtubeShort && isYouTubeId(post()!.youtubeShort!.id)"
         [short]="post()!.youtubeShort!"
         [postTitle]="post()!.title"
       ></app-youtube-short-card>
@@ -224,7 +218,16 @@ import { CommentSectionComponent } from '../comment-section/comment-section.comp
     .tags-wrapper {
       margin-bottom: 16px;
 
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+
       .detail-tag {
+        display: inline-flex;
+        align-items: center;
+        height: 28px;
+        padding: 0 12px;
+        border-radius: 999px;
         font-size: 12px;
         font-weight: 700;
         background-color: #eff6ff;
@@ -535,6 +538,7 @@ export class PostDetailComponent implements OnInit {
   private readonly route = inject(ActivatedRoute);
   private readonly postService = inject(PostService);
   readonly auth = inject(AuthService);
+  readonly isYouTubeId = isYouTubeId;
 
   post = signal<Post | null>(null);
   reactionTallies = signal<ReactionTally>({ LIKE: 0, MIND_BLOWN: 0, INSIGHTFUL: 0, BRAIN_CHECK: 0 });

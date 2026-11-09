@@ -175,3 +175,31 @@ Posting uses the official Content Posting API. It runs after YouTube in `Upload 
 4. Manual post of an approved run: `uv run python -m moderator upload-tiktok runs/<run_id> --privacy private`.
 
 Until TikTok audits your app, TikTok forces every post to private (`SELF_ONLY`). The refresh token lasts about a year, so repeat step 2 and update the secret then.
+
+---
+
+## 9. Daily Portal Posts (Database, Companion Shorts, Pull Request)
+
+[`daily-portal-content.yml`](../.github/workflows/daily-portal-content.yml) writes two articles twice a day, saves them to the portal database, and opens a pull request with them.
+
+**Repository secrets and variables**
+
+| Name | Kind | Used for |
+| :--- | :--- | :--- |
+| `GEMINI_API_KEY` | secret | Writing the articles (always the cheapest model) |
+| `PORTAL_API_ENDPOINT` | secret | The portal URL, e.g. `https://your-portal.vercel.app`. The pipeline posts each article to `<endpoint>/api/posts`. |
+| `INTERNAL_API_SECRET` | secret | Must equal `INTERNAL_API_SECRET` in the portal's Vercel environment variables |
+| `YOUTUBE_API_KEY` | secret | Finds your real, public Shorts so articles link to a playable video |
+| `YOUTUBE_CHANNEL_ID` | variable (optional) | Channel ID starting with `UC` (or an `@handle`). Defaults to the "land of ai" channel. |
+
+- **The run fails if the database save fails**, or if `PORTAL_API_ENDPOINT` / `INTERNAL_API_SECRET` are missing. The job summary lists every post with its Short and whether it was saved.
+- **Companion Shorts:** only public, embeddable videos of the channel are linked, and each Short is used by one article. Private or unlisted Shorts are skipped. Without `YOUTUBE_API_KEY`, articles are published without a video.
+- **Pull request:** each run pushes a `daily-posts/<date>` branch with `history/daily_posts/<date_time>.json` and opens a PR. For the PR to open, turn on **Settings → Actions → General → Workflow permissions → "Allow GitHub Actions to create and approve pull requests"**. Without it the run prints a link to open the PR yourself. The workflow also starts the `CI & Pages` workflow on the branch, because a PR opened by Actions does not start CI and your `main` ruleset requires the `test` check.
+- **Duplicate topics:** the archive is also kept on the `portal-history` branch, so the next run avoids topics even before you merge the PR.
+
+**Cleaning old fake Shorts.** Early seed data stored run folder names as YouTube IDs. The portal now hides any Short whose ID is not a real 11-character video ID. To remove them from the database too, run once in the Supabase / Postgres SQL editor:
+
+```sql
+UPDATE "Post" SET "youtubeShortId" = NULL WHERE "youtubeShortId" IS NOT NULL AND "youtubeShortId" !~ '^[A-Za-z0-9_-]{11}$';
+DELETE FROM "YouTubeShort" WHERE id !~ '^[A-Za-z0-9_-]{11}$';
+```

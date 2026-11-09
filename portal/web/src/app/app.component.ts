@@ -35,7 +35,7 @@ import { MatIconModule } from '@angular/material/icon';
             <span class="footer-heading">Platform</span>
             <a href="/">Daily Insights</a>
             <a href="/shorts">YouTube Shorts</a>
-            <a href="https://youtube.com/@MindDecodedShorts" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.youtube.com/channel/UCzjz2ArvjE4RgR_2k2o53mg" target="_blank" rel="noopener noreferrer">
               YouTube Channel ↗
             </a>
           </div>

@@ -4,16 +4,15 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { MatChipsModule } from '@angular/material/chips';
 import { YouTubeShort } from '../../models/post.model';
 import { AnalyticsService } from '../../services/analytics.service';
 
 @Component({
   selector: 'app-youtube-short-card',
   standalone: true,
-  imports: [CommonModule, MatCardModule, MatButtonModule, MatIconModule, MatChipsModule],
+  imports: [CommonModule, MatCardModule, MatButtonModule, MatIconModule],
   template: `
-    <mat-card class="youtube-short-card mat-elevation-z2">
+    <mat-card id="short" class="youtube-short-card mat-elevation-z2">
       <div class="card-top-bar">
         <div class="card-header-badge">
           <mat-icon class="pulse-icon">auto_awesome</mat-icon>
@@ -75,7 +74,7 @@ import { AnalyticsService } from '../../services/analytics.service';
         <a
           mat-flat-button
           color="warn"
-          [href]="short.youtubeUrl"
+          [href]="watchUrl"
           target="_blank"
           rel="noopener noreferrer"
           (click)="onOpenExternal()"
@@ -325,9 +324,14 @@ export class YouTubeShortCardComponent {
   thumbnailAvailable = true;
 
   get safeEmbedUrl(): SafeResourceUrl {
-    const base = this.short.embedUrl || `https://www.youtube.com/embed/${this.short.id}`;
-    const url = `${base}?autoplay=1&mute=0&rel=0&loop=1`;
+    // Always built from the video ID (never from stored URLs); loop needs the playlist parameter to work
+    const id = encodeURIComponent(this.short.id);
+    const url = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&playsinline=1&rel=0&loop=1&playlist=${id}`;
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
+
+  get watchUrl(): string {
+    return `https://www.youtube.com/shorts/${encodeURIComponent(this.short.id)}`;
   }
 
   get thumbnailUrl(): string {
