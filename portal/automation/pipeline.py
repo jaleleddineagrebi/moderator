@@ -131,7 +131,7 @@ Format strictly as JSON with keys: 'title', 'concept', 'hook', 'summary', 'conte
 
         synth_res = await self.router.route_and_generate(
             prompt=prompt,
-            complexity="high",
+            complexity="low",  # the router always uses the cheapest model
             json_output=True,
         )
 
