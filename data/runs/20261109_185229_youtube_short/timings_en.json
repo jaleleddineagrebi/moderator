@@ -1,0 +1,480 @@
+{
+  "voice": "en-US-AriaNeural",
+  "duration": 36.792041,
+  "scenes": [
+    {
+      "scene": "scene_01",
+      "start": 0.0,
+      "end": 3.0,
+      "words": [
+        {
+          "start": 0.1,
+          "end": 0.325,
+          "text": "You’re"
+        },
+        {
+          "start": 0.338,
+          "end": 0.963,
+          "text": "exhausted"
+        },
+        {
+          "start": 1.1,
+          "end": 1.25,
+          "text": "but"
+        },
+        {
+          "start": 1.262,
+          "end": 1.375,
+          "text": "you"
+        },
+        {
+          "start": 1.387,
+          "end": 1.625,
+          "text": "won’t"
+        },
+        {
+          "start": 1.637,
+          "end": 2.138,
+          "text": "sleep"
+        }
+      ]
+    },
+    {
+      "scene": "scene_02",
+      "start": 3.18,
+      "end": 8.748,
+      "words": [
+        {
+          "start": 3.28,
+          "end": 3.905,
+          "text": "Instead"
+        },
+        {
+          "start": 4.13,
+          "end": 4.255,
+          "text": "you"
+        },
+        {
+          "start": 4.267,
+          "end": 4.58,
+          "text": "stare"
+        },
+        {
+          "start": 4.593,
+          "end": 4.668,
+          "text": "at"
+        },
+        {
+          "start": 4.68,
+          "end": 4.805,
+          "text": "your"
+        },
+        {
+          "start": 4.817,
+          "end": 5.292,
+          "text": "screen"
+        },
+        {
+          "start": 5.593,
+          "end": 6.055,
+          "text": "scrolling"
+        },
+        {
+          "start": 6.068,
+          "end": 6.205,
+          "text": "through"
+        },
+        {
+          "start": 6.218,
+          "end": 6.68,
+          "text": "mindless"
+        },
+        {
+          "start": 6.693,
+          "end": 7.143,
+          "text": "videos"
+        },
+        {
+          "start": 7.155,
+          "end": 7.305,
+          "text": "for"
+        },
+        {
+          "start": 7.318,
+          "end": 7.868,
+          "text": "hours"
+        }
+      ]
+    },
+    {
+      "scene": "scene_03",
+      "start": 8.928,
+      "end": 15.048,
+      "words": [
+        {
+          "start": 9.028,
+          "end": 9.966,
+          "text": "Psychologists"
+        },
+        {
+          "start": 9.978,
+          "end": 10.216,
+          "text": "call"
+        },
+        {
+          "start": 10.228,
+          "end": 10.44,
+          "text": "this"
+        },
+        {
+          "start": 10.453,
+          "end": 10.878,
+          "text": "Revenge"
+        },
+        {
+          "start": 10.89,
+          "end": 11.378,
+          "text": "Bedtime"
+        },
+        {
+          "start": 11.39,
+          "end": 12.34,
+          "text": "Procrastination"
+        },
+        {
+          "start": 12.653,
+          "end": 12.778,
+          "text": "and"
+        },
+        {
+          "start": 12.79,
+          "end": 12.903,
+          "text": "it’s"
+        },
+        {
+          "start": 12.915,
+          "end": 12.978,
+          "text": "a"
+        },
+        {
+          "start": 12.99,
+          "end": 13.316,
+          "text": "cry"
+        },
+        {
+          "start": 13.328,
+          "end": 13.503,
+          "text": "for"
+        },
+        {
+          "start": 13.516,
+          "end": 14.166,
+          "text": "autonomy"
+        }
+      ]
+    },
+    {
+      "scene": "scene_04",
+      "start": 15.228,
+      "end": 19.548,
+      "words": [
+        {
+          "start": 15.328,
+          "end": 15.515,
+          "text": "If"
+        },
+        {
+          "start": 15.528,
+          "end": 15.666,
+          "text": "your"
+        },
+        {
+          "start": 15.678,
+          "end": 15.928,
+          "text": "day"
+        },
+        {
+          "start": 15.941,
+          "end": 16.203,
+          "text": "felt"
+        },
+        {
+          "start": 16.216,
+          "end": 16.365,
+          "text": "like"
+        },
+        {
+          "start": 16.378,
+          "end": 16.44,
+          "text": "a"
+        },
+        {
+          "start": 16.453,
+          "end": 16.853,
+          "text": "series"
+        },
+        {
+          "start": 16.865,
+          "end": 16.953,
+          "text": "of"
+        },
+        {
+          "start": 16.966,
+          "end": 17.715,
+          "text": "obligations"
+        },
+        {
+          "start": 17.728,
+          "end": 17.815,
+          "text": "you"
+        },
+        {
+          "start": 17.828,
+          "end": 18.091,
+          "text": "didn't"
+        },
+        {
+          "start": 18.103,
+          "end": 18.653,
+          "text": "choose"
+        }
+      ]
+    },
+    {
+      "scene": "scene_05",
+      "start": 19.728,
+      "end": 23.856,
+      "words": [
+        {
+          "start": 19.828,
+          "end": 20.053,
+          "text": "your"
+        },
+        {
+          "start": 20.066,
+          "end": 20.416,
+          "text": "brain"
+        },
+        {
+          "start": 20.428,
+          "end": 20.74,
+          "text": "stays"
+        },
+        {
+          "start": 20.753,
+          "end": 21.103,
+          "text": "awake"
+        },
+        {
+          "start": 21.115,
+          "end": 21.216,
+          "text": "to"
+        },
+        {
+          "start": 21.228,
+          "end": 21.653,
+          "text": "reclaim"
+        },
+        {
+          "start": 21.666,
+          "end": 21.766,
+          "text": "the"
+        },
+        {
+          "start": 21.778,
+          "end": 22.166,
+          "text": "freedom"
+        },
+        {
+          "start": 22.178,
+          "end": 22.29,
+          "text": "you"
+        },
+        {
+          "start": 22.303,
+          "end": 22.416,
+          "text": "were"
+        },
+        {
+          "start": 22.428,
+          "end": 22.991,
+          "text": "denied"
+        }
+      ]
+    },
+    {
+      "scene": "scene_06",
+      "start": 24.036,
+      "end": 27.9,
+      "words": [
+        {
+          "start": 24.136,
+          "end": 24.374,
+          "text": "It’s"
+        },
+        {
+          "start": 24.386,
+          "end": 24.486,
+          "text": "the"
+        },
+        {
+          "start": 24.499,
+          "end": 24.798,
+          "text": "only"
+        },
+        {
+          "start": 24.811,
+          "end": 25.074,
+          "text": "part"
+        },
+        {
+          "start": 25.086,
+          "end": 25.161,
+          "text": "of"
+        },
+        {
+          "start": 25.173,
+          "end": 25.261,
+          "text": "the"
+        },
+        {
+          "start": 25.274,
+          "end": 25.524,
+          "text": "day"
+        },
+        {
+          "start": 25.536,
+          "end": 25.699,
+          "text": "where"
+        },
+        {
+          "start": 25.711,
+          "end": 25.811,
+          "text": "you"
+        },
+        {
+          "start": 25.824,
+          "end": 25.936,
+          "text": "are"
+        },
+        {
+          "start": 25.949,
+          "end": 26.373,
+          "text": "finally"
+        },
+        {
+          "start": 26.386,
+          "end": 26.486,
+          "text": "the"
+        },
+        {
+          "start": 26.498,
+          "end": 27.023,
+          "text": "boss"
+        }
+      ]
+    },
+    {
+      "scene": "scene_07",
+      "start": 28.08,
+      "end": 36.792,
+      "words": [
+        {
+          "start": 28.18,
+          "end": 28.38,
+          "text": "You"
+        },
+        {
+          "start": 28.392,
+          "end": 28.642,
+          "text": "aren't"
+        },
+        {
+          "start": 28.655,
+          "end": 29.092,
+          "text": "lazy"
+        },
+        {
+          "start": 29.342,
+          "end": 29.455,
+          "text": "you’re"
+        },
+        {
+          "start": 29.467,
+          "end": 29.693,
+          "text": "just"
+        },
+        {
+          "start": 29.705,
+          "end": 29.98,
+          "text": "trying"
+        },
+        {
+          "start": 29.993,
+          "end": 30.093,
+          "text": "to"
+        },
+        {
+          "start": 30.105,
+          "end": 30.305,
+          "text": "own"
+        },
+        {
+          "start": 30.317,
+          "end": 30.43,
+          "text": "your"
+        },
+        {
+          "start": 30.442,
+          "end": 30.692,
+          "text": "life"
+        },
+        {
+          "start": 30.705,
+          "end": 31.13,
+          "text": "again"
+        },
+        {
+          "start": 32.005,
+          "end": 32.43,
+          "text": "Follow"
+        },
+        {
+          "start": 32.442,
+          "end": 32.542,
+          "text": "to"
+        },
+        {
+          "start": 32.555,
+          "end": 32.905,
+          "text": "spot"
+        },
+        {
+          "start": 32.918,
+          "end": 33.03,
+          "text": "your"
+        },
+        {
+          "start": 33.043,
+          "end": 33.38,
+          "text": "mental"
+        },
+        {
+          "start": 33.392,
+          "end": 34.268,
+          "text": "blindspots"
+        },
+        {
+          "start": 35.13,
+          "end": 35.593,
+          "text": "After"
+        },
+        {
+          "start": 35.605,
+          "end": 35.918,
+          "text": "all"
+        }
+      ]
+    }
+  ]
+}
