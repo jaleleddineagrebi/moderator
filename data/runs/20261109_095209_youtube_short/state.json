@@ -379,7 +379,7 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 0,
+      "progress": 33,
       "started_at": "2026-11-09T09:52:39+00:00",
       "ended_at": null,
       "attempt": 1,
@@ -406,6 +406,16 @@
           "ts": "2026-11-09T09:52:39+00:00",
           "level": "info",
           "msg": "Visual diversity: excluding 27 footage sources used in recent Shorts"
+        },
+        {
+          "ts": "2026-11-09T09:53:01+00:00",
+          "level": "info",
+          "msg": "scene_03: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-09T09:53:11+00:00",
+          "level": "info",
+          "msg": "scene_02: stock_video (pixabay)"
         }
       ],
       "errors": [],
@@ -420,7 +430,7 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 0,
+      "progress": 80,
       "started_at": "2026-11-09T09:52:43+00:00",
       "ended_at": null,
       "attempt": 2,
@@ -462,6 +472,16 @@
           "ts": "2026-11-09T09:52:43+00:00",
           "level": "info",
           "msg": "Narrating en with en-US-AriaNeural"
+        },
+        {
+          "ts": "2026-11-09T09:52:54+00:00",
+          "level": "info",
+          "msg": "en voiceover: 39.2s"
+        },
+        {
+          "ts": "2026-11-09T09:52:54+00:00",
+          "level": "info",
+          "msg": "Generating an ambient music bed (no library tracks with license files found)"
         }
       ],
       "errors": [
@@ -599,7 +619,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-09T09:52:47+00:00",
+    "exported_at": "2026-11-09T09:53:11+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/42596598284"
   }

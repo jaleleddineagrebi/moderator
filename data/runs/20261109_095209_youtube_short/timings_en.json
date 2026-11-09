@@ -1,0 +1,523 @@
+{
+  "voice": "en-US-AriaNeural",
+  "duration": 39.204036,
+  "scenes": [
+    {
+      "scene": "scene_01",
+      "start": 0.0,
+      "end": 2.88,
+      "words": [
+        {
+          "start": 0.1,
+          "end": 0.525,
+          "text": "Stop"
+        },
+        {
+          "start": 0.537,
+          "end": 0.975,
+          "text": "rereading"
+        },
+        {
+          "start": 0.988,
+          "end": 1.088,
+          "text": "your"
+        },
+        {
+          "start": 1.1,
+          "end": 1.413,
+          "text": "notes"
+        },
+        {
+          "start": 1.425,
+          "end": 1.637,
+          "text": "right"
+        },
+        {
+          "start": 1.65,
+          "end": 2.0,
+          "text": "now"
+        }
+      ]
+    },
+    {
+      "scene": "scene_02",
+      "start": 3.06,
+      "end": 7.188,
+      "words": [
+        {
+          "start": 3.16,
+          "end": 3.36,
+          "text": "You’re"
+        },
+        {
+          "start": 3.372,
+          "end": 3.76,
+          "text": "trapped"
+        },
+        {
+          "start": 3.773,
+          "end": 3.847,
+          "text": "in"
+        },
+        {
+          "start": 3.86,
+          "end": 3.91,
+          "text": "a"
+        },
+        {
+          "start": 3.923,
+          "end": 4.248,
+          "text": "mental"
+        },
+        {
+          "start": 4.26,
+          "end": 4.622,
+          "text": "trick"
+        },
+        {
+          "start": 4.635,
+          "end": 4.897,
+          "text": "called"
+        },
+        {
+          "start": 4.91,
+          "end": 4.96,
+          "text": "the"
+        },
+        {
+          "start": 4.973,
+          "end": 5.423,
+          "text": "illusion"
+        },
+        {
+          "start": 5.435,
+          "end": 5.522,
+          "text": "of"
+        },
+        {
+          "start": 5.535,
+          "end": 6.31,
+          "text": "competence"
+        }
+      ]
+    },
+    {
+      "scene": "scene_03",
+      "start": 7.368,
+      "end": 13.608,
+      "words": [
+        {
+          "start": 7.468,
+          "end": 7.98,
+          "text": "Skimming"
+        },
+        {
+          "start": 7.993,
+          "end": 8.18,
+          "text": "old"
+        },
+        {
+          "start": 8.193,
+          "end": 8.568,
+          "text": "text"
+        },
+        {
+          "start": 8.58,
+          "end": 8.893,
+          "text": "feels"
+        },
+        {
+          "start": 8.906,
+          "end": 9.293,
+          "text": "easy"
+        },
+        {
+          "start": 9.605,
+          "end": 9.743,
+          "text": "but"
+        },
+        {
+          "start": 9.756,
+          "end": 9.906,
+          "text": "your"
+        },
+        {
+          "start": 9.918,
+          "end": 10.243,
+          "text": "brain"
+        },
+        {
+          "start": 10.256,
+          "end": 10.368,
+          "text": "is"
+        },
+        {
+          "start": 10.381,
+          "end": 10.618,
+          "text": "just"
+        },
+        {
+          "start": 10.631,
+          "end": 11.18,
+          "text": "mistaking"
+        },
+        {
+          "start": 11.193,
+          "end": 11.893,
+          "text": "familiarity"
+        },
+        {
+          "start": 11.905,
+          "end": 12.068,
+          "text": "for"
+        },
+        {
+          "start": 12.081,
+          "end": 12.743,
+          "text": "mastery"
+        }
+      ]
+    },
+    {
+      "scene": "scene_04",
+      "start": 13.788,
+      "end": 22.524,
+      "words": [
+        {
+          "start": 13.888,
+          "end": 14.088,
+          "text": "You"
+        },
+        {
+          "start": 14.1,
+          "end": 14.663,
+          "text": "recognize"
+        },
+        {
+          "start": 14.675,
+          "end": 14.775,
+          "text": "the"
+        },
+        {
+          "start": 14.788,
+          "end": 15.226,
+          "text": "words"
+        },
+        {
+          "start": 15.463,
+          "end": 15.613,
+          "text": "but"
+        },
+        {
+          "start": 15.625,
+          "end": 15.726,
+          "text": "you"
+        },
+        {
+          "start": 15.738,
+          "end": 16.1,
+          "text": "haven't"
+        },
+        {
+          "start": 16.113,
+          "end": 16.538,
+          "text": "actually"
+        },
+        {
+          "start": 16.551,
+          "end": 16.876,
+          "text": "stored"
+        },
+        {
+          "start": 16.888,
+          "end": 16.951,
+          "text": "the"
+        },
+        {
+          "start": 16.963,
+          "end": 17.763,
+          "text": "concepts"
+        },
+        {
+          "start": 18.626,
+          "end": 18.838,
+          "text": "It's"
+        },
+        {
+          "start": 18.85,
+          "end": 19.075,
+          "text": "like"
+        },
+        {
+          "start": 19.088,
+          "end": 19.388,
+          "text": "looking"
+        },
+        {
+          "start": 19.4,
+          "end": 19.476,
+          "text": "at"
+        },
+        {
+          "start": 19.488,
+          "end": 19.538,
+          "text": "a"
+        },
+        {
+          "start": 19.551,
+          "end": 19.876,
+          "text": "map"
+        },
+        {
+          "start": 19.888,
+          "end": 20.263,
+          "text": "without"
+        },
+        {
+          "start": 20.275,
+          "end": 20.688,
+          "text": "actually"
+        },
+        {
+          "start": 20.7,
+          "end": 21.088,
+          "text": "driving"
+        },
+        {
+          "start": 21.1,
+          "end": 21.2,
+          "text": "the"
+        },
+        {
+          "start": 21.213,
+          "end": 21.663,
+          "text": "route"
+        }
+      ]
+    },
+    {
+      "scene": "scene_05",
+      "start": 22.704,
+      "end": 31.128,
+      "words": [
+        {
+          "start": 22.804,
+          "end": 22.954,
+          "text": "To"
+        },
+        {
+          "start": 22.967,
+          "end": 23.341,
+          "text": "truly"
+        },
+        {
+          "start": 23.354,
+          "end": 23.667,
+          "text": "learn"
+        },
+        {
+          "start": 23.966,
+          "end": 24.029,
+          "text": "you"
+        },
+        {
+          "start": 24.041,
+          "end": 24.329,
+          "text": "must"
+        },
+        {
+          "start": 24.341,
+          "end": 24.666,
+          "text": "force"
+        },
+        {
+          "start": 24.679,
+          "end": 24.791,
+          "text": "your"
+        },
+        {
+          "start": 24.804,
+          "end": 25.104,
+          "text": "brain"
+        },
+        {
+          "start": 25.117,
+          "end": 25.192,
+          "text": "to"
+        },
+        {
+          "start": 25.204,
+          "end": 25.642,
+          "text": "struggle"
+        },
+        {
+          "start": 25.654,
+          "end": 25.817,
+          "text": "through"
+        },
+        {
+          "start": 25.829,
+          "end": 26.254,
+          "text": "active"
+        },
+        {
+          "start": 26.266,
+          "end": 26.792,
+          "text": "recall"
+        },
+        {
+          "start": 27.654,
+          "end": 28.104,
+          "text": "Testing"
+        },
+        {
+          "start": 28.116,
+          "end": 28.591,
+          "text": "yourself"
+        },
+        {
+          "start": 28.604,
+          "end": 28.717,
+          "text": "is"
+        },
+        {
+          "start": 28.729,
+          "end": 28.829,
+          "text": "the"
+        },
+        {
+          "start": 28.842,
+          "end": 29.167,
+          "text": "only"
+        },
+        {
+          "start": 29.179,
+          "end": 29.392,
+          "text": "way"
+        },
+        {
+          "start": 29.404,
+          "end": 29.504,
+          "text": "to"
+        },
+        {
+          "start": 29.516,
+          "end": 29.804,
+          "text": "lock"
+        },
+        {
+          "start": 29.816,
+          "end": 29.916,
+          "text": "it"
+        },
+        {
+          "start": 29.929,
+          "end": 30.241,
+          "text": "in"
+        }
+      ]
+    },
+    {
+      "scene": "scene_06",
+      "start": 31.308,
+      "end": 39.204,
+      "words": [
+        {
+          "start": 31.408,
+          "end": 31.758,
+          "text": "Real"
+        },
+        {
+          "start": 31.771,
+          "end": 32.07,
+          "text": "growth"
+        },
+        {
+          "start": 32.083,
+          "end": 32.533,
+          "text": "happens"
+        },
+        {
+          "start": 32.546,
+          "end": 32.683,
+          "text": "when"
+        },
+        {
+          "start": 32.695,
+          "end": 32.796,
+          "text": "you"
+        },
+        {
+          "start": 32.808,
+          "end": 33.258,
+          "text": "challenge"
+        },
+        {
+          "start": 33.27,
+          "end": 33.358,
+          "text": "your"
+        },
+        {
+          "start": 33.37,
+          "end": 33.895,
+          "text": "memory"
+        },
+        {
+          "start": 34.758,
+          "end": 35.171,
+          "text": "Follow"
+        },
+        {
+          "start": 35.183,
+          "end": 35.295,
+          "text": "to"
+        },
+        {
+          "start": 35.308,
+          "end": 35.633,
+          "text": "spot"
+        },
+        {
+          "start": 35.646,
+          "end": 35.758,
+          "text": "your"
+        },
+        {
+          "start": 35.771,
+          "end": 36.108,
+          "text": "mental"
+        },
+        {
+          "start": 36.12,
+          "end": 36.845,
+          "text": "blindspots"
+        },
+        {
+          "start": 36.858,
+          "end": 37.083,
+          "text": "and"
+        },
+        {
+          "start": 37.095,
+          "end": 37.508,
+          "text": "remember"
+        },
+        {
+          "start": 37.521,
+          "end": 37.671,
+          "text": "why"
+        },
+        {
+          "start": 37.683,
+          "end": 37.845,
+          "text": "you"
+        },
+        {
+          "start": 37.858,
+          "end": 38.321,
+          "text": "should"
+        }
+      ]
+    }
+  ]
+}
