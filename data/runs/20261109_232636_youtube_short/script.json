@@ -1,0 +1,145 @@
+{
+  "title": "Why You Can't Eat Without Watching Something",
+  "scenes": [
+    {
+      "vo": {
+        "en": "You refuse to eat in silence."
+      },
+      "on_screen": {
+        "en": "Never Eat In Silence"
+      },
+      "visual": {
+        "description": "Top-down view of a steaming hot bowl of freshly cooked noodles on a rustic wooden table beside a dark smartphone.",
+        "search_terms": [
+          "steaming bowl pasta",
+          "hot noodles table",
+          "food steam rising",
+          "hot meal close up"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Your steaming dinner sits untouched while you furiously scroll, searching for the perfect ten-minute video."
+      },
+      "on_screen": {
+        "en": "Searching For A Video"
+      },
+      "visual": {
+        "description": "A man's hands rapidly scrolling through an endless video feed on a bright smartphone screen in a dim room.",
+        "search_terms": [
+          "hands scrolling phone",
+          "rapid smartphone scrolling",
+          "swiping screen close up",
+          "mobile screen thumb"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "This is sensory pairing. Over time, your brain fused the physical act of chewing with digital dopamine."
+      },
+      "on_screen": {
+        "en": "Sensory Pairing Loop"
+      },
+      "visual": {
+        "description": "3D visualization of glowing electric blue neural synapses firing rapid pulses across an abstract brain network.",
+        "search_terms": [
+          "synapse brain firing",
+          "neural network glowing",
+          "dopamine neurons firing",
+          "abstract brain electricity"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "Without that glowing screen, the simple task of feeding yourself suddenly feels agonizingly under-stimulating."
+      },
+      "on_screen": {
+        "en": "Agonizingly Boring"
+      },
+      "visual": {
+        "description": "A solitary man sitting motionless at an empty wooden dining table, staring blankly ahead in silence.",
+        "search_terms": [
+          "man sitting alone",
+          "empty dining table",
+          "solitary man room",
+          "lonely meal quiet"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Even worse, distracted eating blinds your brain to fullness cues, quietly triggering habitual overeating."
+      },
+      "on_screen": {
+        "en": "Blinded Satiety Signals"
+      },
+      "visual": {
+        "description": "A fast time-lapse showing hands mindlessly picking snacks from an overflowing bowl until it is empty.",
+        "search_terms": [
+          "hands grabbing snacks",
+          "mindless eating chips",
+          "plate food timelapse",
+          "junk food eating"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "Eating just three meals in total quiet uncouples this conditioned loop and resets natural satiety."
+      },
+      "on_screen": {
+        "en": "Reset Your Brain"
+      },
+      "visual": {
+        "description": "A man calmly taking a mindful bite of fresh food near a sunlit window with eyes closed, enjoying the flavor.",
+        "search_terms": [
+          "man eating mindful",
+          "eating salad window",
+          "peaceful breakfast morning",
+          "fresh healthy food"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Follow to outsmart your daily brain traps. Until then, whenever fresh food arrives..."
+      },
+      "on_screen": {
+        "en": "Outsmart Your Mind"
+      },
+      "visual": {
+        "description": "A vintage hourglass with sand trickling down continuously against a moody cinematic dark background.",
+        "search_terms": [
+          "vintage hourglass sand",
+          "clock pendulum swinging",
+          "hourglass time passing",
+          "antique clock ticking"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "why-you-scroll-while-eating",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 34.2
+  }
+}
