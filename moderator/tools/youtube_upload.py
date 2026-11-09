@@ -91,8 +91,9 @@ def upload(lang: str, video: Path, meta: dict, privacy: str, thumbnail: Path | N
         if size > 480:
             break
         tags.append(tag)
+    is_long = str(meta.get("format") or "short").lower() == "long"
     raw_title = meta["title"].strip()
-    if "#shorts" not in raw_title.lower() and len(raw_title) <= 91:
+    if not is_long and "#shorts" not in raw_title.lower() and len(raw_title) <= 91:
         raw_title = f"{raw_title} #shorts"
     body = {
         "snippet": {
@@ -110,7 +111,8 @@ def upload(lang: str, video: Path, meta: dict, privacy: str, thumbnail: Path | N
     response = None
     while response is None:
         _, response = request.next_chunk()
-    result = {"id": response["id"], "url": f"https://youtube.com/shorts/{response['id']}",
+    video_url = f"https://youtube.com/watch?v={response['id']}" if is_long else f"https://youtube.com/shorts/{response['id']}"
+    result = {"id": response["id"], "url": video_url,
               "privacy": response["status"]["privacyStatus"], "channel": channel_title(creds)}
     if thumbnail and thumbnail.exists():
         try:  # needs a phone-verified channel; Shorts feeds may still show a frame instead

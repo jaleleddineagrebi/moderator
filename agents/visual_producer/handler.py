@@ -59,8 +59,9 @@ def _expand_queries(search_terms: list[str], scene_idx: int) -> tuple[list[str],
     return primary, fallbacks
 
 
-def generated_background(path, seed: int) -> None:
+def generated_background(path, seed: int, size: tuple[int, int] = (1080, 1920)) -> None:
     """Soft gradient with blurred light blobs: neutral, original, safe behind bold captions."""
+    w, h = size
     rnd = random.Random(seed)
     hue = rnd.random()
     sat = rnd.uniform(0.45, 0.75)
@@ -68,17 +69,17 @@ def generated_background(path, seed: int) -> None:
     top = tuple(int(c * 255) for c in colorsys.hsv_to_rgb(hue, sat, val))
     bottom_hue = (hue + rnd.uniform(0.12, 0.35)) % 1
     bottom = tuple(int(c * 255) for c in colorsys.hsv_to_rgb(bottom_hue, min(1.0, sat + 0.1), val * 0.4))
-    img = Image.new("RGB", (1080, 1920))
+    img = Image.new("RGB", (w, h))
     draw = ImageDraw.Draw(img)
-    for y in range(1920):
-        k = y / 1919
-        draw.line([(0, y), (1080, y)], fill=tuple(int(top[i] * (1 - k) + bottom[i] * k) for i in range(3)))
-    glow = Image.new("RGB", (1080, 1920))
+    for y in range(h):
+        k = y / max(h - 1, 1)
+        draw.line([(0, y), (w, y)], fill=tuple(int(top[i] * (1 - k) + bottom[i] * k) for i in range(3)))
+    glow = Image.new("RGB", (w, h))
     gd = ImageDraw.Draw(glow)
     blob_count = rnd.randint(6, 12)
     for _ in range(blob_count):
         r = rnd.randint(120, 380)
-        x, y = rnd.randint(-120, 1200), rnd.randint(-120, 2040)
+        x, y = rnd.randint(-120, w + 120), rnd.randint(-120, h + 120)
         blob_hue = (hue + rnd.uniform(-0.25, 0.25)) % 1
         c = tuple(int(v * 255) for v in colorsys.hsv_to_rgb(blob_hue, rnd.uniform(0.4, 0.8), rnd.uniform(0.6, 0.95)))
         gd.ellipse([x - r, y - r, x + r, y + r], fill=c)
@@ -188,6 +189,9 @@ class Handler(Agent):
         return {"contact_sheet": sheet, "scenes": clips, "licenses": lic_path}
 
     async def _tier(self, ctx, tier, scene, i, title, video_providers, photo_providers, used, pick_lock, out) -> dict | None:
+        is_long = str(ctx.params.get("format") or "short").lower() == "long"
+        target_size = (1920, 1080) if is_long else (1080, 1920)
+        target_ar = "16:9" if is_long else "9:16"
         if tier == "nano_banana":
             png = ctx.path(f"assets/raw/{scene['id']}_banana.png")
             fb = f"\nRevision note: {ctx.feedback[-1]['comment']}" if ctx.feedback else ""
@@ -207,7 +211,7 @@ class Handler(Agent):
             angle = camera_angles[i % len(camera_angles)]
             lighting = lightings[(i + zlib.crc32(title.encode())) % len(lightings)]
             prompt = (
-                f"Vertical 9:16 cinematic visual for a faceless YouTube Short titled '{title}'. "
+                f"{'Widescreen 16:9' if is_long else 'Vertical 9:16'} cinematic visual for a faceless YouTube video titled '{title}'. "
                 f"Scene {i + 1}: {scene['visual']['description']}. "
                 f"Composition: {angle}, {lighting}. "
                 f"Style: {ctx.params.get('style', 'cinematic, moody lighting, clean composition')}. "
@@ -215,8 +219,11 @@ class Handler(Agent):
                 f"Leave clean breathing room in the upper and lower thirds for burned-in captions. "
                 f"{visual_rules.IMAGE_PROMPT_RULE}{fb}"
             )
-            used_model = await ctx.llm.generate_image(prompt, png, aspect_ratio="9:16", size=(1080, 1920))
-            await ffmpeg.still_to_clip(png, out, ctx.run_dir, seconds=10, zoom_in=i % 2 == 0)
+            used_model = await ctx.llm.generate_image(prompt, png, aspect_ratio=target_ar, size=target_size)
+            if is_long:
+                await ffmpeg.still_to_clip(png, out, ctx.run_dir, seconds=16, zoom_in=i % 2 == 0, size=target_size)
+            else:
+                await ffmpeg.still_to_clip(png, out, ctx.run_dir, seconds=10, zoom_in=i % 2 == 0)
             return {
                 "provider": "nano_banana",
                 "model": used_model,
@@ -226,8 +233,11 @@ class Handler(Agent):
         if tier == "generated":
             png = ctx.path(f"assets/raw/{scene['id']}.png")
             seed = zlib.crc32(f"{ctx.store.data['run_id']}:{ctx.attempt}:{i}".encode())
-            generated_background(png, seed=seed)
-            await ffmpeg.still_to_clip(png, out, ctx.run_dir, seconds=10, zoom_in=i % 2 == 0)
+            generated_background(png, seed=seed, size=target_size)
+            if is_long:
+                await ffmpeg.still_to_clip(png, out, ctx.run_dir, seconds=16, zoom_in=i % 2 == 0, size=target_size)
+            else:
+                await ffmpeg.still_to_clip(png, out, ctx.run_dir, seconds=10, zoom_in=i % 2 == 0)
             return {"provider": "generated", "license": "original work, no third-party rights"}
 
         primary_terms, fallback_terms = _expand_queries(scene["visual"]["search_terms"], i)
@@ -273,9 +283,15 @@ class Handler(Agent):
                             try:
                                 await stock.download(pick["url"], raw)
                                 if tier == "stock_video":
-                                    await ffmpeg.normalize_clip(raw, out, ctx.run_dir)
+                                    if is_long:
+                                        await ffmpeg.normalize_clip(raw, out, ctx.run_dir, max_seconds=18, size=target_size)
+                                    else:
+                                        await ffmpeg.normalize_clip(raw, out, ctx.run_dir)
                                 else:
-                                    await ffmpeg.still_to_clip(raw, out, ctx.run_dir, seconds=10, zoom_in=i % 2 == 0)
+                                    if is_long:
+                                        await ffmpeg.still_to_clip(raw, out, ctx.run_dir, seconds=16, zoom_in=i % 2 == 0, size=target_size)
+                                    else:
+                                        await ffmpeg.still_to_clip(raw, out, ctx.run_dir, seconds=10, zoom_in=i % 2 == 0)
                                 return {k: pick[k] for k in ("provider", "page", "author", "license")} | {"query": term}
                             except Exception as e:  # noqa: BLE001
                                 ctx.log(f"{scene['id']}: clip normalize failed for {pick['url']} ({e})", "warning")

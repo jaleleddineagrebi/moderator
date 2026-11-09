@@ -74,21 +74,26 @@ async def loudness(path: Path, cwd: Path) -> dict:
     return {"lufs": float(integrated.group(1)), "true_peak_db": float(peak.group(1)) if peak and peak.group(1) != "-inf" else None}
 
 
-COVER_VF = f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,fps={FPS}"
+COVER_VF = f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},eq=contrast=1.06:saturation=1.14,setsar=1,fps={FPS}"
 
 
-async def normalize_clip(src: Path, dst: Path, cwd: Path, max_seconds: float = 12) -> None:
-    """Any video -> silent 1080x1920 30fps H.264."""
-    await run(["-i", str(src), "-t", f"{max_seconds}", "-vf", COVER_VF, "-an", "-c:v", "libx264",
+async def normalize_clip(src: Path, dst: Path, cwd: Path, max_seconds: float = 12,
+                         size: tuple[int, int] = (W, H)) -> None:
+    """Any video -> silent normalized 30fps H.264 clip (1080x1920 for Shorts, 1920x1080 for Long-form)."""
+    w, h = size
+    vf = f"scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h},eq=contrast=1.06:saturation=1.14,setsar=1,fps={FPS}"
+    await run(["-i", str(src), "-t", f"{max_seconds}", "-vf", vf, "-an", "-c:v", "libx264",
                "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p", str(dst)], cwd)
 
 
-async def still_to_clip(src: Path, dst: Path, cwd: Path, seconds: float = 8, zoom_in: bool = True) -> None:
-    """Still image -> slow Ken Burns zoom clip, 1080x1920."""
+async def still_to_clip(src: Path, dst: Path, cwd: Path, seconds: float = 8, zoom_in: bool = True,
+                        size: tuple[int, int] = (W, H)) -> None:
+    """Still image -> slow Ken Burns zoom clip (1080x1920 for Shorts, 1920x1080 for Long-form)."""
+    w, h = size
     frames = int(seconds * FPS)
     z = "min(zoom+0.0009,1.15)" if zoom_in else "if(eq(on,0),1.15,max(zoom-0.0009,1.0))"
-    vf = (f"scale={W * 2}:{H * 2}:force_original_aspect_ratio=increase,crop={W * 2}:{H * 2},"
-          f"zoompan=z='{z}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={frames}:s={W}x{H}:fps={FPS},setsar=1")
+    vf = (f"scale={w * 2}:{h * 2}:force_original_aspect_ratio=increase,crop={w * 2}:{h * 2},"
+          f"zoompan=z='{z}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={frames}:s={w}x{h}:fps={FPS},setsar=1")
     await run(["-loop", "1", "-i", str(src), "-vf", vf, "-t", f"{seconds}", "-c:v", "libx264", "-preset", "veryfast",
                "-crf", "20", "-pix_fmt", "yuv420p", str(dst)], cwd)
 

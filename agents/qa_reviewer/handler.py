@@ -61,15 +61,21 @@ class Handler(Agent):
             checks.append({"check": name, "lang": lang, "ok": bool(ok), "detail": detail,
                            "send_to": None if ok else send_to, "severity": severity})
 
+        is_long = str(ctx.params.get("format") or "short").lower() == "long"
+        expected_dim = (1920, 1080) if is_long else (1080, 1920)
         for li, lang in enumerate(langs):
             video = ctx.run_dir / edit[f"video_{lang}"]
             info = await ffmpeg.probe(video)
             v = next(s for s in info["streams"] if s["codec_type"] == "video")
             a = next((s for s in info["streams"] if s["codec_type"] == "audio"), None)
             dur = float(info["format"]["duration"])
-            check("length", 15 <= dur < 60, f"{dur:.1f}s (must be under 60s; target 32-50s)", "script", lang)
-            check("target length", 28 <= dur <= 58, f"{dur:.1f}s", "script", lang, "minor")
-            check("aspect ratio", (v["width"], v["height"]) == (1080, 1920), f"{v['width']}x{v['height']}", "edit", lang)
+            if is_long:
+                check("length", 90 <= dur <= 360, f"{dur:.1f}s (target 150-240s)", "script", lang)
+                check("target length", 120 <= dur <= 300, f"{dur:.1f}s", "script", lang, "minor")
+            else:
+                check("length", 15 <= dur < 60, f"{dur:.1f}s (must be under 60s; target 32-50s)", "script", lang)
+                check("target length", 28 <= dur <= 58, f"{dur:.1f}s", "script", lang, "minor")
+            check("aspect ratio", (v["width"], v["height"]) == expected_dim, f"{v['width']}x{v['height']}", "edit", lang)
             check("video codec", v["codec_name"] == "h264", v["codec_name"], "edit", lang)
             check("audio track", a is not None, "present" if a else "missing", "edit", lang)
 

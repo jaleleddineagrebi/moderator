@@ -1,0 +1,44 @@
+name: youtube_long
+title: YouTube Deep-Dive (16:9 Long-Form)
+description: High-retention 3 to 4-minute 16:9 widescreen Deep-Dive video that converts Shorts viewers into loyal subscribers and multiplies channel watch time.
+params:
+  format: long
+  languages: [en]   # overridden by channel.yaml or `-p languages=en`
+  style: faceless, cinematic 16:9, bold highlighted captions, high-retention pacing
+  topic: null
+  budget_usd: null
+settings:
+  max_retries: 2
+  max_revision_rounds: 2
+  retry_backoff_s: 1.0
+steps:
+  - id: research
+    title: Find 3 Deep-Dive video ideas
+    agent: trend_researcher
+    checkpoint: {id: A, title: Pick the Deep-Dive idea, type: choice}
+  - id: script
+    title: Write the 12-16 scene Deep-Dive script
+    agent: scriptwriter
+    depends_on: [research]
+    checkpoint: {id: B, title: Approve the script}
+  - id: visuals
+    title: Source 16:9 widescreen visuals
+    agent: visual_producer
+    depends_on: [script]
+  - id: audio
+    title: Voiceover, music and SFX
+    agent: voice_audio
+    depends_on: [script]
+  - id: packaging
+    title: High-CTR title, description, 16:9 thumbnail
+    agent: packaging
+    depends_on: [script, visuals]
+  - id: edit
+    title: Edit the final 16:9 video
+    agent: editor
+    depends_on: [visuals, audio]
+  - id: qa
+    title: Quality check
+    agent: qa_reviewer
+    depends_on: [edit, packaging]
+    checkpoint: {id: C, title: Approve the final Deep-Dive video (never uploaded without your OK), route_to: edit}

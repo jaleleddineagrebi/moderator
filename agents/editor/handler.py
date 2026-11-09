@@ -34,9 +34,11 @@ class Handler(Agent):
                 transitions = False
             if "no sfx" in fb_low or "remove sfx" in fb_low or "no whoosh" in fb_low:
                 sfx = False
+        is_long = str(ctx.params.get("format") or "short").lower() == "long"
+        video_size = (1920, 1080) if is_long else (1080, 1920)
         follow_button = bool(ctx.options.get("follow_button", True))
-        follow_start = float(ctx.options.get("follow_button_start", 3.0))
-        follow_y = int(ctx.options.get("follow_button_y", 1440))
+        follow_start = float(ctx.options.get("follow_button_start", 2.5))
+        follow_y = int(ctx.options.get("follow_button_y", 880 if is_long else 1440))
         follow_label = ctx.options.get("follow_button_label") or {}  # optional per-language override
         fonts_dir = text.escape_filter_arg(os.path.relpath(text.FONTS_DIR, ctx.run_dir))
 
@@ -54,7 +56,7 @@ class Handler(Agent):
                 captions += text.caption_chunks(sc["words"], max_words=3)
                 headlines.append({"start": sc["start"] + 0.05, "end": sc["start"] + d - 0.05, "text": s["on_screen"][lang]})
             ass = f"captions_{lang}.ass"
-            text.write_ass(ctx.run_dir / ass, lang, captions, headlines)
+            text.write_ass(ctx.run_dir / ass, lang, captions, headlines, size=video_size)
             ass_escaped = text.escape_filter_arg(ass)
 
             args, chains = [], []
@@ -96,12 +98,14 @@ class Handler(Agent):
                           f"afade=t=out:st={max(total - 1.2, 0):.3f}:d=1.2[mus]")
             chains.append("[mus][vokey]sidechaincompress=threshold=0.04:ratio=6:attack=15:release=350[duck]")
             mix = ["[vo1]", "[duck]"]
-            if sfx and cut_times:
-                chains.append(f"[{wh_i}:a]aresample=44100,aformat=channel_layouts=stereo,asplit={len(cut_times)}"
-                              + "".join(f"[w{k}]" for k in range(len(cut_times))))
-                for k, t in enumerate(cut_times):
+            sfx_times = [0.05, *cut_times]
+            if sfx and sfx_times:
+                chains.append(f"[{wh_i}:a]aresample=44100,aformat=channel_layouts=stereo,asplit={len(sfx_times)}"
+                              + "".join(f"[w{k}]" for k in range(len(sfx_times))))
+                for k, t in enumerate(sfx_times):
                     ms = max(int((t - 0.15) * 1000), 0)
-                    chains.append(f"[w{k}]adelay={ms}|{ms},volume=0.35[wd{k}]")
+                    vol = "0.48" if k == 0 else "0.35"
+                    chains.append(f"[w{k}]adelay={ms}|{ms},volume={vol}[wd{k}]")
                     mix.append(f"[wd{k}]")
             chains.append("".join(mix) + f"amix=inputs={len(mix)}:normalize=0:duration=first,"
                           "loudnorm=I=-14:TP=-1.5:LRA=11,aresample=44100[aout]")
