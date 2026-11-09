@@ -4,12 +4,14 @@ Architecture Rules:
 1. Pure Logic Tier ($0): Data sanitization, regex, slug creation, keyword deduping,
    and JSON parsing are handled natively in Python without calling an LLM.
 2. Cross-Provider Fallback Cascade:
-   - Primary: Google Gemini (Modern active models: gemini-flash-latest, 3.8-flash, 3.5-flash, 3.1-flash-lite).
-   - Secondary: Anthropic Claude (claude-3-5-sonnet, claude-3-5-haiku).
-   - Tertiary: OpenAI (gpt-4o, gpt-4o-mini).
+   - Primary: Google Gemini, cheapest tier only (the Flash-Lite models).
+   - Secondary: Anthropic Claude (claude-3-5-haiku, the cheapest Claude).
+   - Tertiary: OpenAI (gpt-4o-mini, the cheapest GPT).
    - Quaternary: Groq (llama-3.3-70b-versatile).
    - Local: Ollama (llama3) if running locally for $0.
-3. Automatic Failover: If any provider is rate-limited (429), quota-depleted, or 404s,
+3. Cost rule: ALWAYS the cheapest model of each provider. `complexity` is accepted for compatibility but
+   never selects a more expensive model, and fallbacks never move up to a pricier tier.
+4. Automatic Failover: If any provider is rate-limited (429), quota-depleted, or 404s,
    the router logs the event and automatically cascades to the next available provider.
 """
 
@@ -29,6 +31,21 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(na
 logger = logging.getLogger("LLMRouter")
 
 TaskComplexity = Literal["trivial", "low", "high"]
+
+# Cheapest model of each provider, cheapest first. Nothing here ever escalates to a pricier model.
+GEMINI_CHEAPEST = [
+    "gemini-flash-lite-latest",
+    "gemini-3.5-flash-lite",
+    "gemini-3.1-flash-lite",
+    "gemini-2.5-flash-lite",
+]
+ANTHROPIC_CHEAPEST = "claude-3-5-haiku-20241022"
+OPENAI_CHEAPEST = "gpt-4o-mini"
+GROQ_CHEAPEST = "llama-3.3-70b-versatile"
+# USD per 1M tokens (input, output); unknown Lite models use the higher Lite price
+GEMINI_LITE_PRICES = {"gemini-2.5-flash-lite": (0.10, 0.40)}
+GEMINI_LITE_DEFAULT_PRICE = (0.25, 1.50)
+REQUEST_TIMEOUT_S = 90.0
 
 
 @dataclass
@@ -106,78 +123,85 @@ class CostOptimizedLLMRouter:
         except Exception:
             default_cache = None
 
+        # The cache is only an optimisation: any cache problem must never fail a generation
         cache_key = ""
         if cache and default_cache:
-            cache_key = default_cache.compute_key(
-                provider="router",
-                model=str(complexity),
-                prompt=prompt,
-                system=system_prompt,
-                json_output=json_output,
-            )
-            cached_val = default_cache.get(cache_key)
-            if cached_val is not None:
-                logger.info("LLMRouter: CACHE HIT! Reusing previously synthesized output (0 API tokens, $0.00 cost)")
-                return LLMResponse(
-                    content=cached_val if isinstance(cached_val, str) else json.dumps(cached_val),
-                    model=f"cache:{complexity}",
-                    tokens_in=0,
-                    tokens_out=0,
-                    cost_usd=0.0,
-                    parsed_json=cached_val if isinstance(cached_val, dict) else None,
+            try:
+                cache_key = default_cache.compute_key(
+                    provider="router",
+                    model="cheapest",  # the router always uses the cheapest model, whatever `complexity` says
+                    prompt=prompt,
+                    system=system_prompt,
+                    json_output=json_output,
                 )
+                cached_val = default_cache.get(cache_key)
+                if cached_val is not None:
+                    logger.info("LLMRouter: CACHE HIT! Reusing previously synthesized output (0 API tokens, $0.00 cost)")
+                    return LLMResponse(
+                        content=cached_val if isinstance(cached_val, str) else json.dumps(cached_val),
+                        model_used="cache",
+                        estimated_cost_usd=0.0,
+                        raw_tokens={},
+                    )
+            except Exception as e:  # noqa: BLE001
+                logger.warning(f"LLMRouter: cache lookup skipped ({type(e).__name__}: {e})")
+                cache_key = ""
 
         errors: list[str] = []
 
         def _remember(resp: LLMResponse) -> LLMResponse:
             if cache and default_cache and cache_key:
-                default_cache.set(
-                    cache_key=cache_key,
-                    provider="router",
-                    model=resp.model,
-                    response=resp.parsed_json if resp.parsed_json else resp.content,
-                    tokens_in=resp.tokens_in,
-                    tokens_out=resp.tokens_out,
-                    cost_usd=resp.cost_usd,
-                )
+                try:
+                    if json_output:
+                        NativeOptimizer.safe_json_extract(resp.content)  # never cache an answer that cannot be parsed
+                    default_cache.set(
+                        cache_key=cache_key,
+                        provider="router",
+                        model=resp.model_used,
+                        response=resp.content,
+                        tokens_in=int(resp.raw_tokens.get("promptTokenCount") or resp.raw_tokens.get("input_tokens")
+                                      or resp.raw_tokens.get("prompt_tokens") or 0),
+                        tokens_out=int(resp.raw_tokens.get("candidatesTokenCount") or resp.raw_tokens.get("output_tokens")
+                                       or resp.raw_tokens.get("completion_tokens") or 0),
+                        cost_usd=resp.estimated_cost_usd,
+                    )
+                except Exception as e:  # noqa: BLE001
+                    logger.warning(f"LLMRouter: could not cache the response ({type(e).__name__}: {e})")
             return resp
 
         # 1. Primary Provider: Google Gemini (Active modern models)
         if self.gemini_api_key:
             try:
-                gemini_model = "gemini-flash-latest" if complexity == "high" else "gemini-flash-lite-latest"
-                return _remember(await self._call_gemini(prompt, system_prompt, model=gemini_model, json_output=json_output))
+                return _remember(await self._call_gemini(prompt, system_prompt, model=GEMINI_CHEAPEST[0], json_output=json_output))
             except Exception as e:
-                msg = f"Gemini provider failed: {e}"
+                msg = f"Gemini provider failed: {type(e).__name__}: {e}"
                 logger.warning(f"{msg}. Falling back to next available LLM provider...")
                 errors.append(msg)
 
         # 2. Secondary Provider: Anthropic Claude
         if self.anthropic_api_key:
             try:
-                claude_model = "claude-3-5-sonnet-20241022" if complexity == "high" else "claude-3-5-haiku-20241022"
-                return _remember(await self._call_anthropic(prompt, system_prompt, model=claude_model, json_output=json_output))
+                return _remember(await self._call_anthropic(prompt, system_prompt, model=ANTHROPIC_CHEAPEST, json_output=json_output))
             except Exception as e:
-                msg = f"Anthropic provider failed: {e}"
+                msg = f"Anthropic provider failed: {type(e).__name__}: {e}"
                 logger.warning(f"{msg}. Falling back to next available LLM provider...")
                 errors.append(msg)
 
         # 3. Tertiary Provider: OpenAI
         if self.openai_api_key:
             try:
-                openai_model = "gpt-4o" if complexity == "high" else "gpt-4o-mini"
-                return _remember(await self._call_openai(prompt, system_prompt, model=openai_model, json_output=json_output))
+                return _remember(await self._call_openai(prompt, system_prompt, model=OPENAI_CHEAPEST, json_output=json_output))
             except Exception as e:
-                msg = f"OpenAI provider failed: {e}"
+                msg = f"OpenAI provider failed: {type(e).__name__}: {e}"
                 logger.warning(f"{msg}. Falling back to next available LLM provider...")
                 errors.append(msg)
 
         # 4. Quaternary Provider: Groq
         if self.groq_api_key:
             try:
-                return _remember(await self._call_groq(prompt, system_prompt, model="llama-3.3-70b-versatile", json_output=json_output))
+                return _remember(await self._call_groq(prompt, system_prompt, model=GROQ_CHEAPEST, json_output=json_output))
             except Exception as e:
-                msg = f"Groq provider failed: {e}"
+                msg = f"Groq provider failed: {type(e).__name__}: {e}"
                 logger.warning(f"{msg}. Falling back to local Ollama...")
                 errors.append(msg)
 
@@ -224,18 +248,8 @@ class CostOptimizedLLMRouter:
             )
 
     async def _call_gemini(self, prompt: str, system: str, model: str, json_output: bool) -> LLMResponse:
-        candidates = [model]
-        for fallback in [
-            "gemini-flash-latest",
-            "gemini-3.8-flash",
-            "gemini-3-flash-preview",
-            "gemini-3.5-flash",
-            "gemini-3.1-flash-lite",
-            "gemini-flash-lite-latest",
-            "gemini-2.5-flash",
-        ]:
-            if fallback not in candidates:
-                candidates.append(fallback)
+        candidates = [model]  # fallbacks stay on the cheapest (Flash-Lite) tier, never a pricier Flash/Pro
+        candidates += [m for m in GEMINI_CHEAPEST if m not in candidates]
 
         contents = []
         if system:
@@ -248,7 +262,7 @@ class CostOptimizedLLMRouter:
             body["generationConfig"] = {"responseMimeType": "application/json"}
 
         last_error: Exception | None = None
-        async with httpx.AsyncClient(timeout=45.0) as client:
+        async with httpx.AsyncClient(timeout=REQUEST_TIMEOUT_S) as client:
             for cand_model in candidates:
                 url = f"https://generativelanguage.googleapis.com/v1beta/models/{cand_model}:generateContent?key={self.gemini_api_key}"
                 try:
@@ -267,7 +281,8 @@ class CostOptimizedLLMRouter:
                     usage = data.get("usageMetadata", {})
                     prompt_toks = usage.get("promptTokenCount", 0)
                     candidate_toks = usage.get("candidatesTokenCount", 0)
-                    cost = (prompt_toks * 0.00000015) + (candidate_toks * 0.0000006)
+                    in_price, out_price = GEMINI_LITE_PRICES.get(cand_model, GEMINI_LITE_DEFAULT_PRICE)
+                    cost = (prompt_toks * in_price + candidate_toks * out_price) / 1_000_000
 
                     return LLMResponse(
                         content=candidate.strip(),
@@ -277,7 +292,7 @@ class CostOptimizedLLMRouter:
                     )
                 except httpx.HTTPError as e:
                     last_error = e
-                    logger.warning(f"Error calling '{cand_model}': {e}. Trying fallback model...")
+                    logger.warning(f"Error calling '{cand_model}': {type(e).__name__}: {e}. Trying fallback model...")
 
         if last_error:
             raise last_error
@@ -311,7 +326,7 @@ class CostOptimizedLLMRouter:
             usage = data.get("usage", {})
             in_toks = usage.get("input_tokens", 0)
             out_toks = usage.get("output_tokens", 0)
-            cost = (in_toks * 0.000003) + (out_toks * 0.000015)
+            cost = (in_toks * 0.0000008) + (out_toks * 0.000004)  # Claude 3.5 Haiku
             return LLMResponse(
                 content=content.strip(),
                 model_used=f"anthropic/{model}",
