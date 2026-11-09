@@ -2,15 +2,14 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
-import { MatChipsModule } from '@angular/material/chips';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { Post } from '../../models/post.model';
+import { Post, hasPlayableShort } from '../../models/post.model';
 
 @Component({
   selector: 'app-post-card',
   standalone: true,
-  imports: [CommonModule, RouterModule, MatCardModule, MatChipsModule, MatButtonModule, MatIconModule],
+  imports: [CommonModule, RouterModule, MatCardModule, MatButtonModule, MatIconModule],
   template: `
     <mat-card class="feed-post-card mat-elevation-z2 hover-elevation">
       <!-- Cover Image with Aspect Ratio -->
@@ -31,11 +30,7 @@ import { Post } from '../../models/post.model';
           </div>
         </ng-template>
         <div class="image-overlay-chips">
-          <mat-chip-set>
-            <mat-chip *ngFor="let tag of (post.tags || []).slice(0, 2)" class="tag-chip">
-              #{{ tag }}
-            </mat-chip>
-          </mat-chip-set>
+          <span *ngFor="let tag of (post.tags || []).slice(0, 2)" class="tag-chip">#{{ tag }}</span>
         </div>
       </div>
 
@@ -49,10 +44,11 @@ import { Post } from '../../models/post.model';
               <span>{{ estimatedReadingTime }} min read</span>
             </span>
           </div>
-          <span *ngIf="post.youtubeShortId" class="short-indicator">
+          <a *ngIf="hasShort" class="short-indicator" [routerLink]="['/posts', post.slug]" fragment="short"
+             title="Watch the companion YouTube Short">
             <mat-icon class="yt-icon">smart_display</mat-icon>
-            <span>Short Included</span>
-          </span>
+            <span>Watch Short</span>
+          </a>
         </div>
 
         <h2 class="post-title" [routerLink]="['/posts', post.slug]">
@@ -148,17 +144,31 @@ import { Post } from '../../models/post.model';
       }
     }
 
+    /* Plain labels, not mat-chip: Material chips ignore a custom text colour and rendered dark text on this dark pill */
     .image-overlay-chips {
       position: absolute;
       bottom: 12px;
       left: 12px;
+      right: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      pointer-events: none;
 
       .tag-chip {
-        font-size: 11px;
+        display: inline-flex;
+        align-items: center;
+        height: 28px;
+        padding: 0 12px;
+        border-radius: 999px;
+        font-size: 12px;
         font-weight: 700;
-        background-color: rgba(15, 23, 42, 0.85);
+        line-height: 1;
+        letter-spacing: 0.01em;
+        background-color: rgba(15, 23, 42, 0.88);
         color: #ffffff;
         backdrop-filter: blur(4px);
+        white-space: nowrap;
       }
     }
 
@@ -213,6 +223,12 @@ import { Post } from '../../models/post.model';
       font-size: 11px;
       font-weight: 700;
       color: #dc2626;
+      text-decoration: none;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
 
       .yt-icon {
         font-size: 14px;
@@ -289,6 +305,10 @@ import { Post } from '../../models/post.model';
 export class PostCardComponent {
   @Input({ required: true }) post!: Post;
   imageFailed = false;
+
+  get hasShort(): boolean {
+    return hasPlayableShort(this.post);
+  }
 
   get estimatedReadingTime(): number {
     const text = this.post?.contentMarkdown || this.post?.summary || this.post?.hook || '';

@@ -65,3 +65,15 @@ export interface Post {
   };
 }
 
+
+// A YouTube video ID is exactly 11 characters. Old rows created from moderator run folder names
+// ("20261105_141814_youtube_short") are not playable, so the UI treats them as "no Short".
+export const YOUTUBE_ID = /^[A-Za-z0-9_-]{11}$/;
+
+export function isYouTubeId(value: unknown): value is string {
+  return typeof value === 'string' && YOUTUBE_ID.test(value);
+}
+
+export function hasPlayableShort(post: Post): boolean {
+  return !!post.youtubeShort && isYouTubeId(post.youtubeShort.id);
+}

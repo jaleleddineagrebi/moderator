@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { Post } from '../../models/post.model';
+import { Post, hasPlayableShort } from '../../models/post.model';
 import { PostService } from '../../services/post.service';
 import { PostCardComponent } from '../post-card/post-card.component';
 
@@ -229,7 +229,7 @@ export class FeedComponent implements OnInit {
       return this.posts();
     }
     if (topic === 'YouTube Shorts') {
-      return this.posts().filter(p => !!p.youtubeShortId);
+      return this.posts().filter(p => hasPlayableShort(p));
     }
     return this.posts().filter(p => p.tags.some(t => t.toLowerCase().includes(topic.toLowerCase())));
   }
