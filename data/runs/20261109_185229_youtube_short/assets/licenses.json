@@ -1,0 +1,72 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-215751/",
+    "author": "G3Remote",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "tired man eyes",
+    "description": "A close-up of a man's face looking extremely tired, rubbing his eyes in a dimly lit room."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-3180/",
+    "author": "Coverr-Free-Footage",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "scrolling smartphone hands",
+    "description": "Close-up of hands holding a smartphone in the dark, thumb swiping rapidly."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-151868/",
+    "author": "MegaSchwôb",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "vintage clock ticking",
+    "description": "A vintage mechanical clock with the hands spinning rapidly or an hourglass with sand falling fast."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-3608/",
+    "author": "Coverr-Free-Footage",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "crowded city commuters",
+    "description": "A fast-paced montage of busy city life, crowded streets, and office buildings."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-186195/",
+    "author": "NickyPe",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man on balcony",
+    "description": "A man standing alone on a balcony at night, looking out at the peaceful city lights."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-3593/",
+    "author": "Life-Of-Vids",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hand moving king",
+    "description": "A hand moving a chess piece strategically on a board in a decisive manner."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-177164/",
+    "author": "ArtFlores99",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "pondering man profile",
+    "description": "A side profile silhouette of a man thinking, with abstract light patterns in the background."
+  }
+]
