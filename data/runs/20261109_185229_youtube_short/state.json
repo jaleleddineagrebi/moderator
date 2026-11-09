@@ -31,9 +31,11 @@
   "ended_at": null,
   "revision_rounds": 0,
   "cost": {
-    "total_usd": 0.0,
+    "total_usd": 0.003201,
     "budget_usd": 1.0,
-    "by_agent": {}
+    "by_agent": {
+      "trend_researcher": 0.003201
+    }
   },
   "agents": {
     "trend_researcher": {
@@ -236,10 +238,10 @@
       "agent": "trend_researcher",
       "depends_on": [],
       "checkpoint": "A",
-      "status": "running",
-      "progress": 25,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-09T18:52:29+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-09T18:59:31+00:00",
       "attempt": 1,
       "retries": 0,
       "max_retries": 2,
@@ -251,7 +253,10 @@
           "en"
         ]
       },
-      "outputs": {},
+      "outputs": {
+        "ideas": "ideas.md",
+        "data": "ideas.json"
+      },
       "logs": [
         {
           "ts": "2026-11-09T18:52:29+00:00",
@@ -282,11 +287,26 @@
           "ts": "2026-11-09T18:53:00+00:00",
           "level": "warning",
           "msg": "Gemini connection timed out on default route; retrying over IPv4"
+        },
+        {
+          "ts": "2026-11-09T18:59:31+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3.8-flash) answered in 421.7s (tokens in 533, out 747, thinking 0)"
+        },
+        {
+          "ts": "2026-11-09T18:59:31+00:00",
+          "level": "info",
+          "msg": "Finished, waiting for your approval"
+        },
+        {
+          "ts": "2026-11-09T18:59:31+00:00",
+          "level": "info",
+          "msg": "Approved by schedule (auto-approve) (choice: why-you-scroll-before-bed)"
         }
       ],
       "errors": [],
       "feedback": [],
-      "cost_usd": 0.0
+      "cost_usd": 0.003201
     },
     "script": {
       "title": "Write the script",
@@ -295,17 +315,39 @@
         "research"
       ],
       "checkpoint": "B",
-      "status": "queued",
-      "progress": 0,
-      "started_at": null,
+      "status": "running",
+      "progress": 10,
+      "started_at": "2026-11-09T18:59:31+00:00",
       "ended_at": null,
-      "attempt": 0,
+      "attempt": 1,
       "retries": 0,
       "max_retries": 2,
-      "strategy": null,
-      "inputs": {},
+      "strategy": "default",
+      "inputs": {
+        "idea": "Why You Refuse to Sleep When Exhausted",
+        "languages": [
+          "en"
+        ],
+        "comment_at_selection": null
+      },
       "outputs": {},
-      "logs": [],
+      "logs": [
+        {
+          "ts": "2026-11-09T18:59:31+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'default'"
+        },
+        {
+          "ts": "2026-11-09T18:59:31+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.8-flash, high complexity, thinking high)"
+        },
+        {
+          "ts": "2026-11-09T18:59:34+00:00",
+          "level": "warning",
+          "msg": "'gemini-3.8-flash' returned 503; retrying once in 2s"
+        }
+      ],
       "errors": [],
       "feedback": [],
       "cost_usd": 0.0
@@ -430,11 +472,27 @@
       "type": "choice",
       "step": "research",
       "route_to": "research",
-      "status": "idle",
-      "options": [],
-      "choice": null,
+      "status": "approved",
+      "options": [
+        {
+          "id": "why-you-scroll-before-bed",
+          "label": "1. Why You Refuse to Sleep When Exhausted",
+          "detail": "Explains Bedtime Revenge Procrastination, where people stay up late scrolling because it is the only part of the day they feel in total control over. It turns bedtime guilt into an eye-opening psychological revelation.\nHook (en): You are exhausted, but you won't sleep.\nWhy: Relatable nightly habits drive massive virality and comment-section debate because viewers watch Shorts in bed while actively doing this exact behavior."
+        },
+        {
+          "id": "why-you-suddenly-lose-motivation",
+          "label": "2. The Strange Trap of Announcing Your Goals",
+          "detail": "Reveals Social Reality Theory: telling someone about your big goal tricks your brain into feeling you already achieved it, slashing your real-world drive to finish it.\nHook (en): Never announce your goals to people.\nWhy: Direct counter-intuitive advice challenges popular 'accountability partner' wisdom, instantly triggering retention and high share rates among self-improvement viewers."
+        },
+        {
+          "id": "why-you-want-to-jump",
+          "label": "3. Why High Places Urge You to Jump",
+          "detail": "Demystifies the High Place Phenomenon (Call of the Void), explaining that the brief thought of jumping is actually your brain's rapid survival reflex misinterpreting a safety retreat as an urge.\nHook (en): Ever had the urge to jump?\nWhy: Addresses a widespread, taboo intrusive thought that over 50% of people secretly experience, sparking high re-watch time and immense relief in the comments."
+        }
+      ],
+      "choice": "why-you-scroll-before-bed",
       "comment": null,
-      "decided_at": null
+      "decided_at": "2026-11-09T18:59:31+00:00"
     },
     "B": {
       "title": "Approve the script",
@@ -462,7 +520,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-09T18:53:05+00:00",
+    "exported_at": "2026-11-09T18:59:38+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/42677849914"
   }
