@@ -638,10 +638,10 @@
         "audio"
       ],
       "checkpoint": null,
-      "status": "running",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-09T09:53:34+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-09T09:54:22+00:00",
       "attempt": 1,
       "retries": 0,
       "max_retries": 2,
@@ -666,7 +666,9 @@
         ],
         "strategy": "transitions"
       },
-      "outputs": {},
+      "outputs": {
+        "captions_en": "captions_en.ass"
+      },
       "logs": [
         {
           "ts": "2026-11-09T09:53:34+00:00",
@@ -677,6 +679,11 @@
           "ts": "2026-11-09T09:53:34+00:00",
           "level": "info",
           "msg": "Rendering en: 6 scenes, 39.9s, xfade transitions"
+        },
+        {
+          "ts": "2026-11-09T09:54:22+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [],
@@ -691,17 +698,31 @@
         "packaging"
       ],
       "checkpoint": "C",
-      "status": "queued",
+      "status": "running",
       "progress": 0,
-      "started_at": null,
+      "started_at": "2026-11-09T09:54:22+00:00",
       "ended_at": null,
-      "attempt": 0,
+      "attempt": 1,
       "retries": 0,
       "max_retries": 2,
-      "strategy": null,
-      "inputs": {},
+      "strategy": "full_review",
+      "inputs": {
+        "videos": {
+          "en": "final_short_en.mp4"
+        },
+        "languages": [
+          "en"
+        ],
+        "metadata": "metadata.json"
+      },
       "outputs": {},
-      "logs": [],
+      "logs": [
+        {
+          "ts": "2026-11-09T09:54:22+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'full_review'"
+        }
+      ],
       "errors": [],
       "feedback": [],
       "cost_usd": 0.0
@@ -761,7 +782,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-09T09:53:51+00:00",
+    "exported_at": "2026-11-09T09:54:25+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/42596598284"
   }
