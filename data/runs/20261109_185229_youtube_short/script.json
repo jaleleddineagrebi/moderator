@@ -1,0 +1,138 @@
+{
+  "title": "Why You Refuse to Sleep When Exhausted",
+  "scenes": [
+    {
+      "vo": {
+        "en": "You’re exhausted, but you won’t sleep."
+      },
+      "on_screen": {
+        "en": "Tired but awake"
+      },
+      "visual": {
+        "description": "A close-up of a man's face looking extremely tired, rubbing his eyes in a dimly lit room.",
+        "search_terms": [
+          "tired man eyes",
+          "rubbing face exhaustion",
+          "exhausted man yawning"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Instead, you stare at your screen, scrolling through mindless videos for hours."
+      },
+      "on_screen": {
+        "en": "The scroll trap"
+      },
+      "visual": {
+        "description": "Close-up of hands holding a smartphone in the dark, thumb swiping rapidly.",
+        "search_terms": [
+          "scrolling smartphone hands",
+          "finger swiping screen",
+          "glowing phone dark"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Psychologists call this Revenge Bedtime Procrastination, and it’s a cry for autonomy."
+      },
+      "on_screen": {
+        "en": "Bedtime Revenge"
+      },
+      "visual": {
+        "description": "A vintage mechanical clock with the hands spinning rapidly or an hourglass with sand falling fast.",
+        "search_terms": [
+          "vintage clock ticking",
+          "fast time lapse",
+          "sand hourglass falling"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "If your day felt like a series of obligations you didn't choose..."
+      },
+      "on_screen": {
+        "en": "Zero daily control"
+      },
+      "visual": {
+        "description": "A fast-paced montage of busy city life, crowded streets, and office buildings.",
+        "search_terms": [
+          "crowded city commuters",
+          "busy office blur",
+          "heavy traffic moving"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "your brain stays awake to reclaim the freedom you were denied."
+      },
+      "on_screen": {
+        "en": "Reclaiming your time"
+      },
+      "visual": {
+        "description": "A man standing alone on a balcony at night, looking out at the peaceful city lights.",
+        "search_terms": [
+          "man on balcony",
+          "city lights night",
+          "stargazing silhouette"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "It’s the only part of the day where you are finally the boss."
+      },
+      "on_screen": {
+        "en": "You are in control"
+      },
+      "visual": {
+        "description": "A hand moving a chess piece strategically on a board in a decisive manner.",
+        "search_terms": [
+          "hand moving king",
+          "chess strategy move",
+          "locked door unlocking"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "You aren't lazy; you’re just trying to own your life again. Follow to spot your mental blindspots. After all..."
+      },
+      "on_screen": {
+        "en": "Check Your Brain"
+      },
+      "visual": {
+        "description": "A side profile silhouette of a man thinking, with abstract light patterns in the background.",
+        "search_terms": [
+          "pondering man profile",
+          "thinking brain visual",
+          "contemplative shadow"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "why-you-scroll-before-bed",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 30.9
+  }
+}
