@@ -2,7 +2,7 @@
   "run_id": "20261108_234416_youtube_short",
   "workflow": "youtube_short",
   "workflow_title": "YouTube Short",
-  "status": "running",
+  "status": "done",
   "params": {
     "languages": [
       "en"
@@ -28,7 +28,7 @@
     "llm": "gemini"
   },
   "started_at": "2026-11-08T23:44:16+00:00",
-  "ended_at": null,
+  "ended_at": "2026-11-09T09:16:43+00:00",
   "revision_rounds": 0,
   "cost": {
     "total_usd": 0.024005,
@@ -679,7 +679,7 @@
         "packaging"
       ],
       "checkpoint": "C",
-      "status": "waiting_for_approval",
+      "status": "done",
       "progress": 100,
       "started_at": "2026-11-08T23:50:08+00:00",
       "ended_at": "2026-11-08T23:50:24+00:00",
@@ -797,11 +797,11 @@
       "type": "approve",
       "step": "qa",
       "route_to": "edit",
-      "status": "pending",
+      "status": "approved",
       "options": [],
       "choice": null,
-      "comment": null,
-      "decided_at": null
+      "comment": "approved by github:jaleleddineagrebi",
+      "decided_at": "2026-11-09T09:16:43+00:00"
     }
   },
   "notifications": [
@@ -810,12 +810,27 @@
       "level": "action",
       "msg": "Approval needed: Approve the final videos (never uploaded without your OK)",
       "step": "qa"
+    },
+    {
+      "ts": "2026-11-09T09:16:52+00:00",
+      "level": "success",
+      "msg": "Uploaded en to 'land of ai' as private: https://youtube.com/shorts/WvujH_pY4YM",
+      "step": null
     }
   ],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-08T23:50:42+00:00",
-    "uploads": [],
+    "exported_at": "2026-11-09T09:16:55+00:00",
+    "uploads": [
+      {
+        "lang": "en",
+        "id": "WvujH_pY4YM",
+        "url": "https://youtube.com/shorts/WvujH_pY4YM",
+        "privacy": "private",
+        "channel": "land of ai",
+        "thumbnail": "not set: <HttpError 403 when requesting https://youtube.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=WvujH_pY4YM&alt=json&uploadType=media returned \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\". Details: \"[{'message': \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\", 'domain': 'youtube.thumbnail', 'reason': 'forbidden', 'location': 'Authorization', 'locationType': 'header'}]\">"
+      }
+    ],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/42536558719",
     "issue_url": "https://github.com/jaleleddineagrebi/moderator/issues/47"
   }
