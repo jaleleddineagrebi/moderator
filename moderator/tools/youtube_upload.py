@@ -115,9 +115,20 @@ def upload(lang: str, video: Path, meta: dict, privacy: str, thumbnail: Path | N
     result = {"id": response["id"], "url": video_url,
               "privacy": response["status"]["privacyStatus"], "channel": channel_title(creds)}
     if thumbnail and thumbnail.exists():
-        try:  # needs a phone-verified channel; Shorts feeds may still show a frame instead
-            yt.thumbnails().set(videoId=response["id"], media_body=MediaFileUpload(str(thumbnail))).execute()
-            result["thumbnail"] = "set"
-        except Exception as e:  # noqa: BLE001 - the video is already up; a thumbnail failure is not fatal
-            result["thumbnail"] = f"not set: {e}"
+        result["thumbnail"] = set_thumbnail(yt, response["id"], thumbnail)
     return result
+
+
+def set_thumbnail(yt, video_id: str, thumbnail: Path) -> str:
+    """Upload a custom thumbnail for an existing YouTube video ID."""
+    try:  # needs a phone-verified channel; Shorts feeds may still show a frame instead
+        yt.thumbnails().set(videoId=video_id, media_body=MediaFileUpload(str(thumbnail))).execute()
+        return "set"
+    except Exception as e:  # noqa: BLE001 - the video is already up; a thumbnail failure is not fatal
+        msg = str(e)
+        if "doesn't have permissions to upload and set custom video thumbnails" in msg or "forbidden" in msg.lower():
+            return (
+                "not set (channel needs 1-time SMS verification: YouTube Studio -> Settings -> Channel -> "
+                "Feature eligibility -> Intermediate features -> Verify phone number)"
+            )
+        return f"not set: {e}"
