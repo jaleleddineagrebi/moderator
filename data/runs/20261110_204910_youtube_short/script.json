@@ -1,0 +1,156 @@
+{
+  "title": "The Hidden Setting Draining Your Battery and Privacy",
+  "scenes": [
+    {
+      "vo": {
+        "en": "Turn off this one setting immediately."
+      },
+      "on_screen": {
+        "en": "STOP THIS TRACKING NOW"
+      },
+      "visual": {
+        "description": "A man's hand holding a smartphone, thumb hovering over the screen in a close-up shot.",
+        "search_terms": [
+          "man holding phone",
+          "smartphone close up",
+          "hand screen touch"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Your smartphone is keeping a secret diary of everywhere you’ve been, and it’s killing your battery life."
+      },
+      "on_screen": {
+        "en": "YOUR PHONE IS SPYING"
+      },
+      "visual": {
+        "description": "Dynamic digital map pins appearing rapidly over a glowing technological world map.",
+        "search_terms": [
+          "gps tracking animation",
+          "map data visualization",
+          "glowing tech map"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Dig deep into your Privacy settings, hit Location Services, and scroll all the way to the bottom."
+      },
+      "on_screen": {
+        "en": "GO TO SETTINGS NOW"
+      },
+      "visual": {
+        "description": "A man's thumb scrolling quickly through a smartphone settings menu.",
+        "search_terms": [
+          "scrolling phone screen",
+          "man thumb scrolling",
+          "mobile apps interaction"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "But here is the creepy part you didn't know."
+      },
+      "on_screen": {
+        "en": "THE CREEPY PART..."
+      },
+      "visual": {
+        "description": "A man's face illuminated by the blue glow of a phone screen in a dark room.",
+        "search_terms": [
+          "glowing phone face",
+          "man in dark",
+          "blue light reflection"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Under System Services, find Significant Locations. It’s a hidden map of your entire life."
+      },
+      "on_screen": {
+        "en": "HIDDEN LOCATION MAP"
+      },
+      "visual": {
+        "description": "A fast-moving stream of binary code and data matrix symbols in a cyber style.",
+        "search_terms": [
+          "data matrix motion",
+          "binary code stream",
+          "digital information flow"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "It logs every frequent address and the exact time you arrived. It’s a stalker’s dream."
+      },
+      "on_screen": {
+        "en": "IT LOGS EVERYTHING"
+      },
+      "visual": {
+        "description": "A high-speed time-lapse of a busy city at night with light trails from cars.",
+        "search_terms": [
+          "night city timelapse",
+          "busy road traffic",
+          "urban light trails"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Flip that switch off right now to reclaim your privacy and boost your daily charge."
+      },
+      "on_screen": {
+        "en": "RECLAIM YOUR PRIVACY"
+      },
+      "visual": {
+        "description": "A 3D animation of a green battery icon filling up to full capacity.",
+        "search_terms": [
+          "battery charge animation",
+          "green power energy",
+          "phone battery icon"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for more digital survival tips and comment DONE if you found your secret map, because you need to"
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "A digital padlock icon closing securely on a futuristic background.",
+        "search_terms": [
+          "digital lock secure",
+          "security icon motion",
+          "privacy shield cyber"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_08"
+    }
+  ],
+  "idea_id": "smartphone-battery-drain-secret",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 40.7
+  }
+}
