@@ -64,6 +64,37 @@ if (refreshBtn) {
   });
 }
 
+async function startWorkflowFromUi(workflowName) {
+  if (isStaticMode()) {
+    const repo = PAGES_CFG && PAGES_CFG.repo;
+    const wfFile = workflowName === "youtube_long" ? "generate-long.yml" : "generate-short.yml";
+    const url = repo ? `https://github.com/${repo}/actions/workflows/${wfFile}` : ((PAGES_CFG && PAGES_CFG.actions_url) || "#");
+    window.open(url, "_blank", "noopener");
+    return;
+  }
+  const btn = workflowName === "youtube_long" ? $("new-long-btn") : $("new-short-btn");
+  if (btn) btn.disabled = true;
+  try {
+    const res = await fetch("/api/runs/start", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "X-Moderator": "1" },
+      body: JSON.stringify({ workflow: workflowName, auto_approve: ["A", "B"] }),
+    });
+    if (res.ok) {
+      selectedRunId = null;
+      renderedKeys.approvals = "";
+      renderedKeys.outputs = "";
+      renderedKeys.runs = "";
+      await poll();
+    }
+  } finally {
+    if (btn) btn.disabled = false;
+  }
+}
+
+if ($("new-short-btn")) $("new-short-btn").addEventListener("click", () => startWorkflowFromUi("youtube_short"));
+if ($("new-long-btn")) $("new-long-btn").addEventListener("click", () => startWorkflowFromUi("youtube_long"));
+
 // Polling
 
 async function poll() {
@@ -349,19 +380,73 @@ function renderPagesBanner() {
   const banner = $("pages-banner");
   if (!banner) return;
   const pm = state.pages_meta || {};
-  const uploads = pm.uploads || [];
+  const uploads = pm.uploads || state.uploads || [];
   const pending = Object.entries(state.checkpoints || {}).filter(([, cp]) => cp.status === "pending");
-  const key = JSON.stringify([state.run_id, state.status, state.is_seed, uploads, pending.map(([k]) => k), pm.issue_url, pm.gh_run_url]);
+  const qaDone = state.steps && state.steps.qa && (state.steps.qa.status === "done" || state.steps.qa.status === "waiting_for_approval");
+  const key = JSON.stringify([state.run_id, state.status, state.is_seed, uploads, pending.map(([k]) => k), qaDone, pm.issue_url, pm.gh_run_url]);
   if (key === renderedKeys.banner) return;
   renderedKeys.banner = key;
 
   if (uploads.length > 0) {
     banner.hidden = false;
     banner.className = "card pages-banner is-done";
+    const isLong = state.workflow === "youtube_long" || (state.params && state.params.format === "long");
+    const vidLabel = isLong ? "Long Video (16:9)" : "Short (9:16)";
     const pills = uploads.map((u) =>
-      `<a class="yt-pill" href="${esc(u.url)}" target="_blank" rel="noopener">▶ Watch ${esc((u.lang || "").toUpperCase())} Short (${esc(u.privacy)}) · ${esc(u.channel || "YouTube")}</a>`
+      `<a class="yt-pill" href="${esc(u.url)}" target="_blank" rel="noopener">▶ Watch ${esc((u.lang || "").toUpperCase())} ${vidLabel} (${esc(u.privacy)}) · ${esc(u.channel || "YouTube")}</a>`
     ).join("");
     banner.innerHTML = `<div class="row-between"><h2>Published to YouTube</h2>${pm.gh_run_url ? `<a class="btn link-btn" href="${esc(pm.gh_run_url)}" target="_blank" rel="noopener">Action Logs</a>` : ""}</div><div class="yt-links">${pills}</div>`;
+    return;
+  }
+
+  if (!isStaticMode() && qaDone && uploads.length === 0) {
+    const isLong = state.workflow === "youtube_long" || (state.params && state.params.format === "long");
+    banner.hidden = false;
+    banner.className = "card pages-banner is-waiting";
+    banner.innerHTML = `
+      <div class="row-between" style="flex-wrap: wrap; gap: 10px;">
+        <div>
+          <h2>Ready to Publish ${isLong ? "16:9 Long Video" : "9:16 Short"} to YouTube</h2>
+          <div class="muted">Approve Checkpoint C and upload the rendered video + thumbnail directly to your YouTube channel:</div>
+        </div>
+        <div class="actions" style="margin: 0;">
+          <select id="yt-upload-privacy" style="width: auto;">
+            <option value="public" selected>Public</option>
+            <option value="unlisted">Unlisted</option>
+            <option value="private">Private</option>
+          </select>
+          <button type="button" id="yt-upload-btn" class="btn primary">🚀 Approve &amp; Upload to YouTube</button>
+          <span id="yt-upload-status" class="mono muted"></span>
+        </div>
+      </div>`;
+    const upBtn = banner.querySelector("#yt-upload-btn");
+    const upSel = banner.querySelector("#yt-upload-privacy");
+    const upSt = banner.querySelector("#yt-upload-status");
+    if (upBtn) {
+      upBtn.addEventListener("click", async () => {
+        upBtn.disabled = true;
+        upSt.textContent = "Uploading to YouTube…";
+        try {
+          const res = await fetch("/api/upload", {
+            method: "POST",
+            headers: { "Content-Type": "application/json", "X-Moderator": "1" },
+            body: JSON.stringify({ privacy: upSel.value, run_id: activeRunId() }),
+          });
+          const data = await res.json().catch(() => ({}));
+          if (!res.ok) {
+            upSt.textContent = `Error: ${data.detail || "Upload failed"}`;
+            upBtn.disabled = false;
+            return;
+          }
+          renderedKeys.banner = "";
+          renderedKeys.approvals = "";
+          await poll();
+        } catch (err) {
+          upSt.textContent = `Error: ${err.message}`;
+          upBtn.disabled = false;
+        }
+      });
+    }
     return;
   }
 
