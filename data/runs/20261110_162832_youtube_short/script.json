@@ -1,0 +1,138 @@
+{
+  "title": "The Ghost Color Glitch",
+  "scenes": [
+    {
+      "vo": {
+        "en": "Stare at this red dot."
+      },
+      "on_screen": {
+        "en": "STARE AT THE DOT"
+      },
+      "visual": {
+        "description": "An extreme macro close-up of a human eye iris with a vibrant red circle pulsing in the center of the pupil.",
+        "search_terms": [
+          "macro eye iris",
+          "pulsing red circle",
+          "human eye close-up"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Keep your eyes locked right there. Seriously, do not blink or look away for even a second."
+      },
+      "on_screen": {
+        "en": "DO NOT BLINK"
+      },
+      "visual": {
+        "description": "A man staring intensely at the camera with total focus, combined with a fast-ticking analog stopwatch.",
+        "search_terms": [
+          "man staring intently",
+          "stopwatch ticking fast",
+          "focused face portrait"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Your brain’s photoreceptors are literally exhausting themselves. They’re becoming numb to the intensity of this vibrant hue."
+      },
+      "on_screen": {
+        "en": "BRAIN IS EXHAUSTING"
+      },
+      "visual": {
+        "description": "Abstract animation of glowing blue neurons firing rapidly against a dark background, representing mental fatigue.",
+        "search_terms": [
+          "abstract neurons firing",
+          "blue energy pulses",
+          "brain activity visualization"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "But here is the creepy part. In five seconds, I’m going to make this entire image vanish into plain gray."
+      },
+      "on_screen": {
+        "en": "THE CREEPY PART..."
+      },
+      "visual": {
+        "description": "Heavy analog TV static glitching across the screen, then cutting to a man looking surprised in a dark room.",
+        "search_terms": [
+          "vhs static glitch",
+          "man looking surprised",
+          "mysterious dark studio"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Three... two... one... Look! Even though the screen is colorless, you see a glowing cyan afterimage floating in space."
+      },
+      "on_screen": {
+        "en": "SEE THE GHOST?"
+      },
+      "visual": {
+        "description": "A minimalist, foggy gray mountain landscape appearing suddenly, with a slight visual shimmer effect.",
+        "search_terms": [
+          "foggy minimalist landscape",
+          "empty gray studio",
+          "misty mountain peak"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "This is the Opponent-Process Theory. Your mind is overcompensating for the fatigue by projecting the exact opposite color."
+      },
+      "on_screen": {
+        "en": "NEURAL AFTERIMAGE"
+      },
+      "visual": {
+        "description": "Intricate mechanical gold gears turning together, transitioning into a digital data stream of binary code.",
+        "search_terms": [
+          "mechanical gears turning",
+          "digital data stream",
+          "complex clockwork animation"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for tomorrow's brain test and comment 'WORKED' if you saw it, which is why you must..."
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "A male hand pressing a glowing digital button on a futuristic interface, followed by a drone shot of a sunset.",
+        "search_terms": [
+          "hand pressing button",
+          "drone sunset view",
+          "mountain range landscape"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "color-illusion-trick",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 41.1
+  }
+}
