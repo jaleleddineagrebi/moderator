@@ -1,0 +1,138 @@
+{
+  "title": "The 10-Second Balance Glitch",
+  "scenes": [
+    {
+      "vo": {
+        "en": "You physically cannot do this."
+      },
+      "on_screen": {
+        "en": "YOU CAN'T DO THIS"
+      },
+      "visual": {
+        "description": "A man looking directly into the camera with a challenging and skeptical expression.",
+        "search_terms": [
+          "frustrated man face",
+          "challenging male look",
+          "man shaking head"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Stand sideways against a flat wall right now. Press your shoulder, hip, and foot tight against the surface."
+      },
+      "on_screen": {
+        "en": "FIND A WALL"
+      },
+      "visual": {
+        "description": "A man's side profile as he presses his body firmly against a blank interior wall.",
+        "search_terms": [
+          "man leaning wall",
+          "shoulder against wall",
+          "feet touching wall"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Now, without moving your upper body, try to lift your outside leg off the floor. Just one inch."
+      },
+      "on_screen": {
+        "en": "LIFT YOUR LEG"
+      },
+      "visual": {
+        "description": "Close up of a man's feet in sneakers attempting to lift one leg while the other remains glued to the wall.",
+        "search_terms": [
+          "lifting leg floor",
+          "sneakers trying balance",
+          "foot muscle straining"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "But here is the creepy part. Your brain is screaming at your muscles to move, yet nothing happens."
+      },
+      "on_screen": {
+        "en": "YOUR BRAIN GLITCHES"
+      },
+      "visual": {
+        "description": "Macro shot of a male eye widening in realization with fast digital overlay effects.",
+        "search_terms": [
+          "macro human eye",
+          "male eye blinking",
+          "pupil zoom focus"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "It’s a center of gravity glitch. To stay balanced, your torso must lean over your standing foot to stay upright."
+      },
+      "on_screen": {
+        "en": "CENTER OF GRAVITY"
+      },
+      "visual": {
+        "description": "A man performing a balancing act or walking carefully along a wooden beam outdoors.",
+        "search_terms": [
+          "man balancing beam",
+          "gymnastics male balance",
+          "tightrope walker feet"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "Since the wall blocks that shift, your weight stays centered, making it physically impossible to lift one leg."
+      },
+      "on_screen": {
+        "en": "PHYSICS BLOCKS YOU"
+      },
+      "visual": {
+        "description": "An antique metal scale tipping back and forth before coming to a sudden halt.",
+        "search_terms": [
+          "metal balance scale",
+          "weight dropping down",
+          "pendulum swinging fast"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for tomorrow’s brain test and comment FAIL if you tipped over. You can't beat physics, which is exactly why..."
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "Close up of male hands scrolling and interacting with a smartphone screen quickly.",
+        "search_terms": [
+          "typing on smartphone",
+          "clicking mobile screen",
+          "hand holding phone"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "body-tilt-glitch",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 42.5
+  }
+}
