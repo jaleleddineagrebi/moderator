@@ -796,6 +796,31 @@
           "ts": "2026-11-10T16:36:01+00:00",
           "level": "info",
           "msg": "Gemini (gemini-3-flash-preview) answered in 16.8s (tokens in 1269, out 332, thinking 0)"
+        },
+        {
+          "ts": "2026-11-10T16:36:09+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.8-flash, medium complexity, thinking low)"
+        },
+        {
+          "ts": "2026-11-10T16:36:13+00:00",
+          "level": "warning",
+          "msg": "'gemini-3-flash-preview' returned 503; retrying once in 2s"
+        },
+        {
+          "ts": "2026-11-10T16:36:17+00:00",
+          "level": "warning",
+          "msg": "Model 'gemini-3-flash-preview' returned 503; falling back to 'gemini-3.8-flash'"
+        },
+        {
+          "ts": "2026-11-10T16:36:20+00:00",
+          "level": "warning",
+          "msg": "'gemini-3.8-flash' returned 503; retrying once in 2s"
+        },
+        {
+          "ts": "2026-11-10T16:36:25+00:00",
+          "level": "warning",
+          "msg": "Model 'gemini-3.8-flash' returned 503; falling back to 'gemini-3.7-flash'"
         }
       ],
       "errors": [],
@@ -857,7 +882,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-10T16:36:06+00:00",
+    "exported_at": "2026-11-10T16:36:25+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/42854772936"
   }
