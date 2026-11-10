@@ -379,7 +379,7 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 17,
+      "progress": 66,
       "started_at": "2026-11-10T02:54:23+00:00",
       "ended_at": null,
       "attempt": 1,
@@ -411,6 +411,26 @@
           "ts": "2026-11-10T02:54:33+00:00",
           "level": "info",
           "msg": "scene_01: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-10T02:54:36+00:00",
+          "level": "info",
+          "msg": "scene_02: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-10T02:54:43+00:00",
+          "level": "info",
+          "msg": "scene_03: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-10T02:54:43+00:00",
+          "level": "info",
+          "msg": "scene_04: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-10T02:54:50+00:00",
+          "level": "info",
+          "msg": "scene_05: stock_video (pixabay)"
         }
       ],
       "errors": [],
@@ -424,10 +444,10 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "running",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-10T02:54:27+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-10T02:54:49+00:00",
       "attempt": 2,
       "retries": 1,
       "max_retries": 2,
@@ -441,7 +461,9 @@
           "en": "en-US-AriaNeural"
         }
       },
-      "outputs": {},
+      "outputs": {
+        "timings_en": "timings_en.json"
+      },
       "logs": [
         {
           "ts": "2026-11-10T02:54:23+00:00",
@@ -467,6 +489,21 @@
           "ts": "2026-11-10T02:54:27+00:00",
           "level": "info",
           "msg": "Narrating en with en-US-AriaNeural"
+        },
+        {
+          "ts": "2026-11-10T02:54:36+00:00",
+          "level": "info",
+          "msg": "en voiceover: 47.2s"
+        },
+        {
+          "ts": "2026-11-10T02:54:36+00:00",
+          "level": "info",
+          "msg": "Generating an ambient music bed (no library tracks with license files found)"
+        },
+        {
+          "ts": "2026-11-10T02:54:49+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [
@@ -604,7 +641,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-10T02:54:34+00:00",
+    "exported_at": "2026-11-10T02:54:53+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/42744830262"
   }

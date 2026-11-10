@@ -1,0 +1,560 @@
+{
+  "voice": "en-US-AriaNeural",
+  "duration": 47.208073,
+  "scenes": [
+    {
+      "scene": "scene_01",
+      "start": 0.0,
+      "end": 2.616,
+      "words": [
+        {
+          "start": 0.1,
+          "end": 0.287,
+          "text": "You"
+        },
+        {
+          "start": 0.3,
+          "end": 0.4,
+          "text": "are"
+        },
+        {
+          "start": 0.412,
+          "end": 0.725,
+          "text": "not"
+        },
+        {
+          "start": 0.738,
+          "end": 1.175,
+          "text": "actually"
+        },
+        {
+          "start": 1.188,
+          "end": 1.738,
+          "text": "lazy"
+        }
+      ]
+    },
+    {
+      "scene": "scene_02",
+      "start": 2.796,
+      "end": 11.076,
+      "words": [
+        {
+          "start": 2.896,
+          "end": 3.071,
+          "text": "You"
+        },
+        {
+          "start": 3.083,
+          "end": 3.208,
+          "text": "are"
+        },
+        {
+          "start": 3.221,
+          "end": 3.521,
+          "text": "stuck"
+        },
+        {
+          "start": 3.534,
+          "end": 3.634,
+          "text": "in"
+        },
+        {
+          "start": 3.646,
+          "end": 4.034,
+          "text": "task"
+        },
+        {
+          "start": 4.046,
+          "end": 4.871,
+          "text": "paralysis"
+        },
+        {
+          "start": 5.734,
+          "end": 5.934,
+          "text": "When"
+        },
+        {
+          "start": 5.946,
+          "end": 6.008,
+          "text": "a"
+        },
+        {
+          "start": 6.021,
+          "end": 6.309,
+          "text": "goal"
+        },
+        {
+          "start": 6.321,
+          "end": 6.658,
+          "text": "feels"
+        },
+        {
+          "start": 6.671,
+          "end": 6.884,
+          "text": "too"
+        },
+        {
+          "start": 6.896,
+          "end": 7.258,
+          "text": "vague"
+        },
+        {
+          "start": 7.596,
+          "end": 7.734,
+          "text": "your"
+        },
+        {
+          "start": 7.746,
+          "end": 8.158,
+          "text": "primal"
+        },
+        {
+          "start": 8.171,
+          "end": 8.446,
+          "text": "brain"
+        },
+        {
+          "start": 8.458,
+          "end": 8.984,
+          "text": "interprets"
+        },
+        {
+          "start": 8.996,
+          "end": 9.108,
+          "text": "it"
+        },
+        {
+          "start": 9.121,
+          "end": 9.259,
+          "text": "as"
+        },
+        {
+          "start": 9.271,
+          "end": 9.658,
+          "text": "physical"
+        },
+        {
+          "start": 9.671,
+          "end": 10.208,
+          "text": "danger"
+        }
+      ]
+    },
+    {
+      "scene": "scene_03",
+      "start": 11.256,
+      "end": 19.32,
+      "words": [
+        {
+          "start": 11.356,
+          "end": 11.594,
+          "text": "Your"
+        },
+        {
+          "start": 11.606,
+          "end": 12.156,
+          "text": "emotional"
+        },
+        {
+          "start": 12.168,
+          "end": 12.656,
+          "text": "amygdala"
+        },
+        {
+          "start": 12.669,
+          "end": 13.269,
+          "text": "hijacks"
+        },
+        {
+          "start": 13.281,
+          "end": 13.393,
+          "text": "your"
+        },
+        {
+          "start": 13.406,
+          "end": 13.956,
+          "text": "prefrontal"
+        },
+        {
+          "start": 13.968,
+          "end": 14.606,
+          "text": "cortex"
+        },
+        {
+          "start": 14.944,
+          "end": 15.431,
+          "text": "triggering"
+        },
+        {
+          "start": 15.444,
+          "end": 15.594,
+          "text": "an"
+        },
+        {
+          "start": 15.606,
+          "end": 16.181,
+          "text": "automatic"
+        },
+        {
+          "start": 16.194,
+          "end": 16.519,
+          "text": "freeze"
+        },
+        {
+          "start": 16.531,
+          "end": 17.068,
+          "text": "response"
+        },
+        {
+          "start": 17.081,
+          "end": 17.469,
+          "text": "before"
+        },
+        {
+          "start": 17.481,
+          "end": 17.606,
+          "text": "you"
+        },
+        {
+          "start": 17.618,
+          "end": 17.931,
+          "text": "even"
+        },
+        {
+          "start": 17.944,
+          "end": 18.444,
+          "text": "begin"
+        }
+      ]
+    },
+    {
+      "scene": "scene_04",
+      "start": 19.5,
+      "end": 25.548,
+      "words": [
+        {
+          "start": 19.6,
+          "end": 20.112,
+          "text": "Staring"
+        },
+        {
+          "start": 20.125,
+          "end": 20.587,
+          "text": "blankly"
+        },
+        {
+          "start": 20.6,
+          "end": 20.675,
+          "text": "at"
+        },
+        {
+          "start": 20.688,
+          "end": 20.812,
+          "text": "your"
+        },
+        {
+          "start": 20.825,
+          "end": 21.25,
+          "text": "screen"
+        },
+        {
+          "start": 21.262,
+          "end": 21.438,
+          "text": "is"
+        },
+        {
+          "start": 21.45,
+          "end": 21.938,
+          "text": "literally"
+        },
+        {
+          "start": 21.95,
+          "end": 22.075,
+          "text": "your"
+        },
+        {
+          "start": 22.087,
+          "end": 22.475,
+          "text": "nervous"
+        },
+        {
+          "start": 22.487,
+          "end": 22.912,
+          "text": "system"
+        },
+        {
+          "start": 22.925,
+          "end": 23.225,
+          "text": "trying"
+        },
+        {
+          "start": 23.237,
+          "end": 23.312,
+          "text": "to"
+        },
+        {
+          "start": 23.325,
+          "end": 23.763,
+          "text": "protect"
+        },
+        {
+          "start": 23.775,
+          "end": 23.9,
+          "text": "you"
+        },
+        {
+          "start": 23.912,
+          "end": 24.087,
+          "text": "from"
+        },
+        {
+          "start": 24.1,
+          "end": 24.688,
+          "text": "failure"
+        }
+      ]
+    },
+    {
+      "scene": "scene_05",
+      "start": 25.728,
+      "end": 33.48,
+      "words": [
+        {
+          "start": 25.828,
+          "end": 25.978,
+          "text": "The"
+        },
+        {
+          "start": 25.991,
+          "end": 26.853,
+          "text": "counter-intuitive"
+        },
+        {
+          "start": 26.865,
+          "end": 27.228,
+          "text": "fix"
+        },
+        {
+          "start": 27.24,
+          "end": 27.403,
+          "text": "is"
+        },
+        {
+          "start": 27.416,
+          "end": 27.853,
+          "text": "lowering"
+        },
+        {
+          "start": 27.866,
+          "end": 27.966,
+          "text": "the"
+        },
+        {
+          "start": 27.978,
+          "end": 28.403,
+          "text": "bar"
+        },
+        {
+          "start": 29.278,
+          "end": 29.666,
+          "text": "Shrink"
+        },
+        {
+          "start": 29.678,
+          "end": 29.778,
+          "text": "your"
+        },
+        {
+          "start": 29.79,
+          "end": 30.103,
+          "text": "next"
+        },
+        {
+          "start": 30.116,
+          "end": 30.416,
+          "text": "step"
+        },
+        {
+          "start": 30.428,
+          "end": 30.691,
+          "text": "until"
+        },
+        {
+          "start": 30.703,
+          "end": 30.865,
+          "text": "your"
+        },
+        {
+          "start": 30.878,
+          "end": 31.203,
+          "text": "brain"
+        },
+        {
+          "start": 31.215,
+          "end": 31.578,
+          "text": "cannot"
+        },
+        {
+          "start": 31.59,
+          "end": 32.128,
+          "text": "justify"
+        },
+        {
+          "start": 32.14,
+          "end": 32.603,
+          "text": "fear"
+        }
+      ]
+    },
+    {
+      "scene": "scene_06",
+      "start": 33.66,
+      "end": 40.164,
+      "words": [
+        {
+          "start": 33.76,
+          "end": 34.148,
+          "text": "Never"
+        },
+        {
+          "start": 34.16,
+          "end": 34.447,
+          "text": "plan"
+        },
+        {
+          "start": 34.46,
+          "end": 34.523,
+          "text": "the"
+        },
+        {
+          "start": 34.535,
+          "end": 34.773,
+          "text": "whole"
+        },
+        {
+          "start": 34.785,
+          "end": 35.472,
+          "text": "project"
+        },
+        {
+          "start": 36.335,
+          "end": 36.672,
+          "text": "Just"
+        },
+        {
+          "start": 36.685,
+          "end": 36.935,
+          "text": "open"
+        },
+        {
+          "start": 36.948,
+          "end": 37.035,
+          "text": "the"
+        },
+        {
+          "start": 37.048,
+          "end": 37.423,
+          "text": "tab"
+        },
+        {
+          "start": 37.435,
+          "end": 37.547,
+          "text": "and"
+        },
+        {
+          "start": 37.56,
+          "end": 37.772,
+          "text": "write"
+        },
+        {
+          "start": 37.785,
+          "end": 37.835,
+          "text": "a"
+        },
+        {
+          "start": 37.848,
+          "end": 38.21,
+          "text": "single"
+        },
+        {
+          "start": 38.222,
+          "end": 38.623,
+          "text": "terrible"
+        },
+        {
+          "start": 38.635,
+          "end": 39.297,
+          "text": "sentence"
+        }
+      ]
+    },
+    {
+      "scene": "scene_07",
+      "start": 40.344,
+      "end": 47.208,
+      "words": [
+        {
+          "start": 40.444,
+          "end": 41.044,
+          "text": "Momentum"
+        },
+        {
+          "start": 41.057,
+          "end": 41.406,
+          "text": "kills"
+        },
+        {
+          "start": 41.419,
+          "end": 42.144,
+          "text": "anxiety"
+        },
+        {
+          "start": 43.019,
+          "end": 43.419,
+          "text": "Follow"
+        },
+        {
+          "start": 43.431,
+          "end": 43.532,
+          "text": "to"
+        },
+        {
+          "start": 43.544,
+          "end": 43.869,
+          "text": "spot"
+        },
+        {
+          "start": 43.882,
+          "end": 43.994,
+          "text": "your"
+        },
+        {
+          "start": 44.007,
+          "end": 44.344,
+          "text": "mental"
+        },
+        {
+          "start": 44.357,
+          "end": 45.132,
+          "text": "blindspots"
+        },
+        {
+          "start": 45.294,
+          "end": 45.456,
+          "text": "and"
+        },
+        {
+          "start": 45.469,
+          "end": 45.881,
+          "text": "remember"
+        },
+        {
+          "start": 45.894,
+          "end": 46.319,
+          "text": "that"
+        }
+      ]
+    }
+  ]
+}
