@@ -1,0 +1,72 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-126560/",
+    "author": "SoyKhaler",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "frustrated man face",
+    "description": "A man looking directly into the camera with a challenging and skeptical expression."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-165071/",
+    "author": "Kanenori",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man leaning wall",
+    "description": "A man's side profile as he presses his body firmly against a blank interior wall."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-21182/",
+    "author": "tacofleur",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "lifting leg floor",
+    "description": "Close up of a man's feet in sneakers attempting to lift one leg while the other remains glued to the wall."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-123178/",
+    "author": "BlenderTimer",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "macro human eye",
+    "description": "Macro shot of a male eye widening in realization with fast digital overlay effects."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-1105/",
+    "author": "Vimeo-Free-Videos",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man balancing beam",
+    "description": "A man performing a balancing act or walking carefully along a wooden beam outdoors."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-214409/",
+    "author": "TonyDias7",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "metal balance scale",
+    "description": "An antique metal scale tipping back and forth before coming to a sudden halt."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-43559/",
+    "author": "PhotoDhaba",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "typing on smartphone",
+    "description": "Close up of male hands scrolling and interacting with a smartphone screen quickly."
+  }
+]
