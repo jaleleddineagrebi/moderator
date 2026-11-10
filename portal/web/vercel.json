@@ -5,6 +5,18 @@
   "outputDirectory": "dist",
   "rewrites": [
     {
+      "source": "/sitemap.xml",
+      "destination": "/api/seo?type=sitemap"
+    },
+    {
+      "source": "/robots.txt",
+      "destination": "/api/seo?type=robots"
+    },
+    {
+      "source": "/rss.xml",
+      "destination": "/api/seo?type=rss"
+    },
+    {
       "source": "/api/:match*",
       "destination": "/api/:match*"
     },

@@ -6,6 +6,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { Post, hasPlayableShort } from '../../models/post.model';
 import { PostService } from '../../services/post.service';
+import { SeoService } from '../../services/seo.service';
+import { AnalyticsService } from '../../services/analytics.service';
 import { PostCardComponent } from '../post-card/post-card.component';
 
 @Component({
@@ -26,6 +28,41 @@ import { PostCardComponent } from '../post-card/post-card.component';
         <p class="hero-description">
           Daily curated research exploring cognitive biases, mental models, and the behavioral frontier of human-AI teaming.
         </p>
+
+        <!-- Live Visibility & Research Impact Strip -->
+        <div class="visibility-bar" aria-label="Portal Visibility Metrics">
+          <div class="vis-metric">
+            <mat-icon class="vis-icon">visibility</mat-icon>
+            <div class="vis-data">
+              <span class="vis-value">{{ analytics.summary().totalViews | number }}</span>
+              <span class="vis-label">Reader Views</span>
+            </div>
+          </div>
+          <div class="vis-divider"></div>
+          <div class="vis-metric">
+            <mat-icon class="vis-icon">article</mat-icon>
+            <div class="vis-data">
+              <span class="vis-value">{{ analytics.summary().totalPosts || posts().length }}</span>
+              <span class="vis-label">Published Insights</span>
+            </div>
+          </div>
+          <div class="vis-divider"></div>
+          <div class="vis-metric">
+            <mat-icon class="vis-icon yt-vis">smart_display</mat-icon>
+            <div class="vis-data">
+              <span class="vis-value">{{ analytics.summary().totalShorts || shortsCount }}</span>
+              <span class="vis-label">YouTube Shorts</span>
+            </div>
+          </div>
+          <div class="vis-divider"></div>
+          <div class="vis-metric">
+            <mat-icon class="vis-icon react-vis">bolt</mat-icon>
+            <div class="vis-data">
+              <span class="vis-value">{{ analytics.summary().totalReactions + analytics.summary().totalComments }}</span>
+              <span class="vis-label">Interactions</span>
+            </div>
+          </div>
+        </div>
 
         <!-- Topic Chips Filter -->
         <div class="filter-chips">
@@ -125,7 +162,74 @@ import { PostCardComponent } from '../post-card/post-card.component';
       font-size: 18px;
       color: #64748b;
       line-height: 1.6;
-      margin: 0 0 32px 0;
+      margin: 0 0 24px 0;
+    }
+
+    .visibility-bar {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding: 12px 24px;
+      margin: 0 auto 28px auto;
+      background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      box-shadow: 0 4px 14px -4px rgba(15, 23, 42, 0.06);
+    }
+
+    .vis-metric {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-align: left;
+    }
+
+    .vis-icon {
+      font-size: 20px;
+      width: 20px;
+      height: 20px;
+      color: #2563eb;
+
+      &.yt-vis {
+        color: #dc2626;
+      }
+
+      &.react-vis {
+        color: #7c3aed;
+      }
+    }
+
+    .vis-data {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+    }
+
+    .vis-value {
+      font-size: 15px;
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    .vis-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .vis-divider {
+      width: 1px;
+      height: 24px;
+      background-color: #e2e8f0;
+      display: none;
+
+      @media (min-width: 640px) {
+        display: block;
+      }
     }
 
     .filter-chips {
@@ -187,6 +291,8 @@ import { PostCardComponent } from '../post-card/post-card.component';
 })
 export class FeedComponent implements OnInit {
   private readonly postService = inject(PostService);
+  private readonly seo = inject(SeoService);
+  readonly analytics = inject(AnalyticsService);
   private readonly route = inject(ActivatedRoute);
 
   readonly topics = ['All Insights', 'YouTube Shorts', 'Cognitive Bias', 'Human-AI Teaming', 'Neuroscience', 'Habits'];
@@ -194,8 +300,13 @@ export class FeedComponent implements OnInit {
   posts = signal<Post[]>([]);
   isLoading = signal<boolean>(true);
 
+  get shortsCount(): number {
+    return this.posts().filter(p => hasPlayableShort(p)).length;
+  }
+
   ngOnInit(): void {
-    if (this.route.snapshot.routeConfig?.path === 'shorts') {
+    const isShortsRoute = this.route.snapshot.routeConfig?.path === 'shorts';
+    if (isShortsRoute) {
       this.selectedTopic.set('YouTube Shorts');
     }
     this.route.queryParams.subscribe(params => {
@@ -203,6 +314,8 @@ export class FeedComponent implements OnInit {
         this.selectedTopic.set('YouTube Shorts');
       }
     });
+    this.analytics.loadVisibilitySummary();
+    this.analytics.trackPageView(isShortsRoute ? '/shorts' : '/');
     this.loadPosts();
   }
 
@@ -211,6 +324,7 @@ export class FeedComponent implements OnInit {
     this.postService.getPosts(1, 20).subscribe({
       next: (res) => {
         this.posts.set(res.data);
+        this.seo.setFeedSeo(res.data, this.selectedTopic());
         this.isLoading.set(false);
       },
       error: () => {
@@ -221,6 +335,8 @@ export class FeedComponent implements OnInit {
 
   onSelectTopic(topic: string): void {
     this.selectedTopic.set(topic);
+    this.seo.setFeedSeo(this.posts(), topic);
+    this.analytics.trackEvent('filter_topic', { topic });
   }
 
   filteredPosts(): Post[] {

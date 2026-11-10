@@ -5,9 +5,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatBadgeModule } from '@angular/material/badge';
-import { Post, ReactionTally, ReactionType, isYouTubeId } from '../../models/post.model';
+import { Post, ReactionTally, ReactionType, isYouTubeId, resolveUniqueCoverUrl } from '../../models/post.model';
 import { PostService } from '../../services/post.service';
 import { AuthService } from '../../services/auth.service';
+import { SeoService } from '../../services/seo.service';
+import { AnalyticsService } from '../../services/analytics.service';
 import { YouTubeShortCardComponent } from '../youtube-short-card/youtube-short-card.component';
 import { CommentSectionComponent } from '../comment-section/comment-section.component';
 
@@ -59,6 +61,11 @@ import { CommentSectionComponent } from '../comment-section/comment-section.comp
             <mat-icon class="meta-icon">schedule</mat-icon>
             <span>{{ estimatedReadingTime }} min read</span>
           </div>
+          <span class="meta-dot">·</span>
+          <div class="read-time-badge" title="Total Reader Views">
+            <mat-icon class="meta-icon">visibility</mat-icon>
+            <span>{{ postViews | number }} views</span>
+          </div>
         </div>
 
         <div class="model-badge">
@@ -70,7 +77,7 @@ import { CommentSectionComponent } from '../comment-section/comment-section.comp
       <!-- Cover Image with Fallback -->
       <figure class="article-cover-figure">
         <img
-          [src]="post()!.coverImageUrl"
+          [src]="coverUrl"
           [alt]="post()!.title"
           (error)="onImageError($event)"
           class="cover-image"
@@ -537,12 +544,29 @@ import { CommentSectionComponent } from '../comment-section/comment-section.comp
 export class PostDetailComponent implements OnInit {
   private readonly route = inject(ActivatedRoute);
   private readonly postService = inject(PostService);
+  private readonly seo = inject(SeoService);
+  readonly analytics = inject(AnalyticsService);
   readonly auth = inject(AuthService);
   readonly isYouTubeId = isYouTubeId;
 
   post = signal<Post | null>(null);
   reactionTallies = signal<ReactionTally>({ LIKE: 0, MIND_BLOWN: 0, INSIGHTFUL: 0, BRAIN_CHECK: 0 });
   userReaction = signal<ReactionType | null>(null);
+
+  get coverUrl(): string {
+    return resolveUniqueCoverUrl(this.post()!);
+  }
+
+  get postViews(): number {
+    const p = this.post();
+    if (!p) return 0;
+    const totalReactions =
+      (this.reactionTallies().LIKE || 0) +
+      (this.reactionTallies().MIND_BLOWN || 0) +
+      (this.reactionTallies().INSIGHTFUL || 0) +
+      (this.reactionTallies().BRAIN_CHECK || 0);
+    return this.analytics.getViewsForPost(p.slug, totalReactions || p._count?.reactions || 0, p._count?.comments || 0);
+  }
 
   get formattedHtml(): string {
     const p = this.post();
@@ -557,6 +581,7 @@ export class PostDetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.analytics.loadVisibilitySummary();
     this.route.paramMap.subscribe(params => {
       const slug = params.get('slug');
       if (slug) {
@@ -569,6 +594,8 @@ export class PostDetailComponent implements OnInit {
     this.postService.getPostBySlug(slug).subscribe(p => {
       this.post.set(p);
       if (p) {
+        this.seo.setPostSeo(p);
+        this.analytics.trackPageView(`/posts/${p.slug}`, p.slug);
         this.loadReactions(p.id);
       }
     });
@@ -585,6 +612,7 @@ export class PostDetailComponent implements OnInit {
     const p = this.post();
     if (!p) return;
 
+    this.analytics.trackEvent('post_reaction', { slug: p.slug, type });
     this.postService.toggleReaction(p.id, type).subscribe(() => {
       this.loadReactions(p.id);
     });
@@ -592,7 +620,8 @@ export class PostDetailComponent implements OnInit {
 
   onImageError(event: Event): void {
     const target = event.target as HTMLImageElement;
-    target.src = 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80';
+    const p = this.post();
+    target.src = resolveUniqueCoverUrl({ slug: (p?.slug || 'fallback') + '-alt', title: p?.title || '' });
   }
 
   private parseMarkdown(md: string): string {

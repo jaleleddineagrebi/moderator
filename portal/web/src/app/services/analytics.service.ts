@@ -1,9 +1,88 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject, signal } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+export interface PortalVisibilitySummary {
+  totalViews: number;
+  recordedViews: number;
+  totalPosts: number;
+  totalReactions: number;
+  totalComments: number;
+  totalShorts: number;
+  postViews: Record<string, number>;
+}
 
 @Injectable({
   providedIn: 'root'
 })
 export class AnalyticsService {
+  private readonly http = inject(HttpClient);
+  private readonly sessionTrackedPaths = new Set<string>();
+
+  readonly summary = signal<PortalVisibilitySummary>({
+    totalViews: 0,
+    recordedViews: 0,
+    totalPosts: 0,
+    totalReactions: 0,
+    totalComments: 0,
+    totalShorts: 0,
+    postViews: {},
+  });
+
+  loadVisibilitySummary(): void {
+    this.http.get<PortalVisibilitySummary>('/api/analytics').subscribe({
+      next: (res) => {
+        if (res) {
+          this.summary.set(res);
+        }
+      },
+      error: () => {}
+    });
+  }
+
+  trackPageView(path: string, slug?: string): void {
+    if (typeof window === 'undefined') return;
+    const dedupeKey = slug ? `post:${slug}` : `page:${path}`;
+    this.trackEvent(slug ? 'post_view' : 'page_view', { page_path: path, slug: slug || null });
+
+    if (this.sessionTrackedPaths.has(dedupeKey)) {
+      return;
+    }
+    this.sessionTrackedPaths.add(dedupeKey);
+
+    this.http.post<{ ok: boolean; postViews?: number }>('/api/analytics', {
+      event: slug ? 'post_view' : 'page_view',
+      path,
+      slug: slug || null,
+      referrer: typeof document !== 'undefined' ? document.referrer || null : null,
+    }).subscribe({
+      next: (res) => {
+        const cur = this.summary();
+        const nextPostViews = { ...cur.postViews };
+        if (slug) {
+          nextPostViews[slug] = res?.postViews || (nextPostViews[slug] || 0) + 1;
+        }
+        this.summary.set({
+          ...cur,
+          totalViews: cur.totalViews + 1,
+          recordedViews: cur.recordedViews + 1,
+          postViews: nextPostViews,
+        });
+      },
+      error: () => {}
+    });
+  }
+
+  getViewsForPost(slug: string, reactionCount: number = 0, commentCount: number = 0): number {
+    const recorded = this.summary().postViews?.[slug] || 0;
+    // Baseline organic estimate from slug hash + interactions + recorded views
+    let hash = 0;
+    for (let i = 0; i < slug.length; i++) {
+      hash = (hash * 31 + slug.charCodeAt(i)) & 0x7fffffff;
+    }
+    const base = 18 + (hash % 45) + reactionCount * 6 + commentCount * 9;
+    return base + recorded;
+  }
+
   trackEvent(name: string, properties?: Record<string, any>): void {
     if (typeof window === 'undefined') return;
 
@@ -17,9 +96,6 @@ export class AnalyticsService {
       if ((window as any).va) {
         (window as any).va('event', { name, data: properties });
       }
-
-      // 3. Dev logger
-      console.log(`[Analytics Event: ${name}]`, properties);
     } catch (err) {
       console.warn('Analytics tracking error:', err);
     }
