@@ -93,6 +93,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         }
       }
 
+      const gaMeasurementId =
+        process.env["GA_MEASUREMENT_ID"] || process.env["NEXT_PUBLIC_GA_MEASUREMENT_ID"] || "";
+
       return res.status(200).json({
         totalViews: Math.max(totalViews, postCount * 12 + reactionCount * 5),
         recordedViews: totalViews,
@@ -101,6 +104,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         totalComments: commentCount,
         totalShorts: shortCount,
         postViews,
+        gaMeasurementId,
       });
     } catch (error) {
       console.error("GET /api/analytics error:", error);

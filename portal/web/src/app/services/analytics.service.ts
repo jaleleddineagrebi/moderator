@@ -9,6 +9,7 @@ export interface PortalVisibilitySummary {
   totalComments: number;
   totalShorts: number;
   postViews: Record<string, number>;
+  gaMeasurementId?: string;
 }
 
 @Injectable({
@@ -17,6 +18,7 @@ export interface PortalVisibilitySummary {
 export class AnalyticsService {
   private readonly http = inject(HttpClient);
   private readonly sessionTrackedPaths = new Set<string>();
+  private gaInitializedId = '';
 
   readonly summary = signal<PortalVisibilitySummary>({
     totalViews: 0,
@@ -33,10 +35,37 @@ export class AnalyticsService {
       next: (res) => {
         if (res) {
           this.summary.set(res);
+          if (res.gaMeasurementId) {
+            this.initGoogleAnalytics(res.gaMeasurementId);
+          }
         }
       },
       error: () => {}
     });
+  }
+
+  initGoogleAnalytics(measurementId: string): void {
+    if (typeof window === 'undefined' || typeof document === 'undefined') return;
+    const cleanId = (measurementId || '').trim();
+    if (!cleanId || this.gaInitializedId === cleanId) return;
+    this.gaInitializedId = cleanId;
+    (window as any).GA_MEASUREMENT_ID = cleanId;
+
+    const existing = document.querySelector(`script[src*="googletagmanager.com/gtag/js?id=${cleanId}"]`);
+    if (!existing) {
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(cleanId)}`;
+      document.head.appendChild(script);
+    }
+
+    if ((window as any).gtag) {
+      (window as any).gtag('config', cleanId, {
+        page_path: window.location.pathname + window.location.search,
+        page_location: window.location.href,
+        page_title: document.title,
+      });
+    }
   }
 
   trackPageView(path: string, slug?: string): void {

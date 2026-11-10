@@ -121,6 +121,12 @@ ${itemsXml}
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
+  <url>
+    <loc>${baseUrl}/contact</loc>
+    <lastmod>${nowIso}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 ${postUrlsXml}
 </urlset>`;
 

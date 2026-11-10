@@ -37,6 +37,10 @@ import { AuthDialogComponent } from '../auth-dialog/auth-dialog.component';
             <mat-icon>smart_display</mat-icon>
             <span>YouTube Shorts</span>
           </a>
+          <a mat-button routerLink="/contact" routerLinkActive="active-link">
+            <mat-icon>mail_outline</mat-icon>
+            <span>Contact</span>
+          </a>
         </nav>
 
         <!-- Right Action: User Auth -->

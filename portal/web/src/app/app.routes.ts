@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { FeedComponent } from './components/feed/feed.component';
 import { PostDetailComponent } from './components/post-detail/post-detail.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 export const routes: Routes = [
   {
@@ -17,6 +18,11 @@ export const routes: Routes = [
     path: 'posts/:slug',
     component: PostDetailComponent,
     title: 'Article Reflection | Psychology & AI Portal'
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
+    title: 'Contact Us | Mind Decoded'
   },
   {
     path: '**',
