@@ -170,3 +170,4 @@ export class SeoService {
     script.textContent = JSON.stringify(data);
   }
 }
+
