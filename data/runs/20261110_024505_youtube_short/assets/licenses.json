@@ -1,0 +1,72 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-28446/",
+    "author": "spoot",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "blinking cursor screen",
+    "description": "Close up of hands frozen over a glowing computer keyboard in a dimly lit workspace as a cursor blinks on a blank screen."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-210934/",
+    "author": "Nerd_Nonsense",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "eye pupil dilation",
+    "description": "Extreme macro shot of a man's eye opening wide with pupil dilating under dramatic high-contrast lighting."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-70962/",
+    "author": "bilalashrafmzon",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "brain synapse animation",
+    "description": "Stylized 3D rendering of glowing neural pulses firing rapidly through brain synapses in deep blue and amber tones."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-39183/",
+    "author": "movadspro",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man tapping fingers",
+    "description": "Macro slow motion shot of nervous fingers rhythmically tapping against a dark wooden table next to a notebook."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-8453/",
+    "author": "Matthias_Groeneveld",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "analog stopwatch button",
+    "description": "A male hand firmly presses down the top button of an analog steel stopwatch as the needle starts ticking."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-4731/",
+    "author": "Coverr-Free-Footage",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "opening laptop keyboard",
+    "description": "Close-up over the shoulder of a man opening his laptop lid in soft morning window light while picking up a mug."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-149453/",
+    "author": "Matthias_Groeneveld",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man walking sunrise",
+    "description": "A confident man walking forward in silhouette against an open golden sunrise horizon."
+  }
+]
