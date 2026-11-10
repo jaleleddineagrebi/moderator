@@ -732,6 +732,11 @@
           "ts": "2026-11-10T02:55:44+00:00",
           "level": "info",
           "msg": "Asking Gemini (gemini-3.8-flash, medium complexity, thinking low)"
+        },
+        {
+          "ts": "2026-11-10T02:55:49+00:00",
+          "level": "warning",
+          "msg": "'gemini-3.8-flash' returned 503; retrying once in 2s"
         }
       ],
       "errors": [],
@@ -793,7 +798,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-10T02:55:44+00:00",
+    "exported_at": "2026-11-10T02:56:02+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/42744830262"
   }
