@@ -899,3 +899,29 @@ def test_youtube_channel_video_update_plan_uses_video_language():
                                               "defaultAudioLanguage": "en"}) is None
     de = youtube_channel.plan_video_update({"title": "Warum #shorts", "description": "Text", "defaultAudioLanguage": "de"})
     assert de is None
+
+
+def test_viral_creator_upgrades_and_long_workflow(tmp_path):
+    from moderator.tools import text
+
+    assert text.FOLLOW_LABELS["en"] == "SUBSCRIBE"
+    highlighted = text.highlight_power_word("your brain lies", "en")
+    assert r"{\c&H0000E5FF&}" in highlighted
+
+    ass_path = tmp_path / "long_captions.ass"
+    text.write_ass(
+        ass_path,
+        "en",
+        [{"start": 0.0, "end": 1.2, "text": "your brain lies"}],
+        [{"start": 0.0, "end": 3.0, "text": "BRAIN GLITCH"}],
+        size=(1920, 1080),
+    )
+    ass_content = ass_path.read_text(encoding="utf-8")
+    assert "PlayResX: 1920" in ass_content
+    assert "PlayResY: 1080" in ass_content
+    assert r"{\c&H0000E5FF&}" in ass_content
+
+    registry = Registry(ROOT, {})
+    wf_long = registry.workflow("youtube_long")
+    assert wf_long.params.get("format") == "long"
+    assert [s.id for s in wf_long.steps] == ["research", "script", "visuals", "audio", "packaging", "edit", "qa"]

@@ -7,9 +7,11 @@ from moderator.engine.agent import Agent, StepContext
 from moderator.tools import ffmpeg, tts
 from moderator.tools.languages import normalize_langs
 
-SCENE_GAP = 0.18  # breath between scenes, seconds
+SCENE_GAP = 0.09  # crisp creator cut between scenes, seconds (eliminates dead air)
 MAX_VOICEOVER = 55.0  # above this, re-record faster (the editor adds a short tail; Shorts must stay under 60s)
 TARGET_VOICEOVER = 53.0
+LONG_MAX_VOICEOVER = 290.0
+LONG_TARGET_VOICEOVER = 270.0
 MAX_SPEEDUP = 15  # percent; faster than this starts to sound rushed
 # A-minor / F / C / G pad, 4 seconds per chord. Generated here, so there is no copyright to worry about.
 CHORDS = [(220.00, 261.63, 329.63), (174.61, 220.00, 261.63), (261.63, 329.63, 392.00), (196.00, 246.94, 293.66)]
@@ -29,7 +31,10 @@ class Handler(Agent):
         script = ctx.read_json(ctx.upstream("script")["data"])
         langs = normalize_langs(ctx.params.get("languages"))
         voice_idx = {"primary_voice": 0, "alternate_voice": 1, "third_voice_slower": 2}.get(ctx.strategy, 0)
-        rate = "-6%" if ctx.strategy == "third_voice_slower" else "+0%"
+        is_long = str(ctx.params.get("format") or "short").lower() == "long"
+        max_vo = LONG_MAX_VOICEOVER if is_long else MAX_VOICEOVER
+        target_vo = LONG_TARGET_VOICEOVER if is_long else TARGET_VOICEOVER
+        rate = "-6%" if ctx.strategy == "third_voice_slower" else "+6%"
         if ctx.feedback:
             fb_low = ctx.feedback[-1]["comment"].lower()
             ctx.log(f"Revision feedback: {ctx.feedback[-1]['comment']}")
@@ -45,16 +50,18 @@ class Handler(Agent):
         ctx.set_inputs(script=ctx.upstream("script")["data"], languages=langs,
                        voices={l: tts.voice_for(l, voice_idx) for l in langs})
         outputs = {}
+        max_total = 0.0
         for li, lang in enumerate(langs):
             voice = tts.voice_for(lang, voice_idx)
             ctx.log(f"Narrating {lang} with {voice}")
             vo, timings, total = await self._narrate(ctx, script, lang, voice, rate)
-            if total > MAX_VOICEOVER:
-                # keep the video under 60s whatever the script estimate was: re-record slightly faster
-                speedup = min(MAX_SPEEDUP, int((total / TARGET_VOICEOVER - 1) * 100) + 1)
+            if total > max_vo:
+                # keep the video under limit whatever the script estimate was: re-record slightly faster
+                speedup = min(MAX_SPEEDUP, int((total / target_vo - 1) * 100) + 1)
                 faster = f"{int(rate.rstrip('%')) + speedup:+d}%"
                 ctx.log(f"{lang} voiceover is {total:.1f}s; re-recording at rate {faster}", "warning")
                 vo, timings, total = await self._narrate(ctx, script, lang, voice, faster)
+            max_total = max(max_total, total)
             if len(langs) == 1:
                 shutil.copy2(ctx.run_dir / vo, ctx.run_dir / "voiceover.mp3")
             outputs[f"voiceover_{lang}"] = vo
@@ -62,7 +69,7 @@ class Handler(Agent):
             ctx.log(f"{lang} voiceover: {total:.1f}s")
             ctx.progress(5 + 75 * (li + 1) / len(langs))
 
-        outputs["music"], licenses = await self._music(ctx)
+        outputs["music"], licenses = await self._music(ctx, max_dur=max_total)
         ctx.progress(90)
         outputs["whoosh"] = "sfx/whoosh.mp3"
         ctx.path("sfx/whoosh.mp3")
@@ -103,19 +110,21 @@ class Handler(Agent):
         await ffmpeg.run([*inputs, "-filter_complex", graph, "-map", "[out]", "-c:a", "libmp3lame", "-q:a", "2", vo], ctx.run_dir)
         return vo, timings, await ffmpeg.duration(ctx.run_dir / vo)
 
-    async def _music(self, ctx: StepContext) -> tuple[str, dict]:
+    async def _music(self, ctx: StepContext, max_dur: float = 55.0) -> tuple[str, dict]:
+        bed_sec = max(70, int(max_dur) + 15)
+        fade_st = bed_sec - 4
         library = ROOT / "library" / "music"
         tracks = [p for p in library.glob("*.mp3") if (p.with_suffix(".json")).exists()]
         if tracks:
             track = random.choice(tracks)
             meta = json.loads(track.with_suffix(".json").read_text(encoding="utf-8"))
             ctx.log(f"Music from library: {track.name} ({meta.get('license')})")
-            await ffmpeg.run(["-i", str(track), "-t", "70", "-af", "afade=t=out:st=66:d=4", "-c:a", "libmp3lame", "-q:a", "4", "music.mp3"], ctx.run_dir)
+            await ffmpeg.run(["-i", str(track), "-t", str(bed_sec), "-af", f"afade=t=out:st={fade_st}:d=4", "-c:a", "libmp3lame", "-q:a", "4", "music.mp3"], ctx.run_dir)
             licenses = {"music": {"source": track.name, **meta}}
         else:
             ctx.log("Generating an ambient music bed (no library tracks with license files found)")
-            await ffmpeg.run(["-f", "lavfi", "-i", f"aevalsrc='{pad_expression()}':s=44100:d=70", "-af",
-                              "lowpass=f=1800,aecho=0.8:0.7:120|240:0.25|0.15,afade=t=in:d=2,afade=t=out:st=66:d=4,volume=0.8",
+            await ffmpeg.run(["-f", "lavfi", "-i", f"aevalsrc='{pad_expression()}':s=44100:d={bed_sec}", "-af",
+                              f"lowpass=f=1800,aecho=0.8:0.7:120|240:0.25|0.15,afade=t=in:d=2,afade=t=out:st={fade_st}:d=4,volume=0.8",
                               "-c:a", "libmp3lame", "-q:a", "4", "music.mp3"], ctx.run_dir)
             licenses = {"music": {"source": "generated by voice_audio agent (ffmpeg synthesis)", "license": "original work, no third-party rights"}}
         licenses["sfx"] = {"source": "generated by voice_audio agent (ffmpeg noise synthesis)", "license": "original work, no third-party rights"}

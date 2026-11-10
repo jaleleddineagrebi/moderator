@@ -76,11 +76,46 @@ def _ass_escape(text: str) -> str:
     return text.replace("\\", "\\\\").replace("{", "(").replace("}", ")").replace("\n", " ")
 
 
-FOLLOW_LABELS = {"en": "FOLLOW", "fr": "S'ABONNER", "ar": "اشترك"}
+_STOPWORDS = {
+    "the", "and", "for", "you", "your", "are", "with", "that", "this", "from", "into", "have", "has", "had",
+    "was", "were", "will", "can", "but", "not", "what", "when", "why", "how", "who", "all", "its", "out",
+    "les", "des", "une", "dans", "pour", "sur", "que", "qui", "pas", "plus", "avec", "ton", "tes", "son", "ses",
+}
+
+
+def highlight_power_word(raw_text: str, lang: str) -> str:
+    """Highlight the single most impactful word in a 2-3 word caption chunk in Cyber Yellow (&H0000E5FF)."""
+    escaped = _ass_escape(raw_text)
+    if lang in RTL:
+        return escaped
+    tokens = escaped.split()
+    if len(tokens) < 2:
+        return escaped
+    best_idx = -1
+    best_score = -1
+    for idx, tok in enumerate(tokens):
+        clean = tok.strip(".,?!:;\"'()-—").lower()
+        if not clean:
+            continue
+        if any(ch.isdigit() for ch in clean):
+            score = 100 + len(clean)
+        elif clean not in _STOPWORDS and len(clean) >= 4:
+            score = len(clean)
+        else:
+            score = 0
+        if score > best_score:
+            best_score = score
+            best_idx = idx
+    if best_idx >= 0 and best_score >= 4:
+        tokens[best_idx] = f"{{\\c&H0000E5FF&}}{tokens[best_idx]}{{\\c&H00FFFFFF&}}"
+    return " ".join(tokens)
+
+
+FOLLOW_LABELS = {"en": "SUBSCRIBE", "fr": "S'ABONNER", "ar": "اشترك"}
 
 
 def write_follow_button(path: Path, lang: str, label: str | None = None) -> tuple[int, int]:
-    """Render a transparent PNG 'follow' pill (red, white label, bell) for the editor to overlay.
+    """Render a transparent PNG 'subscribe/follow' pill (red, white label, bell) for the editor to overlay.
     Returns (width, height)."""
     from PIL import Image
 
@@ -107,21 +142,28 @@ def write_follow_button(path: Path, lang: str, label: str | None = None) -> tupl
     return w, h
 
 
-def write_ass(path: Path, lang: str, captions: list[dict], headlines: list[dict]) -> None:
+def write_ass(path: Path, lang: str, captions: list[dict], headlines: list[dict],
+              size: tuple[int, int] = (1080, 1920)) -> None:
     """captions/headlines: [{start, end, text}] in seconds. Captions sit in the lower third,
     scene headlines (on-screen text) near the top. libass handles Arabic shaping and direction."""
     fam = ASS_FONTS.get(lang, ASS_FONTS["fr"])
+    res_x, res_y = size
+    is_landscape = res_x > res_y
+    cap_size = 86 if is_landscape else 124
+    head_size = 64 if is_landscape else 84
+    cap_margin_v = 110 if is_landscape else 560
+    head_margin_v = 65 if is_landscape else 230
     header = f"""[Script Info]
 ScriptType: v4.00+
-PlayResX: 1080
-PlayResY: 1920
+PlayResX: {res_x}
+PlayResY: {res_y}
 WrapStyle: 0
 ScaledBorderAndShadow: yes
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Caption,{fam},124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
-Style: Headline,{fam},84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+Style: Caption,{fam},{cap_size},&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,{cap_margin_v},1
+Style: Headline,{fam},{head_size},&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,{head_margin_v},1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
@@ -130,7 +172,8 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
     for h in headlines:
         events.append(f"Dialogue: 1,{_ass_time(h['start'])},{_ass_time(h['end'])},Headline,,0,0,0,,{{\\fad(150,150)}}{_ass_escape(h['text'])}")
     for c in captions:
-        events.append(f"Dialogue: 0,{_ass_time(c['start'])},{_ass_time(c['end'])},Caption,,0,0,0,,{{\\fscx92\\fscy92\\t(0,90,\\fscx100\\fscy100)}}{_ass_escape(c['text'])}")
+        styled_txt = highlight_power_word(c["text"], lang)
+        events.append(f"Dialogue: 0,{_ass_time(c['start'])},{_ass_time(c['end'])},Caption,,0,0,0,,{{\\fscx92\\fscy92\\t(0,90,\\fscx100\\fscy100)}}{styled_txt}")
     path.write_text(header + "\n".join(events) + "\n", encoding="utf-8")
 
 
