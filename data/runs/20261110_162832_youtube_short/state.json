@@ -433,10 +433,10 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "running",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-10T16:38:46+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-10T16:38:58+00:00",
       "attempt": 2,
       "retries": 0,
       "max_retries": 2,
@@ -529,6 +529,16 @@
           "ts": "2026-11-10T16:38:46+00:00",
           "level": "info",
           "msg": "Replacing scene_01; keeping 6 unchanged scene(s)"
+        },
+        {
+          "ts": "2026-11-10T16:38:57+00:00",
+          "level": "info",
+          "msg": "scene_01: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-10T16:38:58+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [],
@@ -629,11 +639,11 @@
         "visuals"
       ],
       "checkpoint": null,
-      "status": "queued",
-      "progress": 0,
-      "started_at": "2026-11-10T16:34:38+00:00",
-      "ended_at": "2026-11-10T16:34:45+00:00",
-      "attempt": 1,
+      "status": "done",
+      "progress": 100,
+      "started_at": "2026-11-10T16:38:58+00:00",
+      "ended_at": "2026-11-10T16:38:59+00:00",
+      "attempt": 2,
       "retries": 0,
       "max_retries": 2,
       "strategy": "banana_thumbnail",
@@ -724,6 +734,31 @@
           "ts": "2026-11-10T16:38:46+00:00",
           "level": "info",
           "msg": "Reset: upstream step 'visuals' is being revised"
+        },
+        {
+          "ts": "2026-11-10T16:38:58+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'banana_thumbnail'"
+        },
+        {
+          "ts": "2026-11-10T16:38:58+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3.5-flash-lite) answered from CACHE (0 API tokens consumed, $0.00 cost)"
+        },
+        {
+          "ts": "2026-11-10T16:38:58+00:00",
+          "level": "info",
+          "msg": "Generating 9:16 image with Nano Banana (gemini-nano-banana-2.1)"
+        },
+        {
+          "ts": "2026-11-10T16:38:58+00:00",
+          "level": "warning",
+          "msg": "Nano Banana thumbnail background failed (Gemini API 429: daily quota used up (or model not enabled) for gemini-nano-banana-2.1, gemini-3.1-flash-image-preview, gemini-3.1-flash-image, gemini-2.5-flash-image); using scene_01 frame instead"
+        },
+        {
+          "ts": "2026-11-10T16:38:59+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [],
@@ -738,11 +773,11 @@
         "audio"
       ],
       "checkpoint": null,
-      "status": "queued",
+      "status": "running",
       "progress": 0,
-      "started_at": "2026-11-10T16:34:38+00:00",
-      "ended_at": "2026-11-10T16:35:40+00:00",
-      "attempt": 1,
+      "started_at": "2026-11-10T16:38:58+00:00",
+      "ended_at": null,
+      "attempt": 2,
       "retries": 0,
       "max_retries": 2,
       "strategy": "transitions",
@@ -790,6 +825,16 @@
           "ts": "2026-11-10T16:38:46+00:00",
           "level": "info",
           "msg": "Reset: upstream step 'visuals' is being revised"
+        },
+        {
+          "ts": "2026-11-10T16:38:58+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'transitions'"
+        },
+        {
+          "ts": "2026-11-10T16:38:58+00:00",
+          "level": "info",
+          "msg": "Rendering en: 7 scenes, 47.8s, xfade transitions"
         }
       ],
       "errors": [],
@@ -977,7 +1022,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-10T16:38:49+00:00",
+    "exported_at": "2026-11-10T16:39:09+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/42854772936"
   }
