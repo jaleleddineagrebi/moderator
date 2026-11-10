@@ -16,7 +16,7 @@ function getBaseUrl(req: VercelRequest): string {
   if (envUrl && envUrl.startsWith("http")) {
     return envUrl.replace(/\/$/, "");
   }
-  const host = (req.headers["x-forwarded-host"] || req.headers.host || "moderator-portal.vercel.app") as string;
+  const host = (req.headers["x-forwarded-host"] || req.headers.host || "mindcoder.com") as string;
   const proto = (req.headers["x-forwarded-proto"] || "https") as string;
   return `${proto}://${host}`;
 }

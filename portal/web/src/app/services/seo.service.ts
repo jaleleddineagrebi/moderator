@@ -14,7 +14,7 @@ export class SeoService {
   private get origin(): string {
     return typeof window !== 'undefined' && window.location?.origin
       ? window.location.origin
-      : 'https://moderator-portal.vercel.app';
+      : 'https://mindcoder.com';
   }
 
   setFeedSeo(posts: Post[], selectedTopic: string = 'All Insights'): void {
