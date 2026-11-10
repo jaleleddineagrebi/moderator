@@ -61,8 +61,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         prisma.post.count({ where: { status: "PUBLISHED" } }),
       ]);
 
+      const usedCoverUrls = new Set<string>();
       return res.status(200).json({
-        data: posts.map(cleanPost),
+        data: posts.map((p) => cleanPost(p, usedCoverUrls)),
         meta: {
           page,
           limit,

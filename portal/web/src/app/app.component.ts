@@ -32,9 +32,11 @@ import { MatIconModule } from '@angular/material/icon';
           </div>
 
           <div class="footer-links">
-            <span class="footer-heading">Platform</span>
+            <span class="footer-heading">Platform & Syndication</span>
             <a href="/">Daily Insights</a>
             <a href="/shorts">YouTube Shorts</a>
+            <a href="/rss.xml" target="_blank" rel="noopener">RSS Feed</a>
+            <a href="/sitemap.xml" target="_blank" rel="noopener">XML Sitemap</a>
             <a href="https://www.youtube.com/channel/UCzjz2ArvjE4RgR_2k2o53mg" target="_blank" rel="noopener noreferrer">
               YouTube Channel ↗
             </a>

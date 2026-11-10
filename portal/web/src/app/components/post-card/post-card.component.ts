@@ -1,10 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { Post, hasPlayableShort } from '../../models/post.model';
+import { Post, hasPlayableShort, resolveUniqueCoverUrl } from '../../models/post.model';
+import { AnalyticsService } from '../../services/analytics.service';
 
 @Component({
   selector: 'app-post-card',
@@ -15,9 +16,9 @@ import { Post, hasPlayableShort } from '../../models/post.model';
       <!-- Cover Image with Aspect Ratio -->
       <div class="card-image-wrapper" [routerLink]="['/posts', post.slug]">
         <img
-          *ngIf="!imageFailed && post.coverImageUrl; else fallbackVisual"
+          *ngIf="!imageFailed && coverUrl; else fallbackVisual"
           mat-card-image
-          [src]="post.coverImageUrl"
+          [src]="coverUrl"
           [alt]="post.title"
           class="cover-img"
           loading="lazy"
@@ -67,11 +68,15 @@ import { Post, hasPlayableShort } from '../../models/post.model';
         </a>
 
         <div class="stats-group">
-          <span class="stat-item" *ngIf="post._count">
+          <span class="stat-item" title="Article Views">
+            <mat-icon class="stat-icon">visibility</mat-icon>
+            <span>{{ postViews }}</span>
+          </span>
+          <span class="stat-item" *ngIf="post._count" title="Reader Reactions">
             <mat-icon class="stat-icon">favorite_border</mat-icon>
             <span>{{ post._count.reactions || 0 }}</span>
           </span>
-          <span class="stat-item" *ngIf="post._count">
+          <span class="stat-item" *ngIf="post._count" title="Comments">
             <mat-icon class="stat-icon">chat_bubble_outline</mat-icon>
             <span>{{ post._count.comments || 0 }}</span>
           </span>
@@ -304,7 +309,20 @@ import { Post, hasPlayableShort } from '../../models/post.model';
 })
 export class PostCardComponent {
   @Input({ required: true }) post!: Post;
+  private readonly analytics = inject(AnalyticsService);
   imageFailed = false;
+
+  get coverUrl(): string {
+    return resolveUniqueCoverUrl(this.post);
+  }
+
+  get postViews(): number {
+    return this.analytics.getViewsForPost(
+      this.post?.slug || '',
+      this.post?._count?.reactions || 0,
+      this.post?._count?.comments || 0
+    );
+  }
 
   get hasShort(): boolean {
     return hasPlayableShort(this.post);
