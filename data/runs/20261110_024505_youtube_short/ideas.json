@@ -1,0 +1,68 @@
+{
+  "niche": "Psychology & human behavior (biases, habits, social dynamics)",
+  "languages": [
+    "en"
+  ],
+  "ideas": [
+    {
+      "id": "why-you-stare-at-blank-screens",
+      "title": "Why You Freeze Before Starting Work",
+      "angle": "Explains the psychological phenomenon of task paralysis and the amygdala hijacking your prefrontal cortex when an ambition feels ambiguous, revealing the counter-intuitive 2-minute fix that tricks the brain into action.",
+      "hook": {
+        "en": "You are not actually lazy."
+      },
+      "keywords": [
+        "procrastination psychology",
+        "task paralysis",
+        "executive dysfunction",
+        "brain hacks",
+        "productivity tips"
+      ],
+      "reason": "Executive dysfunction and task freezing are currently experiencing massive viral engagement across TikTok and YouTube Shorts under burnout and ADHD-adjacent discourse, consistently earning high retention due to immediate self-identification.",
+      "sources": [
+        "Ferrari, J. R. (2010). Still Procrastinating: The No-Regrets Guide to Getting It Done",
+        "Pychyl, T. A. (2013). Solving the Procrastination Puzzle"
+      ]
+    },
+    {
+      "id": "why-you-hate-small-talk",
+      "title": "Why Small Talk Drains Your Battery",
+      "angle": "Reveals that small talk triggers cognitive friction because your brain expends energy calculating social masks and shallow scripts rather than engaging the default mode network involved in genuine human connection.",
+      "hook": {
+        "en": "Why does small talk feel exhausting?"
+      },
+      "keywords": [
+        "introvert psychology",
+        "social battery",
+        "small talk anxiety",
+        "social dynamics",
+        "human connection"
+      ],
+      "reason": "Social fatigue and the 'social battery' concept dominate evergreen short-form psychology feeds, particularly among Gen Z and millennial audiences looking for clinical validation of everyday social friction.",
+      "sources": [
+        "Mehl, M. R., et al. (2010). Eavesdropping on Happiness: Well-being is Related to Having Less Small Talk and More Substantive Conversations. Psychological Science",
+        "Kahneman, D. (2011). Thinking, Fast and Slow"
+      ]
+    },
+    {
+      "id": "why-you-wake-up-at-3am",
+      "title": "Why You Suddenly Wake Up at 3 AM",
+      "angle": "Demystifies the universal midnight panic wake-up by showing how the 3 AM cortisol surge pairs with low blood sugar to make small worries feel like life-or-death emergencies.",
+      "hook": {
+        "en": "Ever wake up panicking at three?"
+      },
+      "keywords": [
+        "waking up at 3am",
+        "cortisol awakening",
+        "sleep anxiety",
+        "circadian rhythm",
+        "brain chemistry"
+      ],
+      "reason": "Midnight awakening and catastrophizing affect millions daily; explaining the physiological mechanism behind sudden existential dread provides immediate relief and triggers strong share-to-friends loops.",
+      "sources": [
+        "Walker, M. (2017). Why We Sleep: Unlocking the Power of Sleep and Dreams",
+        "Russell, G., & Lightman, S. (2019). The human circulating ultradian rhythm of cortisol. Frontiers in Neuroendocrinology"
+      ]
+    }
+  ]
+}
