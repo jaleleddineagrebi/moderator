@@ -96,7 +96,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   // -------------------------------------------------------------
   if (req.method === "GET") {
     const { action, code } = req.query;
-    const host = req.headers["host"] || "moderator-ivory.vercel.app";
+    const host = (req.headers["x-forwarded-host"] || req.headers["host"] || "mindcoder.com") as string;
     const protocol = host.includes("localhost") ? "http" : "https";
     const redirectUri = `${protocol}://${host}/api/auth/callback/google`;
 
