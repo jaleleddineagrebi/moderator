@@ -83,14 +83,9 @@ _STOPWORDS = {
 }
 
 
-def highlight_power_word(raw_text: str, lang: str) -> str:
-    """Highlight the single most impactful word in a 2-3 word caption chunk in Cyber Yellow (&H0000E5FF)."""
-    escaped = _ass_escape(raw_text)
-    if lang in RTL:
-        return escaped
-    tokens = escaped.split()
-    if len(tokens) < 2:
-        return escaped
+def _best_power_word_idx(tokens: list[str], lang: str) -> int:
+    if lang in RTL or len(tokens) < 2:
+        return -1
     best_idx = -1
     best_score = -1
     for idx, tok in enumerate(tokens):
@@ -106,9 +101,103 @@ def highlight_power_word(raw_text: str, lang: str) -> str:
         if score > best_score:
             best_score = score
             best_idx = idx
-    if best_idx >= 0 and best_score >= 4:
+    return best_idx if best_score >= 4 else -1
+
+
+def highlight_power_word(raw_text: str, lang: str) -> str:
+    """Highlight the single most impactful word in a 2-3 word caption chunk in Cyber Yellow (&H0000E5FF)."""
+    escaped = _ass_escape(raw_text)
+    tokens = escaped.split()
+    best_idx = _best_power_word_idx(tokens, lang)
+    if best_idx >= 0:
         tokens[best_idx] = f"{{\\c&H0000E5FF&}}{tokens[best_idx]}{{\\c&H00FFFFFF&}}"
     return " ".join(tokens)
+
+
+def write_caption_overlay_track(run_dir: Path, lang: str, captions: list[dict], headlines: list[dict],
+                                total: float, size: tuple[int, int] = (1080, 1920)) -> str:
+    """Fallback when ffmpeg lacks libass (`subtitles` filter, e.g. macOS Homebrew ffmpeg@9):
+    renders each unique (headline, caption) state as a transparent RGBA PNG with Pillow and writes
+    an ffconcat timeline file relative to `run_dir`."""
+    from PIL import Image
+
+    res_x, res_y = size
+    is_landscape = res_x > res_y
+    cap_size = 76 if is_landscape else 108
+    head_size = 56 if is_landscape else 76
+    cap_y = res_y - (165 if is_landscape else 620)
+    head_y = 95 if is_landscape else 270
+    max_w = res_x - 140
+
+    frames_dir = run_dir / f"cap_frames_{lang}"
+    frames_dir.mkdir(parents=True, exist_ok=True)
+    cap_fnt = font(lang, cap_size)
+
+    raw_pts = {0.0, round(max(total, 0.1), 3)}
+    for item in (*captions, *headlines):
+        raw_pts.add(round(min(max(float(item["start"]), 0.0), total), 3))
+        raw_pts.add(round(min(max(float(item["end"]), 0.0), total), 3))
+    pts = sorted(raw_pts)
+    filtered_pts = [pts[0]]
+    for p in pts[1:]:
+        if p - filtered_pts[-1] >= 0.02:
+            filtered_pts.append(p)
+    if len(filtered_pts) < 2:
+        filtered_pts = [0.0, round(max(total, 0.1), 3)]
+
+    state_cache: dict[tuple[str, str], str] = {}
+
+    def render_state(h_txt: str, c_txt: str) -> str:
+        key = (h_txt, c_txt)
+        if key in state_cache:
+            return state_cache[key]
+        idx = len(state_cache)
+        rel_png = f"cap_frames_{lang}/ov_{idx:04d}.png"
+        img = Image.new("RGBA", (res_x, res_y), (0, 0, 0, 0))
+        if h_txt:
+            draw_block(img, h_txt, lang, size=head_size, y_center=head_y, max_width=max_w,
+                       fill=(255, 229, 0, 255), stroke=(0, 0, 0, 255), stroke_width=7)
+        if c_txt:
+            tokens = c_txt.split()
+            pw_idx = _best_power_word_idx(tokens, lang)
+            if lang in RTL or pw_idx < 0:
+                draw_block(img, c_txt, lang, size=cap_size, y_center=cap_y, max_width=max_w,
+                           fill=(255, 255, 255, 255), stroke=(0, 0, 0, 255), stroke_width=9)
+            else:
+                draw = ImageDraw.Draw(img)
+                space_w = draw.textlength(" ", font=cap_fnt)
+                word_widths = [draw.textlength(t, font=cap_fnt) for t in tokens]
+                total_w = sum(word_widths) + space_w * max(len(tokens) - 1, 0)
+                if total_w > max_w:
+                    draw_block(img, c_txt, lang, size=cap_size, y_center=cap_y, max_width=max_w,
+                               fill=(255, 255, 255, 255), stroke=(0, 0, 0, 255), stroke_width=9)
+                else:
+                    x = (res_x - total_w) / 2
+                    y = cap_y - int(cap_size * 0.62)
+                    for wi, (tok, ww) in enumerate(zip(tokens, word_widths)):
+                        color = (255, 229, 0, 255) if wi == pw_idx else (255, 255, 255, 255)
+                        draw.text((x, y), tok, font=cap_fnt, fill=color, stroke_width=9, stroke_fill=(0, 0, 0, 255))
+                        x += ww + space_w
+        img.save(run_dir / rel_png)
+        state_cache[key] = rel_png
+        return rel_png
+
+    lines = ["ffconcat version 1.0"]
+    last_png = render_state("", "")
+    for t0, t1 in zip(filtered_pts[:-1], filtered_pts[1:]):
+        dur = max(round(t1 - t0, 3), 0.02)
+        tm = (t0 + t1) / 2.0
+        h_active = next((h["text"] for h in headlines if h["start"] <= tm <= h["end"]), "")
+        c_active = next((c["text"] for c in captions if c["start"] <= tm <= c["end"]), "")
+        png_rel = render_state(h_active, c_active)
+        lines.append(f"file '{png_rel}'")
+        lines.append(f"duration {dur:.3f}")
+        last_png = png_rel
+    # ffconcat requires repeating the last file entry
+    lines.append(f"file '{last_png}'")
+    concat_rel = f"captions_track_{lang}.ffconcat"
+    (run_dir / concat_rel).write_text("\n".join(lines) + "\n", encoding="utf-8")
+    return concat_rel
 
 
 FOLLOW_LABELS = {"en": "SUBSCRIBE", "fr": "S'ABONNER", "ar": "اشترك"}

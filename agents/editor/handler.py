@@ -81,17 +81,29 @@ class Handler(Agent):
                 prev = "v0"
             vo_i, mu_i, wh_i = n, n + 1, n + 2
             args += ["-i", audio[f"voiceover_{lang}"], "-stream_loop", "-1", "-i", audio["music"], "-i", audio["whoosh"]]
+            next_idx = n + 3
+            use_ass = ffmpeg.has_filter("subtitles")
+            if use_ass:
+                sub_label = "sub" if follow_button else "vout"
+                chains.append(f"[{prev}]subtitles='{ass_escaped}':fontsdir='{fonts_dir}'[{sub_label}]")
+            else:
+                ctx.log("ffmpeg lacks 'subtitles' (libass) filter; rendering Pillow RGBA caption overlay track")
+                concat_rel = text.write_caption_overlay_track(ctx.run_dir, lang, captions, headlines, total, size=video_size)
+                cap_i = next_idx
+                next_idx += 1
+                args += ["-f", "concat", "-safe", "0", "-i", concat_rel]
+                sub_label = "sub" if follow_button else "vout"
+                tail_fmt = "" if follow_button else ",format=yuv420p"
+                chains.append(f"[{prev}][{cap_i}:v]overlay=0:0:shortest=1:eof_action=pass{tail_fmt}[{sub_label}]")
             if follow_button:
                 # follow button pill pops in after the hook and stays to the end, between captions and the YouTube UI
                 png = f"follow_button_{lang}.png"
                 text.write_follow_button(ctx.run_dir / png, lang, follow_label.get(lang))
-                btn_i = n + 3
+                btn_i = next_idx
+                next_idx += 1
                 args += ["-loop", "1", "-i", png]
-                chains.append(f"[{prev}]subtitles='{ass_escaped}':fontsdir='{fonts_dir}'[sub]")
                 chains.append(f"[{btn_i}:v]format=rgba,fade=t=in:st={follow_start:.2f}:d=0.4:alpha=1[btn]")
                 chains.append(f"[sub][btn]overlay=x=(W-w)/2:y={follow_y}:shortest=1:eof_action=pass,format=yuv420p[vout]")
-            else:
-                chains.append(f"[{prev}]subtitles='{ass_escaped}':fontsdir='{fonts_dir}'[vout]")
             chains.append(f"[{vo_i}:a]aresample=44100,aformat=channel_layouts=stereo,apad=whole_dur={total:.3f}[vo]")
             chains.append("[vo]asplit=2[vo1][vokey]")
             chains.append(f"[{mu_i}:a]aresample=44100,aformat=channel_layouts=stereo,atrim=0:{total:.3f},volume={music_vol},"
