@@ -1,0 +1,224 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,86,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,110,1
+Style: Headline,Noto Sans Black,64,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,65,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:05.56,Headline,,0,0,0,,{\fad(150,150)}You Are Too Strong
+Dialogue: 1,0:00:05.66,0:00:17.96,Headline,,0,0,0,,{\fad(150,150)}The 30% Rule
+Dialogue: 1,0:00:18.06,0:00:30.92,Headline,,0,0,0,,{\fad(150,150)}Preventing Self-Destruction
+Dialogue: 1,0:00:31.02,0:00:44.59,Headline,,0,0,0,,{\fad(150,150)}The Golgi Breaker
+Dialogue: 1,0:00:44.69,0:00:58.19,Headline,,0,0,0,,{\fad(150,150)}The Fatigue Trick
+Dialogue: 1,0:00:58.29,0:01:11.41,Headline,,0,0,0,,{\fad(150,150)}Psychological Speed Governor
+Dialogue: 1,0:01:11.51,0:01:24.75,Headline,,0,0,0,,{\fad(150,150)}Hysterical Strength Override
+Dialogue: 1,0:01:24.85,0:01:37.13,Headline,,0,0,0,,{\fad(150,150)}Adrenaline Master Key
+Dialogue: 1,0:01:37.23,0:01:48.90,Headline,,0,0,0,,{\fad(150,150)}Unlocking Hidden Fibers
+Dialogue: 1,0:01:49.00,0:02:02.67,Headline,,0,0,0,,{\fad(150,150)}The Devastating Cost
+Dialogue: 1,0:02:02.77,0:02:16.73,Headline,,0,0,0,,{\fad(150,150)}Fragile Bone Architecture
+Dialogue: 1,0:02:16.83,0:02:29.52,Headline,,0,0,0,,{\fad(150,150)}Internal Heat Overload
+Dialogue: 1,0:02:29.62,0:02:42.59,Headline,,0,0,0,,{\fad(150,150)}Pushing The Limits
+Dialogue: 1,0:02:42.69,0:02:54.13,Headline,,0,0,0,,{\fad(150,150)}Neural Signal Efficiency
+Dialogue: 1,0:02:54.23,0:03:08.14,Headline,,0,0,0,,{\fad(150,150)}Fear Is The Key
+Dialogue: 1,0:03:08.24,0:03:19.76,Headline,,0,0,0,,{\fad(150,150)}Unlock Your Power
+Dialogue: 0,0:00:00.10,0:00:00.90,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}muscles{\c&H00FFFFFF&} can
+Dialogue: 0,0:00:00.91,0:00:01.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}snap{\c&H00FFFFFF&} your own
+Dialogue: 0,0:00:01.62,0:00:02.17,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}bones
+Dialogue: 0,0:00:02.98,0:00:03.55,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Here{\c&H00FFFFFF&} is why
+Dialogue: 0,0:00:03.56,0:00:04.40,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}brain{\c&H00FFFFFF&} stops
+Dialogue: 0,0:00:04.41,0:00:04.81,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you
+Dialogue: 0,0:00:05.71,0:00:06.47,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Think of {\c&H0000E5FF&}yourself{\c&H00FFFFFF&}
+Dialogue: 0,0:00:06.49,0:00:07.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}as a {\c&H0000E5FF&}supercar{\c&H00FFFFFF&}
+Dialogue: 0,0:00:07.25,0:00:07.85,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}with a {\c&H0000E5FF&}built-in{\c&H00FFFFFF&}
+Dialogue: 0,0:00:07.87,0:00:08.57,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}speed {\c&H0000E5FF&}limiter{\c&H00FFFFFF&}
+Dialogue: 0,0:00:09.38,0:00:09.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Even{\c&H00FFFFFF&} when you
+Dialogue: 0,0:00:09.94,0:00:10.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}are pushing {\c&H0000E5FF&}yourself{\c&H00FFFFFF&}
+Dialogue: 0,0:00:10.83,0:00:11.60,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to the {\c&H0000E5FF&}absolute{\c&H00FFFFFF&}
+Dialogue: 0,0:00:11.61,0:00:12.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}max at the
+Dialogue: 0,0:00:12.12,0:00:13.22,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}gym your {\c&H0000E5FF&}brain{\c&H00FFFFFF&}
+Dialogue: 0,0:00:13.23,0:00:14.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is {\c&H0000E5FF&}typically{\c&H00FFFFFF&} only
+Dialogue: 0,0:00:14.14,0:00:15.17,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}recruiting{\c&H00FFFFFF&} about thirty
+Dialogue: 0,0:00:15.19,0:00:15.85,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}percent{\c&H00FFFFFF&} of your
+Dialogue: 0,0:00:15.86,0:00:17.10,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}total {\c&H0000E5FF&}muscle{\c&H00FFFFFF&} fibers
+Dialogue: 0,0:00:18.11,0:00:18.69,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Why
+Dialogue: 0,0:00:19.50,0:00:20.06,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Because{\c&H00FFFFFF&} if you
+Dialogue: 0,0:00:20.08,0:00:21.29,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}actually{\c&H00FFFFFF&} accessed one
+Dialogue: 0,0:00:21.30,0:00:22.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}hundred{\c&H00FFFFFF&} percent of
+Dialogue: 0,0:00:22.09,0:00:23.05,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}power{\c&H00FFFFFF&} your
+Dialogue: 0,0:00:23.06,0:00:24.09,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}muscles would {\c&H0000E5FF&}literally{\c&H00FFFFFF&}
+Dialogue: 0,0:00:24.10,0:00:25.03,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}tear {\c&H0000E5FF&}themselves{\c&H00FFFFFF&} off
+Dialogue: 0,0:00:25.04,0:00:25.77,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}skeleton{\c&H00FFFFFF&}
+Dialogue: 0,0:00:26.59,0:00:27.49,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}nervous{\c&H00FFFFFF&} system
+Dialogue: 0,0:00:27.50,0:00:28.26,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is a {\c&H0000E5FF&}bodyguard{\c&H00FFFFFF&}
+Dialogue: 0,0:00:28.27,0:00:29.10,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}protecting{\c&H00FFFFFF&} you from
+Dialogue: 0,0:00:29.11,0:00:30.03,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}self-destruction
+Dialogue: 0,0:00:31.06,0:00:31.92,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}The first {\c&H0000E5FF&}limiter{\c&H00FFFFFF&}
+Dialogue: 0,0:00:31.94,0:00:32.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is the {\c&H0000E5FF&}Golgi{\c&H00FFFFFF&}
+Dialogue: 0,0:00:32.55,0:00:33.39,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Tendon{\c&H00FFFFFF&} Organ
+Dialogue: 0,0:00:34.21,0:00:34.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Think{\c&H00FFFFFF&} of it
+Dialogue: 0,0:00:34.73,0:00:35.62,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}as a {\c&H0000E5FF&}biological{\c&H00FFFFFF&}
+Dialogue: 0,0:00:35.64,0:00:36.40,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}circuit{\c&H00FFFFFF&} breaker
+Dialogue: 0,0:00:37.22,0:00:37.85,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}When the {\c&H0000E5FF&}tension{\c&H00FFFFFF&}
+Dialogue: 0,0:00:37.87,0:00:38.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}in your {\c&H0000E5FF&}tendons{\c&H00FFFFFF&}
+Dialogue: 0,0:00:38.54,0:00:39.29,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}gets{\c&H00FFFFFF&} too high
+Dialogue: 0,0:00:39.68,0:00:40.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}this {\c&H0000E5FF&}organ{\c&H00FFFFFF&} sends
+Dialogue: 0,0:00:40.53,0:00:41.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a {\c&H0000E5FF&}signal{\c&H00FFFFFF&} that
+Dialogue: 0,0:00:41.19,0:00:42.13,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}forces your {\c&H0000E5FF&}muscles{\c&H00FFFFFF&}
+Dialogue: 0,0:00:42.15,0:00:43.06,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to relax {\c&H0000E5FF&}before{\c&H00FFFFFF&}
+Dialogue: 0,0:00:43.08,0:00:43.71,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}they{\c&H00FFFFFF&} snap
+Dialogue: 0,0:00:44.74,0:00:45.73,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Limiter{\c&H00FFFFFF&} number two
+Dialogue: 0,0:00:45.74,0:00:46.98,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is {\c&H0000E5FF&}Peripheral{\c&H00FFFFFF&} Fatigue
+Dialogue: 0,0:00:47.79,0:00:48.67,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your body {\c&H0000E5FF&}floods{\c&H00FFFFFF&}
+Dialogue: 0,0:00:48.69,0:00:49.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}system{\c&H00FFFFFF&} with
+Dialogue: 0,0:00:49.36,0:00:50.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}chemicals{\c&H00FFFFFF&} that make
+Dialogue: 0,0:00:50.19,0:00:50.89,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}limbs{\c&H00FFFFFF&} feel
+Dialogue: 0,0:00:50.90,0:00:51.50,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}like{\c&H00FFFFFF&} lead
+Dialogue: 0,0:00:52.32,0:00:53.30,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}This {\c&H0000E5FF&}happens{\c&H00FFFFFF&} long
+Dialogue: 0,0:00:53.31,0:00:53.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}before{\c&H00FFFFFF&} you are
+Dialogue: 0,0:00:53.94,0:00:54.67,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}actually{\c&H00FFFFFF&} out of
+Dialogue: 0,0:00:54.69,0:00:55.64,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}energy{\c&H00FFFFFF&} it is
+Dialogue: 0,0:00:55.65,0:00:56.37,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a {\c&H0000E5FF&}warning{\c&H00FFFFFF&} shot
+Dialogue: 0,0:00:56.38,0:00:57.32,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}from your {\c&H0000E5FF&}biology{\c&H00FFFFFF&}
+Dialogue: 0,0:00:58.34,0:00:58.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Then {\c&H0000E5FF&}there{\c&H00FFFFFF&} is
+Dialogue: 0,0:00:58.89,0:00:59.78,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the Central {\c&H0000E5FF&}Governor{\c&H00FFFFFF&}
+Dialogue: 0,0:00:59.79,0:01:00.23,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Theory
+Dialogue: 0,0:01:01.05,0:01:02.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your brain {\c&H0000E5FF&}creates{\c&H00FFFFFF&}
+Dialogue: 0,0:01:02.02,0:01:02.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}sensation{\c&H00FFFFFF&} of
+Dialogue: 0,0:01:02.85,0:01:03.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}exhaustion{\c&H00FFFFFF&} as a
+Dialogue: 0,0:01:03.71,0:01:04.89,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}psychological{\c&H00FFFFFF&} trick
+Dialogue: 0,0:01:05.71,0:01:06.38,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It is {\c&H0000E5FF&}designed{\c&H00FFFFFF&}
+Dialogue: 0,0:01:06.39,0:01:06.85,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to {\c&H0000E5FF&}keep{\c&H00FFFFFF&} you
+Dialogue: 0,0:01:06.86,0:01:07.46,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}from {\c&H0000E5FF&}reaching{\c&H00FFFFFF&} a
+Dialogue: 0,0:01:07.47,0:01:08.17,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}state{\c&H00FFFFFF&} of total
+Dialogue: 0,0:01:08.18,0:01:09.69,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}physiological{\c&H00FFFFFF&} collapse or
+Dialogue: 0,0:01:09.70,0:01:10.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}organ {\c&H0000E5FF&}failure{\c&H00FFFFFF&}
+Dialogue: 0,0:01:11.56,0:01:12.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}But {\c&H0000E5FF&}sometimes{\c&H00FFFFFF&} the
+Dialogue: 0,0:01:12.64,0:01:13.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}governor{\c&H00FFFFFF&} fails
+Dialogue: 0,0:01:14.42,0:01:14.96,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You have {\c&H0000E5FF&}heard{\c&H00FFFFFF&}
+Dialogue: 0,0:01:14.97,0:01:15.53,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}stories{\c&H00FFFFFF&} of
+Dialogue: 0,0:01:15.54,0:01:16.39,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a parent {\c&H0000E5FF&}lifting{\c&H00FFFFFF&}
+Dialogue: 0,0:01:16.40,0:01:17.37,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a {\c&H0000E5FF&}two-ton{\c&H00FFFFFF&} vehicle
+Dialogue: 0,0:01:17.38,0:01:17.79,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to {\c&H0000E5FF&}save{\c&H00FFFFFF&} a
+Dialogue: 0,0:01:17.80,0:01:18.32,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}child
+Dialogue: 0,0:01:19.14,0:01:20.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}This is {\c&H0000E5FF&}Hysterical{\c&H00FFFFFF&}
+Dialogue: 0,0:01:20.16,0:01:21.13,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Strength{\c&H00FFFFFF&} a rare
+Dialogue: 0,0:01:21.14,0:01:21.74,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}moment{\c&H00FFFFFF&} where the
+Dialogue: 0,0:01:21.75,0:01:23.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}brain's safety {\c&H0000E5FF&}protocols{\c&H00FFFFFF&}
+Dialogue: 0,0:01:23.09,0:01:23.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}are {\c&H0000E5FF&}overridden{\c&H00FFFFFF&}
+Dialogue: 0,0:01:24.89,0:01:25.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}In these {\c&H0000E5FF&}life-or-death{\c&H00FFFFFF&}
+Dialogue: 0,0:01:25.85,0:01:27.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}moments {\c&H0000E5FF&}adrenaline{\c&H00FFFFFF&} acts
+Dialogue: 0,0:01:27.37,0:01:28.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}like a {\c&H0000E5FF&}master{\c&H00FFFFFF&}
+Dialogue: 0,0:01:28.03,0:01:28.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}key
+Dialogue: 0,0:01:29.24,0:01:29.92,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It {\c&H0000E5FF&}floods{\c&H00FFFFFF&} your
+Dialogue: 0,0:01:29.93,0:01:31.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}system {\c&H0000E5FF&}shutting{\c&H00FFFFFF&} down
+Dialogue: 0,0:01:31.34,0:01:32.42,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}pain {\c&H0000E5FF&}receptors{\c&H00FFFFFF&} and
+Dialogue: 0,0:01:32.43,0:01:33.71,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}instantly {\c&H0000E5FF&}overriding{\c&H00FFFFFF&} those
+Dialogue: 0,0:01:33.72,0:01:34.79,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Golgi Tendon {\c&H0000E5FF&}circuit{\c&H00FFFFFF&}
+Dialogue: 0,0:01:34.80,0:01:35.77,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}breakers we {\c&H0000E5FF&}mentioned{\c&H00FFFFFF&}
+Dialogue: 0,0:01:35.78,0:01:36.26,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}earlier
+Dialogue: 0,0:01:37.27,0:01:38.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Suddenly{\c&H00FFFFFF&} your muscle
+Dialogue: 0,0:01:38.62,0:01:39.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}fiber {\c&H0000E5FF&}recruitment{\c&H00FFFFFF&} jumps
+Dialogue: 0,0:01:39.84,0:01:40.75,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}from thirty {\c&H0000E5FF&}percent{\c&H00FFFFFF&}
+Dialogue: 0,0:01:40.76,0:01:41.67,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to {\c&H0000E5FF&}nearly{\c&H00FFFFFF&} ninety
+Dialogue: 0,0:01:42.48,0:01:43.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You are not
+Dialogue: 0,0:01:43.01,0:01:43.92,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}getting new {\c&H0000E5FF&}strength{\c&H00FFFFFF&}
+Dialogue: 0,0:01:44.22,0:01:44.90,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you are {\c&H0000E5FF&}finally{\c&H00FFFFFF&}
+Dialogue: 0,0:01:44.91,0:01:45.77,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}accessing{\c&H00FFFFFF&} the raw
+Dialogue: 0,0:01:45.78,0:01:46.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}power{\c&H00FFFFFF&} that was
+Dialogue: 0,0:01:46.44,0:01:47.48,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}already{\c&H00FFFFFF&} hidden inside
+Dialogue: 0,0:01:47.49,0:01:48.04,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}frame{\c&H00FFFFFF&}
+Dialogue: 0,0:01:49.05,0:01:49.75,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}But this {\c&H0000E5FF&}power{\c&H00FFFFFF&}
+Dialogue: 0,0:01:49.76,0:01:50.16,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comes{\c&H00FFFFFF&} at a
+Dialogue: 0,0:01:50.16,0:01:51.09,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}massive{\c&H00FFFFFF&} price
+Dialogue: 0,0:01:51.90,0:01:53.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}People who {\c&H0000E5FF&}experience{\c&H00FFFFFF&}
+Dialogue: 0,0:01:53.01,0:01:53.78,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}this {\c&H0000E5FF&}often{\c&H00FFFFFF&} end
+Dialogue: 0,0:01:53.79,0:01:54.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}up with {\c&H0000E5FF&}shattered{\c&H00FFFFFF&}
+Dialogue: 0,0:01:54.53,0:01:55.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}teeth from {\c&H0000E5FF&}clenching{\c&H00FFFFFF&}
+Dialogue: 0,0:01:55.64,0:01:56.87,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}or {\c&H0000E5FF&}detached{\c&H00FFFFFF&} tendons
+Dialogue: 0,0:01:57.68,0:01:58.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}body{\c&H00FFFFFF&} was
+Dialogue: 0,0:01:58.38,0:01:58.98,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}never{\c&H00FFFFFF&} meant to
+Dialogue: 0,0:01:58.99,0:01:59.92,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}sustain{\c&H00FFFFFF&} this level
+Dialogue: 0,0:01:59.93,0:02:00.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}of {\c&H0000E5FF&}output{\c&H00FFFFFF&} for
+Dialogue: 0,0:02:00.64,0:02:01.04,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}more{\c&H00FFFFFF&} than a
+Dialogue: 0,0:02:01.05,0:02:01.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}few {\c&H0000E5FF&}seconds{\c&H00FFFFFF&}
+Dialogue: 0,0:02:02.82,0:02:03.95,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Limiter{\c&H00FFFFFF&} number three
+Dialogue: 0,0:02:03.97,0:02:04.47,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is your {\c&H0000E5FF&}Bone{\c&H00FFFFFF&}
+Dialogue: 0,0:02:04.48,0:02:05.04,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Density
+Dialogue: 0,0:02:05.86,0:02:06.78,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}While{\c&H00FFFFFF&} human bones
+Dialogue: 0,0:02:06.79,0:02:07.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}are {\c&H0000E5FF&}incredibly{\c&H00FFFFFF&} strong
+Dialogue: 0,0:02:08.14,0:02:08.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}they {\c&H0000E5FF&}aren't{\c&H00FFFFFF&} built
+Dialogue: 0,0:02:08.84,0:02:09.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}for {\c&H0000E5FF&}constant{\c&H00FFFFFF&} one
+Dialogue: 0,0:02:09.65,0:02:10.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}hundred{\c&H00FFFFFF&} percent muscle
+Dialogue: 0,0:02:10.70,0:02:11.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}output
+Dialogue: 0,0:02:12.07,0:02:13.09,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Without the {\c&H0000E5FF&}limiters{\c&H00FFFFFF&}
+Dialogue: 0,0:02:13.37,0:02:14.20,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your own {\c&H0000E5FF&}muscles{\c&H00FFFFFF&}
+Dialogue: 0,0:02:14.21,0:02:14.79,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}would{\c&H00FFFFFF&} crush your
+Dialogue: 0,0:02:14.80,0:02:15.85,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}skeletal {\c&H0000E5FF&}structure{\c&H00FFFFFF&}
+Dialogue: 0,0:02:16.88,0:02:17.79,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Limiter{\c&H00FFFFFF&} four is
+Dialogue: 0,0:02:17.80,0:02:18.74,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Heat {\c&H0000E5FF&}Dissipation{\c&H00FFFFFF&}
+Dialogue: 0,0:02:19.56,0:02:20.37,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Running{\c&H00FFFFFF&} at max
+Dialogue: 0,0:02:20.38,0:02:21.75,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}capacity {\c&H0000E5FF&}generates{\c&H00FFFFFF&} enough
+Dialogue: 0,0:02:21.76,0:02:22.64,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}internal{\c&H00FFFFFF&} heat to
+Dialogue: 0,0:02:22.66,0:02:23.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}cook your {\c&H0000E5FF&}organs{\c&H00FFFFFF&}
+Dialogue: 0,0:02:24.44,0:02:25.30,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}brain{\c&H00FFFFFF&} slows
+Dialogue: 0,0:02:25.31,0:02:26.04,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you down {\c&H0000E5FF&}simply{\c&H00FFFFFF&}
+Dialogue: 0,0:02:26.05,0:02:26.51,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to {\c&H0000E5FF&}keep{\c&H00FFFFFF&} your
+Dialogue: 0,0:02:26.52,0:02:27.49,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}core {\c&H0000E5FF&}temperature{\c&H00FFFFFF&} from
+Dialogue: 0,0:02:27.50,0:02:28.23,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}reaching{\c&H00FFFFFF&} a lethal
+Dialogue: 0,0:02:28.24,0:02:28.65,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}level
+Dialogue: 0,0:02:29.66,0:02:30.29,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Can you {\c&H0000E5FF&}train{\c&H00FFFFFF&}
+Dialogue: 0,0:02:30.30,0:02:30.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}this
+Dialogue: 0,0:02:31.49,0:02:32.67,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Elite {\c&H0000E5FF&}athletes{\c&H00FFFFFF&} spend
+Dialogue: 0,0:02:32.68,0:02:33.67,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}decades {\c&H0000E5FF&}teaching{\c&H00FFFFFF&} their
+Dialogue: 0,0:02:33.68,0:02:34.62,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}nervous{\c&H00FFFFFF&} systems to
+Dialogue: 0,0:02:34.63,0:02:35.21,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}push{\c&H00FFFFFF&} the off
+Dialogue: 0,0:02:35.22,0:02:35.92,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}switch{\c&H00FFFFFF&} just a
+Dialogue: 0,0:02:35.94,0:02:36.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}few inches {\c&H0000E5FF&}further{\c&H00FFFFFF&}
+Dialogue: 0,0:02:36.83,0:02:37.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}back
+Dialogue: 0,0:02:38.06,0:02:38.58,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It is not
+Dialogue: 0,0:02:38.59,0:02:39.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}just about {\c&H0000E5FF&}bigger{\c&H00FFFFFF&}
+Dialogue: 0,0:02:39.36,0:02:40.31,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}muscles{\c&H00FFFFFF&} it is
+Dialogue: 0,0:02:40.32,0:02:41.73,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}about better {\c&H0000E5FF&}communication{\c&H00FFFFFF&}
+Dialogue: 0,0:02:42.74,0:02:44.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}High-intensity{\c&H00FFFFFF&} training convinces
+Dialogue: 0,0:02:44.44,0:02:45.06,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}brain{\c&H00FFFFFF&} that
+Dialogue: 0,0:02:45.07,0:02:45.81,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}higher{\c&H00FFFFFF&} levels of
+Dialogue: 0,0:02:45.82,0:02:46.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}tension{\c&H00FFFFFF&} are safe
+Dialogue: 0,0:02:47.75,0:02:48.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You are {\c&H0000E5FF&}essentially{\c&H00FFFFFF&}
+Dialogue: 0,0:02:48.57,0:02:49.65,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}hacking your {\c&H0000E5FF&}software{\c&H00FFFFFF&}
+Dialogue: 0,0:02:49.66,0:02:50.27,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to {\c&H0000E5FF&}allow{\c&H00FFFFFF&} your
+Dialogue: 0,0:02:50.28,0:02:51.17,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}hardware{\c&H00FFFFFF&} to run
+Dialogue: 0,0:02:51.18,0:02:51.65,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}at a {\c&H0000E5FF&}higher{\c&H00FFFFFF&}
+Dialogue: 0,0:02:51.66,0:02:52.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}clock speed {\c&H0000E5FF&}without{\c&H00FFFFFF&}
+Dialogue: 0,0:02:52.69,0:02:53.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}crashing
+Dialogue: 0,0:02:54.28,0:02:55.19,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}The final {\c&H0000E5FF&}limiter{\c&H00FFFFFF&}
+Dialogue: 0,0:02:55.33,0:02:55.94,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}number{\c&H00FFFFFF&} one
+Dialogue: 0,0:02:55.95,0:02:57.10,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}secret{\c&H00FFFFFF&} is Fear
+Dialogue: 0,0:02:57.92,0:02:58.74,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}brain{\c&H00FFFFFF&} uses
+Dialogue: 0,0:02:58.75,0:02:59.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}fear{\c&H00FFFFFF&} to keep
+Dialogue: 0,0:02:59.37,0:02:59.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you in the
+Dialogue: 0,0:02:59.68,0:03:00.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}safe{\c&H00FFFFFF&} zone
+Dialogue: 0,0:03:01.19,0:03:02.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}When {\c&H0000E5FF&}survival{\c&H00FFFFFF&} takes
+Dialogue: 0,0:03:02.26,0:03:02.90,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}over{\c&H00FFFFFF&} and fear
+Dialogue: 0,0:03:02.91,0:03:03.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is {\c&H0000E5FF&}gone{\c&H00FFFFFF&} the
+Dialogue: 0,0:03:03.73,0:03:04.78,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}limits {\c&H0000E5FF&}evaporate{\c&H00FFFFFF&}
+Dialogue: 0,0:03:05.59,0:03:06.16,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You are {\c&H0000E5FF&}much{\c&H00FFFFFF&}
+Dialogue: 0,0:03:06.17,0:03:06.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}stronger{\c&H00FFFFFF&} than you
+Dialogue: 0,0:03:06.84,0:03:07.28,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}think
+Dialogue: 0,0:03:08.29,0:03:08.96,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}body{\c&H00FFFFFF&} is
+Dialogue: 0,0:03:08.97,0:03:09.78,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a {\c&H0000E5FF&}sleeping{\c&H00FFFFFF&} giant
+Dialogue: 0,0:03:09.80,0:03:10.37,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}waiting{\c&H00FFFFFF&} for the
+Dialogue: 0,0:03:10.39,0:03:11.13,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}right {\c&H0000E5FF&}moment{\c&H00FFFFFF&}
+Dialogue: 0,0:03:11.94,0:03:13.07,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Subscribe{\c&H00FFFFFF&} for weekly
+Dialogue: 0,0:03:13.08,0:03:13.89,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}deep {\c&H0000E5FF&}dives{\c&H00FFFFFF&} into
+Dialogue: 0,0:03:13.90,0:03:14.87,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your hidden {\c&H0000E5FF&}biology{\c&H00FFFFFF&}
+Dialogue: 0,0:03:15.10,0:03:16.03,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and {\c&H0000E5FF&}comment{\c&H00FFFFFF&} below
+Dialogue: 0,0:03:16.34,0:03:16.75,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}what is the
+Dialogue: 0,0:03:16.76,0:03:17.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}strongest{\c&H00FFFFFF&} thing you
+Dialogue: 0,0:03:17.58,0:03:18.27,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}have {\c&H0000E5FF&}ever{\c&H00FFFFFF&} done

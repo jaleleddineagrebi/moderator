@@ -1,0 +1,68 @@
+{
+  "niche": "Mind Hacks, AI Secrets, Bizarre Body Science & Hidden Power Dynamics",
+  "languages": [
+    "en"
+  ],
+  "ideas": [
+    {
+      "id": "human-strength-limiter",
+      "title": "5 Biological Speed-Limiters Keeping You From Being Superhuman",
+      "angle": "Your muscles are strong enough to lift a car and snap your own bones, but your brain keeps a 'governor' on your strength at 30% to prevent self-destruction—until a life-or-death emergency overrides it.",
+      "hook": {
+        "en": "Your muscles are strong enough to crush your own bones."
+      },
+      "keywords": [
+        "hysterical strength",
+        "muscle recruitment",
+        "human body limits",
+        "adrenaline rush science",
+        "how to unlock 100 percent strength"
+      ],
+      "reason": "The 'Hysterical Strength' phenomenon is a high-velocity curiosity topic. It promises a secret about the viewer's own body that feels like a hidden superpower, driving high retention.",
+      "sources": [
+        "Scientific American - Hysterical Strength",
+        "Journal of Applied Physiology - Muscle Fiber Recruitment Limits"
+      ]
+    },
+    {
+      "id": "cold-water-heart-hack",
+      "title": "7 Biological Kill-Switches to Instantly Control Your Nervous System",
+      "angle": "Splashing ice-cold water on your eyes triggers the ancient 'Mammalian Dive Reflex,' which manually forces your heart rate to drop and optimizes blood flow to your brain within seconds.",
+      "hook": {
+        "en": "Splash ice water on your face to stop a panic attack instantly."
+      },
+      "keywords": [
+        "mammalian dive reflex",
+        "vagus nerve hacks",
+        "how to lower heart rate fast",
+        "biological life hacks",
+        "anxiety physical relief"
+      ],
+      "reason": "Tactical 'body hacks' are currently dominating Shorts and long-form transitions. This provides an immediate, testable result for the viewer, which triggers 'Save' and 'Share' actions.",
+      "sources": [
+        "Frontiers in Psychology - The Mammalian Dive Response",
+        "American Heart Association - Vagus Nerve Stimulation Research"
+      ]
+    },
+    {
+      "id": "magnetic-human-gps",
+      "title": "5 Hidden Human Senses That Are Better Than A Phone",
+      "angle": "Recent studies suggest humans possess magnetoreception—the ability to sense Earth’s magnetic field through proteins in our eyes, effectively giving us a subconscious built-in GPS.",
+      "hook": {
+        "en": "You have a hidden compass built into your eyes."
+      },
+      "keywords": [
+        "magnetoreception humans",
+        "human 6th sense",
+        "proprioception vs interoception",
+        "hidden human abilities",
+        "biological GPS"
+      ],
+      "reason": "The 'Beyond 5 Senses' angle challenges common knowledge. Since people are fascinated by 'hidden potential,' this creates high VVSA by promising to reveal a sense they didn't know they were using.",
+      "sources": [
+        "Caltech - Human Magnetoreception Study",
+        "Nature Communications - Cryptochrome 4 in the human eye"
+      ]
+    }
+  ]
+}
