@@ -84,15 +84,17 @@ class Handler(Agent):
             ok_peak = lv["true_peak_db"] is None or lv["true_peak_db"] <= -0.5
             check("loudness", ok_lufs and ok_peak, f"{lv['lufs']:.1f} LUFS, peak {lv['true_peak_db']} dBFS (target -14 LUFS, peak <= -1)", "edit", lang)
 
-            # hook timing: scene 1 should land quickly (target <= 3.5s, hard blocker > 5.0s)
+            # hook timing: scene 1 should land quickly (Shorts: <= 5.0s; Long-form cold open: <= 22.0s)
             timing = ctx.read_json(audio[f"timings_{lang}"])
             if timing["scenes"]:
                 hook_dur = timing["scenes"][0]["end"] - timing["scenes"][0]["start"]
-                check("hook timing", hook_dur <= 5.0,
-                      f"scene_01 spoken in {hook_dur:.1f}s (target <= 3s)", "script", lang,
-                      "blocker" if hook_dur > 5.0 else "minor")
-                if 3.5 < hook_dur <= 5.0:
-                    check("hook sharpness", False, f"scene_01 is {hook_dur:.1f}s (tighter <3.5s performs better)", "script", lang, "minor")
+                max_hook = 22.0 if is_long else 5.0
+                sharp_hook = 16.0 if is_long else 3.5
+                check("hook timing", hook_dur <= max_hook,
+                      f"scene_01 spoken in {hook_dur:.1f}s (target <= {sharp_hook:.0f}s)", "script", lang,
+                      "blocker" if hook_dur > max_hook else "minor")
+                if sharp_hook < hook_dur <= max_hook:
+                    check("hook sharpness", False, f"scene_01 is {hook_dur:.1f}s (tighter <{sharp_hook:.1f}s performs better)", "script", lang, "minor")
 
             # caption sync: every spoken word must be covered by a caption that is on screen when it is said
             words = [w for s in timing["scenes"] for w in s["words"]]

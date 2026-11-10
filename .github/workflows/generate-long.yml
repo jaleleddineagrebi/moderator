@@ -1,0 +1,229 @@
+name: Generate Long Video
+
+# Generates a 3-4 minute 16:9 widescreen YouTube Deep-Dive video (`youtube_long`).
+# Runs on schedule (Wednesday & Sunday at 16:47 UTC) or manually via "Run workflow".
+# Supports either:
+# - `auto_upload: review_first` (default): stops at Checkpoint C and opens a review issue (comment `/approve public` to upload)
+# - `auto_upload: public | unlisted | private`: generates AND uploads the 16:9 Long Video to YouTube automatically in one run!
+on:
+  schedule:
+    - cron: "47 16 * * 3,0"   # Wednesday & Sunday at 16:47 UTC (Prime Time Long-Form Deep-Dive)
+  workflow_dispatch:
+    inputs:
+      pillar:
+        description: "Viral pillar (auto = rotate across mind_hacks, ai_future, body_science, money_power)"
+        required: false
+        default: "auto"
+        type: choice
+        options:
+          - auto
+          - mind_hacks
+          - ai_future
+          - body_science
+          - money_power
+      topic:
+        description: "Optional specific topic (leave empty for AI viral trend research)"
+        required: false
+        type: string
+      auto_upload:
+        description: "Upload mode: review_first (open issue & wait for /approve) or auto-upload immediately to YouTube"
+        required: false
+        default: "review_first"
+        type: choice
+        options:
+          - review_first
+          - public
+          - unlisted
+          - private
+      languages:
+        description: "Optional languages override, e.g. en (default: channel.yaml)"
+        required: false
+        type: string
+      visual_mode:
+        description: "Scene visuals: stock = moving B-roll video only ($0), auto = stock video + AI art, ai = AI art first"
+        required: false
+        default: "stock"
+        type: choice
+        options:
+          - stock
+          - auto
+          - ai
+          - generated
+      llm:
+        description: "Text model: default, gemini, or claude"
+        required: false
+        default: "default"
+        type: choice
+        options:
+          - default
+          - gemini
+          - claude
+      budget_usd:
+        description: "Safety spend cap (Free Tier keys always pay $0.00)"
+        required: false
+        default: "1.50"
+        type: string
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: generate-long
+  cancel-in-progress: false
+
+jobs:
+  generate-long:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Choose text model and verify its secret
+        id: llm
+        env:
+          INPUT_LLM: ${{ (inputs.llm != 'default' && inputs.llm) || vars.MODERATOR_LLM || 'gemini' }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          case "$INPUT_LLM" in
+            gemini)
+              if [ -z "$GEMINI_API_KEY" ]; then
+                echo "::error::Missing GEMINI_API_KEY repository secret."
+                exit 1
+              fi ;;
+            claude)
+              if [ -z "$CLAUDE_CODE_OAUTH_TOKEN$ANTHROPIC_API_KEY" ]; then
+                echo "::error::Missing CLAUDE_CODE_OAUTH_TOKEN or ANTHROPIC_API_KEY."
+                exit 1
+              fi ;;
+            *)
+              echo "::error::Unknown llm '$INPUT_LLM'"; exit 1 ;;
+          esac
+          echo "provider=$INPUT_LLM" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+
+      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6.8.0
+        with:
+          python-version: "3.12"
+
+      - name: Install ffmpeg & libass
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg libass9
+
+      - name: Install Python dependencies
+        run: uv sync --locked
+
+      - name: Load topic history
+        run: bash .github/scripts/topics-history.sh load
+
+      - name: Install Claude Code CLI (pinned)
+        if: steps.llm.outputs.provider == 'claude'
+        run: npm install -g --no-fund --no-audit @anthropic-ai/claude-code@2.1.292 && claude --version
+
+      - name: Generate 16:9 Long-Form Video (`youtube_long`)
+        id: gen
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          INPUT_LLM: ${{ steps.llm.outputs.provider }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          INPUT_PILLAR: ${{ inputs.pillar }}
+          INPUT_TOPIC: ${{ inputs.topic }}
+          INPUT_LANGS: ${{ inputs.languages || vars.MODERATOR_LANGUAGES }}
+          INPUT_NICHE: ${{ vars.MODERATOR_NICHE }}
+          INPUT_VISUAL_MODE: ${{ inputs.visual_mode || vars.MODERATOR_VISUAL_MODE || 'stock' }}
+          INPUT_BUDGET: ${{ inputs.budget_usd || vars.MODERATOR_BUDGET_USD || '1.50' }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          PYTHONIOENCODING: utf-8
+        run: |
+          args=(-p 'auto_approve=[A, B]' --llm "$INPUT_LLM")
+          if [ -n "$INPUT_PILLAR" ] && [ "$INPUT_PILLAR" != "auto" ]; then args+=(-p "pillar=$INPUT_PILLAR"); fi
+          if [ -n "$INPUT_TOPIC" ]; then args+=(-p "topic=$INPUT_TOPIC"); fi
+          if [ -n "$INPUT_LANGS" ]; then args+=(-p "languages=$INPUT_LANGS"); fi
+          if [ -n "$INPUT_NICHE" ]; then args+=(-p "niche=$INPUT_NICHE"); fi
+          if [ -n "$INPUT_VISUAL_MODE" ] && [ "$INPUT_VISUAL_MODE" != "auto" ]; then
+            args+=(-p "visual_mode=$INPUT_VISUAL_MODE")
+          fi
+          if [ -n "$INPUT_BUDGET" ]; then args+=(-p "budget_usd=$INPUT_BUDGET"); fi
+
+          uv run python -m moderator run youtube_long --headless "${args[@]}"
+
+      - name: Upload run artifact (16:9 MP4, thumbnail, captions, QA report, state.json)
+        if: always() && steps.gen.outputs.run_dir
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: short-${{ steps.gen.outputs.run_id }}
+          path: |
+            ${{ steps.gen.outputs.run_dir }}
+            !${{ steps.gen.outputs.run_dir }}/assets/raw
+          retention-days: 14
+
+      - name: Save topic history
+        if: always()
+        run: bash .github/scripts/topics-history.sh save
+
+      - name: Auto-Upload to YouTube (when auto_upload != review_first)
+        id: autoup
+        if: steps.gen.outputs.outcome == 'waiting' && inputs.auto_upload != '' && inputs.auto_upload != 'review_first'
+        env:
+          YOUTUBE_TOKEN: ${{ secrets.YOUTUBE_TOKEN }}
+          YOUTUBE_TOKEN_EN: ${{ secrets.YOUTUBE_TOKEN_EN }}
+          YOUTUBE_TOKEN_FR: ${{ secrets.YOUTUBE_TOKEN_FR }}
+          YOUTUBE_TOKEN_AR: ${{ secrets.YOUTUBE_TOKEN_AR }}
+          RUN_DIR: ${{ steps.gen.outputs.run_dir }}
+          PRIVACY: ${{ inputs.auto_upload }}
+          APPROVER: ${{ github.actor }}
+          PYTHONIOENCODING: utf-8
+        run: |
+          uv run python -m moderator upload "$RUN_DIR" --approved-by "github:$APPROVER" --privacy "$PRIVACY" | tee upload_result.txt
+          echo "uploaded=true" >> "$GITHUB_OUTPUT"
+
+      - name: Publish Step Summary & Review Issue
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_DIR: ${{ steps.gen.outputs.run_dir }}
+          OUTCOME: ${{ steps.gen.outputs.outcome }}
+          AUTO_UPLOADED: ${{ steps.autoup.outputs.uploaded }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          PAGES_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+          PYTHONIOENCODING: utf-8
+        run: |
+          if [ -n "$RUN_DIR" ] && [ -f "$RUN_DIR/state.json" ]; then
+            CURR_RUN_ID=$(python3 -c "import json; print(json.load(open('$RUN_DIR/state.json'))['run_id'])")
+            uv run python -m moderator summary "$RUN_DIR" > body.md
+            if [ "$AUTO_UPLOADED" = "true" ]; then
+              {
+                echo ""
+                echo "### Published Automatically to YouTube"
+                sed 's/^/- /' upload_result.txt
+              } >> body.md
+              cat body.md >> "$GITHUB_STEP_SUMMARY"
+              bash .github/scripts/push-gh-pages.sh --run-id "$CURR_RUN_ID" --gh-run-url "$RUN_URL" || true
+              exit 0
+            elif [ "$OUTCOME" = "waiting" ]; then
+              label=short-review
+              title="Review Long Video (16:9): $CURR_RUN_ID"
+              {
+                echo ""
+                echo "---"
+                echo "### Publish Commands (Checkpoint C Approval)"
+                echo "- \`/approve public\` — upload 16:9 Long Video as **public**"
+                echo "- \`/approve unlisted\` — upload as **unlisted**"
+                echo "- \`/approve\` — upload as **private**"
+                echo "- \`/reject\` — close without uploading"
+              } >> body.md
+            else
+              label=short-failed
+              title="Long Video generation failed: $CURR_RUN_ID"
+            fi
+            cat body.md >> "$GITHUB_STEP_SUMMARY"
+            printf '\n<!-- run_id: %s -->\n<!-- gh_run_id: %s -->\n' "$CURR_RUN_ID" "${{ github.run_id }}" >> body.md
+            gh label create "$label" --force >/dev/null
+            ISSUE_URL=$(gh issue create --title "$title" --label "$label" --body-file body.md)
+            bash .github/scripts/push-gh-pages.sh --run-id "$CURR_RUN_ID" --issue-url "$ISSUE_URL" --gh-run-url "$RUN_URL" || true
+          fi

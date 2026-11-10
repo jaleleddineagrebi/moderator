@@ -109,11 +109,13 @@ def main() -> None:
     sub.add_parser("list", help="list workflows and agents")
     sum_p = sub.add_parser("summary", help="print the review summary (markdown) of a run")
     sum_p.add_argument("run_dir", type=Path)
-    up_p = sub.add_parser("upload", help="approve the final checkpoint of a youtube_short run and upload it")
+    up_p = sub.add_parser("upload", help="approve the final checkpoint of a youtube_short/youtube_long run and upload it")
     up_p.add_argument("run_dir", type=Path)
     up_p.add_argument("--approved-by", required=True, help="who approved the videos (recorded in state.json)")
     up_p.add_argument("--privacy", choices=["private", "unlisted", "public"], default="private")
     up_p.add_argument("--langs", help="comma-separated, default: the run's languages")
+    th_p = sub.add_parser("set-thumbnail", help="upload the generated thumbnail(s) for an already-uploaded run")
+    th_p.add_argument("run_dir", type=Path)
     tup_p = sub.add_parser("upload-tiktok", help="post an already-approved youtube_short run to TikTok")
     tup_p.add_argument("run_dir", type=Path)
     tup_p.add_argument("--privacy", choices=["private", "unlisted", "public"], default="private")
@@ -252,6 +254,24 @@ def main() -> None:
         sys.stdout.reconfigure(encoding="utf-8")
         for r in results:
             print(f"{r['lang']}: {r['url']} ({r['privacy']}) on '{r['channel']}'" + (f", thumbnail {r['thumbnail']}" if r.get("thumbnail") else ""))
+        return
+    if args.cmd == "set-thumbnail":
+        from googleapiclient.discovery import build
+        from .tools import youtube_upload
+        uploads_file = args.run_dir / "uploads.json"
+        if not uploads_file.exists():
+            raise SystemExit(f"No uploads.json found in {args.run_dir}; upload the video first.")
+        uploads = json.loads(uploads_file.read_text(encoding="utf-8"))
+        for u in uploads:
+            lang = u["lang"]
+            thumb = args.run_dir / f"thumbnail_{lang}.png"
+            if not thumb.exists():
+                thumb = args.run_dir / "thumbnail.png"
+            yt = build("youtube", "v3", credentials=youtube_upload.credentials(lang), cache_discovery=False)
+            status = youtube_upload.set_thumbnail(yt, u["id"], thumb)
+            u["thumbnail"] = status
+            print(f"{lang} ({u['id']}): thumbnail {status}")
+        uploads_file.write_text(json.dumps(uploads, ensure_ascii=False, indent=2), encoding="utf-8")
         return
 
     registry = Registry(ROOT, config)

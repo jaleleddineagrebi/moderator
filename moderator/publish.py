@@ -90,6 +90,8 @@ def approve_and_upload(store: StateStore, approved_by: str, privacy: str, langs:
         res = youtube_upload.upload(lang, video, meta[lang], privacy, Path(run_dir / thumb) if thumb else None)
         results.append({"lang": lang, **res})
         store.notify(f"Uploaded {lang} to '{res['channel']}' as {res['privacy']}: {res['url']}", "success")
+    with store.mutate() as s:
+        s["uploads"] = results
     (run_dir / "uploads.json").write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
     return results
 

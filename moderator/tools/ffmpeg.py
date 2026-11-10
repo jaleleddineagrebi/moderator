@@ -22,6 +22,10 @@ class FFmpegError(Exception):
 
 @cache
 def binary(name: str = "ffmpeg") -> str:
+    for full_dir in (Path("/opt/homebrew/opt/ffmpeg-full/bin"), Path("/usr/local/opt/ffmpeg-full/bin")):
+        cand = full_dir / name
+        if cand.is_file() and os.access(cand, os.X_OK):
+            return str(cand)
     found = shutil.which(name)
     if found:
         return found
@@ -38,6 +42,17 @@ def binary(name: str = "ffmpeg") -> str:
             else "winget install Gyan.FFmpeg" if sys.platform == "win32"
             else "sudo apt-get install ffmpeg")
     raise FFmpegError(f"{name} not found. Install it with: {hint}")
+
+
+@cache
+def has_filter(filter_name: str = "subtitles") -> bool:
+    """Return True if the installed ffmpeg binary includes `filter_name` (e.g., 'subtitles' from libass)."""
+    try:
+        proc = subprocess.run([binary("ffmpeg"), "-hide_banner", "-filters"],
+                              capture_output=True, text=True, encoding="utf-8", timeout=10)
+        return any(re.search(rf"\b{re.escape(filter_name)}\b", line) for line in proc.stdout.splitlines())
+    except Exception:  # noqa: BLE001
+        return True
 
 
 async def run(args: list[str], cwd: Path, timeout: int = 900) -> str:
