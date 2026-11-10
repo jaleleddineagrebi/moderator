@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-10T16:35:48+00:00",
+  "updated_at": "2026-11-10T16:36:06+00:00",
   "repo": "jaleleddineagrebi/moderator",
   "live_run_id": "20261110_162832_youtube_short",
   "runs": [
@@ -12,7 +12,7 @@
       "progress": 94,
       "started_at": "2026-11-10T16:28:32+00:00",
       "ended_at": null,
-      "cost_usd": 0.0139,
+      "cost_usd": 0.0155,
       "is_live": true,
       "has_uploads": false,
       "issue_url": "",
