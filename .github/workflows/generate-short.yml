@@ -8,12 +8,34 @@ name: Generate Short
 # or trigger the `Upload Short` workflow).
 on:
   schedule:
-    - cron: "17 2 * * *"    # 02:17 UTC (Slot 1: Early Morning)
-    - cron: "17 8 * * *"    # 08:17 UTC (Slot 2: Morning Prime)
-    - cron: "17 14 * * *"   # 14:17 UTC (Slot 3: Afternoon Prime)
-    - cron: "17 20 * * *"   # 20:17 UTC (Slot 4: Evening Prime)
+    # 4 Viral Shorts per day (rotates across 4 viral pillars automatically)
+    - cron: "17 2 * * *"      # 02:17 UTC (Slot 1: Early Morning Short)
+    - cron: "17 8 * * *"      # 08:17 UTC (Slot 2: Morning Prime Short)
+    - cron: "17 14 * * *"     # 14:17 UTC (Slot 3: Afternoon Prime Short)
+    - cron: "17 20 * * *"     # 20:17 UTC (Slot 4: Evening Prime Short)
+    # 2 Widescreen 16:9 Long-Form Deep-Dive videos per week (Wednesday & Sunday 16:47 UTC)
+    - cron: "47 16 * * 3,0"   # 16:47 UTC (Long-Form 16:9 Deep-Dive Funnel)
   workflow_dispatch:
     inputs:
+      format:
+        description: "Video format: short (9:16 vertical Short) or long (16:9 3-4 min Deep-Dive)"
+        required: false
+        default: "short"
+        type: choice
+        options:
+          - short
+          - long
+      pillar:
+        description: "Optional viral pillar override (auto = rotate across mind_hacks, ai_future, body_science, money_power)"
+        required: false
+        default: "auto"
+        type: choice
+        options:
+          - auto
+          - mind_hacks
+          - ai_future
+          - body_science
+          - money_power
       topic:
         description: "Optional topic inside your niche (leave empty for AI trend research)"
         required: false
@@ -115,6 +137,8 @@ jobs:
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          INPUT_FORMAT: ${{ inputs.format || (github.event.schedule == '47 16 * * 3,0' && 'long') || 'short' }}
+          INPUT_PILLAR: ${{ inputs.pillar }}
           INPUT_TOPIC: ${{ inputs.topic }}
           INPUT_LANGS: ${{ inputs.languages || vars.MODERATOR_LANGUAGES }}
           INPUT_NICHE: ${{ vars.MODERATOR_NICHE }}
@@ -123,7 +147,12 @@ jobs:
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           PYTHONIOENCODING: utf-8
         run: |
+          WORKFLOW_NAME="youtube_short"
+          if [ "$INPUT_FORMAT" = "long" ]; then
+            WORKFLOW_NAME="youtube_long"
+          fi
           args=(-p 'auto_approve=[A, B]' --llm "$INPUT_LLM")
+          if [ -n "$INPUT_PILLAR" ] && [ "$INPUT_PILLAR" != "auto" ]; then args+=(-p "pillar=$INPUT_PILLAR"); fi
           if [ -n "$INPUT_TOPIC" ]; then args+=(-p "topic=$INPUT_TOPIC"); fi
           if [ -n "$INPUT_LANGS" ]; then args+=(-p "languages=$INPUT_LANGS"); fi
           if [ -n "$INPUT_NICHE" ]; then args+=(-p "niche=$INPUT_NICHE"); fi
@@ -147,7 +176,7 @@ jobs:
           WATCHER_PID=$!
           trap "kill $WATCHER_PID 2>/dev/null || true" EXIT
 
-          uv run python -m moderator run youtube_short --headless "${args[@]}"
+          uv run python -m moderator run "$WORKFLOW_NAME" --headless "${args[@]}"
 
       - name: Upload run artifact (MP4s, thumbnails, captions, QA report, state.json)
         if: always() && steps.gen.outputs.run_dir

@@ -1,14 +1,40 @@
-niche: Psychology & human behavior (interactive brain tests, dark psychology defense, micro-behaviors)
-niche_summary: 'High-retention interactive brain tests, instant micro-behavior decoding,
-  and reverse-psychology paradoxes engineered for 80%+ Viewed-vs-Swiped-Away (VVSA)
-  and >100% Average Percentage Viewed (APV).'
+niche: Mind Hacks, AI Secrets, Bizarre Body Science & Hidden Power Dynamics
+niche_summary: 'Multi-pillar viral curiosity channel rotating across 4 massive high-retention
+  niches: (1) Interactive Brain Tests & Dark Psychology, (2) Insane AI & Tech Secrets,
+  (3) Bizarre Human Body & Survival Science, and (4) Hidden Money Traps & Power Dynamics.
+  Engineered for 80%+ Viewed-vs-Swiped-Away (VVSA) and >100% Average Percentage Viewed (APV).'
+viral_pillars:
+  - id: mind_hacks
+    name: "Interactive Brain Tests, Dark Psychology & Micro-Behaviors"
+    examples:
+      - "Pick a number from 1 to 10 — I already know which one you chose"
+      - "If someone does THIS with their eyes while talking, they are lying to you"
+      - "The 3-second silence trick that forces anyone to respect you in an argument"
+  - id: ai_future
+    name: "Insane AI Breakthroughs, Hidden Tech Secrets & Digital Survival"
+    examples:
+      - "Type these 4 characters into your phone to see who is tracking you"
+      - "The creepy reason AI voices pause for 0.2 seconds before lying to you"
+      - "3 hidden smartphone settings you need to turn off immediately"
+  - id: body_science
+    name: "Bizarre Human Body Glitches & Extreme Survival Science"
+    examples:
+      - "Why your body suddenly jerks awake right before you fall asleep"
+      - "Press this spot on your wrist for 5 seconds—watch what happens to your heart rate"
+      - "The 3-second rule that saves your life if you are ever caught in a crowd crush"
+  - id: money_power
+    name: "Hidden Money Traps, Billionaire Strategy & Consumer Mind Tricks"
+    examples:
+      - "Why supermarkets put slow music on and remove all windows (the Gruen transfer)"
+      - "Never say 'No Problem' to a VIP—say these 2 words instead"
+      - "The $100 auction trap that makes smart people overpay every single time"
 example_topics:
 - Pick a number from 1 to 10 — I already know which one you chose (the 7 illusion)
-- If someone does THIS with their eyes while talking, they are lying to you
-- Why your brain wakes you up 2 minutes before your alarm goes off
+- Type these 4 characters into your phone to see if your call is forwarded
+- Why your body suddenly jerks awake right before you fall asleep
+- Why supermarkets remove windows and play slow music (the Gruen transfer)
 - The 3-second silence trick that forces anyone to respect you in an argument
-- Why you instantly forget someone's name 5 seconds after meeting them
 languages:
 - en
 style: faceless, hyper-fast cuts, cyber-yellow highlighted captions, punchy energetic narration
-cta: "Subscribe for tomorrow's 30-second brain test"
+cta: "Subscribe for tomorrow's 30-second test"
