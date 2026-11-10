@@ -227,3 +227,4 @@ jobs:
             ISSUE_URL=$(gh issue create --title "$title" --label "$label" --body-file body.md)
             bash .github/scripts/push-gh-pages.sh --run-id "$CURR_RUN_ID" --issue-url "$ISSUE_URL" --gh-run-url "$RUN_URL" || true
           fi
+

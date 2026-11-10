@@ -85,11 +85,27 @@ class DailyContentPipeline:
             logger.warning(f"Could not read recent daily post history: {e}")
         return recent_titles
 
+    def get_recent_cover_images(self) -> set[str]:
+        """Loads coverImageUrl values used in recent daily post archives so no two posts repeat the same image."""
+        if not DAILY_POSTS_DIR.exists():
+            return set()
+        used_urls: set[str] = set()
+        try:
+            for p in sorted(DAILY_POSTS_DIR.glob("*.json"), reverse=True)[:30]:
+                items = json.loads(p.read_text(encoding="utf-8"))
+                for it in items:
+                    if isinstance(it, dict) and it.get("coverImageUrl"):
+                        used_urls.add(str(it["coverImageUrl"]))
+        except Exception as e:
+            logger.warning(f"Could not read recent cover image history: {e}")
+        return used_urls
+
     async def generate_post(
         self,
         slot: str,
         matched_short: dict[str, Any] | None,
         recent_titles: list[str],
+        used_images: set[str] | None = None,
     ) -> dict[str, Any]:
         """Generates an original, high-quality Psychology & AI publication using AI directly."""
         logger.info(f"Generating [{slot}] publication via AI...")
@@ -126,7 +142,7 @@ REQUIREMENTS:
    - ## Daily Brain Bias Check (actionable self-reflection prompt for readers)
    - ## Practical Takeaway
 6. 'tags': Array of 3-5 concise tags (e.g. ["Cognitive Bias", "Human-AI Teaming", "Neuroscience", "Mental Models"]).
-7. 'imageSearchQuery': 2-3 words for selecting an aesthetic, minimalist cover visual (e.g. "brain abstract", "neural network minimal", "deep work thinking").
+7. 'imageSearchQuery': 2-3 specific, concrete photography words matching THIS article's unique metaphor (e.g. "chess clock strategy", "labyrinth neon corridor", "prism light refraction", "hourglass sand macro" — NEVER generic "brain abstract" or "AI").
 
 Format strictly as JSON with keys: 'title', 'concept', 'hook', 'summary', 'contentMarkdown', 'tags', 'imageSearchQuery'."""
 
@@ -149,8 +165,13 @@ Format strictly as JSON with keys: 'title', 'concept', 'hook', 'summary', 'conte
         date_str = datetime.now(timezone.utc).strftime("%m%d")
         slug = f"{NativeOptimizer.slugify(title)}-{date_str}"
 
-        # Visual Sourcing & Cloud Storage Persistence
-        img = await self.images.get_image_for_post(img_query)
+        # Visual Sourcing & Cloud Storage Persistence (with deduplication across recent posts)
+        active_used = used_images if used_images is not None else getattr(self, "_used_images", None)
+        if active_used is None:
+            active_used = self.get_recent_cover_images()
+            self._used_images = active_used
+        img = await self.images.get_image_for_post(img_query, exclude_urls=active_used, seed_key=slug)
+        active_used.add(img.image_url)
         permanent_image_url = await self.storage.persist_image_from_url(img.image_url, slug)
 
         return {
@@ -177,6 +198,7 @@ Format strictly as JSON with keys: 'title', 'concept', 'hook', 'summary', 'conte
 
         existing_shorts = await self.get_existing_video_cross_references()
         recent_titles = self.get_recent_post_topics()
+        self._used_images = self.get_recent_cover_images()
 
         short1 = existing_shorts[0] if len(existing_shorts) > 0 else None
         short2 = existing_shorts[1] if len(existing_shorts) > 1 else None
