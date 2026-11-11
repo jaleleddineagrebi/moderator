@@ -1,6 +1,6 @@
 {
-  "passed": false,
-  "revision_round": 1,
+  "passed": true,
+  "revision_round": 2,
   "checks": [
     {
       "check": "length",
@@ -93,9 +93,9 @@
     {
       "check": "people rule",
       "lang": null,
-      "ok": false,
-      "detail": "scene_03: A woman is shown with her shoulder, arm, and body visible while holding a phone, violating the rule allowing only face-only close-ups above the chin.. Replace with footage without women (a face-only close-up is the only exception).",
-      "send_to": "visuals",
+      "ok": true,
+      "detail": "no women beyond face close-ups in 7 scenes and 1 thumbnail(s)",
+      "send_to": null,
       "severity": "blocker"
     }
   ]

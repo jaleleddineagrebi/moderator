@@ -1,4 +1,4 @@
-# QA report: CHANGES NEEDED
+# QA report: PASSED
 
 - ✅ **length** [en]: 37.9s (must be under 60s; target 32-50s)
 - ✅ **target length** [en]: 37.9s
@@ -11,4 +11,4 @@
 - ✅ **visual licenses**: 7 assets: pixabay
 - ✅ **visual diversity**: all scenes use distinct footage
 - ✅ **audio licenses**: music: original work, no third-party rights; sfx: original work, no third-party rights; voice: synthetic voice; no third-party performance rights
-- ❌ **people rule**: scene_03: A woman is shown with her shoulder, arm, and body visible while holding a phone, violating the rule allowing only face-only close-ups above the chin.. Replace with footage without women (a face-only close-up is the only exception). → sent to visuals
+- ✅ **people rule**: no women beyond face close-ups in 7 scenes and 1 thumbnail(s)
