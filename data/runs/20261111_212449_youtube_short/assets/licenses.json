@@ -3,80 +3,80 @@
     "scene": "scene_01",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-3501/",
-    "author": "Nova_27",
+    "page": "https://pixabay.com/videos/id-183449/",
+    "author": "Amorn_mimi",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "man finger forehead",
-    "description": "A close-up of a man's index finger reaching towards his forehead in a dimly lit studio."
+    "query": "man hand pointing",
+    "description": "A close-up of a man's index finger pointing directly toward the camera lens in a stylized, high-contrast studio setting."
   },
   {
     "scene": "scene_02",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-202770/",
-    "author": "JACLOU-DL",
+    "page": "https://pixabay.com/videos/id-44509/",
+    "author": "Ordered_Chaos",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "analog clock fast",
-    "description": "A fast-motion montage of a vintage analog clock spinning and a person's hands typing rapidly."
+    "query": "city time lapse",
+    "description": "A rapid time-lapse of a busy city intersection from a bird's eye view with blurred motion."
   },
   {
     "scene": "scene_03",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-111279/",
+    "page": "https://pixabay.com/videos/id-111281/",
     "author": "AttilaPergel",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "compass needle",
-    "description": "A compass needle spinning wildly followed by a shot of a man looking at a directional street sign."
+    "query": "vintage compass needle",
+    "description": "A macro shot of an antique brass compass with the needle spinning and settling on a direction."
   },
   {
     "scene": "scene_04",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-4933/",
-    "author": "motion5",
+    "page": "https://pixabay.com/videos/id-3013/",
+    "author": "InspiredImages",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "glowing brain animation",
-    "description": "A futuristic blue digital animation of a human brain with glowing neural pathways."
+    "query": "brain digital scan",
+    "description": "A futuristic blue digital animation of a human brain with glowing neural pathways pulsating with light."
   },
   {
     "scene": "scene_05",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-283431/",
+    "page": "https://pixabay.com/videos/id-228847/",
     "author": "Kanenori",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "man on cliffside",
-    "description": "A man standing alone on a vast mountain cliffside looking out at a sunrise."
+    "query": "man on mountain",
+    "description": "A man standing alone on a rugged mountain peak overlooking a vast, misty forest at dawn."
   },
   {
     "scene": "scene_06",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-233037/",
-    "author": "xBriantcx",
+    "page": "https://pixabay.com/videos/id-2832/",
+    "author": "InspiredImages",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "chameleon eye close",
-    "description": "A macro shot of a chameleon's eye followed by a blurred time-lapse of a busy city crowd."
+    "query": "lizard eye macro",
+    "description": "A macro close-up of a lizard's eye rotating independently with high detail of the scales."
   },
   {
     "scene": "scene_07",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-2797/",
-    "author": "jLasWilson",
+    "page": "https://pixabay.com/videos/id-245583/",
+    "author": "Matthias_Groeneveld",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "intense male eyes",
-    "description": "An intense close-up of a man's eyes staring through a magnifying glass and hands holding playing cards."
+    "query": "man adjusting cufflinks",
+    "description": "A man in a sharp suit adjusting his silver cufflinks in a dark, atmospheric office environment."
   },
   {
     "scene": "scene_08",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-70960/",
-    "author": "bilalashrafmzon",
+    "page": "https://pixabay.com/videos/id-180728/",
+    "author": "E_S_Mayorga",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "notification bell animation",
-    "description": "A neon glowing notification bell icon appearing on a dark digital grid background."
+    "query": "phone notification tap",
+    "description": "A close-up of a finger tapping a glowing red notification bell icon on a modern smartphone screen."
   }
 ]

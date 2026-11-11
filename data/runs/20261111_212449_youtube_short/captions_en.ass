@@ -13,46 +13,52 @@ Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 Dialogue: 1,0:00:00.05,0:00:02.73,Headline,,0,0,0,,{\fad(150,150)}DRAW A LETTER Q
-Dialogue: 1,0:00:02.83,0:00:08.63,Headline,,0,0,0,,{\fad(150,150)}TRACE IT FAST
-Dialogue: 1,0:00:08.73,0:00:13.71,Headline,,0,0,0,,{\fad(150,150)}LEFT OR RIGHT?
-Dialogue: 1,0:00:13.81,0:00:19.01,Headline,,0,0,0,,{\fad(150,150)}THE CREEPY TRUTH
-Dialogue: 1,0:00:19.11,0:00:23.66,Headline,,0,0,0,,{\fad(150,150)}AUTHENTIC SOUL
-Dialogue: 1,0:00:23.76,0:00:28.67,Headline,,0,0,0,,{\fad(150,150)}SOCIAL CHAMELEON
-Dialogue: 1,0:00:28.77,0:00:33.03,Headline,,0,0,0,,{\fad(150,150)}MASTER THE ROOM
-Dialogue: 1,0:00:33.13,0:00:39.94,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 1,0:00:02.83,0:00:09.25,Headline,,0,0,0,,{\fad(150,150)}TRACE IT FAST
+Dialogue: 1,0:00:09.35,0:00:15.15,Headline,,0,0,0,,{\fad(150,150)}LEFT OR RIGHT?
+Dialogue: 1,0:00:15.25,0:00:20.61,Headline,,0,0,0,,{\fad(150,150)}THE CREEPY SECRET
+Dialogue: 1,0:00:20.71,0:00:26.13,Headline,,0,0,0,,{\fad(150,150)}AUTHENTIC SOUL
+Dialogue: 1,0:00:26.23,0:00:32.03,Headline,,0,0,0,,{\fad(150,150)}SOCIAL CHAMELEON
+Dialogue: 1,0:00:32.13,0:00:38.04,Headline,,0,0,0,,{\fad(150,150)}MASTER INFLUENCER
+Dialogue: 1,0:00:38.14,0:00:44.96,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
 Dialogue: 0,0:00:00.10,0:00:00.73,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Draw a {\c&H0000E5FF&}letter{\c&H00FFFFFF&}
 Dialogue: 0,0:00:00.75,0:00:01.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Q on your
 Dialogue: 0,0:00:01.25,0:00:01.85,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}forehead
 Dialogue: 0,0:00:02.88,0:00:03.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Use your {\c&H0000E5FF&}index{\c&H00FFFFFF&}
 Dialogue: 0,0:00:03.74,0:00:04.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}finger
-Dialogue: 0,0:00:05.00,0:00:05.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Trace{\c&H00FFFFFF&} it fast
-Dialogue: 0,0:00:06.01,0:00:06.95,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}don't{\c&H00FFFFFF&} think just
-Dialogue: 0,0:00:06.96,0:00:07.75,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}move{\c&H00FFFFFF&} your hand
-Dialogue: 0,0:00:08.77,0:00:09.59,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Now {\c&H0000E5FF&}focus{\c&H00FFFFFF&} on
-Dialogue: 0,0:00:09.60,0:00:10.14,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}tail{\c&H00FFFFFF&}
-Dialogue: 0,0:00:10.95,0:00:11.58,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Did you {\c&H0000E5FF&}point{\c&H00FFFFFF&}
-Dialogue: 0,0:00:11.59,0:00:11.89,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}it to your
-Dialogue: 0,0:00:11.89,0:00:12.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}left or {\c&H0000E5FF&}right{\c&H00FFFFFF&}
-Dialogue: 0,0:00:13.86,0:00:15.09,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Stop {\c&H0000E5FF&}because{\c&H00FFFFFF&} this
-Dialogue: 0,0:00:15.11,0:00:15.98,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}reveals{\c&H00FFFFFF&} a creepy
-Dialogue: 0,0:00:15.99,0:00:16.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}truth{\c&H00FFFFFF&} about how
-Dialogue: 0,0:00:16.73,0:00:17.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}secret{\c&H00FFFFFF&} brain
-Dialogue: 0,0:00:17.53,0:00:18.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is {\c&H0000E5FF&}wired{\c&H00FFFFFF&}
-Dialogue: 0,0:00:19.15,0:00:19.79,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}If it {\c&H0000E5FF&}points{\c&H00FFFFFF&}
-Dialogue: 0,0:00:19.80,0:00:20.60,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}right {\c&H0000E5FF&}you’re{\c&H00FFFFFF&} an
-Dialogue: 0,0:00:20.61,0:00:21.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}authentic{\c&H00FFFFFF&} soul who
-Dialogue: 0,0:00:21.54,0:00:22.20,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}stays{\c&H00FFFFFF&} true to
-Dialogue: 0,0:00:22.21,0:00:22.79,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}yourself
-Dialogue: 0,0:00:23.80,0:00:24.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}If it {\c&H0000E5FF&}points{\c&H00FFFFFF&}
-Dialogue: 0,0:00:24.44,0:00:25.21,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}left {\c&H0000E5FF&}you’re{\c&H00FFFFFF&} a
-Dialogue: 0,0:00:25.22,0:00:26.41,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}social {\c&H0000E5FF&}chameleon{\c&H00FFFFFF&} a
-Dialogue: 0,0:00:26.42,0:00:27.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}master at {\c&H0000E5FF&}reading{\c&H00FFFFFF&}
-Dialogue: 0,0:00:27.34,0:00:27.81,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}rooms
-Dialogue: 0,0:00:28.81,0:00:29.64,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You {\c&H0000E5FF&}likely{\c&H00FFFFFF&} hide
-Dialogue: 0,0:00:29.65,0:00:30.27,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}feelings{\c&H00FFFFFF&} to
-Dialogue: 0,0:00:30.29,0:00:31.37,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}master{\c&H00FFFFFF&} every single
-Dialogue: 0,0:00:31.38,0:00:32.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}room you {\c&H0000E5FF&}enter{\c&H00FFFFFF&}
-Dialogue: 0,0:00:33.17,0:00:34.44,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Subscribe for {\c&H0000E5FF&}tomorrow’s{\c&H00FFFFFF&}
-Dialogue: 0,0:00:34.45,0:00:35.27,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}brain{\c&H00FFFFFF&} test and
-Dialogue: 0,0:00:35.29,0:00:36.42,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}comment your {\c&H0000E5FF&}direction{\c&H00FFFFFF&}
-Dialogue: 0,0:00:37.23,0:00:38.47,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}To start {\c&H0000E5FF&}simply{\c&H00FFFFFF&}
+Dialogue: 0,0:00:05.00,0:00:05.86,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Trace{\c&H00FFFFFF&} it fast
+Dialogue: 0,0:00:05.87,0:00:06.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and {\c&H0000E5FF&}don't{\c&H00FFFFFF&} think
+Dialogue: 0,0:00:06.73,0:00:07.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}just{\c&H00FFFFFF&} let your
+Dialogue: 0,0:00:07.25,0:00:08.38,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}hand move {\c&H0000E5FF&}naturally{\c&H00FFFFFF&}
+Dialogue: 0,0:00:09.40,0:00:10.49,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Now {\c&H0000E5FF&}focus{\c&H00FFFFFF&} on
+Dialogue: 0,0:00:10.51,0:00:11.04,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}tail{\c&H00FFFFFF&}
+Dialogue: 0,0:00:11.85,0:00:12.45,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Did you {\c&H0000E5FF&}point{\c&H00FFFFFF&}
+Dialogue: 0,0:00:12.46,0:00:12.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}it {\c&H0000E5FF&}toward{\c&H00FFFFFF&} your
+Dialogue: 0,0:00:12.94,0:00:13.71,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}left{\c&H00FFFFFF&} eye or
+Dialogue: 0,0:00:13.72,0:00:14.27,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}right{\c&H00FFFFFF&}
+Dialogue: 0,0:00:15.29,0:00:16.53,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Stop {\c&H0000E5FF&}because{\c&H00FFFFFF&} this
+Dialogue: 0,0:00:16.55,0:00:17.44,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}reveals{\c&H00FFFFFF&} a creepy
+Dialogue: 0,0:00:17.45,0:00:18.21,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}secret{\c&H00FFFFFF&} about how
+Dialogue: 0,0:00:18.22,0:00:18.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}brain{\c&H00FFFFFF&} is
+Dialogue: 0,0:00:18.84,0:00:19.74,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}actually{\c&H00FFFFFF&} wired
+Dialogue: 0,0:00:20.76,0:00:21.35,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}If the {\c&H0000E5FF&}tail{\c&H00FFFFFF&}
+Dialogue: 0,0:00:21.36,0:00:22.44,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}points{\c&H00FFFFFF&} right you’re
+Dialogue: 0,0:00:22.45,0:00:23.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}an {\c&H0000E5FF&}authentic{\c&H00FFFFFF&} soul
+Dialogue: 0,0:00:23.34,0:00:24.04,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}who {\c&H0000E5FF&}doesn't{\c&H00FFFFFF&} care
+Dialogue: 0,0:00:24.05,0:00:25.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}about others' {\c&H0000E5FF&}opinions{\c&H00FFFFFF&}
+Dialogue: 0,0:00:26.27,0:00:26.92,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}If it {\c&H0000E5FF&}points{\c&H00FFFFFF&}
+Dialogue: 0,0:00:26.94,0:00:27.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}left {\c&H0000E5FF&}you’re{\c&H00FFFFFF&} a
+Dialogue: 0,0:00:27.71,0:00:29.07,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}social {\c&H0000E5FF&}chameleon{\c&H00FFFFFF&} an
+Dialogue: 0,0:00:29.08,0:00:29.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}expert at {\c&H0000E5FF&}reading{\c&H00FFFFFF&}
+Dialogue: 0,0:00:29.92,0:00:30.87,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}people and {\c&H0000E5FF&}mirroring{\c&H00FFFFFF&}
+Dialogue: 0,0:00:30.89,0:00:31.29,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}them
+Dialogue: 0,0:00:32.17,0:00:32.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You {\c&H0000E5FF&}possess{\c&H00FFFFFF&} the
+Dialogue: 0,0:00:32.89,0:00:33.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}rare {\c&H0000E5FF&}power{\c&H00FFFFFF&} to
+Dialogue: 0,0:00:33.69,0:00:34.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}adapt your {\c&H0000E5FF&}personality{\c&H00FFFFFF&}
+Dialogue: 0,0:00:34.92,0:00:35.78,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to {\c&H0000E5FF&}control{\c&H00FFFFFF&} any
+Dialogue: 0,0:00:35.79,0:00:36.85,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}social {\c&H0000E5FF&}situation{\c&H00FFFFFF&} you're
+Dialogue: 0,0:00:36.87,0:00:37.27,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}in
+Dialogue: 0,0:00:38.19,0:00:39.45,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Subscribe for {\c&H0000E5FF&}tomorrow's{\c&H00FFFFFF&}
+Dialogue: 0,0:00:39.47,0:00:40.30,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}brain{\c&H00FFFFFF&} test and
+Dialogue: 0,0:00:40.31,0:00:41.35,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} your result
+Dialogue: 0,0:00:42.16,0:00:43.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}This works {\c&H0000E5FF&}because{\c&H00FFFFFF&}
+Dialogue: 0,0:00:43.12,0:00:43.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you'll
