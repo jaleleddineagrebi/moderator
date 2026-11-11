@@ -70,10 +70,11 @@
   "ended_at": null,
   "revision_rounds": 0,
   "cost": {
-    "total_usd": 0.003476,
+    "total_usd": 0.020227,
     "budget_usd": 1.0,
     "by_agent": {
-      "trend_researcher": 0.003476
+      "trend_researcher": 0.003476,
+      "scriptwriter": 0.016751
     }
   },
   "agents": {
@@ -360,7 +361,7 @@
       ],
       "checkpoint": "B",
       "status": "running",
-      "progress": 10,
+      "progress": 55,
       "started_at": "2026-11-11T23:21:17+00:00",
       "ended_at": null,
       "attempt": 2,
@@ -415,6 +416,26 @@
           "ts": "2026-11-11T23:21:37+00:00",
           "level": "warning",
           "msg": "Model 'gemini-3.8-flash' returned 429; falling back to 'gemini-3-flash-preview'"
+        },
+        {
+          "ts": "2026-11-11T23:22:02+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3-flash-preview) answered in 45.1s (tokens in 724, out 2007, thinking 3456)"
+        },
+        {
+          "ts": "2026-11-11T23:22:02+00:00",
+          "level": "info",
+          "msg": "Estimated narration: en 142.2s"
+        },
+        {
+          "ts": "2026-11-11T23:22:02+00:00",
+          "level": "warning",
+          "msg": "Length outside 150-240s, asking for a fix"
+        },
+        {
+          "ts": "2026-11-11T23:22:02+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.8-flash, high complexity, thinking high)"
         }
       ],
       "errors": [
@@ -426,7 +447,7 @@
         }
       ],
       "feedback": [],
-      "cost_usd": 0.0
+      "cost_usd": 0.016751
     },
     "visuals": {
       "title": "Source 16:9 widescreen visuals",
@@ -596,7 +617,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-11T23:21:40+00:00",
+    "exported_at": "2026-11-11T23:22:12+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/43117346181"
   }
