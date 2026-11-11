@@ -1,0 +1,53 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:03.21,Headline,,0,0,0,,{\fad(150,150)}STOP USING THIS
+Dialogue: 1,0:00:03.31,0:00:09.85,Headline,,0,0,0,,{\fad(150,150)}40% MORE SPENT
+Dialogue: 1,0:00:09.95,0:00:16.78,Headline,,0,0,0,,{\fad(150,150)}THE EMPTINESS TRICK
+Dialogue: 1,0:00:16.88,0:00:23.52,Headline,,0,0,0,,{\fad(150,150)}THE CREEPY PART
+Dialogue: 1,0:00:23.62,0:00:29.78,Headline,,0,0,0,,{\fad(150,150)}GRAB A BASKET
+Dialogue: 1,0:00:29.88,0:00:39.16,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 0,0:00:00.10,0:00:01.14,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Stop {\c&H0000E5FF&}grabbing{\c&H00FFFFFF&} that
+Dialogue: 0,0:00:01.15,0:00:02.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}giant {\c&H0000E5FF&}shopping{\c&H00FFFFFF&} cart
+Dialogue: 0,0:00:03.35,0:00:04.58,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Supermarkets{\c&H00FFFFFF&} doubled the
+Dialogue: 0,0:00:04.59,0:00:05.42,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}size of {\c&H0000E5FF&}carts{\c&H00FFFFFF&}
+Dialogue: 0,0:00:05.68,0:00:06.79,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and {\c&H0000E5FF&}researchers{\c&H00FFFFFF&} proved
+Dialogue: 0,0:00:06.80,0:00:07.94,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}people {\c&H0000E5FF&}immediately{\c&H00FFFFFF&} bought
+Dialogue: 0,0:00:07.95,0:00:08.97,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}forty {\c&H0000E5FF&}percent{\c&H00FFFFFF&} more
+Dialogue: 0,0:00:10.00,0:00:11.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}visual{\c&H00FFFFFF&} cortex
+Dialogue: 0,0:00:11.12,0:00:12.26,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}equates{\c&H00FFFFFF&} empty space
+Dialogue: 0,0:00:12.27,0:00:13.78,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}with scarcity {\c&H0000E5FF&}triggering{\c&H00FFFFFF&}
+Dialogue: 0,0:00:13.79,0:00:14.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}an {\c&H0000E5FF&}urge{\c&H00FFFFFF&} to
+Dialogue: 0,0:00:14.35,0:00:15.30,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}keep {\c&H0000E5FF&}piling{\c&H00FFFFFF&} items
+Dialogue: 0,0:00:15.32,0:00:15.92,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}inside
+Dialogue: 0,0:00:16.93,0:00:17.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}But {\c&H0000E5FF&}here{\c&H00FFFFFF&} is
+Dialogue: 0,0:00:17.45,0:00:18.22,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}creepy{\c&H00FFFFFF&} part
+Dialogue: 0,0:00:18.51,0:00:18.98,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}even{\c&H00FFFFFF&} when you
+Dialogue: 0,0:00:18.99,0:00:19.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}know{\c&H00FFFFFF&} this that
+Dialogue: 0,0:00:19.84,0:00:20.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}massive{\c&H00FFFFFF&} grid tricks
+Dialogue: 0,0:00:20.84,0:00:21.45,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}brain{\c&H00FFFFFF&} into
+Dialogue: 0,0:00:21.47,0:00:22.65,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}feeling {\c&H0000E5FF&}underprepared{\c&H00FFFFFF&}
+Dialogue: 0,0:00:23.66,0:00:24.49,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Carrying{\c&H00FFFFFF&} a hand
+Dialogue: 0,0:00:24.50,0:00:25.76,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}basket forces {\c&H0000E5FF&}physical{\c&H00FFFFFF&}
+Dialogue: 0,0:00:25.78,0:00:26.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}awareness{\c&H00FFFFFF&} of weight
+Dialogue: 0,0:00:26.98,0:00:28.26,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}cutting impulse {\c&H0000E5FF&}purchases{\c&H00FFFFFF&}
+Dialogue: 0,0:00:28.28,0:00:28.90,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}instantly
+Dialogue: 0,0:00:29.92,0:00:31.22,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Subscribe{\c&H00FFFFFF&} to outsmart
+Dialogue: 0,0:00:31.23,0:00:32.66,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}subconscious{\c&H00FFFFFF&} traps and
+Dialogue: 0,0:00:32.67,0:00:33.46,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} cart or
+Dialogue: 0,0:00:33.47,0:00:34.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}basket{\c&H00FFFFFF&} below
+Dialogue: 0,0:00:35.16,0:00:35.85,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Save your {\c&H0000E5FF&}money{\c&H00FFFFFF&}
+Dialogue: 0,0:00:35.86,0:00:36.81,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}next trip {\c&H0000E5FF&}which{\c&H00FFFFFF&}
+Dialogue: 0,0:00:36.82,0:00:37.22,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is why you
+Dialogue: 0,0:00:37.23,0:00:37.69,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}must
