@@ -1,0 +1,156 @@
+{
+  "title": "The Forehead Test That Reveals Your True Personality",
+  "scenes": [
+    {
+      "vo": {
+        "en": "Draw a letter Q on your forehead."
+      },
+      "on_screen": {
+        "en": "DRAW A LETTER Q"
+      },
+      "visual": {
+        "description": "A close-up of a man's index finger reaching toward his forehead against a dark background.",
+        "search_terms": [
+          "man finger forehead",
+          "close up skin",
+          "male face touch"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Use your index finger and do it very fast. Don't think."
+      },
+      "on_screen": {
+        "en": "DO IT FAST"
+      },
+      "visual": {
+        "description": "Fast motion shots of a vintage stopwatch ticking and a finger tracing a shape in the air.",
+        "search_terms": [
+          "fast ticking clock",
+          "index finger pointing",
+          "moving hourglass sand"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Which way does the tail point? To your left or right?"
+      },
+      "on_screen": {
+        "en": "LEFT OR RIGHT?"
+      },
+      "visual": {
+        "description": "A spinning compass needle and a man looking confused toward a directional street sign.",
+        "search_terms": [
+          "compass needle spinning",
+          "street direction sign",
+          "man looking side"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "Wait, because this reveals a creepy truth about your secret brain."
+      },
+      "on_screen": {
+        "en": "THE CREEPY TRUTH"
+      },
+      "visual": {
+        "description": "A high-tech digital animation of a human brain glowing with neural pathways.",
+        "search_terms": [
+          "human brain glowing",
+          "neon skull light",
+          "digital data stream"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "If it points right, you’re an authentic soul who stays true to yourself."
+      },
+      "on_screen": {
+        "en": "THE AUTHENTIC SOUL"
+      },
+      "visual": {
+        "description": "A man standing alone on a high mountain peak overlooking a vast forest.",
+        "search_terms": [
+          "mountain man silhouette",
+          "forest path sunlight",
+          "wooden desk texture"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "If it points left, you’re a social chameleon who adapts to any room."
+      },
+      "on_screen": {
+        "en": "THE SOCIAL CHAMELEON"
+      },
+      "visual": {
+        "description": "A macro shot of a chameleon's eye followed by a blurred time-lapse of a city crowd.",
+        "search_terms": [
+          "chameleon eye macro",
+          "crowded city motion",
+          "male suit adjustment"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "You’re likely an expert at reading people and hiding your true feelings."
+      },
+      "on_screen": {
+        "en": "READING THE ROOM"
+      },
+      "visual": {
+        "description": "An intense close-up of a man's eye and hands holding playing cards at a table.",
+        "search_terms": [
+          "male eye pupil",
+          "poker player hands",
+          "magnifying glass paper"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for tomorrow's brain test and comment your direction. To start, simply"
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "A glowing notification bell icon appearing on a dark, futuristic background.",
+        "search_terms": [
+          "notification bell animation",
+          "finger tapping screen",
+          "dark cyber background"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_08"
+    }
+  ],
+  "idea_id": "forehead-q-test",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 32.7
+  }
+}
