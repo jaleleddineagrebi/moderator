@@ -1,0 +1,62 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-205283/",
+    "author": "NickyPe",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man standing doorway",
+    "description": "A man stands firmly within a wooden door frame, preparing for the test."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-15230/",
+    "author": "2427999",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man pushing walls",
+    "description": "Close up of a man's hands pressing forcefully against the sides of a wall."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-19600/",
+    "author": "OrcaTec",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "circuit board animation",
+    "description": "Motion graphic showing glowing neural pathways and digital electricity pulses."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-326081/",
+    "author": "asifsharif",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hourglass flowing sand",
+    "description": "An hourglass with sand pouring through the center rapidly."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-210786/",
+    "author": "Matthias_Groeneveld",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "walking into room",
+    "description": "A man's feet stepping forward from a dark area into a brightly lit room."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-109373/",
+    "author": "overjupiter",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hands floating air",
+    "description": "A man's hands slowly floating upward on their own as he looks on in amazement."
+  }
+]
