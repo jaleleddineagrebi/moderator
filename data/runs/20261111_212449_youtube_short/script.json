@@ -9,11 +9,11 @@
         "en": "DRAW A LETTER Q"
       },
       "visual": {
-        "description": "A close-up of a man's index finger reaching towards his forehead in a dimly lit studio.",
+        "description": "A close-up of a man's index finger pointing directly toward the camera lens in a stylized, high-contrast studio setting.",
         "search_terms": [
-          "man finger forehead",
-          "finger pointing",
-          "male head close"
+          "man hand pointing",
+          "finger close up",
+          "hand gesture"
         ],
         "prefer": "video"
       },
@@ -21,17 +21,17 @@
     },
     {
       "vo": {
-        "en": "Use your index finger. Trace it fast, don't think, just move your hand."
+        "en": "Use your index finger. Trace it fast and don't think, just let your hand move naturally."
       },
       "on_screen": {
         "en": "TRACE IT FAST"
       },
       "visual": {
-        "description": "A fast-motion montage of a vintage analog clock spinning and a person's hands typing rapidly.",
+        "description": "A rapid time-lapse of a busy city intersection from a bird's eye view with blurred motion.",
         "search_terms": [
-          "analog clock fast",
-          "motion blur hands",
-          "fast typing fingers"
+          "city time lapse",
+          "busy street motion",
+          "fast traffic"
         ],
         "prefer": "video"
       },
@@ -39,17 +39,17 @@
     },
     {
       "vo": {
-        "en": "Now focus on the tail. Did you point it to your left or right?"
+        "en": "Now, focus on the tail. Did you point it toward your left eye or your right?"
       },
       "on_screen": {
         "en": "LEFT OR RIGHT?"
       },
       "visual": {
-        "description": "A compass needle spinning wildly followed by a shot of a man looking at a directional street sign.",
+        "description": "A macro shot of an antique brass compass with the needle spinning and settling on a direction.",
         "search_terms": [
-          "compass needle",
-          "street direction arrows",
-          "man looking sideways"
+          "vintage compass needle",
+          "directional arrows",
+          "navigation tool"
         ],
         "prefer": "video"
       },
@@ -57,17 +57,17 @@
     },
     {
       "vo": {
-        "en": "Stop, because this reveals a creepy truth about how your secret brain is wired."
+        "en": "Stop, because this reveals a creepy secret about how your brain is actually wired."
       },
       "on_screen": {
-        "en": "THE CREEPY TRUTH"
+        "en": "THE CREEPY SECRET"
       },
       "visual": {
-        "description": "A futuristic blue digital animation of a human brain with glowing neural pathways.",
+        "description": "A futuristic blue digital animation of a human brain with glowing neural pathways pulsating with light.",
         "search_terms": [
-          "glowing brain animation",
-          "blue neural pathways",
-          "digital eye scan"
+          "brain digital scan",
+          "neural network animation",
+          "cyber brain glow"
         ],
         "prefer": "video"
       },
@@ -75,17 +75,17 @@
     },
     {
       "vo": {
-        "en": "If it points right, you’re an authentic soul who stays true to yourself."
+        "en": "If the tail points right, you’re an authentic soul who doesn't care about others' opinions."
       },
       "on_screen": {
         "en": "AUTHENTIC SOUL"
       },
       "visual": {
-        "description": "A man standing alone on a vast mountain cliffside looking out at a sunrise.",
+        "description": "A man standing alone on a rugged mountain peak overlooking a vast, misty forest at dawn.",
         "search_terms": [
-          "man on cliffside",
-          "vast forest aerial",
-          "mountain peak silhouette"
+          "man on mountain",
+          "solitude nature",
+          "lone hiker peak"
         ],
         "prefer": "video"
       },
@@ -93,17 +93,17 @@
     },
     {
       "vo": {
-        "en": "If it points left, you’re a social chameleon, a master at reading rooms."
+        "en": "If it points left, you’re a social chameleon—an expert at reading people and mirroring them."
       },
       "on_screen": {
         "en": "SOCIAL CHAMELEON"
       },
       "visual": {
-        "description": "A macro shot of a chameleon's eye followed by a blurred time-lapse of a busy city crowd.",
+        "description": "A macro close-up of a lizard's eye rotating independently with high detail of the scales.",
         "search_terms": [
-          "chameleon eye close",
-          "blurred city crowd",
-          "businessman walking fast"
+          "lizard eye macro",
+          "reptile eye close",
+          "animal camouflage"
         ],
         "prefer": "video"
       },
@@ -111,17 +111,17 @@
     },
     {
       "vo": {
-        "en": "You likely hide your feelings to master every single room you enter."
+        "en": "You possess the rare power to adapt your personality to control any social situation you're in."
       },
       "on_screen": {
-        "en": "MASTER THE ROOM"
+        "en": "MASTER INFLUENCER"
       },
       "visual": {
-        "description": "An intense close-up of a man's eyes staring through a magnifying glass and hands holding playing cards.",
+        "description": "A man in a sharp suit adjusting his silver cufflinks in a dark, atmospheric office environment.",
         "search_terms": [
-          "intense male eyes",
-          "playing cards table",
-          "magnifying glass macro"
+          "man adjusting cufflinks",
+          "sharp suit detail",
+          "professional male power"
         ],
         "prefer": "video"
       },
@@ -129,17 +129,17 @@
     },
     {
       "vo": {
-        "en": "Subscribe for tomorrow’s brain test and comment your direction. To start, simply"
+        "en": "Subscribe for tomorrow's brain test and comment your result. This works because you'll"
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "A neon glowing notification bell icon appearing on a dark digital grid background.",
+        "description": "A close-up of a finger tapping a glowing red notification bell icon on a modern smartphone screen.",
         "search_terms": [
-          "notification bell animation",
-          "tapping phone screen",
-          "cyber neon background"
+          "phone notification tap",
+          "touch screen finger",
+          "mobile app icon"
         ],
         "prefer": "video"
       },
@@ -151,6 +151,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 35.6
+    "en": 40.7
   }
 }

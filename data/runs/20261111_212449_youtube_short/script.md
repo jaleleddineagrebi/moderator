@@ -1,26 +1,26 @@
 # The Forehead Test That Reveals Your True Personality
-Estimated narration: en 35.6s
+Estimated narration: en 40.7s
 
-## scene_01 · A close-up of a man's index finger reaching towards his forehead in a dimly lit studio.
+## scene_01 · A close-up of a man's index finger pointing directly toward the camera lens in a stylized, high-contrast studio setting.
 EN  [DRAW A LETTER Q]  Draw a letter Q on your forehead.
 
-## scene_02 · A fast-motion montage of a vintage analog clock spinning and a person's hands typing rapidly.
-EN  [TRACE IT FAST]  Use your index finger. Trace it fast, don't think, just move your hand.
+## scene_02 · A rapid time-lapse of a busy city intersection from a bird's eye view with blurred motion.
+EN  [TRACE IT FAST]  Use your index finger. Trace it fast and don't think, just let your hand move naturally.
 
-## scene_03 · A compass needle spinning wildly followed by a shot of a man looking at a directional street sign.
-EN  [LEFT OR RIGHT?]  Now focus on the tail. Did you point it to your left or right?
+## scene_03 · A macro shot of an antique brass compass with the needle spinning and settling on a direction.
+EN  [LEFT OR RIGHT?]  Now, focus on the tail. Did you point it toward your left eye or your right?
 
-## scene_04 · A futuristic blue digital animation of a human brain with glowing neural pathways.
-EN  [THE CREEPY TRUTH]  Stop, because this reveals a creepy truth about how your secret brain is wired.
+## scene_04 · A futuristic blue digital animation of a human brain with glowing neural pathways pulsating with light.
+EN  [THE CREEPY SECRET]  Stop, because this reveals a creepy secret about how your brain is actually wired.
 
-## scene_05 · A man standing alone on a vast mountain cliffside looking out at a sunrise.
-EN  [AUTHENTIC SOUL]  If it points right, you’re an authentic soul who stays true to yourself.
+## scene_05 · A man standing alone on a rugged mountain peak overlooking a vast, misty forest at dawn.
+EN  [AUTHENTIC SOUL]  If the tail points right, you’re an authentic soul who doesn't care about others' opinions.
 
-## scene_06 · A macro shot of a chameleon's eye followed by a blurred time-lapse of a busy city crowd.
-EN  [SOCIAL CHAMELEON]  If it points left, you’re a social chameleon, a master at reading rooms.
+## scene_06 · A macro close-up of a lizard's eye rotating independently with high detail of the scales.
+EN  [SOCIAL CHAMELEON]  If it points left, you’re a social chameleon—an expert at reading people and mirroring them.
 
-## scene_07 · An intense close-up of a man's eyes staring through a magnifying glass and hands holding playing cards.
-EN  [MASTER THE ROOM]  You likely hide your feelings to master every single room you enter.
+## scene_07 · A man in a sharp suit adjusting his silver cufflinks in a dark, atmospheric office environment.
+EN  [MASTER INFLUENCER]  You possess the rare power to adapt your personality to control any social situation you're in.
 
-## scene_08 · A neon glowing notification bell icon appearing on a dark digital grid background.
-EN  [SUBSCRIBE 🔔]  Subscribe for tomorrow’s brain test and comment your direction. To start, simply
+## scene_08 · A close-up of a finger tapping a glowing red notification bell icon on a modern smartphone screen.
+EN  [SUBSCRIBE 🔔]  Subscribe for tomorrow's brain test and comment your result. This works because you'll
