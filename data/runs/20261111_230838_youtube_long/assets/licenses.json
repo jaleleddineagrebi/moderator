@@ -1,0 +1,122 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-3168/",
+    "author": "Coverr-Free-Footage",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "smartphone black screen",
+    "description": "A smartphone lying face-up on a dark marble table, its screen pitch black but reflecting a faint, rhythmic pulse of blue light from an unseen source."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-32443/",
+    "author": "Pepino8A",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "cpu circuit board",
+    "description": "Close-up of a high-tech processor with glowing data paths flowing like neon rivers through a complex circuit board architecture."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-180776/",
+    "author": "Darioguzben",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man typing keyboard",
+    "description": "A man's hands typing with extreme speed on a high-end backlit mechanical keyboard, with digital symbols floating briefly above the keys."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-9825/",
+    "author": "ZenJoe",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "audio waveform motion",
+    "description": "An abstract visualization of sound waves in a dark space, with sharp peaks and valleys reacting to an invisible rhythmic beat."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-126924/",
+    "author": "Mabelle-Elise",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "server room lights",
+    "description": "A high-speed camera flying through a futuristic server room with blinking blue and green lights reflecting off metallic surfaces."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-296958/",
+    "author": "engrahmad2653",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "digital city map",
+    "description": "A digital 3D map of a city at night with glowing red lines connecting different buildings as if tracing a person's movement."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-128273/",
+    "author": "samirsmier",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "binary code scroll",
+    "description": "Rows of binary code scrolling vertically at high speed, occasionally highlighting dollar signs and geometric shapes in a bright yellow color."
+  },
+  {
+    "scene": "scene_08",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-63680/",
+    "author": "danydory",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "camera lens zoom",
+    "description": "A professional camera lens zooming in and out rapidly, with a digital scanning grid passing over the glass surface."
+  },
+  {
+    "scene": "scene_09",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-212000/",
+    "author": "TungArt7",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "industrial gear turning",
+    "description": "A large industrial gear turning slowly in a dark workshop, with sparks flying as it connects with a smaller metallic wheel."
+  },
+  {
+    "scene": "scene_10",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-42408/",
+    "author": "SamuelFJohanns",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man hand phone",
+    "description": "Close-up of a man's thumb scrolling through a long list of toggle switches on a smartphone screen, flipping them from green to gray."
+  },
+  {
+    "scene": "scene_11",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-236233/",
+    "author": "SkyScapeDrone",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man mountain peak",
+    "description": "A man standing on a high mountain peak at dawn, looking out over a sea of clouds with his arms wide open in a gesture of freedom."
+  },
+  {
+    "scene": "scene_12",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-154373/",
+    "author": "berctk",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "mouse cursor clicking",
+    "description": "A mouse cursor moving across a dark screen to click on a bright red subscribe button, followed by a notification bell icon vibrating."
+  }
+]
