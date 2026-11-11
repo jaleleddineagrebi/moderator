@@ -17,6 +17,14 @@
       "destination": "/api/seo?type=rss"
     },
     {
+      "source": "/api/auth/signin/google",
+      "destination": "/api/auth?action=signin&provider=google"
+    },
+    {
+      "source": "/api/auth/callback/google",
+      "destination": "/api/auth?action=callback&provider=google"
+    },
+    {
       "source": "/api/:match*",
       "destination": "/api/:match*"
     },

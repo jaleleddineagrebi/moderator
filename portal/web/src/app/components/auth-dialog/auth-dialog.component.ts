@@ -194,10 +194,16 @@ export class AuthDialogComponent implements AfterViewInit {
   private readonly auth = inject(AuthService);
 
   ngAfterViewInit(): void {
-    if (this.googleBtnContainer?.nativeElement) {
-      this.auth.renderGoogleButton(this.googleBtnContainer.nativeElement, () => {
-        this.dialogRef.close();
-      });
+    this.tryRenderButton(0);
+  }
+
+  private tryRenderButton(attempt: number): void {
+    if (!this.googleBtnContainer?.nativeElement) return;
+    const ok = this.auth.renderGoogleButton(this.googleBtnContainer.nativeElement, () => {
+      this.dialogRef.close();
+    });
+    if (!ok && attempt < 5) {
+      setTimeout(() => this.tryRenderButton(attempt + 1), 350);
     }
   }
 
