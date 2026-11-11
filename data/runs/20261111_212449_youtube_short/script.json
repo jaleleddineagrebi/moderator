@@ -9,11 +9,11 @@
         "en": "DRAW A LETTER Q"
       },
       "visual": {
-        "description": "A close-up of a man's index finger reaching toward his forehead against a dark background.",
+        "description": "A close-up of a man's index finger reaching towards his forehead in a dimly lit studio.",
         "search_terms": [
           "man finger forehead",
-          "close up skin",
-          "male face touch"
+          "finger pointing",
+          "male head close"
         ],
         "prefer": "video"
       },
@@ -21,17 +21,17 @@
     },
     {
       "vo": {
-        "en": "Use your index finger and do it very fast. Don't think."
+        "en": "Use your index finger. Trace it fast, don't think, just move your hand."
       },
       "on_screen": {
-        "en": "DO IT FAST"
+        "en": "TRACE IT FAST"
       },
       "visual": {
-        "description": "Fast motion shots of a vintage stopwatch ticking and a finger tracing a shape in the air.",
+        "description": "A fast-motion montage of a vintage analog clock spinning and a person's hands typing rapidly.",
         "search_terms": [
-          "fast ticking clock",
-          "index finger pointing",
-          "moving hourglass sand"
+          "analog clock fast",
+          "motion blur hands",
+          "fast typing fingers"
         ],
         "prefer": "video"
       },
@@ -39,17 +39,17 @@
     },
     {
       "vo": {
-        "en": "Which way does the tail point? To your left or right?"
+        "en": "Now focus on the tail. Did you point it to your left or right?"
       },
       "on_screen": {
         "en": "LEFT OR RIGHT?"
       },
       "visual": {
-        "description": "A spinning compass needle and a man looking confused toward a directional street sign.",
+        "description": "A compass needle spinning wildly followed by a shot of a man looking at a directional street sign.",
         "search_terms": [
-          "compass needle spinning",
-          "street direction sign",
-          "man looking side"
+          "compass needle",
+          "street direction arrows",
+          "man looking sideways"
         ],
         "prefer": "video"
       },
@@ -57,17 +57,17 @@
     },
     {
       "vo": {
-        "en": "Wait, because this reveals a creepy truth about your secret brain."
+        "en": "Stop, because this reveals a creepy truth about how your secret brain is wired."
       },
       "on_screen": {
         "en": "THE CREEPY TRUTH"
       },
       "visual": {
-        "description": "A high-tech digital animation of a human brain glowing with neural pathways.",
+        "description": "A futuristic blue digital animation of a human brain with glowing neural pathways.",
         "search_terms": [
-          "human brain glowing",
-          "neon skull light",
-          "digital data stream"
+          "glowing brain animation",
+          "blue neural pathways",
+          "digital eye scan"
         ],
         "prefer": "video"
       },
@@ -78,14 +78,14 @@
         "en": "If it points right, you’re an authentic soul who stays true to yourself."
       },
       "on_screen": {
-        "en": "THE AUTHENTIC SOUL"
+        "en": "AUTHENTIC SOUL"
       },
       "visual": {
-        "description": "A man standing alone on a high mountain peak overlooking a vast forest.",
+        "description": "A man standing alone on a vast mountain cliffside looking out at a sunrise.",
         "search_terms": [
-          "mountain man silhouette",
-          "forest path sunlight",
-          "wooden desk texture"
+          "man on cliffside",
+          "vast forest aerial",
+          "mountain peak silhouette"
         ],
         "prefer": "video"
       },
@@ -93,17 +93,17 @@
     },
     {
       "vo": {
-        "en": "If it points left, you’re a social chameleon who adapts to any room."
+        "en": "If it points left, you’re a social chameleon, a master at reading rooms."
       },
       "on_screen": {
-        "en": "THE SOCIAL CHAMELEON"
+        "en": "SOCIAL CHAMELEON"
       },
       "visual": {
-        "description": "A macro shot of a chameleon's eye followed by a blurred time-lapse of a city crowd.",
+        "description": "A macro shot of a chameleon's eye followed by a blurred time-lapse of a busy city crowd.",
         "search_terms": [
-          "chameleon eye macro",
-          "crowded city motion",
-          "male suit adjustment"
+          "chameleon eye close",
+          "blurred city crowd",
+          "businessman walking fast"
         ],
         "prefer": "video"
       },
@@ -111,17 +111,17 @@
     },
     {
       "vo": {
-        "en": "You’re likely an expert at reading people and hiding your true feelings."
+        "en": "You likely hide your feelings to master every single room you enter."
       },
       "on_screen": {
-        "en": "READING THE ROOM"
+        "en": "MASTER THE ROOM"
       },
       "visual": {
-        "description": "An intense close-up of a man's eye and hands holding playing cards at a table.",
+        "description": "An intense close-up of a man's eyes staring through a magnifying glass and hands holding playing cards.",
         "search_terms": [
-          "male eye pupil",
-          "poker player hands",
-          "magnifying glass paper"
+          "intense male eyes",
+          "playing cards table",
+          "magnifying glass macro"
         ],
         "prefer": "video"
       },
@@ -129,17 +129,17 @@
     },
     {
       "vo": {
-        "en": "Subscribe for tomorrow's brain test and comment your direction. To start, simply"
+        "en": "Subscribe for tomorrow’s brain test and comment your direction. To start, simply"
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "A glowing notification bell icon appearing on a dark, futuristic background.",
+        "description": "A neon glowing notification bell icon appearing on a dark digital grid background.",
         "search_terms": [
           "notification bell animation",
-          "finger tapping screen",
-          "dark cyber background"
+          "tapping phone screen",
+          "cyber neon background"
         ],
         "prefer": "video"
       },
@@ -151,6 +151,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 32.7
+    "en": 35.6
   }
 }
