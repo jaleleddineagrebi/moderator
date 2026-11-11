@@ -1,19 +1,17 @@
 # QA report: CHANGES NEEDED
 
-- ✅ **length** [en]: 222.8s (target 150-240s)
-- ✅ **target length** [en]: 222.8s
+- ✅ **length** [en]: 195.8s (target 150-240s)
+- ✅ **target length** [en]: 195.8s
 - ✅ **aspect ratio** [en]: 1920x1080
 - ✅ **video codec** [en]: h264
 - ✅ **audio track** [en]: present
-- ✅ **loudness** [en]: -14.3 LUFS, peak -1.4 dBFS (target -14 LUFS, peak <= -1)
-- ✅ **hook timing** [en]: scene_01 spoken in 12.9s (target <= 16s)
-- ✅ **caption sync** [en]: 589 words, 211 caption events
+- ✅ **loudness** [en]: -14.2 LUFS, peak -1.4 dBFS (target -14 LUFS, peak <= -1)
+- ✅ **hook timing** [en]: scene_01 spoken in 6.2s (target <= 16s)
+- ✅ **caption sync** [en]: 509 words, 182 caption events
 - ✅ **visual licenses**: 12 assets: pixabay
 - ✅ **visual diversity**: all scenes use distinct footage
 - ✅ **audio licenses**: music: original work, no third-party rights; sfx: original work, no third-party rights; voice: synthetic voice; no third-party performance rights
-- ❌ **accuracy review** [en]: The script claims 'Background Audio Triggers' listen for dishwashers and car engines to build socioeconomic profiles. This is a common tech myth; there is no evidence that mainstream iOS/Android operating systems perform hidden environmental acoustic signature profiling for advertisers without user consent. Change to focus on 'Microphone Permissions' and how specific apps access audio. → sent to script
-- ❌ **accuracy review** [en]: The script states 'Significant Locations' records the 'exact places you visit most often' and this is 'sold to companies'. Significant Locations (iOS) is end-to-end encrypted and Apple cannot read it, nor is this specific OS-level system log sold to data brokers. The fix should clarify that third-party apps with location access sell data, not the system log itself. → sent to script
-- ❌ **accuracy review** [en]: The claim that disabling these settings will make the battery last 'hours longer' is a significant exaggeration. While disabling background processes saves some energy, it is rarely 'hours' for these specific system services. Change 'hours longer' to 'improving your overall battery health'. → sent to script
-- ⚠️ **visual_fit review** [en]: Scene 03 uses a query for 'man typing keyboard' (likely a PC keyboard) while the VO describes 'AI Keystroke Fingerprinting' on a phone screen. Update the query to 'person typing on smartphone' to match the narration.
-- ⚠️ **visual_fit review** [en]: Scene 09 uses 'industrial gear turning' which does not visually represent CPU cycles or battery life well. Suggest 'battery charging animation' or 'phone battery icon'.
-- ✅ **people rule**: no women beyond face close-ups in 12 scenes and 1 thumbnail(s)
+- ❌ **accuracy review** [en]: The title says 'They Don't Want You To Turn Off', but the script and description urge the user to turn them off. The title should be '5 Hidden Phone Settings They Don't Want You To Find'. → sent to packaging
+- ⚠️ **visual_fit review** [en]: In scene_03, the script discusses phone typing 'micro-rhythms' and 'taps'. The visual query 'man typing keyboard' likely results in a PC keyboard. Change query to 'typing on smartphone screen' for better visual alignment.
+- ❌ **people rule**: scene_06: A woman is visible sitting in the background in all frames.. Replace with footage without women (a face-only close-up is the only exception). → sent to visuals
+- ❌ **people rule**: scene_11: A woman is visible standing next to a man in all frames.. Replace with footage without women (a face-only close-up is the only exception). → sent to visuals

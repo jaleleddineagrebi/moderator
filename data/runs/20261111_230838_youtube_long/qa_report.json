@@ -1,12 +1,12 @@
 {
   "passed": false,
-  "revision_round": 0,
+  "revision_round": 1,
   "checks": [
     {
       "check": "length",
       "lang": "en",
       "ok": true,
-      "detail": "222.8s (target 150-240s)",
+      "detail": "195.8s (target 150-240s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -14,7 +14,7 @@
       "check": "target length",
       "lang": "en",
       "ok": true,
-      "detail": "222.8s",
+      "detail": "195.8s",
       "send_to": null,
       "severity": "minor"
     },
@@ -46,7 +46,7 @@
       "check": "loudness",
       "lang": "en",
       "ok": true,
-      "detail": "-14.3 LUFS, peak -1.4 dBFS (target -14 LUFS, peak <= -1)",
+      "detail": "-14.2 LUFS, peak -1.4 dBFS (target -14 LUFS, peak <= -1)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -54,7 +54,7 @@
       "check": "hook timing",
       "lang": "en",
       "ok": true,
-      "detail": "scene_01 spoken in 12.9s (target <= 16s)",
+      "detail": "scene_01 spoken in 6.2s (target <= 16s)",
       "send_to": null,
       "severity": "minor"
     },
@@ -62,7 +62,7 @@
       "check": "caption sync",
       "lang": "en",
       "ok": true,
-      "detail": "589 words, 211 caption events",
+      "detail": "509 words, 182 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -94,48 +94,32 @@
       "check": "accuracy review",
       "lang": "en",
       "ok": false,
-      "detail": "The script claims 'Background Audio Triggers' listen for dishwashers and car engines to build socioeconomic profiles. This is a common tech myth; there is no evidence that mainstream iOS/Android operating systems perform hidden environmental acoustic signature profiling for advertisers without user consent. Change to focus on 'Microphone Permissions' and how specific apps access audio.",
-      "send_to": "script",
-      "severity": "blocker"
-    },
-    {
-      "check": "accuracy review",
-      "lang": "en",
-      "ok": false,
-      "detail": "The script states 'Significant Locations' records the 'exact places you visit most often' and this is 'sold to companies'. Significant Locations (iOS) is end-to-end encrypted and Apple cannot read it, nor is this specific OS-level system log sold to data brokers. The fix should clarify that third-party apps with location access sell data, not the system log itself.",
-      "send_to": "script",
-      "severity": "blocker"
-    },
-    {
-      "check": "accuracy review",
-      "lang": "en",
-      "ok": false,
-      "detail": "The claim that disabling these settings will make the battery last 'hours longer' is a significant exaggeration. While disabling background processes saves some energy, it is rarely 'hours' for these specific system services. Change 'hours longer' to 'improving your overall battery health'.",
-      "send_to": "script",
+      "detail": "The title says 'They Don't Want You To Turn Off', but the script and description urge the user to turn them off. The title should be '5 Hidden Phone Settings They Don't Want You To Find'.",
+      "send_to": "packaging",
       "severity": "blocker"
     },
     {
       "check": "visual_fit review",
       "lang": "en",
       "ok": false,
-      "detail": "Scene 03 uses a query for 'man typing keyboard' (likely a PC keyboard) while the VO describes 'AI Keystroke Fingerprinting' on a phone screen. Update the query to 'person typing on smartphone' to match the narration.",
-      "send_to": "visuals",
-      "severity": "minor"
-    },
-    {
-      "check": "visual_fit review",
-      "lang": "en",
-      "ok": false,
-      "detail": "Scene 09 uses 'industrial gear turning' which does not visually represent CPU cycles or battery life well. Suggest 'battery charging animation' or 'phone battery icon'.",
+      "detail": "In scene_03, the script discusses phone typing 'micro-rhythms' and 'taps'. The visual query 'man typing keyboard' likely results in a PC keyboard. Change query to 'typing on smartphone screen' for better visual alignment.",
       "send_to": "visuals",
       "severity": "minor"
     },
     {
       "check": "people rule",
       "lang": null,
-      "ok": true,
-      "detail": "no women beyond face close-ups in 12 scenes and 1 thumbnail(s)",
-      "send_to": null,
+      "ok": false,
+      "detail": "scene_06: A woman is visible sitting in the background in all frames.. Replace with footage without women (a face-only close-up is the only exception).",
+      "send_to": "visuals",
+      "severity": "blocker"
+    },
+    {
+      "check": "people rule",
+      "lang": null,
+      "ok": false,
+      "detail": "scene_11: A woman is visible standing next to a man in all frames.. Replace with footage without women (a face-only close-up is the only exception).",
+      "send_to": "visuals",
       "severity": "blocker"
     }
   ]
