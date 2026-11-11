@@ -1,12 +1,12 @@
 {
   "passed": false,
-  "revision_round": 0,
+  "revision_round": 1,
   "checks": [
     {
       "check": "length",
       "lang": "en",
       "ok": true,
-      "detail": "37.6s (must be under 60s; target 32-50s)",
+      "detail": "40.0s (must be under 60s; target 32-50s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -14,7 +14,7 @@
       "check": "target length",
       "lang": "en",
       "ok": true,
-      "detail": "37.6s",
+      "detail": "40.0s",
       "send_to": null,
       "severity": "minor"
     },
@@ -46,7 +46,7 @@
       "check": "loudness",
       "lang": "en",
       "ok": true,
-      "detail": "-14.4 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)",
+      "detail": "-14.3 LUFS, peak -1.4 dBFS (target -14 LUFS, peak <= -1)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -62,7 +62,7 @@
       "check": "caption sync",
       "lang": "en",
       "ok": true,
-      "detail": "90 words, 33 caption events",
+      "detail": "98 words, 36 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -91,12 +91,20 @@
       "severity": "blocker"
     },
     {
+      "check": "accuracy review",
+      "lang": "en",
+      "ok": false,
+      "detail": "The script incorrectly states that pointing the tail to the right means you are an 'authentic soul'. Scientific studies on the 'Q-test' show the opposite: drawing the tail towards your right eye (so you can read it) indicates high self-monitoring (social chameleon), while drawing it to the left (so others can read it) indicates low self-monitoring (authentic). Swap the meanings in scene_05 and scene_06.",
+      "send_to": "script",
+      "severity": "blocker"
+    },
+    {
       "check": "grammar review",
       "lang": "en",
       "ok": false,
-      "detail": "The script ends abruptly with 'To start, simply' at the end of scene_08. This phrase appears to be a leftover fragment and should be removed.",
+      "detail": "In scene_08, the narration ends abruptly with 'To start, simply'. This phrase should be removed as it appears to be a leftover fragment from a loop script that doesn't fit the current structure.",
       "send_to": "script",
-      "severity": "blocker"
+      "severity": "minor"
     },
     {
       "check": "people rule",
