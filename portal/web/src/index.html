@@ -57,11 +57,15 @@
   }
   </script>
 
-  <!-- Vercel Web Analytics & Google Analytics (gtag) Hook -->
+  <!-- Google tag (gtag.js) & Vercel Web Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDXBZVZP"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     window.gtag = window.gtag || gtag;
+    window.GA_MEASUREMENT_ID = 'G-MDXBZVZP';
+    gtag('js', new Date());
+    gtag('config', 'G-MDXBZVZP', { send_page_view: true });
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
   <script defer src="/_vercel/insights/script.js"></script>

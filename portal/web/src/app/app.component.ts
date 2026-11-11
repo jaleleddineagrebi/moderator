@@ -1,13 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { NavigationEnd, Router, RouterModule, RouterOutlet } from '@angular/router';
+import { filter } from 'rxjs/operators';
 import { HeaderComponent } from './components/header/header.component';
+import { AnalyticsService } from './services/analytics.service';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderComponent, MatIconModule],
+  imports: [CommonModule, RouterOutlet, RouterModule, HeaderComponent, MatIconModule],
   template: `
     <div class="app-layout">
       <!-- Angular Material Header -->
@@ -33,8 +35,9 @@ import { MatIconModule } from '@angular/material/icon';
 
           <div class="footer-links">
             <span class="footer-heading">Platform & Syndication</span>
-            <a href="/">Daily Insights</a>
-            <a href="/shorts">YouTube Shorts</a>
+            <a routerLink="/">Daily Insights</a>
+            <a routerLink="/shorts">YouTube Shorts</a>
+            <a routerLink="/contact">Contact Us</a>
             <a href="/rss.xml" target="_blank" rel="noopener">RSS Feed</a>
             <a href="/sitemap.xml" target="_blank" rel="noopener">XML Sitemap</a>
             <a href="https://www.youtube.com/channel/UCzjz2ArvjE4RgR_2k2o53mg" target="_blank" rel="noopener noreferrer">
@@ -138,5 +141,22 @@ import { MatIconModule } from '@angular/material/icon';
     }
   `]
 })
-export class AppComponent {}
+export class AppComponent implements OnInit {
+  private readonly router = inject(Router);
+  private readonly analytics = inject(AnalyticsService);
+
+  ngOnInit(): void {
+    this.router.events
+      .pipe(filter((e): e is NavigationEnd => e instanceof NavigationEnd))
+      .subscribe((event) => {
+        if (typeof window !== 'undefined' && (window as any).gtag && (window as any).GA_MEASUREMENT_ID) {
+          (window as any).gtag('config', (window as any).GA_MEASUREMENT_ID, {
+            page_path: event.urlAfterRedirects,
+            page_location: window.location.href,
+            page_title: document.title,
+          });
+        }
+      });
+  }
+}
 
