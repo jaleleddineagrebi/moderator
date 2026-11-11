@@ -1,0 +1,82 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-68367/",
+    "author": "JustYøu",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man finger forehead",
+    "description": "A close-up of a man's index finger reaching toward his forehead against a dark background."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-15615/",
+    "author": "Matthias_Groeneveld",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "fast ticking clock",
+    "description": "Fast motion shots of a vintage stopwatch ticking and a finger tracing a shape in the air."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-38388/",
+    "author": "Matthias_Groeneveld",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "compass needle spinning",
+    "description": "A spinning compass needle and a man looking confused toward a directional street sign."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-10480/",
+    "author": "lucdecleir",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "human brain glowing",
+    "description": "A high-tech digital animation of a human brain glowing with neural pathways."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-228847/",
+    "author": "Kanenori",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "mountain man silhouette",
+    "description": "A man standing alone on a high mountain peak overlooking a vast forest."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-8391/",
+    "author": "FernandoChile",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "chameleon eye macro",
+    "description": "A macro shot of a chameleon's eye followed by a blurred time-lapse of a city crowd."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-359535/",
+    "author": "Kanenori",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "male eye pupil",
+    "description": "An intense close-up of a man's eye and hands holding playing cards at a table."
+  },
+  {
+    "scene": "scene_08",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-71563/",
+    "author": "hamzaaslammiczon",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "notification bell animation",
+    "description": "A glowing notification bell icon appearing on a dark, futuristic background."
+  }
+]
