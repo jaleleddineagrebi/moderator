@@ -1,6 +1,6 @@
 {
   "passed": false,
-  "revision_round": 0,
+  "revision_round": 1,
   "checks": [
     {
       "check": "length",
@@ -46,23 +46,23 @@
       "check": "loudness",
       "lang": "en",
       "ok": true,
-      "detail": "-14.1 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)",
+      "detail": "-14.2 LUFS, peak -1.4 dBFS (target -14 LUFS, peak <= -1)",
       "send_to": null,
       "severity": "blocker"
     },
     {
       "check": "hook timing",
       "lang": "en",
-      "ok": false,
-      "detail": "scene_01 spoken in 5.3s (target <= 4s)",
-      "send_to": "script",
-      "severity": "blocker"
+      "ok": true,
+      "detail": "scene_01 spoken in 2.9s (target <= 4s)",
+      "send_to": null,
+      "severity": "minor"
     },
     {
       "check": "caption sync",
       "lang": "en",
       "ok": true,
-      "detail": "91 words, 34 caption events",
+      "detail": "91 words, 33 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -70,7 +70,7 @@
       "check": "visual licenses",
       "lang": null,
       "ok": true,
-      "detail": "6 assets: pixabay",
+      "detail": "7 assets: pixabay",
       "send_to": null,
       "severity": "blocker"
     },
@@ -91,27 +91,11 @@
       "severity": "blocker"
     },
     {
-      "check": "metadata review",
-      "lang": "en",
-      "ok": false,
-      "detail": "In scene_06, the on_screen text contains unprintable control characters '\\u0010\\u0011'. Remove them or replace with proper characters/emojis.",
-      "send_to": "script",
-      "severity": "minor"
-    },
-    {
-      "check": "grammar review",
-      "lang": "en",
-      "ok": false,
-      "detail": "In scene_06, the voiceover ends abruptly with a trailing incomplete phrase 'which is exactly why'. Cut 'which is exactly why' from scene_06 narration.",
-      "send_to": "script",
-      "severity": "blocker"
-    },
-    {
       "check": "people rule",
       "lang": null,
-      "ok": true,
-      "detail": "no women beyond face close-ups in 6 scenes and 1 thumbnail(s)",
-      "send_to": null,
+      "ok": false,
+      "detail": "scene_03: A woman is shown with her shoulder, arm, and body visible while holding a phone, violating the rule allowing only face-only close-ups above the chin.. Replace with footage without women (a face-only close-up is the only exception).",
+      "send_to": "visuals",
       "severity": "blocker"
     }
   ]
