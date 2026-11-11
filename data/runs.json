@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-11T23:23:52+00:00",
+  "updated_at": "2026-11-11T23:24:16+00:00",
   "repo": "jaleleddineagrebi/moderator",
   "live_run_id": "20261111_230838_youtube_long",
   "runs": [
@@ -9,7 +9,7 @@
       "workflow_title": "YouTube Deep-Dive (16:9 Long-Form)",
       "topic": "",
       "status": "running",
-      "progress": 48,
+      "progress": 51,
       "started_at": "2026-11-11T23:08:38+00:00",
       "ended_at": null,
       "cost_usd": 0.0326,
