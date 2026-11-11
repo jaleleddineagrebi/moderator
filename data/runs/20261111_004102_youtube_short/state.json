@@ -69,12 +69,13 @@
   "ended_at": null,
   "revision_rounds": 0,
   "cost": {
-    "total_usd": 0.014904,
+    "total_usd": 0.015698,
     "budget_usd": 1.0,
     "by_agent": {
       "trend_researcher": 0.002765,
       "scriptwriter": 0.011666,
-      "packaging": 0.000474
+      "packaging": 0.000474,
+      "qa_reviewer": 0.000794
     }
   },
   "agents": {
@@ -809,11 +810,36 @@
           "ts": "2026-11-11T00:44:23+00:00",
           "level": "warning",
           "msg": "'gemini-3.7-flash' returned 503; retrying once in 2s"
+        },
+        {
+          "ts": "2026-11-11T00:44:26+00:00",
+          "level": "warning",
+          "msg": "'gemini-3.7-flash' is out of daily quota; skipping it for the rest of this run"
+        },
+        {
+          "ts": "2026-11-11T00:44:26+00:00",
+          "level": "warning",
+          "msg": "Model 'gemini-3.7-flash' returned 429; falling back to 'gemini-3.6-flash'"
+        },
+        {
+          "ts": "2026-11-11T00:44:27+00:00",
+          "level": "warning",
+          "msg": "'gemini-3.6-flash' returned 503; retrying once in 2s"
+        },
+        {
+          "ts": "2026-11-11T00:44:32+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3.6-flash) answered in 63.8s (tokens in 1139, out 181, thinking 0)"
+        },
+        {
+          "ts": "2026-11-11T00:44:39+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.8-flash, medium complexity, thinking low)"
         }
       ],
       "errors": [],
       "feedback": [],
-      "cost_usd": 0.0
+      "cost_usd": 0.000794
     }
   },
   "checkpoints": {
@@ -870,7 +896,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-11T00:44:25+00:00",
+    "exported_at": "2026-11-11T00:44:43+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/42933204276"
   }
