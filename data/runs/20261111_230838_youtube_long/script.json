@@ -1,0 +1,240 @@
+{
+  "title": "5 Hidden AI & Phone Features That Feel Illegal to Know",
+  "scenes": [
+    {
+      "vo": {
+        "en": "Your phone has five hidden AI switches turned on right now that listen even when your screen is black. Number one at the end is the master toggle you need to hit immediately to stop the profiling and reclaim your device's privacy."
+      },
+      "on_screen": {
+        "en": "Your Phone Is Listening"
+      },
+      "visual": {
+        "description": "A smartphone lying face-up on a dark marble table, its screen pitch black but reflecting a faint, rhythmic pulse of blue light from an unseen source.",
+        "search_terms": [
+          "smartphone black screen",
+          "phone on table",
+          "glowing tech pulsing",
+          "dark room technology"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Think about it. You carry a device with microphones, cameras, and motion sensors everywhere. Most of us think we control it, but deep inside the OS, there is a telemetry layer mapping your every move. It is not a conspiracy; it is a standard feature set you likely never agreed to."
+      },
+      "on_screen": {
+        "en": "The Telemetry Layer"
+      },
+      "visual": {
+        "description": "Close-up of a high-tech processor with glowing data paths flowing like neon rivers through a complex circuit board architecture.",
+        "search_terms": [
+          "cpu circuit board",
+          "microchip data flow",
+          "digital hardware macro",
+          "glowing motherboard"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Number five is your Keystroke Map. This isn't just about autocorrect. Modern AI engines track the micro-rhythms of how you type. By measuring the milliseconds between each tap, your phone can identify your stress levels and even verify your identity based on muscle memory alone. This data is often cached internally."
+      },
+      "on_screen": {
+        "en": "AI Keystroke Fingerprinting"
+      },
+      "visual": {
+        "description": "A man's hands typing with extreme speed on a high-end backlit mechanical keyboard, with digital symbols floating briefly above the keys.",
+        "search_terms": [
+          "man typing keyboard",
+          "hands typing fast",
+          "neon mechanical keyboard",
+          "coding hands"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "Number four: Background Audio Triggers. We know about voice assistants, but did you know your phone also listens for specific acoustic signatures? It can identify the frequency of your dishwasher, your car engine, or your television. This helps advertisers build a profile of your socioeconomic status and the products you own."
+      },
+      "on_screen": {
+        "en": "Hidden Audio Profiling"
+      },
+      "visual": {
+        "description": "An abstract visualization of sound waves in a dark space, with sharp peaks and valleys reacting to an invisible rhythmic beat.",
+        "search_terms": [
+          "audio waveform motion",
+          "sound frequency visualization",
+          "digital music pulse",
+          "vibration waves"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Most of this happens inside the Private Compute Core. Tech companies claim this data never leaves your device, but independent researchers have found that anonymized telemetry packets are still sent back to home servers. These packets describe how often these sensors trigger, effectively leaking your habits to the cloud anyway."
+      },
+      "on_screen": {
+        "en": "The Data Leak Loophole"
+      },
+      "visual": {
+        "description": "A high-speed camera flying through a futuristic server room with blinking blue and green lights reflecting off metallic surfaces.",
+        "search_terms": [
+          "server room lights",
+          "data center motion",
+          "blinking mainframe",
+          "high tech facility"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "Number three: The Significant Locations log. This is perhaps the most invasive. Your phone does not just know where you are; it records a history of the exact places you visit most often. It logs the time you arrive at work and the duration of your commute, creating a high-resolution schedule."
+      },
+      "on_screen": {
+        "en": "Your Secret Location Map"
+      },
+      "visual": {
+        "description": "A digital 3D map of a city at night with glowing red lines connecting different buildings as if tracing a person's movement.",
+        "search_terms": [
+          "digital city map",
+          "gps navigation path",
+          "tracking location animation",
+          "urban data map"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Why does this matter? Data brokers use these patterns to predict your future behavior. If your phone knows you are at a pharmacy at two PM every Tuesday, that information is sold to companies that can influence your choices before you even make them. You are being profiled by an algorithm."
+      },
+      "on_screen": {
+        "en": "Selling Your Behavior"
+      },
+      "visual": {
+        "description": "Rows of binary code scrolling vertically at high speed, occasionally highlighting dollar signs and geometric shapes in a bright yellow color.",
+        "search_terms": [
+          "binary code scroll",
+          "matrix data rain",
+          "digital currency abstract",
+          "cyber security screen"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    },
+    {
+      "vo": {
+        "en": "Number two is Local Image Profiling. Every photo you take is scanned by on-device AI. It recognizes faces, pets, and brands. While it makes searching your gallery easier, it also creates a visual metadata map of your private life, the objects you own, and even the clothes you wear."
+      },
+      "on_screen": {
+        "en": "AI Photo Scanning"
+      },
+      "visual": {
+        "description": "A professional camera lens zooming in and out rapidly, with a digital scanning grid passing over the glass surface.",
+        "search_terms": [
+          "camera lens zoom",
+          "digital scan grid",
+          "optical sensor close",
+          "photography tech"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_08"
+    },
+    {
+      "vo": {
+        "en": "Leaving these on does not just cost you your privacy. These processes run in the background twenty-four-seven, eating up CPU cycles and draining your battery faster. By disabling these hidden toggles, you are not just securing your data; you are actually making your phone faster and the battery last hours longer."
+      },
+      "on_screen": {
+        "en": "Save Your Battery Life"
+      },
+      "visual": {
+        "description": "A large industrial gear turning slowly in a dark workshop, with sparks flying as it connects with a smaller metallic wheel.",
+        "search_terms": [
+          "industrial gear turning",
+          "mechanical machine sparks",
+          "factory equipment motion",
+          "heavy machinery"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_09"
+    },
+    {
+      "vo": {
+        "en": "Number one: The System Services Master Toggle. Hidden deep within your Location Services menu is a list of System Services. Most of these, especially Product Improvement and Popular Near Me, do absolutely nothing for you. They are purely for the manufacturer's data collection. Flipping these off cuts the cord."
+      },
+      "on_screen": {
+        "en": "The Master Privacy Killswitch"
+      },
+      "visual": {
+        "description": "Close-up of a man's thumb scrolling through a long list of toggle switches on a smartphone screen, flipping them from green to gray.",
+        "search_terms": [
+          "man hand phone",
+          "scrolling mobile settings",
+          "hand touching screen",
+          "interface interaction"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_10"
+    },
+    {
+      "vo": {
+        "en": "When you finally disable these five secret settings, the digital noise stops. Your device stops being a tracking beacon and goes back to being a tool that serves you. Reclaiming your digital autonomy starts with knowing which switches to flip. It is your hardware; it should be your choice."
+      },
+      "on_screen": {
+        "en": "Reclaim Digital Autonomy"
+      },
+      "visual": {
+        "description": "A man standing on a high mountain peak at dawn, looking out over a sea of clouds with his arms wide open in a gesture of freedom.",
+        "search_terms": [
+          "man mountain peak",
+          "freedom landscape sunset",
+          "man silhouette nature",
+          "achievement summit"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_11"
+    },
+    {
+      "vo": {
+        "en": "Go through your settings today and take back control of your privacy. Subscribe for weekly deep dives into the secrets they do not want you to master. Comment below which of these five settings shocked you the most. Stay secure and keep digging deeper."
+      },
+      "on_screen": {
+        "en": "Subscribe For More"
+      },
+      "visual": {
+        "description": "A mouse cursor moving across a dark screen to click on a bright red subscribe button, followed by a notification bell icon vibrating.",
+        "search_terms": [
+          "mouse cursor clicking",
+          "subscribe button animation",
+          "digital icon click",
+          "computer interface"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_12"
+    }
+  ],
+  "idea_id": "5-secret-ai-settings-tracking-you",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 214.2
+  }
+}
