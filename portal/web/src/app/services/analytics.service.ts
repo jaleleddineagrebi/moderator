@@ -18,7 +18,7 @@ export interface PortalVisibilitySummary {
 export class AnalyticsService {
   private readonly http = inject(HttpClient);
   private readonly sessionTrackedPaths = new Set<string>();
-  private gaInitializedId = '';
+  private gaInitializedId = 'G-MDXBZVZP';
 
   readonly summary = signal<PortalVisibilitySummary>({
     totalViews: 0,
@@ -28,6 +28,7 @@ export class AnalyticsService {
     totalComments: 0,
     totalShorts: 0,
     postViews: {},
+    gaMeasurementId: 'G-MDXBZVZP',
   });
 
   loadVisibilitySummary(): void {

@@ -94,7 +94,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       }
 
       const gaMeasurementId =
-        process.env["GA_MEASUREMENT_ID"] || process.env["NEXT_PUBLIC_GA_MEASUREMENT_ID"] || "";
+        process.env["GA_MEASUREMENT_ID"] || process.env["NEXT_PUBLIC_GA_MEASUREMENT_ID"] || "G-MDXBZVZP";
 
       return res.status(200).json({
         totalViews: Math.max(totalViews, postCount * 12 + reactionCount * 5),
