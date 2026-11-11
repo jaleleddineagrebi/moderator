@@ -70,12 +70,12 @@
   "ended_at": null,
   "revision_rounds": 2,
   "cost": {
-    "total_usd": 0.055896,
+    "total_usd": 0.05652,
     "budget_usd": 1.0,
     "by_agent": {
       "trend_researcher": 0.003476,
       "scriptwriter": 0.042086,
-      "packaging": 0.001228,
+      "packaging": 0.001852,
       "qa_reviewer": 0.009106
     }
   },
@@ -522,10 +522,10 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "running",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-11T23:37:22+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-11T23:38:01+00:00",
       "attempt": 3,
       "retries": 0,
       "max_retries": 2,
@@ -723,6 +723,21 @@
           "ts": "2026-11-11T23:37:22+00:00",
           "level": "info",
           "msg": "Replacing scene_06, scene_11; keeping 10 unchanged scene(s)"
+        },
+        {
+          "ts": "2026-11-11T23:37:50+00:00",
+          "level": "info",
+          "msg": "scene_06: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-11T23:37:58+00:00",
+          "level": "info",
+          "msg": "scene_11: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-11T23:38:01+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [],
@@ -874,11 +889,11 @@
         "visuals"
       ],
       "checkpoint": null,
-      "status": "needs_revision",
-      "progress": 0,
-      "started_at": "2026-11-11T23:32:18+00:00",
-      "ended_at": "2026-11-11T23:32:20+00:00",
-      "attempt": 2,
+      "status": "done",
+      "progress": 100,
+      "started_at": "2026-11-11T23:38:01+00:00",
+      "ended_at": "2026-11-11T23:38:03+00:00",
+      "attempt": 3,
       "retries": 0,
       "max_retries": 2,
       "strategy": "banana_thumbnail",
@@ -1004,6 +1019,36 @@
           "ts": "2026-11-11T23:37:22+00:00",
           "level": "info",
           "msg": "Reset: upstream step 'visuals' is being revised"
+        },
+        {
+          "ts": "2026-11-11T23:38:01+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'banana_thumbnail'"
+        },
+        {
+          "ts": "2026-11-11T23:38:01+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.5-flash-lite, low complexity, thinking minimal)"
+        },
+        {
+          "ts": "2026-11-11T23:38:02+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3.5-flash-lite) answered in 1.2s (tokens in 1068, out 238, thinking 0)"
+        },
+        {
+          "ts": "2026-11-11T23:38:02+00:00",
+          "level": "info",
+          "msg": "Generating 16:9 image with Nano Banana (gemini-nano-banana-2.1)"
+        },
+        {
+          "ts": "2026-11-11T23:38:02+00:00",
+          "level": "warning",
+          "msg": "Nano Banana thumbnail background failed (Gemini API 429: daily quota used up (or model not enabled) for gemini-nano-banana-2.1, gemini-3.1-flash-image-preview, gemini-3.1-flash-image, gemini-2.5-flash-image); using scene_01 frame instead"
+        },
+        {
+          "ts": "2026-11-11T23:38:03+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [],
@@ -1014,7 +1059,7 @@
           "comment": "QA found:\n[en] accuracy review: The title says 'They Don't Want You To Turn Off', but the script and description urge the user to turn them off. The title should be '5 Hidden Phone Settings They Don't Want You To Find'."
         }
       ],
-      "cost_usd": 0.001228
+      "cost_usd": 0.001852
     },
     "edit": {
       "title": "Edit the final 16:9 video",
@@ -1024,11 +1069,11 @@
         "audio"
       ],
       "checkpoint": null,
-      "status": "queued",
+      "status": "running",
       "progress": 0,
-      "started_at": "2026-11-11T23:32:18+00:00",
-      "ended_at": "2026-11-11T23:36:32+00:00",
-      "attempt": 2,
+      "started_at": "2026-11-11T23:38:01+00:00",
+      "ended_at": null,
+      "attempt": 3,
       "retries": 0,
       "max_retries": 2,
       "strategy": "transitions",
@@ -1101,6 +1146,16 @@
           "ts": "2026-11-11T23:37:22+00:00",
           "level": "info",
           "msg": "Reset: upstream step 'visuals' is being revised"
+        },
+        {
+          "ts": "2026-11-11T23:38:01+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'transitions'"
+        },
+        {
+          "ts": "2026-11-11T23:38:01+00:00",
+          "level": "info",
+          "msg": "Rendering en: 12 scenes, 195.8s, xfade transitions"
         }
       ],
       "errors": [],
@@ -1283,7 +1338,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-11T23:37:44+00:00",
+    "exported_at": "2026-11-11T23:38:03+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/43117346181"
   }
