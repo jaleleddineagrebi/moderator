@@ -38,14 +38,16 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       const slug = typeof body.slug === "string" && body.slug.trim() ? body.slug.trim().slice(0, 160) : null;
       const event = typeof body.event === "string" ? body.event : "page_view";
 
-      // Increment global site views
-      await prisma.$executeRawUnsafe(`
+      // Increment global site views and return updated count
+      const siteRows = await prisma.$queryRawUnsafe<{ views: number }[]>(`
         INSERT INTO "PortalAnalytics" ("key", "views", "updatedAt")
         VALUES ('__site_total__', 1, CURRENT_TIMESTAMP)
         ON CONFLICT ("key") DO UPDATE SET
           "views" = "PortalAnalytics"."views" + 1,
-          "updatedAt" = CURRENT_TIMESTAMP;
+          "updatedAt" = CURRENT_TIMESTAMP
+        RETURNING "views";
       `);
+      const totalViews = Number(siteRows?.[0]?.views) || 1;
 
       let postViews = 0;
       if (slug && (event === "post_view" || event === "page_view")) {
@@ -60,10 +62,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           `,
           `post:${slug}`
         );
-        postViews = rows?.[0]?.views ?? 1;
+        postViews = Number(rows?.[0]?.views) || 1;
       }
 
-      return res.status(200).json({ ok: true, postViews });
+      return res.status(200).json({ ok: true, totalViews, postViews });
     } catch (error) {
       console.error("POST /api/analytics error:", error);
       return res.status(200).json({ ok: false });
@@ -84,21 +86,25 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       ]);
 
       let totalViews = 0;
+      let sumPostViews = 0;
       const postViews: Record<string, number> = {};
       for (const row of analyticsRows || []) {
         if (row.key === "__site_total__") {
           totalViews = Number(row.views) || 0;
         } else if (row.key.startsWith("post:")) {
-          postViews[row.key.slice(5)] = Number(row.views) || 0;
+          const v = Number(row.views) || 0;
+          postViews[row.key.slice(5)] = v;
+          sumPostViews += v;
         }
       }
 
+      const realTotalViews = Math.max(totalViews, sumPostViews);
       const gaMeasurementId =
         process.env["GA_MEASUREMENT_ID"] || process.env["NEXT_PUBLIC_GA_MEASUREMENT_ID"] || "G-MDXBZVZP";
 
       return res.status(200).json({
-        totalViews: Math.max(totalViews, postCount * 12 + reactionCount * 5),
-        recordedViews: totalViews,
+        totalViews: realTotalViews,
+        recordedViews: realTotalViews,
         totalPosts: postCount,
         totalReactions: reactionCount,
         totalComments: commentCount,

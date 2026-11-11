@@ -612,9 +612,38 @@ export class PostDetailComponent implements OnInit {
     const p = this.post();
     if (!p) return;
 
+    // Optimistic UI update so reaction count & active state respond immediately
+    const prevReaction = this.userReaction();
+    const prevTallies = { ...this.reactionTallies() };
+    const nextTallies = { ...prevTallies };
+
+    if (prevReaction === type) {
+      nextTallies[type] = Math.max(0, (nextTallies[type] || 0) - 1);
+      this.userReaction.set(null);
+    } else {
+      if (prevReaction && nextTallies[prevReaction] > 0) {
+        nextTallies[prevReaction] = nextTallies[prevReaction] - 1;
+      }
+      nextTallies[type] = (nextTallies[type] || 0) + 1;
+      this.userReaction.set(type);
+    }
+    this.reactionTallies.set(nextTallies);
+
     this.analytics.trackEvent('post_reaction', { slug: p.slug, type });
-    this.postService.toggleReaction(p.id, type).subscribe(() => {
-      this.loadReactions(p.id);
+    this.postService.toggleReaction(p.id, type).subscribe({
+      next: (res) => {
+        if (res?.tallies) {
+          this.reactionTallies.set(res.tallies);
+        }
+        if (res && 'userReaction' in res) {
+          this.userReaction.set(res.userReaction ?? null);
+        }
+        this.analytics.loadVisibilitySummary();
+      },
+      error: () => {
+        this.reactionTallies.set(prevTallies);
+        this.userReaction.set(prevReaction);
+      }
     });
   }
 

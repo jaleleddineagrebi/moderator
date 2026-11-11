@@ -79,7 +79,7 @@ export class AnalyticsService {
     }
     this.sessionTrackedPaths.add(dedupeKey);
 
-    this.http.post<{ ok: boolean; postViews?: number }>('/api/analytics', {
+    this.http.post<{ ok: boolean; totalViews?: number; postViews?: number }>('/api/analytics', {
       event: slug ? 'post_view' : 'page_view',
       path,
       slug: slug || null,
@@ -89,12 +89,13 @@ export class AnalyticsService {
         const cur = this.summary();
         const nextPostViews = { ...cur.postViews };
         if (slug) {
-          nextPostViews[slug] = res?.postViews || (nextPostViews[slug] || 0) + 1;
+          nextPostViews[slug] = res?.postViews ?? (nextPostViews[slug] || 0) + 1;
         }
+        const nextTotal = res?.totalViews ?? cur.totalViews + 1;
         this.summary.set({
           ...cur,
-          totalViews: cur.totalViews + 1,
-          recordedViews: cur.recordedViews + 1,
+          totalViews: nextTotal,
+          recordedViews: nextTotal,
           postViews: nextPostViews,
         });
       },
@@ -102,15 +103,8 @@ export class AnalyticsService {
     });
   }
 
-  getViewsForPost(slug: string, reactionCount: number = 0, commentCount: number = 0): number {
-    const recorded = this.summary().postViews?.[slug] || 0;
-    // Baseline organic estimate from slug hash + interactions + recorded views
-    let hash = 0;
-    for (let i = 0; i < slug.length; i++) {
-      hash = (hash * 31 + slug.charCodeAt(i)) & 0x7fffffff;
-    }
-    const base = 18 + (hash % 45) + reactionCount * 6 + commentCount * 9;
-    return base + recorded;
+  getViewsForPost(slug: string, _reactionCount: number = 0, _commentCount: number = 0): number {
+    return this.summary().postViews?.[slug] ?? 0;
   }
 
   trackEvent(name: string, properties?: Record<string, any>): void {
