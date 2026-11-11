@@ -1,0 +1,120 @@
+{
+  "title": "The Ghost Hand Floating Glitch",
+  "scenes": [
+    {
+      "vo": {
+        "en": "Press your arms against a doorway now. Just stand inside the frame."
+      },
+      "on_screen": {
+        "en": "TRY THIS NOW"
+      },
+      "visual": {
+        "description": "A man stands firmly within a wooden door frame, preparing for the test.",
+        "search_terms": [
+          "man standing doorway",
+          "architecture interior",
+          "entry way"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Push outward against the frame as hard as you can. Keep the pressure steady."
+      },
+      "on_screen": {
+        "en": "PUSH HARD"
+      },
+      "visual": {
+        "description": "Close up of a man's hands pressing forcefully against the sides of a wall.",
+        "search_terms": [
+          "man pushing walls",
+          "heavy lifting effort",
+          "hand pressure"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "You are overloading your nervous system. Your brain is stuck sending signals to your muscles."
+      },
+      "on_screen": {
+        "en": "BRAIN GLITCH"
+      },
+      "visual": {
+        "description": "Motion graphic showing glowing neural pathways and digital electricity pulses.",
+        "search_terms": [
+          "circuit board animation",
+          "glowing network",
+          "data stream"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "But here is the creepy part. Do not stop pushing for ten more seconds."
+      },
+      "on_screen": {
+        "en": "DON'T STOP"
+      },
+      "visual": {
+        "description": "An hourglass with sand pouring through the center rapidly.",
+        "search_terms": [
+          "hourglass flowing sand",
+          "sand timer close up",
+          "time passing"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Now step forward and relax. Your arms will start rising like a ghost is pulling them."
+      },
+      "on_screen": {
+        "en": "RELAX ARMS"
+      },
+      "visual": {
+        "description": "A man's feet stepping forward from a dark area into a brightly lit room.",
+        "search_terms": [
+          "walking into room",
+          "feet on floor",
+          "movement forward"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "This glitch is 100 percent real. Subscribe for tomorrow's brain test and comment YES if it worked, which is exactly why"
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE \u0010\u0011"
+      },
+      "visual": {
+        "description": "A man's hands slowly floating upward on their own as he looks on in amazement.",
+        "search_terms": [
+          "hands floating air",
+          "palm open up",
+          "person amazed"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    }
+  ],
+  "idea_id": "body-weight-glitch",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 33.5
+  }
+}
