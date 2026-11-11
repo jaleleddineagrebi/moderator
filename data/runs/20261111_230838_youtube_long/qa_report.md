@@ -11,7 +11,7 @@
 - ✅ **visual licenses**: 12 assets: pixabay
 - ✅ **visual diversity**: all scenes use distinct footage
 - ✅ **audio licenses**: music: original work, no third-party rights; sfx: original work, no third-party rights; voice: synthetic voice; no third-party performance rights
-- ❌ **accuracy review** [en]: The title says 'They Don't Want You To Turn Off', but the script and description urge the user to turn them off. The title should be '5 Hidden Phone Settings They Don't Want You To Find'. → sent to packaging
-- ⚠️ **visual_fit review** [en]: In scene_03, the script discusses phone typing 'micro-rhythms' and 'taps'. The visual query 'man typing keyboard' likely results in a PC keyboard. Change query to 'typing on smartphone screen' for better visual alignment.
-- ❌ **people rule**: scene_06: A woman is visible sitting in the background in all frames.. Replace with footage without women (a face-only close-up is the only exception). → sent to visuals
-- ❌ **people rule**: scene_11: A woman is visible standing next to a man in all frames.. Replace with footage without women (a face-only close-up is the only exception). → sent to visuals
+- ❌ **accuracy review** [en]: The script describes five distinct settings or features (Keystroke Fingerprinting, App Permissions, Location Selling, Image Scanning, System Services) but scene_01 introduces them as 'AI switches'. Most of these are operating system behaviors or data collection frameworks, not physical or single-toggle AI switches. Change 'Five hidden AI switches' to 'Five hidden tracking features'. → sent to script
+- ⚠️ **metadata review** [en]: The metadata 'format' field is set to 'long', but the content is intended for a YouTube Short. Change 'long' to 'Shorts'.
+- ⚠️ **visual_fit review** [en]: In scene_03, the VO discusses phone typing and milliseconds between taps, but the visual query 'man typing keyboard' likely retrieves a PC keyboard. Change query to 'typing on smartphone screen close up'.
+- ✅ **people rule**: no women beyond face close-ups in 12 scenes and 1 thumbnail(s)
