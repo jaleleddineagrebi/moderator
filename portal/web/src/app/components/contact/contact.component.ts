@@ -552,3 +552,4 @@ export class ContactComponent implements OnInit {
     this.submitted.set(false);
   }
 }
+

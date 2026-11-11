@@ -1,7 +1,8 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import authHandler from "../index.js";
+import authHandler from "../../auth";
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
-  // Delegate to main auth handler
+  req.query["action"] = "callback";
+  req.query["provider"] = "google";
   return authHandler(req, res);
 }
