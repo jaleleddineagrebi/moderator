@@ -582,10 +582,10 @@
         "visuals"
       ],
       "checkpoint": null,
-      "status": "running",
-      "progress": 55,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-11T09:31:53+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-11T09:31:59+00:00",
       "attempt": 1,
       "retries": 0,
       "max_retries": 2,
@@ -598,7 +598,10 @@
         "strategy": "banana_thumbnail",
         "thumbnail_source": "assets/scene_01.mp4"
       },
-      "outputs": {},
+      "outputs": {
+        "metadata": "metadata.json",
+        "thumbnail_en": "thumbnail_en.png"
+      },
       "logs": [
         {
           "ts": "2026-11-11T09:31:53+00:00",
@@ -659,6 +662,11 @@
           "ts": "2026-11-11T09:31:57+00:00",
           "level": "warning",
           "msg": "Nano Banana thumbnail background failed (Gemini API 429 (gemini-2.5-flash-image): {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-flash-preview-image, description: Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-flash-preview-image, description: Generate content requests per minute limit exceeded on Free Tier. See https:/); using scene_01 frame instead"
+        },
+        {
+          "ts": "2026-11-11T09:31:59+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [],
@@ -796,7 +804,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-11T09:31:59+00:00",
+    "exported_at": "2026-11-11T09:32:18+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/42995573059"
   }
