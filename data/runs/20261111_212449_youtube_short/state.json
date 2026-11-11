@@ -69,12 +69,12 @@
   "ended_at": null,
   "revision_rounds": 1,
   "cost": {
-    "total_usd": 0.06009,
+    "total_usd": 0.060563,
     "budget_usd": 1.0,
     "by_agent": {
       "trend_researcher": 0.01761,
       "scriptwriter": 0.039413,
-      "packaging": 0.000444,
+      "packaging": 0.000917,
       "qa_reviewer": 0.002622
     }
   },
@@ -533,10 +533,10 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "running",
-      "progress": 58,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-11T21:46:03+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-11T21:46:41+00:00",
       "attempt": 2,
       "retries": 0,
       "max_retries": 2,
@@ -649,6 +649,26 @@
           "ts": "2026-11-11T21:46:31+00:00",
           "level": "info",
           "msg": "scene_06: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-11T21:46:37+00:00",
+          "level": "info",
+          "msg": "scene_07: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-11T21:46:40+00:00",
+          "level": "info",
+          "msg": "scene_05: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-11T21:46:40+00:00",
+          "level": "info",
+          "msg": "scene_08: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-11T21:46:41+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [],
@@ -662,10 +682,10 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "running",
-      "progress": 80,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-11T21:46:20+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-11T21:46:36+00:00",
       "attempt": 4,
       "retries": 1,
       "max_retries": 2,
@@ -762,6 +782,11 @@
           "ts": "2026-11-11T21:46:29+00:00",
           "level": "info",
           "msg": "Generating an ambient music bed (no library tracks with license files found)"
+        },
+        {
+          "ts": "2026-11-11T21:46:36+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [
@@ -789,11 +814,11 @@
         "visuals"
       ],
       "checkpoint": null,
-      "status": "queued",
-      "progress": 0,
-      "started_at": "2026-11-11T21:44:32+00:00",
-      "ended_at": "2026-11-11T21:44:35+00:00",
-      "attempt": 1,
+      "status": "done",
+      "progress": 100,
+      "started_at": "2026-11-11T21:46:41+00:00",
+      "ended_at": "2026-11-11T21:46:43+00:00",
+      "attempt": 2,
       "retries": 0,
       "max_retries": 2,
       "strategy": "banana_thumbnail",
@@ -879,11 +904,41 @@
           "ts": "2026-11-11T21:45:29+00:00",
           "level": "info",
           "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-11T21:46:41+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'banana_thumbnail'"
+        },
+        {
+          "ts": "2026-11-11T21:46:41+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.5-flash-lite, low complexity, thinking minimal)"
+        },
+        {
+          "ts": "2026-11-11T21:46:43+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3.5-flash-lite) answered in 1.4s (tokens in 507, out 231, thinking 0)"
+        },
+        {
+          "ts": "2026-11-11T21:46:43+00:00",
+          "level": "info",
+          "msg": "Generating 9:16 image with Nano Banana (gemini-nano-banana-2.1)"
+        },
+        {
+          "ts": "2026-11-11T21:46:43+00:00",
+          "level": "warning",
+          "msg": "Nano Banana thumbnail background failed (Gemini API 429: daily quota used up (or model not enabled) for gemini-nano-banana-2.1, gemini-3.1-flash-image-preview, gemini-3.1-flash-image, gemini-2.5-flash-image); using scene_01 frame instead"
+        },
+        {
+          "ts": "2026-11-11T21:46:43+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [],
       "feedback": [],
-      "cost_usd": 0.000444
+      "cost_usd": 0.000917
     },
     "edit": {
       "title": "Edit the final videos",
@@ -893,11 +948,11 @@
         "audio"
       ],
       "checkpoint": null,
-      "status": "queued",
+      "status": "running",
       "progress": 0,
-      "started_at": "2026-11-11T21:44:32+00:00",
-      "ended_at": "2026-11-11T21:44:59+00:00",
-      "attempt": 1,
+      "started_at": "2026-11-11T21:46:41+00:00",
+      "ended_at": null,
+      "attempt": 2,
       "retries": 0,
       "max_retries": 2,
       "strategy": "transitions",
@@ -946,6 +1001,16 @@
           "ts": "2026-11-11T21:45:29+00:00",
           "level": "info",
           "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-11T21:46:41+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'transitions'"
+        },
+        {
+          "ts": "2026-11-11T21:46:41+00:00",
+          "level": "info",
+          "msg": "Rendering en: 8 scenes, 40.0s, xfade transitions"
         }
       ],
       "errors": [],
@@ -1083,7 +1148,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-11T21:46:35+00:00",
+    "exported_at": "2026-11-11T21:46:54+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/43102737349"
   }
