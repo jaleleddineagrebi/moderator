@@ -1,0 +1,132 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-169445/",
+    "author": "magicmore",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "smartphone dark screen",
+    "description": "Male hands rapidly navigating through complex glowing toggle settings on a modern smartphone in a dimly lit tech workspace."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-336755/",
+    "author": "YounStudios",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "robotic circuit assembly",
+    "description": "Automated industrial robotic arm assembling high-tech microchips on an illuminated assembly line."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-6387/",
+    "author": "Coverr-Free-Footage",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "mall pedestrian walking",
+    "description": "Pedestrians walking along an urban commercial corridor with abstract glowing wireless signal lines pulsing through the air."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-6815/",
+    "author": "ReinhardSinger",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "adjusting system settings",
+    "description": "A man seated at a clean desk tapping into the privacy settings menu of an illuminated phone."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-10822/",
+    "author": "Coverr-Free-Footage",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "fast keyboard typing",
+    "description": "Extreme macro shot of male fingers typing rapidly on an illuminated mechanical keyboard in low light."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-846/",
+    "author": "klimkin",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "server room blinking",
+    "description": "Long hallway of a humming enterprise data center with blinking blue server racks and fiber optic cables."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-206294/",
+    "author": "Shravan1991",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "running athlete dusk",
+    "description": "A male athlete jogging down an asphalt road during twilight with visual motion telemetry graphics overlaid."
+  },
+  {
+    "scene": "scene_08",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-2299/",
+    "author": "Coverr-Free-Footage",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "subway train tunnel",
+    "description": "A commuter train rushing through an underground tunnel with motion blurred concrete walls and neon lights."
+  },
+  {
+    "scene": "scene_09",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-241936/",
+    "author": "Matthias_Groeneveld",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "satellite city zoom",
+    "description": "Overhead aerial satellite zoom dropping down onto an illuminated modern city street grid at night."
+  },
+  {
+    "scene": "scene_10",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-68367/",
+    "author": "JustYøu",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "finger toggling switch",
+    "description": "Macro close-up of a finger sliding a glowing virtual switch toggle to the off position on glass."
+  },
+  {
+    "scene": "scene_11",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-171435/",
+    "author": "Sertmidia",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "speaker vibrating water",
+    "description": "A deep bass speaker cone vibrating violently, throwing micro water droplets into the air in slow motion."
+  },
+  {
+    "scene": "scene_12",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-122737/",
+    "author": "blackmarketmusic",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "studio microphone glow",
+    "description": "Studio condenser microphone illuminated under atmospheric blue and gold rim lighting in a silent recording room."
+  },
+  {
+    "scene": "scene_13",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-65306/",
+    "author": "DesignScape",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "city skyline twilight",
+    "description": "Silhouette of a man looking out of a high-rise window at an expansive glowing metropolis during blue hour."
+  }
+]

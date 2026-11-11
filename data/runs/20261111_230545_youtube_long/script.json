@@ -1,0 +1,246 @@
+{
+  "title": "5 Hidden Smartphone Switches That Feel Illegal to Know",
+  "scenes": [
+    {
+      "vo": {
+        "en": "Turn off these five hidden switches right now, or your phone keeps silently profiling your life. Stick around for number one, because it exposes a hidden listening frequency nobody warns you about."
+      },
+      "on_screen": {
+        "en": "TURN OFF THESE SWITCHES"
+      },
+      "visual": {
+        "description": "Male hands rapidly navigating through complex glowing toggle settings on a modern smartphone in a dimly lit tech workspace.",
+        "search_terms": [
+          "smartphone dark screen",
+          "hands tapping phone",
+          "cyber security concept"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "When you unbox a new smartphone, factory defaults are never built for your privacy. They are engineered to harvest background telemetry and build advertising dossiers while chewing through your battery. Let us fix that."
+      },
+      "on_screen": {
+        "en": "FACTORY SETTINGS EXPOSED"
+      },
+      "visual": {
+        "description": "Automated industrial robotic arm assembling high-tech microchips on an illuminated assembly line.",
+        "search_terms": [
+          "robotic circuit assembly",
+          "automated tech factory",
+          "electronics motherboard macro"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Switch number five is Wi-Fi and Bluetooth scanning. Even when you toggle Wi-Fi off in the quick tray, your phone secretly broadcasts constant radio probes to map nearby hardware and track your path through stores."
+      },
+      "on_screen": {
+        "en": "5 GHOST WIFI PROBING"
+      },
+      "visual": {
+        "description": "Pedestrians walking along an urban commercial corridor with abstract glowing wireless signal lines pulsing through the air.",
+        "search_terms": [
+          "mall pedestrian walking",
+          "invisible signal waves",
+          "smart city signals"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "Open your settings, search for Scanning, and disable both Wi-Fi Scanning and Bluetooth Scanning. Your phone will immediately stop leaking your hardware fingerprint to retail beacons and instantly recover wasted battery life."
+      },
+      "on_screen": {
+        "en": "DISABLE BACKGROUND SCANNING"
+      },
+      "visual": {
+        "description": "A man seated at a clean desk tapping into the privacy settings menu of an illuminated phone.",
+        "search_terms": [
+          "adjusting system settings",
+          "man using smartphone",
+          "office desk technology"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Switch number four is Keyboard Cloud Telemetry. Most default keyboards continuously upload your keystrokes, unusual vocabulary, and autocorrect habits to remote cloud servers under the guise of predictive algorithm improvements."
+      },
+      "on_screen": {
+        "en": "4 KEYBOARD TELEMETRY LOGS"
+      },
+      "visual": {
+        "description": "Extreme macro shot of male fingers typing rapidly on an illuminated mechanical keyboard in low light.",
+        "search_terms": [
+          "fast keyboard typing",
+          "macro keyboard fingers",
+          "data server rack"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "Dive into your virtual keyboard settings and turn off Personalization Sharing and Improve Typing Telemetry. What you type should remain private between your fingers and your screen, not fed into advertising models."
+      },
+      "on_screen": {
+        "en": "CUT TYPING TELEMETRY"
+      },
+      "visual": {
+        "description": "Long hallway of a humming enterprise data center with blinking blue server racks and fiber optic cables.",
+        "search_terms": [
+          "server room blinking",
+          "datacenter fiber cables",
+          "digital data transfer"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Switch number three is Motion and Sensor Permissions. Advertisers do not just track where you walk; they track how you move. Social media apps monitor your gyroscope and accelerometer without ever requesting GPS access."
+      },
+      "on_screen": {
+        "en": "3 ACCELEROMETER SPYING"
+      },
+      "visual": {
+        "description": "A male athlete jogging down an asphalt road during twilight with visual motion telemetry graphics overlaid.",
+        "search_terms": [
+          "running athlete dusk",
+          "motion sensor graph",
+          "pavement running shoes"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    },
+    {
+      "vo": {
+        "en": "They calculate your walking speed, detect when you are riding a train, and identify emotional posture shifts. Head into App Permissions, select Physical Activity or Sensors, and revoke access for all non-fitness apps."
+      },
+      "on_screen": {
+        "en": "BLOCK GYROSCOPE ACCESS"
+      },
+      "visual": {
+        "description": "A commuter train rushing through an underground tunnel with motion blurred concrete walls and neon lights.",
+        "search_terms": [
+          "subway train tunnel",
+          "underground transit motion",
+          "metro transit car"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_08"
+    },
+    {
+      "vo": {
+        "en": "Switch number two is Significant Locations. Buried deep inside your operating system is an automated dossier recording exact coordinates and timestamps for your home, your office, and every business you frequent."
+      },
+      "on_screen": {
+        "en": "2 SIGNIFICANT LOCATIONS DOSSIER"
+      },
+      "visual": {
+        "description": "Overhead aerial satellite zoom dropping down onto an illuminated modern city street grid at night.",
+        "search_terms": [
+          "satellite city zoom",
+          "night city grid",
+          "aerial urban traffic"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_09"
+    },
+    {
+      "vo": {
+        "en": "Navigate to System Services or Google Location History. Clear your entire historical timeline, then toggle the tracking master switch off. Your phone does not need to maintain an archival log of your daily life."
+      },
+      "on_screen": {
+        "en": "PURGE LOCATION LOGS"
+      },
+      "visual": {
+        "description": "Macro close-up of a finger sliding a glowing virtual switch toggle to the off position on glass.",
+        "search_terms": [
+          "finger toggling switch",
+          "digital file deletion",
+          "clean screen interface"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_10"
+    },
+    {
+      "vo": {
+        "en": "Switch number one is the creepiest of all: Ultrasonic Audio Beacon tracking. Smart televisions, billboards, and video commercials emit high-frequency acoustic signals inaudible to human ears, but perfectly detectable by your device microphone."
+      },
+      "on_screen": {
+        "en": "1 ULTRASONIC AUDIO BEACONS"
+      },
+      "visual": {
+        "description": "A deep bass speaker cone vibrating violently, throwing micro water droplets into the air in slow motion.",
+        "search_terms": [
+          "speaker vibrating water",
+          "soundwave audio visualizer",
+          "acoustic vibration macro"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_11"
+    },
+    {
+      "vo": {
+        "en": "This silently links what you watch on television directly to your handheld browsing profile. Open Microphone Permissions immediately. Revoke microphone rights from shopping applications, casual mobile games, and any utility that never records audio."
+      },
+      "on_screen": {
+        "en": "LOCK DOWN MICROPHONE"
+      },
+      "visual": {
+        "description": "Studio condenser microphone illuminated under atmospheric blue and gold rim lighting in a silent recording room.",
+        "search_terms": [
+          "studio microphone glow",
+          "audio level meter",
+          "sound recording booth"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_12"
+    },
+    {
+      "vo": {
+        "en": "Taking back your digital sovereignty begins with toggling these five switches. Which of these hidden settings shocked you the most? Tell me in the comments below, and subscribe for weekly deep dives into hidden tech."
+      },
+      "on_screen": {
+        "en": "TAKE BACK CONTROL"
+      },
+      "visual": {
+        "description": "Silhouette of a man looking out of a high-rise window at an expansive glowing metropolis during blue hour.",
+        "search_terms": [
+          "city skyline twilight",
+          "silhouette man window",
+          "futuristic city lights"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_13"
+    }
+  ],
+  "idea_id": "5-phone-switches-feel-illegal",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 156.0
+  }
+}

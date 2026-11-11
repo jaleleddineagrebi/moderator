@@ -1,0 +1,182 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,86,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,110,1
+Style: Headline,Noto Sans Black,64,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,65,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:12.06,Headline,,0,0,0,,{\fad(150,150)}TURN OFF THESE SWITCHES
+Dialogue: 1,0:00:12.16,0:00:26.03,Headline,,0,0,0,,{\fad(150,150)}FACTORY SETTINGS EXPOSED
+Dialogue: 1,0:00:26.13,0:00:39.15,Headline,,0,0,0,,{\fad(150,150)}5 GHOST WIFI PROBING
+Dialogue: 1,0:00:39.25,0:00:52.53,Headline,,0,0,0,,{\fad(150,150)}DISABLE BACKGROUND SCANNING
+Dialogue: 1,0:00:52.63,0:01:07.22,Headline,,0,0,0,,{\fad(150,150)}4 KEYBOARD TELEMETRY LOGS
+Dialogue: 1,0:01:07.32,0:01:20.24,Headline,,0,0,0,,{\fad(150,150)}CUT TYPING TELEMETRY
+Dialogue: 1,0:01:20.34,0:01:34.92,Headline,,0,0,0,,{\fad(150,150)}3 ACCELEROMETER SPYING
+Dialogue: 1,0:01:35.02,0:01:48.89,Headline,,0,0,0,,{\fad(150,150)}BLOCK GYROSCOPE ACCESS
+Dialogue: 1,0:01:48.99,0:02:01.98,Headline,,0,0,0,,{\fad(150,150)}2 SIGNIFICANT LOCATIONS DOSSIER
+Dialogue: 1,0:02:02.08,0:02:15.63,Headline,,0,0,0,,{\fad(150,150)}PURGE LOCATION LOGS
+Dialogue: 1,0:02:15.73,0:02:30.89,Headline,,0,0,0,,{\fad(150,150)}1 ULTRASONIC AUDIO BEACONS
+Dialogue: 1,0:02:30.99,0:02:46.82,Headline,,0,0,0,,{\fad(150,150)}LOCK DOWN MICROPHONE
+Dialogue: 1,0:02:46.92,0:03:00.65,Headline,,0,0,0,,{\fad(150,150)}TAKE BACK CONTROL
+Dialogue: 0,0:00:00.10,0:00:00.78,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Turn off {\c&H0000E5FF&}these{\c&H00FFFFFF&}
+Dialogue: 0,0:00:00.79,0:00:01.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}five hidden {\c&H0000E5FF&}switches{\c&H00FFFFFF&}
+Dialogue: 0,0:00:01.71,0:00:02.17,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}right{\c&H00FFFFFF&} now
+Dialogue: 0,0:00:02.55,0:00:03.14,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}or your {\c&H0000E5FF&}phone{\c&H00FFFFFF&}
+Dialogue: 0,0:00:03.15,0:00:04.48,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}keeps silently {\c&H0000E5FF&}profiling{\c&H00FFFFFF&}
+Dialogue: 0,0:00:04.50,0:00:05.07,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}life{\c&H00FFFFFF&}
+Dialogue: 0,0:00:05.88,0:00:06.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Stick {\c&H0000E5FF&}around{\c&H00FFFFFF&} for
+Dialogue: 0,0:00:06.71,0:00:07.89,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}number one {\c&H0000E5FF&}because{\c&H00FFFFFF&}
+Dialogue: 0,0:00:07.90,0:00:08.59,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}it {\c&H0000E5FF&}exposes{\c&H00FFFFFF&} a
+Dialogue: 0,0:00:08.60,0:00:09.85,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}hidden {\c&H0000E5FF&}listening{\c&H00FFFFFF&} frequency
+Dialogue: 0,0:00:09.86,0:00:10.71,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}nobody{\c&H00FFFFFF&} warns you
+Dialogue: 0,0:00:10.72,0:00:11.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}about
+Dialogue: 0,0:00:12.21,0:00:13.03,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}When you {\c&H0000E5FF&}unbox{\c&H00FFFFFF&}
+Dialogue: 0,0:00:13.04,0:00:13.97,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a new {\c&H0000E5FF&}smartphone{\c&H00FFFFFF&}
+Dialogue: 0,0:00:14.25,0:00:15.27,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}factory {\c&H0000E5FF&}defaults{\c&H00FFFFFF&} are
+Dialogue: 0,0:00:15.28,0:00:15.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}never{\c&H00FFFFFF&} built for
+Dialogue: 0,0:00:15.93,0:00:16.69,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}privacy{\c&H00FFFFFF&}
+Dialogue: 0,0:00:17.50,0:00:18.42,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}They are {\c&H0000E5FF&}engineered{\c&H00FFFFFF&}
+Dialogue: 0,0:00:18.43,0:00:19.45,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to harvest {\c&H0000E5FF&}background{\c&H00FFFFFF&}
+Dialogue: 0,0:00:19.46,0:00:20.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}telemetry{\c&H00FFFFFF&} and build
+Dialogue: 0,0:00:20.62,0:00:22.07,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}advertising{\c&H00FFFFFF&} dossiers while
+Dialogue: 0,0:00:22.08,0:00:22.71,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}chewing{\c&H00FFFFFF&} through your
+Dialogue: 0,0:00:22.73,0:00:23.22,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}battery
+Dialogue: 0,0:00:24.04,0:00:24.74,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Let us fix
+Dialogue: 0,0:00:24.76,0:00:25.16,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}that
+Dialogue: 0,0:00:26.17,0:00:27.19,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Switch{\c&H00FFFFFF&} number five
+Dialogue: 0,0:00:27.20,0:00:27.95,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is {\c&H0000E5FF&}Wi-Fi{\c&H00FFFFFF&} and
+Dialogue: 0,0:00:27.97,0:00:28.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Bluetooth{\c&H00FFFFFF&} scanning
+Dialogue: 0,0:00:29.75,0:00:30.29,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Even{\c&H00FFFFFF&} when you
+Dialogue: 0,0:00:30.30,0:00:31.31,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}toggle{\c&H00FFFFFF&} Wi-Fi off
+Dialogue: 0,0:00:31.32,0:00:31.75,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}in the {\c&H0000E5FF&}quick{\c&H00FFFFFF&}
+Dialogue: 0,0:00:31.76,0:00:32.16,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}tray
+Dialogue: 0,0:00:32.50,0:00:33.42,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your phone {\c&H0000E5FF&}secretly{\c&H00FFFFFF&}
+Dialogue: 0,0:00:33.44,0:00:34.94,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}broadcasts{\c&H00FFFFFF&} constant radio
+Dialogue: 0,0:00:34.96,0:00:35.78,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}probes{\c&H00FFFFFF&} to map
+Dialogue: 0,0:00:35.79,0:00:36.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}nearby {\c&H0000E5FF&}hardware{\c&H00FFFFFF&} and
+Dialogue: 0,0:00:36.89,0:00:37.57,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}track{\c&H00FFFFFF&} your path
+Dialogue: 0,0:00:37.59,0:00:38.28,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}through{\c&H00FFFFFF&} stores
+Dialogue: 0,0:00:39.30,0:00:40.22,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Open your {\c&H0000E5FF&}settings{\c&H00FFFFFF&}
+Dialogue: 0,0:00:40.39,0:00:41.29,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}search for {\c&H0000E5FF&}Scanning{\c&H00FFFFFF&}
+Dialogue: 0,0:00:41.47,0:00:42.29,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and {\c&H0000E5FF&}disable{\c&H00FFFFFF&} both
+Dialogue: 0,0:00:42.30,0:00:43.41,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Wi-Fi {\c&H0000E5FF&}Scanning{\c&H00FFFFFF&} and
+Dialogue: 0,0:00:43.42,0:00:44.41,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Bluetooth{\c&H00FFFFFF&} Scanning
+Dialogue: 0,0:00:45.24,0:00:45.85,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}phone{\c&H00FFFFFF&} will
+Dialogue: 0,0:00:45.86,0:00:47.09,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}immediately{\c&H00FFFFFF&} stop leaking
+Dialogue: 0,0:00:47.10,0:00:48.26,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your hardware {\c&H0000E5FF&}fingerprint{\c&H00FFFFFF&}
+Dialogue: 0,0:00:48.27,0:00:49.35,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to retail {\c&H0000E5FF&}beacons{\c&H00FFFFFF&}
+Dialogue: 0,0:00:49.36,0:00:50.48,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and {\c&H0000E5FF&}instantly{\c&H00FFFFFF&} recover
+Dialogue: 0,0:00:50.49,0:00:51.66,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}wasted {\c&H0000E5FF&}battery{\c&H00FFFFFF&} life
+Dialogue: 0,0:00:52.68,0:00:53.66,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Switch{\c&H00FFFFFF&} number four
+Dialogue: 0,0:00:53.67,0:00:54.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is {\c&H0000E5FF&}Keyboard{\c&H00FFFFFF&} Cloud
+Dialogue: 0,0:00:54.57,0:00:55.23,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Telemetry
+Dialogue: 0,0:00:56.05,0:00:57.35,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Most default {\c&H0000E5FF&}keyboards{\c&H00FFFFFF&}
+Dialogue: 0,0:00:57.36,0:00:58.66,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}continuously{\c&H00FFFFFF&} upload your
+Dialogue: 0,0:00:58.67,0:01:00.85,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}keystrokes{\c&H00FFFFFF&} unusual vocabulary
+Dialogue: 0,0:01:01.20,0:01:02.47,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and {\c&H0000E5FF&}autocorrect{\c&H00FFFFFF&} habits
+Dialogue: 0,0:01:02.48,0:01:03.29,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to {\c&H0000E5FF&}remote{\c&H00FFFFFF&} cloud
+Dialogue: 0,0:01:03.30,0:01:04.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}servers{\c&H00FFFFFF&} under the
+Dialogue: 0,0:01:04.09,0:01:04.99,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}guise of {\c&H0000E5FF&}predictive{\c&H00FFFFFF&}
+Dialogue: 0,0:01:05.00,0:01:06.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}algorithm {\c&H0000E5FF&}improvements{\c&H00FFFFFF&}
+Dialogue: 0,0:01:07.36,0:01:08.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Dive{\c&H00FFFFFF&} into your
+Dialogue: 0,0:01:08.03,0:01:09.39,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}virtual {\c&H0000E5FF&}keyboard{\c&H00FFFFFF&} settings
+Dialogue: 0,0:01:09.40,0:01:10.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and {\c&H0000E5FF&}turn{\c&H00FFFFFF&} off
+Dialogue: 0,0:01:10.12,0:01:11.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Personalization{\c&H00FFFFFF&} Sharing and
+Dialogue: 0,0:01:11.62,0:01:13.07,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Improve Typing {\c&H0000E5FF&}Telemetry{\c&H00FFFFFF&}
+Dialogue: 0,0:01:13.89,0:01:14.58,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}What you {\c&H0000E5FF&}type{\c&H00FFFFFF&}
+Dialogue: 0,0:01:14.59,0:01:15.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}should remain {\c&H0000E5FF&}private{\c&H00FFFFFF&}
+Dialogue: 0,0:01:15.57,0:01:16.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}between{\c&H00FFFFFF&} your fingers
+Dialogue: 0,0:01:16.44,0:01:17.16,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and your {\c&H0000E5FF&}screen{\c&H00FFFFFF&}
+Dialogue: 0,0:01:17.47,0:01:18.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}not fed into
+Dialogue: 0,0:01:18.16,0:01:19.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}advertising{\c&H00FFFFFF&} models
+Dialogue: 0,0:01:20.39,0:01:21.37,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Switch{\c&H00FFFFFF&} number three
+Dialogue: 0,0:01:21.38,0:01:22.03,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is {\c&H0000E5FF&}Motion{\c&H00FFFFFF&} and
+Dialogue: 0,0:01:22.04,0:01:23.07,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Sensor {\c&H0000E5FF&}Permissions{\c&H00FFFFFF&}
+Dialogue: 0,0:01:23.89,0:01:25.01,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Advertisers{\c&H00FFFFFF&} do not
+Dialogue: 0,0:01:25.02,0:01:25.65,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}just {\c&H0000E5FF&}track{\c&H00FFFFFF&} where
+Dialogue: 0,0:01:25.66,0:01:26.45,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you {\c&H0000E5FF&}walk{\c&H00FFFFFF&} they
+Dialogue: 0,0:01:26.46,0:01:27.03,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}track{\c&H00FFFFFF&} how you
+Dialogue: 0,0:01:27.04,0:01:27.50,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}move
+Dialogue: 0,0:01:28.31,0:01:29.47,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Social{\c&H00FFFFFF&} media apps
+Dialogue: 0,0:01:29.48,0:01:30.78,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}monitor your {\c&H0000E5FF&}gyroscope{\c&H00FFFFFF&}
+Dialogue: 0,0:01:30.79,0:01:32.06,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and {\c&H0000E5FF&}accelerometer{\c&H00FFFFFF&} without
+Dialogue: 0,0:01:32.07,0:01:33.38,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}ever {\c&H0000E5FF&}requesting{\c&H00FFFFFF&} GPS
+Dialogue: 0,0:01:33.39,0:01:34.05,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}access
+Dialogue: 0,0:01:35.07,0:01:35.90,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}They {\c&H0000E5FF&}calculate{\c&H00FFFFFF&} your
+Dialogue: 0,0:01:35.91,0:01:37.31,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}walking{\c&H00FFFFFF&} speed detect
+Dialogue: 0,0:01:37.32,0:01:37.69,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}when you are
+Dialogue: 0,0:01:37.69,0:01:38.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}riding{\c&H00FFFFFF&} a train
+Dialogue: 0,0:01:38.64,0:01:39.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and identify {\c&H0000E5FF&}emotional{\c&H00FFFFFF&}
+Dialogue: 0,0:01:39.94,0:01:40.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}posture{\c&H00FFFFFF&} shifts
+Dialogue: 0,0:01:41.72,0:01:42.40,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Head{\c&H00FFFFFF&} into App
+Dialogue: 0,0:01:42.42,0:01:44.01,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Permissions{\c&H00FFFFFF&} select Physical
+Dialogue: 0,0:01:44.02,0:01:45.27,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Activity{\c&H00FFFFFF&} or Sensors
+Dialogue: 0,0:01:45.54,0:01:46.55,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and {\c&H0000E5FF&}revoke{\c&H00FFFFFF&} access
+Dialogue: 0,0:01:46.57,0:01:47.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}for all {\c&H0000E5FF&}non-fitness{\c&H00FFFFFF&}
+Dialogue: 0,0:01:47.57,0:01:48.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}apps
+Dialogue: 0,0:01:49.03,0:01:49.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Switch{\c&H00FFFFFF&} number two
+Dialogue: 0,0:01:49.94,0:01:51.45,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is {\c&H0000E5FF&}Significant{\c&H00FFFFFF&} Locations
+Dialogue: 0,0:01:52.27,0:01:53.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Buried{\c&H00FFFFFF&} deep inside
+Dialogue: 0,0:01:53.35,0:01:54.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}operating{\c&H00FFFFFF&} system
+Dialogue: 0,0:01:54.37,0:01:55.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is an {\c&H0000E5FF&}automated{\c&H00FFFFFF&}
+Dialogue: 0,0:01:55.13,0:01:56.50,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}dossier {\c&H0000E5FF&}recording{\c&H00FFFFFF&} exact
+Dialogue: 0,0:01:56.51,0:01:57.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}coordinates{\c&H00FFFFFF&} and timestamps
+Dialogue: 0,0:01:57.94,0:01:58.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}for your {\c&H0000E5FF&}home{\c&H00FFFFFF&}
+Dialogue: 0,0:01:58.83,0:01:59.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}office{\c&H00FFFFFF&} and
+Dialogue: 0,0:01:59.86,0:02:00.58,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}every {\c&H0000E5FF&}business{\c&H00FFFFFF&} you
+Dialogue: 0,0:02:00.59,0:02:01.13,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}frequent
+Dialogue: 0,0:02:02.13,0:02:03.14,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Navigate{\c&H00FFFFFF&} to System
+Dialogue: 0,0:02:03.16,0:02:04.30,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Services{\c&H00FFFFFF&} or Google
+Dialogue: 0,0:02:04.31,0:02:05.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Location{\c&H00FFFFFF&} History
+Dialogue: 0,0:02:06.15,0:02:07.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Clear your {\c&H0000E5FF&}entire{\c&H00FFFFFF&}
+Dialogue: 0,0:02:07.01,0:02:08.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}historical{\c&H00FFFFFF&} timeline then
+Dialogue: 0,0:02:08.57,0:02:09.40,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}toggle the {\c&H0000E5FF&}tracking{\c&H00FFFFFF&}
+Dialogue: 0,0:02:09.42,0:02:10.44,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}master{\c&H00FFFFFF&} switch off
+Dialogue: 0,0:02:11.26,0:02:11.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}phone{\c&H00FFFFFF&} does
+Dialogue: 0,0:02:11.89,0:02:12.40,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}not {\c&H0000E5FF&}need{\c&H00FFFFFF&} to
+Dialogue: 0,0:02:12.41,0:02:13.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}maintain{\c&H00FFFFFF&} an archival
+Dialogue: 0,0:02:13.57,0:02:13.99,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}log of your
+Dialogue: 0,0:02:14.00,0:02:14.76,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}daily{\c&H00FFFFFF&} life
+Dialogue: 0,0:02:15.78,0:02:16.74,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Switch{\c&H00FFFFFF&} number one
+Dialogue: 0,0:02:16.75,0:02:17.49,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is the {\c&H0000E5FF&}creepiest{\c&H00FFFFFF&}
+Dialogue: 0,0:02:17.50,0:02:18.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}of all {\c&H0000E5FF&}Ultrasonic{\c&H00FFFFFF&}
+Dialogue: 0,0:02:18.73,0:02:19.90,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Audio Beacon {\c&H0000E5FF&}tracking{\c&H00FFFFFF&}
+Dialogue: 0,0:02:20.72,0:02:22.53,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Smart {\c&H0000E5FF&}televisions{\c&H00FFFFFF&} billboards
+Dialogue: 0,0:02:22.70,0:02:23.76,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and video {\c&H0000E5FF&}commercials{\c&H00FFFFFF&}
+Dialogue: 0,0:02:23.77,0:02:25.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}emit {\c&H0000E5FF&}high-frequency{\c&H00FFFFFF&} acoustic
+Dialogue: 0,0:02:25.34,0:02:26.47,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}signals {\c&H0000E5FF&}inaudible{\c&H00FFFFFF&} to
+Dialogue: 0,0:02:26.49,0:02:27.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}human{\c&H00FFFFFF&} ears but
+Dialogue: 0,0:02:27.71,0:02:28.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}perfectly {\c&H0000E5FF&}detectable{\c&H00FFFFFF&} by
+Dialogue: 0,0:02:28.83,0:02:30.03,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your device {\c&H0000E5FF&}microphone{\c&H00FFFFFF&}
+Dialogue: 0,0:02:31.04,0:02:32.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}This {\c&H0000E5FF&}silently{\c&H00FFFFFF&} links
+Dialogue: 0,0:02:32.09,0:02:32.64,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}what you {\c&H0000E5FF&}watch{\c&H00FFFFFF&}
+Dialogue: 0,0:02:32.66,0:02:33.81,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}on {\c&H0000E5FF&}television{\c&H00FFFFFF&} directly
+Dialogue: 0,0:02:33.82,0:02:34.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to your {\c&H0000E5FF&}handheld{\c&H00FFFFFF&}
+Dialogue: 0,0:02:34.58,0:02:35.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}browsing{\c&H00FFFFFF&} profile
+Dialogue: 0,0:02:36.45,0:02:37.81,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Open Microphone {\c&H0000E5FF&}Permissions{\c&H00FFFFFF&}
+Dialogue: 0,0:02:37.82,0:02:38.49,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}immediately
+Dialogue: 0,0:02:39.31,0:02:40.60,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Revoke {\c&H0000E5FF&}microphone{\c&H00FFFFFF&} rights
+Dialogue: 0,0:02:40.61,0:02:41.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}from shopping {\c&H0000E5FF&}applications{\c&H00FFFFFF&}
+Dialogue: 0,0:02:42.18,0:02:43.38,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}casual{\c&H00FFFFFF&} mobile games
+Dialogue: 0,0:02:43.62,0:02:44.57,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and any {\c&H0000E5FF&}utility{\c&H00FFFFFF&}
+Dialogue: 0,0:02:44.59,0:02:45.42,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}that never {\c&H0000E5FF&}records{\c&H00FFFFFF&}
+Dialogue: 0,0:02:45.44,0:02:45.95,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}audio
+Dialogue: 0,0:02:46.97,0:02:47.74,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Taking{\c&H00FFFFFF&} back your
+Dialogue: 0,0:02:47.75,0:02:49.10,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}digital {\c&H0000E5FF&}sovereignty{\c&H00FFFFFF&} begins
+Dialogue: 0,0:02:49.12,0:02:49.94,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}with {\c&H0000E5FF&}toggling{\c&H00FFFFFF&} these
+Dialogue: 0,0:02:49.95,0:02:50.87,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}five {\c&H0000E5FF&}switches{\c&H00FFFFFF&}
+Dialogue: 0,0:02:51.68,0:02:52.21,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Which{\c&H00FFFFFF&} of these
+Dialogue: 0,0:02:52.23,0:02:53.21,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}hidden {\c&H0000E5FF&}settings{\c&H00FFFFFF&} shocked
+Dialogue: 0,0:02:53.22,0:02:53.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you the {\c&H0000E5FF&}most{\c&H00FFFFFF&}
+Dialogue: 0,0:02:54.69,0:02:55.13,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Tell{\c&H00FFFFFF&} me in
+Dialogue: 0,0:02:55.14,0:02:56.06,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}comments{\c&H00FFFFFF&} below
+Dialogue: 0,0:02:56.37,0:02:57.28,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and {\c&H0000E5FF&}subscribe{\c&H00FFFFFF&} for
+Dialogue: 0,0:02:57.30,0:02:58.28,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}weekly{\c&H00FFFFFF&} deep dives
+Dialogue: 0,0:02:58.29,0:02:59.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}into {\c&H0000E5FF&}hidden{\c&H00FFFFFF&} tech
