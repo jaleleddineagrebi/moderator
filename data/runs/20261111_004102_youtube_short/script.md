@@ -1,20 +1,23 @@
 # The Ghost Hand Floating Glitch
-Estimated narration: en 33.5s
+Estimated narration: en 33.1s
 
-## scene_01 · A man stands firmly within a wooden door frame, preparing for the test.
-EN  [TRY THIS NOW]  Press your arms against a doorway now. Just stand inside the frame.
+## scene_01 · A man standing inside a wooden doorway frame preparing for the test.
+EN  [TRY THIS NOW]  Press your arms against a doorway now.
 
-## scene_02 · Close up of a man's hands pressing forcefully against the sides of a wall.
-EN  [PUSH HARD]  Push outward against the frame as hard as you can. Keep the pressure steady.
+## scene_02 · Close up of male hands pressing forcefully against solid wooden walls.
+EN  [PUSH HARD NOW]  Push your hands outward against the frame as hard as you can.
 
-## scene_03 · Motion graphic showing glowing neural pathways and digital electricity pulses.
-EN  [BRAIN GLITCH]  You are overloading your nervous system. Your brain is stuck sending signals to your muscles.
+## scene_03 · Abstract animation of digital brain synapses firing glowing blue electrical signals.
+EN  [BRAIN OVERLOAD]  Hold steady pressure. This overloads your nervous system and locks your brain signals.
 
-## scene_04 · An hourglass with sand pouring through the center rapidly.
-EN  [DON'T STOP]  But here is the creepy part. Do not stop pushing for ten more seconds.
+## scene_04 · Sand pouring rapidly through a sleek glass hourglass on a dark desk.
+EN  [DON'T STOP YET]  But here is the creepy part. Keep pushing for ten more seconds without stopping.
 
-## scene_05 · A man's feet stepping forward from a dark area into a brightly lit room.
-EN  [RELAX ARMS]  Now step forward and relax. Your arms will start rising like a ghost is pulling them.
+## scene_05 · A man's feet taking a bold step forward onto a polished wooden floor.
+EN  [STEP AND RELAX]  Now step forward and completely relax your shoulders.
 
-## scene_06 · A man's hands slowly floating upward on their own as he looks on in amazement.
-EN  [SUBSCRIBE ]  This glitch is 100 percent real. Subscribe for tomorrow's brain test and comment YES if it worked, which is exactly why
+## scene_06 · A man's arms floating upward effortlessly in a bright room as he looks surprised.
+EN  [INVOLUNTARY FLOAT]  Your arms will involuntarily float upward into the air like invisible strings are pulling them.
+
+## scene_07 · A digital visual representation of a human head glowing with cybernetic brain networks.
+EN  [SUBSCRIBE 🔔]  This reflex is called the Kohnstamm phenomenon. Subscribe for daily mind hacks, comment YES if it worked, and to trigger this glitch...
