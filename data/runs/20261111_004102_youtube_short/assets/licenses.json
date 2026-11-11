@@ -3,60 +3,70 @@
     "scene": "scene_01",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-205283/",
+    "page": "https://pixabay.com/videos/id-181915/",
     "author": "NickyPe",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
     "query": "man standing doorway",
-    "description": "A man stands firmly within a wooden door frame, preparing for the test."
+    "description": "A man standing inside a wooden doorway frame preparing for the test."
   },
   {
     "scene": "scene_02",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-15230/",
-    "author": "2427999",
+    "page": "https://pixabay.com/videos/id-2967/",
+    "author": "starroom",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "man pushing walls",
-    "description": "Close up of a man's hands pressing forcefully against the sides of a wall."
+    "query": "hands pushing wall",
+    "description": "Close up of male hands pressing forcefully against solid wooden walls."
   },
   {
     "scene": "scene_03",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-19600/",
-    "author": "OrcaTec",
+    "page": "https://pixabay.com/videos/id-210573/",
+    "author": "u_xhp5h45w73",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "circuit board animation",
-    "description": "Motion graphic showing glowing neural pathways and digital electricity pulses."
+    "query": "glowing neural network",
+    "description": "Abstract animation of digital brain synapses firing glowing blue electrical signals."
   },
   {
     "scene": "scene_04",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-326081/",
-    "author": "asifsharif",
+    "page": "https://pixabay.com/videos/id-27539/",
+    "author": "socialsudo",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "hourglass flowing sand",
-    "description": "An hourglass with sand pouring through the center rapidly."
+    "query": "sand timer running",
+    "description": "Sand pouring rapidly through a sleek glass hourglass on a dark desk."
   },
   {
     "scene": "scene_05",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-210786/",
+    "page": "https://pixabay.com/videos/id-149452/",
     "author": "Matthias_Groeneveld",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "walking into room",
-    "description": "A man's feet stepping forward from a dark area into a brightly lit room."
+    "query": "walking feet leather shoes",
+    "description": "A man's feet taking a bold step forward onto a polished wooden floor."
   },
   {
     "scene": "scene_06",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-109373/",
-    "author": "overjupiter",
+    "page": "https://pixabay.com/videos/id-168572/",
+    "author": "NickyPe",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "hands floating air",
-    "description": "A man's hands slowly floating upward on their own as he looks on in amazement."
+    "query": "hands rising slow motion",
+    "description": "A man's arms floating upward effortlessly in a bright room as he looks surprised."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-3612/",
+    "author": "Coverr-Free-Footage",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "glowing neon brain",
+    "description": "A digital visual representation of a human head glowing with cybernetic brain networks."
   }
 ]

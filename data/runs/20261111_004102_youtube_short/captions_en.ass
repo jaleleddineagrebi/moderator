@@ -12,43 +12,43 @@ Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 1,0:00:00.05,0:00:05.30,Headline,,0,0,0,,{\fad(150,150)}TRY THIS NOW
-Dialogue: 1,0:00:05.40,0:00:10.71,Headline,,0,0,0,,{\fad(150,150)}PUSH HARD
-Dialogue: 1,0:00:10.81,0:00:16.95,Headline,,0,0,0,,{\fad(150,150)}BRAIN GLITCH
-Dialogue: 1,0:00:17.05,0:00:22.49,Headline,,0,0,0,,{\fad(150,150)}DON'T STOP
-Dialogue: 1,0:00:22.59,0:00:28.79,Headline,,0,0,0,,{\fad(150,150)}RELAX ARMS
-Dialogue: 1,0:00:28.89,0:00:37.87,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 
+Dialogue: 1,0:00:00.05,0:00:02.92,Headline,,0,0,0,,{\fad(150,150)}TRY THIS NOW
+Dialogue: 1,0:00:03.02,0:00:06.80,Headline,,0,0,0,,{\fad(150,150)}PUSH HARD NOW
+Dialogue: 1,0:00:06.90,0:00:12.99,Headline,,0,0,0,,{\fad(150,150)}BRAIN OVERLOAD
+Dialogue: 1,0:00:13.09,0:00:18.86,Headline,,0,0,0,,{\fad(150,150)}DON'T STOP YET
+Dialogue: 1,0:00:18.96,0:00:22.65,Headline,,0,0,0,,{\fad(150,150)}STEP AND RELAX
+Dialogue: 1,0:00:22.75,0:00:28.28,Headline,,0,0,0,,{\fad(150,150)}INVOLUNTARY FLOAT
+Dialogue: 1,0:00:28.38,0:00:37.81,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
 Dialogue: 0,0:00:00.10,0:00:00.85,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Press{\c&H00FFFFFF&} your arms
 Dialogue: 0,0:00:00.86,0:00:01.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}against{\c&H00FFFFFF&} a doorway
 Dialogue: 0,0:00:01.69,0:00:02.09,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}now
-Dialogue: 0,0:00:02.88,0:00:03.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Just stand {\c&H0000E5FF&}inside{\c&H00FFFFFF&}
-Dialogue: 0,0:00:03.94,0:00:04.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}frame{\c&H00FFFFFF&}
-Dialogue: 0,0:00:05.44,0:00:06.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Push {\c&H0000E5FF&}outward{\c&H00FFFFFF&} against
-Dialogue: 0,0:00:06.45,0:00:06.95,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}frame{\c&H00FFFFFF&} as
-Dialogue: 0,0:00:06.96,0:00:07.41,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}hard{\c&H00FFFFFF&} as you
-Dialogue: 0,0:00:07.42,0:00:07.87,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}can
-Dialogue: 0,0:00:08.70,0:00:09.39,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Keep the {\c&H0000E5FF&}pressure{\c&H00FFFFFF&}
-Dialogue: 0,0:00:09.40,0:00:09.85,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}steady
-Dialogue: 0,0:00:10.86,0:00:11.80,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You are {\c&H0000E5FF&}overloading{\c&H00FFFFFF&}
-Dialogue: 0,0:00:11.82,0:00:12.75,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}nervous{\c&H00FFFFFF&} system
-Dialogue: 0,0:00:13.57,0:00:14.21,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}brain{\c&H00FFFFFF&} is
-Dialogue: 0,0:00:14.22,0:00:15.32,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}stuck {\c&H0000E5FF&}sending{\c&H00FFFFFF&} signals
-Dialogue: 0,0:00:15.33,0:00:16.07,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to your {\c&H0000E5FF&}muscles{\c&H00FFFFFF&}
-Dialogue: 0,0:00:17.09,0:00:17.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}But {\c&H0000E5FF&}here{\c&H00FFFFFF&} is
-Dialogue: 0,0:00:17.64,0:00:18.53,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}creepy{\c&H00FFFFFF&} part
-Dialogue: 0,0:00:19.34,0:00:20.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Do not {\c&H0000E5FF&}stop{\c&H00FFFFFF&}
-Dialogue: 0,0:00:20.09,0:00:20.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}pushing{\c&H00FFFFFF&} for ten
-Dialogue: 0,0:00:20.84,0:00:21.62,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}more {\c&H0000E5FF&}seconds{\c&H00FFFFFF&}
-Dialogue: 0,0:00:22.63,0:00:23.65,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Now step {\c&H0000E5FF&}forward{\c&H00FFFFFF&}
-Dialogue: 0,0:00:23.66,0:00:24.40,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and {\c&H0000E5FF&}relax{\c&H00FFFFFF&}
-Dialogue: 0,0:00:25.23,0:00:25.87,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}arms{\c&H00FFFFFF&} will
-Dialogue: 0,0:00:25.89,0:00:26.73,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}start {\c&H0000E5FF&}rising{\c&H00FFFFFF&} like
-Dialogue: 0,0:00:26.75,0:00:27.30,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a {\c&H0000E5FF&}ghost{\c&H00FFFFFF&} is
-Dialogue: 0,0:00:27.31,0:00:27.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}pulling{\c&H00FFFFFF&} them
-Dialogue: 0,0:00:28.94,0:00:29.67,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}This {\c&H0000E5FF&}glitch{\c&H00FFFFFF&} is
-Dialogue: 0,0:00:29.68,0:00:30.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}100{\c&H00FFFFFF&} percent real
-Dialogue: 0,0:00:31.74,0:00:32.98,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Subscribe for {\c&H0000E5FF&}tomorrow's{\c&H00FFFFFF&}
-Dialogue: 0,0:00:32.99,0:00:33.74,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}brain{\c&H00FFFFFF&} test and
-Dialogue: 0,0:00:33.75,0:00:34.53,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} YES if
-Dialogue: 0,0:00:34.54,0:00:35.35,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}it {\c&H0000E5FF&}worked{\c&H00FFFFFF&} which
-Dialogue: 0,0:00:35.36,0:00:36.38,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is {\c&H0000E5FF&}exactly{\c&H00FFFFFF&} why
+Dialogue: 0,0:00:03.07,0:00:03.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Push your {\c&H0000E5FF&}hands{\c&H00FFFFFF&}
+Dialogue: 0,0:00:03.85,0:00:04.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}outward{\c&H00FFFFFF&} against the
+Dialogue: 0,0:00:04.62,0:00:05.28,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}frame{\c&H00FFFFFF&} as hard
+Dialogue: 0,0:00:05.30,0:00:05.95,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}as you can
+Dialogue: 0,0:00:06.95,0:00:08.14,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Hold steady {\c&H0000E5FF&}pressure{\c&H00FFFFFF&}
+Dialogue: 0,0:00:08.95,0:00:09.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}This {\c&H0000E5FF&}overloads{\c&H00FFFFFF&} your
+Dialogue: 0,0:00:09.89,0:00:10.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}nervous{\c&H00FFFFFF&} system and
+Dialogue: 0,0:00:10.85,0:00:11.53,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}locks{\c&H00FFFFFF&} your brain
+Dialogue: 0,0:00:11.54,0:00:12.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}signals
+Dialogue: 0,0:00:13.13,0:00:13.67,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}But {\c&H0000E5FF&}here{\c&H00FFFFFF&} is
+Dialogue: 0,0:00:13.68,0:00:14.57,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}creepy{\c&H00FFFFFF&} part
+Dialogue: 0,0:00:15.38,0:00:16.20,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Keep {\c&H0000E5FF&}pushing{\c&H00FFFFFF&} for
+Dialogue: 0,0:00:16.21,0:00:17.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}ten more {\c&H0000E5FF&}seconds{\c&H00FFFFFF&}
+Dialogue: 0,0:00:17.09,0:00:17.98,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}without {\c&H0000E5FF&}stopping{\c&H00FFFFFF&}
+Dialogue: 0,0:00:19.01,0:00:20.04,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Now step {\c&H0000E5FF&}forward{\c&H00FFFFFF&}
+Dialogue: 0,0:00:20.05,0:00:21.07,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and {\c&H0000E5FF&}completely{\c&H00FFFFFF&} relax
+Dialogue: 0,0:00:21.09,0:00:21.79,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}shoulders{\c&H00FFFFFF&}
+Dialogue: 0,0:00:22.80,0:00:23.48,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}arms{\c&H00FFFFFF&} will
+Dialogue: 0,0:00:23.49,0:00:24.99,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}involuntarily{\c&H00FFFFFF&} float upward
+Dialogue: 0,0:00:25.00,0:00:25.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}into the air
+Dialogue: 0,0:00:25.62,0:00:26.71,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}like {\c&H0000E5FF&}invisible{\c&H00FFFFFF&} strings
+Dialogue: 0,0:00:26.72,0:00:27.41,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}are {\c&H0000E5FF&}pulling{\c&H00FFFFFF&} them
+Dialogue: 0,0:00:28.43,0:00:29.35,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}This {\c&H0000E5FF&}reflex{\c&H00FFFFFF&} is
+Dialogue: 0,0:00:29.36,0:00:30.26,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}called the {\c&H0000E5FF&}Kohnstamm{\c&H00FFFFFF&}
+Dialogue: 0,0:00:30.27,0:00:30.98,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}phenomenon
+Dialogue: 0,0:00:31.79,0:00:32.87,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Subscribe{\c&H00FFFFFF&} for daily
+Dialogue: 0,0:00:32.88,0:00:34.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}mind hacks {\c&H0000E5FF&}comment{\c&H00FFFFFF&}
+Dialogue: 0,0:00:34.19,0:00:34.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}YES if it
+Dialogue: 0,0:00:34.69,0:00:35.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}worked{\c&H00FFFFFF&} and to
+Dialogue: 0,0:00:35.37,0:00:36.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}trigger{\c&H00FFFFFF&} this glitch
