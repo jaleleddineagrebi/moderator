@@ -69,13 +69,13 @@
   "ended_at": null,
   "revision_rounds": 2,
   "cost": {
-    "total_usd": 0.039438,
+    "total_usd": 0.040556,
     "budget_usd": 1.0,
     "by_agent": {
       "trend_researcher": 0.002769,
       "scriptwriter": 0.026476,
       "packaging": 0.001444,
-      "qa_reviewer": 0.008748
+      "qa_reviewer": 0.009866
     }
   },
   "agents": {
@@ -757,6 +757,7 @@
         }
       },
       "outputs": {
+        "voiceover_en": "voiceover_en.mp3",
         "timings_en": "timings_en.json"
       },
       "logs": [
@@ -1141,6 +1142,7 @@
         "strategy": "transitions"
       },
       "outputs": {
+        "video_en": "final_short_en.mp4",
         "captions_en": "captions_en.ass"
       },
       "logs": [
@@ -1217,10 +1219,10 @@
         "packaging"
       ],
       "checkpoint": "C",
-      "status": "running",
-      "progress": 60,
+      "status": "waiting_for_approval",
+      "progress": 100,
       "started_at": "2026-11-12T21:35:17+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-12T21:52:40+00:00",
       "attempt": 4,
       "retries": 0,
       "max_retries": 2,
@@ -1237,6 +1239,7 @@
       "outputs": {
         "report": "qa_report.md",
         "data": "qa_report.json",
+        "video_en": "final_short_en.mp4",
         "thumbnail_en": "thumbnail_en.png"
       },
       "logs": [
@@ -1429,6 +1432,26 @@
           "ts": "2026-11-12T21:44:54+00:00",
           "level": "warning",
           "msg": "'gemini-3.1-flash-lite' returned 503; retrying once in 2s"
+        },
+        {
+          "ts": "2026-11-12T21:52:40+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3.1-flash-lite) answered in 515.6s (tokens in 3499, out 58, thinking 104)"
+        },
+        {
+          "ts": "2026-11-12T21:52:40+00:00",
+          "level": "warning",
+          "msg": "1 blocking issue(s); sending back to: visuals"
+        },
+        {
+          "ts": "2026-11-12T21:52:40+00:00",
+          "level": "info",
+          "msg": "Finished, waiting for your approval"
+        },
+        {
+          "ts": "2026-11-12T21:52:40+00:00",
+          "level": "warning",
+          "msg": "Revision limit (2 rounds) reached; passing the issues to you instead"
         }
       ],
       "errors": [
@@ -1440,7 +1463,7 @@
         }
       ],
       "feedback": [],
-      "cost_usd": 0.008748
+      "cost_usd": 0.009866
     }
   },
   "checkpoints": {
@@ -1487,18 +1510,32 @@
       "type": "approve",
       "step": "qa",
       "route_to": "edit",
-      "status": "idle",
+      "status": "pending",
       "options": [],
       "choice": null,
       "comment": null,
       "decided_at": null
     }
   },
-  "notifications": [],
+  "notifications": [
+    {
+      "ts": "2026-11-12T21:52:40+00:00",
+      "level": "warning",
+      "msg": "Reviewer still had issues after 2 revision rounds. Check its report.",
+      "step": "qa"
+    },
+    {
+      "ts": "2026-11-12T21:52:40+00:00",
+      "level": "action",
+      "msg": "Approval needed: Approve the final videos (never uploaded without your OK)",
+      "step": "qa"
+    }
+  ],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-12T21:45:09+00:00",
+    "exported_at": "2026-11-12T21:52:51+00:00",
     "uploads": [],
-    "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/43310455467"
+    "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/43310455467",
+    "issue_url": "https://github.com/jaleleddineagrebi/moderator/issues/80"
   }
 }
