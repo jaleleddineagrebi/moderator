@@ -1,0 +1,68 @@
+{
+  "niche": "Mind Hacks, AI Secrets, Bizarre Body Science & Hidden Power Dynamics",
+  "languages": [
+    "en"
+  ],
+  "ideas": [
+    {
+      "id": "predictive-math-glitch",
+      "title": "The 5-Second Brain Hack",
+      "angle": "An interactive priming test where the narrator predicts the viewer's thought (Red Hammer) after rapid-fire math. It forces a 100%+ watch rate as viewers stay for the reveal and flood comments to confirm if it worked.",
+      "hook": {
+        "en": "You will fail this 5-second test."
+      },
+      "keywords": [
+        "brain test",
+        "psychology trick",
+        "mind reading",
+        "interactive challenge",
+        "cognitive glitch"
+      ],
+      "reason": "Interactive 'prediction' videos currently dominate the 'For You' feed because they gamify the viewing experience, leading to high completion rates and massive comment-to-view ratios.",
+      "sources": [
+        "Journal of Experimental Psychology: Human Perception and Performance - Semantic Priming effects",
+        "The 'Red Hammer' study on cognitive heuristics"
+      ]
+    },
+    {
+      "id": "dominance-triangle-gaze",
+      "title": "The Power Gaze Secret",
+      "angle": "Demonstrates the 'Triangle Gaze' (looking at left eye, right eye, then forehead) to project instant authority. It uses social survival instincts to grab attention and encourages viewers to save the video for later use.",
+      "hook": {
+        "en": "Control the room using your eyes."
+      },
+      "keywords": [
+        "dark psychology",
+        "body language hacks",
+        "social status",
+        "power dynamics",
+        "influence tricks"
+      ],
+      "reason": "Micro-behavior decoding is a high-retention pillar because it provides 'forbidden' social shortcuts that viewers find immediately applicable in real-world scenarios.",
+      "sources": [
+        "Navarro, J. (2008). What Every BODY is Saying",
+        "Research on 'Social vs. Power Gazing' in evolutionary psychology"
+      ]
+    },
+    {
+      "id": "bi-stable-audio-loop",
+      "title": "The Impossible Audio Glitch",
+      "angle": "A multi-stable perception test where the viewer hears different words depending on which text they read on screen. This creates an infinite loop effect as viewers re-watch to hear the 'other' word, skyrocketing APV.",
+      "hook": {
+        "en": "You’re hearing two things at once."
+      },
+      "keywords": [
+        "brain glitch",
+        "audio illusion",
+        "sensory trick",
+        "mind blown",
+        "perception test"
+      ],
+      "reason": "Bi-stable illusions (like 'Green Needle' or 'Brainstorm') are viral gold because they prove the brain is 'lying' to the viewer, triggering an immediate urge to share and verify with others.",
+      "sources": [
+        "The McGurk Effect - sensory integration research",
+        "Nature Communications: Top-down processing in speech perception"
+      ]
+    }
+  ]
+}
