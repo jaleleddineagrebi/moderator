@@ -1,0 +1,120 @@
+{
+  "title": "The Doorframe Arm Glitch",
+  "scenes": [
+    {
+      "vo": {
+        "en": "Press your arms here right now."
+      },
+      "on_screen": {
+        "en": "TEST YOUR BODY"
+      },
+      "visual": {
+        "description": "A man points directly at the camera with an intense, focused expression in a dimly lit room.",
+        "search_terms": [
+          "man pointing camera",
+          "serious man face",
+          "direct eye contact"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Find a doorway and push the back of your hands against the frame as hard as you possibly can."
+      },
+      "on_screen": {
+        "en": "PUSH THE DOORFRAME"
+      },
+      "visual": {
+        "description": "Close up of a man's tensed hands pressing outward against a wooden door frame.",
+        "search_terms": [
+          "man pushing wall",
+          "hands on doorway",
+          "muscle tension hands"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Keep pushing. Your brain is sending a constant electrical signal to your muscles, but your arms aren't moving."
+      },
+      "on_screen": {
+        "en": "BRAIN SIGNAL OVERLOAD"
+      },
+      "visual": {
+        "description": "Abstract digital animation of glowing blue neural pathways and electrical pulses moving fast.",
+        "search_terms": [
+          "neural network glowing",
+          "abstract blue energy",
+          "digital brain pulses"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "Wait, it gets even weirder. Hold it for ten more seconds until your shoulders literally start to shake."
+      },
+      "on_screen": {
+        "en": "IT GETS WEIRDER"
+      },
+      "visual": {
+        "description": "Extreme close up of a man's shoulder muscles twitching and vibrating under heavy physical strain.",
+        "search_terms": [
+          "muscle twitching arm",
+          "man tensed shoulder",
+          "shaking muscles"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Now, step away and let your arms hang loose. Watch as they float up involuntarily like you’re being possessed."
+      },
+      "on_screen": {
+        "en": "INVOLUNTARY FLOATING"
+      },
+      "visual": {
+        "description": "A man stands in a hallway and his arms slowly rise up to his sides without him moving them.",
+        "search_terms": [
+          "man arms rising",
+          "slow motion levitation",
+          "surprised man expression"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "This is the Kohnstamm reflex, a brain hack that overrides your control. Subscribe for more tests and comment YES if it worked, which is exactly why"
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "A man looks at his hands in disbelief then looks up to smile and point at a digital button.",
+        "search_terms": [
+          "man smiling camera",
+          "hand clicking screen",
+          "satisfied man face"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    }
+  ],
+  "idea_id": "paralyzed-arm-glitch",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 38.5
+  }
+}
