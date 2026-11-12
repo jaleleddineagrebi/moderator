@@ -1,0 +1,138 @@
+{
+  "title": "Why Expensive Restaurants Removed Dollar Signs",
+  "scenes": [
+    {
+      "vo": {
+        "en": "Look closely at this menu right now."
+      },
+      "on_screen": {
+        "en": "MENU MIND TRICK"
+      },
+      "visual": {
+        "description": "A close-up of a man's hands holding a minimalist restaurant menu in a dimly lit, high-end environment.",
+        "search_terms": [
+          "man holding menu",
+          "close up hand",
+          "restaurant menu"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Ever notice why high-end restaurants deleted the dollar signs? It’s not just a minimalist vibe—it’s a calculated mental trap."
+      },
+      "on_screen": {
+        "en": "DELETING THE DOLLAR"
+      },
+      "visual": {
+        "description": "A pen crossing out a dollar sign symbol on a piece of paper, leaving only the digits behind.",
+        "search_terms": [
+          "ink pen writing",
+          "white paper numbers",
+          "menu layout"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Cornell researchers discovered that removing currency symbols bypasses your brain's natural resistance to spending cash."
+      },
+      "on_screen": {
+        "en": "THE PAIN OF PAYING"
+      },
+      "visual": {
+        "description": "A close-up of a man's face looking thoughtful in a science lab setting with blue lighting.",
+        "search_terms": [
+          "human brain model",
+          "thinking man face",
+          "science lab"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "Wait until you see the creepy part. This simple tweak makes diners spend eight percent more without noticing."
+      },
+      "on_screen": {
+        "en": "YOU SPEND 8% MORE"
+      },
+      "visual": {
+        "description": "A luxury meal being served on a table with a waiter's hand placing a plate, followed by cash falling in slow motion.",
+        "search_terms": [
+          "waiter serving plate",
+          "steak on plate",
+          "dollar bills falling"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Test yourself. Which price makes you hesitate: twenty-five dollars with a symbol, or just the raw number twenty-five?"
+      },
+      "on_screen": {
+        "en": "WHICH FEELS CHEAPER?"
+      },
+      "visual": {
+        "description": "Two different prices appearing on a black chalkboard, one with a dollar sign and one without.",
+        "search_terms": [
+          "blackboard math",
+          "white numbers",
+          "price tag"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "That tiny symbol triggers the 'pain of paying.' Without it, your subconscious treats the price like a harmless point score."
+      },
+      "on_screen": {
+        "en": "IT'S JUST A NUMBER"
+      },
+      "visual": {
+        "description": "A man tapping a credit card on a payment terminal in a fast, modern transaction.",
+        "search_terms": [
+          "credit card tap",
+          "man paying bill",
+          "hand giving cash"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for daily mind hacks and comment your local burger price. This subconscious trick works because..."
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "A fast-paced timelapse of a city street at night with a hand holding a smartphone in the foreground.",
+        "search_terms": [
+          "city street timelapse",
+          "hand using smartphone",
+          "mouse clicking button"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "menu-currency-trick",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 41.1
+  }
+}
