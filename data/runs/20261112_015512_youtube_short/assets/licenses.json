@@ -3,70 +3,70 @@
     "scene": "scene_01",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-7817/",
-    "author": "Qamar-Iqbal76",
+    "page": "https://pixabay.com/videos/id-1823/",
+    "author": "HeLLuX",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "man holding menu",
-    "description": "A close-up of a man's hands holding a minimalist restaurant menu in a dimly lit, high-end environment."
+    "query": "man opening menu",
+    "description": "A close-up of a man's hands opening a sleek leather menu inside a luxurious restaurant."
   },
   {
     "scene": "scene_02",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-180776/",
-    "author": "Darioguzben",
+    "page": "https://pixabay.com/videos/id-107635/",
+    "author": "yousafbhutta",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "ink pen writing",
-    "description": "A pen crossing out a dollar sign symbol on a piece of paper, leaving only the digits behind."
+    "query": "man drafting design",
+    "description": "A male designer using a digital stylus to erase currency icons on a tablet screen."
   },
   {
     "scene": "scene_03",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-267242/",
-    "author": "Paashuu",
+    "page": "https://pixabay.com/videos/id-148596/",
+    "author": "Domka_1611",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "human brain model",
-    "description": "A close-up of a man's face looking thoughtful in a science lab setting with blue lighting."
+    "query": "man presenting chart",
+    "description": "A male professor pointing at modern financial charts projected inside a university auditorium."
   },
   {
     "scene": "scene_04",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-254753/",
-    "author": "xBriantcx",
+    "page": "https://pixabay.com/videos/id-382936/",
+    "author": "Kanenori",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "waiter serving plate",
-    "description": "A luxury meal being served on a table with a waiter's hand placing a plate, followed by cash falling in slow motion."
+    "query": "waiter placing plate",
+    "description": "A waiter placing a gourmet dish onto a wooden table as golden coins stack up beside it."
   },
   {
     "scene": "scene_05",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-35449/",
-    "author": "ninosouza",
+    "page": "https://pixabay.com/videos/id-710/",
+    "author": "geralt",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "blackboard math",
-    "description": "Two different prices appearing on a black chalkboard, one with a dollar sign and one without."
+    "query": "man writing chalk",
+    "description": "A man writing two different price tags onto a black chalkboard using white chalk."
   },
   {
     "scene": "scene_06",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-147075/",
-    "author": "mariya_m",
+    "page": "https://pixabay.com/videos/id-3757/",
+    "author": "Joshua_Willson",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "credit card tap",
-    "description": "A man tapping a credit card on a payment terminal in a fast, modern transaction."
+    "query": "man paying contactless",
+    "description": "A male customer tapping his smart device against a modern credit card payment terminal."
   },
   {
     "scene": "scene_07",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-20581/",
-    "author": "ChristianBodhi",
+    "page": "https://pixabay.com/videos/id-130331/",
+    "author": "blackmarketmusic",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "city street timelapse",
-    "description": "A fast-paced timelapse of a city street at night with a hand holding a smartphone in the foreground."
+    "query": "city night timelapse",
+    "description": "A fast-moving night time-lapse of neon city lights reflected in high-rise windows."
   }
 ]
