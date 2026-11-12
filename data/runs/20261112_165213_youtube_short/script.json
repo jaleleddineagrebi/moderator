@@ -1,0 +1,138 @@
+{
+  "title": "The 1-Second Test to Expose Fake AI Callers",
+  "scenes": [
+    {
+      "vo": {
+        "en": "Say this word to spot fake callers!"
+      },
+      "on_screen": {
+        "en": "SPOT FAKE CALLERS"
+      },
+      "visual": {
+        "description": "Male hand holding a glowing smartphone ringing in a dimly lit dark neon room.",
+        "search_terms": [
+          "ringing smartphone hand",
+          "incoming call phone",
+          "cyber security tech"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "AI voice clones can now mimic your family's exact voice in real time."
+      },
+      "on_screen": {
+        "en": "AI CLONES YOUR VOICE"
+      },
+      "visual": {
+        "description": "Digital audio frequency soundwaves dancing across a computer monitor next to a man wearing headphones.",
+        "search_terms": [
+          "sound wave screen",
+          "man headphones listening",
+          "digital audio frequency"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "When a suspect caller asks for help, interrupt them mid-sentence with a random word like 'Pineapple'."
+      },
+      "on_screen": {
+        "en": "INTERRUPT THEM MID SENTENCE"
+      },
+      "visual": {
+        "description": "Extreme close-up of a man speaking into a professional studio microphone with neon lighting.",
+        "search_terms": [
+          "man speaking microphone",
+          "close up talking mouth",
+          "voice recording studio"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "But here is the creepy part most people miss."
+      },
+      "on_screen": {
+        "en": "THE CREEPY PART"
+      },
+      "visual": {
+        "description": "Digital glitch effect flashing over a massive server rack in a dark data center.",
+        "search_terms": [
+          "server room glitch",
+          "data center lights",
+          "cyber glitch matrix"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Human brains overlap speech instantly. But AI live-translators stutter and drop audio trying to process unexpected interruptions."
+      },
+      "on_screen": {
+        "en": "AI CANNOT HANDLE OVERLAP"
+      },
+      "visual": {
+        "description": "Macro shot of sand trickling through an hourglass next to a glowing microchip circuit.",
+        "search_terms": [
+          "hourglass sand time",
+          "microchip circuit glowing",
+          "processing code screen"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "If they freeze for even one second, hang up immediately."
+      },
+      "on_screen": {
+        "en": "HANG UP IMMEDIATELY"
+      },
+      "visual": {
+        "description": "A man's hand slamming down a smartphone to end a call aggressively.",
+        "search_terms": [
+          "hand pressing red button",
+          "phone call disconnect",
+          "man ending phone call"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for daily AI safety hacks, and comment your secret family code word below! Always test suspicious callers, so the moment your phone rings..."
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "A high-tech digital lock icon snapping shut over a glowing security vault background.",
+        "search_terms": [
+          "cyber security lock",
+          "digital privacy shield",
+          "glowing tech vault"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "spot-ai-voice-clones",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 34.9
+  }
+}
