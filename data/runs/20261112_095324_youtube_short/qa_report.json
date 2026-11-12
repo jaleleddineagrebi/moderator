@@ -1,12 +1,12 @@
 {
   "passed": false,
-  "revision_round": 0,
+  "revision_round": 1,
   "checks": [
     {
       "check": "length",
       "lang": "en",
       "ok": true,
-      "detail": "42.3s (must be under 60s; target 32-50s)",
+      "detail": "40.8s (must be under 60s; target 32-50s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -14,7 +14,7 @@
       "check": "target length",
       "lang": "en",
       "ok": true,
-      "detail": "42.3s",
+      "detail": "40.8s",
       "send_to": null,
       "severity": "minor"
     },
@@ -46,7 +46,7 @@
       "check": "loudness",
       "lang": "en",
       "ok": true,
-      "detail": "-14.1 LUFS, peak -1.4 dBFS (target -14 LUFS, peak <= -1)",
+      "detail": "-14.2 LUFS, peak -1.4 dBFS (target -14 LUFS, peak <= -1)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -62,7 +62,7 @@
       "check": "caption sync",
       "lang": "en",
       "ok": true,
-      "detail": "95 words, 38 caption events",
+      "detail": "94 words, 37 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -94,16 +94,16 @@
       "check": "accuracy review",
       "lang": "en",
       "ok": false,
-      "detail": "The claim that 98 percent of people choose a red hammer is scientifically unproven and widely considered a popular myth rather than a psychological fact. Change 'Ninety-eight percent' to 'Most' to maintain accuracy.",
+      "detail": "The VO says 'Pick a whole number between twelve and five'. Usually, ranges are stated from lowest to highest. It should be 'between five and twelve'.",
       "send_to": "script",
       "severity": "blocker"
     },
     {
       "check": "people rule",
       "lang": null,
-      "ok": false,
-      "detail": "scene_02: A woman is clearly visible on an outdoor LED screen in the background of the third frame.. Replace with footage without women (a face-only close-up is the only exception).",
-      "send_to": "visuals",
+      "ok": true,
+      "detail": "no women beyond face close-ups in 7 scenes and 1 thumbnail(s)",
+      "send_to": null,
       "severity": "blocker"
     }
   ]
