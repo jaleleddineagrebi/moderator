@@ -1,6 +1,6 @@
 {
   "voice": "en-US-AriaNeural",
-  "duration": 49.404082,
+  "duration": 44.100068,
   "scenes": [
     {
       "scene": "scene_01",
@@ -47,7 +47,7 @@
     {
       "scene": "scene_02",
       "start": 2.922,
-      "end": 11.346,
+      "end": 10.026,
       "words": [
         {
           "start": 3.019,
@@ -56,568 +56,518 @@
         },
         {
           "start": 3.302,
-          "end": 3.656,
+          "end": 3.668,
           "text": "notice"
         },
         {
-          "start": 3.668,
-          "end": 3.821,
+          "start": 3.68,
+          "end": 3.904,
           "text": "why"
         },
         {
-          "start": 3.833,
-          "end": 4.198,
-          "text": "high-end"
+          "start": 3.915,
+          "end": 4.47,
+          "text": "expensive"
         },
         {
-          "start": 4.21,
-          "end": 4.776,
+          "start": 4.481,
+          "end": 5.036,
           "text": "restaurants"
         },
         {
-          "start": 4.788,
-          "end": 5.177,
+          "start": 5.047,
+          "end": 5.484,
           "text": "deleted"
         },
         {
-          "start": 5.189,
-          "end": 5.26,
-          "text": "the"
+          "start": 5.496,
+          "end": 5.684,
+          "text": "all"
         },
         {
-          "start": 5.272,
-          "end": 5.578,
+          "start": 5.696,
+          "end": 6.003,
           "text": "dollar"
         },
         {
-          "start": 5.59,
-          "end": 6.132,
+          "start": 6.014,
+          "end": 6.569,
           "text": "signs"
         },
         {
-          "start": 6.943,
-          "end": 7.155,
-          "text": "It’s"
+          "start": 7.38,
+          "end": 7.533,
+          "text": "It"
         },
         {
-          "start": 7.167,
-          "end": 7.415,
+          "start": 7.545,
+          "end": 7.651,
+          "text": "is"
+        },
+        {
+          "start": 7.663,
+          "end": 7.898,
           "text": "not"
         },
         {
-          "start": 7.427,
-          "end": 7.674,
+          "start": 7.91,
+          "end": 8.146,
           "text": "just"
         },
         {
-          "start": 7.686,
-          "end": 7.722,
-          "text": "a"
-        },
-        {
-          "start": 7.733,
-          "end": 8.24,
+          "start": 8.158,
+          "end": 8.653,
           "text": "minimalist"
         },
         {
-          "start": 8.252,
-          "end": 8.606,
-          "text": "vibe"
-        },
-        {
-          "start": 8.901,
-          "end": 9.007,
-          "text": "it’s"
-        },
-        {
-          "start": 9.019,
-          "end": 9.078,
-          "text": "a"
-        },
-        {
-          "start": 9.089,
-          "end": 9.738,
-          "text": "calculated"
-        },
-        {
-          "start": 9.75,
-          "end": 10.056,
-          "text": "mental"
-        },
-        {
-          "start": 10.068,
-          "end": 10.516,
-          "text": "trap"
+          "start": 8.665,
+          "end": 9.196,
+          "text": "design"
         }
       ]
     },
     {
       "scene": "scene_03",
-      "start": 11.436,
-      "end": 18.636,
+      "start": 10.116,
+      "end": 16.788,
       "words": [
         {
-          "start": 11.533,
-          "end": 11.946,
+          "start": 10.213,
+          "end": 10.638,
           "text": "Cornell"
         },
         {
-          "start": 11.958,
-          "end": 12.536,
+          "start": 10.649,
+          "end": 11.239,
           "text": "researchers"
         },
         {
-          "start": 12.547,
-          "end": 13.113,
-          "text": "discovered"
+          "start": 11.251,
+          "end": 11.64,
+          "text": "proved"
         },
         {
-          "start": 13.125,
-          "end": 13.267,
+          "start": 11.652,
+          "end": 11.793,
           "text": "that"
         },
         {
-          "start": 13.278,
-          "end": 13.703,
+          "start": 11.805,
+          "end": 12.23,
           "text": "removing"
         },
         {
-          "start": 13.715,
-          "end": 14.151,
+          "start": 12.241,
+          "end": 12.701,
           "text": "currency"
         },
         {
-          "start": 14.163,
-          "end": 14.552,
+          "start": 12.713,
+          "end": 13.114,
           "text": "symbols"
         },
         {
-          "start": 14.564,
-          "end": 15.248,
+          "start": 13.126,
+          "end": 13.586,
+          "text": "quietly"
+        },
+        {
+          "start": 13.598,
+          "end": 14.27,
           "text": "bypasses"
         },
         {
-          "start": 15.26,
-          "end": 15.389,
+          "start": 14.282,
+          "end": 14.399,
           "text": "your"
         },
         {
-          "start": 15.401,
-          "end": 15.743,
-          "text": "brain's"
-        },
-        {
-          "start": 15.755,
-          "end": 16.156,
+          "start": 14.411,
+          "end": 14.812,
           "text": "natural"
         },
         {
-          "start": 16.168,
-          "end": 16.745,
-          "text": "resistance"
-        },
-        {
-          "start": 16.757,
-          "end": 16.852,
-          "text": "to"
-        },
-        {
-          "start": 16.863,
-          "end": 17.288,
+          "start": 14.824,
+          "end": 15.213,
           "text": "spending"
         },
         {
-          "start": 17.3,
-          "end": 17.807,
-          "text": "cash"
+          "start": 15.225,
+          "end": 15.956,
+          "text": "resistance"
         }
       ]
     },
     {
       "scene": "scene_04",
-      "start": 18.726,
-      "end": 25.95,
+      "start": 16.878,
+      "end": 23.934,
       "words": [
         {
-          "start": 18.823,
-          "end": 19.13,
+          "start": 16.975,
+          "end": 17.282,
           "text": "Wait"
         },
         {
-          "start": 19.142,
-          "end": 19.413,
+          "start": 17.294,
+          "end": 17.565,
           "text": "until"
         },
         {
-          "start": 19.425,
-          "end": 19.554,
+          "start": 17.577,
+          "end": 17.706,
           "text": "you"
         },
         {
-          "start": 19.566,
-          "end": 19.755,
+          "start": 17.718,
+          "end": 17.907,
           "text": "see"
         },
         {
-          "start": 19.767,
-          "end": 19.861,
+          "start": 17.919,
+          "end": 18.013,
           "text": "the"
         },
         {
-          "start": 19.873,
-          "end": 20.191,
+          "start": 18.025,
+          "end": 18.343,
           "text": "creepy"
         },
         {
-          "start": 20.203,
-          "end": 20.651,
+          "start": 18.355,
+          "end": 18.803,
           "text": "part"
         },
         {
-          "start": 21.474,
-          "end": 21.733,
+          "start": 19.626,
+          "end": 19.873,
           "text": "This"
         },
         {
-          "start": 21.745,
-          "end": 22.04,
+          "start": 19.885,
+          "end": 20.18,
           "text": "simple"
         },
         {
-          "start": 22.051,
-          "end": 22.382,
-          "text": "tweak"
+          "start": 20.192,
+          "end": 20.652,
+          "text": "format"
         },
         {
-          "start": 22.393,
-          "end": 22.653,
-          "text": "makes"
+          "start": 20.663,
+          "end": 21.064,
+          "text": "forces"
         },
         {
-          "start": 22.665,
-          "end": 23.089,
-          "text": "diners"
+          "start": 21.076,
+          "end": 21.406,
+          "text": "people"
         },
         {
-          "start": 23.101,
-          "end": 23.419,
+          "start": 21.418,
+          "end": 21.501,
+          "text": "to"
+        },
+        {
+          "start": 21.512,
+          "end": 21.854,
           "text": "spend"
         },
         {
-          "start": 23.431,
-          "end": 23.62,
-          "text": "eight"
+          "start": 21.866,
+          "end": 22.055,
+          "text": "over"
         },
         {
-          "start": 23.632,
-          "end": 23.962,
+          "start": 22.067,
+          "end": 22.361,
+          "text": "five"
+        },
+        {
+          "start": 22.373,
+          "end": 22.703,
           "text": "percent"
         },
         {
-          "start": 23.974,
-          "end": 24.198,
+          "start": 22.715,
+          "end": 23.093,
           "text": "more"
-        },
-        {
-          "start": 24.21,
-          "end": 24.54,
-          "text": "without"
-        },
-        {
-          "start": 24.551,
-          "end": 25.117,
-          "text": "noticing"
         }
       ]
     },
     {
       "scene": "scene_05",
-      "start": 26.04,
-      "end": 33.984,
+      "start": 24.024,
+      "end": 31.224,
       "words": [
         {
-          "start": 26.137,
-          "end": 26.467,
+          "start": 24.121,
+          "end": 24.451,
           "text": "Test"
         },
         {
-          "start": 26.479,
-          "end": 27.057,
+          "start": 24.463,
+          "end": 25.041,
           "text": "yourself"
         },
         {
-          "start": 27.868,
-          "end": 28.151,
+          "start": 25.852,
+          "end": 26.135,
           "text": "Which"
         },
         {
-          "start": 28.163,
-          "end": 28.528,
+          "start": 26.147,
+          "end": 26.477,
           "text": "price"
         },
         {
-          "start": 28.54,
-          "end": 28.788,
+          "start": 26.489,
+          "end": 26.736,
           "text": "makes"
         },
         {
-          "start": 28.799,
-          "end": 28.894,
+          "start": 26.748,
+          "end": 26.842,
           "text": "you"
         },
         {
-          "start": 28.906,
-          "end": 29.436,
-          "text": "hesitate"
+          "start": 26.854,
+          "end": 27.279,
+          "text": "pause"
         },
         {
-          "start": 29.684,
-          "end": 30.25,
+          "start": 27.55,
+          "end": 28.116,
           "text": "twenty-five"
         },
         {
-          "start": 30.262,
-          "end": 30.639,
+          "start": 28.128,
+          "end": 28.505,
           "text": "dollars"
         },
         {
-          "start": 30.651,
-          "end": 30.769,
+          "start": 28.517,
+          "end": 28.623,
           "text": "with"
         },
         {
-          "start": 30.781,
-          "end": 30.84,
+          "start": 28.635,
+          "end": 28.694,
           "text": "a"
         },
         {
-          "start": 30.851,
-          "end": 31.229,
+          "start": 28.706,
+          "end": 29.095,
           "text": "symbol"
         },
         {
-          "start": 31.453,
-          "end": 31.547,
+          "start": 29.331,
+          "end": 29.425,
           "text": "or"
         },
         {
-          "start": 31.559,
-          "end": 31.807,
+          "start": 29.437,
+          "end": 29.661,
           "text": "just"
         },
         {
-          "start": 31.818,
-          "end": 31.913,
-          "text": "the"
-        },
-        {
-          "start": 31.924,
-          "end": 32.089,
+          "start": 29.673,
+          "end": 29.826,
           "text": "raw"
         },
         {
-          "start": 32.101,
-          "end": 32.408,
-          "text": "number"
-        },
-        {
-          "start": 32.42,
-          "end": 33.163,
-          "text": "twenty-five"
+          "start": 29.838,
+          "end": 30.404,
+          "text": "numbers"
         }
       ]
     },
     {
       "scene": "scene_06",
-      "start": 34.074,
-      "end": 41.946,
+      "start": 31.314,
+      "end": 38.394,
       "words": [
         {
-          "start": 34.171,
-          "end": 34.478,
+          "start": 31.411,
+          "end": 31.694,
           "text": "That"
         },
         {
-          "start": 34.49,
-          "end": 34.832,
-          "text": "tiny"
+          "start": 31.706,
+          "end": 32.013,
+          "text": "dollar"
         },
         {
-          "start": 34.843,
-          "end": 35.209,
+          "start": 32.024,
+          "end": 32.355,
           "text": "symbol"
         },
         {
-          "start": 35.221,
-          "end": 35.61,
+          "start": 32.366,
+          "end": 32.791,
           "text": "triggers"
         },
         {
-          "start": 35.622,
-          "end": 35.716,
-          "text": "the"
+          "start": 32.803,
+          "end": 33.038,
+          "text": "real"
         },
         {
-          "start": 35.763,
-          "end": 36.011,
+          "start": 33.05,
+          "end": 33.322,
           "text": "pain"
         },
         {
-          "start": 36.023,
-          "end": 36.105,
-          "text": "of"
+          "start": 33.333,
+          "end": 33.416,
+          "text": "in"
         },
         {
-          "start": 36.117,
-          "end": 36.565,
-          "text": "paying"
-        },
-        {
-          "start": 37.376,
-          "end": 37.8,
-          "text": "Without"
-        },
-        {
-          "start": 37.812,
-          "end": 37.965,
-          "text": "it"
-        },
-        {
-          "start": 38.119,
-          "end": 38.26,
+          "start": 33.428,
+          "end": 33.546,
           "text": "your"
         },
         {
-          "start": 38.272,
-          "end": 38.921,
-          "text": "subconscious"
+          "start": 33.557,
+          "end": 33.97,
+          "text": "brain"
         },
         {
-          "start": 38.933,
-          "end": 39.239,
+          "start": 34.793,
+          "end": 35.194,
+          "text": "Without"
+        },
+        {
+          "start": 35.206,
+          "end": 35.347,
+          "text": "it"
+        },
+        {
+          "start": 35.453,
+          "end": 35.571,
+          "text": "your"
+        },
+        {
+          "start": 35.583,
+          "end": 35.878,
+          "text": "mind"
+        },
+        {
+          "start": 35.889,
+          "end": 36.208,
           "text": "treats"
         },
         {
-          "start": 39.251,
-          "end": 39.345,
-          "text": "the"
+          "start": 36.22,
+          "end": 36.585,
+          "text": "spending"
         },
         {
-          "start": 39.357,
-          "end": 39.699,
-          "text": "price"
-        },
-        {
-          "start": 39.711,
-          "end": 39.852,
+          "start": 36.597,
+          "end": 36.762,
           "text": "like"
         },
         {
-          "start": 39.864,
-          "end": 39.911,
+          "start": 36.774,
+          "end": 36.845,
           "text": "a"
         },
         {
-          "start": 39.923,
-          "end": 40.348,
-          "text": "harmless"
+          "start": 36.856,
+          "end": 37.104,
+          "text": "game"
         },
         {
-          "start": 40.359,
-          "end": 40.619,
-          "text": "point"
-        },
-        {
-          "start": 40.631,
-          "end": 41.102,
+          "start": 37.116,
+          "end": 37.564,
           "text": "score"
         }
       ]
     },
     {
       "scene": "scene_07",
-      "start": 42.036,
-      "end": 49.404,
+      "start": 38.484,
+      "end": 44.1,
       "words": [
         {
-          "start": 42.133,
-          "end": 42.746,
+          "start": 38.581,
+          "end": 39.194,
           "text": "Subscribe"
         },
         {
-          "start": 42.758,
-          "end": 42.911,
+          "start": 39.206,
+          "end": 39.359,
           "text": "for"
         },
         {
-          "start": 42.923,
-          "end": 43.218,
+          "start": 39.371,
+          "end": 39.666,
           "text": "daily"
         },
         {
-          "start": 43.23,
-          "end": 43.501,
+          "start": 39.678,
+          "end": 39.937,
           "text": "mind"
         },
         {
-          "start": 43.513,
-          "end": 43.878,
+          "start": 39.949,
+          "end": 40.303,
           "text": "hacks"
         },
         {
-          "start": 43.89,
-          "end": 44.02,
+          "start": 40.315,
+          "end": 40.433,
           "text": "and"
         },
         {
-          "start": 44.032,
-          "end": 44.445,
+          "start": 40.444,
+          "end": 40.845,
           "text": "comment"
         },
         {
-          "start": 44.456,
-          "end": 44.574,
+          "start": 40.857,
+          "end": 40.975,
           "text": "your"
         },
         {
-          "start": 44.586,
-          "end": 44.881,
+          "start": 40.987,
+          "end": 41.282,
           "text": "local"
         },
         {
-          "start": 44.893,
-          "end": 45.187,
+          "start": 41.293,
+          "end": 41.588,
           "text": "burger"
         },
         {
-          "start": 45.199,
-          "end": 45.706,
+          "start": 41.6,
+          "end": 42.013,
           "text": "price"
         },
         {
-          "start": 46.517,
-          "end": 46.777,
-          "text": "This"
+          "start": 42.26,
+          "end": 42.414,
+          "text": "which"
         },
         {
-          "start": 46.788,
-          "end": 47.425,
-          "text": "subconscious"
+          "start": 42.426,
+          "end": 42.52,
+          "text": "is"
         },
         {
-          "start": 47.437,
-          "end": 47.673,
-          "text": "trick"
+          "start": 42.532,
+          "end": 42.697,
+          "text": "why"
         },
         {
-          "start": 47.685,
-          "end": 48.003,
-          "text": "works"
+          "start": 42.709,
+          "end": 42.85,
+          "text": "you"
         },
         {
-          "start": 48.015,
-          "end": 48.557,
-          "text": "because"
+          "start": 42.862,
+          "end": 43.286,
+          "text": "should"
         }
       ]
     }

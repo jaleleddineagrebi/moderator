@@ -9,11 +9,11 @@
         "en": "MENU MIND TRICK"
       },
       "visual": {
-        "description": "A close-up of a man's hands holding a minimalist restaurant menu in a dimly lit, high-end environment.",
+        "description": "A close-up of a man's hands opening a sleek leather menu inside a luxurious restaurant.",
         "search_terms": [
-          "man holding menu",
-          "close up hand",
-          "restaurant menu"
+          "man opening menu",
+          "luxury restaurant table",
+          "hands holding folder"
         ],
         "prefer": "video"
       },
@@ -21,17 +21,17 @@
     },
     {
       "vo": {
-        "en": "Ever notice why high-end restaurants deleted the dollar signs? It’s not just a minimalist vibe—it’s a calculated mental trap."
+        "en": "Ever notice why expensive restaurants deleted all dollar signs? It is not just minimalist design."
       },
       "on_screen": {
-        "en": "DELETING THE DOLLAR"
+        "en": "DELETING DOLLAR SIGNS"
       },
       "visual": {
-        "description": "A pen crossing out a dollar sign symbol on a piece of paper, leaving only the digits behind.",
+        "description": "A male designer using a digital stylus to erase currency icons on a tablet screen.",
         "search_terms": [
-          "ink pen writing",
-          "white paper numbers",
-          "menu layout"
+          "man drafting design",
+          "stylus screen editing",
+          "digital graphic tablet"
         ],
         "prefer": "video"
       },
@@ -39,17 +39,17 @@
     },
     {
       "vo": {
-        "en": "Cornell researchers discovered that removing currency symbols bypasses your brain's natural resistance to spending cash."
+        "en": "Cornell researchers proved that removing currency symbols quietly bypasses your natural spending resistance."
       },
       "on_screen": {
         "en": "THE PAIN OF PAYING"
       },
       "visual": {
-        "description": "A close-up of a man's face looking thoughtful in a science lab setting with blue lighting.",
+        "description": "A male professor pointing at modern financial charts projected inside a university auditorium.",
         "search_terms": [
-          "human brain model",
-          "thinking man face",
-          "science lab"
+          "man presenting chart",
+          "university lecture hall",
+          "data visualization display"
         ],
         "prefer": "video"
       },
@@ -57,17 +57,17 @@
     },
     {
       "vo": {
-        "en": "Wait until you see the creepy part. This simple tweak makes diners spend eight percent more without noticing."
+        "en": "Wait until you see the creepy part. This simple format forces people to spend over five percent more."
       },
       "on_screen": {
-        "en": "YOU SPEND 8% MORE"
+        "en": "SPEND 5% MORE"
       },
       "visual": {
-        "description": "A luxury meal being served on a table with a waiter's hand placing a plate, followed by cash falling in slow motion.",
+        "description": "A waiter placing a gourmet dish onto a wooden table as golden coins stack up beside it.",
         "search_terms": [
-          "waiter serving plate",
-          "steak on plate",
-          "dollar bills falling"
+          "waiter placing plate",
+          "gourmet food serving",
+          "coins stacking up"
         ],
         "prefer": "video"
       },
@@ -75,17 +75,17 @@
     },
     {
       "vo": {
-        "en": "Test yourself. Which price makes you hesitate: twenty-five dollars with a symbol, or just the raw number twenty-five?"
+        "en": "Test yourself. Which price makes you pause: twenty-five dollars with a symbol, or just raw numbers?"
       },
       "on_screen": {
         "en": "WHICH FEELS CHEAPER?"
       },
       "visual": {
-        "description": "Two different prices appearing on a black chalkboard, one with a dollar sign and one without.",
+        "description": "A man writing two different price tags onto a black chalkboard using white chalk.",
         "search_terms": [
-          "blackboard math",
-          "white numbers",
-          "price tag"
+          "man writing chalk",
+          "chalkboard price writing",
+          "hand holding chalk"
         ],
         "prefer": "video"
       },
@@ -93,17 +93,17 @@
     },
     {
       "vo": {
-        "en": "That tiny symbol triggers the 'pain of paying.' Without it, your subconscious treats the price like a harmless point score."
+        "en": "That dollar symbol triggers real pain in your brain. Without it, your mind treats spending like a game score."
       },
       "on_screen": {
-        "en": "IT'S JUST A NUMBER"
+        "en": "JUST A NUMBER"
       },
       "visual": {
-        "description": "A man tapping a credit card on a payment terminal in a fast, modern transaction.",
+        "description": "A male customer tapping his smart device against a modern credit card payment terminal.",
         "search_terms": [
-          "credit card tap",
-          "man paying bill",
-          "hand giving cash"
+          "man paying contactless",
+          "hand tapping terminal",
+          "modern payment register"
         ],
         "prefer": "video"
       },
@@ -111,17 +111,17 @@
     },
     {
       "vo": {
-        "en": "Subscribe for daily mind hacks and comment your local burger price. This subconscious trick works because..."
+        "en": "Subscribe for daily mind hacks and comment your local burger price, which is why you should..."
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "A fast-paced timelapse of a city street at night with a hand holding a smartphone in the foreground.",
+        "description": "A fast-moving night time-lapse of neon city lights reflected in high-rise windows.",
         "search_terms": [
-          "city street timelapse",
-          "hand using smartphone",
-          "mouse clicking button"
+          "city night timelapse",
+          "neon traffic motion",
+          "glowing building lights"
         ],
         "prefer": "video"
       },
@@ -133,6 +133,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 41.1
+    "en": 37.8
   }
 }
