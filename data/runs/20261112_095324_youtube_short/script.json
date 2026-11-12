@@ -1,0 +1,138 @@
+{
+  "title": "The 5-Second Brain Hack",
+  "scenes": [
+    {
+      "vo": {
+        "en": "You will fail this test."
+      },
+      "on_screen": {
+        "en": "YOU WILL FAIL THIS"
+      },
+      "visual": {
+        "description": "A macro close-up of a human eye pupil dilating rapidly with a ticking clock overlay.",
+        "search_terms": [
+          "macro eye pupil",
+          "ticking mechanical clock",
+          "spinning time lapse"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Quickly, what is two plus two? Now four plus four? Eight plus eight? And sixteen plus sixteen?"
+      },
+      "on_screen": {
+        "en": "THINK FAST"
+      },
+      "visual": {
+        "description": "Fast-moving neon mathematical equations flying through a dark digital space.",
+        "search_terms": [
+          "neon math equations",
+          "digital data stream",
+          "flying numbers motion"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Fast! Pick a whole number between twelve and five. Keep it in your head."
+      },
+      "on_screen": {
+        "en": "PICK A NUMBER"
+      },
+      "visual": {
+        "description": "A man's hand rapidly pointing at wooden number blocks on a table.",
+        "search_terms": [
+          "hand pointing numbers",
+          "wooden blocks count",
+          "fast hand gestures"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "Now here is the creepy part. Quickly, think of a color and a tool. Got them?"
+      },
+      "on_screen": {
+        "en": "THE CREEPY PART"
+      },
+      "visual": {
+        "description": "A mysterious man in a hoodie looking intensely into the camera in a dimly lit room.",
+        "search_terms": [
+          "mysterious man face",
+          "cinematic moody lighting",
+          "intense stare male"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Your brain just hit a semantic priming glitch, defaulting to the most common mental association possible."
+      },
+      "on_screen": {
+        "en": "COGNITIVE GLITCH"
+      },
+      "visual": {
+        "description": "An abstract 3D animation of a glowing brain structure with electricity pulsing through circuits.",
+        "search_terms": [
+          "glowing brain animation",
+          "neural network pulse",
+          "abstract blue energy"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "You just thought of a Red Hammer. Ninety-eight percent of people choose exactly that."
+      },
+      "on_screen": {
+        "en": "RED HAMMER"
+      },
+      "visual": {
+        "description": "A heavy red hammer slamming down onto a wooden surface in slow motion.",
+        "search_terms": [
+          "red hammer hitting",
+          "tool on wood",
+          "slow motion impact"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for tomorrow's brain test and comment WORKED if I got you, because..."
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "A hand clicking a glowing digital notification bell icon on a dark screen.",
+        "search_terms": [
+          "clicking bell icon",
+          "subscribe button animation",
+          "hand using phone"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "predictive-math-glitch",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 34.5
+  }
+}
