@@ -12,47 +12,44 @@ Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 1,0:00:00.05,0:00:02.51,Headline,,0,0,0,,{\fad(150,150)}TEST YOUR BODY
-Dialogue: 1,0:00:02.61,0:00:07.47,Headline,,0,0,0,,{\fad(150,150)}PUSH THE FRAME
-Dialogue: 1,0:00:07.57,0:00:15.10,Headline,,0,0,0,,{\fad(150,150)}BRAIN SIGNAL OVERLOAD
-Dialogue: 1,0:00:15.20,0:00:22.53,Headline,,0,0,0,,{\fad(150,150)}IT GETS CREEPIER
-Dialogue: 1,0:00:22.63,0:00:30.06,Headline,,0,0,0,,{\fad(150,150)}INVOLUNTARY FLOATING
-Dialogue: 1,0:00:30.16,0:00:38.52,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE ሔ
-Dialogue: 0,0:00:00.10,0:00:00.85,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Press{\c&H00FFFFFF&} your arms
-Dialogue: 0,0:00:00.86,0:00:01.64,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}here {\c&H0000E5FF&}right{\c&H00FFFFFF&} now
-Dialogue: 0,0:00:02.66,0:00:03.48,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Find a {\c&H0000E5FF&}doorway{\c&H00FFFFFF&}
-Dialogue: 0,0:00:03.50,0:00:04.03,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and jam the
-Dialogue: 0,0:00:04.04,0:00:04.46,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}back{\c&H00FFFFFF&} of your
-Dialogue: 0,0:00:04.47,0:00:05.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}hands {\c&H0000E5FF&}against{\c&H00FFFFFF&} the
-Dialogue: 0,0:00:05.25,0:00:05.94,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}frame{\c&H00FFFFFF&} as hard
-Dialogue: 0,0:00:05.95,0:00:06.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}as you can
-Dialogue: 0,0:00:07.62,0:00:08.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Keep {\c&H0000E5FF&}pushing{\c&H00FFFFFF&} hard
-Dialogue: 0,0:00:09.53,0:00:10.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}brain{\c&H00FFFFFF&} is
-Dialogue: 0,0:00:10.19,0:00:11.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}blasting {\c&H0000E5FF&}electrical{\c&H00FFFFFF&} signals
-Dialogue: 0,0:00:11.64,0:00:12.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to your {\c&H0000E5FF&}muscles{\c&H00FFFFFF&}
-Dialogue: 0,0:00:12.61,0:00:13.22,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}but your {\c&H0000E5FF&}arms{\c&H00FFFFFF&}
-Dialogue: 0,0:00:13.23,0:00:13.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}aren't{\c&H00FFFFFF&} moving an
-Dialogue: 0,0:00:13.83,0:00:14.23,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}inch
-Dialogue: 0,0:00:15.25,0:00:16.26,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Wait{\c&H00FFFFFF&} this gets
-Dialogue: 0,0:00:16.27,0:00:17.13,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}even {\c&H0000E5FF&}creepier{\c&H00FFFFFF&}
-Dialogue: 0,0:00:17.95,0:00:18.66,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Keep the {\c&H0000E5FF&}pressure{\c&H00FFFFFF&}
-Dialogue: 0,0:00:18.68,0:00:19.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}for ten {\c&H0000E5FF&}more{\c&H00FFFFFF&}
-Dialogue: 0,0:00:19.25,0:00:20.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}seconds{\c&H00FFFFFF&} until your
-Dialogue: 0,0:00:20.20,0:00:21.01,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}shoulders{\c&H00FFFFFF&} start to
-Dialogue: 0,0:00:21.02,0:00:21.66,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}vibrate
-Dialogue: 0,0:00:22.68,0:00:23.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Now {\c&H0000E5FF&}step{\c&H00FFFFFF&} away
-Dialogue: 0,0:00:23.85,0:00:24.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}into the {\c&H0000E5FF&}open{\c&H00FFFFFF&}
-Dialogue: 0,0:00:24.56,0:00:25.04,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and let your
-Dialogue: 0,0:00:25.05,0:00:26.03,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}arms hang {\c&H0000E5FF&}completely{\c&H00FFFFFF&}
-Dialogue: 0,0:00:26.04,0:00:26.51,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}loose
-Dialogue: 0,0:00:27.34,0:00:27.95,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Watch{\c&H00FFFFFF&} as they
-Dialogue: 0,0:00:27.96,0:00:28.62,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}float{\c&H00FFFFFF&} up like
-Dialogue: 0,0:00:28.63,0:00:29.19,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}magic
-Dialogue: 0,0:00:30.21,0:00:30.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}This is the
-Dialogue: 0,0:00:30.71,0:00:31.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Kohnstamm{\c&H00FFFFFF&} reflex
-Dialogue: 0,0:00:32.74,0:00:33.57,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Subscribe{\c&H00FFFFFF&} for the
-Dialogue: 0,0:00:33.58,0:00:34.50,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}next {\c&H0000E5FF&}brain{\c&H00FFFFFF&} test
-Dialogue: 0,0:00:34.51,0:00:35.28,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and {\c&H0000E5FF&}comment{\c&H00FFFFFF&} YES
-Dialogue: 0,0:00:35.29,0:00:35.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}if it {\c&H0000E5FF&}worked{\c&H00FFFFFF&}
-Dialogue: 0,0:00:35.99,0:00:36.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}now go {\c&H0000E5FF&}back{\c&H00FFFFFF&}
-Dialogue: 0,0:00:36.65,0:00:37.05,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and
+Dialogue: 1,0:00:00.05,0:00:02.73,Headline,,0,0,0,,{\fad(150,150)}TEST YOUR BODY
+Dialogue: 1,0:00:02.83,0:00:07.69,Headline,,0,0,0,,{\fad(150,150)}PUSH THE FRAME
+Dialogue: 1,0:00:07.79,0:00:14.86,Headline,,0,0,0,,{\fad(150,150)}BRAIN SIGNAL OVERLOAD
+Dialogue: 1,0:00:14.96,0:00:21.89,Headline,,0,0,0,,{\fad(150,150)}IT GETS WEIRDER
+Dialogue: 1,0:00:21.99,0:00:28.58,Headline,,0,0,0,,{\fad(150,150)}INVOLUNTARY FLOATING
+Dialogue: 1,0:00:28.68,0:00:36.96,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 0,0:00:00.10,0:00:00.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Press{\c&H00FFFFFF&} your arms
+Dialogue: 0,0:00:00.83,0:00:01.87,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}against a {\c&H0000E5FF&}doorframe{\c&H00FFFFFF&}
+Dialogue: 0,0:00:02.88,0:00:03.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Find a {\c&H0000E5FF&}doorway{\c&H00FFFFFF&}
+Dialogue: 0,0:00:03.71,0:00:04.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and jam the
+Dialogue: 0,0:00:04.25,0:00:04.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}back{\c&H00FFFFFF&} of your
+Dialogue: 0,0:00:04.69,0:00:05.46,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}hands {\c&H0000E5FF&}against{\c&H00FFFFFF&} the
+Dialogue: 0,0:00:05.47,0:00:06.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}frame{\c&H00FFFFFF&} as hard
+Dialogue: 0,0:00:06.17,0:00:06.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}as you can
+Dialogue: 0,0:00:07.84,0:00:08.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Keep {\c&H0000E5FF&}pushing{\c&H00FFFFFF&} hard
+Dialogue: 0,0:00:09.74,0:00:10.39,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}brain{\c&H00FFFFFF&} is
+Dialogue: 0,0:00:10.40,0:00:11.73,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}sending {\c&H0000E5FF&}electrical{\c&H00FFFFFF&} signals
+Dialogue: 0,0:00:11.74,0:00:12.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to your {\c&H0000E5FF&}muscles{\c&H00FFFFFF&}
+Dialogue: 0,0:00:12.72,0:00:13.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}but your {\c&H0000E5FF&}arms{\c&H00FFFFFF&}
+Dialogue: 0,0:00:13.35,0:00:14.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}are {\c&H0000E5FF&}frozen{\c&H00FFFFFF&}
+Dialogue: 0,0:00:15.01,0:00:16.03,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Wait{\c&H00FFFFFF&} this gets
+Dialogue: 0,0:00:16.05,0:00:16.50,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}weirder
+Dialogue: 0,0:00:17.32,0:00:18.04,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Keep the {\c&H0000E5FF&}pressure{\c&H00FFFFFF&}
+Dialogue: 0,0:00:18.05,0:00:18.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}for ten {\c&H0000E5FF&}more{\c&H00FFFFFF&}
+Dialogue: 0,0:00:18.62,0:00:19.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}seconds{\c&H00FFFFFF&} until your
+Dialogue: 0,0:00:19.57,0:00:20.38,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}shoulders{\c&H00FFFFFF&} start to
+Dialogue: 0,0:00:20.39,0:00:21.03,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}vibrate
+Dialogue: 0,0:00:22.03,0:00:23.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Now {\c&H0000E5FF&}step{\c&H00FFFFFF&} away
+Dialogue: 0,0:00:23.16,0:00:23.86,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}into the {\c&H0000E5FF&}open{\c&H00FFFFFF&}
+Dialogue: 0,0:00:23.87,0:00:24.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and let your
+Dialogue: 0,0:00:24.36,0:00:25.05,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}arms{\c&H00FFFFFF&} hang
+Dialogue: 0,0:00:25.86,0:00:26.48,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Watch{\c&H00FFFFFF&} as they
+Dialogue: 0,0:00:26.49,0:00:27.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}float{\c&H00FFFFFF&} up like
+Dialogue: 0,0:00:27.16,0:00:27.71,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}magic
+Dialogue: 0,0:00:28.72,0:00:29.23,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}That is the
+Dialogue: 0,0:00:29.24,0:00:30.46,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Kohnstamm{\c&H00FFFFFF&} reflex
+Dialogue: 0,0:00:31.27,0:00:32.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Subscribe{\c&H00FFFFFF&} for the
+Dialogue: 0,0:00:32.13,0:00:33.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}next {\c&H0000E5FF&}brain{\c&H00FFFFFF&} test
+Dialogue: 0,0:00:33.28,0:00:34.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} It worked
+Dialogue: 0,0:00:34.26,0:00:35.03,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}which is {\c&H0000E5FF&}exactly{\c&H00FFFFFF&}
+Dialogue: 0,0:00:35.04,0:00:35.47,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}why

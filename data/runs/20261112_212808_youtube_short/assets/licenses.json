@@ -3,11 +3,11 @@
     "scene": "scene_01",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-24496/",
-    "author": "ninosouza",
+    "page": "https://pixabay.com/videos/id-314643/",
+    "author": "TonyDias7",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "man pointing camera",
-    "description": "A man points directly at the lens with an intense, focused expression in a dark studio."
+    "query": "man pointing finger camera",
+    "description": "A man points his index finger directly at the camera with an intense and focused expression."
   },
   {
     "scene": "scene_02",
@@ -23,40 +23,40 @@
     "scene": "scene_03",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-10839/",
-    "author": "Coverr-Free-Footage",
+    "page": "https://pixabay.com/videos/id-4933/",
+    "author": "motion5",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "digital neural network",
-    "description": "Abstract digital animation of glowing neural pathways and fast-moving electrical pulses."
+    "query": "glowing neural network animation",
+    "description": "Abstract digital animation showing glowing neural pathways and fast-moving electrical light pulses."
   },
   {
     "scene": "scene_04",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-30470/",
-    "author": "mike-media",
+    "page": "https://pixabay.com/videos/id-143440/",
+    "author": "32141219",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "muscle tremor close-up",
-    "description": "Extreme close up of a man's shoulder muscles twitching under heavy physical strain."
+    "query": "shoulder muscle tremor",
+    "description": "Extreme close up of male shoulder muscle twitching under heavy physical strain."
   },
   {
     "scene": "scene_05",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-158230/",
-    "author": "JayShawflybydrones",
+    "page": "https://pixabay.com/videos/id-205283/",
+    "author": "NickyPe",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "man arms rising",
-    "description": "A man stands in a hallway and his arms slowly rise up to his sides without him moving them."
+    "query": "man standing in hallway",
+    "description": "A man stands in a hallway and his arms rise upward involuntarily to his sides."
   },
   {
     "scene": "scene_06",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-24497/",
-    "author": "ninosouza",
+    "page": "https://pixabay.com/videos/id-3501/",
+    "author": "Nova_27",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "man smiling camera",
-    "description": "A man looks at his hands in disbelief then looks up to smile and point at a digital button."
+    "query": "finger clicking subscribe button",
+    "description": "A close up of a hand clicking a red subscribe button on a smartphone screen."
   }
 ]
