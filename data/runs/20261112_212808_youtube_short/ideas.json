@@ -1,0 +1,68 @@
+{
+  "niche": "Mind Hacks, AI Secrets, Bizarre Body Science & Hidden Power Dynamics",
+  "languages": [
+    "en"
+  ],
+  "ideas": [
+    {
+      "id": "paralyzed-arm-glitch",
+      "title": "The Doorframe Arm Glitch",
+      "angle": "An interactive physical glitch where the viewer presses their arms against a doorframe for 30 seconds; when they step away, their arms float up involuntarily. This forces high retention and a comment flood of 'It worked!' or 'My arms are possessed!'",
+      "hook": {
+        "en": "Press your arms here for 30 seconds."
+      },
+      "keywords": [
+        "body glitch",
+        "Kohnstamm phenomenon",
+        "brain hack",
+        "interactive test",
+        "human biology"
+      ],
+      "reason": "Interactive physical challenges have the highest VVSA because viewers must stay to see the result. The Kohnstamm phenomenon is a reliable physiological reflex that feels like 'magic' to the uninitiated.",
+      "sources": [
+        "Scientific American: The Kohnstamm Phenomenon",
+        "Journal of Neuroscience: Involuntary muscle contraction reflexes"
+      ]
+    },
+    {
+      "id": "peripheral-vision-blindness",
+      "title": "The Peripheral Vision Blindness Test",
+      "angle": "A visual 'disappearing' glitch. Viewers stare at a central black dot while colored circles on the edges vanish in real-time. This triggers a loop-watch to verify if the circles actually disappeared or if the brain just 'deleted' them.",
+      "hook": {
+        "en": "Your brain is deleting what you see."
+      },
+      "keywords": [
+        "optical illusion",
+        "Troxler effect",
+        "vision hack",
+        "brain glitch",
+        "mind tricks"
+      ],
+      "reason": "Visual illusions are high-retention 'pattern interrupts'. The Troxler Effect is a proven viral hook because it feels like a personal failure of the viewer's own biology, driving high engagement and shares.",
+      "sources": [
+        "National Eye Institute: How the Brain Processes Visual Motion",
+        "Vision Research Journal: Neural Adaptation and the Troxler Effect"
+      ]
+    },
+    {
+      "id": "mammalian-dive-reflex",
+      "title": "The Panic-Button Face Hack",
+      "angle": "A survival hack showing how splashing ice-cold water on your eyes and cheekbones instantly lowers your heart rate via the Mammalian Dive Reflex. Viewers are challenged to try it next time they feel stressed, driving 'save' and 'share' metrics.",
+      "hook": {
+        "en": "Splash cold water here to stop panic."
+      },
+      "keywords": [
+        "survival science",
+        "vagus nerve",
+        "anxiety hack",
+        "mammalian dive reflex",
+        "body secrets"
+      ],
+      "reason": "Bio-hacks regarding anxiety and heart rate control are currently trending on health-tech YouTube. This specific reflex is a 'hidden setting' in human biology that produces an immediate, measurable physical change.",
+      "sources": [
+        "American Journal of Physiology: The Mammalian Dive Reflex",
+        "Cleveland Clinic: Vagus Nerve Stimulation and Stress"
+      ]
+    }
+  ]
+}
