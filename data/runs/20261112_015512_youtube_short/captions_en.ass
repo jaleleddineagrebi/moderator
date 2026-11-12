@@ -1,0 +1,63 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:02.87,Headline,,0,0,0,,{\fad(150,150)}MENU MIND TRICK
+Dialogue: 1,0:00:02.97,0:00:11.39,Headline,,0,0,0,,{\fad(150,150)}DELETING THE DOLLAR
+Dialogue: 1,0:00:11.49,0:00:18.68,Headline,,0,0,0,,{\fad(150,150)}THE PAIN OF PAYING
+Dialogue: 1,0:00:18.78,0:00:25.99,Headline,,0,0,0,,{\fad(150,150)}YOU SPEND 8% MORE
+Dialogue: 1,0:00:26.09,0:00:34.02,Headline,,0,0,0,,{\fad(150,150)}WHICH FEELS CHEAPER?
+Dialogue: 1,0:00:34.12,0:00:41.99,Headline,,0,0,0,,{\fad(150,150)}IT'S JUST A NUMBER
+Dialogue: 1,0:00:42.09,0:00:50.05,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 0,0:00:00.10,0:00:00.95,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Look {\c&H0000E5FF&}closely{\c&H00FFFFFF&} at
+Dialogue: 0,0:00:00.96,0:00:01.67,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}this menu {\c&H0000E5FF&}right{\c&H00FFFFFF&}
+Dialogue: 0,0:00:01.68,0:00:02.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}now
+Dialogue: 0,0:00:03.02,0:00:03.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Ever {\c&H0000E5FF&}notice{\c&H00FFFFFF&} why
+Dialogue: 0,0:00:03.83,0:00:05.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}high-end {\c&H0000E5FF&}restaurants{\c&H00FFFFFF&} deleted
+Dialogue: 0,0:00:05.19,0:00:06.13,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}dollar{\c&H00FFFFFF&} signs
+Dialogue: 0,0:00:06.94,0:00:07.67,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}It’s{\c&H00FFFFFF&} not just
+Dialogue: 0,0:00:07.69,0:00:08.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a {\c&H0000E5FF&}minimalist{\c&H00FFFFFF&} vibe
+Dialogue: 0,0:00:08.90,0:00:09.74,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}it’s a {\c&H0000E5FF&}calculated{\c&H00FFFFFF&}
+Dialogue: 0,0:00:09.75,0:00:10.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}mental{\c&H00FFFFFF&} trap
+Dialogue: 0,0:00:11.53,0:00:13.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Cornell {\c&H0000E5FF&}researchers{\c&H00FFFFFF&} discovered
+Dialogue: 0,0:00:13.12,0:00:14.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}that {\c&H0000E5FF&}removing{\c&H00FFFFFF&} currency
+Dialogue: 0,0:00:14.16,0:00:15.39,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}symbols {\c&H0000E5FF&}bypasses{\c&H00FFFFFF&} your
+Dialogue: 0,0:00:15.40,0:00:16.75,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}brain's natural {\c&H0000E5FF&}resistance{\c&H00FFFFFF&}
+Dialogue: 0,0:00:16.76,0:00:17.81,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to {\c&H0000E5FF&}spending{\c&H00FFFFFF&} cash
+Dialogue: 0,0:00:18.82,0:00:19.55,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Wait {\c&H0000E5FF&}until{\c&H00FFFFFF&} you
+Dialogue: 0,0:00:19.57,0:00:20.19,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}see the {\c&H0000E5FF&}creepy{\c&H00FFFFFF&}
+Dialogue: 0,0:00:20.20,0:00:20.65,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}part
+Dialogue: 0,0:00:21.47,0:00:22.38,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}This {\c&H0000E5FF&}simple{\c&H00FFFFFF&} tweak
+Dialogue: 0,0:00:22.39,0:00:23.42,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}makes {\c&H0000E5FF&}diners{\c&H00FFFFFF&} spend
+Dialogue: 0,0:00:23.43,0:00:24.20,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}eight {\c&H0000E5FF&}percent{\c&H00FFFFFF&} more
+Dialogue: 0,0:00:24.21,0:00:25.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}without {\c&H0000E5FF&}noticing{\c&H00FFFFFF&}
+Dialogue: 0,0:00:26.14,0:00:27.06,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Test {\c&H0000E5FF&}yourself{\c&H00FFFFFF&}
+Dialogue: 0,0:00:27.87,0:00:28.79,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Which{\c&H00FFFFFF&} price makes
+Dialogue: 0,0:00:28.80,0:00:30.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you hesitate {\c&H0000E5FF&}twenty-five{\c&H00FFFFFF&}
+Dialogue: 0,0:00:30.26,0:00:30.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}dollars{\c&H00FFFFFF&} with a
+Dialogue: 0,0:00:30.85,0:00:31.81,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}symbol{\c&H00FFFFFF&} or just
+Dialogue: 0,0:00:31.82,0:00:32.41,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the raw {\c&H0000E5FF&}number{\c&H00FFFFFF&}
+Dialogue: 0,0:00:32.42,0:00:33.16,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}twenty-five
+Dialogue: 0,0:00:34.17,0:00:35.21,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}That tiny {\c&H0000E5FF&}symbol{\c&H00FFFFFF&}
+Dialogue: 0,0:00:35.22,0:00:36.01,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}triggers{\c&H00FFFFFF&} the pain
+Dialogue: 0,0:00:36.02,0:00:36.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}of {\c&H0000E5FF&}paying{\c&H00FFFFFF&}
+Dialogue: 0,0:00:37.38,0:00:38.26,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Without{\c&H00FFFFFF&} it your
+Dialogue: 0,0:00:38.27,0:00:39.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}subconscious{\c&H00FFFFFF&} treats the
+Dialogue: 0,0:00:39.36,0:00:39.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}price{\c&H00FFFFFF&} like a
+Dialogue: 0,0:00:39.92,0:00:41.10,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}harmless{\c&H00FFFFFF&} point score
+Dialogue: 0,0:00:42.13,0:00:43.22,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Subscribe{\c&H00FFFFFF&} for daily
+Dialogue: 0,0:00:43.23,0:00:44.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}mind {\c&H0000E5FF&}hacks{\c&H00FFFFFF&} and
+Dialogue: 0,0:00:44.03,0:00:44.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} your local
+Dialogue: 0,0:00:44.89,0:00:45.71,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}burger{\c&H00FFFFFF&} price
+Dialogue: 0,0:00:46.52,0:00:47.67,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}This {\c&H0000E5FF&}subconscious{\c&H00FFFFFF&} trick
+Dialogue: 0,0:00:47.69,0:00:48.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}works {\c&H0000E5FF&}because{\c&H00FFFFFF&}

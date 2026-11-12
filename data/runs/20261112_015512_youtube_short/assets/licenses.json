@@ -1,0 +1,72 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-7817/",
+    "author": "Qamar-Iqbal76",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man holding menu",
+    "description": "A close-up of a man's hands holding a minimalist restaurant menu in a dimly lit, high-end environment."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-180776/",
+    "author": "Darioguzben",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "ink pen writing",
+    "description": "A pen crossing out a dollar sign symbol on a piece of paper, leaving only the digits behind."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-267242/",
+    "author": "Paashuu",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "human brain model",
+    "description": "A close-up of a man's face looking thoughtful in a science lab setting with blue lighting."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-254753/",
+    "author": "xBriantcx",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "waiter serving plate",
+    "description": "A luxury meal being served on a table with a waiter's hand placing a plate, followed by cash falling in slow motion."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-35449/",
+    "author": "ninosouza",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "blackboard math",
+    "description": "Two different prices appearing on a black chalkboard, one with a dollar sign and one without."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-147075/",
+    "author": "mariya_m",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "credit card tap",
+    "description": "A man tapping a credit card on a payment terminal in a fast, modern transaction."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-20581/",
+    "author": "ChristianBodhi",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "city street timelapse",
+    "description": "A fast-paced timelapse of a city street at night with a hand holding a smartphone in the foreground."
+  }
+]
