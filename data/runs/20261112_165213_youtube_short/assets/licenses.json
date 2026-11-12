@@ -1,0 +1,72 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-3176/",
+    "author": "Coverr-Free-Footage",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "ringing smartphone hand",
+    "description": "Male hand holding a glowing smartphone ringing in a dimly lit dark neon room."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-360429/",
+    "author": "Engin_Akyurt",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "sound wave screen",
+    "description": "Digital audio frequency soundwaves dancing across a computer monitor next to a man wearing headphones."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-27465/",
+    "author": "Bastien86",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man speaking microphone",
+    "description": "Extreme close-up of a man speaking into a professional studio microphone with neon lighting."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-14906/",
+    "author": "cipnt",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "server room glitch",
+    "description": "Digital glitch effect flashing over a massive server rack in a dark data center."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-284568/",
+    "author": "antonlukin",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hourglass sand time",
+    "description": "Macro shot of sand trickling through an hourglass next to a glowing microchip circuit."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-4975/",
+    "author": "klimkin",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hand pressing red button",
+    "description": "A man's hand slamming down a smartphone to end a call aggressively."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-217096/",
+    "author": "Matthias_Groeneveld",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "cyber security lock",
+    "description": "A high-tech digital lock icon snapping shut over a glowing security vault background."
+  }
+]

@@ -1,0 +1,57 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:02.90,Headline,,0,0,0,,{\fad(150,150)}SPOT FAKE CALLERS
+Dialogue: 1,0:00:03.00,0:00:07.86,Headline,,0,0,0,,{\fad(150,150)}AI CLONES YOUR VOICE
+Dialogue: 1,0:00:07.96,0:00:14.12,Headline,,0,0,0,,{\fad(150,150)}INTERRUPT THEM MID SENTENCE
+Dialogue: 1,0:00:14.22,0:00:17.42,Headline,,0,0,0,,{\fad(150,150)}THE CREEPY PART
+Dialogue: 1,0:00:17.52,0:00:26.61,Headline,,0,0,0,,{\fad(150,150)}AI CANNOT HANDLE OVERLAP
+Dialogue: 1,0:00:26.71,0:00:30.73,Headline,,0,0,0,,{\fad(150,150)}HANG UP IMMEDIATELY
+Dialogue: 1,0:00:30.83,0:00:41.53,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 0,0:00:00.10,0:00:00.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Say this {\c&H0000E5FF&}word{\c&H00FFFFFF&}
+Dialogue: 0,0:00:00.84,0:00:01.48,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to {\c&H0000E5FF&}spot{\c&H00FFFFFF&} fake
+Dialogue: 0,0:00:01.49,0:00:02.04,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}callers
+Dialogue: 0,0:00:03.04,0:00:04.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}AI voice {\c&H0000E5FF&}clones{\c&H00FFFFFF&}
+Dialogue: 0,0:00:04.16,0:00:04.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}can now {\c&H0000E5FF&}mimic{\c&H00FFFFFF&}
+Dialogue: 0,0:00:04.85,0:00:05.81,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}family's{\c&H00FFFFFF&} exact
+Dialogue: 0,0:00:05.83,0:00:06.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}voice{\c&H00FFFFFF&} in real
+Dialogue: 0,0:00:06.53,0:00:06.98,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}time
+Dialogue: 0,0:00:08.01,0:00:08.79,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}When a {\c&H0000E5FF&}suspect{\c&H00FFFFFF&}
+Dialogue: 0,0:00:08.81,0:00:09.66,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}caller{\c&H00FFFFFF&} asks for
+Dialogue: 0,0:00:09.67,0:00:10.89,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}help {\c&H0000E5FF&}interrupt{\c&H00FFFFFF&} them
+Dialogue: 0,0:00:10.91,0:00:11.77,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}mid-sentence{\c&H00FFFFFF&} with a
+Dialogue: 0,0:00:11.78,0:00:12.60,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}random{\c&H00FFFFFF&} word like
+Dialogue: 0,0:00:12.62,0:00:13.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Pineapple
+Dialogue: 0,0:00:14.26,0:00:14.79,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}But {\c&H0000E5FF&}here{\c&H00FFFFFF&} is
+Dialogue: 0,0:00:14.81,0:00:15.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}creepy{\c&H00FFFFFF&} part
+Dialogue: 0,0:00:15.55,0:00:16.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}most {\c&H0000E5FF&}people{\c&H00FFFFFF&} miss
+Dialogue: 0,0:00:17.57,0:00:18.87,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Human brains {\c&H0000E5FF&}overlap{\c&H00FFFFFF&}
+Dialogue: 0,0:00:18.88,0:00:19.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}speech {\c&H0000E5FF&}instantly{\c&H00FFFFFF&}
+Dialogue: 0,0:00:20.67,0:00:22.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}But AI {\c&H0000E5FF&}live-translators{\c&H00FFFFFF&}
+Dialogue: 0,0:00:22.12,0:00:22.89,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}stutter{\c&H00FFFFFF&} and drop
+Dialogue: 0,0:00:22.90,0:00:23.69,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}audio {\c&H0000E5FF&}trying{\c&H00FFFFFF&} to
+Dialogue: 0,0:00:23.70,0:00:25.74,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}process unexpected {\c&H0000E5FF&}interruptions{\c&H00FFFFFF&}
+Dialogue: 0,0:00:26.75,0:00:27.45,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}If they {\c&H0000E5FF&}freeze{\c&H00FFFFFF&}
+Dialogue: 0,0:00:27.46,0:00:28.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}for {\c&H0000E5FF&}even{\c&H00FFFFFF&} one
+Dialogue: 0,0:00:28.14,0:00:29.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}second{\c&H00FFFFFF&} hang up
+Dialogue: 0,0:00:29.16,0:00:29.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}immediately
+Dialogue: 0,0:00:30.88,0:00:32.03,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Subscribe{\c&H00FFFFFF&} for daily
+Dialogue: 0,0:00:32.05,0:00:33.16,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}AI {\c&H0000E5FF&}safety{\c&H00FFFFFF&} hacks
+Dialogue: 0,0:00:33.44,0:00:34.14,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and {\c&H0000E5FF&}comment{\c&H00FFFFFF&} your
+Dialogue: 0,0:00:34.16,0:00:35.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}secret{\c&H00FFFFFF&} family code
+Dialogue: 0,0:00:35.19,0:00:35.90,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}word {\c&H0000E5FF&}below{\c&H00FFFFFF&}
+Dialogue: 0,0:00:36.71,0:00:37.94,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Always test {\c&H0000E5FF&}suspicious{\c&H00FFFFFF&}
+Dialogue: 0,0:00:37.95,0:00:38.87,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}callers{\c&H00FFFFFF&} so the
+Dialogue: 0,0:00:38.88,0:00:39.59,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}moment{\c&H00FFFFFF&} your phone
+Dialogue: 0,0:00:39.60,0:00:40.05,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}rings
