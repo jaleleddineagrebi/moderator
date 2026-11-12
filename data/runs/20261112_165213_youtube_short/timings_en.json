@@ -1,0 +1,535 @@
+{
+  "voice": "en-US-AriaNeural",
+  "duration": 40.884082,
+  "scenes": [
+    {
+      "scene": "scene_01",
+      "start": 0.0,
+      "end": 2.856,
+      "words": [
+        {
+          "start": 0.097,
+          "end": 0.368,
+          "text": "Say"
+        },
+        {
+          "start": 0.38,
+          "end": 0.569,
+          "text": "this"
+        },
+        {
+          "start": 0.581,
+          "end": 0.828,
+          "text": "word"
+        },
+        {
+          "start": 0.84,
+          "end": 0.899,
+          "text": "to"
+        },
+        {
+          "start": 0.911,
+          "end": 1.253,
+          "text": "spot"
+        },
+        {
+          "start": 1.265,
+          "end": 1.477,
+          "text": "fake"
+        },
+        {
+          "start": 1.489,
+          "end": 2.043,
+          "text": "callers"
+        }
+      ]
+    },
+    {
+      "scene": "scene_02",
+      "start": 2.946,
+      "end": 7.818,
+      "words": [
+        {
+          "start": 3.043,
+          "end": 3.385,
+          "text": "AI"
+        },
+        {
+          "start": 3.397,
+          "end": 3.715,
+          "text": "voice"
+        },
+        {
+          "start": 3.727,
+          "end": 4.152,
+          "text": "clones"
+        },
+        {
+          "start": 4.163,
+          "end": 4.317,
+          "text": "can"
+        },
+        {
+          "start": 4.329,
+          "end": 4.517,
+          "text": "now"
+        },
+        {
+          "start": 4.529,
+          "end": 4.836,
+          "text": "mimic"
+        },
+        {
+          "start": 4.847,
+          "end": 4.954,
+          "text": "your"
+        },
+        {
+          "start": 4.965,
+          "end": 5.39,
+          "text": "family's"
+        },
+        {
+          "start": 5.402,
+          "end": 5.814,
+          "text": "exact"
+        },
+        {
+          "start": 5.826,
+          "end": 6.156,
+          "text": "voice"
+        },
+        {
+          "start": 6.168,
+          "end": 6.298,
+          "text": "in"
+        },
+        {
+          "start": 6.31,
+          "end": 6.522,
+          "text": "real"
+        },
+        {
+          "start": 6.534,
+          "end": 6.982,
+          "text": "time"
+        }
+      ]
+    },
+    {
+      "scene": "scene_03",
+      "start": 7.908,
+      "end": 14.076,
+      "words": [
+        {
+          "start": 8.005,
+          "end": 8.194,
+          "text": "When"
+        },
+        {
+          "start": 8.206,
+          "end": 8.265,
+          "text": "a"
+        },
+        {
+          "start": 8.276,
+          "end": 8.795,
+          "text": "suspect"
+        },
+        {
+          "start": 8.807,
+          "end": 9.173,
+          "text": "caller"
+        },
+        {
+          "start": 9.184,
+          "end": 9.515,
+          "text": "asks"
+        },
+        {
+          "start": 9.526,
+          "end": 9.656,
+          "text": "for"
+        },
+        {
+          "start": 9.668,
+          "end": 9.986,
+          "text": "help"
+        },
+        {
+          "start": 10.246,
+          "end": 10.753,
+          "text": "interrupt"
+        },
+        {
+          "start": 10.765,
+          "end": 10.894,
+          "text": "them"
+        },
+        {
+          "start": 10.906,
+          "end": 11.567,
+          "text": "mid-sentence"
+        },
+        {
+          "start": 11.578,
+          "end": 11.696,
+          "text": "with"
+        },
+        {
+          "start": 11.708,
+          "end": 11.767,
+          "text": "a"
+        },
+        {
+          "start": 11.779,
+          "end": 12.144,
+          "text": "random"
+        },
+        {
+          "start": 12.156,
+          "end": 12.392,
+          "text": "word"
+        },
+        {
+          "start": 12.404,
+          "end": 12.604,
+          "text": "like"
+        },
+        {
+          "start": 12.616,
+          "end": 13.241,
+          "text": "Pineapple"
+        }
+      ]
+    },
+    {
+      "scene": "scene_04",
+      "start": 14.166,
+      "end": 17.382,
+      "words": [
+        {
+          "start": 14.263,
+          "end": 14.428,
+          "text": "But"
+        },
+        {
+          "start": 14.44,
+          "end": 14.676,
+          "text": "here"
+        },
+        {
+          "start": 14.688,
+          "end": 14.794,
+          "text": "is"
+        },
+        {
+          "start": 14.806,
+          "end": 14.9,
+          "text": "the"
+        },
+        {
+          "start": 14.912,
+          "end": 15.266,
+          "text": "creepy"
+        },
+        {
+          "start": 15.277,
+          "end": 15.537,
+          "text": "part"
+        },
+        {
+          "start": 15.549,
+          "end": 15.832,
+          "text": "most"
+        },
+        {
+          "start": 15.843,
+          "end": 16.115,
+          "text": "people"
+        },
+        {
+          "start": 16.126,
+          "end": 16.539,
+          "text": "miss"
+        }
+      ]
+    },
+    {
+      "scene": "scene_05",
+      "start": 17.472,
+      "end": 26.568,
+      "words": [
+        {
+          "start": 17.569,
+          "end": 17.935,
+          "text": "Human"
+        },
+        {
+          "start": 17.947,
+          "end": 18.359,
+          "text": "brains"
+        },
+        {
+          "start": 18.371,
+          "end": 18.866,
+          "text": "overlap"
+        },
+        {
+          "start": 18.878,
+          "end": 19.244,
+          "text": "speech"
+        },
+        {
+          "start": 19.256,
+          "end": 19.845,
+          "text": "instantly"
+        },
+        {
+          "start": 20.668,
+          "end": 20.915,
+          "text": "But"
+        },
+        {
+          "start": 20.927,
+          "end": 21.222,
+          "text": "AI"
+        },
+        {
+          "start": 21.234,
+          "end": 22.106,
+          "text": "live-translators"
+        },
+        {
+          "start": 22.118,
+          "end": 22.472,
+          "text": "stutter"
+        },
+        {
+          "start": 22.484,
+          "end": 22.578,
+          "text": "and"
+        },
+        {
+          "start": 22.59,
+          "end": 22.885,
+          "text": "drop"
+        },
+        {
+          "start": 22.897,
+          "end": 23.262,
+          "text": "audio"
+        },
+        {
+          "start": 23.274,
+          "end": 23.592,
+          "text": "trying"
+        },
+        {
+          "start": 23.604,
+          "end": 23.687,
+          "text": "to"
+        },
+        {
+          "start": 23.698,
+          "end": 24.194,
+          "text": "process"
+        },
+        {
+          "start": 24.206,
+          "end": 24.866,
+          "text": "unexpected"
+        },
+        {
+          "start": 24.878,
+          "end": 25.738,
+          "text": "interruptions"
+        }
+      ]
+    },
+    {
+      "scene": "scene_06",
+      "start": 26.658,
+      "end": 30.69,
+      "words": [
+        {
+          "start": 26.755,
+          "end": 26.944,
+          "text": "If"
+        },
+        {
+          "start": 26.956,
+          "end": 27.085,
+          "text": "they"
+        },
+        {
+          "start": 27.097,
+          "end": 27.451,
+          "text": "freeze"
+        },
+        {
+          "start": 27.463,
+          "end": 27.581,
+          "text": "for"
+        },
+        {
+          "start": 27.592,
+          "end": 27.864,
+          "text": "even"
+        },
+        {
+          "start": 27.875,
+          "end": 28.123,
+          "text": "one"
+        },
+        {
+          "start": 28.135,
+          "end": 28.548,
+          "text": "second"
+        },
+        {
+          "start": 28.748,
+          "end": 28.984,
+          "text": "hang"
+        },
+        {
+          "start": 28.996,
+          "end": 29.149,
+          "text": "up"
+        },
+        {
+          "start": 29.161,
+          "end": 29.845,
+          "text": "immediately"
+        }
+      ]
+    },
+    {
+      "scene": "scene_07",
+      "start": 30.78,
+      "end": 40.884,
+      "words": [
+        {
+          "start": 30.877,
+          "end": 31.502,
+          "text": "Subscribe"
+        },
+        {
+          "start": 31.514,
+          "end": 31.667,
+          "text": "for"
+        },
+        {
+          "start": 31.679,
+          "end": 32.033,
+          "text": "daily"
+        },
+        {
+          "start": 32.045,
+          "end": 32.351,
+          "text": "AI"
+        },
+        {
+          "start": 32.363,
+          "end": 32.764,
+          "text": "safety"
+        },
+        {
+          "start": 32.776,
+          "end": 33.165,
+          "text": "hacks"
+        },
+        {
+          "start": 33.436,
+          "end": 33.601,
+          "text": "and"
+        },
+        {
+          "start": 33.613,
+          "end": 34.026,
+          "text": "comment"
+        },
+        {
+          "start": 34.038,
+          "end": 34.144,
+          "text": "your"
+        },
+        {
+          "start": 34.155,
+          "end": 34.521,
+          "text": "secret"
+        },
+        {
+          "start": 34.533,
+          "end": 34.875,
+          "text": "family"
+        },
+        {
+          "start": 34.887,
+          "end": 35.181,
+          "text": "code"
+        },
+        {
+          "start": 35.193,
+          "end": 35.441,
+          "text": "word"
+        },
+        {
+          "start": 35.453,
+          "end": 35.901,
+          "text": "below"
+        },
+        {
+          "start": 36.712,
+          "end": 37.113,
+          "text": "Always"
+        },
+        {
+          "start": 37.124,
+          "end": 37.407,
+          "text": "test"
+        },
+        {
+          "start": 37.419,
+          "end": 37.938,
+          "text": "suspicious"
+        },
+        {
+          "start": 37.95,
+          "end": 38.386,
+          "text": "callers"
+        },
+        {
+          "start": 38.657,
+          "end": 38.775,
+          "text": "so"
+        },
+        {
+          "start": 38.787,
+          "end": 38.87,
+          "text": "the"
+        },
+        {
+          "start": 38.881,
+          "end": 39.2,
+          "text": "moment"
+        },
+        {
+          "start": 39.212,
+          "end": 39.318,
+          "text": "your"
+        },
+        {
+          "start": 39.33,
+          "end": 39.589,
+          "text": "phone"
+        },
+        {
+          "start": 39.601,
+          "end": 40.049,
+          "text": "rings"
+        }
+      ]
+    }
+  ]
+}
