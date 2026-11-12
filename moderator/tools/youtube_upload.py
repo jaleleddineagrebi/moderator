@@ -13,6 +13,7 @@ import json
 import os
 from pathlib import Path
 
+from google.auth.exceptions import RefreshError
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
@@ -46,11 +47,27 @@ def authorize(client_secret: Path, lang: str | None = None, scopes: list[str] | 
     return path, channel_title(creds)
 
 
+EXPIRED_HELP = (
+    "Google expires a YouTube login after 7 days while your OAuth consent screen is in 'Testing', and also when you "
+    "revoke access. Fix now: run `python -m moderator youtube-auth --client-secret client_secret.json`, then paste the "
+    "whole tokens/youtube.json into the YOUTUBE_TOKEN GitHub secret (YOUTUBE_TOKEN_EN / _FR / _AR for one channel per "
+    "language). Fix for good: Google Cloud Console > Google Auth Platform > Audience > Publish app (In production)."
+)
+
+
+def _refresh(creds: Credentials, what: str) -> None:
+    """Refresh an expired access token; turn Google's invalid_grant into an actionable message."""
+    try:
+        creds.refresh(Request())
+    except RefreshError as e:
+        raise RuntimeError(f"The YouTube login for {what} is expired or revoked ({e}). {EXPIRED_HELP}") from e
+
+
 def credentials_from_file(path: Path) -> Credentials:
     info = json.loads(path.read_text(encoding="utf-8"))
     creds = Credentials.from_authorized_user_info(info, info.get("scopes") or UPLOAD_SCOPES)
     if not creds.valid:
-        creds.refresh(Request())
+        _refresh(creds, str(path.name))
     return creds
 
 
@@ -72,7 +89,7 @@ def credentials(lang: str) -> Credentials:
     granted_scopes = info.get("scopes") or UPLOAD_SCOPES
     creds = Credentials.from_authorized_user_info(info, granted_scopes)
     if not creds.valid:
-        creds.refresh(Request())
+        _refresh(creds, f"'{lang}'")
     return creds
 
 

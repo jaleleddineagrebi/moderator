@@ -207,4 +207,4 @@ jobs:
       - name: Report failed upload on issue
         if: failure() && steps.req.outputs.action == 'approve' && github.event_name == 'issue_comment'
         run: |
-          gh issue comment "$ISSUE" -R "$GITHUB_REPOSITORY" --body "Upload failed. Logs: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}. Comment \`/approve\` again after fixing secrets/quota to retry."
+          gh issue comment "$ISSUE" -R "$GITHUB_REPOSITORY" --body "Upload failed. Logs: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}. If the log says the YouTube login is expired or revoked, re-run \`python -m moderator youtube-auth --client-secret client_secret.json\` and paste tokens/youtube.json into the YOUTUBE_TOKEN secret (docs/SETUP.md section 1). Then comment \`/approve\` again to retry."
