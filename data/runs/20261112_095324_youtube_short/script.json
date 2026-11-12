@@ -6,14 +6,14 @@
         "en": "You will fail this test."
       },
       "on_screen": {
-        "en": "YOU WILL FAIL THIS"
+        "en": "YOU WILL FAIL"
       },
       "visual": {
-        "description": "A macro close-up of a human eye pupil dilating rapidly with a ticking clock overlay.",
+        "description": "A close-up of a man's intense, focused eye as the pupil dilates significantly.",
         "search_terms": [
-          "macro eye pupil",
-          "ticking mechanical clock",
-          "spinning time lapse"
+          "intense male eye",
+          "pupil dilation macro",
+          "man staring camera"
         ],
         "prefer": "video"
       },
@@ -27,11 +27,11 @@
         "en": "THINK FAST"
       },
       "visual": {
-        "description": "Fast-moving neon mathematical equations flying through a dark digital space.",
+        "description": "Fast-paced shots of glowing neon mathematical symbols and numbers flying through a dark space.",
         "search_terms": [
-          "neon math equations",
+          "neon math numbers",
           "digital data stream",
-          "flying numbers motion"
+          "flying digits motion"
         ],
         "prefer": "video"
       },
@@ -39,17 +39,17 @@
     },
     {
       "vo": {
-        "en": "Fast! Pick a whole number between twelve and five. Keep it in your head."
+        "en": "Faster! Pick a whole number between twelve and five. Keep it in your head."
       },
       "on_screen": {
         "en": "PICK A NUMBER"
       },
       "visual": {
-        "description": "A man's hand rapidly pointing at wooden number blocks on a table.",
+        "description": "A man's hand rapidly scribbling numbers on a transparent glass board with a white marker.",
         "search_terms": [
-          "hand pointing numbers",
-          "wooden blocks count",
-          "fast hand gestures"
+          "hand writing glass",
+          "man counting fingers",
+          "scribbling math fast"
         ],
         "prefer": "video"
       },
@@ -57,17 +57,17 @@
     },
     {
       "vo": {
-        "en": "Now here is the creepy part. Quickly, think of a color and a tool. Got them?"
+        "en": "But here is the creepy part. Quickly, think of a color and a tool right now."
       },
       "on_screen": {
-        "en": "THE CREEPY PART"
+        "en": "STAY ALERT"
       },
       "visual": {
-        "description": "A mysterious man in a hoodie looking intensely into the camera in a dimly lit room.",
+        "description": "Intricate mechanical clock gears turning and locking into place rapidly inside a vintage watch.",
         "search_terms": [
-          "mysterious man face",
-          "cinematic moody lighting",
-          "intense stare male"
+          "clock gears turning",
+          "mechanical watch interior",
+          "golden gears motion"
         ],
         "prefer": "video"
       },
@@ -78,14 +78,14 @@
         "en": "Your brain just hit a semantic priming glitch, defaulting to the most common mental association possible."
       },
       "on_screen": {
-        "en": "COGNITIVE GLITCH"
+        "en": "BRAIN GLITCH"
       },
       "visual": {
-        "description": "An abstract 3D animation of a glowing brain structure with electricity pulsing through circuits.",
+        "description": "A 3D digital visualization of a neural network with electric pulses firing between synapses.",
         "search_terms": [
-          "glowing brain animation",
           "neural network pulse",
-          "abstract blue energy"
+          "brain electric synapses",
+          "digital blue energy"
         ],
         "prefer": "video"
       },
@@ -93,17 +93,17 @@
     },
     {
       "vo": {
-        "en": "You just thought of a Red Hammer. Ninety-eight percent of people choose exactly that."
+        "en": "You just thought of a Red Hammer. Most people choose exactly that."
       },
       "on_screen": {
         "en": "RED HAMMER"
       },
       "visual": {
-        "description": "A heavy red hammer slamming down onto a wooden surface in slow motion.",
+        "description": "A heavy red-handled hammer striking a nail on a wooden workbench in cinematic slow motion.",
         "search_terms": [
-          "red hammer hitting",
-          "tool on wood",
-          "slow motion impact"
+          "red hammer tool",
+          "hitting nail wood",
+          "carpenter workshop motion"
         ],
         "prefer": "video"
       },
@@ -111,17 +111,17 @@
     },
     {
       "vo": {
-        "en": "Subscribe for tomorrow's brain test and comment WORKED if I got you, because..."
+        "en": "Subscribe for tomorrow's brain test and comment YES if this worked on you, because..."
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "A hand clicking a glowing digital notification bell icon on a dark screen.",
+        "description": "A hand holding a smartphone, tapping the screen to hit a digital notification bell icon.",
         "search_terms": [
-          "clicking bell icon",
-          "subscribe button animation",
-          "hand using phone"
+          "hand clicking phone",
+          "subscribe button touch",
+          "notification icon tap"
         ],
         "prefer": "video"
       },
@@ -133,6 +133,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 34.5
+    "en": 34.2
   }
 }
