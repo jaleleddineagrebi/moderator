@@ -3,17 +3,17 @@
   "scenes": [
     {
       "vo": {
-        "en": "You will fail this test."
+        "en": "You will fail this five-second test."
       },
       "on_screen": {
         "en": "YOU WILL FAIL"
       },
       "visual": {
-        "description": "A close-up of a man's intense, focused eye as the pupil dilates significantly.",
+        "description": "Macro extreme close-up of a man's pupil rapidly dilating and contracting as light hits it.",
         "search_terms": [
-          "intense male eye",
-          "pupil dilation macro",
-          "man staring camera"
+          "male eye pupil",
+          "macro eye blinking",
+          "staring intense gaze"
         ],
         "prefer": "video"
       },
@@ -27,11 +27,11 @@
         "en": "THINK FAST"
       },
       "visual": {
-        "description": "Fast-paced shots of glowing neon mathematical symbols and numbers flying through a dark space.",
+        "description": "Neon blue mathematical symbols and equations flying through a dark digital tunnel at high speed.",
         "search_terms": [
-          "neon math numbers",
-          "digital data stream",
-          "flying digits motion"
+          "digital math numbers",
+          "flying equations tunnel",
+          "glowing code motion"
         ],
         "prefer": "video"
       },
@@ -39,17 +39,17 @@
     },
     {
       "vo": {
-        "en": "Faster! Pick a whole number between twelve and five. Keep it in your head."
+        "en": "Faster! Pick a whole number between five and twelve. Keep it in your head."
       },
       "on_screen": {
         "en": "PICK A NUMBER"
       },
       "visual": {
-        "description": "A man's hand rapidly scribbling numbers on a transparent glass board with a white marker.",
+        "description": "A man's hand rapidly scribbling calculations on a transparent glass pane with a glowing marker.",
         "search_terms": [
-          "hand writing glass",
-          "man counting fingers",
-          "scribbling math fast"
+          "writing numbers glass",
+          "marker hand motion",
+          "person solving equations"
         ],
         "prefer": "video"
       },
@@ -63,11 +63,11 @@
         "en": "STAY ALERT"
       },
       "visual": {
-        "description": "Intricate mechanical clock gears turning and locking into place rapidly inside a vintage watch.",
+        "description": "Intricate golden mechanical clock gears spinning and locking together in a blur of motion.",
         "search_terms": [
-          "clock gears turning",
-          "mechanical watch interior",
-          "golden gears motion"
+          "mechanical gears spinning",
+          "clockwork macro motion",
+          "golden watch internal"
         ],
         "prefer": "video"
       },
@@ -81,11 +81,11 @@
         "en": "BRAIN GLITCH"
       },
       "visual": {
-        "description": "A 3D digital visualization of a neural network with electric pulses firing between synapses.",
+        "description": "A 3D visualization of a human brain with blue electrical pulses firing between neural connections.",
         "search_terms": [
           "neural network pulse",
-          "brain electric synapses",
-          "digital blue energy"
+          "brain synapses firing",
+          "digital brain energy"
         ],
         "prefer": "video"
       },
@@ -99,11 +99,11 @@
         "en": "RED HAMMER"
       },
       "visual": {
-        "description": "A heavy red-handled hammer striking a nail on a wooden workbench in cinematic slow motion.",
+        "description": "A heavy hammer with a bright red handle striking a thick metal surface in cinematic slow motion.",
         "search_terms": [
-          "red hammer tool",
-          "hitting nail wood",
-          "carpenter workshop motion"
+          "red hammer strike",
+          "hitting anvil metal",
+          "tool work motion"
         ],
         "prefer": "video"
       },
@@ -111,17 +111,17 @@
     },
     {
       "vo": {
-        "en": "Subscribe for tomorrow's brain test and comment YES if this worked on you, because..."
+        "en": "Subscribe for tomorrow's brain test and comment YES if this worked on you, which is exactly why"
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "A hand holding a smartphone, tapping the screen to hit a digital notification bell icon.",
+        "description": "A close-up of a thumb pressing a glowing notification bell icon on a futuristic smartphone screen.",
         "search_terms": [
+          "smartphone bell icon",
           "hand clicking phone",
-          "subscribe button touch",
-          "notification icon tap"
+          "digital notification press"
         ],
         "prefer": "video"
       },
@@ -133,6 +133,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 34.2
+    "en": 35.6
   }
 }
