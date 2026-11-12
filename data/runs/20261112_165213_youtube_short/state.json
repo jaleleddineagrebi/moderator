@@ -69,11 +69,12 @@
   "ended_at": null,
   "revision_rounds": 0,
   "cost": {
-    "total_usd": 0.015733,
+    "total_usd": 0.016599,
     "budget_usd": 1.0,
     "by_agent": {
       "trend_researcher": 0.007439,
-      "scriptwriter": 0.008294
+      "scriptwriter": 0.008294,
+      "packaging": 0.000866
     }
   },
   "agents": {
@@ -678,23 +679,26 @@
         "visuals"
       ],
       "checkpoint": null,
-      "status": "running",
-      "progress": 0,
-      "started_at": "2026-11-12T16:57:18+00:00",
-      "ended_at": null,
-      "attempt": 1,
-      "retries": 0,
+      "status": "done",
+      "progress": 100,
+      "started_at": "2026-11-12T16:57:41+00:00",
+      "ended_at": "2026-11-12T16:57:44+00:00",
+      "attempt": 2,
+      "retries": 1,
       "max_retries": 2,
-      "strategy": "banana_thumbnail",
+      "strategy": "frame_thumbnail",
       "inputs": {
         "script": "script.json",
         "languages": [
           "en"
         ],
-        "strategy": "banana_thumbnail",
+        "strategy": "frame_thumbnail",
         "thumbnail_source": "assets/scene_01.mp4"
       },
-      "outputs": {},
+      "outputs": {
+        "metadata": "metadata.json",
+        "thumbnail_en": "thumbnail_en.png"
+      },
       "logs": [
         {
           "ts": "2026-11-12T16:57:18+00:00",
@@ -715,11 +719,98 @@
           "ts": "2026-11-12T16:57:27+00:00",
           "level": "warning",
           "msg": "Model 'gemini-3.5-flash-lite' returned 503; falling back to 'gemini-3.1-flash-lite'"
+        },
+        {
+          "ts": "2026-11-12T16:57:31+00:00",
+          "level": "warning",
+          "msg": "'gemini-3.1-flash-lite' returned 503; retrying once in 2s"
+        },
+        {
+          "ts": "2026-11-12T16:57:36+00:00",
+          "level": "warning",
+          "msg": "Model 'gemini-3.1-flash-lite' returned 503; falling back to 'gemini-2.5-flash-lite'"
+        },
+        {
+          "ts": "2026-11-12T16:57:37+00:00",
+          "level": "warning",
+          "msg": "'gemini-2.5-flash-lite' is not enabled; skipping it for the rest of this run"
+        },
+        {
+          "ts": "2026-11-12T16:57:37+00:00",
+          "level": "warning",
+          "msg": "Model 'gemini-2.5-flash-lite' returned 404; falling back to 'gemini-3-flash-preview'"
+        },
+        {
+          "ts": "2026-11-12T16:57:37+00:00",
+          "level": "warning",
+          "msg": "'gemini-3-flash-preview' returned 503; retrying once in 2s"
+        },
+        {
+          "ts": "2026-11-12T16:57:40+00:00",
+          "level": "warning",
+          "msg": "Model 'gemini-3-flash-preview' returned 503; falling back to 'gemini-2.5-flash'"
+        },
+        {
+          "ts": "2026-11-12T16:57:40+00:00",
+          "level": "warning",
+          "msg": "'gemini-2.5-flash' is not enabled; skipping it for the rest of this run"
+        },
+        {
+          "ts": "2026-11-12T16:57:40+00:00",
+          "level": "warning",
+          "msg": "Model 'gemini-2.5-flash' returned 404; falling back to 'gemini-1.5-flash-8b'"
+        },
+        {
+          "ts": "2026-11-12T16:57:40+00:00",
+          "level": "warning",
+          "msg": "'gemini-1.5-flash-8b' is not enabled; skipping it for the rest of this run"
+        },
+        {
+          "ts": "2026-11-12T16:57:40+00:00",
+          "level": "warning",
+          "msg": "Model 'gemini-1.5-flash-8b' returned 404; falling back to 'gemini-1.5-flash'"
+        },
+        {
+          "ts": "2026-11-12T16:57:40+00:00",
+          "level": "warning",
+          "msg": "'gemini-1.5-flash' is not enabled; skipping it for the rest of this run"
+        },
+        {
+          "ts": "2026-11-12T16:57:40+00:00",
+          "level": "error",
+          "msg": "LLMError: Gemini API 404 (gemini-1.5-flash): {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n"
+        },
+        {
+          "ts": "2026-11-12T16:57:41+00:00",
+          "level": "info",
+          "msg": "Attempt 2/3, strategy 'frame_thumbnail'"
+        },
+        {
+          "ts": "2026-11-12T16:57:41+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.8-flash, medium complexity, thinking low)"
+        },
+        {
+          "ts": "2026-11-12T16:57:44+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3.6-flash) answered in 2.6s (tokens in 628, out 271, thinking 0)"
+        },
+        {
+          "ts": "2026-11-12T16:57:44+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
-      "errors": [],
+      "errors": [
+        {
+          "ts": "2026-11-12T16:57:40+00:00",
+          "attempt": 1,
+          "strategy": "banana_thumbnail",
+          "error": "LLMError: Gemini API 404 (gemini-1.5-flash): {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n"
+        }
+      ],
       "feedback": [],
-      "cost_usd": 0.0
+      "cost_usd": 0.000866
     },
     "edit": {
       "title": "Edit the final videos",
@@ -853,7 +944,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-12T16:57:31+00:00",
+    "exported_at": "2026-11-12T16:57:50+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/43263227993"
   }
