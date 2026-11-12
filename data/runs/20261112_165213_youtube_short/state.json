@@ -320,6 +320,21 @@
           "ts": "2026-11-12T16:52:14+00:00",
           "level": "warning",
           "msg": "Google Search grounding unavailable on current tier/quota; continuing with Gemini Flash directly"
+        },
+        {
+          "ts": "2026-11-12T16:52:44+00:00",
+          "level": "warning",
+          "msg": "Gemini connection timed out on default route; retrying over IPv4"
+        },
+        {
+          "ts": "2026-11-12T16:52:45+00:00",
+          "level": "warning",
+          "msg": "'gemini-3.8-flash' returned 503; retrying once in 2s"
+        },
+        {
+          "ts": "2026-11-12T16:52:49+00:00",
+          "level": "warning",
+          "msg": "Model 'gemini-3.8-flash' returned 503; falling back to 'gemini-3-flash-preview'"
         }
       ],
       "errors": [],
@@ -500,7 +515,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-12T16:52:31+00:00",
+    "exported_at": "2026-11-12T16:52:49+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/43263227993"
   }
