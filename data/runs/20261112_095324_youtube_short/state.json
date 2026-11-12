@@ -942,10 +942,10 @@
         "audio"
       ],
       "checkpoint": null,
-      "status": "running",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-12T10:15:59+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-12T10:16:24+00:00",
       "attempt": 2,
       "retries": 0,
       "max_retries": 2,
@@ -1009,6 +1009,11 @@
           "ts": "2026-11-12T10:15:59+00:00",
           "level": "info",
           "msg": "Rendering en: 7 scenes, 40.8s, xfade transitions"
+        },
+        {
+          "ts": "2026-11-12T10:16:24+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [],
@@ -1023,11 +1028,11 @@
         "packaging"
       ],
       "checkpoint": "C",
-      "status": "queued",
-      "progress": 0,
-      "started_at": "2026-11-12T10:14:24+00:00",
-      "ended_at": "2026-11-12T10:14:39+00:00",
-      "attempt": 1,
+      "status": "running",
+      "progress": 60,
+      "started_at": "2026-11-12T10:16:24+00:00",
+      "ended_at": null,
+      "attempt": 2,
       "retries": 0,
       "max_retries": 2,
       "strategy": "full_review",
@@ -1090,6 +1095,16 @@
           "ts": "2026-11-12T10:14:39+00:00",
           "level": "info",
           "msg": "Reset: upstream step 'visuals' is being revised"
+        },
+        {
+          "ts": "2026-11-12T10:16:24+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'full_review'"
+        },
+        {
+          "ts": "2026-11-12T10:16:25+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.8-flash, medium complexity, thinking low)"
         }
       ],
       "errors": [],
@@ -1151,7 +1166,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-12T10:16:15+00:00",
+    "exported_at": "2026-11-12T10:16:33+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/43195375174"
   }
