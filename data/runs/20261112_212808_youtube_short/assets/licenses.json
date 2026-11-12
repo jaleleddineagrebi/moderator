@@ -3,11 +3,11 @@
     "scene": "scene_01",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-164381/",
-    "author": "Burhanbutt",
+    "page": "https://pixabay.com/videos/id-24496/",
+    "author": "ninosouza",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
     "query": "man pointing camera",
-    "description": "A man points directly at the camera with an intense, focused expression in a dimly lit room."
+    "description": "A man points directly at the lens with an intense, focused expression in a dark studio."
   },
   {
     "scene": "scene_02",
@@ -23,21 +23,21 @@
     "scene": "scene_03",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-10480/",
-    "author": "lucdecleir",
+    "page": "https://pixabay.com/videos/id-10839/",
+    "author": "Coverr-Free-Footage",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "neural network glowing",
-    "description": "Abstract digital animation of glowing blue neural pathways and electrical pulses moving fast."
+    "query": "digital neural network",
+    "description": "Abstract digital animation of glowing neural pathways and fast-moving electrical pulses."
   },
   {
     "scene": "scene_04",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-12742/",
-    "author": "tacofleur",
+    "page": "https://pixabay.com/videos/id-30470/",
+    "author": "mike-media",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "muscle twitching arm",
-    "description": "Extreme close up of a man's shoulder muscles twitching and vibrating under heavy physical strain."
+    "query": "muscle tremor close-up",
+    "description": "Extreme close up of a man's shoulder muscles twitching under heavy physical strain."
   },
   {
     "scene": "scene_05",

@@ -69,12 +69,12 @@
   "ended_at": null,
   "revision_rounds": 1,
   "cost": {
-    "total_usd": 0.026805,
+    "total_usd": 0.027284,
     "budget_usd": 1.0,
     "by_agent": {
       "trend_researcher": 0.002769,
       "scriptwriter": 0.020677,
-      "packaging": 0.000467,
+      "packaging": 0.000946,
       "qa_reviewer": 0.002891
     }
   },
@@ -469,10 +469,10 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "running",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-12T21:30:37+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-12T21:30:54+00:00",
       "attempt": 2,
       "retries": 0,
       "max_retries": 2,
@@ -565,6 +565,26 @@
           "ts": "2026-11-12T21:30:37+00:00",
           "level": "info",
           "msg": "Replacing scene_01; keeping 3 unchanged scene(s)"
+        },
+        {
+          "ts": "2026-11-12T21:30:50+00:00",
+          "level": "info",
+          "msg": "scene_04: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-12T21:30:51+00:00",
+          "level": "info",
+          "msg": "scene_01: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-12T21:30:53+00:00",
+          "level": "info",
+          "msg": "scene_03: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-12T21:30:54+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [],
@@ -584,21 +604,21 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "running",
-      "progress": 0,
-      "started_at": "2026-11-12T21:30:37+00:00",
-      "ended_at": null,
-      "attempt": 3,
-      "retries": 0,
+      "status": "done",
+      "progress": 100,
+      "started_at": "2026-11-12T21:30:43+00:00",
+      "ended_at": "2026-11-12T21:30:55+00:00",
+      "attempt": 4,
+      "retries": 1,
       "max_retries": 2,
-      "strategy": "primary_voice",
+      "strategy": "alternate_voice",
       "inputs": {
         "script": "script.json",
         "languages": [
           "en"
         ],
         "voices": {
-          "en": "en-US-AndrewMultilingualNeural"
+          "en": "en-US-AriaNeural"
         }
       },
       "outputs": {
@@ -664,6 +684,31 @@
           "ts": "2026-11-12T21:30:42+00:00",
           "level": "error",
           "msg": "NoAudioReceived: No audio was received. Please verify that your parameters are correct."
+        },
+        {
+          "ts": "2026-11-12T21:30:43+00:00",
+          "level": "info",
+          "msg": "Attempt 2/3, strategy 'alternate_voice'"
+        },
+        {
+          "ts": "2026-11-12T21:30:43+00:00",
+          "level": "info",
+          "msg": "Narrating en with en-US-AriaNeural"
+        },
+        {
+          "ts": "2026-11-12T21:30:53+00:00",
+          "level": "info",
+          "msg": "en voiceover: 37.9s"
+        },
+        {
+          "ts": "2026-11-12T21:30:53+00:00",
+          "level": "info",
+          "msg": "Generating an ambient music bed (no library tracks with license files found)"
+        },
+        {
+          "ts": "2026-11-12T21:30:55+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [
@@ -691,11 +736,11 @@
         "visuals"
       ],
       "checkpoint": null,
-      "status": "needs_revision",
-      "progress": 0,
-      "started_at": "2026-11-12T21:29:19+00:00",
-      "ended_at": "2026-11-12T21:29:25+00:00",
-      "attempt": 1,
+      "status": "done",
+      "progress": 100,
+      "started_at": "2026-11-12T21:30:54+00:00",
+      "ended_at": "2026-11-12T21:30:58+00:00",
+      "attempt": 2,
       "retries": 0,
       "max_retries": 2,
       "strategy": "banana_thumbnail",
@@ -796,6 +841,36 @@
           "ts": "2026-11-12T21:30:19+00:00",
           "level": "warning",
           "msg": "Sent back by qa: QA found:\n[all] people rule: thumbnail_en: The woman is clearly visible on the camera monitor (seated on a couch) and blurred in the background.. Replace with footage without women (a face-only close-up is the only exception)."
+        },
+        {
+          "ts": "2026-11-12T21:30:54+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'banana_thumbnail'"
+        },
+        {
+          "ts": "2026-11-12T21:30:54+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.5-flash-lite, low complexity, thinking minimal)"
+        },
+        {
+          "ts": "2026-11-12T21:30:57+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3.5-flash-lite) answered in 3.0s (tokens in 572, out 224, thinking 0)"
+        },
+        {
+          "ts": "2026-11-12T21:30:57+00:00",
+          "level": "info",
+          "msg": "Generating 9:16 image with Nano Banana (gemini-nano-banana-2.1)"
+        },
+        {
+          "ts": "2026-11-12T21:30:57+00:00",
+          "level": "warning",
+          "msg": "Nano Banana thumbnail background failed (Gemini API 429: daily quota used up (or model not enabled) for gemini-nano-banana-2.1, gemini-3.1-flash-image-preview, gemini-3.1-flash-image, gemini-2.5-flash-image); using scene_01 frame instead"
+        },
+        {
+          "ts": "2026-11-12T21:30:58+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [],
@@ -806,7 +881,7 @@
           "comment": "QA found:\n[all] people rule: thumbnail_en: The woman is clearly visible on the camera monitor (seated on a couch) and blurred in the background.. Replace with footage without women (a face-only close-up is the only exception)."
         }
       ],
-      "cost_usd": 0.000467
+      "cost_usd": 0.000946
     },
     "edit": {
       "title": "Edit the final videos",
@@ -816,11 +891,11 @@
         "audio"
       ],
       "checkpoint": null,
-      "status": "queued",
+      "status": "running",
       "progress": 0,
-      "started_at": "2026-11-12T21:29:19+00:00",
-      "ended_at": "2026-11-12T21:30:05+00:00",
-      "attempt": 1,
+      "started_at": "2026-11-12T21:30:55+00:00",
+      "ended_at": null,
+      "attempt": 2,
       "retries": 0,
       "max_retries": 2,
       "strategy": "transitions",
@@ -872,6 +947,16 @@
           "ts": "2026-11-12T21:30:19+00:00",
           "level": "info",
           "msg": "Reset: upstream step 'visuals' is being revised"
+        },
+        {
+          "ts": "2026-11-12T21:30:55+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'transitions'"
+        },
+        {
+          "ts": "2026-11-12T21:30:55+00:00",
+          "level": "info",
+          "msg": "Rendering en: 6 scenes, 38.6s, xfade transitions"
         }
       ],
       "errors": [],
@@ -1019,7 +1104,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-12T21:30:43+00:00",
+    "exported_at": "2026-11-12T21:31:04+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/43310455467"
   }
