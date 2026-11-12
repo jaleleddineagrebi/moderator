@@ -3,70 +3,70 @@
     "scene": "scene_01",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-150285/",
-    "author": "BlenderTimer",
+    "page": "https://pixabay.com/videos/id-287749/",
+    "author": "Kanenori",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "macro eye pupil",
-    "description": "A macro close-up of a human eye pupil dilating rapidly with a ticking clock overlay."
+    "query": "intense male eye",
+    "description": "A close-up of a man's intense, focused eye as the pupil dilates significantly."
   },
   {
     "scene": "scene_02",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-21116/",
-    "author": "RafterJr72",
+    "page": "https://pixabay.com/videos/id-145483/",
+    "author": "Engin_Akyurt",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "neon math equations",
-    "description": "Fast-moving neon mathematical equations flying through a dark digital space."
+    "query": "neon math numbers",
+    "description": "Fast-paced shots of glowing neon mathematical symbols and numbers flying through a dark space."
   },
   {
     "scene": "scene_03",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-19600/",
-    "author": "OrcaTec",
+    "page": "https://pixabay.com/videos/id-107242/",
+    "author": "mootlak",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "hand pointing numbers",
-    "description": "A man's hand rapidly pointing at wooden number blocks on a table."
+    "query": "hand writing glass",
+    "description": "A man's hand rapidly scribbling numbers on a transparent glass board with a white marker."
   },
   {
     "scene": "scene_04",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-203252/",
-    "author": "conte_public",
+    "page": "https://pixabay.com/videos/id-61621/",
+    "author": "wastedgeneration",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "mysterious man face",
-    "description": "A mysterious man in a hoodie looking intensely into the camera in a dimly lit room."
+    "query": "clock gears turning",
+    "description": "Intricate mechanical clock gears turning and locking into place rapidly inside a vintage watch."
   },
   {
     "scene": "scene_05",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-122/",
-    "author": "Coverr-Free-Footage",
+    "page": "https://pixabay.com/videos/id-141482/",
+    "author": "u_9cdufm6xxs",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "glowing brain animation",
-    "description": "An abstract 3D animation of a glowing brain structure with electricity pulsing through circuits."
+    "query": "neural network pulse",
+    "description": "A 3D digital visualization of a neural network with electric pulses firing between synapses."
   },
   {
     "scene": "scene_06",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-247208/",
-    "author": "xBriantcx",
+    "page": "https://pixabay.com/videos/id-205344/",
+    "author": "Kanenori",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "red hammer hitting",
-    "description": "A heavy red hammer slamming down onto a wooden surface in slow motion."
+    "query": "red hammer tool",
+    "description": "A heavy red-handled hammer striking a nail on a wooden workbench in cinematic slow motion."
   },
   {
     "scene": "scene_07",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-34826/",
-    "author": "adege",
+    "page": "https://pixabay.com/videos/id-3172/",
+    "author": "Coverr-Free-Footage",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "clicking bell icon",
-    "description": "A hand clicking a glowing digital notification bell icon on a dark screen."
+    "query": "hand clicking phone",
+    "description": "A hand holding a smartphone, tapping the screen to hit a digital notification bell icon."
   }
 ]
