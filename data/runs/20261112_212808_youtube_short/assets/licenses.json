@@ -1,0 +1,62 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-164381/",
+    "author": "Burhanbutt",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man pointing camera",
+    "description": "A man points directly at the camera with an intense, focused expression in a dimly lit room."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-199127/",
+    "author": "D-GM",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man pushing wall",
+    "description": "Close up of a man's tensed hands pressing outward against a wooden door frame."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-10480/",
+    "author": "lucdecleir",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "neural network glowing",
+    "description": "Abstract digital animation of glowing blue neural pathways and electrical pulses moving fast."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-12742/",
+    "author": "tacofleur",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "muscle twitching arm",
+    "description": "Extreme close up of a man's shoulder muscles twitching and vibrating under heavy physical strain."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-158230/",
+    "author": "JayShawflybydrones",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man arms rising",
+    "description": "A man stands in a hallway and his arms slowly rise up to his sides without him moving them."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-24497/",
+    "author": "ninosouza",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man smiling camera",
+    "description": "A man looks at his hands in disbelief then looks up to smile and point at a digital button."
+  }
+]
