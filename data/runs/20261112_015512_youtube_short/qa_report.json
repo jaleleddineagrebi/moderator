@@ -1,12 +1,12 @@
 {
-  "passed": false,
-  "revision_round": 0,
+  "passed": true,
+  "revision_round": 1,
   "checks": [
     {
       "check": "length",
       "lang": "en",
       "ok": true,
-      "detail": "50.1s (must be under 60s; target 32-50s)",
+      "detail": "44.8s (must be under 60s; target 32-50s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -14,7 +14,7 @@
       "check": "target length",
       "lang": "en",
       "ok": true,
-      "detail": "50.1s",
+      "detail": "44.8s",
       "send_to": null,
       "severity": "minor"
     },
@@ -46,7 +46,7 @@
       "check": "loudness",
       "lang": "en",
       "ok": true,
-      "detail": "-14.2 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)",
+      "detail": "-14.1 LUFS, peak -1.4 dBFS (target -14 LUFS, peak <= -1)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -62,7 +62,7 @@
       "check": "caption sync",
       "lang": "en",
       "ok": true,
-      "detail": "114 words, 42 caption events",
+      "detail": "104 words, 39 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -91,20 +91,20 @@
       "severity": "blocker"
     },
     {
-      "check": "accuracy review",
+      "check": "grammar review",
       "lang": "en",
       "ok": false,
-      "detail": "In scene_04, the script claims diners spend 8% more. The actual Cornell University study (Yang, Kimes, and Sessarego, 2009) found that customers spent significantly more, but specifically that the 'numeral only' group spent an average of $39.52 compared to $37.62 for the symbol group, which is approximately an 5% increase, not 8%. Change 'eight percent' to 'over five percent'.",
+      "detail": "In scene_07, the phrase 'which is why you should...' is an unfinished, dangling clause at the end of the sentence. Remove 'which is why you should...' or rephrase to complete the thought smoothly.",
       "send_to": "script",
-      "severity": "blocker"
+      "severity": "minor"
     },
     {
       "check": "people rule",
       "lang": null,
-      "ok": false,
-      "detail": "could not check images (ReadTimeout: ); check manually",
+      "ok": true,
+      "detail": "no women beyond face close-ups in 7 scenes and 1 thumbnail(s)",
       "send_to": null,
-      "severity": "minor"
+      "severity": "blocker"
     }
   ]
 }

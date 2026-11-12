@@ -1,15 +1,15 @@
-# QA report: CHANGES NEEDED
+# QA report: PASSED
 
-- ✅ **length** [en]: 50.1s (must be under 60s; target 32-50s)
-- ✅ **target length** [en]: 50.1s
+- ✅ **length** [en]: 44.8s (must be under 60s; target 32-50s)
+- ✅ **target length** [en]: 44.8s
 - ✅ **aspect ratio** [en]: 1080x1920
 - ✅ **video codec** [en]: h264
 - ✅ **audio track** [en]: present
-- ✅ **loudness** [en]: -14.2 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)
+- ✅ **loudness** [en]: -14.1 LUFS, peak -1.4 dBFS (target -14 LUFS, peak <= -1)
 - ✅ **hook timing** [en]: scene_01 spoken in 2.8s (target <= 4s)
-- ✅ **caption sync** [en]: 114 words, 42 caption events
+- ✅ **caption sync** [en]: 104 words, 39 caption events
 - ✅ **visual licenses**: 7 assets: pixabay
 - ✅ **visual diversity**: all scenes use distinct footage
 - ✅ **audio licenses**: music: original work, no third-party rights; sfx: original work, no third-party rights; voice: synthetic voice; no third-party performance rights
-- ❌ **accuracy review** [en]: In scene_04, the script claims diners spend 8% more. The actual Cornell University study (Yang, Kimes, and Sessarego, 2009) found that customers spent significantly more, but specifically that the 'numeral only' group spent an average of $39.52 compared to $37.62 for the symbol group, which is approximately an 5% increase, not 8%. Change 'eight percent' to 'over five percent'. → sent to script
-- ⚠️ **people rule**: could not check images (ReadTimeout: ); check manually
+- ⚠️ **grammar review** [en]: In scene_07, the phrase 'which is why you should...' is an unfinished, dangling clause at the end of the sentence. Remove 'which is why you should...' or rephrase to complete the thought smoothly.
+- ✅ **people rule**: no women beyond face close-ups in 7 scenes and 1 thumbnail(s)
