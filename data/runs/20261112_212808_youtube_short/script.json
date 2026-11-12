@@ -9,11 +9,11 @@
         "en": "TEST YOUR BODY"
       },
       "visual": {
-        "description": "A man points directly at the camera with an intense, focused expression in a dimly lit room.",
+        "description": "A man points directly at the lens with an intense, focused expression in a dark studio.",
         "search_terms": [
           "man pointing camera",
-          "serious man face",
-          "direct eye contact"
+          "stern male face",
+          "low light portrait"
         ],
         "prefer": "video"
       },
@@ -21,17 +21,17 @@
     },
     {
       "vo": {
-        "en": "Find a doorway and push the back of your hands against the frame as hard as you possibly can."
+        "en": "Find a doorway and jam the back of your hands against the frame as hard as you can."
       },
       "on_screen": {
-        "en": "PUSH THE DOORFRAME"
+        "en": "PUSH THE FRAME"
       },
       "visual": {
         "description": "Close up of a man's tensed hands pressing outward against a wooden door frame.",
         "search_terms": [
-          "man pushing wall",
-          "hands on doorway",
-          "muscle tension hands"
+          "male hands pushing",
+          "wooden doorframe close-up",
+          "physical effort"
         ],
         "prefer": "video"
       },
@@ -39,17 +39,17 @@
     },
     {
       "vo": {
-        "en": "Keep pushing. Your brain is sending a constant electrical signal to your muscles, but your arms aren't moving."
+        "en": "Keep pushing hard. Your brain is blasting electrical signals to your muscles, but your arms aren't moving an inch."
       },
       "on_screen": {
         "en": "BRAIN SIGNAL OVERLOAD"
       },
       "visual": {
-        "description": "Abstract digital animation of glowing blue neural pathways and electrical pulses moving fast.",
+        "description": "Abstract digital animation of glowing neural pathways and fast-moving electrical pulses.",
         "search_terms": [
-          "neural network glowing",
-          "abstract blue energy",
-          "digital brain pulses"
+          "digital neural network",
+          "glowing brain synapses",
+          "abstract data flow"
         ],
         "prefer": "video"
       },
@@ -57,17 +57,17 @@
     },
     {
       "vo": {
-        "en": "Wait, it gets even weirder. Hold it for ten more seconds until your shoulders literally start to shake."
+        "en": "Wait, this gets even creepier. Keep the pressure for ten more seconds until your shoulders start to vibrate."
       },
       "on_screen": {
-        "en": "IT GETS WEIRDER"
+        "en": "IT GETS CREEPIER"
       },
       "visual": {
-        "description": "Extreme close up of a man's shoulder muscles twitching and vibrating under heavy physical strain.",
+        "description": "Extreme close up of a man's shoulder muscles twitching under heavy physical strain.",
         "search_terms": [
-          "muscle twitching arm",
-          "man tensed shoulder",
-          "shaking muscles"
+          "muscle tremor close-up",
+          "shoulder tension",
+          "macro skin vibration"
         ],
         "prefer": "video"
       },
@@ -75,7 +75,7 @@
     },
     {
       "vo": {
-        "en": "Now, step away and let your arms hang loose. Watch as they float up involuntarily like you’re being possessed."
+        "en": "Now, step away into the open and let your arms hang completely loose. Watch as they float up like magic."
       },
       "on_screen": {
         "en": "INVOLUNTARY FLOATING"
@@ -83,9 +83,9 @@
       "visual": {
         "description": "A man stands in a hallway and his arms slowly rise up to his sides without him moving them.",
         "search_terms": [
-          "man arms rising",
-          "slow motion levitation",
-          "surprised man expression"
+          "man standing hallway",
+          "arms floating up",
+          "disbelief expression"
         ],
         "prefer": "video"
       },
@@ -93,16 +93,16 @@
     },
     {
       "vo": {
-        "en": "This is the Kohnstamm reflex, a brain hack that overrides your control. Subscribe for more tests and comment YES if it worked, which is exactly why"
+        "en": "This is the Kohnstamm reflex. Subscribe for the next brain test and comment YES if it worked, now go back and"
       },
       "on_screen": {
-        "en": "SUBSCRIBE 🔔"
+        "en": "SUBSCRIBE ሔ"
       },
       "visual": {
         "description": "A man looks at his hands in disbelief then looks up to smile and point at a digital button.",
         "search_terms": [
-          "man smiling camera",
-          "hand clicking screen",
+          "hand clicking button",
+          "smart phone interface",
           "satisfied man face"
         ],
         "prefer": "video"
@@ -115,6 +115,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 38.5
+    "en": 37.1
   }
 }
