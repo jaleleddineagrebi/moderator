@@ -69,9 +69,12 @@
   "ended_at": null,
   "revision_rounds": 0,
   "cost": {
-    "total_usd": 0.0,
+    "total_usd": 0.014443,
     "budget_usd": 1.0,
-    "by_agent": {}
+    "by_agent": {
+      "trend_researcher": 0.007694,
+      "scriptwriter": 0.006749
+    }
   },
   "agents": {
     "trend_researcher": {
@@ -274,10 +277,10 @@
       "agent": "trend_researcher",
       "depends_on": [],
       "checkpoint": "A",
-      "status": "running",
-      "progress": 25,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-13T01:16:33+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-13T01:16:45+00:00",
       "attempt": 2,
       "retries": 1,
       "max_retries": 2,
@@ -289,7 +292,10 @@
           "en"
         ]
       },
-      "outputs": {},
+      "outputs": {
+        "ideas": "ideas.md",
+        "data": "ideas.json"
+      },
       "logs": [
         {
           "ts": "2026-11-13T01:06:01+00:00",
@@ -355,6 +361,21 @@
           "ts": "2026-11-13T01:16:33+00:00",
           "level": "warning",
           "msg": "Model 'gemini-3.8-flash' returned 429; falling back to 'gemini-3-flash-preview'"
+        },
+        {
+          "ts": "2026-11-13T01:16:45+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3-flash-preview) answered in 11.8s (tokens in 1186, out 738, thinking 1629)"
+        },
+        {
+          "ts": "2026-11-13T01:16:45+00:00",
+          "level": "info",
+          "msg": "Finished, waiting for your approval"
+        },
+        {
+          "ts": "2026-11-13T01:16:45+00:00",
+          "level": "info",
+          "msg": "Approved by schedule (auto-approve) (choice: coffee-price-decoy)"
         }
       ],
       "errors": [
@@ -366,7 +387,7 @@
         }
       ],
       "feedback": [],
-      "cost_usd": 0.0
+      "cost_usd": 0.007694
     },
     "script": {
       "title": "Write the script",
@@ -375,20 +396,60 @@
         "research"
       ],
       "checkpoint": "B",
-      "status": "queued",
-      "progress": 0,
-      "started_at": null,
-      "ended_at": null,
-      "attempt": 0,
+      "status": "done",
+      "progress": 100,
+      "started_at": "2026-11-13T01:16:45+00:00",
+      "ended_at": "2026-11-13T01:16:53+00:00",
+      "attempt": 1,
       "retries": 0,
       "max_retries": 2,
-      "strategy": null,
-      "inputs": {},
-      "outputs": {},
-      "logs": [],
+      "strategy": "default",
+      "inputs": {
+        "idea": "The Coffee Price Trap",
+        "languages": [
+          "en"
+        ],
+        "comment_at_selection": null
+      },
+      "outputs": {
+        "script": "script.md",
+        "data": "script.json"
+      },
+      "logs": [
+        {
+          "ts": "2026-11-13T01:16:45+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'default'"
+        },
+        {
+          "ts": "2026-11-13T01:16:45+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.8-flash, high complexity, thinking high)"
+        },
+        {
+          "ts": "2026-11-13T01:16:53+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3-flash-preview) answered in 8.6s (tokens in 891, out 1048, thinking 1053)"
+        },
+        {
+          "ts": "2026-11-13T01:16:53+00:00",
+          "level": "info",
+          "msg": "Estimated narration: en 33.8s"
+        },
+        {
+          "ts": "2026-11-13T01:16:53+00:00",
+          "level": "info",
+          "msg": "Finished, waiting for your approval"
+        },
+        {
+          "ts": "2026-11-13T01:16:53+00:00",
+          "level": "info",
+          "msg": "Approved by schedule (auto-approve)"
+        }
+      ],
       "errors": [],
       "feedback": [],
-      "cost_usd": 0.0
+      "cost_usd": 0.006749
     },
     "visuals": {
       "title": "Source scene visuals",
@@ -397,17 +458,36 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "queued",
+      "status": "running",
       "progress": 0,
-      "started_at": null,
+      "started_at": "2026-11-13T01:16:54+00:00",
       "ended_at": null,
-      "attempt": 0,
+      "attempt": 1,
       "retries": 0,
       "max_retries": 2,
-      "strategy": null,
-      "inputs": {},
+      "strategy": "stock_video",
+      "inputs": {
+        "script": "script.json",
+        "providers": [
+          "pixabay",
+          "wikimedia"
+        ],
+        "nano_banana": true,
+        "starting_tier": "stock_video"
+      },
       "outputs": {},
-      "logs": [],
+      "logs": [
+        {
+          "ts": "2026-11-13T01:16:54+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'stock_video'"
+        },
+        {
+          "ts": "2026-11-13T01:16:54+00:00",
+          "level": "info",
+          "msg": "Visual diversity: excluding 164 footage sources used in recent Shorts"
+        }
+      ],
       "errors": [],
       "feedback": [],
       "cost_usd": 0.0
@@ -419,17 +499,36 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "queued",
+      "status": "running",
       "progress": 0,
-      "started_at": null,
+      "started_at": "2026-11-13T01:16:54+00:00",
       "ended_at": null,
-      "attempt": 0,
+      "attempt": 1,
       "retries": 0,
       "max_retries": 2,
-      "strategy": null,
-      "inputs": {},
+      "strategy": "primary_voice",
+      "inputs": {
+        "script": "script.json",
+        "languages": [
+          "en"
+        ],
+        "voices": {
+          "en": "en-US-AndrewMultilingualNeural"
+        }
+      },
       "outputs": {},
-      "logs": [],
+      "logs": [
+        {
+          "ts": "2026-11-13T01:16:54+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'primary_voice'"
+        },
+        {
+          "ts": "2026-11-13T01:16:54+00:00",
+          "level": "info",
+          "msg": "Narrating en with en-US-AndrewMultilingualNeural"
+        }
+      ],
       "errors": [],
       "feedback": [],
       "cost_usd": 0.0
@@ -510,22 +609,38 @@
       "type": "choice",
       "step": "research",
       "route_to": "research",
-      "status": "idle",
-      "options": [],
-      "choice": null,
+      "status": "approved",
+      "options": [
+        {
+          "id": "coffee-price-decoy",
+          "label": "1. The Coffee Price Trap",
+          "detail": "The viewer is presented with 3 prices and forced to pick the 'best deal' in 3 seconds; this reveals the Decoy Effect where the middle option exists only to make the most expensive one look like a bargain. Comment trigger: Ask viewers if they fell for the 'Medium' trap.\nHook (en): Pick the best deal fast.\nWhy: Interactive 'choice' videos have the highest retention because they force the viewer to engage mentally before the reveal. The Decoy Effect is a proven viral psychological concept used by Starbucks and Apple."
+        },
+        {
+          "id": "mirroring-power-move",
+          "label": "2. The 3-Word Negotiator",
+          "detail": "Shows a social power hack where repeating the last 3 words of a seller's sentence forces them to lower prices or reveal secrets through the 'Mirroring' effect. Forces viewers to visualize their last negotiation. Subscribe trigger: 'Use this to save thousands.'\nHook (en): Repeat their last three words.\nWhy: Social power moves and 'FBI level' negotiation tactics are currently trending on high-performance finance shorts. It provides immediate, actionable value which drives high 'Save' and 'Share' counts."
+        },
+        {
+          "id": "red-tag-psychology",
+          "label": "3. The Red Tag Scam",
+          "detail": "A visual demonstration showing how your brain bypasses logic when it sees the color red on a price tag, even if there is no actual discount. It triggers the 'Survival Brain' to buy before investigating. Comment trigger: 'Have you ever bought something just because it was red?'\nHook (en): Red prices are lying.\nWhy: This idea leverages a 'hidden truth' about everyday environments (supermarkets), creating a high 'Curiosity Gap.' It falls under the 'Insane Money Secrets' archetype which typically sees >100% APV due to the 'shock' reveal."
+        }
+      ],
+      "choice": "coffee-price-decoy",
       "comment": null,
-      "decided_at": null
+      "decided_at": "2026-11-13T01:16:45+00:00"
     },
     "B": {
       "title": "Approve the script",
       "type": "approve",
       "step": "script",
       "route_to": "script",
-      "status": "idle",
+      "status": "approved",
       "options": [],
       "choice": null,
       "comment": null,
-      "decided_at": null
+      "decided_at": "2026-11-13T01:16:53+00:00"
     },
     "C": {
       "title": "Approve the final videos (never uploaded without your OK)",
@@ -542,7 +657,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-13T01:16:42+00:00",
+    "exported_at": "2026-11-13T01:17:03+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/43342201692"
   }

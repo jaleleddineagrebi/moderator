@@ -1,0 +1,156 @@
+{
+  "title": "The Coffee Price Trap",
+  "scenes": [
+    {
+      "vo": {
+        "en": "Pick the best deal fast."
+      },
+      "on_screen": {
+        "en": "PICK THE BEST DEAL"
+      },
+      "visual": {
+        "description": "Close up of roasted coffee beans falling in slow motion.",
+        "search_terms": [
+          "falling coffee beans",
+          "espresso beans slow motion",
+          "coffee roasting"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "A small coffee is three dollars. A large is seven. But the medium? Six-fifty."
+      },
+      "on_screen": {
+        "en": "S: $3 | M: $6.50 | L: $7"
+      },
+      "visual": {
+        "description": "A man's hand writing numbers on a dark chalkboard quickly.",
+        "search_terms": [
+          "hand writing chalkboard",
+          "math numbers drawing",
+          "chalkboard texture"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "You have three seconds to decide. Three. Two. One. Which one did you grab?"
+      },
+      "on_screen": {
+        "en": "3.. 2.. 1.. CHOOSE!"
+      },
+      "visual": {
+        "description": "A vintage mechanical stopwatch ticking rapidly.",
+        "search_terms": [
+          "stopwatch ticking",
+          "clock hands movement",
+          "timer countdown"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "Wait, here is the creepy part. You probably picked the large, didn’t you?"
+      },
+      "on_screen": {
+        "en": "THE MEDIUM TRAP"
+      },
+      "visual": {
+        "description": "A man in a dark hoodie looking directly at the camera with a surprised expression.",
+        "search_terms": [
+          "man looking surprised",
+          "person shocked face",
+          "low light portrait"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "That is the Decoy Effect. The Medium exists only to make the Large look like a bargain."
+      },
+      "on_screen": {
+        "en": "THE DECOY EFFECT"
+      },
+      "visual": {
+        "description": "An abstract visual of a puppet's wooden hand being controlled by strings.",
+        "search_terms": [
+          "puppet strings moving",
+          "manipulation concept",
+          "wooden mannequin hand"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "Without that decoy, you’d pick the cheapest option. Instead, you just spent double."
+      },
+      "on_screen": {
+        "en": "YOU SPENT DOUBLE"
+      },
+      "visual": {
+        "description": "Close up of a man's hands counting dollar bills rapidly.",
+        "search_terms": [
+          "counting cash money",
+          "hands holding dollars",
+          "currency exchange"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for more brain hacks and comment YES if you fell for it, because you..."
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "A close up of a finger tapping a smartphone screen repeatedly.",
+        "search_terms": [
+          "tapping phone screen",
+          "scrolling smartphone",
+          "using mobile app"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    },
+    {
+      "vo": {
+        "en": "must always..."
+      },
+      "on_screen": {
+        "en": "MUST ALWAYS..."
+      },
+      "visual": {
+        "description": "Fast zoom into a steaming cup of black coffee on a dark table.",
+        "search_terms": [
+          "steaming coffee cup",
+          "dark coffee shop",
+          "hot drink steam"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_08"
+    }
+  ],
+  "idea_id": "coffee-price-decoy",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 33.8
+  }
+}
