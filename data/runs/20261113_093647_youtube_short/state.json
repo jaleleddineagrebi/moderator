@@ -69,12 +69,12 @@
   "ended_at": null,
   "revision_rounds": 2,
   "cost": {
-    "total_usd": 0.04528,
+    "total_usd": 0.045764,
     "budget_usd": 1.0,
     "by_agent": {
       "trend_researcher": 0.010028,
       "scriptwriter": 0.029154,
-      "packaging": 0.000953,
+      "packaging": 0.001437,
       "qa_reviewer": 0.005144
     }
   },
@@ -546,10 +546,10 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "running",
-      "progress": 54,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-13T09:44:29+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-13T09:45:25+00:00",
       "attempt": 3,
       "retries": 0,
       "max_retries": 2,
@@ -707,6 +707,26 @@
           "ts": "2026-11-13T09:45:07+00:00",
           "level": "info",
           "msg": "scene_06: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-13T09:45:14+00:00",
+          "level": "info",
+          "msg": "scene_04: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-13T09:45:18+00:00",
+          "level": "info",
+          "msg": "scene_05: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-13T09:45:23+00:00",
+          "level": "info",
+          "msg": "scene_07: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-13T09:45:25+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [],
@@ -903,11 +923,11 @@
         "visuals"
       ],
       "checkpoint": null,
-      "status": "queued",
-      "progress": 0,
-      "started_at": "2026-11-13T09:42:49+00:00",
-      "ended_at": "2026-11-13T09:43:00+00:00",
-      "attempt": 2,
+      "status": "done",
+      "progress": 100,
+      "started_at": "2026-11-13T09:45:25+00:00",
+      "ended_at": "2026-11-13T09:45:27+00:00",
+      "attempt": 3,
       "retries": 0,
       "max_retries": 2,
       "strategy": "banana_thumbnail",
@@ -1033,11 +1053,41 @@
           "ts": "2026-11-13T09:44:20+00:00",
           "level": "info",
           "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-13T09:45:25+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'banana_thumbnail'"
+        },
+        {
+          "ts": "2026-11-13T09:45:25+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.5-flash-lite, low complexity, thinking minimal)"
+        },
+        {
+          "ts": "2026-11-13T09:45:26+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3.5-flash-lite) answered in 1.2s (tokens in 538, out 233, thinking 0)"
+        },
+        {
+          "ts": "2026-11-13T09:45:26+00:00",
+          "level": "info",
+          "msg": "Generating 9:16 image with Nano Banana (gemini-nano-banana-2.1)"
+        },
+        {
+          "ts": "2026-11-13T09:45:26+00:00",
+          "level": "warning",
+          "msg": "Nano Banana thumbnail background failed (Gemini API 429: daily quota used up (or model not enabled) for gemini-nano-banana-2.1, gemini-3.1-flash-image-preview, gemini-3.1-flash-image, gemini-2.5-flash-image); using scene_01 frame instead"
+        },
+        {
+          "ts": "2026-11-13T09:45:27+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [],
       "feedback": [],
-      "cost_usd": 0.000953
+      "cost_usd": 0.001437
     },
     "edit": {
       "title": "Edit the final videos",
@@ -1047,11 +1097,11 @@
         "audio"
       ],
       "checkpoint": null,
-      "status": "queued",
+      "status": "running",
       "progress": 0,
-      "started_at": "2026-11-13T09:42:49+00:00",
-      "ended_at": "2026-11-13T09:43:56+00:00",
-      "attempt": 2,
+      "started_at": "2026-11-13T09:45:25+00:00",
+      "ended_at": null,
+      "attempt": 3,
       "retries": 0,
       "max_retries": 2,
       "strategy": "transitions",
@@ -1119,6 +1169,16 @@
           "ts": "2026-11-13T09:44:20+00:00",
           "level": "info",
           "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-13T09:45:25+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'transitions'"
+        },
+        {
+          "ts": "2026-11-13T09:45:25+00:00",
+          "level": "info",
+          "msg": "Rendering en: 7 scenes, 53.0s, xfade transitions"
         }
       ],
       "errors": [],
@@ -1296,7 +1356,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-13T09:45:13+00:00",
+    "exported_at": "2026-11-13T09:45:34+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/43402628783"
   }
