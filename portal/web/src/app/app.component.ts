@@ -46,7 +46,7 @@ import { MatIconModule } from '@angular/material/icon';
           </div>
 
           <div class="footer-bottom">
-            <p>© 2026 Psychology & AI Research Portal. Powered by Google Gemini & Angular Material Design.</p>
+            <p>© 2026 Mind Decoded. Powered by Mind decoder Jalel.</p>
           </div>
         </div>
       </footer>

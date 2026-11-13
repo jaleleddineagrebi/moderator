@@ -1,7 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
-  "buildCommand": "prisma generate && ng build",
+  "buildCommand": "prisma generate && node build.cjs",
   "outputDirectory": "dist",
   "rewrites": [
     {

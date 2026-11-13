@@ -24,9 +24,6 @@ import { AuthService } from '../../services/auth.service';
       <mat-dialog-content class="dialog-content">
         <!-- Google Sign In Container -->
         <div class="google-auth-container">
-          <div #googleBtnContainer class="google-btn-slot"></div>
-
-          <!-- Fallback direct button if GIS script is delayed -->
           <button
             mat-stroked-button
             class="fallback-google-btn"
@@ -40,6 +37,7 @@ import { AuthService } from '../../services/auth.service';
             </svg>
             <span>Continue with Google</span>
           </button>
+          <div #googleBtnContainer class="google-btn-slot"></div>
         </div>
 
         <div class="dialog-privacy-note">
@@ -118,12 +116,7 @@ import { AuthService } from '../../services/auth.service';
     }
 
     .google-btn-slot {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      &:empty {
-        display: none;
-      }
+      display: none;
     }
 
     .fallback-google-btn {

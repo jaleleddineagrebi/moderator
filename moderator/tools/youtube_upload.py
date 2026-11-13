@@ -55,25 +55,43 @@ def credentials_from_file(path: Path) -> Credentials:
 
 
 def credentials(lang: str) -> Credentials:
-    raw = os.environ.get(f"YOUTUBE_TOKEN_{lang.upper()}") or os.environ.get("YOUTUBE_TOKEN")
-    lang_path = TOKENS_DIR / f"youtube_{lang.lower()}.json"
-    shared_path = TOKENS_DIR / "youtube.json"
-    if not raw and lang_path.exists():
-        raw = lang_path.read_text(encoding="utf-8")
-    if not raw and shared_path.exists():
-        raw = shared_path.read_text(encoding="utf-8")
-    if not raw:
+    candidates: list[tuple[str, str]] = []
+    for env_name in (f"YOUTUBE_TOKEN_{lang.upper()}", "YOUTUBE_TOKEN"):
+        val = os.environ.get(env_name)
+        if val and val.strip():
+            candidates.append((env_name, val))
+    for path in (TOKENS_DIR / f"youtube_{lang.lower()}.json", TOKENS_DIR / "youtube.json", MANAGE_TOKEN):
+        if path.exists():
+            candidates.append((str(path.relative_to(ROOT)), path.read_text(encoding="utf-8")))
+
+    if not candidates:
         raise RuntimeError(
             f"No YouTube token found for '{lang}' (checked YOUTUBE_TOKEN_{lang.upper()}, YOUTUBE_TOKEN, "
             f"tokens/youtube_{lang.lower()}.json, tokens/youtube.json). "
             f"Run: python -m moderator youtube-auth --client-secret client_secret.json"
         )
-    info = json.loads(raw)
-    granted_scopes = info.get("scopes") or UPLOAD_SCOPES
-    creds = Credentials.from_authorized_user_info(info, granted_scopes)
-    if not creds.valid:
-        creds.refresh(Request())
-    return creds
+
+    last_err: Exception | None = None
+    for source_name, raw in candidates:
+        try:
+            info = json.loads(raw)
+            granted_scopes = info.get("scopes") or UPLOAD_SCOPES
+            creds = Credentials.from_authorized_user_info(info, granted_scopes)
+            if not creds.valid:
+                creds.refresh(Request())
+            return creds
+        except Exception as err:  # noqa: BLE001
+            last_err = err
+            continue
+
+    raise RuntimeError(
+        f"YouTube OAuth refresh token is expired or revoked ({last_err}).\n"
+        "Why this happens: Google Cloud OAuth apps in 'Testing' mode expire refresh tokens after 7 days.\n"
+        "How to fix permanently:\n"
+        "  1. Open Google Cloud Console -> APIs & Services -> OAuth consent screen -> click 'PUBLISH APP' (moves from Testing to In production so tokens never expire).\n"
+        "  2. Regenerate your token locally: uv run python -m moderator youtube-auth --client-secret client_secret.json\n"
+        "  3. Copy the contents of tokens/youtube.json into your GitHub Actions secret YOUTUBE_TOKEN."
+    ) from last_err
 
 
 def channel_title(creds: Credentials) -> str:

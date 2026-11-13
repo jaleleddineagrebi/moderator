@@ -1,6 +1,37 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import { prisma } from "./prisma";
 
+async function computeTallies(postId: string, userId?: string) {
+  const [reactions, existingUserReaction] = await Promise.all([
+    prisma.reaction.groupBy({
+      by: ["type"],
+      where: { postId },
+      _count: { type: true },
+    }),
+    userId
+      ? prisma.reaction.findFirst({
+          where: { postId, userId },
+          select: { type: true },
+        })
+      : Promise.resolve(null),
+  ]);
+
+  const tallies: Record<string, number> = {
+    LIKE: 0,
+    MIND_BLOWN: 0,
+    INSIGHTFUL: 0,
+    BRAIN_CHECK: 0,
+  };
+  for (const r of reactions) {
+    tallies[r.type] = r._count.type;
+  }
+
+  return {
+    tallies,
+    userReaction: existingUserReaction?.type || null,
+  };
+}
+
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "GET,POST,OPTIONS");
@@ -10,72 +41,98 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(200).end();
   }
 
-  const postId = (req.query.postId || req.body?.postId) as string;
+  const postId = String(req.query["postId"] || req.body?.postId || "").trim();
   if (!postId) {
     return res.status(400).json({ error: "Missing postId" });
   }
 
   if (req.method === "GET") {
     try {
-      const reactions = await prisma.reaction.groupBy({
-        by: ["type"],
-        where: { postId },
-        _count: { type: true },
-      });
-
-      const tallies: Record<string, number> = {
-        LIKE: 0,
-        MIND_BLOWN: 0,
-        INSIGHTFUL: 0,
-        BRAIN_CHECK: 0,
-      };
-      reactions.forEach((r) => {
-        tallies[r.type] = r._count.type;
-      });
-
-      return res.status(200).json({ tallies, userReaction: null });
+      const userId = String(req.query["userId"] || "").trim() || undefined;
+      const result = await computeTallies(postId, userId);
+      return res.status(200).json(result);
     } catch (err) {
+      console.error("GET /api/reactions error:", err);
       return res.status(500).json({ error: "Failed to fetch reactions" });
     }
   }
 
   if (req.method === "POST") {
     try {
-      const { type = "LIKE", userId = "guest-anonymous" } = req.body;
+      const {
+        type = "LIKE",
+        userId: rawUserId,
+        userName,
+        userEmail,
+      } = req.body || {};
 
-      // Check if user already exists or use guest user
-      const user = await prisma.user.upsert({
-        where: { id: userId },
-        update: {},
-        create: { id: userId, name: "Community Thinker", email: `${userId}@guest.local` },
-      });
+      const cleanUserId =
+        typeof rawUserId === "string" && rawUserId.trim()
+          ? rawUserId.trim().slice(0, 120)
+          : `visitor-${Date.now()}`;
+      const cleanEmail =
+        typeof userEmail === "string" && userEmail.includes("@")
+          ? userEmail.toLowerCase().trim()
+          : `${cleanUserId}@visitor.mindcoder.com`;
+      const cleanName =
+        typeof userName === "string" && userName.trim()
+          ? userName.trim()
+          : "Community Thinker";
 
-      const existing = await prisma.reaction.findFirst({
-        where: { postId, userId: user.id },
-      });
-
-      if (existing) {
-        if (existing.type === type) {
-          await prisma.reaction.delete({ where: { id: existing.id } });
-          return res.status(200).json({ action: "removed", type });
-        } else {
-          const updated = await prisma.reaction.update({
-            where: { id: existing.id },
-            data: { type },
-          });
-          return res.status(200).json({ action: "updated", type: updated.type });
+      // Ensure user row exists so foreign key constraint on Reaction is satisfied
+      let resolvedUserId = cleanUserId;
+      try {
+        const user = await prisma.user.upsert({
+          where: { id: cleanUserId },
+          update: {},
+          create: {
+            id: cleanUserId,
+            name: cleanName,
+            email: cleanEmail,
+          },
+        });
+        resolvedUserId = user.id;
+      } catch {
+        // If email already exists with a different id, look up by email
+        const byEmail = await prisma.user.findUnique({ where: { email: cleanEmail } });
+        if (byEmail) {
+          resolvedUserId = byEmail.id;
         }
       }
 
-      const created = await prisma.reaction.create({
-        data: { postId, userId: user.id, type },
+      const existing = await prisma.reaction.findFirst({
+        where: { postId, userId: resolvedUserId },
       });
-      return res.status(201).json({ action: "added", type: created.type });
+
+      let action = "added";
+      if (existing) {
+        if (existing.type === type) {
+          await prisma.reaction.delete({ where: { id: existing.id } });
+          action = "removed";
+        } else {
+          await prisma.reaction.update({
+            where: { id: existing.id },
+            data: { type },
+          });
+          action = "updated";
+        }
+      } else {
+        await prisma.reaction.create({
+          data: { postId, userId: resolvedUserId, type },
+        });
+      }
+
+      const updated = await computeTallies(postId, resolvedUserId);
+      return res.status(200).json({
+        action,
+        type,
+        ...updated,
+      });
     } catch (err) {
+      console.error("POST /api/reactions error:", err);
       return res.status(500).json({ error: "Failed to update reaction" });
     }
   }
 
   return res.status(405).json({ error: "Method not allowed" });
 }
-

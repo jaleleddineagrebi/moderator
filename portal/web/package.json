@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "prisma generate && ng build",
+    "build": "prisma generate && node build.cjs",
     "watch": "ng build --watch --configuration development",
     "lint": "ng lint"
   },
