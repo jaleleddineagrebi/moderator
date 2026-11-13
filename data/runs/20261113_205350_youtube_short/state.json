@@ -1,0 +1,517 @@
+{
+  "run_id": "20261113_205350_youtube_short",
+  "workflow": "youtube_short",
+  "workflow_title": "YouTube Short",
+  "status": "running",
+  "params": {
+    "languages": [
+      "en"
+    ],
+    "style": "faceless, hyper-fast cuts, cyber-yellow highlighted captions, punchy energetic narration",
+    "topic": null,
+    "budget_usd": 1.0,
+    "niche": "Mind Hacks, AI Secrets, Bizarre Body Science & Hidden Power Dynamics",
+    "niche_summary": "Multi-pillar viral curiosity channel rotating across 4 massive high-retention niches: (1) Interactive Brain Tests & Dark Psychology, (2) Insane AI & Tech Secrets, (3) Bizarre Human Body & Survival Science, and (4) Hidden Money Traps & Power Dynamics. Engineered for 80%+ Viewed-vs-Swiped-Away (VVSA) and >100% Average Percentage Viewed (APV).",
+    "viral_pillars": [
+      {
+        "id": "mind_hacks",
+        "name": "Interactive Brain Tests, Dark Psychology & Micro-Behaviors",
+        "examples": [
+          "Pick a number from 1 to 10 — I already know which one you chose",
+          "If someone does THIS with their eyes while talking, they are lying to you",
+          "The 3-second silence trick that forces anyone to respect you in an argument"
+        ]
+      },
+      {
+        "id": "ai_future",
+        "name": "Insane AI Breakthroughs, Hidden Tech Secrets & Digital Survival",
+        "examples": [
+          "Type these 4 characters into your phone to see who is tracking you",
+          "The creepy reason AI voices pause for 0.2 seconds before lying to you",
+          "3 hidden smartphone settings you need to turn off immediately"
+        ]
+      },
+      {
+        "id": "body_science",
+        "name": "Bizarre Human Body Glitches & Extreme Survival Science",
+        "examples": [
+          "Why your body suddenly jerks awake right before you fall asleep",
+          "Press this spot on your wrist for 5 seconds—watch what happens to your heart rate",
+          "The 3-second rule that saves your life if you are ever caught in a crowd crush"
+        ]
+      },
+      {
+        "id": "money_power",
+        "name": "Hidden Money Traps, Billionaire Strategy & Consumer Mind Tricks",
+        "examples": [
+          "Why supermarkets put slow music on and remove all windows (the Gruen transfer)",
+          "Never say 'No Problem' to a VIP—say these 2 words instead",
+          "The $100 auction trap that makes smart people overpay every single time"
+        ]
+      }
+    ],
+    "example_topics": [
+      "Pick a number from 1 to 10 — I already know which one you chose (the 7 illusion)",
+      "Type these 4 characters into your phone to see if your call is forwarded",
+      "Why your body suddenly jerks awake right before you fall asleep",
+      "Why supermarkets remove windows and play slow music (the Gruen transfer)",
+      "The 3-second silence trick that forces anyone to respect you in an argument"
+    ],
+    "cta": "Subscribe for tomorrow's 30-second test",
+    "auto_approve": [
+      "A",
+      "B"
+    ],
+    "visual_mode": "stock",
+    "llm": "gemini"
+  },
+  "started_at": "2026-11-13T20:53:50+00:00",
+  "ended_at": null,
+  "revision_rounds": 0,
+  "cost": {
+    "total_usd": 0.0,
+    "budget_usd": 1.0,
+    "by_agent": {}
+  },
+  "agents": {
+    "trend_researcher": {
+      "name": "trend_researcher",
+      "title": "Trend Researcher",
+      "role": "Finds current topic angles, hooks and keywords in the channel niche and proposes 3 ranked video ideas.",
+      "inputs": [
+        "niche",
+        "languages",
+        "optional topic"
+      ],
+      "outputs": [
+        "ideas.json",
+        "ideas.md"
+      ],
+      "tools": [
+        "Gemini Flash + Google Search grounding",
+        "YouTube Data API (if key set)"
+      ],
+      "strategies": [
+        "web_and_youtube",
+        "web_only",
+        "no_web"
+      ],
+      "complexity": "medium"
+    },
+    "scriptwriter": {
+      "name": "scriptwriter",
+      "title": "Scriptwriter",
+      "role": "Writes a 45-55 second script in the target language(s) with a 3-second hook, scene-by-scene visuals and on-screen text.",
+      "inputs": [
+        "chosen idea",
+        "niche",
+        "languages",
+        "style"
+      ],
+      "outputs": [
+        "script.json",
+        "script.md"
+      ],
+      "tools": [
+        "Gemini Flash"
+      ],
+      "strategies": [
+        "default",
+        "tighter_word_budget",
+        "simpler_structure"
+      ],
+      "complexity": "high"
+    },
+    "visual_producer": {
+      "name": "visual_producer",
+      "title": "Visual Producer",
+      "role": "Generates custom 9:16 scene visuals with Nano Banana (or sources free stock clips) and records each asset's license.",
+      "inputs": [
+        "script.json"
+      ],
+      "outputs": [
+        "assets/scene_XX.mp4",
+        "assets/licenses.json",
+        "assets/contact_sheet.jpg"
+      ],
+      "tools": [
+        "Gemini Nano Banana (9:16 image generation)",
+        "Pexels API",
+        "Pixabay API",
+        "Wikimedia Commons CC0/PD Video",
+        "Pillow",
+        "ffmpeg"
+      ],
+      "strategies": [
+        "stock_video",
+        "nano_banana",
+        "stock_photo",
+        "generated"
+      ],
+      "complexity": "low"
+    },
+    "voice_audio": {
+      "name": "voice_audio",
+      "title": "Voice & Audio",
+      "role": "Narrates each scene in the target language(s), and prepares copyright-free background music and transition sound effects.",
+      "inputs": [
+        "script.json"
+      ],
+      "outputs": [
+        "voiceover_<lang>.mp3",
+        "timings_<lang>.json",
+        "music.mp3",
+        "sfx/whoosh.mp3"
+      ],
+      "tools": [
+        "edge-tts (free neural voices)",
+        "ffmpeg audio synthesis",
+        "library/music (CC0)"
+      ],
+      "strategies": [
+        "primary_voice",
+        "alternate_voice",
+        "third_voice_slower"
+      ],
+      "complexity": "low"
+    },
+    "packaging": {
+      "name": "packaging",
+      "title": "Packaging (SEO + Thumbnail)",
+      "role": "Writes the title, description and hashtags with Gemini Flash and designs a 9:16 thumbnail with Nano Banana + Pillow.",
+      "inputs": [
+        "script.json",
+        "scene clips"
+      ],
+      "outputs": [
+        "metadata.json",
+        "thumbnail_<lang>.png"
+      ],
+      "tools": [
+        "Gemini Flash",
+        "Gemini Nano Banana",
+        "Pillow (RTL shaping via arabic-reshaper + python-bidi)",
+        "ffmpeg"
+      ],
+      "strategies": [
+        "banana_thumbnail",
+        "frame_thumbnail",
+        "plain_thumbnail"
+      ],
+      "complexity": "low"
+    },
+    "editor": {
+      "name": "editor",
+      "title": "Editor",
+      "role": "Cuts the scene clips to each language's narration, adds transitions, burned-in captions, ducked music and SFX, and renders the final Shorts.",
+      "inputs": [
+        "assets/scene_XX.mp4",
+        "voiceover_<lang>.mp3",
+        "timings_<lang>.json",
+        "music.mp3",
+        "script.json"
+      ],
+      "outputs": [
+        "final_short_<lang>.mp4",
+        "captions_<lang>.ass"
+      ],
+      "tools": [
+        "ffmpeg (xfade",
+        "libass captions",
+        "sidechain ducking",
+        "loudnorm)"
+      ],
+      "strategies": [
+        "transitions",
+        "hard_cuts",
+        "hard_cuts_no_sfx"
+      ],
+      "complexity": "low"
+    },
+    "qa_reviewer": {
+      "name": "qa_reviewer",
+      "title": "QA Reviewer",
+      "role": "Checks length, hook timing, 9:16 format, caption sync, audio levels, spelling and copyright safety, and sends work back to the responsible agent when something fails.",
+      "inputs": [
+        "final videos",
+        "captions",
+        "timings",
+        "script.json",
+        "metadata.json",
+        "licenses"
+      ],
+      "outputs": [
+        "qa_report.json",
+        "qa_report.md"
+      ],
+      "tools": [
+        "ffprobe",
+        "ffmpeg ebur128",
+        "Gemini Flash (language & copyright review)"
+      ],
+      "strategies": [
+        "full_review",
+        "full_review",
+        "technical_only"
+      ],
+      "complexity": "medium"
+    }
+  },
+  "pipeline": {
+    "depth": {
+      "research": 0,
+      "script": 1,
+      "visuals": 2,
+      "audio": 2,
+      "packaging": 3,
+      "edit": 3,
+      "qa": 4
+    }
+  },
+  "steps": {
+    "research": {
+      "title": "Find 3 video ideas",
+      "agent": "trend_researcher",
+      "depends_on": [],
+      "checkpoint": "A",
+      "status": "running",
+      "progress": 25,
+      "started_at": "2026-11-13T20:53:51+00:00",
+      "ended_at": null,
+      "attempt": 1,
+      "retries": 0,
+      "max_retries": 2,
+      "strategy": "web_and_youtube",
+      "inputs": {
+        "niche": "Mind Hacks, AI Secrets, Bizarre Body Science & Hidden Power Dynamics — Focus Pillar: Bizarre Human Body Glitches & Extreme Survival Science",
+        "topic": null,
+        "languages": [
+          "en"
+        ]
+      },
+      "outputs": {},
+      "logs": [
+        {
+          "ts": "2026-11-13T20:53:51+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'web_and_youtube'"
+        },
+        {
+          "ts": "2026-11-13T20:53:51+00:00",
+          "level": "info",
+          "msg": "Rotating viral pillar for this run: Bizarre Human Body Glitches & Extreme Survival Science (body_science)"
+        },
+        {
+          "ts": "2026-11-13T20:53:51+00:00",
+          "level": "info",
+          "msg": "Checking what performed in the niche over the last 14 days"
+        },
+        {
+          "ts": "2026-11-13T20:53:51+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.8-flash, medium complexity, thinking low, google_search)"
+        },
+        {
+          "ts": "2026-11-13T20:53:51+00:00",
+          "level": "warning",
+          "msg": "Model 'gemini-3.8-flash' returned 429; falling back to 'gemini-3-flash-preview'"
+        },
+        {
+          "ts": "2026-11-13T20:53:51+00:00",
+          "level": "warning",
+          "msg": "Google Search grounding unavailable on current tier/quota; continuing with Gemini Flash directly"
+        },
+        {
+          "ts": "2026-11-13T20:54:01+00:00",
+          "level": "warning",
+          "msg": "'gemini-3.8-flash' returned 503; retrying once in 2s"
+        },
+        {
+          "ts": "2026-11-13T20:54:06+00:00",
+          "level": "warning",
+          "msg": "Model 'gemini-3.8-flash' returned 503; falling back to 'gemini-3-flash-preview'"
+        }
+      ],
+      "errors": [],
+      "feedback": [],
+      "cost_usd": 0.0
+    },
+    "script": {
+      "title": "Write the script",
+      "agent": "scriptwriter",
+      "depends_on": [
+        "research"
+      ],
+      "checkpoint": "B",
+      "status": "queued",
+      "progress": 0,
+      "started_at": null,
+      "ended_at": null,
+      "attempt": 0,
+      "retries": 0,
+      "max_retries": 2,
+      "strategy": null,
+      "inputs": {},
+      "outputs": {},
+      "logs": [],
+      "errors": [],
+      "feedback": [],
+      "cost_usd": 0.0
+    },
+    "visuals": {
+      "title": "Source scene visuals",
+      "agent": "visual_producer",
+      "depends_on": [
+        "script"
+      ],
+      "checkpoint": null,
+      "status": "queued",
+      "progress": 0,
+      "started_at": null,
+      "ended_at": null,
+      "attempt": 0,
+      "retries": 0,
+      "max_retries": 2,
+      "strategy": null,
+      "inputs": {},
+      "outputs": {},
+      "logs": [],
+      "errors": [],
+      "feedback": [],
+      "cost_usd": 0.0
+    },
+    "audio": {
+      "title": "Voiceover, music and SFX",
+      "agent": "voice_audio",
+      "depends_on": [
+        "script"
+      ],
+      "checkpoint": null,
+      "status": "queued",
+      "progress": 0,
+      "started_at": null,
+      "ended_at": null,
+      "attempt": 0,
+      "retries": 0,
+      "max_retries": 2,
+      "strategy": null,
+      "inputs": {},
+      "outputs": {},
+      "logs": [],
+      "errors": [],
+      "feedback": [],
+      "cost_usd": 0.0
+    },
+    "packaging": {
+      "title": "Title, description, thumbnail",
+      "agent": "packaging",
+      "depends_on": [
+        "script",
+        "visuals"
+      ],
+      "checkpoint": null,
+      "status": "queued",
+      "progress": 0,
+      "started_at": null,
+      "ended_at": null,
+      "attempt": 0,
+      "retries": 0,
+      "max_retries": 2,
+      "strategy": null,
+      "inputs": {},
+      "outputs": {},
+      "logs": [],
+      "errors": [],
+      "feedback": [],
+      "cost_usd": 0.0
+    },
+    "edit": {
+      "title": "Edit the final videos",
+      "agent": "editor",
+      "depends_on": [
+        "visuals",
+        "audio"
+      ],
+      "checkpoint": null,
+      "status": "queued",
+      "progress": 0,
+      "started_at": null,
+      "ended_at": null,
+      "attempt": 0,
+      "retries": 0,
+      "max_retries": 2,
+      "strategy": null,
+      "inputs": {},
+      "outputs": {},
+      "logs": [],
+      "errors": [],
+      "feedback": [],
+      "cost_usd": 0.0
+    },
+    "qa": {
+      "title": "Quality check",
+      "agent": "qa_reviewer",
+      "depends_on": [
+        "edit",
+        "packaging"
+      ],
+      "checkpoint": "C",
+      "status": "queued",
+      "progress": 0,
+      "started_at": null,
+      "ended_at": null,
+      "attempt": 0,
+      "retries": 0,
+      "max_retries": 2,
+      "strategy": null,
+      "inputs": {},
+      "outputs": {},
+      "logs": [],
+      "errors": [],
+      "feedback": [],
+      "cost_usd": 0.0
+    }
+  },
+  "checkpoints": {
+    "A": {
+      "title": "Pick the video idea",
+      "type": "choice",
+      "step": "research",
+      "route_to": "research",
+      "status": "idle",
+      "options": [],
+      "choice": null,
+      "comment": null,
+      "decided_at": null
+    },
+    "B": {
+      "title": "Approve the script",
+      "type": "approve",
+      "step": "script",
+      "route_to": "script",
+      "status": "idle",
+      "options": [],
+      "choice": null,
+      "comment": null,
+      "decided_at": null
+    },
+    "C": {
+      "title": "Approve the final videos (never uploaded without your OK)",
+      "type": "approve",
+      "step": "qa",
+      "route_to": "edit",
+      "status": "idle",
+      "options": [],
+      "choice": null,
+      "comment": null,
+      "decided_at": null
+    }
+  },
+  "notifications": [],
+  "pages_meta": {
+    "repo": "jaleleddineagrebi/moderator",
+    "exported_at": "2026-11-13T20:54:10+00:00",
+    "uploads": [],
+    "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/43505672230"
+  }
+}
