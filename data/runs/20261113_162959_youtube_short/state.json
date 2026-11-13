@@ -67,15 +67,15 @@
   },
   "started_at": "2026-11-13T16:29:59+00:00",
   "ended_at": null,
-  "revision_rounds": 0,
+  "revision_rounds": 1,
   "cost": {
-    "total_usd": 0.015992,
+    "total_usd": 0.017867,
     "budget_usd": 1.0,
     "by_agent": {
       "trend_researcher": 0.002579,
       "scriptwriter": 0.012164,
       "packaging": 0.000494,
-      "qa_reviewer": 0.000755
+      "qa_reviewer": 0.00263
     }
   },
   "agents": {
@@ -386,11 +386,11 @@
         "research"
       ],
       "checkpoint": "B",
-      "status": "done",
-      "progress": 100,
-      "started_at": "2026-11-13T16:30:35+00:00",
-      "ended_at": "2026-11-13T16:30:57+00:00",
-      "attempt": 1,
+      "status": "running",
+      "progress": 10,
+      "started_at": "2026-11-13T16:33:45+00:00",
+      "ended_at": null,
+      "attempt": 2,
       "retries": 0,
       "max_retries": 2,
       "strategy": "default",
@@ -435,10 +435,31 @@
           "ts": "2026-11-13T16:30:57+00:00",
           "level": "info",
           "msg": "Approved by schedule (auto-approve)"
+        },
+        {
+          "ts": "2026-11-13T16:33:45+00:00",
+          "level": "warning",
+          "msg": "Sent back by qa: QA found:\n[en] grammar review: Narration ends abruptly with an unfinished trailing clause ('... which is exactly why'). Remove '... which is exactly why' from scene_06 VO."
+        },
+        {
+          "ts": "2026-11-13T16:33:45+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'default'"
+        },
+        {
+          "ts": "2026-11-13T16:33:45+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.8-flash, high complexity, thinking high)"
         }
       ],
       "errors": [],
-      "feedback": [],
+      "feedback": [
+        {
+          "ts": "2026-11-13T16:33:45+00:00",
+          "from": "qa",
+          "comment": "QA found:\n[en] grammar review: Narration ends abruptly with an unfinished trailing clause ('... which is exactly why'). Remove '... which is exactly why' from scene_06 VO."
+        }
+      ],
       "cost_usd": 0.012164
     },
     "visuals": {
@@ -448,8 +469,8 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "done",
-      "progress": 100,
+      "status": "needs_revision",
+      "progress": 0,
       "started_at": "2026-11-13T16:30:57+00:00",
       "ended_at": "2026-11-13T16:31:33+00:00",
       "attempt": 1,
@@ -514,10 +535,26 @@
           "ts": "2026-11-13T16:31:33+00:00",
           "level": "info",
           "msg": "Finished"
+        },
+        {
+          "ts": "2026-11-13T16:33:45+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-13T16:33:45+00:00",
+          "level": "warning",
+          "msg": "Sent back by qa: QA found:\n[all] people rule: scene_05: women's legs, hands, and bodies in bathrobes are clearly visible. Replace with footage without women (a face-only close-up is the only exception)."
         }
       ],
       "errors": [],
-      "feedback": [],
+      "feedback": [
+        {
+          "ts": "2026-11-13T16:33:45+00:00",
+          "from": "qa",
+          "comment": "QA found:\n[all] people rule: scene_05: women's legs, hands, and bodies in bathrobes are clearly visible. Replace with footage without women (a face-only close-up is the only exception)."
+        }
+      ],
       "cost_usd": 0.0
     },
     "audio": {
@@ -527,12 +564,12 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "done",
-      "progress": 100,
+      "status": "queued",
+      "progress": 0,
       "started_at": "2026-11-13T16:31:01+00:00",
       "ended_at": "2026-11-13T16:31:21+00:00",
       "attempt": 2,
-      "retries": 1,
+      "retries": 0,
       "max_retries": 2,
       "strategy": "alternate_voice",
       "inputs": {
@@ -587,6 +624,11 @@
           "ts": "2026-11-13T16:31:21+00:00",
           "level": "info",
           "msg": "Finished"
+        },
+        {
+          "ts": "2026-11-13T16:33:45+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'script' is being revised"
         }
       ],
       "errors": [
@@ -608,8 +650,8 @@
         "visuals"
       ],
       "checkpoint": null,
-      "status": "done",
-      "progress": 100,
+      "status": "queued",
+      "progress": 0,
       "started_at": "2026-11-13T16:31:33+00:00",
       "ended_at": "2026-11-13T16:31:36+00:00",
       "attempt": 1,
@@ -693,6 +735,16 @@
           "ts": "2026-11-13T16:31:36+00:00",
           "level": "info",
           "msg": "Finished"
+        },
+        {
+          "ts": "2026-11-13T16:33:45+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-13T16:33:45+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'visuals' is being revised"
         }
       ],
       "errors": [],
@@ -707,8 +759,8 @@
         "audio"
       ],
       "checkpoint": null,
-      "status": "done",
-      "progress": 100,
+      "status": "queued",
+      "progress": 0,
       "started_at": "2026-11-13T16:31:33+00:00",
       "ended_at": "2026-11-13T16:32:20+00:00",
       "attempt": 1,
@@ -753,6 +805,16 @@
           "ts": "2026-11-13T16:32:20+00:00",
           "level": "info",
           "msg": "Finished"
+        },
+        {
+          "ts": "2026-11-13T16:33:45+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-13T16:33:45+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'visuals' is being revised"
         }
       ],
       "errors": [],
@@ -767,10 +829,10 @@
         "packaging"
       ],
       "checkpoint": "C",
-      "status": "running",
-      "progress": 60,
+      "status": "queued",
+      "progress": 0,
       "started_at": "2026-11-13T16:32:20+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-13T16:33:45+00:00",
       "attempt": 1,
       "retries": 0,
       "max_retries": 2,
@@ -784,7 +846,11 @@
         ],
         "metadata": "metadata.json"
       },
-      "outputs": {},
+      "outputs": {
+        "report": "qa_report.md",
+        "data": "qa_report.json",
+        "thumbnail_en": "thumbnail_en.png"
+      },
       "logs": [
         {
           "ts": "2026-11-13T16:32:20+00:00",
@@ -815,11 +881,36 @@
           "ts": "2026-11-13T16:33:16+00:00",
           "level": "warning",
           "msg": "'gemini-3.6-flash' returned 503; retrying once in 2s"
+        },
+        {
+          "ts": "2026-11-13T16:33:45+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3.6-flash) answered in 63.8s (tokens in 3499, out 51, thinking 279)"
+        },
+        {
+          "ts": "2026-11-13T16:33:45+00:00",
+          "level": "warning",
+          "msg": "2 blocking issue(s); sending back to: script, visuals"
+        },
+        {
+          "ts": "2026-11-13T16:33:45+00:00",
+          "level": "info",
+          "msg": "Finished, waiting for your approval"
+        },
+        {
+          "ts": "2026-11-13T16:33:45+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-13T16:33:45+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'visuals' is being revised"
         }
       ],
       "errors": [],
       "feedback": [],
-      "cost_usd": 0.000755
+      "cost_usd": 0.00263
     }
   },
   "checkpoints": {
@@ -855,7 +946,7 @@
       "type": "approve",
       "step": "script",
       "route_to": "script",
-      "status": "approved",
+      "status": "idle",
       "options": [],
       "choice": null,
       "comment": null,
@@ -876,7 +967,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-13T16:33:17+00:00",
+    "exported_at": "2026-11-13T16:33:50+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/43463207800"
   }

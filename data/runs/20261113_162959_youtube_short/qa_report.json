@@ -1,0 +1,118 @@
+{
+  "passed": false,
+  "revision_round": 0,
+  "checks": [
+    {
+      "check": "length",
+      "lang": "en",
+      "ok": true,
+      "detail": "39.9s (must be under 60s; target 32-50s)",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "target length",
+      "lang": "en",
+      "ok": true,
+      "detail": "39.9s",
+      "send_to": null,
+      "severity": "minor"
+    },
+    {
+      "check": "aspect ratio",
+      "lang": "en",
+      "ok": true,
+      "detail": "1080x1920",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "video codec",
+      "lang": "en",
+      "ok": true,
+      "detail": "h264",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "audio track",
+      "lang": "en",
+      "ok": true,
+      "detail": "present",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "loudness",
+      "lang": "en",
+      "ok": true,
+      "detail": "-14.4 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "hook timing",
+      "lang": "en",
+      "ok": true,
+      "detail": "scene_01 spoken in 3.1s (target <= 4s)",
+      "send_to": null,
+      "severity": "minor"
+    },
+    {
+      "check": "caption sync",
+      "lang": "en",
+      "ok": true,
+      "detail": "98 words, 35 caption events",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "visual licenses",
+      "lang": null,
+      "ok": true,
+      "detail": "6 assets: pixabay",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "visual diversity",
+      "lang": null,
+      "ok": true,
+      "detail": "all scenes use distinct footage",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "audio licenses",
+      "lang": null,
+      "ok": true,
+      "detail": "music: original work, no third-party rights; sfx: original work, no third-party rights; voice: synthetic voice; no third-party performance rights",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "grammar review",
+      "lang": "en",
+      "ok": false,
+      "detail": "On-screen text missing article 'THE'. Change 'HERE IS CREEPY PART' to 'HERE IS THE CREEPY PART'.",
+      "send_to": "script",
+      "severity": "minor"
+    },
+    {
+      "check": "grammar review",
+      "lang": "en",
+      "ok": false,
+      "detail": "Narration ends abruptly with an unfinished trailing clause ('... which is exactly why'). Remove '... which is exactly why' from scene_06 VO.",
+      "send_to": "script",
+      "severity": "blocker"
+    },
+    {
+      "check": "people rule",
+      "lang": null,
+      "ok": false,
+      "detail": "scene_05: women's legs, hands, and bodies in bathrobes are clearly visible. Replace with footage without women (a face-only close-up is the only exception).",
+      "send_to": "visuals",
+      "severity": "blocker"
+    }
+  ]
+}
