@@ -1,0 +1,138 @@
+{
+  "title": "The Ring Finger Glitch",
+  "scenes": [
+    {
+      "vo": {
+        "en": "You physically cannot do this."
+      },
+      "on_screen": {
+        "en": "CAN'T DO THIS"
+      },
+      "visual": {
+        "description": "A man's hand slams down onto a dark wooden table in slow motion.",
+        "search_terms": [
+          "man hand table",
+          "slamming hand",
+          "wooden surface"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Lay your hand flat. Fold your middle finger under, pressing the knuckle to the table."
+      },
+      "on_screen": {
+        "en": "FOLD MIDDLE FINGER"
+      },
+      "visual": {
+        "description": "Close-up of a man's hand tucking his middle finger inward so the joint touches the surface.",
+        "search_terms": [
+          "finger tucking",
+          "hand knuckle table",
+          "finger joint"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Now, keep your other fingers down and try lifting your ring finger. It won’t budge, right?"
+      },
+      "on_screen": {
+        "en": "TRY TO LIFT"
+      },
+      "visual": {
+        "description": "Macro shot of a ring finger twitching but unable to lift while others remain stationary.",
+        "search_terms": [
+          "finger twitching",
+          "stuck finger",
+          "hand movement struggle"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "Wait until you see the glitch. Lift your index or pinky—they move fine. But the ring finger is paralyzed."
+      },
+      "on_screen": {
+        "en": "THE REAL GLITCH"
+      },
+      "visual": {
+        "description": "Side-by-side comparison showing a pinky finger lifting easily while the ring finger stays pinned.",
+        "search_terms": [
+          "index finger lifting",
+          "pinky finger movement",
+          "hand comparison"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Your anatomy is working against you. The middle and ring fingers share a single extensor tendon."
+      },
+      "on_screen": {
+        "en": "SHARED TENDONS"
+      },
+      "visual": {
+        "description": "A 3D medical animation or skeletal diagram of a human hand showing interconnected blue tendons.",
+        "search_terms": [
+          "hand anatomy tendons",
+          "skeleton hand movement",
+          "medical 3d render"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "Tucking one finger locks the other tight. It’s an anatomical deadbolt hidden in your hand."
+      },
+      "on_screen": {
+        "en": "ANATOMICAL LOCK"
+      },
+      "visual": {
+        "description": "A heavy metal gear mechanism jamming or a large padlock snapping shut.",
+        "search_terms": [
+          "rusty padlock closing",
+          "mechanical gear jamming",
+          "metal lock"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for more body hacks and comment STUCK if it worked. This glitch proves... which is exactly why"
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "A man looking directly at the camera with a surprised expression while pointing to a follow button.",
+        "search_terms": [
+          "man pointing camera",
+          "surprised face man",
+          "clicking button"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "impossible-finger-lift",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 37.8
+  }
+}
