@@ -427,7 +427,7 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 29,
+      "progress": 54,
       "started_at": "2026-11-13T20:54:26+00:00",
       "ended_at": null,
       "attempt": 1,
@@ -464,6 +464,16 @@
           "ts": "2026-11-13T20:54:46+00:00",
           "level": "info",
           "msg": "scene_03: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-13T20:55:07+00:00",
+          "level": "info",
+          "msg": "scene_05: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-13T20:55:14+00:00",
+          "level": "info",
+          "msg": "scene_01: stock_video (pixabay)"
         }
       ],
       "errors": [],
@@ -477,10 +487,10 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "running",
-      "progress": 80,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-13T20:54:33+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-13T20:55:04+00:00",
       "attempt": 2,
       "retries": 1,
       "max_retries": 2,
@@ -494,7 +504,9 @@
           "en": "en-US-AriaNeural"
         }
       },
-      "outputs": {},
+      "outputs": {
+        "timings_en": "timings_en.json"
+      },
       "logs": [
         {
           "ts": "2026-11-13T20:54:26+00:00",
@@ -530,6 +542,11 @@
           "ts": "2026-11-13T20:54:45+00:00",
           "level": "info",
           "msg": "Generating an ambient music bed (no library tracks with license files found)"
+        },
+        {
+          "ts": "2026-11-13T20:55:04+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [
@@ -667,7 +684,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-13T20:54:57+00:00",
+    "exported_at": "2026-11-13T20:55:22+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/43505672230"
   }
