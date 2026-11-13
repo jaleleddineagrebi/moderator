@@ -1,16 +1,15 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import { prisma } from "./prisma";
 
-const DEFAULT_CLIENT_ID =
+// Web portal OAuth 2.0 credentials (from client_secret_redirect.json, project web-site-psy-514112)
+// Note: Do NOT read process.env.GOOGLE_CLIENT_ID if it points to the YouTube CLI project (771258975279-...)
+const GOOGLE_CLIENT_ID =
   "701586086068-v014k4trutnrdd5gob94i4bem6s3ktag.apps.googleusercontent.com";
-const DEFAULT_CLIENT_SECRET = ["GOCSPX", "5kf1W9GvklSAia8EYD8_NtDAADd4"].join("-");
+const GOOGLE_CLIENT_SECRET = ["GOCSPX", "5kf1W9GvklSAia8EYD8_NtDAADd4"].join("-");
 
 // Registered callback URI in Google Cloud Console (client_secret_redirect.json)
 const REGISTERED_CALLBACK_URI =
   "https://moderator-ivory.vercel.app/api/auth/callback/google";
-
-const GOOGLE_CLIENT_ID = (process.env["GOOGLE_CLIENT_ID"] || DEFAULT_CLIENT_ID).trim();
-const GOOGLE_CLIENT_SECRET = (process.env["GOOGLE_CLIENT_SECRET"] || DEFAULT_CLIENT_SECRET).trim();
 
 function decodeJwtPayload(token: string): Record<string, any> | null {
   try {
@@ -33,8 +32,8 @@ function resolveCallbackUri(req: VercelRequest): string {
   if (rawHost.includes("localhost")) {
     return `http://${rawHost}/api/auth/callback/google`;
   }
-  // Always use the exact registered callback URI in Google Cloud Console so redirect_uri_mismatch never occurs
-  return process.env["GOOGLE_REDIRECT_URI"] || REGISTERED_CALLBACK_URI;
+  // Always use the exact registered callback URI for client 701586086068-... in Google Cloud Console
+  return REGISTERED_CALLBACK_URI;
 }
 
 function resolveReturnUrl(req: VercelRequest, stateParam?: string): string {
