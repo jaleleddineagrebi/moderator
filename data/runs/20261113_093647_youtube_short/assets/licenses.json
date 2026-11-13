@@ -3,70 +3,70 @@
     "scene": "scene_01",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-11606/",
-    "author": "XiaosKitchen",
+    "page": "https://pixabay.com/videos/id-342229/",
+    "author": "Kanenori",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "man hand table",
-    "description": "A man's hand slams down onto a dark wooden table in slow motion."
+    "query": "hand on table",
+    "description": "A man's hand spread flat on a dark, textured wooden table."
   },
   {
     "scene": "scene_02",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-3160/",
-    "author": "Coverr-Free-Footage",
+    "page": "https://pixabay.com/videos/id-328050/",
+    "author": "TatianaTz",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "finger tucking",
-    "description": "Close-up of a man's hand tucking his middle finger inward so the joint touches the surface."
+    "query": "folding finger",
+    "description": "Close-up shot of a hand tucking the middle finger underneath the palm while others stay flat."
   },
   {
     "scene": "scene_03",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-224387/",
-    "author": "Engin_Akyurt",
+    "page": "https://pixabay.com/videos/id-20830/",
+    "author": "Art-Production",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "finger twitching",
-    "description": "Macro shot of a ring finger twitching but unable to lift while others remain stationary."
+    "query": "finger twitch",
+    "description": "Macro view of a ring finger attempting to lift but failing to move off the surface."
   },
   {
     "scene": "scene_04",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-43628/",
-    "author": "GreenCardShow",
+    "page": "https://pixabay.com/videos/id-9079/",
+    "author": "padrinan",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "index finger lifting",
-    "description": "Side-by-side comparison showing a pinky finger lifting easily while the ring finger stays pinned."
+    "query": "hand movement",
+    "description": "A hand demonstrating that the index and pinky fingers can lift easily while the middle is tucked."
   },
   {
     "scene": "scene_05",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-35005/",
-    "author": "gcova",
+    "page": "https://pixabay.com/videos/id-54033/",
+    "author": "padrinan",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "hand anatomy tendons",
-    "description": "A 3D medical animation or skeletal diagram of a human hand showing interconnected blue tendons."
+    "query": "hand skeleton anatomy",
+    "description": "A 3D medical animation showing the internal structure of a human hand and its tendons."
   },
   {
     "scene": "scene_06",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-155014/",
-    "author": "Engin_Akyurt",
+    "page": "https://pixabay.com/videos/id-217092/",
+    "author": "Matthias_Groeneveld",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "rusty padlock closing",
-    "description": "A heavy metal gear mechanism jamming or a large padlock snapping shut."
+    "query": "door bolt lock",
+    "description": "A close-up of a heavy metal door bolt sliding into a locked position."
   },
   {
     "scene": "scene_07",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-24496/",
-    "author": "ninosouza",
+    "page": "https://pixabay.com/videos/id-198887/",
+    "author": "Roque_dg",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "man pointing camera",
-    "description": "A man looking directly at the camera with a surprised expression while pointing to a follow button."
+    "query": "man shocked face",
+    "description": "A man looking at his hand with a surprised expression before looking into the lens."
   }
 ]
