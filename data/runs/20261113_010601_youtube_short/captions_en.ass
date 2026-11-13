@@ -1,0 +1,59 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:02.39,Headline,,0,0,0,,{\fad(150,150)}PICK THE BEST DEAL
+Dialogue: 1,0:00:02.49,0:00:10.38,Headline,,0,0,0,,{\fad(150,150)}S: $3 | M: $6.50 | L: $7
+Dialogue: 1,0:00:10.48,0:00:19.11,Headline,,0,0,0,,{\fad(150,150)}3.. 2.. 1.. CHOOSE!
+Dialogue: 1,0:00:19.21,0:00:24.89,Headline,,0,0,0,,{\fad(150,150)}THE MEDIUM TRAP
+Dialogue: 1,0:00:24.99,0:00:31.22,Headline,,0,0,0,,{\fad(150,150)}THE DECOY EFFECT
+Dialogue: 1,0:00:31.32,0:00:37.45,Headline,,0,0,0,,{\fad(150,150)}YOU SPENT DOUBLE
+Dialogue: 1,0:00:37.55,0:00:42.58,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 1,0:00:42.68,0:00:45.22,Headline,,0,0,0,,{\fad(150,150)}MUST ALWAYS...
+Dialogue: 0,0:00:00.10,0:00:00.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Pick{\c&H00FFFFFF&} the best
+Dialogue: 0,0:00:00.73,0:00:01.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}deal{\c&H00FFFFFF&} fast
+Dialogue: 0,0:00:02.54,0:00:03.37,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}A small {\c&H0000E5FF&}coffee{\c&H00FFFFFF&}
+Dialogue: 0,0:00:03.38,0:00:04.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is three {\c&H0000E5FF&}dollars{\c&H00FFFFFF&}
+Dialogue: 0,0:00:05.15,0:00:05.76,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}A {\c&H0000E5FF&}large{\c&H00FFFFFF&} is
+Dialogue: 0,0:00:05.77,0:00:06.20,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}seven
+Dialogue: 0,0:00:07.03,0:00:07.77,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}But the {\c&H0000E5FF&}medium{\c&H00FFFFFF&}
+Dialogue: 0,0:00:08.59,0:00:09.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Six-fifty
+Dialogue: 0,0:00:10.53,0:00:11.19,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You have {\c&H0000E5FF&}three{\c&H00FFFFFF&}
+Dialogue: 0,0:00:11.20,0:00:12.29,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}seconds{\c&H00FFFFFF&} to decide
+Dialogue: 0,0:00:13.11,0:00:13.65,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Three
+Dialogue: 0,0:00:14.46,0:00:14.98,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Two
+Dialogue: 0,0:00:15.78,0:00:16.27,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}One
+Dialogue: 0,0:00:17.07,0:00:17.66,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Which{\c&H00FFFFFF&} one did
+Dialogue: 0,0:00:17.67,0:00:18.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you {\c&H0000E5FF&}grab{\c&H00FFFFFF&}
+Dialogue: 0,0:00:19.25,0:00:20.20,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Wait{\c&H00FFFFFF&} here is
+Dialogue: 0,0:00:20.21,0:00:21.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}creepy{\c&H00FFFFFF&} part
+Dialogue: 0,0:00:21.93,0:00:22.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You {\c&H0000E5FF&}probably{\c&H00FFFFFF&} picked
+Dialogue: 0,0:00:22.84,0:00:23.76,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the large {\c&H0000E5FF&}didn’t{\c&H00FFFFFF&}
+Dialogue: 0,0:00:23.77,0:00:24.17,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you
+Dialogue: 0,0:00:25.03,0:00:25.55,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}That is the
+Dialogue: 0,0:00:25.56,0:00:26.51,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Decoy {\c&H0000E5FF&}Effect{\c&H00FFFFFF&}
+Dialogue: 0,0:00:27.32,0:00:28.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}The {\c&H0000E5FF&}Medium{\c&H00FFFFFF&} exists
+Dialogue: 0,0:00:28.36,0:00:28.96,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}only{\c&H00FFFFFF&} to make
+Dialogue: 0,0:00:28.97,0:00:29.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}Large{\c&H00FFFFFF&} look
+Dialogue: 0,0:00:29.62,0:00:30.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}like a {\c&H0000E5FF&}bargain{\c&H00FFFFFF&}
+Dialogue: 0,0:00:31.36,0:00:32.35,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Without{\c&H00FFFFFF&} that decoy
+Dialogue: 0,0:00:32.52,0:00:33.01,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}you’d{\c&H00FFFFFF&} pick the
+Dialogue: 0,0:00:33.03,0:00:33.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}cheapest{\c&H00FFFFFF&} option
+Dialogue: 0,0:00:34.72,0:00:35.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Instead{\c&H00FFFFFF&} you just
+Dialogue: 0,0:00:35.89,0:00:36.58,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}spent {\c&H0000E5FF&}double{\c&H00FFFFFF&}
+Dialogue: 0,0:00:37.60,0:00:38.59,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Subscribe{\c&H00FFFFFF&} for more
+Dialogue: 0,0:00:38.60,0:00:39.30,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}brain{\c&H00FFFFFF&} hacks and
+Dialogue: 0,0:00:39.31,0:00:40.09,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} YES if
+Dialogue: 0,0:00:40.10,0:00:40.65,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you {\c&H0000E5FF&}fell{\c&H00FFFFFF&} for
+Dialogue: 0,0:00:40.66,0:00:41.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}it {\c&H0000E5FF&}because{\c&H00FFFFFF&} you
+Dialogue: 0,0:00:42.73,0:00:43.73,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}must {\c&H0000E5FF&}always{\c&H00FFFFFF&}

@@ -1,0 +1,527 @@
+{
+  "voice": "en-US-AriaNeural",
+  "duration": 44.574059,
+  "scenes": [
+    {
+      "scene": "scene_01",
+      "start": 0.0,
+      "end": 2.352,
+      "words": [
+        {
+          "start": 0.097,
+          "end": 0.321,
+          "text": "Pick"
+        },
+        {
+          "start": 0.333,
+          "end": 0.427,
+          "text": "the"
+        },
+        {
+          "start": 0.439,
+          "end": 0.722,
+          "text": "best"
+        },
+        {
+          "start": 0.734,
+          "end": 0.982,
+          "text": "deal"
+        },
+        {
+          "start": 0.993,
+          "end": 1.524,
+          "text": "fast"
+        }
+      ]
+    },
+    {
+      "scene": "scene_02",
+      "start": 2.442,
+      "end": 10.338,
+      "words": [
+        {
+          "start": 2.539,
+          "end": 2.657,
+          "text": "A"
+        },
+        {
+          "start": 2.669,
+          "end": 2.987,
+          "text": "small"
+        },
+        {
+          "start": 2.999,
+          "end": 3.365,
+          "text": "coffee"
+        },
+        {
+          "start": 3.376,
+          "end": 3.53,
+          "text": "is"
+        },
+        {
+          "start": 3.542,
+          "end": 3.742,
+          "text": "three"
+        },
+        {
+          "start": 3.754,
+          "end": 4.332,
+          "text": "dollars"
+        },
+        {
+          "start": 5.154,
+          "end": 5.272,
+          "text": "A"
+        },
+        {
+          "start": 5.284,
+          "end": 5.626,
+          "text": "large"
+        },
+        {
+          "start": 5.638,
+          "end": 5.756,
+          "text": "is"
+        },
+        {
+          "start": 5.767,
+          "end": 6.204,
+          "text": "seven"
+        },
+        {
+          "start": 7.029,
+          "end": 7.218,
+          "text": "But"
+        },
+        {
+          "start": 7.23,
+          "end": 7.301,
+          "text": "the"
+        },
+        {
+          "start": 7.312,
+          "end": 7.772,
+          "text": "medium"
+        },
+        {
+          "start": 8.586,
+          "end": 9.517,
+          "text": "Six-fifty"
+        }
+      ]
+    },
+    {
+      "scene": "scene_03",
+      "start": 10.428,
+      "end": 19.068,
+      "words": [
+        {
+          "start": 10.525,
+          "end": 10.69,
+          "text": "You"
+        },
+        {
+          "start": 10.702,
+          "end": 10.902,
+          "text": "have"
+        },
+        {
+          "start": 10.914,
+          "end": 11.186,
+          "text": "three"
+        },
+        {
+          "start": 11.197,
+          "end": 11.622,
+          "text": "seconds"
+        },
+        {
+          "start": 11.634,
+          "end": 11.716,
+          "text": "to"
+        },
+        {
+          "start": 11.728,
+          "end": 12.294,
+          "text": "decide"
+        },
+        {
+          "start": 13.105,
+          "end": 13.647,
+          "text": "Three"
+        },
+        {
+          "start": 14.461,
+          "end": 14.98,
+          "text": "Two"
+        },
+        {
+          "start": 15.782,
+          "end": 16.265,
+          "text": "One"
+        },
+        {
+          "start": 17.067,
+          "end": 17.327,
+          "text": "Which"
+        },
+        {
+          "start": 17.338,
+          "end": 17.527,
+          "text": "one"
+        },
+        {
+          "start": 17.539,
+          "end": 17.657,
+          "text": "did"
+        },
+        {
+          "start": 17.669,
+          "end": 17.763,
+          "text": "you"
+        },
+        {
+          "start": 17.775,
+          "end": 18.246,
+          "text": "grab"
+        }
+      ]
+    },
+    {
+      "scene": "scene_04",
+      "start": 19.158,
+      "end": 24.846,
+      "words": [
+        {
+          "start": 19.255,
+          "end": 19.656,
+          "text": "Wait"
+        },
+        {
+          "start": 19.88,
+          "end": 20.092,
+          "text": "here"
+        },
+        {
+          "start": 20.104,
+          "end": 20.199,
+          "text": "is"
+        },
+        {
+          "start": 20.21,
+          "end": 20.305,
+          "text": "the"
+        },
+        {
+          "start": 20.317,
+          "end": 20.659,
+          "text": "creepy"
+        },
+        {
+          "start": 20.67,
+          "end": 21.118,
+          "text": "part"
+        },
+        {
+          "start": 21.929,
+          "end": 22.106,
+          "text": "You"
+        },
+        {
+          "start": 22.118,
+          "end": 22.554,
+          "text": "probably"
+        },
+        {
+          "start": 22.566,
+          "end": 22.825,
+          "text": "picked"
+        },
+        {
+          "start": 22.837,
+          "end": 22.932,
+          "text": "the"
+        },
+        {
+          "start": 22.943,
+          "end": 23.356,
+          "text": "large"
+        },
+        {
+          "start": 23.498,
+          "end": 23.757,
+          "text": "didn’t"
+        },
+        {
+          "start": 23.769,
+          "end": 24.016,
+          "text": "you"
+        }
+      ]
+    },
+    {
+      "scene": "scene_05",
+      "start": 24.936,
+      "end": 31.176,
+      "words": [
+        {
+          "start": 25.033,
+          "end": 25.328,
+          "text": "That"
+        },
+        {
+          "start": 25.34,
+          "end": 25.434,
+          "text": "is"
+        },
+        {
+          "start": 25.446,
+          "end": 25.552,
+          "text": "the"
+        },
+        {
+          "start": 25.564,
+          "end": 25.953,
+          "text": "Decoy"
+        },
+        {
+          "start": 25.965,
+          "end": 26.507,
+          "text": "Effect"
+        },
+        {
+          "start": 27.318,
+          "end": 27.483,
+          "text": "The"
+        },
+        {
+          "start": 27.495,
+          "end": 27.896,
+          "text": "Medium"
+        },
+        {
+          "start": 27.908,
+          "end": 28.344,
+          "text": "exists"
+        },
+        {
+          "start": 28.356,
+          "end": 28.627,
+          "text": "only"
+        },
+        {
+          "start": 28.639,
+          "end": 28.733,
+          "text": "to"
+        },
+        {
+          "start": 28.745,
+          "end": 28.957,
+          "text": "make"
+        },
+        {
+          "start": 28.969,
+          "end": 29.063,
+          "text": "the"
+        },
+        {
+          "start": 29.075,
+          "end": 29.417,
+          "text": "Large"
+        },
+        {
+          "start": 29.429,
+          "end": 29.606,
+          "text": "look"
+        },
+        {
+          "start": 29.618,
+          "end": 29.783,
+          "text": "like"
+        },
+        {
+          "start": 29.795,
+          "end": 29.853,
+          "text": "a"
+        },
+        {
+          "start": 29.865,
+          "end": 30.361,
+          "text": "bargain"
+        }
+      ]
+    },
+    {
+      "scene": "scene_06",
+      "start": 31.266,
+      "end": 37.41,
+      "words": [
+        {
+          "start": 31.363,
+          "end": 31.752,
+          "text": "Without"
+        },
+        {
+          "start": 31.764,
+          "end": 31.941,
+          "text": "that"
+        },
+        {
+          "start": 31.953,
+          "end": 32.354,
+          "text": "decoy"
+        },
+        {
+          "start": 32.519,
+          "end": 32.672,
+          "text": "you’d"
+        },
+        {
+          "start": 32.684,
+          "end": 32.908,
+          "text": "pick"
+        },
+        {
+          "start": 32.92,
+          "end": 33.014,
+          "text": "the"
+        },
+        {
+          "start": 33.026,
+          "end": 33.439,
+          "text": "cheapest"
+        },
+        {
+          "start": 33.45,
+          "end": 33.91,
+          "text": "option"
+        },
+        {
+          "start": 34.721,
+          "end": 35.334,
+          "text": "Instead"
+        },
+        {
+          "start": 35.488,
+          "end": 35.606,
+          "text": "you"
+        },
+        {
+          "start": 35.617,
+          "end": 35.877,
+          "text": "just"
+        },
+        {
+          "start": 35.889,
+          "end": 36.183,
+          "text": "spent"
+        },
+        {
+          "start": 36.195,
+          "end": 36.584,
+          "text": "double"
+        }
+      ]
+    },
+    {
+      "scene": "scene_07",
+      "start": 37.5,
+      "end": 42.54,
+      "words": [
+        {
+          "start": 37.597,
+          "end": 38.199,
+          "text": "Subscribe"
+        },
+        {
+          "start": 38.21,
+          "end": 38.34,
+          "text": "for"
+        },
+        {
+          "start": 38.352,
+          "end": 38.588,
+          "text": "more"
+        },
+        {
+          "start": 38.6,
+          "end": 38.859,
+          "text": "brain"
+        },
+        {
+          "start": 38.871,
+          "end": 39.189,
+          "text": "hacks"
+        },
+        {
+          "start": 39.201,
+          "end": 39.295,
+          "text": "and"
+        },
+        {
+          "start": 39.307,
+          "end": 39.708,
+          "text": "comment"
+        },
+        {
+          "start": 39.72,
+          "end": 39.979,
+          "text": "YES"
+        },
+        {
+          "start": 39.991,
+          "end": 40.085,
+          "text": "if"
+        },
+        {
+          "start": 40.097,
+          "end": 40.203,
+          "text": "you"
+        },
+        {
+          "start": 40.215,
+          "end": 40.427,
+          "text": "fell"
+        },
+        {
+          "start": 40.439,
+          "end": 40.651,
+          "text": "for"
+        },
+        {
+          "start": 40.663,
+          "end": 40.781,
+          "text": "it"
+        },
+        {
+          "start": 41.052,
+          "end": 41.371,
+          "text": "because"
+        },
+        {
+          "start": 41.383,
+          "end": 41.701,
+          "text": "you"
+        }
+      ]
+    },
+    {
+      "scene": "scene_08",
+      "start": 42.63,
+      "end": 44.574,
+      "words": [
+        {
+          "start": 42.727,
+          "end": 43.093,
+          "text": "must"
+        },
+        {
+          "start": 43.105,
+          "end": 43.73,
+          "text": "always"
+        }
+      ]
+    }
+  ]
+}
