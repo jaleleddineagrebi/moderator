@@ -3,60 +3,60 @@
     "scene": "scene_01",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-168343/",
-    "author": "Amorn_mimi",
+    "page": "https://pixabay.com/videos/id-3172/",
+    "author": "Coverr-Free-Footage",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
     "query": "smartphone dark room",
-    "description": "Close-up of a man holding a smartphone in a dimly lit room, tapping the screen urgently."
+    "description": "Close-up shot of a man's hands tapping quickly on a glowing smartphone screen inside a dark room."
   },
   {
     "scene": "scene_02",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-4504/",
-    "author": "faxtastic",
+    "page": "https://pixabay.com/videos/id-378976/",
+    "author": "computergottyt",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "server room lights",
-    "description": "High-tech server room with flashing indicator lights and glowing fiber optic network cables."
+    "query": "server rack lights",
+    "description": "Panning shot of high-tech data server racks with flashing green and blue LED lights in a futuristic facility."
   },
   {
     "scene": "scene_03",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-210786/",
+    "page": "https://pixabay.com/videos/id-149591/",
     "author": "Matthias_Groeneveld",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
     "query": "man walking mall",
-    "description": "Tracking shot of a man's feet walking through a modern shopping venue store aisle."
+    "description": "Tracking shot following a man walking through a modern shopping mall concourse with polished floors."
   },
   {
     "scene": "scene_04",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-109143/",
+    "page": "https://pixabay.com/videos/id-109142/",
     "author": "AlexKopeykin",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
     "query": "man computer monitor",
-    "description": "Male security analyst monitoring multiple screens displaying real-time digital GPS location graphics."
+    "description": "Over-the-shoulder shot of a man reviewing glowing digital map analytics on dual computer monitors."
   },
   {
     "scene": "scene_05",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-233400/",
-    "author": "Yasir1120",
+    "page": "https://pixabay.com/videos/id-88687/",
+    "author": "Firmbee",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "hand touching screen",
-    "description": "Macro shot of a male hand tapping a smartphone screen to disable background toggles."
+    "query": "thumb touching screen",
+    "description": "Macro shot of a man's thumb toggling off a digital slider switch on a modern smartphone display."
   },
   {
     "scene": "scene_06",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-26367/",
-    "author": "Hans",
+    "page": "https://pixabay.com/videos/id-217104/",
+    "author": "Matthias_Groeneveld",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "digital lock closing",
-    "description": "3D render of a futuristic digital padlocked shield locking securely on screen."
+    "query": "padlock locking shut",
+    "description": "3D animation of a shiny metal padlock snapping shut over digital glowing network lines."
   }
 ]
