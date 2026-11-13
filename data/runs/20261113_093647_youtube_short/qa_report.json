@@ -1,12 +1,12 @@
 {
   "passed": false,
-  "revision_round": 0,
+  "revision_round": 1,
   "checks": [
     {
       "check": "length",
       "lang": "en",
       "ok": true,
-      "detail": "44.9s (must be under 60s; target 32-50s)",
+      "detail": "50.1s (must be under 60s; target 32-50s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -14,7 +14,7 @@
       "check": "target length",
       "lang": "en",
       "ok": true,
-      "detail": "44.9s",
+      "detail": "50.1s",
       "send_to": null,
       "severity": "minor"
     },
@@ -46,7 +46,7 @@
       "check": "loudness",
       "lang": "en",
       "ok": true,
-      "detail": "-14.0 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)",
+      "detail": "-14.1 LUFS, peak -1.4 dBFS (target -14 LUFS, peak <= -1)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -54,7 +54,7 @@
       "check": "hook timing",
       "lang": "en",
       "ok": true,
-      "detail": "scene_01 spoken in 2.5s (target <= 4s)",
+      "detail": "scene_01 spoken in 2.4s (target <= 4s)",
       "send_to": null,
       "severity": "minor"
     },
@@ -62,7 +62,7 @@
       "check": "caption sync",
       "lang": "en",
       "ok": true,
-      "detail": "105 words, 40 caption events",
+      "detail": "121 words, 46 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -91,10 +91,10 @@
       "severity": "blocker"
     },
     {
-      "check": "grammar review",
+      "check": "spelling review",
       "lang": "en",
       "ok": false,
-      "detail": "The narration in scene_07 ends with a nonsensical fragment 'This glitch proves... which is exactly why'. Remove the trailing phrase and end at 'if it worked.'",
+      "detail": "In scene_07, the on-screen text 'SUBSCRIBE ေ' contains a Burmese character 'ေ'. Change it to 'SUBSCRIBE' or 'SUBSCRIBE!'",
       "send_to": "script",
       "severity": "blocker"
     },
