@@ -1,12 +1,12 @@
 {
-  "passed": false,
-  "revision_round": 0,
+  "passed": true,
+  "revision_round": 1,
   "checks": [
     {
       "check": "length",
       "lang": "en",
       "ok": true,
-      "detail": "45.8s (must be under 60s; target 32-50s)",
+      "detail": "40.6s (must be under 60s; target 32-50s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -14,7 +14,7 @@
       "check": "target length",
       "lang": "en",
       "ok": true,
-      "detail": "45.8s",
+      "detail": "40.6s",
       "send_to": null,
       "severity": "minor"
     },
@@ -46,7 +46,7 @@
       "check": "loudness",
       "lang": "en",
       "ok": true,
-      "detail": "-14.1 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)",
+      "detail": "-14.2 LUFS, peak -1.4 dBFS (target -14 LUFS, peak <= -1)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -62,7 +62,7 @@
       "check": "caption sync",
       "lang": "en",
       "ok": true,
-      "detail": "106 words, 39 caption events",
+      "detail": "93 words, 35 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -94,9 +94,9 @@
       "check": "grammar review",
       "lang": "en",
       "ok": false,
-      "detail": "Scene 7 ends mid-sentence with 'which is exactly why'. This creates an incomplete thought. Change 'which is exactly why' to a closing statement like 'this happens.'",
+      "detail": "In scene_07, the VO ends with 'which is exactly why' which creates an incomplete sentence and does not connect logically to the rest of the script. Remove 'which is exactly why' from the end of the script.",
       "send_to": "script",
-      "severity": "blocker"
+      "severity": "minor"
     },
     {
       "check": "people rule",
