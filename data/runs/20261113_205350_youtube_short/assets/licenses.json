@@ -3,70 +3,70 @@
     "scene": "scene_01",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-254787/",
-    "author": "nirjharbasakuet",
+    "page": "https://pixabay.com/videos/id-199208/",
+    "author": "RobertoFoz",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "hand rising air",
-    "description": "A close up of a hand slowly rising against a dark, moody background with particles."
+    "query": "palm lifting slowly",
+    "description": "A close up of a male hand slowly rising against a dark, moody background with particles."
   },
   {
     "scene": "scene_02",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-15230/",
-    "author": "2427999",
+    "page": "https://pixabay.com/videos/id-37131/",
+    "author": "dmclausen",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "man standing wall",
-    "description": "A man in profile standing next to a concrete wall prepared to push."
+    "query": "man leaning wall",
+    "description": "A man in a t-shirt standing next to a concrete wall prepared to push his arm against it."
   },
   {
     "scene": "scene_03",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-12741/",
-    "author": "tacofleur",
+    "page": "https://pixabay.com/videos/id-40334/",
+    "author": "Integrofilms",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "straining arm muscle",
-    "description": "A close up of a tensed arm muscle and a fist pressing against a hard surface."
+    "query": "straining forearm muscle",
+    "description": "A macro shot of a male forearm showing muscle tension and veins under pressure."
   },
   {
     "scene": "scene_04",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-27228/",
-    "author": "RAHADstudio",
+    "page": "https://pixabay.com/videos/id-103099/",
+    "author": "ChristianBodhi",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "digital signal distortion",
-    "description": "Abstract digital glitch overlay over a stylized 3D model of a human brain."
+    "query": "digital glitch effect",
+    "description": "An abstract 3D model of a brain flashing with digital glitch effects and neural nodes."
   },
   {
     "scene": "scene_05",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-15615/",
-    "author": "Matthias_Groeneveld",
+    "page": "https://pixabay.com/videos/id-11066/",
+    "author": "Tuan86",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "analog stopwatch ticking",
-    "description": "A mechanical stopwatch ticking down rapidly followed by a man stepping back from a wall."
+    "query": "sand flowing hourglass",
+    "description": "An elegant hourglass with golden sand falling rapidly through the glass."
   },
   {
     "scene": "scene_06",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-165065/",
-    "author": "NickyPe",
+    "page": "https://pixabay.com/videos/id-1287/",
+    "author": "InspiredImages",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "slow motion arm",
-    "description": "An arm rising slowly and involuntarily as if pulled by an invisible string."
+    "query": "arm floating up",
+    "description": "A man's arm lifting up involuntarily in slow motion as if pulled by an invisible string."
   },
   {
     "scene": "scene_07",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-3168/",
-    "author": "Coverr-Free-Footage",
+    "page": "https://pixabay.com/videos/id-86548/",
+    "author": "WOKANDAPIX",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "tapping phone screen",
-    "description": "A close up of a man's thumb tapping the subscribe button on a smartphone screen."
+    "query": "thumb tapping mobile",
+    "description": "A close up of a man's thumb tapping the notification bell on a smartphone."
   }
 ]
