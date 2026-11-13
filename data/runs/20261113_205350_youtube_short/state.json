@@ -470,7 +470,7 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 0,
+      "progress": 54,
       "started_at": "2026-11-13T20:57:04+00:00",
       "ended_at": null,
       "attempt": 2,
@@ -555,6 +555,26 @@
           "ts": "2026-11-13T20:57:04+00:00",
           "level": "info",
           "msg": "Visual diversity: excluding 192 footage sources used in recent Shorts"
+        },
+        {
+          "ts": "2026-11-13T20:57:26+00:00",
+          "level": "info",
+          "msg": "scene_01: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-13T20:57:28+00:00",
+          "level": "info",
+          "msg": "scene_03: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-13T20:57:28+00:00",
+          "level": "info",
+          "msg": "scene_02: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-13T20:57:48+00:00",
+          "level": "info",
+          "msg": "scene_04: stock_video (pixabay)"
         }
       ],
       "errors": [],
@@ -568,10 +588,10 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "running",
-      "progress": 80,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-13T20:57:08+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-13T20:57:35+00:00",
       "attempt": 4,
       "retries": 1,
       "max_retries": 2,
@@ -668,6 +688,11 @@
           "ts": "2026-11-13T20:57:18+00:00",
           "level": "info",
           "msg": "Generating an ambient music bed (no library tracks with license files found)"
+        },
+        {
+          "ts": "2026-11-13T20:57:35+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [
@@ -988,7 +1013,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-13T20:57:25+00:00",
+    "exported_at": "2026-11-13T20:57:49+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/43505672230"
   }
