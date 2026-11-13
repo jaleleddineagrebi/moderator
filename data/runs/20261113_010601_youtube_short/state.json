@@ -276,12 +276,12 @@
       "checkpoint": "A",
       "status": "running",
       "progress": 25,
-      "started_at": "2026-11-13T01:06:01+00:00",
+      "started_at": "2026-11-13T01:16:33+00:00",
       "ended_at": null,
-      "attempt": 1,
-      "retries": 0,
+      "attempt": 2,
+      "retries": 1,
       "max_retries": 2,
-      "strategy": "web_and_youtube",
+      "strategy": "web_only",
       "inputs": {
         "niche": "Mind Hacks, AI Secrets, Bizarre Body Science & Hidden Power Dynamics — Focus Pillar: Hidden Money Traps, Billionaire Strategy & Consumer Mind Tricks",
         "topic": null,
@@ -325,9 +325,46 @@
           "ts": "2026-11-13T01:06:32+00:00",
           "level": "warning",
           "msg": "Gemini connection timed out on default route; retrying over IPv4"
+        },
+        {
+          "ts": "2026-11-13T01:16:32+00:00",
+          "level": "error",
+          "msg": "ReadTimeout: "
+        },
+        {
+          "ts": "2026-11-13T01:16:33+00:00",
+          "level": "info",
+          "msg": "Attempt 2/3, strategy 'web_only'"
+        },
+        {
+          "ts": "2026-11-13T01:16:33+00:00",
+          "level": "info",
+          "msg": "Rotating viral pillar for this run: Hidden Money Traps, Billionaire Strategy & Consumer Mind Tricks (money_power)"
+        },
+        {
+          "ts": "2026-11-13T01:16:33+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.8-flash, high complexity, thinking high)"
+        },
+        {
+          "ts": "2026-11-13T01:16:33+00:00",
+          "level": "warning",
+          "msg": "'gemini-3.8-flash' is out of daily quota; skipping it for the rest of this run"
+        },
+        {
+          "ts": "2026-11-13T01:16:33+00:00",
+          "level": "warning",
+          "msg": "Model 'gemini-3.8-flash' returned 429; falling back to 'gemini-3-flash-preview'"
         }
       ],
-      "errors": [],
+      "errors": [
+        {
+          "ts": "2026-11-13T01:16:32+00:00",
+          "attempt": 1,
+          "strategy": "web_and_youtube",
+          "error": "ReadTimeout: "
+        }
+      ],
       "feedback": [],
       "cost_usd": 0.0
     },
@@ -505,7 +542,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-13T01:06:39+00:00",
+    "exported_at": "2026-11-13T01:16:42+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/43342201692"
   }
