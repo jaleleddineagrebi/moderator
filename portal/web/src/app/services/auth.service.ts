@@ -90,38 +90,14 @@ export class AuthService {
   }
 
   /**
-   * Triggers Google Sign-In via OAuth2 Popup Token Client (or server redirect fallback).
+   * Triggers Google Sign-In via full-page OAuth 2.0 redirect through /api/auth/signin/google.
    */
-  loginWithGoogle(onSuccess?: (user: User) => void): void {
+  loginWithGoogle(_onSuccess?: (user: User) => void): void {
     this.authError.set('');
-
-    if (typeof window !== 'undefined' && typeof google !== 'undefined' && google.accounts?.oauth2) {
-      try {
-        const tokenClient = google.accounts.oauth2.initTokenClient({
-          client_id: GOOGLE_CLIENT_ID,
-          scope: 'openid email profile',
-          prompt: 'select_account',
-          callback: (tokenResponse: any) => {
-            this.zone.run(() => {
-              if (tokenResponse?.access_token) {
-                this.handleGoogleAccessToken(tokenResponse.access_token, onSuccess);
-              } else if (tokenResponse?.error) {
-                window.location.href = '/api/auth/signin/google';
-              }
-            });
-          },
-          error_callback: () => {
-            window.location.href = '/api/auth/signin/google';
-          },
-        });
-        tokenClient.requestAccessToken();
-        return;
-      } catch (e) {
-        console.warn('[AuthService] OAuth2 tokenClient error, falling back to redirect:', e);
-      }
+    if (typeof window !== 'undefined') {
+      const returnTo = window.location.origin + window.location.pathname;
+      window.location.href = `/api/auth/signin/google?returnTo=${encodeURIComponent(returnTo)}`;
     }
-
-    window.location.href = '/api/auth/signin/google';
   }
 
   /**

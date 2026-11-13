@@ -5,6 +5,10 @@ const DEFAULT_CLIENT_ID =
   "701586086068-v014k4trutnrdd5gob94i4bem6s3ktag.apps.googleusercontent.com";
 const DEFAULT_CLIENT_SECRET = ["GOCSPX", "5kf1W9GvklSAia8EYD8_NtDAADd4"].join("-");
 
+// Registered callback URI in Google Cloud Console (client_secret_redirect.json)
+const REGISTERED_CALLBACK_URI =
+  "https://moderator-ivory.vercel.app/api/auth/callback/google";
+
 const GOOGLE_CLIENT_ID = (process.env["GOOGLE_CLIENT_ID"] || DEFAULT_CLIENT_ID).trim();
 const GOOGLE_CLIENT_SECRET = (process.env["GOOGLE_CLIENT_SECRET"] || DEFAULT_CLIENT_SECRET).trim();
 
@@ -20,14 +24,37 @@ function decodeJwtPayload(token: string): Record<string, any> | null {
   }
 }
 
-function resolveRedirectUri(req: VercelRequest): string {
+function resolveCallbackUri(req: VercelRequest): string {
   const rawHost = String(
-    req.headers["x-forwarded-host"] || req.headers["host"] || "mindcoder.com"
+    req.headers["x-forwarded-host"] || req.headers["host"] || "moderator-ivory.vercel.app"
+  )
+    .split(",")[0]
+    .trim();
+  if (rawHost.includes("localhost")) {
+    return `http://${rawHost}/api/auth/callback/google`;
+  }
+  // Always use the exact registered callback URI in Google Cloud Console so redirect_uri_mismatch never occurs
+  return process.env["GOOGLE_REDIRECT_URI"] || REGISTERED_CALLBACK_URI;
+}
+
+function resolveReturnUrl(req: VercelRequest, stateParam?: string): string {
+  if (stateParam) {
+    try {
+      const decoded = Buffer.from(stateParam, "base64url").toString("utf8");
+      if (decoded.startsWith("http://") || decoded.startsWith("https://")) {
+        return decoded;
+      }
+    } catch {
+      // ignore invalid state
+    }
+  }
+  const rawHost = String(
+    req.headers["x-forwarded-host"] || req.headers["host"] || "moderator-ivory.vercel.app"
   )
     .split(",")[0]
     .trim();
   const protocol = rawHost.includes("localhost") ? "http" : "https";
-  return `${protocol}://${rawHost}/api/auth/callback/google`;
+  return `${protocol}://${rawHost}/`;
 }
 
 async function safeUpsertUser(profile: {
@@ -62,7 +89,7 @@ async function safeUpsertUser(profile: {
   } catch (dbErr) {
     console.warn("Prisma user upsert fallback:", dbErr);
     return {
-      id: profile.googleId || `google-${ Buffer.from(cleanEmail).toString("hex").slice(0, 16) }`,
+      id: profile.googleId || `google-${Buffer.from(cleanEmail).toString("hex").slice(0, 16)}`,
       name: fallbackName,
       email: cleanEmail,
       image: profile.image || null,
@@ -74,7 +101,7 @@ async function safeUpsertUser(profile: {
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   res.setHeader("Access-Control-Allow-Credentials", "true");
   res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "GET,OPTIONS,POST");
+  res.setHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST");
   res.setHeader(
     "Access-Control-Allow-Headers",
     "X-CSRF-Token, X-Requested-With, Accept, Content-Type, Authorization"
@@ -96,7 +123,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       let image: string | undefined = profile?.picture || profile?.image;
       let googleId: string | undefined = profile?.sub || profile?.id;
 
-      // 1. If client sent Google ID Token JWT
       if (credential && typeof credential === "string") {
         const payload = decodeJwtPayload(credential);
         if (payload && payload["email"]) {
@@ -107,7 +133,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         }
       }
 
-      // 2. If client sent OAuth2 access_token
       if (!email && accessToken && typeof accessToken === "string") {
         const userInfoRes = await fetch("https://www.googleapis.com/oauth2/v3/userinfo", {
           headers: { Authorization: `Bearer ${accessToken}` },
@@ -139,25 +164,34 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   // -------------------------------------------------------------
   // GET /api/auth — OAuth 2.0 Direct Redirect & Callback
   // -------------------------------------------------------------
-  if (req.method === "GET") {
+  if (req.method === "GET" || req.method === "HEAD") {
     const action = req.query["action"];
     const code = req.query["code"];
-    const redirectUri = resolveRedirectUri(req);
+    const state = typeof req.query["state"] === "string" ? req.query["state"] : undefined;
+    const returnToParam =
+      typeof req.query["returnTo"] === "string" ? req.query["returnTo"] : undefined;
+    const redirectUri = resolveCallbackUri(req);
 
     // 1. Sign-in action: Redirect user to Google OAuth consent screen
-    if (action === "signin" && !code) {
+    if ((action === "signin" || !code) && !req.query["error"]) {
+      const originToReturn = returnToParam || resolveReturnUrl(req);
+      const encodedState = Buffer.from(originToReturn, "utf8").toString("base64url");
       const params = new URLSearchParams({
         client_id: GOOGLE_CLIENT_ID,
         redirect_uri: redirectUri,
         response_type: "code",
         scope: "openid email profile",
         prompt: "select_account",
+        state: encodedState,
       });
       return res.redirect(302, `https://accounts.google.com/o/oauth2/v2/auth?${params.toString()}`);
     }
 
     // 2. Callback action: Exchange authorization code for tokens
     if (code && typeof code === "string") {
+      const targetBaseUrl = resolveReturnUrl(req, state);
+      const separator = targetBaseUrl.includes("?") ? "&" : "?";
+
       try {
         const tokenRes = await fetch("https://oauth2.googleapis.com/token", {
           method: "POST",
@@ -174,7 +208,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         if (!tokenRes.ok) {
           const errText = await tokenRes.text();
           console.error("Token exchange failed:", errText, "redirectUri:", redirectUri);
-          return res.redirect(302, `/?auth_error=token_exchange_failed`);
+          return res.redirect(302, `${targetBaseUrl}${separator}auth_error=token_exchange_failed`);
         }
 
         const tokenData: any = await tokenRes.json();
@@ -194,7 +228,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         }
 
         if (!profile?.email) {
-          return res.redirect(302, "/?auth_error=userinfo_failed");
+          return res.redirect(302, `${targetBaseUrl}${separator}auth_error=userinfo_failed`);
         }
 
         const user = await safeUpsertUser({
@@ -205,16 +239,15 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         });
 
         const userDataEncoded = encodeURIComponent(JSON.stringify(user));
-        return res.redirect(302, `/?auth_user=${userDataEncoded}`);
+        return res.redirect(302, `${targetBaseUrl}${separator}auth_user=${userDataEncoded}`);
       } catch (err) {
         console.error("OAuth callback error:", err);
-        return res.redirect(302, "/?auth_error=server_error");
+        return res.redirect(302, `${targetBaseUrl}${separator}auth_error=server_error`);
       }
     }
 
-    return res.status(400).json({ error: "Invalid auth request" });
+    return res.redirect(302, "/?auth_error=oauth_cancelled");
   }
 
   return res.status(405).json({ error: "Method not allowed" });
 }
-
