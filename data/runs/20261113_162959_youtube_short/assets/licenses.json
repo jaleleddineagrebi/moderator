@@ -1,0 +1,62 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-168343/",
+    "author": "Amorn_mimi",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "smartphone dark room",
+    "description": "Close-up of a man holding a smartphone in a dimly lit room, tapping the screen urgently."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-4504/",
+    "author": "faxtastic",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "server room lights",
+    "description": "High-tech server room with flashing indicator lights and glowing fiber optic network cables."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-210786/",
+    "author": "Matthias_Groeneveld",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man walking mall",
+    "description": "Tracking shot of a man's feet walking through a modern shopping venue store aisle."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-109143/",
+    "author": "AlexKopeykin",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man computer monitor",
+    "description": "Male security analyst monitoring multiple screens displaying real-time digital GPS location graphics."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-233400/",
+    "author": "Yasir1120",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hand touching screen",
+    "description": "Macro shot of a male hand tapping a smartphone screen to disable background toggles."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-26367/",
+    "author": "Hans",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "digital lock closing",
+    "description": "3D render of a futuristic digital padlocked shield locking securely on screen."
+  }
+]
