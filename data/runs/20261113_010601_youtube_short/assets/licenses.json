@@ -1,0 +1,82 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-44802/",
+    "author": "ShikiRyu",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "falling coffee beans",
+    "description": "Close up of roasted coffee beans falling in slow motion."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-39802/",
+    "author": "2seewell",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hand writing chalkboard",
+    "description": "A man's hand writing numbers on a dark chalkboard quickly."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-160342/",
+    "author": "Engin_Akyurt",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "stopwatch ticking",
+    "description": "A vintage mechanical stopwatch ticking rapidly."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-15305/",
+    "author": "moshehar",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man looking surprised",
+    "description": "A man in a dark hoodie looking directly at the camera with a surprised expression."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-198/",
+    "author": "Life-Of-Vids",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "puppet strings moving",
+    "description": "An abstract visual of a puppet's wooden hand being controlled by strings."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-215096/",
+    "author": "u_mv4esujzr4",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "counting cash money",
+    "description": "Close up of a man's hands counting dollar bills rapidly."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-736/",
+    "author": "elchao",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "tapping phone screen",
+    "description": "A close up of a finger tapping a smartphone screen repeatedly."
+  },
+  {
+    "scene": "scene_08",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-238823/",
+    "author": "xBriantcx",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "steaming coffee cup",
+    "description": "Fast zoom into a steaming cup of black coffee on a dark table."
+  }
+]
