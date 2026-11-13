@@ -789,7 +789,6 @@
         }
       },
       "outputs": {
-        "voiceover_en": "voiceover_en.mp3",
         "timings_en": "timings_en.json"
       },
       "logs": [
@@ -1164,7 +1163,6 @@
         "strategy": "transitions"
       },
       "outputs": {
-        "video_en": "final_short_en.mp4",
         "captions_en": "captions_en.ass"
       },
       "logs": [
@@ -1261,7 +1259,6 @@
       "outputs": {
         "report": "qa_report.md",
         "data": "qa_report.json",
-        "video_en": "final_short_en.mp4",
         "thumbnail_en": "thumbnail_en.png"
       },
       "logs": [
