@@ -1,0 +1,585 @@
+{
+  "voice": "en-US-AriaNeural",
+  "duration": 45.060045,
+  "scenes": [
+    {
+      "scene": "scene_01",
+      "start": 0.0,
+      "end": 2.352,
+      "words": [
+        {
+          "start": 0.097,
+          "end": 0.345,
+          "text": "Your"
+        },
+        {
+          "start": 0.357,
+          "end": 0.557,
+          "text": "arm"
+        },
+        {
+          "start": 0.569,
+          "end": 0.663,
+          "text": "is"
+        },
+        {
+          "start": 0.675,
+          "end": 0.934,
+          "text": "about"
+        },
+        {
+          "start": 0.946,
+          "end": 1.029,
+          "text": "to"
+        },
+        {
+          "start": 1.041,
+          "end": 1.512,
+          "text": "float"
+        }
+      ]
+    },
+    {
+      "scene": "scene_02",
+      "start": 2.442,
+      "end": 8.01,
+      "words": [
+        {
+          "start": 2.539,
+          "end": 2.869,
+          "text": "Find"
+        },
+        {
+          "start": 2.881,
+          "end": 2.94,
+          "text": "a"
+        },
+        {
+          "start": 2.952,
+          "end": 3.365,
+          "text": "wall"
+        },
+        {
+          "start": 4.187,
+          "end": 4.624,
+          "text": "Stand"
+        },
+        {
+          "start": 4.635,
+          "end": 5.213,
+          "text": "sideways"
+        },
+        {
+          "start": 5.225,
+          "end": 5.402,
+          "text": "and"
+        },
+        {
+          "start": 5.414,
+          "end": 5.697,
+          "text": "press"
+        },
+        {
+          "start": 5.709,
+          "end": 5.815,
+          "text": "the"
+        },
+        {
+          "start": 5.826,
+          "end": 6.062,
+          "text": "back"
+        },
+        {
+          "start": 6.074,
+          "end": 6.133,
+          "text": "of"
+        },
+        {
+          "start": 6.145,
+          "end": 6.251,
+          "text": "your"
+        },
+        {
+          "start": 6.263,
+          "end": 6.51,
+          "text": "hand"
+        },
+        {
+          "start": 6.522,
+          "end": 6.876,
+          "text": "against"
+        },
+        {
+          "start": 6.888,
+          "end": 7.171,
+          "text": "it"
+        }
+      ]
+    },
+    {
+      "scene": "scene_03",
+      "start": 8.1,
+      "end": 14.076,
+      "words": [
+        {
+          "start": 8.197,
+          "end": 8.457,
+          "text": "Push"
+        },
+        {
+          "start": 8.468,
+          "end": 8.563,
+          "text": "as"
+        },
+        {
+          "start": 8.575,
+          "end": 8.799,
+          "text": "hard"
+        },
+        {
+          "start": 8.81,
+          "end": 8.905,
+          "text": "as"
+        },
+        {
+          "start": 8.917,
+          "end": 9.011,
+          "text": "you"
+        },
+        {
+          "start": 9.023,
+          "end": 9.471,
+          "text": "can"
+        },
+        {
+          "start": 10.293,
+          "end": 11.013,
+          "text": "Seriously"
+        },
+        {
+          "start": 11.225,
+          "end": 11.473,
+          "text": "use"
+        },
+        {
+          "start": 11.484,
+          "end": 11.673,
+          "text": "all"
+        },
+        {
+          "start": 11.685,
+          "end": 11.826,
+          "text": "your"
+        },
+        {
+          "start": 11.838,
+          "end": 12.227,
+          "text": "strength"
+        },
+        {
+          "start": 12.239,
+          "end": 12.381,
+          "text": "for"
+        },
+        {
+          "start": 12.392,
+          "end": 12.652,
+          "text": "thirty"
+        },
+        {
+          "start": 12.664,
+          "end": 13.241,
+          "text": "seconds"
+        }
+      ]
+    },
+    {
+      "scene": "scene_04",
+      "start": 14.166,
+      "end": 19.734,
+      "words": [
+        {
+          "start": 14.263,
+          "end": 14.428,
+          "text": "But"
+        },
+        {
+          "start": 14.44,
+          "end": 14.676,
+          "text": "here"
+        },
+        {
+          "start": 14.688,
+          "end": 14.794,
+          "text": "is"
+        },
+        {
+          "start": 14.806,
+          "end": 14.9,
+          "text": "the"
+        },
+        {
+          "start": 14.912,
+          "end": 15.242,
+          "text": "creepy"
+        },
+        {
+          "start": 15.254,
+          "end": 15.702,
+          "text": "part"
+        },
+        {
+          "start": 16.513,
+          "end": 16.749,
+          "text": "Your"
+        },
+        {
+          "start": 16.76,
+          "end": 17.067,
+          "text": "brain"
+        },
+        {
+          "start": 17.079,
+          "end": 17.173,
+          "text": "is"
+        },
+        {
+          "start": 17.185,
+          "end": 17.468,
+          "text": "about"
+        },
+        {
+          "start": 17.48,
+          "end": 17.562,
+          "text": "to"
+        },
+        {
+          "start": 17.574,
+          "end": 17.857,
+          "text": "lose"
+        },
+        {
+          "start": 17.869,
+          "end": 18.246,
+          "text": "control"
+        },
+        {
+          "start": 18.258,
+          "end": 18.305,
+          "text": "of"
+        },
+        {
+          "start": 18.317,
+          "end": 18.447,
+          "text": "your"
+        },
+        {
+          "start": 18.458,
+          "end": 18.907,
+          "text": "body"
+        }
+      ]
+    },
+    {
+      "scene": "scene_05",
+      "start": 19.824,
+      "end": 29.232,
+      "words": [
+        {
+          "start": 19.921,
+          "end": 20.192,
+          "text": "Keep"
+        },
+        {
+          "start": 20.204,
+          "end": 20.699,
+          "text": "pushing"
+        },
+        {
+          "start": 21.51,
+          "end": 21.746,
+          "text": "Ten"
+        },
+        {
+          "start": 21.758,
+          "end": 21.97,
+          "text": "more"
+        },
+        {
+          "start": 21.982,
+          "end": 22.595,
+          "text": "seconds"
+        },
+        {
+          "start": 23.409,
+          "end": 23.916,
+          "text": "Five"
+        },
+        {
+          "start": 24.093,
+          "end": 24.553,
+          "text": "four"
+        },
+        {
+          "start": 24.706,
+          "end": 25.06,
+          "text": "three"
+        },
+        {
+          "start": 25.213,
+          "end": 25.543,
+          "text": "two"
+        },
+        {
+          "start": 25.744,
+          "end": 26.145,
+          "text": "one"
+        },
+        {
+          "start": 26.958,
+          "end": 27.289,
+          "text": "Step"
+        },
+        {
+          "start": 27.3,
+          "end": 27.583,
+          "text": "away"
+        },
+        {
+          "start": 27.595,
+          "end": 27.701,
+          "text": "and"
+        },
+        {
+          "start": 27.713,
+          "end": 28.385,
+          "text": "relax"
+        }
+      ]
+    },
+    {
+      "scene": "scene_06",
+      "start": 29.322,
+      "end": 36.45,
+      "words": [
+        {
+          "start": 29.419,
+          "end": 29.667,
+          "text": "Your"
+        },
+        {
+          "start": 29.679,
+          "end": 29.903,
+          "text": "arm"
+        },
+        {
+          "start": 29.914,
+          "end": 30.044,
+          "text": "is"
+        },
+        {
+          "start": 30.056,
+          "end": 30.445,
+          "text": "rising"
+        },
+        {
+          "start": 30.457,
+          "end": 30.587,
+          "text": "on"
+        },
+        {
+          "start": 30.598,
+          "end": 30.752,
+          "text": "its"
+        },
+        {
+          "start": 30.764,
+          "end": 31.117,
+          "text": "own"
+        },
+        {
+          "start": 31.94,
+          "end": 32.199,
+          "text": "This"
+        },
+        {
+          "start": 32.211,
+          "end": 32.305,
+          "text": "is"
+        },
+        {
+          "start": 32.317,
+          "end": 32.4,
+          "text": "the"
+        },
+        {
+          "start": 32.412,
+          "end": 32.978,
+          "text": "Kohnstamm"
+        },
+        {
+          "start": 32.989,
+          "end": 33.638,
+          "text": "phenomenon"
+        },
+        {
+          "start": 33.921,
+          "end": 33.956,
+          "text": "a"
+        },
+        {
+          "start": 33.968,
+          "end": 34.31,
+          "text": "literal"
+        },
+        {
+          "start": 34.322,
+          "end": 34.617,
+          "text": "glitch"
+        },
+        {
+          "start": 34.629,
+          "end": 34.723,
+          "text": "in"
+        },
+        {
+          "start": 34.735,
+          "end": 34.829,
+          "text": "your"
+        },
+        {
+          "start": 34.841,
+          "end": 35.124,
+          "text": "motor"
+        },
+        {
+          "start": 35.136,
+          "end": 35.619,
+          "text": "system"
+        }
+      ]
+    },
+    {
+      "scene": "scene_07",
+      "start": 36.54,
+      "end": 45.06,
+      "words": [
+        {
+          "start": 36.637,
+          "end": 36.826,
+          "text": "Your"
+        },
+        {
+          "start": 36.838,
+          "end": 37.286,
+          "text": "neurons"
+        },
+        {
+          "start": 37.298,
+          "end": 37.392,
+          "text": "are"
+        },
+        {
+          "start": 37.404,
+          "end": 37.675,
+          "text": "still"
+        },
+        {
+          "start": 37.687,
+          "end": 38.217,
+          "text": "firing"
+        },
+        {
+          "start": 38.229,
+          "end": 38.441,
+          "text": "even"
+        },
+        {
+          "start": 38.453,
+          "end": 38.524,
+          "text": "though"
+        },
+        {
+          "start": 38.536,
+          "end": 38.689,
+          "text": "you"
+        },
+        {
+          "start": 38.701,
+          "end": 39.231,
+          "text": "stopped"
+        },
+        {
+          "start": 40.042,
+          "end": 40.667,
+          "text": "Subscribe"
+        },
+        {
+          "start": 40.679,
+          "end": 40.809,
+          "text": "for"
+        },
+        {
+          "start": 40.821,
+          "end": 41.045,
+          "text": "more"
+        },
+        {
+          "start": 41.056,
+          "end": 41.316,
+          "text": "brain"
+        },
+        {
+          "start": 41.328,
+          "end": 41.693,
+          "text": "tests"
+        },
+        {
+          "start": 41.705,
+          "end": 41.847,
+          "text": "and"
+        },
+        {
+          "start": 41.858,
+          "end": 42.271,
+          "text": "comment"
+        },
+        {
+          "start": 42.283,
+          "end": 42.377,
+          "text": "if"
+        },
+        {
+          "start": 42.389,
+          "end": 42.495,
+          "text": "it"
+        },
+        {
+          "start": 42.507,
+          "end": 42.861,
+          "text": "worked"
+        },
+        {
+          "start": 43.038,
+          "end": 43.191,
+          "text": "which"
+        },
+        {
+          "start": 43.203,
+          "end": 43.285,
+          "text": "is"
+        },
+        {
+          "start": 43.297,
+          "end": 43.792,
+          "text": "exactly"
+        },
+        {
+          "start": 43.804,
+          "end": 44.229,
+          "text": "why"
+        }
+      ]
+    }
+  ]
+}

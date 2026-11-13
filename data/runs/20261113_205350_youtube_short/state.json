@@ -427,7 +427,7 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 0,
+      "progress": 29,
       "started_at": "2026-11-13T20:54:26+00:00",
       "ended_at": null,
       "attempt": 1,
@@ -454,6 +454,16 @@
           "ts": "2026-11-13T20:54:26+00:00",
           "level": "info",
           "msg": "Visual diversity: excluding 185 footage sources used in recent Shorts"
+        },
+        {
+          "ts": "2026-11-13T20:54:45+00:00",
+          "level": "info",
+          "msg": "scene_02: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-13T20:54:46+00:00",
+          "level": "info",
+          "msg": "scene_03: stock_video (pixabay)"
         }
       ],
       "errors": [],
@@ -468,20 +478,20 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 0,
-      "started_at": "2026-11-13T20:54:26+00:00",
+      "progress": 80,
+      "started_at": "2026-11-13T20:54:33+00:00",
       "ended_at": null,
-      "attempt": 1,
-      "retries": 0,
+      "attempt": 2,
+      "retries": 1,
       "max_retries": 2,
-      "strategy": "primary_voice",
+      "strategy": "alternate_voice",
       "inputs": {
         "script": "script.json",
         "languages": [
           "en"
         ],
         "voices": {
-          "en": "en-US-AndrewMultilingualNeural"
+          "en": "en-US-AriaNeural"
         }
       },
       "outputs": {},
@@ -495,9 +505,41 @@
           "ts": "2026-11-13T20:54:26+00:00",
           "level": "info",
           "msg": "Narrating en with en-US-AndrewMultilingualNeural"
+        },
+        {
+          "ts": "2026-11-13T20:54:32+00:00",
+          "level": "error",
+          "msg": "NoAudioReceived: No audio was received. Please verify that your parameters are correct."
+        },
+        {
+          "ts": "2026-11-13T20:54:33+00:00",
+          "level": "info",
+          "msg": "Attempt 2/3, strategy 'alternate_voice'"
+        },
+        {
+          "ts": "2026-11-13T20:54:33+00:00",
+          "level": "info",
+          "msg": "Narrating en with en-US-AriaNeural"
+        },
+        {
+          "ts": "2026-11-13T20:54:45+00:00",
+          "level": "info",
+          "msg": "en voiceover: 45.1s"
+        },
+        {
+          "ts": "2026-11-13T20:54:45+00:00",
+          "level": "info",
+          "msg": "Generating an ambient music bed (no library tracks with license files found)"
         }
       ],
-      "errors": [],
+      "errors": [
+        {
+          "ts": "2026-11-13T20:54:32+00:00",
+          "attempt": 1,
+          "strategy": "primary_voice",
+          "error": "NoAudioReceived: No audio was received. Please verify that your parameters are correct."
+        }
+      ],
       "feedback": [],
       "cost_usd": 0.0
     },
@@ -625,7 +667,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-13T20:54:31+00:00",
+    "exported_at": "2026-11-13T20:54:57+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/43505672230"
   }
