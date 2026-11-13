@@ -1,23 +1,23 @@
 # The Ring Finger Glitch
-Estimated narration: en 37.8s
+Estimated narration: en 44.0s
 
-## scene_01 · A man's hand slams down onto a dark wooden table in slow motion.
-EN  [CAN'T DO THIS]  You physically cannot do this.
+## scene_01 · A man's hand spread flat on a dark, textured wooden table.
+EN  [YOU CAN'T LIFT THIS]  You can't lift your ring finger.
 
-## scene_02 · Close-up of a man's hand tucking his middle finger inward so the joint touches the surface.
-EN  [FOLD MIDDLE FINGER]  Lay your hand flat. Fold your middle finger under, pressing the knuckle to the table.
+## scene_02 · Close-up shot of a hand tucking the middle finger underneath the palm while others stay flat.
+EN  [FOLD MIDDLE FINGER]  Put your palm flat. Now, tuck your middle finger all the way under so your knuckle touches the table.
 
-## scene_03 · Macro shot of a ring finger twitching but unable to lift while others remain stationary.
-EN  [TRY TO LIFT]  Now, keep your other fingers down and try lifting your ring finger. It won’t budge, right?
+## scene_03 · Macro view of a ring finger attempting to lift but failing to move off the surface.
+EN  [TRY TO LIFT]  Try to lift your ring finger while keeping the others down. It won't move. It's like it's glued there.
 
-## scene_04 · Side-by-side comparison showing a pinky finger lifting easily while the ring finger stays pinned.
-EN  [THE REAL GLITCH]  Wait until you see the glitch. Lift your index or pinky—they move fine. But the ring finger is paralyzed.
+## scene_04 · A hand demonstrating that the index and pinky fingers can lift easily while the middle is tucked.
+EN  [THE CREEPY PART]  Wait, here is the creepy part. Lift your index finger. Now lift your pinky. They move fine, but your ring finger is dead.
 
-## scene_05 · A 3D medical animation or skeletal diagram of a human hand showing interconnected blue tendons.
-EN  [SHARED TENDONS]  Your anatomy is working against you. The middle and ring fingers share a single extensor tendon.
+## scene_05 · A 3D medical animation showing the internal structure of a human hand and its tendons.
+EN  [SHARED TENDONS]  The science is simple. Your middle and ring fingers share the same extensor tendon. They are physically linked.
 
-## scene_06 · A heavy metal gear mechanism jamming or a large padlock snapping shut.
-EN  [ANATOMICAL LOCK]  Tucking one finger locks the other tight. It’s an anatomical deadbolt hidden in your hand.
+## scene_06 · A close-up of a heavy metal door bolt sliding into a locked position.
+EN  [ANATOMICAL LOCK]  Tucking one finger literally locks the other in place. It's an anatomical deadbolt hiding in your own hand.
 
-## scene_07 · A man looking directly at the camera with a surprised expression while pointing to a follow button.
-EN  [SUBSCRIBE 🔔]  Subscribe for more body hacks and comment STUCK if it worked. This glitch proves... which is exactly why
+## scene_07 · A man looking at his hand with a surprised expression before looking into the lens.
+EN  [SUBSCRIBE ေ]  Subscribe for more daily body hacks and comment STUCK if this worked on you. This is exactly why...

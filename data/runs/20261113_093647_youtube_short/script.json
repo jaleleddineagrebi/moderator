@@ -3,17 +3,17 @@
   "scenes": [
     {
       "vo": {
-        "en": "You physically cannot do this."
+        "en": "You can't lift your ring finger."
       },
       "on_screen": {
-        "en": "CAN'T DO THIS"
+        "en": "YOU CAN'T LIFT THIS"
       },
       "visual": {
-        "description": "A man's hand slams down onto a dark wooden table in slow motion.",
+        "description": "A man's hand spread flat on a dark, textured wooden table.",
         "search_terms": [
-          "man hand table",
-          "slamming hand",
-          "wooden surface"
+          "hand on table",
+          "palm spread",
+          "man hands"
         ],
         "prefer": "video"
       },
@@ -21,17 +21,17 @@
     },
     {
       "vo": {
-        "en": "Lay your hand flat. Fold your middle finger under, pressing the knuckle to the table."
+        "en": "Put your palm flat. Now, tuck your middle finger all the way under so your knuckle touches the table."
       },
       "on_screen": {
         "en": "FOLD MIDDLE FINGER"
       },
       "visual": {
-        "description": "Close-up of a man's hand tucking his middle finger inward so the joint touches the surface.",
+        "description": "Close-up shot of a hand tucking the middle finger underneath the palm while others stay flat.",
         "search_terms": [
-          "finger tucking",
-          "hand knuckle table",
-          "finger joint"
+          "folding finger",
+          "hand gesture",
+          "joint bending"
         ],
         "prefer": "video"
       },
@@ -39,17 +39,17 @@
     },
     {
       "vo": {
-        "en": "Now, keep your other fingers down and try lifting your ring finger. It won’t budge, right?"
+        "en": "Try to lift your ring finger while keeping the others down. It won't move. It's like it's glued there."
       },
       "on_screen": {
         "en": "TRY TO LIFT"
       },
       "visual": {
-        "description": "Macro shot of a ring finger twitching but unable to lift while others remain stationary.",
+        "description": "Macro view of a ring finger attempting to lift but failing to move off the surface.",
         "search_terms": [
-          "finger twitching",
-          "stuck finger",
-          "hand movement struggle"
+          "finger twitch",
+          "strained hand",
+          "muscle tension"
         ],
         "prefer": "video"
       },
@@ -57,17 +57,17 @@
     },
     {
       "vo": {
-        "en": "Wait until you see the glitch. Lift your index or pinky—they move fine. But the ring finger is paralyzed."
+        "en": "Wait, here is the creepy part. Lift your index finger. Now lift your pinky. They move fine, but your ring finger is dead."
       },
       "on_screen": {
-        "en": "THE REAL GLITCH"
+        "en": "THE CREEPY PART"
       },
       "visual": {
-        "description": "Side-by-side comparison showing a pinky finger lifting easily while the ring finger stays pinned.",
+        "description": "A hand demonstrating that the index and pinky fingers can lift easily while the middle is tucked.",
         "search_terms": [
-          "index finger lifting",
-          "pinky finger movement",
-          "hand comparison"
+          "hand movement",
+          "independent fingers",
+          "reflex test"
         ],
         "prefer": "video"
       },
@@ -75,17 +75,17 @@
     },
     {
       "vo": {
-        "en": "Your anatomy is working against you. The middle and ring fingers share a single extensor tendon."
+        "en": "The science is simple. Your middle and ring fingers share the same extensor tendon. They are physically linked."
       },
       "on_screen": {
         "en": "SHARED TENDONS"
       },
       "visual": {
-        "description": "A 3D medical animation or skeletal diagram of a human hand showing interconnected blue tendons.",
+        "description": "A 3D medical animation showing the internal structure of a human hand and its tendons.",
         "search_terms": [
-          "hand anatomy tendons",
-          "skeleton hand movement",
-          "medical 3d render"
+          "hand skeleton anatomy",
+          "medical animation",
+          "human hand structure"
         ],
         "prefer": "video"
       },
@@ -93,17 +93,17 @@
     },
     {
       "vo": {
-        "en": "Tucking one finger locks the other tight. It’s an anatomical deadbolt hidden in your hand."
+        "en": "Tucking one finger literally locks the other in place. It's an anatomical deadbolt hiding in your own hand."
       },
       "on_screen": {
         "en": "ANATOMICAL LOCK"
       },
       "visual": {
-        "description": "A heavy metal gear mechanism jamming or a large padlock snapping shut.",
+        "description": "A close-up of a heavy metal door bolt sliding into a locked position.",
         "search_terms": [
-          "rusty padlock closing",
-          "mechanical gear jamming",
-          "metal lock"
+          "door bolt lock",
+          "mechanical sliding",
+          "metal latch"
         ],
         "prefer": "video"
       },
@@ -111,17 +111,17 @@
     },
     {
       "vo": {
-        "en": "Subscribe for more body hacks and comment STUCK if it worked. This glitch proves... which is exactly why"
+        "en": "Subscribe for more daily body hacks and comment STUCK if this worked on you. This is exactly why..."
       },
       "on_screen": {
-        "en": "SUBSCRIBE 🔔"
+        "en": "SUBSCRIBE ေ"
       },
       "visual": {
-        "description": "A man looking directly at the camera with a surprised expression while pointing to a follow button.",
+        "description": "A man looking at his hand with a surprised expression before looking into the lens.",
         "search_terms": [
-          "man pointing camera",
-          "surprised face man",
-          "clicking button"
+          "man shocked face",
+          "surprised person",
+          "looking at hand"
         ],
         "prefer": "video"
       },
@@ -133,6 +133,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 37.8
+    "en": 44.0
   }
 }
