@@ -1,12 +1,12 @@
 {
   "passed": false,
-  "revision_round": 1,
+  "revision_round": 2,
   "checks": [
     {
       "check": "length",
       "lang": "en",
       "ok": true,
-      "detail": "50.1s (must be under 60s; target 32-50s)",
+      "detail": "53.0s (must be under 60s; target 32-50s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -14,7 +14,7 @@
       "check": "target length",
       "lang": "en",
       "ok": true,
-      "detail": "50.1s",
+      "detail": "53.0s",
       "send_to": null,
       "severity": "minor"
     },
@@ -46,7 +46,7 @@
       "check": "loudness",
       "lang": "en",
       "ok": true,
-      "detail": "-14.1 LUFS, peak -1.4 dBFS (target -14 LUFS, peak <= -1)",
+      "detail": "-14.3 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -62,7 +62,7 @@
       "check": "caption sync",
       "lang": "en",
       "ok": true,
-      "detail": "121 words, 46 caption events",
+      "detail": "125 words, 47 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -91,19 +91,27 @@
       "severity": "blocker"
     },
     {
-      "check": "spelling review",
+      "check": "accuracy review",
       "lang": "en",
       "ok": false,
-      "detail": "In scene_07, the on-screen text 'SUBSCRIBE ေ' contains a Burmese character 'ေ'. Change it to 'SUBSCRIBE' or 'SUBSCRIBE!'",
+      "detail": "In scene 05, the script says the ring and middle finger share the same extensor tendon. Actually, the middle, ring, and pinky fingers share the extensor digitorum communis, but the ring finger's lack of independence in this specific pose is due to the juncture tenuinae (intertendinous connections) that tether it to the middle and pinky fingers. Fix: 'This happens because your ring and middle fingers are linked by the same group of tendons.'",
       "send_to": "script",
       "severity": "blocker"
     },
     {
       "check": "people rule",
       "lang": null,
-      "ok": true,
-      "detail": "no women beyond face close-ups in 7 scenes and 1 thumbnail(s)",
-      "send_to": null,
+      "ok": false,
+      "detail": "scene_01: A woman is visible from the side, showing her profile, arm, and hand while she works at a desk.. Replace with footage without women (a face-only close-up is the only exception).",
+      "send_to": "visuals",
+      "severity": "blocker"
+    },
+    {
+      "check": "people rule",
+      "lang": null,
+      "ok": false,
+      "detail": "thumbnail_en: A woman is visible in profile, including her arm and hand as she uses a mouse at a desk.. Replace with footage without women (a face-only close-up is the only exception).",
+      "send_to": "packaging",
       "severity": "blocker"
     }
   ]
