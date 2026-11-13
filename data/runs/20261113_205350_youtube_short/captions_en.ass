@@ -1,0 +1,60 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:02.39,Headline,,0,0,0,,{\fad(150,150)}ARM WILL FLOAT
+Dialogue: 1,0:00:02.49,0:00:08.05,Headline,,0,0,0,,{\fad(150,150)}FIND A WALL
+Dialogue: 1,0:00:08.15,0:00:14.12,Headline,,0,0,0,,{\fad(150,150)}PUSH HARD NOW
+Dialogue: 1,0:00:14.22,0:00:19.77,Headline,,0,0,0,,{\fad(150,150)}BRAIN GLITCHING
+Dialogue: 1,0:00:19.87,0:00:29.27,Headline,,0,0,0,,{\fad(150,150)}STEP AWAY NOW
+Dialogue: 1,0:00:29.37,0:00:36.49,Headline,,0,0,0,,{\fad(150,150)}THE GHOST EFFECT
+Dialogue: 1,0:00:36.59,0:00:45.71,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 0,0:00:00.10,0:00:00.66,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your arm is
+Dialogue: 0,0:00:00.68,0:00:01.51,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}about{\c&H00FFFFFF&} to float
+Dialogue: 0,0:00:02.54,0:00:03.37,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Find{\c&H00FFFFFF&} a wall
+Dialogue: 0,0:00:04.19,0:00:05.40,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Stand {\c&H0000E5FF&}sideways{\c&H00FFFFFF&} and
+Dialogue: 0,0:00:05.41,0:00:06.06,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}press{\c&H00FFFFFF&} the back
+Dialogue: 0,0:00:06.07,0:00:06.51,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}of your {\c&H0000E5FF&}hand{\c&H00FFFFFF&}
+Dialogue: 0,0:00:06.52,0:00:07.17,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}against{\c&H00FFFFFF&} it
+Dialogue: 0,0:00:08.20,0:00:08.80,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Push{\c&H00FFFFFF&} as hard
+Dialogue: 0,0:00:08.81,0:00:09.47,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}as you can
+Dialogue: 0,0:00:10.29,0:00:11.67,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Seriously{\c&H00FFFFFF&} use all
+Dialogue: 0,0:00:11.69,0:00:12.38,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}strength{\c&H00FFFFFF&} for
+Dialogue: 0,0:00:12.39,0:00:13.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}thirty {\c&H0000E5FF&}seconds{\c&H00FFFFFF&}
+Dialogue: 0,0:00:14.26,0:00:14.79,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}But {\c&H0000E5FF&}here{\c&H00FFFFFF&} is
+Dialogue: 0,0:00:14.81,0:00:15.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}creepy{\c&H00FFFFFF&} part
+Dialogue: 0,0:00:16.51,0:00:17.17,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}brain{\c&H00FFFFFF&} is
+Dialogue: 0,0:00:17.18,0:00:17.86,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}about{\c&H00FFFFFF&} to lose
+Dialogue: 0,0:00:17.87,0:00:18.45,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}control{\c&H00FFFFFF&} of your
+Dialogue: 0,0:00:18.46,0:00:18.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}body
+Dialogue: 0,0:00:19.92,0:00:20.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Keep {\c&H0000E5FF&}pushing{\c&H00FFFFFF&}
+Dialogue: 0,0:00:21.51,0:00:22.59,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Ten more {\c&H0000E5FF&}seconds{\c&H00FFFFFF&}
+Dialogue: 0,0:00:23.41,0:00:25.06,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Five four {\c&H0000E5FF&}three{\c&H00FFFFFF&}
+Dialogue: 0,0:00:25.21,0:00:26.14,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}two one
+Dialogue: 0,0:00:26.96,0:00:27.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Step{\c&H00FFFFFF&} away and
+Dialogue: 0,0:00:27.71,0:00:28.39,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}relax
+Dialogue: 0,0:00:29.42,0:00:30.04,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your arm is
+Dialogue: 0,0:00:30.06,0:00:30.75,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}rising{\c&H00FFFFFF&} on its
+Dialogue: 0,0:00:30.76,0:00:31.16,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}own
+Dialogue: 0,0:00:31.94,0:00:32.40,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}This is the
+Dialogue: 0,0:00:32.41,0:00:33.96,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Kohnstamm {\c&H0000E5FF&}phenomenon{\c&H00FFFFFF&} a
+Dialogue: 0,0:00:33.97,0:00:34.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}literal{\c&H00FFFFFF&} glitch in
+Dialogue: 0,0:00:34.73,0:00:35.62,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your motor {\c&H0000E5FF&}system{\c&H00FFFFFF&}
+Dialogue: 0,0:00:36.64,0:00:37.39,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}neurons{\c&H00FFFFFF&} are
+Dialogue: 0,0:00:37.40,0:00:38.44,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}still {\c&H0000E5FF&}firing{\c&H00FFFFFF&} even
+Dialogue: 0,0:00:38.45,0:00:39.23,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}though you {\c&H0000E5FF&}stopped{\c&H00FFFFFF&}
+Dialogue: 0,0:00:40.04,0:00:41.05,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Subscribe{\c&H00FFFFFF&} for more
+Dialogue: 0,0:00:41.06,0:00:41.85,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}brain{\c&H00FFFFFF&} tests and
+Dialogue: 0,0:00:41.86,0:00:42.49,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} if it
+Dialogue: 0,0:00:42.51,0:00:43.28,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}worked{\c&H00FFFFFF&} which is
+Dialogue: 0,0:00:43.30,0:00:44.23,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}exactly{\c&H00FFFFFF&} why

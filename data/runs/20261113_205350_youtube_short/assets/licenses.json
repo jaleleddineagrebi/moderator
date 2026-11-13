@@ -1,0 +1,72 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-254787/",
+    "author": "nirjharbasakuet",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hand rising air",
+    "description": "A close up of a hand slowly rising against a dark, moody background with particles."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-15230/",
+    "author": "2427999",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man standing wall",
+    "description": "A man in profile standing next to a concrete wall prepared to push."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-12741/",
+    "author": "tacofleur",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "straining arm muscle",
+    "description": "A close up of a tensed arm muscle and a fist pressing against a hard surface."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-27228/",
+    "author": "RAHADstudio",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "digital signal distortion",
+    "description": "Abstract digital glitch overlay over a stylized 3D model of a human brain."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-15615/",
+    "author": "Matthias_Groeneveld",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "analog stopwatch ticking",
+    "description": "A mechanical stopwatch ticking down rapidly followed by a man stepping back from a wall."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-165065/",
+    "author": "NickyPe",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "slow motion arm",
+    "description": "An arm rising slowly and involuntarily as if pulled by an invisible string."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-3168/",
+    "author": "Coverr-Free-Footage",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "tapping phone screen",
+    "description": "A close up of a man's thumb tapping the subscribe button on a smartphone screen."
+  }
+]
