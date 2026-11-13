@@ -1,0 +1,68 @@
+{
+  "niche": "Mind Hacks, AI Secrets, Bizarre Body Science & Hidden Power Dynamics",
+  "languages": [
+    "en"
+  ],
+  "ideas": [
+    {
+      "id": "paralyzed-arm-glitch",
+      "title": "The Paralyzed Arm Glitch",
+      "angle": "The viewer is instructed to push the back of their hand against a wall for 30 seconds as hard as possible. When they step away, their arm rises involuntarily like a ghost. This creates high retention via the physical wait time and a massive comment trigger for results.",
+      "hook": {
+        "en": "You can make your arm float."
+      },
+      "keywords": [
+        "Kohnstamm phenomenon",
+        "body glitch",
+        "muscle memory",
+        "brain hack",
+        "human body secrets"
+      ],
+      "reason": "This is the gold standard for Interactive Body Tests. It forces a 30-second commitment from the viewer, ensuring near 100% watch time. It is currently trending under the 'body hacks' tag because it works on 99% of people.",
+      "sources": [
+        "Scientific American - The Kohnstamm Phenomenon",
+        "Journal of Neurophysiology - Muscle involuntary contraction post-load"
+      ]
+    },
+    {
+      "id": "cold-water-dive-reflex",
+      "title": "The Instant Calm Button",
+      "angle": "The video shows how splashing ice-cold water on your face instantly drops your heart rate and kills anxiety via the Mammalian Dive Reflex. It challenges viewers to try it next time they are stressed and comment their 'heart drop' experience.",
+      "hook": {
+        "en": "Splash cold water to live."
+      },
+      "keywords": [
+        "mammalian dive reflex",
+        "vagus nerve hack",
+        "anxiety relief",
+        "survival science",
+        "biotechnology"
+      ],
+      "reason": "Vagus nerve and 'nervous system regulation' content is exploding on social media. This survival mechanism is a biological 'cheat code' that yields high engagement because of its immediate physical effect.",
+      "sources": [
+        "National Library of Medicine - The Mammalian Dive Response",
+        "Cleveland Clinic - Vagus Nerve Stimulation"
+      ]
+    },
+    {
+      "id": "nasal-cycle-glitch",
+      "title": "The One-Nose Breathing Glitch",
+      "angle": "Viewers are told to plug one nostril and then the other to realize they are only ever breathing through one at a time. It explains the 'Nasal Cycle' and the hidden reason why your body rotates them every few hours. This causes an immediate physical self-check.",
+      "hook": {
+        "en": "You're only using one nostril."
+      },
+      "keywords": [
+        "nasal cycle",
+        "body glitches",
+        "human biology",
+        "breathing facts",
+        "autonomic nervous system"
+      ],
+      "reason": "This is a 'discovery' glitch that makes the viewer immediately stop and test it. It creates high 'Viewed-vs-Swiped' because it challenges a basic physiological assumption within the first 2 seconds.",
+      "sources": [
+        "Healthline - What Is the Nasal Cycle?",
+        "Microbiology and Molecular Biology Reviews - Autonomic control of the nasal cycle"
+      ]
+    }
+  ]
+}

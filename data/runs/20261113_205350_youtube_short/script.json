@@ -1,0 +1,138 @@
+{
+  "title": "The Paralyzed Arm Glitch",
+  "scenes": [
+    {
+      "vo": {
+        "en": "Your arm is about to float."
+      },
+      "on_screen": {
+        "en": "ARM WILL FLOAT"
+      },
+      "visual": {
+        "description": "A close up of a hand slowly rising against a dark, moody background with particles.",
+        "search_terms": [
+          "hand rising air",
+          "palm floating",
+          "upward motion"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Find a wall. Stand sideways and press the back of your hand against it."
+      },
+      "on_screen": {
+        "en": "FIND A WALL"
+      },
+      "visual": {
+        "description": "A man in profile standing next to a concrete wall prepared to push.",
+        "search_terms": [
+          "man standing wall",
+          "side profile leaning",
+          "brick wall background"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Push as hard as you can. Seriously, use all your strength for thirty seconds."
+      },
+      "on_screen": {
+        "en": "PUSH HARD NOW"
+      },
+      "visual": {
+        "description": "A close up of a tensed arm muscle and a fist pressing against a hard surface.",
+        "search_terms": [
+          "straining arm muscle",
+          "clenched fist pushing",
+          "muscular effort"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "But here is the creepy part. Your brain is about to lose control of your body."
+      },
+      "on_screen": {
+        "en": "BRAIN GLITCHING"
+      },
+      "visual": {
+        "description": "Abstract digital glitch overlay over a stylized 3D model of a human brain.",
+        "search_terms": [
+          "digital signal distortion",
+          "neon neural network",
+          "glitch overlay"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Keep pushing. Ten more seconds. Five, four, three, two, one. Step away and relax."
+      },
+      "on_screen": {
+        "en": "STEP AWAY NOW"
+      },
+      "visual": {
+        "description": "A mechanical stopwatch ticking down rapidly followed by a man stepping back from a wall.",
+        "search_terms": [
+          "analog stopwatch ticking",
+          "man stepping back",
+          "seconds counting"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "Your arm is rising on its own. This is the Kohnstamm phenomenon, a literal glitch in your motor system."
+      },
+      "on_screen": {
+        "en": "THE GHOST EFFECT"
+      },
+      "visual": {
+        "description": "An arm rising slowly and involuntarily as if pulled by an invisible string.",
+        "search_terms": [
+          "slow motion arm",
+          "involuntary movement",
+          "hand lifting up"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Your neurons are still firing even though you stopped. Subscribe for more brain tests and comment if it worked, which is exactly why"
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "A close up of a man's thumb tapping the subscribe button on a smartphone screen.",
+        "search_terms": [
+          "tapping phone screen",
+          "clicking subscribe button",
+          "mobile phone interaction"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "paralyzed-arm-glitch",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 38.5
+  }
+}
