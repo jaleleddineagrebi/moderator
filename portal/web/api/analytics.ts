@@ -13,9 +13,22 @@ async function ensureAnalyticsTable(): Promise<void> {
         "updatedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP
       );
     `);
+    await prisma.$executeRawUnsafe(`
+      CREATE TABLE IF NOT EXISTS "PortalViewLogs" (
+        "id" TEXT PRIMARY KEY,
+        "path" TEXT NOT NULL,
+        "slug" TEXT,
+        "viewerName" TEXT,
+        "viewerEmail" TEXT,
+        "visitorId" TEXT,
+        "referrer" TEXT,
+        "userAgent" TEXT,
+        "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP
+      );
+    `);
     tableEnsured = true;
   } catch (err) {
-    console.warn("Could not ensure PortalAnalytics table:", err);
+    console.warn("Could not ensure PortalAnalytics tables:", err);
   }
 }
 
@@ -36,7 +49,30 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     try {
       const body = req.body || {};
       const slug = typeof body.slug === "string" && body.slug.trim() ? body.slug.trim().slice(0, 160) : null;
+      const path = typeof body.path === "string" && body.path.trim() ? body.path.trim().slice(0, 240) : (slug ? `/posts/${slug}` : "/");
       const event = typeof body.event === "string" ? body.event : "page_view";
+      const viewerName = typeof body.viewerName === "string" && body.viewerName.trim() ? body.viewerName.trim().slice(0, 120) : null;
+      const viewerEmail = typeof body.viewerEmail === "string" && body.viewerEmail.trim() ? body.viewerEmail.trim().toLowerCase().slice(0, 160) : null;
+      const visitorId = typeof body.visitorId === "string" && body.visitorId.trim() ? body.visitorId.trim().slice(0, 120) : null;
+      const referrer = typeof body.referrer === "string" && body.referrer.trim() ? body.referrer.trim().slice(0, 300) : null;
+      const userAgent = String(req.headers["user-agent"] || "").slice(0, 240) || null;
+      const logId = `vw-${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
+
+      // Record individual view log entry for Admin Dashboard
+      await prisma.$executeRawUnsafe(
+        `
+        INSERT INTO "PortalViewLogs" ("id", "path", "slug", "viewerName", "viewerEmail", "visitorId", "referrer", "userAgent", "createdAt")
+        VALUES ($1, $2, $3, $4, $5, $6, $7, $8, CURRENT_TIMESTAMP);
+        `,
+        logId,
+        path,
+        slug,
+        viewerName,
+        viewerEmail,
+        visitorId,
+        referrer,
+        userAgent
+      ).catch(() => {});
 
       // Increment global site views and return updated count
       const siteRows = await prisma.$queryRawUnsafe<{ views: number }[]>(`

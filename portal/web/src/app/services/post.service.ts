@@ -13,13 +13,14 @@ export class PostService {
   private readonly auth = inject(AuthService);
   private readonly apiUrl = '/api/posts';
 
-  private getActorIdentity(): { userId: string; userName?: string; userEmail?: string } {
+  private getActorIdentity(): { userId: string; userName?: string; userEmail?: string; userImage?: string } {
     const user = this.auth.currentUser();
     if (user?.id) {
       return {
         userId: user.id,
         userName: user.name || undefined,
         userEmail: user.email || undefined,
+        userImage: user.image || undefined,
       };
     }
     if (typeof localStorage !== 'undefined') {
@@ -100,6 +101,9 @@ export class PostService {
       content,
       parentId,
       authorName: actor.userName || 'Community Reader',
+      userEmail: actor.userEmail,
+      userImage: actor.userImage,
+      userId: actor.userId,
     });
   }
 }

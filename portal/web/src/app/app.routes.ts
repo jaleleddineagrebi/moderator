@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { FeedComponent } from './components/feed/feed.component';
 import { PostDetailComponent } from './components/post-detail/post-detail.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { AdminComponent } from './components/admin/admin.component';
 
 export const routes: Routes = [
   {
@@ -23,6 +24,11 @@ export const routes: Routes = [
     path: 'contact',
     component: ContactComponent,
     title: 'Contact Us | Mind Decoded'
+  },
+  {
+    path: 'admin',
+    component: AdminComponent,
+    title: 'Admin Command Center | Mind Decoded'
   },
   {
     path: '**',

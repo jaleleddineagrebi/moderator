@@ -37,16 +37,34 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   if (req.method === "POST") {
     try {
-      const { content, parentId, authorName = "Community Reader" } = req.body;
+      const {
+        content,
+        parentId,
+        authorName = "Community Reader",
+        userEmail,
+        userImage,
+        userId,
+      } = req.body || {};
       if (!content || !content.trim()) {
         return res.status(400).json({ error: "Content is required" });
       }
 
-      // Guest or authenticated user
-      const user = await prisma.user.create({
-        data: {
+      const cleanEmail =
+        typeof userEmail === "string" && userEmail.includes("@")
+          ? userEmail.toLowerCase().trim()
+          : `${userId || `reader-${Date.now()}`}@portal.community`;
+
+      // Upsert authenticated or guest user so their real name, email, and avatar are saved
+      const user = await prisma.user.upsert({
+        where: { email: cleanEmail },
+        update: {
+          name: authorName || undefined,
+          image: userImage || undefined,
+        },
+        create: {
           name: authorName,
-          email: `reader-${Date.now()}@portal.community`,
+          email: cleanEmail,
+          image: userImage || null,
         },
       });
 

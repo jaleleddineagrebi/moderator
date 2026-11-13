@@ -38,6 +38,7 @@ import { MatIconModule } from '@angular/material/icon';
             <a routerLink="/">Daily Insights</a>
             <a routerLink="/shorts">YouTube Shorts</a>
             <a routerLink="/contact">Contact Us</a>
+            <a routerLink="/admin">Admin Dashboard</a>
             <a href="/rss.xml" target="_blank" rel="noopener">RSS Feed</a>
             <a href="/sitemap.xml" target="_blank" rel="noopener">XML Sitemap</a>
             <a href="https://www.youtube.com/channel/UCzjz2ArvjE4RgR_2k2o53mg" target="_blank" rel="noopener noreferrer">

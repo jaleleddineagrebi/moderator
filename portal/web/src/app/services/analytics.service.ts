@@ -79,10 +79,32 @@ export class AnalyticsService {
     }
     this.sessionTrackedPaths.add(dedupeKey);
 
+    let viewerName: string | null = null;
+    let viewerEmail: string | null = null;
+    let visitorId: string | null = null;
+    if (typeof localStorage !== 'undefined') {
+      visitorId = localStorage.getItem('portal_visitor_id');
+      if (!visitorId) {
+        visitorId = 'v-' + Math.random().toString(36).slice(2, 11) + '-' + Date.now().toString(36);
+        localStorage.setItem('portal_visitor_id', visitorId);
+      }
+      const savedUser = localStorage.getItem('portal_user');
+      if (savedUser) {
+        try {
+          const parsed = JSON.parse(savedUser);
+          viewerName = parsed?.name || null;
+          viewerEmail = parsed?.email || null;
+        } catch {}
+      }
+    }
+
     this.http.post<{ ok: boolean; totalViews?: number; postViews?: number }>('/api/analytics', {
       event: slug ? 'post_view' : 'page_view',
       path,
       slug: slug || null,
+      viewerName,
+      viewerEmail,
+      visitorId,
       referrer: typeof document !== 'undefined' ? document.referrer || null : null,
     }).subscribe({
       next: (res) => {
