@@ -41,6 +41,10 @@ import { AuthDialogComponent } from '../auth-dialog/auth-dialog.component';
             <mat-icon>mail_outline</mat-icon>
             <span>Contact</span>
           </a>
+          <a *ngIf="isAdmin" mat-button routerLink="/admin" routerLinkActive="active-link">
+            <mat-icon>admin_panel_settings</mat-icon>
+            <span>Admin</span>
+          </a>
         </nav>
 
         <!-- Right Action: User Auth -->
@@ -62,6 +66,10 @@ import { AuthDialogComponent } from '../auth-dialog/auth-dialog.component';
                 <strong>{{ auth.currentUser()?.name }}</strong>
                 <small>{{ auth.currentUser()?.email }}</small>
               </div>
+              <a mat-menu-item routerLink="/admin">
+                <mat-icon>admin_panel_settings</mat-icon>
+                <span>Admin Command Center</span>
+              </a>
               <button mat-menu-item (click)="auth.logout()">
                 <mat-icon>logout</mat-icon>
                 <span>Sign Out</span>
@@ -206,6 +214,11 @@ import { AuthDialogComponent } from '../auth-dialog/auth-dialog.component';
 export class HeaderComponent {
   readonly auth = inject(AuthService);
   private readonly dialog = inject(MatDialog);
+
+  get isAdmin(): boolean {
+    const email = (this.auth.currentUser()?.email || '').toLowerCase();
+    return email.includes('jalel') || this.auth.currentUser()?.role === 'ADMIN';
+  }
 
   openAuthDialog(): void {
     this.dialog.open(AuthDialogComponent, { width: '420px' });
