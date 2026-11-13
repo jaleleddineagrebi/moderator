@@ -69,11 +69,11 @@
   "ended_at": null,
   "revision_rounds": 1,
   "cost": {
-    "total_usd": 0.017867,
+    "total_usd": 0.029505,
     "budget_usd": 1.0,
     "by_agent": {
       "trend_researcher": 0.002579,
-      "scriptwriter": 0.012164,
+      "scriptwriter": 0.023802,
       "packaging": 0.000494,
       "qa_reviewer": 0.00263
     }
@@ -386,10 +386,10 @@
         "research"
       ],
       "checkpoint": "B",
-      "status": "running",
-      "progress": 10,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-13T16:33:45+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-13T16:34:08+00:00",
       "attempt": 2,
       "retries": 0,
       "max_retries": 2,
@@ -450,6 +450,26 @@
           "ts": "2026-11-13T16:33:45+00:00",
           "level": "info",
           "msg": "Asking Gemini (gemini-3.8-flash, high complexity, thinking high)"
+        },
+        {
+          "ts": "2026-11-13T16:34:08+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3.6-flash) answered in 23.1s (tokens in 1994, out 869, thinking 3547)"
+        },
+        {
+          "ts": "2026-11-13T16:34:08+00:00",
+          "level": "info",
+          "msg": "Estimated narration: en 38.5s"
+        },
+        {
+          "ts": "2026-11-13T16:34:08+00:00",
+          "level": "info",
+          "msg": "Finished, waiting for your approval"
+        },
+        {
+          "ts": "2026-11-13T16:34:08+00:00",
+          "level": "info",
+          "msg": "Approved by schedule (auto-approve)"
         }
       ],
       "errors": [],
@@ -460,7 +480,7 @@
           "comment": "QA found:\n[en] grammar review: Narration ends abruptly with an unfinished trailing clause ('... which is exactly why'). Remove '... which is exactly why' from scene_06 VO."
         }
       ],
-      "cost_usd": 0.012164
+      "cost_usd": 0.023802
     },
     "visuals": {
       "title": "Source scene visuals",
@@ -469,11 +489,11 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "needs_revision",
-      "progress": 0,
-      "started_at": "2026-11-13T16:30:57+00:00",
-      "ended_at": "2026-11-13T16:31:33+00:00",
-      "attempt": 1,
+      "status": "running",
+      "progress": 33,
+      "started_at": "2026-11-13T16:34:08+00:00",
+      "ended_at": null,
+      "attempt": 2,
       "retries": 0,
       "max_retries": 2,
       "strategy": "stock_video",
@@ -545,6 +565,31 @@
           "ts": "2026-11-13T16:33:45+00:00",
           "level": "warning",
           "msg": "Sent back by qa: QA found:\n[all] people rule: scene_05: women's legs, hands, and bodies in bathrobes are clearly visible. Replace with footage without women (a face-only close-up is the only exception)."
+        },
+        {
+          "ts": "2026-11-13T16:34:08+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'stock_video'"
+        },
+        {
+          "ts": "2026-11-13T16:34:09+00:00",
+          "level": "info",
+          "msg": "Revision feedback: QA found:\n[all] people rule: scene_05: women's legs, hands, and bodies in bathrobes are clearly visible. Replace with footage without women (a face-only close-up is the only exception)."
+        },
+        {
+          "ts": "2026-11-13T16:34:09+00:00",
+          "level": "info",
+          "msg": "Visual diversity: excluding 185 footage sources used in recent Shorts"
+        },
+        {
+          "ts": "2026-11-13T16:34:09+00:00",
+          "level": "info",
+          "msg": "Replacing scene_05; keeping 0 unchanged scene(s)"
+        },
+        {
+          "ts": "2026-11-13T16:34:22+00:00",
+          "level": "info",
+          "msg": "scene_03: stock_video (pixabay)"
         }
       ],
       "errors": [],
@@ -564,12 +609,12 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "queued",
-      "progress": 0,
-      "started_at": "2026-11-13T16:31:01+00:00",
-      "ended_at": "2026-11-13T16:31:21+00:00",
-      "attempt": 2,
-      "retries": 0,
+      "status": "running",
+      "progress": 80,
+      "started_at": "2026-11-13T16:34:12+00:00",
+      "ended_at": null,
+      "attempt": 4,
+      "retries": 1,
       "max_retries": 2,
       "strategy": "alternate_voice",
       "inputs": {
@@ -629,11 +674,52 @@
           "ts": "2026-11-13T16:33:45+00:00",
           "level": "info",
           "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-13T16:34:09+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'primary_voice'"
+        },
+        {
+          "ts": "2026-11-13T16:34:09+00:00",
+          "level": "info",
+          "msg": "Narrating en with en-US-AndrewMultilingualNeural"
+        },
+        {
+          "ts": "2026-11-13T16:34:11+00:00",
+          "level": "error",
+          "msg": "NoAudioReceived: No audio was received. Please verify that your parameters are correct."
+        },
+        {
+          "ts": "2026-11-13T16:34:12+00:00",
+          "level": "info",
+          "msg": "Attempt 2/3, strategy 'alternate_voice'"
+        },
+        {
+          "ts": "2026-11-13T16:34:12+00:00",
+          "level": "info",
+          "msg": "Narrating en with en-US-AriaNeural"
+        },
+        {
+          "ts": "2026-11-13T16:34:23+00:00",
+          "level": "info",
+          "msg": "en voiceover: 41.4s"
+        },
+        {
+          "ts": "2026-11-13T16:34:23+00:00",
+          "level": "info",
+          "msg": "Generating an ambient music bed (no library tracks with license files found)"
         }
       ],
       "errors": [
         {
           "ts": "2026-11-13T16:31:00+00:00",
+          "attempt": 1,
+          "strategy": "primary_voice",
+          "error": "NoAudioReceived: No audio was received. Please verify that your parameters are correct."
+        },
+        {
+          "ts": "2026-11-13T16:34:11+00:00",
           "attempt": 1,
           "strategy": "primary_voice",
           "error": "NoAudioReceived: No audio was received. Please verify that your parameters are correct."
@@ -946,11 +1032,11 @@
       "type": "approve",
       "step": "script",
       "route_to": "script",
-      "status": "idle",
+      "status": "approved",
       "options": [],
       "choice": null,
       "comment": null,
-      "decided_at": "2026-11-13T16:30:57+00:00"
+      "decided_at": "2026-11-13T16:34:08+00:00"
     },
     "C": {
       "title": "Approve the final videos (never uploaded without your OK)",
@@ -967,7 +1053,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-13T16:33:50+00:00",
+    "exported_at": "2026-11-13T16:34:26+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/43463207800"
   }

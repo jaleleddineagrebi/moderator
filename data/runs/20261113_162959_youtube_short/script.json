@@ -3,17 +3,17 @@
   "scenes": [
     {
       "vo": {
-        "en": "Turn off this hidden Wi-Fi setting right now."
+        "en": "You need to turn off this setting."
       },
       "on_screen": {
-        "en": "DISABLE THIS SETTING NOW"
+        "en": "TURN THIS OFF NOW"
       },
       "visual": {
-        "description": "Close-up of a man holding a smartphone in a dimly lit room, tapping the screen urgently.",
+        "description": "Close-up shot of a man's hands tapping quickly on a glowing smartphone screen inside a dark room.",
         "search_terms": [
           "smartphone dark room",
-          "man using phone",
-          "mobile screen glowing"
+          "man using mobile",
+          "glowing phone screen"
         ],
         "prefer": "video"
       },
@@ -21,17 +21,17 @@
     },
     {
       "vo": {
-        "en": "Even when you manually turn off Wi-Fi, your smartphone silently broadcasts background scanning signals every single second."
+        "en": "Even when your Wi-Fi is turned off, your smartphone secretly broadcasts scanning signals into the air every few seconds."
       },
       "on_screen": {
-        "en": "SECRET BACKGROUND SCANNING"
+        "en": "HIDDEN BACKGROUND SCANNING"
       },
       "visual": {
-        "description": "High-tech server room with flashing indicator lights and glowing fiber optic network cables.",
+        "description": "Panning shot of high-tech data server racks with flashing green and blue LED lights in a futuristic facility.",
         "search_terms": [
-          "server room lights",
-          "network data cables",
-          "router antenna flashing"
+          "server rack lights",
+          "data center cables",
+          "network router flashing"
         ],
         "prefer": "video"
       },
@@ -39,17 +39,17 @@
     },
     {
       "vo": {
-        "en": "Retail stores and public venues grab these hidden signals to track your exact walking route through their aisles."
+        "en": "Retail stores and public venues capture these invisible signals to track your exact physical path through every store aisle."
       },
       "on_screen": {
-        "en": "STORES TRACK YOUR MOVEMENT"
+        "en": "STORES TRACKING YOU"
       },
       "visual": {
-        "description": "Tracking shot of a man's feet walking through a modern shopping venue store aisle.",
+        "description": "Tracking shot following a man walking through a modern shopping mall concourse with polished floors.",
         "search_terms": [
           "man walking mall",
-          "feet walking store",
-          "supermarket aisle walking"
+          "shopping store aisle",
+          "feet walking hallway"
         ],
         "prefer": "video"
       },
@@ -57,17 +57,17 @@
     },
     {
       "vo": {
-        "en": "But here is the creepy part: corporate data brokers buy this location history to map out your daily life."
+        "en": "But here is the creepy part: commercial data brokers buy this location history to map out your entire daily routine."
       },
       "on_screen": {
-        "en": "HERE IS CREEPY PART"
+        "en": "THE CREEPY PART"
       },
       "visual": {
-        "description": "Male security analyst monitoring multiple screens displaying real-time digital GPS location graphics.",
+        "description": "Over-the-shoulder shot of a man reviewing glowing digital map analytics on dual computer monitors.",
         "search_terms": [
           "man computer monitor",
-          "gps tracking map",
-          "data stream code"
+          "digital map analytics",
+          "cyber surveillance screen"
         ],
         "prefer": "video"
       },
@@ -75,17 +75,17 @@
     },
     {
       "vo": {
-        "en": "Fix this immediately: open settings, search Wi-Fi Scanning or Location Accuracy, and flip those switches off right away."
+        "en": "To stop this tracking, open your phone settings, search for Wi-Fi Scanning, and turn off background location accuracy immediately."
       },
       "on_screen": {
-        "en": "TURN OFF WI-FI SCANNING"
+        "en": "DISABLE WI-FI SCANNING"
       },
       "visual": {
-        "description": "Macro shot of a male hand tapping a smartphone screen to disable background toggles.",
+        "description": "Macro shot of a man's thumb toggling off a digital slider switch on a modern smartphone display.",
         "search_terms": [
-          "hand touching screen",
-          "phone settings menu",
-          "finger flipping switch"
+          "thumb touching screen",
+          "flipping phone switch",
+          "mobile settings menu"
         ],
         "prefer": "video"
       },
@@ -93,17 +93,17 @@
     },
     {
       "vo": {
-        "en": "Subscribe for tomorrow's essential tech shield — and comment PROTECTED if you turned this off... which is exactly why"
+        "en": "Protect your privacy today. Subscribe for tomorrow's hidden tech hacks, and comment DONE if you flipped the switch... which is exactly why"
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "3D render of a futuristic digital padlocked shield locking securely on screen.",
+        "description": "3D animation of a shiny metal padlock snapping shut over digital glowing network lines.",
         "search_terms": [
-          "digital lock closing",
+          "padlock locking shut",
           "cyber security shield",
-          "data protection lock"
+          "data security lock"
         ],
         "prefer": "video"
       },
@@ -115,6 +115,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 36.0
+    "en": 38.5
   }
 }

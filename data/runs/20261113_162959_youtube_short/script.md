@@ -1,20 +1,20 @@
 # The Hidden Phone Setting Tracking Your Exact Location 24/7
-Estimated narration: en 36.0s
+Estimated narration: en 38.5s
 
-## scene_01 · Close-up of a man holding a smartphone in a dimly lit room, tapping the screen urgently.
-EN  [DISABLE THIS SETTING NOW]  Turn off this hidden Wi-Fi setting right now.
+## scene_01 · Close-up shot of a man's hands tapping quickly on a glowing smartphone screen inside a dark room.
+EN  [TURN THIS OFF NOW]  You need to turn off this setting.
 
-## scene_02 · High-tech server room with flashing indicator lights and glowing fiber optic network cables.
-EN  [SECRET BACKGROUND SCANNING]  Even when you manually turn off Wi-Fi, your smartphone silently broadcasts background scanning signals every single second.
+## scene_02 · Panning shot of high-tech data server racks with flashing green and blue LED lights in a futuristic facility.
+EN  [HIDDEN BACKGROUND SCANNING]  Even when your Wi-Fi is turned off, your smartphone secretly broadcasts scanning signals into the air every few seconds.
 
-## scene_03 · Tracking shot of a man's feet walking through a modern shopping venue store aisle.
-EN  [STORES TRACK YOUR MOVEMENT]  Retail stores and public venues grab these hidden signals to track your exact walking route through their aisles.
+## scene_03 · Tracking shot following a man walking through a modern shopping mall concourse with polished floors.
+EN  [STORES TRACKING YOU]  Retail stores and public venues capture these invisible signals to track your exact physical path through every store aisle.
 
-## scene_04 · Male security analyst monitoring multiple screens displaying real-time digital GPS location graphics.
-EN  [HERE IS CREEPY PART]  But here is the creepy part: corporate data brokers buy this location history to map out your daily life.
+## scene_04 · Over-the-shoulder shot of a man reviewing glowing digital map analytics on dual computer monitors.
+EN  [THE CREEPY PART]  But here is the creepy part: commercial data brokers buy this location history to map out your entire daily routine.
 
-## scene_05 · Macro shot of a male hand tapping a smartphone screen to disable background toggles.
-EN  [TURN OFF WI-FI SCANNING]  Fix this immediately: open settings, search Wi-Fi Scanning or Location Accuracy, and flip those switches off right away.
+## scene_05 · Macro shot of a man's thumb toggling off a digital slider switch on a modern smartphone display.
+EN  [DISABLE WI-FI SCANNING]  To stop this tracking, open your phone settings, search for Wi-Fi Scanning, and turn off background location accuracy immediately.
 
-## scene_06 · 3D render of a futuristic digital padlocked shield locking securely on screen.
-EN  [SUBSCRIBE 🔔]  Subscribe for tomorrow's essential tech shield — and comment PROTECTED if you turned this off... which is exactly why
+## scene_06 · 3D animation of a shiny metal padlock snapping shut over digital glowing network lines.
+EN  [SUBSCRIBE 🔔]  Protect your privacy today. Subscribe for tomorrow's hidden tech hacks, and comment DONE if you flipped the switch... which is exactly why
