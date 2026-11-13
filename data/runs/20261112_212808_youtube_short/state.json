@@ -2,7 +2,7 @@
   "run_id": "20261112_212808_youtube_short",
   "workflow": "youtube_short",
   "workflow_title": "YouTube Short",
-  "status": "running",
+  "status": "done",
   "params": {
     "languages": [
       "en"
@@ -66,7 +66,7 @@
     "llm": "gemini"
   },
   "started_at": "2026-11-12T21:28:08+00:00",
-  "ended_at": null,
+  "ended_at": "2026-11-13T09:37:23+00:00",
   "revision_rounds": 2,
   "cost": {
     "total_usd": 0.040556,
@@ -1219,7 +1219,7 @@
         "packaging"
       ],
       "checkpoint": "C",
-      "status": "waiting_for_approval",
+      "status": "done",
       "progress": 100,
       "started_at": "2026-11-12T21:35:17+00:00",
       "ended_at": "2026-11-12T21:52:40+00:00",
@@ -1510,11 +1510,11 @@
       "type": "approve",
       "step": "qa",
       "route_to": "edit",
-      "status": "pending",
+      "status": "approved",
       "options": [],
       "choice": null,
-      "comment": null,
-      "decided_at": null
+      "comment": "approved by github:jaleleddineagrebi",
+      "decided_at": "2026-11-13T09:37:23+00:00"
     }
   },
   "notifications": [
@@ -1529,12 +1529,37 @@
       "level": "action",
       "msg": "Approval needed: Approve the final videos (never uploaded without your OK)",
       "step": "qa"
+    },
+    {
+      "ts": "2026-11-13T09:37:30+00:00",
+      "level": "success",
+      "msg": "Uploaded en to 'Mind Decoded' as private: https://youtube.com/shorts/5uDo0qNiHeM",
+      "step": null
+    }
+  ],
+  "uploads": [
+    {
+      "lang": "en",
+      "id": "5uDo0qNiHeM",
+      "url": "https://youtube.com/shorts/5uDo0qNiHeM",
+      "privacy": "private",
+      "channel": "Mind Decoded",
+      "thumbnail": "set"
     }
   ],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-12T21:52:51+00:00",
-    "uploads": [],
+    "exported_at": "2026-11-13T09:37:34+00:00",
+    "uploads": [
+      {
+        "lang": "en",
+        "id": "5uDo0qNiHeM",
+        "url": "https://youtube.com/shorts/5uDo0qNiHeM",
+        "privacy": "private",
+        "channel": "Mind Decoded",
+        "thumbnail": "set"
+      }
+    ],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/43310455467",
     "issue_url": "https://github.com/jaleleddineagrebi/moderator/issues/80"
   }
