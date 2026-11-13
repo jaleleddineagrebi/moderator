@@ -1,0 +1,120 @@
+{
+  "title": "The Hidden Phone Setting Tracking Your Exact Location 24/7",
+  "scenes": [
+    {
+      "vo": {
+        "en": "Turn off this hidden Wi-Fi setting right now."
+      },
+      "on_screen": {
+        "en": "DISABLE THIS SETTING NOW"
+      },
+      "visual": {
+        "description": "Close-up of a man holding a smartphone in a dimly lit room, tapping the screen urgently.",
+        "search_terms": [
+          "smartphone dark room",
+          "man using phone",
+          "mobile screen glowing"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Even when you manually turn off Wi-Fi, your smartphone silently broadcasts background scanning signals every single second."
+      },
+      "on_screen": {
+        "en": "SECRET BACKGROUND SCANNING"
+      },
+      "visual": {
+        "description": "High-tech server room with flashing indicator lights and glowing fiber optic network cables.",
+        "search_terms": [
+          "server room lights",
+          "network data cables",
+          "router antenna flashing"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Retail stores and public venues grab these hidden signals to track your exact walking route through their aisles."
+      },
+      "on_screen": {
+        "en": "STORES TRACK YOUR MOVEMENT"
+      },
+      "visual": {
+        "description": "Tracking shot of a man's feet walking through a modern shopping venue store aisle.",
+        "search_terms": [
+          "man walking mall",
+          "feet walking store",
+          "supermarket aisle walking"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "But here is the creepy part: corporate data brokers buy this location history to map out your daily life."
+      },
+      "on_screen": {
+        "en": "HERE IS CREEPY PART"
+      },
+      "visual": {
+        "description": "Male security analyst monitoring multiple screens displaying real-time digital GPS location graphics.",
+        "search_terms": [
+          "man computer monitor",
+          "gps tracking map",
+          "data stream code"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Fix this immediately: open settings, search Wi-Fi Scanning or Location Accuracy, and flip those switches off right away."
+      },
+      "on_screen": {
+        "en": "TURN OFF WI-FI SCANNING"
+      },
+      "visual": {
+        "description": "Macro shot of a male hand tapping a smartphone screen to disable background toggles.",
+        "search_terms": [
+          "hand touching screen",
+          "phone settings menu",
+          "finger flipping switch"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for tomorrow's essential tech shield — and comment PROTECTED if you turned this off... which is exactly why"
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "3D render of a futuristic digital padlocked shield locking securely on screen.",
+        "search_terms": [
+          "digital lock closing",
+          "cyber security shield",
+          "data protection lock"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    }
+  ],
+  "idea_id": "wifi-tracking-mac-randomization-secret",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 36.0
+  }
+}

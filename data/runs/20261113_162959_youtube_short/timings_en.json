@@ -1,0 +1,538 @@
+{
+  "voice": "en-US-AriaNeural",
+  "duration": 39.210862,
+  "scenes": [
+    {
+      "scene": "scene_01",
+      "start": 0.0,
+      "end": 3.096,
+      "words": [
+        {
+          "start": 0.097,
+          "end": 0.357,
+          "text": "Turn"
+        },
+        {
+          "start": 0.368,
+          "end": 0.557,
+          "text": "off"
+        },
+        {
+          "start": 0.569,
+          "end": 0.734,
+          "text": "this"
+        },
+        {
+          "start": 0.746,
+          "end": 0.97,
+          "text": "hidden"
+        },
+        {
+          "start": 0.982,
+          "end": 1.383,
+          "text": "Wi-Fi"
+        },
+        {
+          "start": 1.394,
+          "end": 1.725,
+          "text": "setting"
+        },
+        {
+          "start": 1.736,
+          "end": 1.925,
+          "text": "right"
+        },
+        {
+          "start": 1.937,
+          "end": 2.255,
+          "text": "now"
+        }
+      ]
+    },
+    {
+      "scene": "scene_02",
+      "start": 3.186,
+      "end": 10.986,
+      "words": [
+        {
+          "start": 3.283,
+          "end": 3.578,
+          "text": "Even"
+        },
+        {
+          "start": 3.59,
+          "end": 3.719,
+          "text": "when"
+        },
+        {
+          "start": 3.731,
+          "end": 3.814,
+          "text": "you"
+        },
+        {
+          "start": 3.826,
+          "end": 4.274,
+          "text": "manually"
+        },
+        {
+          "start": 4.286,
+          "end": 4.545,
+          "text": "turn"
+        },
+        {
+          "start": 4.557,
+          "end": 4.745,
+          "text": "off"
+        },
+        {
+          "start": 4.757,
+          "end": 5.252,
+          "text": "Wi-Fi"
+        },
+        {
+          "start": 5.606,
+          "end": 5.724,
+          "text": "your"
+        },
+        {
+          "start": 5.736,
+          "end": 6.349,
+          "text": "smartphone"
+        },
+        {
+          "start": 6.361,
+          "end": 6.833,
+          "text": "silently"
+        },
+        {
+          "start": 6.845,
+          "end": 7.54,
+          "text": "broadcasts"
+        },
+        {
+          "start": 7.552,
+          "end": 8.059,
+          "text": "background"
+        },
+        {
+          "start": 8.071,
+          "end": 8.46,
+          "text": "scanning"
+        },
+        {
+          "start": 8.472,
+          "end": 9.026,
+          "text": "signals"
+        },
+        {
+          "start": 9.038,
+          "end": 9.274,
+          "text": "every"
+        },
+        {
+          "start": 9.286,
+          "end": 9.604,
+          "text": "single"
+        },
+        {
+          "start": 9.616,
+          "end": 10.146,
+          "text": "second"
+        }
+      ]
+    },
+    {
+      "scene": "scene_03",
+      "start": 11.076,
+      "end": 17.628,
+      "words": [
+        {
+          "start": 11.173,
+          "end": 11.704,
+          "text": "Retail"
+        },
+        {
+          "start": 11.716,
+          "end": 12.093,
+          "text": "stores"
+        },
+        {
+          "start": 12.105,
+          "end": 12.211,
+          "text": "and"
+        },
+        {
+          "start": 12.223,
+          "end": 12.576,
+          "text": "public"
+        },
+        {
+          "start": 12.588,
+          "end": 13.025,
+          "text": "venues"
+        },
+        {
+          "start": 13.036,
+          "end": 13.355,
+          "text": "grab"
+        },
+        {
+          "start": 13.367,
+          "end": 13.555,
+          "text": "these"
+        },
+        {
+          "start": 13.567,
+          "end": 13.826,
+          "text": "hidden"
+        },
+        {
+          "start": 13.838,
+          "end": 14.322,
+          "text": "signals"
+        },
+        {
+          "start": 14.334,
+          "end": 14.44,
+          "text": "to"
+        },
+        {
+          "start": 14.451,
+          "end": 14.77,
+          "text": "track"
+        },
+        {
+          "start": 14.782,
+          "end": 14.888,
+          "text": "your"
+        },
+        {
+          "start": 14.9,
+          "end": 15.324,
+          "text": "exact"
+        },
+        {
+          "start": 15.336,
+          "end": 15.713,
+          "text": "walking"
+        },
+        {
+          "start": 15.725,
+          "end": 15.973,
+          "text": "route"
+        },
+        {
+          "start": 15.985,
+          "end": 16.102,
+          "text": "through"
+        },
+        {
+          "start": 16.114,
+          "end": 16.303,
+          "text": "their"
+        },
+        {
+          "start": 16.315,
+          "end": 16.81,
+          "text": "aisles"
+        }
+      ]
+    },
+    {
+      "scene": "scene_04",
+      "start": 17.718,
+      "end": 24.078,
+      "words": [
+        {
+          "start": 17.815,
+          "end": 17.98,
+          "text": "But"
+        },
+        {
+          "start": 17.992,
+          "end": 18.228,
+          "text": "here"
+        },
+        {
+          "start": 18.24,
+          "end": 18.346,
+          "text": "is"
+        },
+        {
+          "start": 18.358,
+          "end": 18.452,
+          "text": "the"
+        },
+        {
+          "start": 18.464,
+          "end": 18.806,
+          "text": "creepy"
+        },
+        {
+          "start": 18.818,
+          "end": 19.16,
+          "text": "part"
+        },
+        {
+          "start": 19.384,
+          "end": 19.749,
+          "text": "corporate"
+        },
+        {
+          "start": 19.761,
+          "end": 20.032,
+          "text": "data"
+        },
+        {
+          "start": 20.044,
+          "end": 20.468,
+          "text": "brokers"
+        },
+        {
+          "start": 20.48,
+          "end": 20.622,
+          "text": "buy"
+        },
+        {
+          "start": 20.634,
+          "end": 20.834,
+          "text": "this"
+        },
+        {
+          "start": 20.846,
+          "end": 21.353,
+          "text": "location"
+        },
+        {
+          "start": 21.365,
+          "end": 21.801,
+          "text": "history"
+        },
+        {
+          "start": 21.813,
+          "end": 21.931,
+          "text": "to"
+        },
+        {
+          "start": 21.943,
+          "end": 22.214,
+          "text": "map"
+        },
+        {
+          "start": 22.226,
+          "end": 22.402,
+          "text": "out"
+        },
+        {
+          "start": 22.414,
+          "end": 22.497,
+          "text": "your"
+        },
+        {
+          "start": 22.509,
+          "end": 22.792,
+          "text": "daily"
+        },
+        {
+          "start": 22.803,
+          "end": 23.252,
+          "text": "life"
+        }
+      ]
+    },
+    {
+      "scene": "scene_05",
+      "start": 24.168,
+      "end": 32.136,
+      "words": [
+        {
+          "start": 24.265,
+          "end": 24.595,
+          "text": "Fix"
+        },
+        {
+          "start": 24.607,
+          "end": 24.772,
+          "text": "this"
+        },
+        {
+          "start": 24.784,
+          "end": 25.374,
+          "text": "immediately"
+        },
+        {
+          "start": 25.562,
+          "end": 25.904,
+          "text": "open"
+        },
+        {
+          "start": 25.916,
+          "end": 26.364,
+          "text": "settings"
+        },
+        {
+          "start": 26.553,
+          "end": 26.824,
+          "text": "search"
+        },
+        {
+          "start": 26.836,
+          "end": 27.284,
+          "text": "Wi-Fi"
+        },
+        {
+          "start": 27.296,
+          "end": 27.791,
+          "text": "Scanning"
+        },
+        {
+          "start": 27.803,
+          "end": 27.909,
+          "text": "or"
+        },
+        {
+          "start": 27.921,
+          "end": 28.428,
+          "text": "Location"
+        },
+        {
+          "start": 28.44,
+          "end": 29.112,
+          "text": "Accuracy"
+        },
+        {
+          "start": 29.43,
+          "end": 29.595,
+          "text": "and"
+        },
+        {
+          "start": 29.607,
+          "end": 29.867,
+          "text": "flip"
+        },
+        {
+          "start": 29.878,
+          "end": 30.091,
+          "text": "those"
+        },
+        {
+          "start": 30.102,
+          "end": 30.444,
+          "text": "switches"
+        },
+        {
+          "start": 30.456,
+          "end": 30.657,
+          "text": "off"
+        },
+        {
+          "start": 30.668,
+          "end": 30.845,
+          "text": "right"
+        },
+        {
+          "start": 30.857,
+          "end": 31.293,
+          "text": "away"
+        }
+      ]
+    },
+    {
+      "scene": "scene_06",
+      "start": 32.226,
+      "end": 39.21,
+      "words": [
+        {
+          "start": 32.323,
+          "end": 32.936,
+          "text": "Subscribe"
+        },
+        {
+          "start": 32.948,
+          "end": 33.101,
+          "text": "for"
+        },
+        {
+          "start": 33.113,
+          "end": 33.573,
+          "text": "tomorrow's"
+        },
+        {
+          "start": 33.585,
+          "end": 33.998,
+          "text": "essential"
+        },
+        {
+          "start": 34.01,
+          "end": 34.245,
+          "text": "tech"
+        },
+        {
+          "start": 34.257,
+          "end": 34.635,
+          "text": "shield"
+        },
+        {
+          "start": 34.906,
+          "end": 35.059,
+          "text": "and"
+        },
+        {
+          "start": 35.071,
+          "end": 35.46,
+          "text": "comment"
+        },
+        {
+          "start": 35.472,
+          "end": 35.943,
+          "text": "PROTECTED"
+        },
+        {
+          "start": 35.955,
+          "end": 36.05,
+          "text": "if"
+        },
+        {
+          "start": 36.061,
+          "end": 36.156,
+          "text": "you"
+        },
+        {
+          "start": 36.168,
+          "end": 36.45,
+          "text": "turned"
+        },
+        {
+          "start": 36.462,
+          "end": 36.639,
+          "text": "this"
+        },
+        {
+          "start": 36.651,
+          "end": 36.958,
+          "text": "off"
+        },
+        {
+          "start": 37.193,
+          "end": 37.359,
+          "text": "which"
+        },
+        {
+          "start": 37.37,
+          "end": 37.453,
+          "text": "is"
+        },
+        {
+          "start": 37.465,
+          "end": 37.948,
+          "text": "exactly"
+        },
+        {
+          "start": 37.96,
+          "end": 38.384,
+          "text": "why"
+        }
+      ]
+    }
+  ]
+}
