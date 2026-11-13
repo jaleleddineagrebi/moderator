@@ -1,6 +1,6 @@
 {
-  "passed": false,
-  "revision_round": 0,
+  "passed": true,
+  "revision_round": 1,
   "checks": [
     {
       "check": "length",
@@ -93,9 +93,9 @@
     {
       "check": "people rule",
       "lang": null,
-      "ok": false,
-      "detail": "scene_06: A woman's body and torso wearing a fuzzy pink sweater and metallic pants counting money are shown.. Replace with footage without women (a face-only close-up is the only exception).",
-      "send_to": "visuals",
+      "ok": true,
+      "detail": "no women beyond face close-ups in 8 scenes and 1 thumbnail(s)",
+      "send_to": null,
       "severity": "blocker"
     }
   ]

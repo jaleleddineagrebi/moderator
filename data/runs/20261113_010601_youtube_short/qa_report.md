@@ -1,4 +1,4 @@
-# QA report: CHANGES NEEDED
+# QA report: PASSED
 
 - ✅ **length** [en]: 45.3s (must be under 60s; target 32-50s)
 - ✅ **target length** [en]: 45.3s
@@ -11,4 +11,4 @@
 - ✅ **visual licenses**: 8 assets: pixabay
 - ✅ **visual diversity**: all scenes use distinct footage
 - ✅ **audio licenses**: music: original work, no third-party rights; sfx: original work, no third-party rights; voice: synthetic voice; no third-party performance rights
-- ❌ **people rule**: scene_06: A woman's body and torso wearing a fuzzy pink sweater and metallic pants counting money are shown.. Replace with footage without women (a face-only close-up is the only exception). → sent to visuals
+- ✅ **people rule**: no women beyond face close-ups in 8 scenes and 1 thumbnail(s)
