@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13T09:37:45+00:00",
+  "updated_at": "2026-11-13T09:38:04+00:00",
   "repo": "jaleleddineagrebi/moderator",
   "live_run_id": "20261113_093647_youtube_short",
   "runs": [
@@ -98,13 +98,13 @@
       "workflow": "youtube_long",
       "workflow_title": "YouTube Deep-Dive (16:9 Long-Form)",
       "topic": "",
-      "status": "running",
+      "status": "done",
       "progress": 100,
       "started_at": "2026-11-11T23:08:38+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-13T09:37:52+00:00",
       "cost_usd": 0.0606,
       "is_live": false,
-      "has_uploads": false,
+      "has_uploads": true,
       "issue_url": "https://github.com/jaleleddineagrebi/moderator/issues/75",
       "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/43117346181"
     },
