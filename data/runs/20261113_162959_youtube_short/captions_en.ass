@@ -1,0 +1,55 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:03.14,Headline,,0,0,0,,{\fad(150,150)}DISABLE THIS SETTING NOW
+Dialogue: 1,0:00:03.24,0:00:11.03,Headline,,0,0,0,,{\fad(150,150)}SECRET BACKGROUND SCANNING
+Dialogue: 1,0:00:11.13,0:00:17.67,Headline,,0,0,0,,{\fad(150,150)}STORES TRACK YOUR MOVEMENT
+Dialogue: 1,0:00:17.77,0:00:24.12,Headline,,0,0,0,,{\fad(150,150)}HERE IS CREEPY PART
+Dialogue: 1,0:00:24.22,0:00:32.18,Headline,,0,0,0,,{\fad(150,150)}TURN OFF WI-FI SCANNING
+Dialogue: 1,0:00:32.28,0:00:39.86,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 0,0:00:00.10,0:00:00.73,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Turn{\c&H00FFFFFF&} off this
+Dialogue: 0,0:00:00.75,0:00:01.73,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}hidden Wi-Fi {\c&H0000E5FF&}setting{\c&H00FFFFFF&}
+Dialogue: 0,0:00:01.74,0:00:02.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}right{\c&H00FFFFFF&} now
+Dialogue: 0,0:00:03.28,0:00:03.81,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Even{\c&H00FFFFFF&} when you
+Dialogue: 0,0:00:03.83,0:00:04.75,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}manually{\c&H00FFFFFF&} turn off
+Dialogue: 0,0:00:04.76,0:00:05.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Wi-Fi
+Dialogue: 0,0:00:05.61,0:00:06.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}smartphone{\c&H00FFFFFF&} silently
+Dialogue: 0,0:00:06.84,0:00:08.46,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}broadcasts{\c&H00FFFFFF&} background scanning
+Dialogue: 0,0:00:08.47,0:00:09.60,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}signals{\c&H00FFFFFF&} every single
+Dialogue: 0,0:00:09.62,0:00:10.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}second
+Dialogue: 0,0:00:11.17,0:00:12.21,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Retail{\c&H00FFFFFF&} stores and
+Dialogue: 0,0:00:12.22,0:00:13.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}public{\c&H00FFFFFF&} venues grab
+Dialogue: 0,0:00:13.37,0:00:14.32,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}these hidden {\c&H0000E5FF&}signals{\c&H00FFFFFF&}
+Dialogue: 0,0:00:14.33,0:00:14.89,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to {\c&H0000E5FF&}track{\c&H00FFFFFF&} your
+Dialogue: 0,0:00:14.90,0:00:15.97,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}exact {\c&H0000E5FF&}walking{\c&H00FFFFFF&} route
+Dialogue: 0,0:00:15.98,0:00:16.81,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}through{\c&H00FFFFFF&} their aisles
+Dialogue: 0,0:00:17.82,0:00:18.35,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}But {\c&H0000E5FF&}here{\c&H00FFFFFF&} is
+Dialogue: 0,0:00:18.36,0:00:19.16,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}creepy{\c&H00FFFFFF&} part
+Dialogue: 0,0:00:19.38,0:00:20.47,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}corporate{\c&H00FFFFFF&} data brokers
+Dialogue: 0,0:00:20.48,0:00:21.35,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}buy this {\c&H0000E5FF&}location{\c&H00FFFFFF&}
+Dialogue: 0,0:00:21.36,0:00:22.21,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}history{\c&H00FFFFFF&} to map
+Dialogue: 0,0:00:22.23,0:00:22.79,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}out your {\c&H0000E5FF&}daily{\c&H00FFFFFF&}
+Dialogue: 0,0:00:22.80,0:00:23.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}life
+Dialogue: 0,0:00:24.27,0:00:25.37,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Fix this {\c&H0000E5FF&}immediately{\c&H00FFFFFF&}
+Dialogue: 0,0:00:25.56,0:00:26.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}open {\c&H0000E5FF&}settings{\c&H00FFFFFF&} search
+Dialogue: 0,0:00:26.84,0:00:27.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Wi-Fi {\c&H0000E5FF&}Scanning{\c&H00FFFFFF&} or
+Dialogue: 0,0:00:27.92,0:00:29.59,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Location{\c&H00FFFFFF&} Accuracy and
+Dialogue: 0,0:00:29.61,0:00:30.44,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}flip those {\c&H0000E5FF&}switches{\c&H00FFFFFF&}
+Dialogue: 0,0:00:30.46,0:00:31.29,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}off {\c&H0000E5FF&}right{\c&H00FFFFFF&} away
+Dialogue: 0,0:00:32.32,0:00:33.57,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Subscribe for {\c&H0000E5FF&}tomorrow's{\c&H00FFFFFF&}
+Dialogue: 0,0:00:33.59,0:00:34.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}essential{\c&H00FFFFFF&} tech shield
+Dialogue: 0,0:00:34.91,0:00:35.94,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and comment {\c&H0000E5FF&}PROTECTED{\c&H00FFFFFF&}
+Dialogue: 0,0:00:35.95,0:00:36.45,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}if you {\c&H0000E5FF&}turned{\c&H00FFFFFF&}
+Dialogue: 0,0:00:36.46,0:00:37.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}this off {\c&H0000E5FF&}which{\c&H00FFFFFF&}
+Dialogue: 0,0:00:37.37,0:00:38.38,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is {\c&H0000E5FF&}exactly{\c&H00FFFFFF&} why
