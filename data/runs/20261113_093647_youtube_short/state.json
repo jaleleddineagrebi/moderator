@@ -276,12 +276,12 @@
       "checkpoint": "A",
       "status": "running",
       "progress": 25,
-      "started_at": "2026-11-13T09:36:48+00:00",
+      "started_at": "2026-11-13T09:38:38+00:00",
       "ended_at": null,
-      "attempt": 1,
-      "retries": 0,
+      "attempt": 2,
+      "retries": 1,
       "max_retries": 2,
-      "strategy": "web_and_youtube",
+      "strategy": "web_only",
       "inputs": {
         "niche": "Mind Hacks, AI Secrets, Bizarre Body Science & Hidden Power Dynamics — Focus Pillar: Interactive Brain Tests, Dark Psychology & Micro-Behaviors",
         "topic": null,
@@ -330,9 +330,41 @@
           "ts": "2026-11-13T09:38:05+00:00",
           "level": "warning",
           "msg": "'gemini-3.8-flash' returned 503; retrying once in 2s"
+        },
+        {
+          "ts": "2026-11-13T09:38:37+00:00",
+          "level": "error",
+          "msg": "ReadTimeout: "
+        },
+        {
+          "ts": "2026-11-13T09:38:38+00:00",
+          "level": "info",
+          "msg": "Attempt 2/3, strategy 'web_only'"
+        },
+        {
+          "ts": "2026-11-13T09:38:38+00:00",
+          "level": "info",
+          "msg": "Rotating viral pillar for this run: Interactive Brain Tests, Dark Psychology & Micro-Behaviors (mind_hacks)"
+        },
+        {
+          "ts": "2026-11-13T09:38:38+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.8-flash, high complexity, thinking high)"
+        },
+        {
+          "ts": "2026-11-13T09:38:43+00:00",
+          "level": "warning",
+          "msg": "'gemini-3.8-flash' returned 503; retrying once in 2s"
         }
       ],
-      "errors": [],
+      "errors": [
+        {
+          "ts": "2026-11-13T09:38:37+00:00",
+          "attempt": 1,
+          "strategy": "web_and_youtube",
+          "error": "ReadTimeout: "
+        }
+      ],
       "feedback": [],
       "cost_usd": 0.0
     },
@@ -510,7 +542,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-13T09:38:13+00:00",
+    "exported_at": "2026-11-13T09:38:46+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/43402628783"
   }
