@@ -805,6 +805,16 @@
           "ts": "2026-11-13T16:32:42+00:00",
           "level": "info",
           "msg": "Asking Gemini (gemini-3.8-flash, medium complexity, thinking low)"
+        },
+        {
+          "ts": "2026-11-13T16:33:12+00:00",
+          "level": "warning",
+          "msg": "Gemini connection timed out on default route; retrying over IPv4"
+        },
+        {
+          "ts": "2026-11-13T16:33:16+00:00",
+          "level": "warning",
+          "msg": "'gemini-3.6-flash' returned 503; retrying once in 2s"
         }
       ],
       "errors": [],
@@ -866,7 +876,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-13T16:33:00+00:00",
+    "exported_at": "2026-11-13T16:33:17+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/43463207800"
   }
