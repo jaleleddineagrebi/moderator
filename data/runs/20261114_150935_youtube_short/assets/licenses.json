@@ -1,0 +1,72 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-186109/",
+    "author": "indraprojects",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man typing keyboard",
+    "description": "Macro close-up of a man's fingers hitting mechanical keyboard keys rapidly in a dark room with neon lighting."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-7243/",
+    "author": "2427999",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "digital timer countdown",
+    "description": "High-speed digital timer counting milliseconds rapidly against a black background with glowing data streams."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-51803/",
+    "author": "davidargeta",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "digital fingerprint scan",
+    "description": "A digital fingerprint scan transforming into a complex web of code and connecting lines."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-26533/",
+    "author": "ninosouza",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man staring screen",
+    "description": "A man in a hoodie looking intensely at a glowing computer monitor in a dark room."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-227113/",
+    "author": "kurt_BID",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "loading percentage bar",
+    "description": "A data visualization showing a percentage counter climbing rapidly to 99% with green glowing text."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-156928/",
+    "author": "Matthias_Groeneveld",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "server room walking",
+    "description": "A shadowy male silhouette walking through a high-tech server room with blinking blue lights."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-735/",
+    "author": "elchao",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "scrolling smartphone hand",
+    "description": "A hand holding a smartphone scrolling quickly through a social media feed."
+  }
+]

@@ -1,0 +1,550 @@
+{
+  "voice": "en-US-AriaNeural",
+  "duration": 38.436054,
+  "scenes": [
+    {
+      "scene": "scene_01",
+      "start": 0.0,
+      "end": 2.496,
+      "words": [
+        {
+          "start": 0.097,
+          "end": 0.262,
+          "text": "You"
+        },
+        {
+          "start": 0.274,
+          "end": 0.38,
+          "text": "are"
+        },
+        {
+          "start": 0.392,
+          "end": 0.781,
+          "text": "tracked"
+        },
+        {
+          "start": 0.793,
+          "end": 0.934,
+          "text": "by"
+        },
+        {
+          "start": 0.946,
+          "end": 1.052,
+          "text": "how"
+        },
+        {
+          "start": 1.064,
+          "end": 1.217,
+          "text": "you"
+        },
+        {
+          "start": 1.229,
+          "end": 1.677,
+          "text": "type"
+        }
+      ]
+    },
+    {
+      "scene": "scene_02",
+      "start": 2.586,
+      "end": 10.866,
+      "words": [
+        {
+          "start": 2.683,
+          "end": 2.907,
+          "text": "It’s"
+        },
+        {
+          "start": 2.919,
+          "end": 3.226,
+          "text": "called"
+        },
+        {
+          "start": 3.237,
+          "end": 3.744,
+          "text": "keystroke"
+        },
+        {
+          "start": 3.756,
+          "end": 4.487,
+          "text": "dynamics"
+        },
+        {
+          "start": 5.298,
+          "end": 5.628,
+          "text": "AI"
+        },
+        {
+          "start": 5.64,
+          "end": 6.065,
+          "text": "measures"
+        },
+        {
+          "start": 6.077,
+          "end": 6.147,
+          "text": "the"
+        },
+        {
+          "start": 6.159,
+          "end": 6.631,
+          "text": "exact"
+        },
+        {
+          "start": 6.643,
+          "end": 7.232,
+          "text": "millisecond"
+        },
+        {
+          "start": 7.244,
+          "end": 7.515,
+          "text": "gap"
+        },
+        {
+          "start": 7.527,
+          "end": 7.952,
+          "text": "between"
+        },
+        {
+          "start": 7.963,
+          "end": 8.199,
+          "text": "every"
+        },
+        {
+          "start": 8.211,
+          "end": 8.541,
+          "text": "single"
+        },
+        {
+          "start": 8.553,
+          "end": 8.801,
+          "text": "letter"
+        },
+        {
+          "start": 8.812,
+          "end": 8.907,
+          "text": "you"
+        },
+        {
+          "start": 8.919,
+          "end": 9.237,
+          "text": "press"
+        },
+        {
+          "start": 9.249,
+          "end": 9.355,
+          "text": "on"
+        },
+        {
+          "start": 9.367,
+          "end": 9.461,
+          "text": "your"
+        },
+        {
+          "start": 9.473,
+          "end": 10.027,
+          "text": "device"
+        }
+      ]
+    },
+    {
+      "scene": "scene_03",
+      "start": 10.956,
+      "end": 17.316,
+      "words": [
+        {
+          "start": 11.053,
+          "end": 11.336,
+          "text": "Even"
+        },
+        {
+          "start": 11.348,
+          "end": 11.454,
+          "text": "if"
+        },
+        {
+          "start": 11.466,
+          "end": 11.584,
+          "text": "you"
+        },
+        {
+          "start": 11.596,
+          "end": 11.714,
+          "text": "are"
+        },
+        {
+          "start": 11.725,
+          "end": 12.28,
+          "text": "anonymous"
+        },
+        {
+          "start": 12.291,
+          "end": 12.456,
+          "text": "or"
+        },
+        {
+          "start": 12.468,
+          "end": 12.798,
+          "text": "using"
+        },
+        {
+          "start": 12.81,
+          "end": 12.869,
+          "text": "a"
+        },
+        {
+          "start": 12.881,
+          "end": 13.471,
+          "text": "VPN"
+        },
+        {
+          "start": 13.789,
+          "end": 13.907,
+          "text": "your"
+        },
+        {
+          "start": 13.919,
+          "end": 14.261,
+          "text": "unique"
+        },
+        {
+          "start": 14.273,
+          "end": 14.579,
+          "text": "rhythm"
+        },
+        {
+          "start": 14.591,
+          "end": 14.709,
+          "text": "is"
+        },
+        {
+          "start": 14.721,
+          "end": 14.827,
+          "text": "as"
+        },
+        {
+          "start": 14.839,
+          "end": 15.322,
+          "text": "distinct"
+        },
+        {
+          "start": 15.334,
+          "end": 15.44,
+          "text": "as"
+        },
+        {
+          "start": 15.452,
+          "end": 15.523,
+          "text": "a"
+        },
+        {
+          "start": 15.534,
+          "end": 15.959,
+          "text": "DNA"
+        },
+        {
+          "start": 15.971,
+          "end": 16.501,
+          "text": "sample"
+        }
+      ]
+    },
+    {
+      "scene": "scene_04",
+      "start": 17.406,
+      "end": 19.758,
+      "words": [
+        {
+          "start": 17.503,
+          "end": 17.668,
+          "text": "But"
+        },
+        {
+          "start": 17.68,
+          "end": 17.916,
+          "text": "here"
+        },
+        {
+          "start": 17.928,
+          "end": 18.034,
+          "text": "is"
+        },
+        {
+          "start": 18.046,
+          "end": 18.14,
+          "text": "the"
+        },
+        {
+          "start": 18.152,
+          "end": 18.482,
+          "text": "creepy"
+        },
+        {
+          "start": 18.494,
+          "end": 18.942,
+          "text": "part"
+        }
+      ]
+    },
+    {
+      "scene": "scene_05",
+      "start": 19.848,
+      "end": 27.048,
+      "words": [
+        {
+          "start": 19.945,
+          "end": 20.358,
+          "text": "AI"
+        },
+        {
+          "start": 20.37,
+          "end": 21.065,
+          "text": "identifies"
+        },
+        {
+          "start": 21.077,
+          "end": 21.172,
+          "text": "you"
+        },
+        {
+          "start": 21.183,
+          "end": 21.325,
+          "text": "with"
+        },
+        {
+          "start": 21.337,
+          "end": 21.914,
+          "text": "ninety-nine"
+        },
+        {
+          "start": 21.926,
+          "end": 22.28,
+          "text": "percent"
+        },
+        {
+          "start": 22.292,
+          "end": 22.94,
+          "text": "accuracy"
+        },
+        {
+          "start": 22.952,
+          "end": 23.235,
+          "text": "just"
+        },
+        {
+          "start": 23.247,
+          "end": 23.353,
+          "text": "by"
+        },
+        {
+          "start": 23.365,
+          "end": 23.919,
+          "text": "monitoring"
+        },
+        {
+          "start": 23.931,
+          "end": 24.025,
+          "text": "the"
+        },
+        {
+          "start": 24.037,
+          "end": 24.226,
+          "text": "beat"
+        },
+        {
+          "start": 24.238,
+          "end": 24.297,
+          "text": "of"
+        },
+        {
+          "start": 24.308,
+          "end": 24.426,
+          "text": "your"
+        },
+        {
+          "start": 24.438,
+          "end": 24.863,
+          "text": "fingers"
+        },
+        {
+          "start": 24.874,
+          "end": 24.992,
+          "text": "on"
+        },
+        {
+          "start": 25.004,
+          "end": 25.051,
+          "text": "a"
+        },
+        {
+          "start": 25.063,
+          "end": 25.499,
+          "text": "screen"
+        },
+        {
+          "start": 25.511,
+          "end": 25.641,
+          "text": "or"
+        },
+        {
+          "start": 25.653,
+          "end": 26.231,
+          "text": "keyboard"
+        }
+      ]
+    },
+    {
+      "scene": "scene_06",
+      "start": 27.138,
+      "end": 33.714,
+      "words": [
+        {
+          "start": 27.235,
+          "end": 27.601,
+          "text": "Banks"
+        },
+        {
+          "start": 27.613,
+          "end": 27.719,
+          "text": "and"
+        },
+        {
+          "start": 27.73,
+          "end": 28.249,
+          "text": "security"
+        },
+        {
+          "start": 28.261,
+          "end": 28.65,
+          "text": "firms"
+        },
+        {
+          "start": 28.662,
+          "end": 29.063,
+          "text": "already"
+        },
+        {
+          "start": 29.075,
+          "end": 29.322,
+          "text": "use"
+        },
+        {
+          "start": 29.334,
+          "end": 29.558,
+          "text": "this"
+        },
+        {
+          "start": 29.57,
+          "end": 29.688,
+          "text": "to"
+        },
+        {
+          "start": 29.7,
+          "end": 30.219,
+          "text": "fingerprint"
+        },
+        {
+          "start": 30.23,
+          "end": 30.348,
+          "text": "your"
+        },
+        {
+          "start": 30.36,
+          "end": 30.926,
+          "text": "identity"
+        },
+        {
+          "start": 30.938,
+          "end": 31.28,
+          "text": "without"
+        },
+        {
+          "start": 31.292,
+          "end": 31.398,
+          "text": "you"
+        },
+        {
+          "start": 31.41,
+          "end": 31.693,
+          "text": "ever"
+        },
+        {
+          "start": 31.704,
+          "end": 32.223,
+          "text": "realizing"
+        },
+        {
+          "start": 32.235,
+          "end": 32.306,
+          "text": "it"
+        },
+        {
+          "start": 32.318,
+          "end": 32.872,
+          "text": "happened"
+        }
+      ]
+    },
+    {
+      "scene": "scene_07",
+      "start": 33.804,
+      "end": 38.436,
+      "words": [
+        {
+          "start": 33.901,
+          "end": 34.29,
+          "text": "Comment"
+        },
+        {
+          "start": 34.302,
+          "end": 34.408,
+          "text": "your"
+        },
+        {
+          "start": 34.42,
+          "end": 34.809,
+          "text": "typing"
+        },
+        {
+          "start": 34.821,
+          "end": 35.151,
+          "text": "speed"
+        },
+        {
+          "start": 35.163,
+          "end": 35.281,
+          "text": "and"
+        },
+        {
+          "start": 35.293,
+          "end": 35.823,
+          "text": "subscribe"
+        },
+        {
+          "start": 35.835,
+          "end": 35.965,
+          "text": "for"
+        },
+        {
+          "start": 35.977,
+          "end": 36.177,
+          "text": "more"
+        },
+        {
+          "start": 36.189,
+          "end": 36.554,
+          "text": "digital"
+        },
+        {
+          "start": 36.566,
+          "end": 37.014,
+          "text": "secrets"
+        },
+        {
+          "start": 37.026,
+          "end": 37.616,
+          "text": "because"
+        }
+      ]
+    }
+  ]
+}
