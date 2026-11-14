@@ -17,4 +17,4 @@ EN  [THE BRAIN MAGNET]  But here’s the creepy part: your brain uses that first
 EN  [THE MONEY TRAP]  Marketing pros show a two-thousand-dollar tag first so that one hundred looks like a total steal.
 
 ## scene_06 · Close-up of a thumb tapping a smartphone screen to click a notification bell icon.
-EN  [SUBSCRIBE 🔔]  Subscribe for tomorrow's mind hack—and comment WORKED if I got you. You’re being manipulated by how...
+EN  [SUBSCRIBE 🔔]  Subscribe for tomorrow's mind hack—and comment WORKED if I got you. You’re being manipulated right now.
