@@ -1,0 +1,55 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:02.58,Headline,,0,0,0,,{\fad(150,150)}STARE TO WIN
+Dialogue: 1,0:00:02.68,0:00:07.88,Headline,,0,0,0,,{\fad(150,150)}EYE CONTACT BONDING
+Dialogue: 1,0:00:07.98,0:00:13.16,Headline,,0,0,0,,{\fad(150,150)}SHIFT YOUR FOCUS
+Dialogue: 1,0:00:13.26,0:00:15.60,Headline,,0,0,0,,{\fad(150,150)}THE CREEPY PART
+Dialogue: 1,0:00:15.70,0:00:21.09,Headline,,0,0,0,,{\fad(150,150)}JUDGMENT SIGNALED
+Dialogue: 1,0:00:21.19,0:00:26.43,Headline,,0,0,0,,{\fad(150,150)}THEY FEEL EXPOSED
+Dialogue: 1,0:00:26.53,0:00:31.44,Headline,,0,0,0,,{\fad(150,150)}TOTAL CONTROL
+Dialogue: 1,0:00:31.54,0:00:37.38,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 0,0:00:00.10,0:00:00.73,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Stare{\c&H00FFFFFF&} at their
+Dialogue: 0,0:00:00.75,0:00:01.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}forehead{\c&H00FFFFFF&} to win
+Dialogue: 0,0:00:02.73,0:00:03.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Normal eye {\c&H0000E5FF&}contact{\c&H00FFFFFF&}
+Dialogue: 0,0:00:03.84,0:00:04.64,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}creates{\c&H00FFFFFF&} a social
+Dialogue: 0,0:00:04.65,0:00:05.71,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}bond {\c&H0000E5FF&}making{\c&H00FFFFFF&} you
+Dialogue: 0,0:00:05.73,0:00:06.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}both{\c&H00FFFFFF&} feel like
+Dialogue: 0,0:00:06.45,0:00:07.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}equals
+Dialogue: 0,0:00:08.03,0:00:08.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}But to {\c&H0000E5FF&}project{\c&H00FFFFFF&}
+Dialogue: 0,0:00:08.86,0:00:10.40,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}absolute {\c&H0000E5FF&}dominance{\c&H00FFFFFF&} move
+Dialogue: 0,0:00:10.41,0:00:10.95,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}gaze{\c&H00FFFFFF&} to
+Dialogue: 0,0:00:10.97,0:00:11.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}center{\c&H00FFFFFF&} of
+Dialogue: 0,0:00:11.55,0:00:12.30,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}their {\c&H0000E5FF&}forehead{\c&H00FFFFFF&}
+Dialogue: 0,0:00:13.30,0:00:13.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}But {\c&H0000E5FF&}here{\c&H00FFFFFF&} is
+Dialogue: 0,0:00:13.85,0:00:14.74,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}creepy{\c&H00FFFFFF&} part
+Dialogue: 0,0:00:15.74,0:00:16.76,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}This stare {\c&H0000E5FF&}triggers{\c&H00FFFFFF&}
+Dialogue: 0,0:00:16.77,0:00:17.71,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}their {\c&H0000E5FF&}primitive{\c&H00FFFFFF&} brain
+Dialogue: 0,0:00:18.07,0:00:18.80,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}signaling{\c&H00FFFFFF&} that you
+Dialogue: 0,0:00:18.81,0:00:19.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}are {\c&H0000E5FF&}judging{\c&H00FFFFFF&} their
+Dialogue: 0,0:00:19.53,0:00:20.23,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}every{\c&H00FFFFFF&} move
+Dialogue: 0,0:00:21.23,0:00:21.86,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}They will {\c&H0000E5FF&}start{\c&H00FFFFFF&}
+Dialogue: 0,0:00:21.87,0:00:22.87,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}stuttering{\c&H00FFFFFF&} or looking
+Dialogue: 0,0:00:22.89,0:00:23.69,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}down {\c&H0000E5FF&}because{\c&H00FFFFFF&} you’ve
+Dialogue: 0,0:00:23.70,0:00:24.98,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}stolen their {\c&H0000E5FF&}psychological{\c&H00FFFFFF&}
+Dialogue: 0,0:00:25.00,0:00:25.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}comfort
+Dialogue: 0,0:00:26.58,0:00:27.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}This one {\c&H0000E5FF&}micro-movement{\c&H00FFFFFF&}
+Dialogue: 0,0:00:27.83,0:00:28.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}shifts{\c&H00FFFFFF&} the power
+Dialogue: 0,0:00:28.64,0:00:29.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}dynamic {\c&H0000E5FF&}instantly{\c&H00FFFFFF&} into
+Dialogue: 0,0:00:29.89,0:00:30.57,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}hands{\c&H00FFFFFF&}
+Dialogue: 0,0:00:31.59,0:00:32.85,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Subscribe for {\c&H0000E5FF&}tomorrow's{\c&H00FFFFFF&}
+Dialogue: 0,0:00:32.87,0:00:33.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}brain{\c&H00FFFFFF&} hack and
+Dialogue: 0,0:00:33.55,0:00:34.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} POWER if
+Dialogue: 0,0:00:34.35,0:00:35.23,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}this {\c&H0000E5FF&}worked{\c&H00FFFFFF&} all
+Dialogue: 0,0:00:35.25,0:00:35.90,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}because{\c&H00FFFFFF&} you

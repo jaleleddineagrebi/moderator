@@ -1,0 +1,82 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-359535/",
+    "author": "Kanenori",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "intense male stare",
+    "description": "An intense extreme close-up of a man's brow and eyes with a sharp, focused expression."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-40797/",
+    "author": "yogobunny",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "men shaking hands",
+    "description": "Two men in business attire shaking hands and talking in a brightly lit modern office."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-233400/",
+    "author": "Yasir1120",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "forehead skin texture",
+    "description": "A digital target or bullseye graphic overlaying a macro shot of a human forehead."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-204565/",
+    "author": "MustaKor",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hourglass sand falling",
+    "description": "A dark, moody shot of an hourglass with sand falling quickly against a black background."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-19260/",
+    "author": "GreenCardShow",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "panther eyes glowing",
+    "description": "A wild panther moving slowly through dark grass, focusing its eyes forward."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-11284/",
+    "author": "GreenCardShow",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man adjusting tie",
+    "description": "A man in a suit looking visibly uncomfortable, adjusting his tie and shifting his eyes away."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-89986/",
+    "author": "AndyOlsha",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "chess king falling",
+    "description": "A hand moving a black king chess piece forward on a board to topple the white king."
+  },
+  {
+    "scene": "scene_08",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-205519/",
+    "author": "conte_public",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "finger tapping screen",
+    "description": "A close-up of a thumb pressing a glowing digital button on a smartphone screen."
+  }
+]
