@@ -25,7 +25,7 @@ import { MatIconModule } from '@angular/material/icon';
         <div class="container footer-content">
           <div class="footer-brand">
             <div class="brand-row">
-              <mat-icon class="footer-icon">psychology</mat-icon>
+              <mat-icon class="footer-icon" aria-hidden="true">psychology</mat-icon>
               <span class="footer-title">MIND DECODED</span>
             </div>
             <p class="footer-desc">
@@ -33,7 +33,7 @@ import { MatIconModule } from '@angular/material/icon';
             </p>
           </div>
 
-          <div class="footer-links">
+          <nav class="footer-links" aria-label="Footer Navigation">
             <span class="footer-heading">Platform & Syndication</span>
             <a routerLink="/">Daily Insights</a>
             <a routerLink="/shorts">YouTube Shorts</a>
@@ -41,10 +41,12 @@ import { MatIconModule } from '@angular/material/icon';
             <a routerLink="/admin">Admin Dashboard</a>
             <a href="/rss.xml" target="_blank" rel="noopener">RSS Feed</a>
             <a href="/sitemap.xml" target="_blank" rel="noopener">XML Sitemap</a>
+            <a href="/llms.txt" target="_blank" rel="noopener">AI Index (llms.txt)</a>
+            <a href="/.well-known/ard.json" target="_blank" rel="noopener">Agent Manifest (ARD)</a>
             <a href="https://www.youtube.com/channel/UCzjz2ArvjE4RgR_2k2o53mg" target="_blank" rel="noopener noreferrer">
               YouTube Channel ↗
             </a>
-          </div>
+          </nav>
 
           <div class="footer-bottom">
             <p>© 2026 Mind Decoded. Powered by Mind decoder Jalel.</p>

@@ -1,0 +1,19 @@
+# Mind Decoded — Psychology, Cognitive Biases & AI Research Portal
+
+> Daily scientifically grounded articles and companion YouTube Shorts decoding human psychology, cognitive biases, dark psychology defense, mental models, neuroscience, and artificial intelligence.
+
+Mind Decoded bridges behavioral science and machine intelligence. AI agents, search crawlers, and research assistants are welcome to index and cite our publications with attribution links.
+
+## Core Portal Sections
+
+- [Daily Insights Feed](https://mindcoder.com/): Main research feed featuring daily articles on cognitive biases, neuroscience, and human-AI teaming.
+- [YouTube Shorts Library](https://mindcoder.com/shorts): Curated 60-second vertical video breakdowns paired with our research articles.
+- [Contact & Research Collaboration](https://mindcoder.com/contact): Suggest a psychological paradox, request a topic, or inquire about collaboration.
+- [Official YouTube Channel](https://www.youtube.com/channel/UCzjz2ArvjE4RgR_2k2o53mg): Watch daily Shorts and widescreen deep-dive documentaries.
+
+## Machine-Readable Feeds & Discovery
+
+- [ARD Manifest](https://mindcoder.com/.well-known/ard.json): Agentic Resource Discovery (ARD) JSON-LD manifest.
+- [Public Posts JSON API](https://mindcoder.com/api/posts): Structured JSON endpoint returning published articles and companion videos.
+- [RSS 2.0 Feed](https://mindcoder.com/rss.xml): XML syndication feed for readers and aggregators.
+- [XML Sitemap](https://mindcoder.com/sitemap.xml): Complete sitemap of all published URLs and images.

@@ -31,6 +31,8 @@
             "assets": [
               "src/favicon.ico",
               "src/favicon.svg",
+              "src/llms.txt",
+              "src/.well-known",
               "src/assets"
             ],
             "styles": [

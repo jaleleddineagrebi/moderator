@@ -13,8 +13,12 @@ import { AnalyticsService } from '../../services/analytics.service';
   imports: [CommonModule, RouterModule, MatCardModule, MatButtonModule, MatIconModule],
   template: `
     <mat-card class="feed-post-card mat-elevation-z2 hover-elevation">
-      <!-- Cover Image with Aspect Ratio -->
-      <div class="card-image-wrapper" [routerLink]="['/posts', post.slug]">
+      <!-- Cover Image Link with Aspect Ratio -->
+      <a
+        class="card-image-wrapper"
+        [routerLink]="['/posts', post.slug]"
+        [attr.aria-label]="'Read article: ' + post.title"
+      >
         <img
           *ngIf="!imageFailed && coverUrl; else fallbackVisual"
           mat-card-image
@@ -26,34 +30,34 @@ import { AnalyticsService } from '../../services/analytics.service';
         />
         <ng-template #fallbackVisual>
           <div class="fallback-cover">
-            <mat-icon class="fallback-icon">psychology</mat-icon>
+            <mat-icon class="fallback-icon" aria-hidden="true">psychology</mat-icon>
             <span class="fallback-tag">Cognitive Science & AI</span>
           </div>
         </ng-template>
-        <div class="image-overlay-chips">
+        <div class="image-overlay-chips" aria-hidden="true">
           <span *ngFor="let tag of (post.tags || []).slice(0, 2)" class="tag-chip">#{{ tag }}</span>
         </div>
-      </div>
+      </a>
 
       <mat-card-content class="card-content">
         <div class="card-meta">
           <div class="meta-left">
             <span class="meta-date">{{ post.publishedAt | date:'mediumDate' }}</span>
-            <span class="meta-dot">•</span>
+            <span class="meta-dot" aria-hidden="true">•</span>
             <span class="meta-read-time">
-              <mat-icon class="time-icon">schedule</mat-icon>
+              <mat-icon class="time-icon" aria-hidden="true">schedule</mat-icon>
               <span>{{ estimatedReadingTime }} min read</span>
             </span>
           </div>
           <a *ngIf="hasShort" class="short-indicator" [routerLink]="['/posts', post.slug]" fragment="short"
-             title="Watch the companion YouTube Short">
-            <mat-icon class="yt-icon">smart_display</mat-icon>
+             [attr.aria-label]="'Watch companion YouTube Short for ' + post.title">
+            <mat-icon class="yt-icon" aria-hidden="true">smart_display</mat-icon>
             <span>Watch Short</span>
           </a>
         </div>
 
-        <h2 class="post-title" [routerLink]="['/posts', post.slug]">
-          {{ post.title }}
+        <h2 class="post-title">
+          <a [routerLink]="['/posts', post.slug]" class="post-title-link">{{ post.title }}</a>
         </h2>
 
         <p class="post-hook">
@@ -64,20 +68,20 @@ import { AnalyticsService } from '../../services/analytics.service';
       <mat-card-actions class="card-footer">
         <a mat-button color="primary" [routerLink]="['/posts', post.slug]" class="read-btn">
           <span>Read Reflection</span>
-          <mat-icon>arrow_forward</mat-icon>
+          <mat-icon aria-hidden="true">arrow_forward</mat-icon>
         </a>
 
-        <div class="stats-group">
-          <span class="stat-item" title="Article Views">
-            <mat-icon class="stat-icon">visibility</mat-icon>
+        <div class="stats-group" role="group" aria-label="Article engagement metrics">
+          <span class="stat-item" [attr.aria-label]="postViews + ' views'">
+            <mat-icon class="stat-icon" aria-hidden="true">visibility</mat-icon>
             <span>{{ postViews }}</span>
           </span>
-          <span class="stat-item" *ngIf="post._count" title="Reader Reactions">
-            <mat-icon class="stat-icon">favorite_border</mat-icon>
+          <span class="stat-item" *ngIf="post._count" [attr.aria-label]="(post._count.reactions || 0) + ' reactions'">
+            <mat-icon class="stat-icon" aria-hidden="true">favorite_border</mat-icon>
             <span>{{ post._count.reactions || 0 }}</span>
           </span>
-          <span class="stat-item" *ngIf="post._count" title="Comments">
-            <mat-icon class="stat-icon">chat_bubble_outline</mat-icon>
+          <span class="stat-item" *ngIf="post._count" [attr.aria-label]="(post._count.comments || 0) + ' comments'">
+            <mat-icon class="stat-icon" aria-hidden="true">chat_bubble_outline</mat-icon>
             <span>{{ post._count.comments || 0 }}</span>
           </span>
         </div>
@@ -102,12 +106,14 @@ import { AnalyticsService } from '../../services/analytics.service';
     }
 
     .card-image-wrapper {
+      display: block;
       position: relative;
       width: 100%;
       aspect-ratio: 16 / 9;
       cursor: pointer;
       overflow: hidden;
       background-color: #0f172a;
+      text-decoration: none;
     }
 
     .cover-img {
@@ -248,10 +254,15 @@ import { AnalyticsService } from '../../services/analytics.service';
       color: #0f172a;
       line-height: 1.35;
       margin: 0 0 10px 0;
-      cursor: pointer;
 
-      &:hover {
-        color: #2563eb;
+      .post-title-link {
+        color: inherit;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover {
+          color: #2563eb;
+        }
       }
     }
 

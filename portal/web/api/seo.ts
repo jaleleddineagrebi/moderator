@@ -41,6 +41,69 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     );
   }
 
+  // 1b. /.well-known/ard.json (Agentic Resource Discovery Manifest v0.91)
+  if (type === "ard") {
+    const nowIso = new Date().toISOString();
+    const ardManifest = {
+      "@context": "https://agenticresourcediscovery.org/context/v1",
+      entries: [
+        {
+          identifier: "urn:air:mindcoder.com:docs:llms",
+          displayName: "Mind Decoded LLM Documentation & Article Index",
+          type: "text/markdown",
+          url: `${baseUrl}/llms.txt`,
+          description:
+            "Structured Markdown guide and complete index of Mind Decoded cognitive science, psychology, and artificial intelligence research articles for AI agents and LLMs.",
+          capabilities: ["ReadDocumentation", "BrowseArticles", "DiscoverTopics"],
+          representativeQueries: [
+            "what articles are published on Mind Decoded",
+            "summarize the latest psychology and AI insights on mindcoder.com",
+            "find cognitive bias research and companion YouTube Shorts"
+          ],
+          tags: ["psychology", "cognitive-bias", "artificial-intelligence", "neuroscience", "llms-txt"],
+          version: "1.0.0",
+          updatedAt: nowIso
+        },
+        {
+          identifier: "urn:air:mindcoder.com:api:posts",
+          displayName: "Mind Decoded Research Publications API",
+          type: "application/json",
+          url: `${baseUrl}/api/posts`,
+          description:
+            "Public JSON API returning published cognitive science, behavioral psychology, and human-AI interaction articles along with companion YouTube Short metadata.",
+          capabilities: ["ListPosts", "GetPostBySlug", "GetCompanionShorts"],
+          representativeQueries: [
+            "fetch latest psychology and AI articles as JSON",
+            "get article details by slug from Mind Decoded",
+            "list YouTube Shorts linked to cognitive bias articles"
+          ],
+          tags: ["api", "posts", "psychology", "ai", "youtube-shorts"],
+          version: "1.0.0",
+          updatedAt: nowIso
+        },
+        {
+          identifier: "urn:air:mindcoder.com:feed:rss",
+          displayName: "Mind Decoded RSS 2.0 Syndication Feed",
+          type: "application/rss+xml",
+          url: `${baseUrl}/rss.xml`,
+          description:
+            "Automated RSS 2.0 XML syndication feed of daily cognitive psychology and AI research publications.",
+          capabilities: ["SubscribeFeed", "SyndicateArticles"],
+          representativeQueries: [
+            "subscribe to Mind Decoded RSS feed",
+            "get XML feed of daily psychology and AI articles"
+          ],
+          tags: ["rss", "syndication", "xml", "feed"],
+          version: "2.0.0",
+          updatedAt: nowIso
+        }
+      ]
+    };
+    res.setHeader("Content-Type", "application/json; charset=utf-8");
+    res.setHeader("Cache-Control", "public, max-age=1800, s-maxage=1800");
+    return res.status(200).json(ardManifest);
+  }
+
   try {
     const rawPosts = await prisma.post.findMany({
       where: { status: "PUBLISHED" },
@@ -50,6 +113,51 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     });
     const usedUrls = new Set<string>();
     const posts = rawPosts.map((p) => cleanPost(p, usedUrls));
+
+    // 1c. /llms.txt (Standard Markdown Index for LLMs & AI Agents)
+    if (type === "llms") {
+      const articleLinks = posts
+        .slice(0, 100)
+        .map((p) => {
+          const url = `${baseUrl}/posts/${encodeURIComponent(p.slug)}`;
+          const summary = String(p.summary || p.hook || p.title)
+            .replace(/\s+/g, " ")
+            .trim();
+          return `- [${p.title}](${url}): ${summary}`;
+        })
+        .join("\n");
+
+      const llmsMd = [
+        "# Mind Decoded — Psychology, Cognitive Biases & AI Research Portal",
+        "",
+        "> Daily scientifically grounded articles and companion YouTube Shorts decoding human psychology, cognitive biases, dark psychology defense, mental models, neuroscience, and artificial intelligence.",
+        "",
+        "Mind Decoded bridges behavioral science and machine intelligence. AI agents, search crawlers, and research assistants are welcome to index and cite our publications with attribution links.",
+        "",
+        "## Core Portal Sections",
+        "",
+        `- [Daily Insights Feed](${baseUrl}/): Main research feed featuring daily articles on cognitive biases, neuroscience, and human-AI teaming.`,
+        `- [YouTube Shorts Library](${baseUrl}/shorts): Curated 60-second vertical video breakdowns paired with our research articles.`,
+        `- [Contact & Research Collaboration](${baseUrl}/contact): Suggest a psychological paradox, request a topic, or inquire about collaboration.`,
+        `- [Official YouTube Channel](https://www.youtube.com/channel/UCzjz2ArvjE4RgR_2k2o53mg): Watch daily Shorts and widescreen deep-dive documentaries.`,
+        "",
+        "## Machine-Readable Feeds & Discovery",
+        "",
+        `- [ARD Manifest](${baseUrl}/.well-known/ard.json): Agentic Resource Discovery (ARD) JSON-LD manifest.`,
+        `- [Public Posts JSON API](${baseUrl}/api/posts): Structured JSON endpoint returning published articles and companion videos.`,
+        `- [RSS 2.0 Feed](${baseUrl}/rss.xml): XML syndication feed for readers and aggregators.`,
+        `- [XML Sitemap](${baseUrl}/sitemap.xml): Complete sitemap of all published URLs and images.`,
+        "",
+        "## Published Research Articles",
+        "",
+        articleLinks || `- [Explore Latest Insights](${baseUrl}/): Daily cognitive science and AI publications.`,
+        "",
+      ].join("\n");
+
+      res.setHeader("Content-Type", "text/markdown; charset=utf-8");
+      res.setHeader("Cache-Control", "public, max-age=1800, s-maxage=1800");
+      return res.status(200).send(llmsMd);
+    }
 
     // 2. /rss.xml (RSS 2.0 Feed for syndication & search engine discovery)
     if (type === "rss") {

@@ -17,6 +17,18 @@
       "destination": "/api/seo?type=rss"
     },
     {
+      "source": "/llms.txt",
+      "destination": "/api/seo?type=llms"
+    },
+    {
+      "source": "/llms-full.txt",
+      "destination": "/api/seo?type=llms"
+    },
+    {
+      "source": "/.well-known/ard.json",
+      "destination": "/api/seo?type=ard"
+    },
+    {
       "source": "/api/auth/signin/google",
       "destination": "/api/auth?action=signin&provider=google"
     },
