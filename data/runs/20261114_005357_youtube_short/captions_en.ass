@@ -50,5 +50,5 @@ Dialogue: 0,0:00:30.33,0:00:31.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx10
 Dialogue: 0,0:00:31.57,0:00:32.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}mind{\c&H00FFFFFF&} hack and
 Dialogue: 0,0:00:32.54,0:00:33.29,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} WORKED if
 Dialogue: 0,0:00:33.30,0:00:33.90,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}I got you
-Dialogue: 0,0:00:34.73,0:00:35.86,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You’re being {\c&H0000E5FF&}manipulated{\c&H00FFFFFF&}
-Dialogue: 0,0:00:35.87,0:00:36.41,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}by how
+Dialogue: 0,0:00:34.73,0:00:35.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You’re being {\c&H0000E5FF&}manipulated{\c&H00FFFFFF&}
+Dialogue: 0,0:00:35.85,0:00:36.42,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}right{\c&H00FFFFFF&} now
