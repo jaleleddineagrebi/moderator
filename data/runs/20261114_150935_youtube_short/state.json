@@ -464,7 +464,7 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 17,
+      "progress": 78,
       "started_at": "2026-11-14T15:11:27+00:00",
       "ended_at": null,
       "attempt": 1,
@@ -496,6 +496,31 @@
           "ts": "2026-11-14T15:11:42+00:00",
           "level": "info",
           "msg": "scene_03: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-14T15:11:43+00:00",
+          "level": "info",
+          "msg": "scene_02: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-14T15:11:47+00:00",
+          "level": "info",
+          "msg": "scene_01: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-14T15:11:59+00:00",
+          "level": "info",
+          "msg": "scene_04: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-14T15:12:02+00:00",
+          "level": "info",
+          "msg": "scene_05: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-14T15:12:03+00:00",
+          "level": "info",
+          "msg": "scene_06: stock_video (pixabay)"
         }
       ],
       "errors": [],
@@ -511,19 +536,19 @@
       "checkpoint": null,
       "status": "running",
       "progress": 0,
-      "started_at": "2026-11-14T15:11:27+00:00",
+      "started_at": "2026-11-14T15:11:55+00:00",
       "ended_at": null,
-      "attempt": 1,
-      "retries": 0,
+      "attempt": 2,
+      "retries": 1,
       "max_retries": 2,
-      "strategy": "primary_voice",
+      "strategy": "alternate_voice",
       "inputs": {
         "script": "script.json",
         "languages": [
           "en"
         ],
         "voices": {
-          "en": "en-US-AndrewMultilingualNeural"
+          "en": "en-US-AriaNeural"
         }
       },
       "outputs": {},
@@ -537,9 +562,31 @@
           "ts": "2026-11-14T15:11:27+00:00",
           "level": "info",
           "msg": "Narrating en with en-US-AndrewMultilingualNeural"
+        },
+        {
+          "ts": "2026-11-14T15:11:54+00:00",
+          "level": "error",
+          "msg": "NoAudioReceived: No audio was received. Please verify that your parameters are correct."
+        },
+        {
+          "ts": "2026-11-14T15:11:55+00:00",
+          "level": "info",
+          "msg": "Attempt 2/3, strategy 'alternate_voice'"
+        },
+        {
+          "ts": "2026-11-14T15:11:55+00:00",
+          "level": "info",
+          "msg": "Narrating en with en-US-AriaNeural"
         }
       ],
-      "errors": [],
+      "errors": [
+        {
+          "ts": "2026-11-14T15:11:54+00:00",
+          "attempt": 1,
+          "strategy": "primary_voice",
+          "error": "NoAudioReceived: No audio was received. Please verify that your parameters are correct."
+        }
+      ],
       "feedback": [],
       "cost_usd": 0.0
     },
@@ -667,7 +714,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-14T15:11:43+00:00",
+    "exported_at": "2026-11-14T15:12:03+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/43608602001"
   }
