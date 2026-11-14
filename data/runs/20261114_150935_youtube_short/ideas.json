@@ -1,0 +1,68 @@
+{
+  "niche": "Mind Hacks, AI Secrets, Bizarre Body Science & Hidden Power Dynamics",
+  "languages": [
+    "en"
+  ],
+  "ideas": [
+    {
+      "id": "typing-fingerprint-secret",
+      "title": "Your Typing Rhythm Is a Digital Fingerprint",
+      "angle": "Explain that AI can now identify you with 99% accuracy just by the timing between your keystrokes, even if you are anonymous. This forces viewers to comment their 'typing speed' to see if they are 'identifiable' and creates a high-retention 'tech-paranoia' loop.",
+      "hook": {
+        "en": "Your typing rhythm is tracking you."
+      },
+      "keywords": [
+        "keystroke dynamics",
+        "AI fingerprinting",
+        "online privacy",
+        "hidden tracking",
+        "cyber security"
+      ],
+      "reason": "Privacy-related 'secrets' are currently outperforming general tech tips; the concept of 'behavioral biometrics' is a trending fear-based curiosity hook with high VVSA.",
+      "sources": [
+        "Digital Guardian: What is Keystroke Dynamics?",
+        "FBI Law Enforcement Bulletin on Biometric Identification"
+      ]
+    },
+    {
+      "id": "invisible-tracking-pixels",
+      "title": "The Ghost Pixel Spying on Your Emails",
+      "angle": "Show the viewer how to find the 'invisible 1x1 pixels' in their inbox that tell senders exactly when and where they opened an email. It provides an immediate 'Digital Survival' action by showing them the one setting to kill these trackers.",
+      "hook": {
+        "en": "Invisible pixels are spying on you."
+      },
+      "keywords": [
+        "tracking pixels",
+        "email privacy",
+        "digital survival",
+        "tech secrets",
+        "hidden settings"
+      ],
+      "reason": "Actionable 'Digital Survival' content has a higher APV because viewers pause the video to follow the steps on their own devices.",
+      "sources": [
+        "The Verge: How to block tracking pixels",
+        "Princeton University: Web Transparency and Accountability Project"
+      ]
+    },
+    {
+      "id": "ai-system-prompt-leak",
+      "title": "See an AI's Secret Hidden Instructions",
+      "angle": "A live 'interactive hack' where the viewer learns the 4-word phrase that forces an AI to reveal its secret system instructions. This turns the video into a challenge where users go try it on ChatGPT or Claude immediately.",
+      "hook": {
+        "en": "See any AI's secret instructions."
+      },
+      "keywords": [
+        "prompt injection",
+        "AI secrets",
+        "ChatGPT hack",
+        "hidden code",
+        "AI breakthroughs"
+      ],
+      "reason": "Prompt injection is a high-velocity viral topic in the 'Forbidden AI' niche, directly appealing to the 'Insane AI Breakthroughs' pillar.",
+      "sources": [
+        "Stanford University: Research on Prompt Injection Attacks",
+        "Learn Prompting: Jailbreaking and System Prompts"
+      ]
+    }
+  ]
+}
