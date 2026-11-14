@@ -3,17 +3,17 @@
   "scenes": [
     {
       "vo": {
-        "en": "You’re being legally kidnapped by stores."
+        "en": "You’re being trapped by furniture stores."
       },
       "on_screen": {
-        "en": "LEGALLY KIDNAPPED"
+        "en": "SHOPPING TRAPS"
       },
       "visual": {
-        "description": "A man walking rapidly through a dark, neon-lit corridor that seems to have no end.",
+        "description": "A man looking confused and walking through a dark, narrow corridor with neon directional arrows.",
         "search_terms": [
-          "man walking corridor",
-          "infinite neon hallway",
-          "fast tunnel motion"
+          "man lost corridor",
+          "dark hallway arrow",
+          "confused man walking"
         ],
         "prefer": "video"
       },
@@ -21,17 +21,17 @@
     },
     {
       "vo": {
-        "en": "That furniture maze isn't a mistake; it’s a psychological prison designed to make you lose track of time."
+        "en": "That maze isn’t a design mistake; it’s a fixed-path layout built to kill your internal sense of direction."
       },
       "on_screen": {
-        "en": "PSYCHOLOGICAL PRISON"
+        "en": "FIXED PATH LAYOUT"
       },
       "visual": {
-        "description": "A top-down view of a complex wooden maze with a small figure trying to find the exit.",
+        "description": "An overhead view of a complex floor plan or a miniature architectural model of a maze.",
         "search_terms": [
-          "wooden maze topview",
-          "labyrinth top down",
-          "complex floor plan"
+          "architectural maze model",
+          "top down blueprint",
+          "overhead industrial floor"
         ],
         "prefer": "video"
       },
@@ -39,17 +39,17 @@
     },
     {
       "vo": {
-        "en": "It’s called the Gruen Effect, intentionally overwhelming your brain so you forget your shopping list."
+        "en": "It’s the Gruen Effect, which intentionally blurs your logic until your shopping list is completely forgotten."
       },
       "on_screen": {
         "en": "THE GRUEN EFFECT"
       },
       "visual": {
-        "description": "Macro close-up of a man's eye looking side to side quickly as lights reflect in his pupil.",
+        "description": "A macro close-up of a man's eye with fast-moving colorful lights reflected in the pupil.",
         "search_terms": [
-          "man eyes close-up",
-          "pupil dilating macro",
-          "confused man face"
+          "man eye close-up",
+          "dizzy motion blur",
+          "pupil light reflection"
         ],
         "prefer": "video"
       },
@@ -57,17 +57,17 @@
     },
     {
       "vo": {
-        "en": "Wait until you see the creepy part: the Bulla Bulla technique."
+        "en": "But here is the creepy part: look closer at the Bulla Bulla strategy."
       },
       "on_screen": {
         "en": "BULLA BULLA TRICK"
       },
       "visual": {
-        "description": "A flood of bright, colorful plastic balls or small objects falling into a massive pile.",
+        "description": "A large pile of thousands of small, identical objects falling into a massive container.",
         "search_terms": [
-          "colorful plastic balls",
-          "falling object pile",
-          "abstract bright chaos"
+          "falling plastic objects",
+          "overflowing bin abstract",
+          "mass production items"
         ],
         "prefer": "video"
       },
@@ -75,17 +75,17 @@
     },
     {
       "vo": {
-        "en": "They dump giant bins of cheap items everywhere to trigger a bargain reflex, forcing you to buy on impulse."
+        "en": "They dump huge bins of random items everywhere to trigger a bargain reflex, forcing you to grab items on impulse."
       },
       "on_screen": {
         "en": "TRIGGER BARGAIN BRAIN"
       },
       "visual": {
-        "description": "Close-up of hands rapidly grabbing different small items from a bin and throwing them into a cart.",
+        "description": "Close-up of a man's hands rapidly grabbing various small products and tossing them into a basket.",
         "search_terms": [
-          "hands grabbing objects",
-          "impulse shopping fast",
-          "tossing items cart"
+          "hands grabbing products",
+          "fast impulse shopping",
+          "tossing items bin"
         ],
         "prefer": "video"
       },
@@ -93,17 +93,17 @@
     },
     {
       "vo": {
-        "en": "You entered for one lightbulb, but you’re leaving with a full cart and a headache."
+        "en": "You went in for one lightbulb, but leave with a mountain of things you don't need."
       },
       "on_screen": {
         "en": "CART OF REGRET"
       },
       "visual": {
-        "description": "A man pushing a heavily loaded shopping trolley through a sliding glass door at night.",
+        "description": "A man pushing a heavily loaded shopping trolley through an exit door into a night parking lot.",
         "search_terms": [
           "man pushing trolley",
           "full shopping cart",
-          "walking parking lot"
+          "warehouse exit night"
         ],
         "prefer": "video"
       },
@@ -111,17 +111,17 @@
     },
     {
       "vo": {
-        "en": "Subscribe to escape the matrix and comment your most useless purchase, because you're actually..."
+        "en": "Subscribe for more brain hacks and comment your most useless purchase, because you’re being..."
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "A close-up of a finger pressing a glowing digital button on a glass screen.",
+        "description": "A hand tapping a glowing digital button on a futuristic glass interface.",
         "search_terms": [
           "hand tapping screen",
-          "digital button click",
-          "neon touch interface"
+          "digital neon button",
+          "finger press interface"
         ],
         "prefer": "video"
       },
@@ -133,6 +133,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 35.6
+    "en": 37.5
   }
 }
