@@ -1,6 +1,6 @@
 {
-  "passed": false,
-  "revision_round": 0,
+  "passed": true,
+  "revision_round": 1,
   "checks": [
     {
       "check": "length",
@@ -94,16 +94,16 @@
       "check": "grammar review",
       "lang": "en",
       "ok": false,
-      "detail": "In scene_06, the narration ends abruptly mid-sentence with 'how...'. Change the last sentence to: 'You’re being manipulated right now.'",
-      "send_to": "script",
-      "severity": "blocker"
+      "detail": "In metadata thumbnail_text, 'YOUR BRAIN TRICKED' sounds ungrammatical and awkward. Change to 'BRAIN TRICKED!' or 'YOUR BRAIN WAS TRICKED'.",
+      "send_to": "packaging",
+      "severity": "minor"
     },
     {
       "check": "people rule",
       "lang": null,
-      "ok": false,
-      "detail": "scene_06: A woman is clearly visible in the background, walking across the street (appearing in all frames).. Replace with footage without women (a face-only close-up is the only exception).",
-      "send_to": "visuals",
+      "ok": true,
+      "detail": "no women beyond face close-ups in 6 scenes and 1 thumbnail(s)",
+      "send_to": null,
       "severity": "blocker"
     }
   ]

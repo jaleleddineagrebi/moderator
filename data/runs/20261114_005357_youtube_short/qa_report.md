@@ -1,4 +1,4 @@
-# QA report: CHANGES NEEDED
+# QA report: PASSED
 
 - ✅ **length** [en]: 37.9s (must be under 60s; target 32-50s)
 - ✅ **target length** [en]: 37.9s
@@ -11,5 +11,5 @@
 - ✅ **visual licenses**: 6 assets: pixabay
 - ✅ **visual diversity**: all scenes use distinct footage
 - ✅ **audio licenses**: music: original work, no third-party rights; sfx: original work, no third-party rights; voice: synthetic voice; no third-party performance rights
-- ❌ **grammar review** [en]: In scene_06, the narration ends abruptly mid-sentence with 'how...'. Change the last sentence to: 'You’re being manipulated right now.' → sent to script
-- ❌ **people rule**: scene_06: A woman is clearly visible in the background, walking across the street (appearing in all frames).. Replace with footage without women (a face-only close-up is the only exception). → sent to visuals
+- ⚠️ **grammar review** [en]: In metadata thumbnail_text, 'YOUR BRAIN TRICKED' sounds ungrammatical and awkward. Change to 'BRAIN TRICKED!' or 'YOUR BRAIN WAS TRICKED'.
+- ✅ **people rule**: no women beyond face close-ups in 6 scenes and 1 thumbnail(s)
