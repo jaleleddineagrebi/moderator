@@ -12,44 +12,47 @@ Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 1,0:00:00.05,0:00:03.04,Headline,,0,0,0,,{\fad(150,150)}LEGALLY KIDNAPPED
-Dialogue: 1,0:00:03.14,0:00:09.54,Headline,,0,0,0,,{\fad(150,150)}PSYCHOLOGICAL PRISON
-Dialogue: 1,0:00:09.64,0:00:15.53,Headline,,0,0,0,,{\fad(150,150)}THE GRUEN EFFECT
-Dialogue: 1,0:00:15.63,0:00:19.65,Headline,,0,0,0,,{\fad(150,150)}BULLA BULLA TRICK
-Dialogue: 1,0:00:19.75,0:00:26.54,Headline,,0,0,0,,{\fad(150,150)}TRIGGER BARGAIN BRAIN
-Dialogue: 1,0:00:26.64,0:00:31.26,Headline,,0,0,0,,{\fad(150,150)}CART OF REGRET
-Dialogue: 1,0:00:31.36,0:00:37.77,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
-Dialogue: 0,0:00:00.10,0:00:00.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You’re being {\c&H0000E5FF&}legally{\c&H00FFFFFF&}
-Dialogue: 0,0:00:00.95,0:00:02.17,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}kidnapped{\c&H00FFFFFF&} by stores
-Dialogue: 0,0:00:03.19,0:00:04.19,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}That {\c&H0000E5FF&}furniture{\c&H00FFFFFF&} maze
-Dialogue: 0,0:00:04.20,0:00:05.07,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}isn't a {\c&H0000E5FF&}mistake{\c&H00FFFFFF&}
-Dialogue: 0,0:00:05.36,0:00:06.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}it’s a {\c&H0000E5FF&}psychological{\c&H00FFFFFF&}
-Dialogue: 0,0:00:06.37,0:00:07.22,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}prison {\c&H0000E5FF&}designed{\c&H00FFFFFF&} to
-Dialogue: 0,0:00:07.23,0:00:07.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}make{\c&H00FFFFFF&} you lose
-Dialogue: 0,0:00:07.89,0:00:08.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}track{\c&H00FFFFFF&} of time
-Dialogue: 0,0:00:09.69,0:00:10.28,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It’s {\c&H0000E5FF&}called{\c&H00FFFFFF&} the
-Dialogue: 0,0:00:10.29,0:00:11.90,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Gruen Effect {\c&H0000E5FF&}intentionally{\c&H00FFFFFF&}
-Dialogue: 0,0:00:11.91,0:00:13.09,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}overwhelming{\c&H00FFFFFF&} your brain
-Dialogue: 0,0:00:13.11,0:00:13.73,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}so you {\c&H0000E5FF&}forget{\c&H00FFFFFF&}
-Dialogue: 0,0:00:13.74,0:00:14.67,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}shopping{\c&H00FFFFFF&} list
-Dialogue: 0,0:00:15.68,0:00:16.38,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Wait {\c&H0000E5FF&}until{\c&H00FFFFFF&} you
-Dialogue: 0,0:00:16.39,0:00:17.01,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}see the {\c&H0000E5FF&}creepy{\c&H00FFFFFF&}
-Dialogue: 0,0:00:17.02,0:00:17.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}part the {\c&H0000E5FF&}Bulla{\c&H00FFFFFF&}
-Dialogue: 0,0:00:17.92,0:00:18.78,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Bulla {\c&H0000E5FF&}technique{\c&H00FFFFFF&}
-Dialogue: 0,0:00:19.80,0:00:20.65,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}They dump {\c&H0000E5FF&}giant{\c&H00FFFFFF&}
-Dialogue: 0,0:00:20.66,0:00:21.32,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}bins of {\c&H0000E5FF&}cheap{\c&H00FFFFFF&}
-Dialogue: 0,0:00:21.33,0:00:22.35,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}items {\c&H0000E5FF&}everywhere{\c&H00FFFFFF&} to
-Dialogue: 0,0:00:22.36,0:00:23.17,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}trigger{\c&H00FFFFFF&} a bargain
-Dialogue: 0,0:00:23.19,0:00:24.48,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}reflex {\c&H0000E5FF&}forcing{\c&H00FFFFFF&} you
-Dialogue: 0,0:00:24.50,0:00:25.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to buy on
-Dialogue: 0,0:00:25.04,0:00:25.66,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}impulse
-Dialogue: 0,0:00:26.68,0:00:27.39,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You {\c&H0000E5FF&}entered{\c&H00FFFFFF&} for
-Dialogue: 0,0:00:27.40,0:00:28.46,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}one {\c&H0000E5FF&}lightbulb{\c&H00FFFFFF&} but
-Dialogue: 0,0:00:28.48,0:00:29.04,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you’re {\c&H0000E5FF&}leaving{\c&H00FFFFFF&} with
-Dialogue: 0,0:00:29.05,0:00:29.67,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a {\c&H0000E5FF&}full{\c&H00FFFFFF&} cart
-Dialogue: 0,0:00:29.68,0:00:30.39,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and a {\c&H0000E5FF&}headache{\c&H00FFFFFF&}
-Dialogue: 0,0:00:31.41,0:00:32.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Subscribe{\c&H00FFFFFF&} to escape
-Dialogue: 0,0:00:32.55,0:00:33.26,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}matrix{\c&H00FFFFFF&} and
-Dialogue: 0,0:00:33.27,0:00:34.09,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} your most
-Dialogue: 0,0:00:34.11,0:00:35.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}useless {\c&H0000E5FF&}purchase{\c&H00FFFFFF&} because
-Dialogue: 0,0:00:35.56,0:00:36.27,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you're {\c&H0000E5FF&}actually{\c&H00FFFFFF&}
+Dialogue: 1,0:00:00.05,0:00:02.94,Headline,,0,0,0,,{\fad(150,150)}SHOPPING TRAPS
+Dialogue: 1,0:00:03.04,0:00:09.47,Headline,,0,0,0,,{\fad(150,150)}FIXED PATH LAYOUT
+Dialogue: 1,0:00:09.57,0:00:15.82,Headline,,0,0,0,,{\fad(150,150)}THE GRUEN EFFECT
+Dialogue: 1,0:00:15.92,0:00:20.37,Headline,,0,0,0,,{\fad(150,150)}BULLA BULLA TRICK
+Dialogue: 1,0:00:20.47,0:00:27.78,Headline,,0,0,0,,{\fad(150,150)}TRIGGER BARGAIN BRAIN
+Dialogue: 1,0:00:27.88,0:00:32.46,Headline,,0,0,0,,{\fad(150,150)}CART OF REGRET
+Dialogue: 1,0:00:32.56,0:00:38.58,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 0,0:00:00.10,0:00:00.92,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You’re being {\c&H0000E5FF&}trapped{\c&H00FFFFFF&}
+Dialogue: 0,0:00:00.93,0:00:02.09,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}by {\c&H0000E5FF&}furniture{\c&H00FFFFFF&} stores
+Dialogue: 0,0:00:03.09,0:00:03.96,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}That maze {\c&H0000E5FF&}isn’t{\c&H00FFFFFF&}
+Dialogue: 0,0:00:03.98,0:00:04.92,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a design {\c&H0000E5FF&}mistake{\c&H00FFFFFF&}
+Dialogue: 0,0:00:05.23,0:00:06.06,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}it’s a {\c&H0000E5FF&}fixed-path{\c&H00FFFFFF&}
+Dialogue: 0,0:00:06.08,0:00:06.81,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}layout{\c&H00FFFFFF&} built to
+Dialogue: 0,0:00:06.82,0:00:07.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}kill your {\c&H0000E5FF&}internal{\c&H00FFFFFF&}
+Dialogue: 0,0:00:07.62,0:00:08.59,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}sense of {\c&H0000E5FF&}direction{\c&H00FFFFFF&}
+Dialogue: 0,0:00:09.61,0:00:10.31,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It’s the {\c&H0000E5FF&}Gruen{\c&H00FFFFFF&}
+Dialogue: 0,0:00:10.32,0:00:11.74,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Effect which {\c&H0000E5FF&}intentionally{\c&H00FFFFFF&}
+Dialogue: 0,0:00:11.75,0:00:12.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}blurs{\c&H00FFFFFF&} your logic
+Dialogue: 0,0:00:12.64,0:00:13.47,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}until your {\c&H0000E5FF&}shopping{\c&H00FFFFFF&}
+Dialogue: 0,0:00:13.48,0:00:14.40,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}list is {\c&H0000E5FF&}completely{\c&H00FFFFFF&}
+Dialogue: 0,0:00:14.41,0:00:14.97,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}forgotten
+Dialogue: 0,0:00:15.97,0:00:16.46,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}But {\c&H0000E5FF&}here{\c&H00FFFFFF&} is
+Dialogue: 0,0:00:16.47,0:00:17.28,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}creepy{\c&H00FFFFFF&} part
+Dialogue: 0,0:00:17.54,0:00:18.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}look {\c&H0000E5FF&}closer{\c&H00FFFFFF&} at
+Dialogue: 0,0:00:18.27,0:00:18.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}Bulla{\c&H00FFFFFF&} Bulla
+Dialogue: 0,0:00:18.86,0:00:19.50,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}strategy
+Dialogue: 0,0:00:20.52,0:00:21.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}They{\c&H00FFFFFF&} dump huge
+Dialogue: 0,0:00:21.35,0:00:22.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}bins of {\c&H0000E5FF&}random{\c&H00FFFFFF&}
+Dialogue: 0,0:00:22.12,0:00:23.14,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}items {\c&H0000E5FF&}everywhere{\c&H00FFFFFF&} to
+Dialogue: 0,0:00:23.15,0:00:23.99,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}trigger{\c&H00FFFFFF&} a bargain
+Dialogue: 0,0:00:24.00,0:00:25.38,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}reflex {\c&H0000E5FF&}forcing{\c&H00FFFFFF&} you
+Dialogue: 0,0:00:25.39,0:00:26.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to grab {\c&H0000E5FF&}items{\c&H00FFFFFF&}
+Dialogue: 0,0:00:26.16,0:00:26.92,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}on {\c&H0000E5FF&}impulse{\c&H00FFFFFF&}
+Dialogue: 0,0:00:27.93,0:00:28.53,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You {\c&H0000E5FF&}went{\c&H00FFFFFF&} in
+Dialogue: 0,0:00:28.54,0:00:29.41,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}for one {\c&H0000E5FF&}lightbulb{\c&H00FFFFFF&}
+Dialogue: 0,0:00:29.64,0:00:30.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}but {\c&H0000E5FF&}leave{\c&H00FFFFFF&} with
+Dialogue: 0,0:00:30.16,0:00:30.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a {\c&H0000E5FF&}mountain{\c&H00FFFFFF&} of
+Dialogue: 0,0:00:30.64,0:00:31.22,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}things{\c&H00FFFFFF&} you don't
+Dialogue: 0,0:00:31.23,0:00:31.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}need
+Dialogue: 0,0:00:32.60,0:00:33.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Subscribe{\c&H00FFFFFF&} for more
+Dialogue: 0,0:00:33.62,0:00:34.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}brain{\c&H00FFFFFF&} hacks and
+Dialogue: 0,0:00:34.34,0:00:35.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} your most
+Dialogue: 0,0:00:35.16,0:00:36.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}useless {\c&H0000E5FF&}purchase{\c&H00FFFFFF&} because
+Dialogue: 0,0:00:36.56,0:00:37.09,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}you’re{\c&H00FFFFFF&} being
