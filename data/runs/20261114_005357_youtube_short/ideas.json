@@ -1,0 +1,68 @@
+{
+  "niche": "Mind Hacks, AI Secrets, Bizarre Body Science & Hidden Power Dynamics",
+  "languages": [
+    "en"
+  ],
+  "ideas": [
+    {
+      "id": "anchoring-number-trap",
+      "title": "The Anchoring Number Trap",
+      "angle": "An interactive test where I make you guess the price of a luxury watch after showing you a high number. It proves how stores use 'Anchoring' to make $100 look cheap by showing $1000 first. Viewers will comment their guesses to see how close they were.",
+      "hook": {
+        "en": "I’m about to control your brain."
+      },
+      "keywords": [
+        "anchoring effect",
+        "consumer psychology",
+        "marketing tricks",
+        "money traps",
+        "brain hack"
+      ],
+      "reason": "Interactive 'mind control' videos have the highest retention. The Anchoring Effect is a cornerstone of behavioral economics used by Apple and Rolex to justify high prices.",
+      "sources": [
+        "Thinking, Fast and Slow by Daniel Kahneman",
+        "Journal of Marketing Research on Price Anchoring"
+      ]
+    },
+    {
+      "id": "decoy-pricing-glitch",
+      "title": "The Decoy Option Trick",
+      "angle": "A live challenge showing three popcorn sizes. It explains why the 'Medium' exists only to make the 'Large' look like a steal. It forces the viewer to pick an option in their head, then reveals why they were manipulated. Comment trigger: 'What did you pick?'",
+      "hook": {
+        "en": "You’re being robbed by the medium."
+      },
+      "keywords": [
+        "decoy effect",
+        "pricing strategy",
+        "consumer behavior",
+        "billionaire secrets",
+        "spending traps"
+      ],
+      "reason": "The Decoy Effect (Asymmetric Dominance) is currently trending in 'Dark Marketing' circles. It exploits the human inability to judge absolute value.",
+      "sources": [
+        "National Geographic Brain Games: Money",
+        "Dan Ariely's Predictably Irrational"
+      ]
+    },
+    {
+      "id": "loss-aversion-sunk-cost",
+      "title": "The Sunk Cost Trap",
+      "angle": "A high-speed scenario showing why you finish a bad movie or keep a losing stock. It explains 'Loss Aversion'—why your brain hates losing $10 more than it loves winning $20. Ends with a 'Stop doing this' command to save money.",
+      "hook": {
+        "en": "Stop wasting money on bad choices."
+      },
+      "keywords": [
+        "sunk cost fallacy",
+        "loss aversion",
+        "wealth mindset",
+        "psychology of money",
+        "financial mistakes"
+      ],
+      "reason": "Financial 'truth-telling' content is seeing a 40% surge in engagement. Loss aversion is a primal survival mechanism that now ruins modern bank accounts.",
+      "sources": [
+        "The Psychology of Money by Morgan Housel",
+        "Harvard Business Review on Sunk Cost Fallacy"
+      ]
+    }
+  ]
+}
