@@ -276,12 +276,12 @@
       "checkpoint": "A",
       "status": "running",
       "progress": 25,
-      "started_at": "2026-11-14T15:09:35+00:00",
+      "started_at": "2026-11-14T15:10:41+00:00",
       "ended_at": null,
-      "attempt": 1,
-      "retries": 0,
+      "attempt": 2,
+      "retries": 1,
       "max_retries": 2,
-      "strategy": "web_and_youtube",
+      "strategy": "web_only",
       "inputs": {
         "niche": "Mind Hacks, AI Secrets, Bizarre Body Science & Hidden Power Dynamics — Focus Pillar: Insane AI Breakthroughs, Hidden Tech Secrets & Digital Survival",
         "topic": null,
@@ -330,9 +330,36 @@
           "ts": "2026-11-14T15:10:08+00:00",
           "level": "warning",
           "msg": "'gemini-3.8-flash' returned 503; retrying once in 2s"
+        },
+        {
+          "ts": "2026-11-14T15:10:40+00:00",
+          "level": "error",
+          "msg": "ReadTimeout: "
+        },
+        {
+          "ts": "2026-11-14T15:10:41+00:00",
+          "level": "info",
+          "msg": "Attempt 2/3, strategy 'web_only'"
+        },
+        {
+          "ts": "2026-11-14T15:10:41+00:00",
+          "level": "info",
+          "msg": "Rotating viral pillar for this run: Insane AI Breakthroughs, Hidden Tech Secrets & Digital Survival (ai_future)"
+        },
+        {
+          "ts": "2026-11-14T15:10:41+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.8-flash, high complexity, thinking high)"
         }
       ],
-      "errors": [],
+      "errors": [
+        {
+          "ts": "2026-11-14T15:10:40+00:00",
+          "attempt": 1,
+          "strategy": "web_and_youtube",
+          "error": "ReadTimeout: "
+        }
+      ],
       "feedback": [],
       "cost_usd": 0.0
     },
@@ -510,7 +537,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-14T15:10:11+00:00",
+    "exported_at": "2026-11-14T15:10:44+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/43608602001"
   }
