@@ -69,9 +69,11 @@
   "ended_at": null,
   "revision_rounds": 0,
   "cost": {
-    "total_usd": 0.0,
+    "total_usd": 0.00271,
     "budget_usd": 1.0,
-    "by_agent": {}
+    "by_agent": {
+      "trend_researcher": 0.00271
+    }
   },
   "agents": {
     "trend_researcher": {
@@ -320,11 +322,26 @@
           "ts": "2026-11-14T09:01:02+00:00",
           "level": "warning",
           "msg": "Google Search grounding unavailable on current tier/quota; continuing with Gemini Flash directly"
+        },
+        {
+          "ts": "2026-11-14T09:01:26+00:00",
+          "level": "warning",
+          "msg": "'gemini-3.8-flash' returned 503; retrying once in 2s"
+        },
+        {
+          "ts": "2026-11-14T09:01:33+00:00",
+          "level": "warning",
+          "msg": "Model 'gemini-3.8-flash' returned 503; falling back to 'gemini-3-flash-preview'"
+        },
+        {
+          "ts": "2026-11-14T09:01:37+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3-flash-preview) answered in 34.9s (tokens in 1226, out 699, thinking 0)"
         }
       ],
       "errors": [],
       "feedback": [],
-      "cost_usd": 0.0
+      "cost_usd": 0.00271
     },
     "script": {
       "title": "Write the script",
@@ -500,7 +517,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-14T09:01:18+00:00",
+    "exported_at": "2026-11-14T09:01:37+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/43578444351"
   }
