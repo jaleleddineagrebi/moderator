@@ -1,0 +1,120 @@
+{
+  "title": "The Anchoring Number Trap",
+  "scenes": [
+    {
+      "vo": {
+        "en": "I’m about to control your brain."
+      },
+      "on_screen": {
+        "en": "I CONTROL YOU"
+      },
+      "visual": {
+        "description": "A glowing blue neural network with fast-moving electrical pulses shooting through digital fiber optics.",
+        "search_terms": [
+          "neural network animation",
+          "digital glowing pulse",
+          "cyber data stream"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Look at the number 2,400. Keep it in your head. Now, how much does this luxury watch cost?"
+      },
+      "on_screen": {
+        "en": "REMEMBER 2,400"
+      },
+      "visual": {
+        "description": "A macro close-up of a rotating luxury watch face with intricate gold gears and sweeping hands.",
+        "search_terms": [
+          "luxury wrist watch",
+          "expensive watch face",
+          "watch gears turning"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Comment your guess now. If you guessed high, you’re trapped. This watch is actually under two hundred dollars."
+      },
+      "on_screen": {
+        "en": "GUESS THE PRICE"
+      },
+      "visual": {
+        "description": "Slow-motion shot of a man's hands fanning out a stack of hundred-dollar bills.",
+        "search_terms": [
+          "man counting dollars",
+          "wallet cash opening",
+          "stack of money"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "But here’s the creepy part: your brain uses that first number as a magnet for every decision."
+      },
+      "on_screen": {
+        "en": "THE BRAIN MAGNET"
+      },
+      "visual": {
+        "description": "A powerful horseshoe magnet pulling a pile of iron nails towards it in a sharp, sudden motion.",
+        "search_terms": [
+          "heavy magnet lifting",
+          "magnet pulling iron",
+          "magnetic physics experiment"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Marketing pros show a two-thousand-dollar tag first so that one hundred looks like a total steal."
+      },
+      "on_screen": {
+        "en": "THE MONEY TRAP"
+      },
+      "visual": {
+        "description": "A close-up of a hand flipping over a red price tag in a high-end retail store.",
+        "search_terms": [
+          "price tag discount",
+          "clothing store racks",
+          "retail sale banner"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for tomorrow's mind hack—and comment WORKED if I got you. You’re being manipulated by how..."
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "Close-up of a thumb tapping a smartphone screen to click a notification bell icon.",
+        "search_terms": [
+          "phone notification bell",
+          "hand clicking subscribe",
+          "smartphone screen usage"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    }
+  ],
+  "idea_id": "anchoring-number-trap",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 33.1
+  }
+}
