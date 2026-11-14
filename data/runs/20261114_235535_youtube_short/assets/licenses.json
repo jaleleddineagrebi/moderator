@@ -1,0 +1,72 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-160972/",
+    "author": "Matthias_Groeneveld",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man walking corridor",
+    "description": "A man walking rapidly through a dark, neon-lit corridor that seems to have no end."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-153914/",
+    "author": "Engin_Akyurt",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "wooden maze topview",
+    "description": "A top-down view of a complex wooden maze with a small figure trying to find the exit."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-141673/",
+    "author": "WizArto",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man eyes close-up",
+    "description": "Macro close-up of a man's eye looking side to side quickly as lights reflect in his pupil."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-218339/",
+    "author": "NickyPe",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "colorful plastic balls",
+    "description": "A flood of bright, colorful plastic balls or small objects falling into a massive pile."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-147/",
+    "author": "Coverr-Free-Footage",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hands grabbing objects",
+    "description": "Close-up of hands rapidly grabbing different small items from a bin and throwing them into a cart."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-135320/",
+    "author": "zillurrahman1",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man pushing trolley",
+    "description": "A man pushing a heavily loaded shopping trolley through a sliding glass door at night."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-47743/",
+    "author": "crew_jak",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hand tapping screen",
+    "description": "A close-up of a finger pressing a glowing digital button on a glass screen."
+  }
+]
