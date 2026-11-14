@@ -1,0 +1,72 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-142370/",
+    "author": "u_50q7hv51at",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hand slamming desk",
+    "description": "High-angle shot of a man's palm slamming down flat onto a dark wooden table."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-292363/",
+    "author": "BlenderTimer",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "finger bending closeup",
+    "description": "Macro shot of a male hand tucking the middle digit completely underneath, knuckles firmly pressed against the surface."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-283431/",
+    "author": "Kanenori",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "fingers tapping surface",
+    "description": "Side-angle view of the thumb, index, and pinky fingers lifting smoothly into the air while middle remains folded."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-223892/",
+    "author": "ZT_OSCAR",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "finger straining table",
+    "description": "Extreme close-up of a ring finger straining with intense muscle tension, unable to lift even a millimeter."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-10480/",
+    "author": "lucdecleir",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "glowing neural synapses",
+    "description": "Futuristic 3D visualization of neon neural impulses traveling down arm nerves and hitting a dead end."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-52743/",
+    "author": "dcpweb",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "human hand anatomy 3d",
+    "description": "3D medical animation showing the connective bands of juncturae tendinum linking the two extensor tendons in a human hand."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-71569/",
+    "author": "hamzaaslammiczon",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "notification bell animation",
+    "description": "Dynamic 3D glowing subscribe notification bell pulsating rapidly with cyber-yellow particles over an energetic abstract background."
+  }
+]
