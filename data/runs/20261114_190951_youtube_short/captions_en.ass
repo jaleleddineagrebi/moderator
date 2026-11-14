@@ -1,0 +1,56 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:01.58,Headline,,0,0,0,,{\fad(150,150)}FLAT HAND CHALLENGE
+Dialogue: 1,0:00:01.68,0:00:06.51,Headline,,0,0,0,,{\fad(150,150)}TUCK MIDDLE FINGER
+Dialogue: 1,0:00:06.61,0:00:11.07,Headline,,0,0,0,,{\fad(150,150)}LIFT THREE FINGERS
+Dialogue: 1,0:00:11.17,0:00:15.67,Headline,,0,0,0,,{\fad(150,150)}THE IMPOSSIBLE GLITCH
+Dialogue: 1,0:00:15.77,0:00:21.23,Headline,,0,0,0,,{\fad(150,150)}TOTALLY PARALYZED
+Dialogue: 1,0:00:21.33,0:00:29.46,Headline,,0,0,0,,{\fad(150,150)}SHARED EXTENSOR TENDONS
+Dialogue: 1,0:00:29.56,0:00:36.81,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 0,0:00:00.09,0:00:00.49,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Put your {\c&H0000E5FF&}hand{\c&H00FFFFFF&}
+Dialogue: 0,0:00:00.49,0:00:01.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}flat {\c&H0000E5FF&}right{\c&H00FFFFFF&} now
+Dialogue: 0,0:00:01.72,0:00:02.23,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Tuck your {\c&H0000E5FF&}middle{\c&H00FFFFFF&}
+Dialogue: 0,0:00:02.23,0:00:03.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}finger {\c&H0000E5FF&}completely{\c&H00FFFFFF&} under
+Dialogue: 0,0:00:03.55,0:00:04.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}palm{\c&H00FFFFFF&}
+Dialogue: 0,0:00:04.54,0:00:05.21,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}resting{\c&H00FFFFFF&} your knuckle
+Dialogue: 0,0:00:05.22,0:00:05.73,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}flat{\c&H00FFFFFF&} on the
+Dialogue: 0,0:00:05.73,0:00:06.14,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}table
+Dialogue: 0,0:00:06.65,0:00:07.09,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Now {\c&H0000E5FF&}lift{\c&H00FFFFFF&} your
+Dialogue: 0,0:00:07.11,0:00:07.51,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}thumb
+Dialogue: 0,0:00:07.93,0:00:08.79,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}index{\c&H00FFFFFF&} and
+Dialogue: 0,0:00:08.79,0:00:09.35,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}pinky{\c&H00FFFFFF&}
+Dialogue: 0,0:00:09.74,0:00:10.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Super{\c&H00FFFFFF&} easy right
+Dialogue: 0,0:00:11.21,0:00:11.97,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Now {\c&H0000E5FF&}here{\c&H00FFFFFF&} is
+Dialogue: 0,0:00:11.97,0:00:13.22,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}impossible{\c&H00FFFFFF&} glitch
+Dialogue: 0,0:00:13.59,0:00:14.41,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}try {\c&H0000E5FF&}lifting{\c&H00FFFFFF&} just
+Dialogue: 0,0:00:14.42,0:00:15.28,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your ring {\c&H0000E5FF&}finger{\c&H00FFFFFF&}
+Dialogue: 0,0:00:15.81,0:00:16.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It is {\c&H0000E5FF&}physically{\c&H00FFFFFF&}
+Dialogue: 0,0:00:16.43,0:00:17.03,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}frozen
+Dialogue: 0,0:00:17.39,0:00:18.03,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}brain{\c&H00FFFFFF&} sends
+Dialogue: 0,0:00:18.04,0:00:19.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}signal{\c&H00FFFFFF&} but
+Dialogue: 0,0:00:19.02,0:00:20.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your finger {\c&H0000E5FF&}refuses{\c&H00FFFFFF&}
+Dialogue: 0,0:00:20.24,0:00:20.85,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to {\c&H0000E5FF&}move{\c&H00FFFFFF&}
+Dialogue: 0,0:00:21.38,0:00:22.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You {\c&H0000E5FF&}aren't{\c&H00FFFFFF&} broken
+Dialogue: 0,0:00:22.39,0:00:23.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}middle{\c&H00FFFFFF&} and
+Dialogue: 0,0:00:23.25,0:00:24.71,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}ring {\c&H0000E5FF&}fingers{\c&H00FFFFFF&} share
+Dialogue: 0,0:00:24.81,0:00:27.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}interconnected{\c&H00FFFFFF&} bridge tendons
+Dialogue: 0,0:00:27.36,0:00:28.55,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}mechanically{\c&H00FFFFFF&} locking them
+Dialogue: 0,0:00:28.55,0:00:29.05,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}together
+Dialogue: 0,0:00:29.60,0:00:31.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Subscribe for {\c&H0000E5FF&}tomorrow's{\c&H00FFFFFF&}
+Dialogue: 0,0:00:31.09,0:00:32.13,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}bizarre{\c&H00FFFFFF&} body test
+Dialogue: 0,0:00:32.55,0:00:33.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and {\c&H0000E5FF&}comment{\c&H00FFFFFF&} if
+Dialogue: 0,0:00:33.63,0:00:34.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}yours was {\c&H0000E5FF&}frozen{\c&H00FFFFFF&}
+Dialogue: 0,0:00:34.86,0:00:35.22,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}which{\c&H00FFFFFF&} is why
+Dialogue: 0,0:00:35.22,0:00:35.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you {\c&H0000E5FF&}must{\c&H00FFFFFF&}
