@@ -1,4 +1,4 @@
-# QA report: CHANGES NEEDED
+# QA report: PASSED
 
 - ✅ **length** [en]: 37.4s (must be under 60s; target 32-50s)
 - ✅ **target length** [en]: 37.4s
@@ -13,4 +13,4 @@
 - ✅ **audio licenses**: music: original work, no third-party rights; sfx: original work, no third-party rights; voice: synthetic voice; no third-party performance rights
 - ⚠️ **accuracy review** [en]: The claim that staring at a forehead triggers the 'primitive brain' and signals judgment is a pseudoscientific oversimplification of complex psychological interactions. Change to 'This stare disrupts their social focus' or similar.
 - ⚠️ **visual_fit review** [en]: The query 'forehead skin texture' for scene 3 is too literal and likely to result in unappealing close-up footage. Change query to 'person pointing at forehead' or 'close up of eye level focus' for better visual context.
-- ❌ **people rule**: scene_03: the bare legs and hands of a woman are visible in all frames. Replace with footage without women (a face-only close-up is the only exception). → sent to visuals
+- ✅ **people rule**: no women beyond face close-ups in 8 scenes and 1 thumbnail(s)

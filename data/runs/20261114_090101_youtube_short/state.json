@@ -69,13 +69,13 @@
   "ended_at": null,
   "revision_rounds": 1,
   "cost": {
-    "total_usd": 0.022099,
+    "total_usd": 0.023871,
     "budget_usd": 1.0,
     "by_agent": {
       "trend_researcher": 0.00271,
       "scriptwriter": 0.015975,
       "packaging": 0.000478,
-      "qa_reviewer": 0.002937
+      "qa_reviewer": 0.004709
     }
   },
   "agents": {
@@ -576,6 +576,7 @@
         }
       },
       "outputs": {
+        "voiceover_en": "voiceover_en.mp3",
         "timings_en": "timings_en.json"
       },
       "logs": [
@@ -799,6 +800,7 @@
         "strategy": "transitions"
       },
       "outputs": {
+        "video_en": "final_short_en.mp4",
         "captions_en": "captions_en.ass"
       },
       "logs": [
@@ -850,10 +852,10 @@
         "packaging"
       ],
       "checkpoint": "C",
-      "status": "running",
-      "progress": 60,
+      "status": "waiting_for_approval",
+      "progress": 100,
       "started_at": "2026-11-14T09:05:15+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-14T09:05:27+00:00",
       "attempt": 2,
       "retries": 0,
       "max_retries": 2,
@@ -870,6 +872,7 @@
       "outputs": {
         "report": "qa_report.md",
         "data": "qa_report.json",
+        "video_en": "final_short_en.mp4",
         "thumbnail_en": "thumbnail_en.png"
       },
       "logs": [
@@ -927,11 +930,26 @@
           "ts": "2026-11-14T09:05:24+00:00",
           "level": "info",
           "msg": "Asking Gemini (gemini-3.8-flash, medium complexity, thinking low)"
+        },
+        {
+          "ts": "2026-11-14T09:05:27+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3-flash-preview) answered in 2.8s (tokens in 3514, out 5, thinking 0)"
+        },
+        {
+          "ts": "2026-11-14T09:05:27+00:00",
+          "level": "info",
+          "msg": "All checks passed"
+        },
+        {
+          "ts": "2026-11-14T09:05:27+00:00",
+          "level": "info",
+          "msg": "Finished, waiting for your approval"
         }
       ],
       "errors": [],
       "feedback": [],
-      "cost_usd": 0.002937
+      "cost_usd": 0.004709
     }
   },
   "checkpoints": {
@@ -978,18 +996,26 @@
       "type": "approve",
       "step": "qa",
       "route_to": "edit",
-      "status": "idle",
+      "status": "pending",
       "options": [],
       "choice": null,
       "comment": null,
       "decided_at": null
     }
   },
-  "notifications": [],
+  "notifications": [
+    {
+      "ts": "2026-11-14T09:05:27+00:00",
+      "level": "action",
+      "msg": "Approval needed: Approve the final videos (never uploaded without your OK)",
+      "step": "qa"
+    }
+  ],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-14T09:05:25+00:00",
+    "exported_at": "2026-11-14T09:05:42+00:00",
     "uploads": [],
-    "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/43578444351"
+    "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/43578444351",
+    "issue_url": "https://github.com/jaleleddineagrebi/moderator/issues/92"
   }
 }
