@@ -626,7 +626,6 @@
         }
       },
       "outputs": {
-        "voiceover_en": "voiceover_en.mp3",
         "timings_en": "timings_en.json"
       },
       "logs": [
