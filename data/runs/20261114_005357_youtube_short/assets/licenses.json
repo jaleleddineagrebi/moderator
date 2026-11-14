@@ -1,0 +1,62 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-10839/",
+    "author": "Coverr-Free-Footage",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "neural network animation",
+    "description": "A glowing blue neural network with fast-moving electrical pulses shooting through digital fiber optics."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-15629/",
+    "author": "wastedgeneration",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "luxury wrist watch",
+    "description": "A macro close-up of a rotating luxury watch face with intricate gold gears and sweeping hands."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-50628/",
+    "author": "Hassas_Arts",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man counting dollars",
+    "description": "Slow-motion shot of a man's hands fanning out a stack of hundred-dollar bills."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-151744/",
+    "author": "Sayakulov",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "heavy magnet lifting",
+    "description": "A powerful horseshoe magnet pulling a pile of iron nails towards it in a sharp, sudden motion."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-993/",
+    "author": "Coverr-Free-Footage",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "price tag discount",
+    "description": "A close-up of a hand flipping over a red price tag in a high-end retail store."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-6590/",
+    "author": "Yoniteck",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "phone notification bell",
+    "description": "Close-up of a thumb tapping a smartphone screen to click a notification bell icon."
+  }
+]

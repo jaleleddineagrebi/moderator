@@ -1,0 +1,54 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:02.51,Headline,,0,0,0,,{\fad(150,150)}I CONTROL YOU
+Dialogue: 1,0:00:02.61,0:00:10.69,Headline,,0,0,0,,{\fad(150,150)}REMEMBER 2,400
+Dialogue: 1,0:00:10.79,0:00:18.70,Headline,,0,0,0,,{\fad(150,150)}GUESS THE PRICE
+Dialogue: 1,0:00:18.80,0:00:24.41,Headline,,0,0,0,,{\fad(150,150)}THE BRAIN MAGNET
+Dialogue: 1,0:00:24.51,0:00:30.18,Headline,,0,0,0,,{\fad(150,150)}THE MONEY TRAP
+Dialogue: 1,0:00:30.28,0:00:37.89,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 0,0:00:00.10,0:00:00.65,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}I’m {\c&H0000E5FF&}about{\c&H00FFFFFF&} to
+Dialogue: 0,0:00:00.66,0:00:01.64,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}control{\c&H00FFFFFF&} your brain
+Dialogue: 0,0:00:02.66,0:00:03.10,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Look{\c&H00FFFFFF&} at the
+Dialogue: 0,0:00:03.11,0:00:04.66,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}number {\c&H0000E5FF&}2,400{\c&H00FFFFFF&}
+Dialogue: 0,0:00:05.47,0:00:05.95,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Keep{\c&H00FFFFFF&} it in
+Dialogue: 0,0:00:05.96,0:00:06.49,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}head{\c&H00FFFFFF&}
+Dialogue: 0,0:00:07.30,0:00:08.23,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Now how {\c&H0000E5FF&}much{\c&H00FFFFFF&}
+Dialogue: 0,0:00:08.25,0:00:09.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}does this {\c&H0000E5FF&}luxury{\c&H00FFFFFF&}
+Dialogue: 0,0:00:09.01,0:00:09.81,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}watch{\c&H00FFFFFF&} cost
+Dialogue: 0,0:00:10.84,0:00:11.64,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Comment{\c&H00FFFFFF&} your guess
+Dialogue: 0,0:00:11.65,0:00:12.05,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}now
+Dialogue: 0,0:00:12.85,0:00:13.37,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}If you {\c&H0000E5FF&}guessed{\c&H00FFFFFF&}
+Dialogue: 0,0:00:13.38,0:00:14.53,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}high you’re {\c&H0000E5FF&}trapped{\c&H00FFFFFF&}
+Dialogue: 0,0:00:15.34,0:00:16.07,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}This {\c&H0000E5FF&}watch{\c&H00FFFFFF&} is
+Dialogue: 0,0:00:16.08,0:00:16.99,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}actually{\c&H00FFFFFF&} under two
+Dialogue: 0,0:00:17.00,0:00:17.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}hundred{\c&H00FFFFFF&} dollars
+Dialogue: 0,0:00:18.85,0:00:19.39,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}But {\c&H0000E5FF&}here’s{\c&H00FFFFFF&} the
+Dialogue: 0,0:00:19.40,0:00:20.47,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}creepy{\c&H00FFFFFF&} part your
+Dialogue: 0,0:00:20.49,0:00:21.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}brain{\c&H00FFFFFF&} uses that
+Dialogue: 0,0:00:21.27,0:00:22.07,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}first {\c&H0000E5FF&}number{\c&H00FFFFFF&} as
+Dialogue: 0,0:00:22.08,0:00:22.77,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a {\c&H0000E5FF&}magnet{\c&H00FFFFFF&} for
+Dialogue: 0,0:00:22.79,0:00:23.55,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}every {\c&H0000E5FF&}decision{\c&H00FFFFFF&}
+Dialogue: 0,0:00:24.55,0:00:25.66,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Marketing{\c&H00FFFFFF&} pros show
+Dialogue: 0,0:00:25.67,0:00:26.89,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a {\c&H0000E5FF&}two-thousand-dollar{\c&H00FFFFFF&} tag
+Dialogue: 0,0:00:26.90,0:00:27.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}first{\c&H00FFFFFF&} so that
+Dialogue: 0,0:00:27.55,0:00:28.30,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}one {\c&H0000E5FF&}hundred{\c&H00FFFFFF&} looks
+Dialogue: 0,0:00:28.32,0:00:28.86,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}like a {\c&H0000E5FF&}total{\c&H00FFFFFF&}
+Dialogue: 0,0:00:28.87,0:00:29.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}steal
+Dialogue: 0,0:00:30.33,0:00:31.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Subscribe for {\c&H0000E5FF&}tomorrow's{\c&H00FFFFFF&}
+Dialogue: 0,0:00:31.57,0:00:32.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}mind{\c&H00FFFFFF&} hack and
+Dialogue: 0,0:00:32.54,0:00:33.29,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} WORKED if
+Dialogue: 0,0:00:33.30,0:00:33.90,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}I got you
+Dialogue: 0,0:00:34.73,0:00:35.86,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You’re being {\c&H0000E5FF&}manipulated{\c&H00FFFFFF&}
+Dialogue: 0,0:00:35.87,0:00:36.41,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}by how
