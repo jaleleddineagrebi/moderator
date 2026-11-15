@@ -1,0 +1,59 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:02.39,Headline,,0,0,0,,{\fad(150,150)}YOU ARE BEING TRACKED
+Dialogue: 1,0:00:02.49,0:00:09.87,Headline,,0,0,0,,{\fad(150,150)}HIDDEN SYSTEM DATA
+Dialogue: 1,0:00:09.97,0:00:16.59,Headline,,0,0,0,,{\fad(150,150)}TYPE THIS CODE
+Dialogue: 1,0:00:16.69,0:00:21.67,Headline,,0,0,0,,{\fad(150,150)}THE CREEPY PART
+Dialogue: 1,0:00:21.77,0:00:28.82,Headline,,0,0,0,,{\fad(150,150)}PLANNED OBSOLESCENCE
+Dialogue: 1,0:00:28.92,0:00:36.25,Headline,,0,0,0,,{\fad(150,150)}EXTERNAL SYNCING
+Dialogue: 1,0:00:36.35,0:00:42.57,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 0,0:00:00.10,0:00:00.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You are {\c&H0000E5FF&}being{\c&H00FFFFFF&}
+Dialogue: 0,0:00:00.64,0:00:01.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}tracked{\c&H00FFFFFF&} right now
+Dialogue: 0,0:00:02.54,0:00:03.45,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Most {\c&H0000E5FF&}people{\c&H00FFFFFF&} think
+Dialogue: 0,0:00:03.46,0:00:04.28,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}their phone {\c&H0000E5FF&}settings{\c&H00FFFFFF&}
+Dialogue: 0,0:00:04.30,0:00:05.47,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}show {\c&H0000E5FF&}everything{\c&H00FFFFFF&} but
+Dialogue: 0,0:00:05.49,0:00:06.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}manufacturers{\c&H00FFFFFF&} hide the
+Dialogue: 0,0:00:06.74,0:00:08.01,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}real {\c&H0000E5FF&}diagnostic{\c&H00FFFFFF&} data
+Dialogue: 0,0:00:08.02,0:00:08.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}in a {\c&H0000E5FF&}secret{\c&H00FFFFFF&}
+Dialogue: 0,0:00:08.58,0:00:09.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}vault
+Dialogue: 0,0:00:10.02,0:00:10.92,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Open your {\c&H0000E5FF&}dialer{\c&H00FFFFFF&}
+Dialogue: 0,0:00:10.93,0:00:12.99,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and type {\c&H0000E5FF&}star-hash-zero-two-two-eight-hash{\c&H00FFFFFF&}
+Dialogue: 0,0:00:13.01,0:00:13.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to {\c&H0000E5FF&}unlock{\c&H00FFFFFF&} the
+Dialogue: 0,0:00:13.71,0:00:14.74,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}deep {\c&H0000E5FF&}battery{\c&H00FFFFFF&} status
+Dialogue: 0,0:00:14.75,0:00:15.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}menu {\c&H0000E5FF&}instantly{\c&H00FFFFFF&}
+Dialogue: 0,0:00:16.73,0:00:17.27,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}But {\c&H0000E5FF&}here{\c&H00FFFFFF&} is
+Dialogue: 0,0:00:17.28,0:00:18.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}creepy{\c&H00FFFFFF&} part
+Dialogue: 0,0:00:18.29,0:00:18.67,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you {\c&H0000E5FF&}need{\c&H00FFFFFF&} to
+Dialogue: 0,0:00:18.67,0:00:19.06,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}look{\c&H00FFFFFF&} at the
+Dialogue: 0,0:00:19.06,0:00:20.20,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}network{\c&H00FFFFFF&} sync status
+Dialogue: 0,0:00:20.21,0:00:20.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}at the {\c&H0000E5FF&}bottom{\c&H00FFFFFF&}
+Dialogue: 0,0:00:21.82,0:00:22.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}If your {\c&H0000E5FF&}battery{\c&H00FFFFFF&}
+Dialogue: 0,0:00:22.54,0:00:23.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}cycles{\c&H00FFFFFF&} are over
+Dialogue: 0,0:00:23.34,0:00:24.45,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}five {\c&H0000E5FF&}hundred{\c&H00FFFFFF&} your
+Dialogue: 0,0:00:24.46,0:00:25.39,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}performance{\c&H00FFFFFF&} is being
+Dialogue: 0,0:00:25.40,0:00:26.65,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}intentionally{\c&H00FFFFFF&} throttled by
+Dialogue: 0,0:00:26.66,0:00:27.96,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}planned {\c&H0000E5FF&}obsolescence{\c&H00FFFFFF&}
+Dialogue: 0,0:00:28.96,0:00:29.86,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Check if {\c&H0000E5FF&}external{\c&H00FFFFFF&}
+Dialogue: 0,0:00:29.87,0:00:30.79,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}syncing{\c&H00FFFFFF&} is active
+Dialogue: 0,0:00:31.10,0:00:31.58,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}if it {\c&H0000E5FF&}says{\c&H00FFFFFF&}
+Dialogue: 0,0:00:31.59,0:00:33.01,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}established{\c&H00FFFFFF&} someone else
+Dialogue: 0,0:00:33.02,0:00:33.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is {\c&H0000E5FF&}receiving{\c&H00FFFFFF&} your
+Dialogue: 0,0:00:33.69,0:00:34.71,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}location{\c&H00FFFFFF&} data in
+Dialogue: 0,0:00:34.72,0:00:35.37,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}real{\c&H00FFFFFF&} time
+Dialogue: 0,0:00:36.40,0:00:37.40,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Subscribe{\c&H00FFFFFF&} for more
+Dialogue: 0,0:00:37.41,0:00:38.31,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}secret{\c&H00FFFFFF&} codes and
+Dialogue: 0,0:00:38.32,0:00:39.22,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} your battery
+Dialogue: 0,0:00:39.23,0:00:40.22,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}cycle{\c&H00FFFFFF&} count below
+Dialogue: 0,0:00:40.54,0:00:41.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}because

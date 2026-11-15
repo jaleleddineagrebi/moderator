@@ -426,10 +426,10 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "running",
-      "progress": 41,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-15T15:42:38+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-15T15:43:34+00:00",
       "attempt": 1,
       "retries": 0,
       "max_retries": 2,
@@ -443,7 +443,10 @@
         "nano_banana": true,
         "starting_tier": "stock_video"
       },
-      "outputs": {},
+      "outputs": {
+        "contact_sheet": "assets/contact_sheet.jpg",
+        "licenses": "assets/licenses.json"
+      },
       "logs": [
         {
           "ts": "2026-11-15T15:42:38+00:00",
@@ -469,6 +472,31 @@
           "ts": "2026-11-15T15:43:00+00:00",
           "level": "info",
           "msg": "scene_03: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-15T15:43:21+00:00",
+          "level": "info",
+          "msg": "scene_04: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-15T15:43:22+00:00",
+          "level": "info",
+          "msg": "scene_06: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-15T15:43:31+00:00",
+          "level": "info",
+          "msg": "scene_07: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-15T15:43:33+00:00",
+          "level": "info",
+          "msg": "scene_05: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-15T15:43:34+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [],
@@ -563,17 +591,35 @@
         "visuals"
       ],
       "checkpoint": null,
-      "status": "queued",
+      "status": "running",
       "progress": 0,
-      "started_at": null,
+      "started_at": "2026-11-15T15:43:34+00:00",
       "ended_at": null,
-      "attempt": 0,
+      "attempt": 1,
       "retries": 0,
       "max_retries": 2,
-      "strategy": null,
-      "inputs": {},
+      "strategy": "banana_thumbnail",
+      "inputs": {
+        "script": "script.json",
+        "languages": [
+          "en"
+        ],
+        "strategy": "banana_thumbnail",
+        "thumbnail_source": "assets/scene_01.mp4"
+      },
       "outputs": {},
-      "logs": [],
+      "logs": [
+        {
+          "ts": "2026-11-15T15:43:34+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'banana_thumbnail'"
+        },
+        {
+          "ts": "2026-11-15T15:43:34+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.5-flash-lite, low complexity, thinking minimal)"
+        }
+      ],
       "errors": [],
       "feedback": [],
       "cost_usd": 0.0
@@ -586,17 +632,48 @@
         "audio"
       ],
       "checkpoint": null,
-      "status": "queued",
+      "status": "running",
       "progress": 0,
-      "started_at": null,
+      "started_at": "2026-11-15T15:43:34+00:00",
       "ended_at": null,
-      "attempt": 0,
+      "attempt": 1,
       "retries": 0,
       "max_retries": 2,
-      "strategy": null,
-      "inputs": {},
+      "strategy": "transitions",
+      "inputs": {
+        "scenes": [
+          "assets/scene_01.mp4",
+          "assets/scene_02.mp4",
+          "assets/scene_03.mp4",
+          "assets/scene_04.mp4",
+          "assets/scene_05.mp4",
+          "assets/scene_06.mp4",
+          "assets/scene_07.mp4"
+        ],
+        "audio": {
+          "voiceover_en": "voiceover_en.mp3",
+          "timings_en": "timings_en.json",
+          "music": "music.mp3",
+          "whoosh": "sfx/whoosh.mp3"
+        },
+        "languages": [
+          "en"
+        ],
+        "strategy": "transitions"
+      },
       "outputs": {},
-      "logs": [],
+      "logs": [
+        {
+          "ts": "2026-11-15T15:43:34+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'transitions'"
+        },
+        {
+          "ts": "2026-11-15T15:43:34+00:00",
+          "level": "info",
+          "msg": "Rendering en: 7 scenes, 42.6s, xfade transitions"
+        }
+      ],
       "errors": [],
       "feedback": [],
       "cost_usd": 0.0
@@ -679,7 +756,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-15T15:43:14+00:00",
+    "exported_at": "2026-11-15T15:43:34+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/43731309010"
   }
