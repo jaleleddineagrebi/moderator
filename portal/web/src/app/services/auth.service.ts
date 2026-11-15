@@ -5,6 +5,7 @@ import { User } from '../models/post.model';
 declare const google: any;
 
 export const GOOGLE_CLIENT_ID = '701586086068-v014k4trutnrdd5gob94i4bem6s3ktag.apps.googleusercontent.com';
+export const ADMIN_EMAILS = ['jalel.edine.agrebi@gmail.com'];
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +18,12 @@ export class AuthService {
 
   readonly currentUser = this._currentUser.asReadonly();
   readonly isAuthenticated = computed(() => !!this._currentUser());
+  readonly isAdmin = computed(() => {
+    const user = this._currentUser();
+    if (!user) return false;
+    const email = (user.email || '').toLowerCase().trim();
+    return ADMIN_EMAILS.includes(email) || user.role === 'ADMIN';
+  });
 
   constructor() {
     this.restoreSession();

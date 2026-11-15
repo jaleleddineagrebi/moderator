@@ -39,14 +39,31 @@ async function ensureAdminTables(): Promise<void> {
   }
 }
 
+const ALLOWED_ADMINS = new Set(
+  [
+    "jalel.edine.agrebi@gmail.com",
+    (process.env["ADMIN_EMAIL"] || "").toLowerCase().trim(),
+  ].filter(Boolean)
+);
+
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   res.setHeader("Access-Control-Allow-Credentials", "true");
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "GET,POST,DELETE,OPTIONS");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Admin-Email");
 
   if (req.method === "OPTIONS") {
     return res.status(200).end();
+  }
+
+  const callerEmail = String(
+    req.headers["x-admin-email"] || req.query["adminEmail"] || req.body?.adminEmail || ""
+  )
+    .toLowerCase()
+    .trim();
+
+  if (!callerEmail || !ALLOWED_ADMINS.has(callerEmail)) {
+    return res.status(403).json({ error: "Forbidden: Admin access restricted to Jalel." });
   }
 
   await ensureAdminTables();

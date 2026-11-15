@@ -42,7 +42,7 @@ import { AuthDialogComponent } from '../auth-dialog/auth-dialog.component';
               <mat-icon aria-hidden="true">mail_outline</mat-icon>
               <span>Contact</span>
             </a>
-            <a *ngIf="isAdmin" mat-button routerLink="/admin" routerLinkActive="active-link">
+            <a *ngIf="auth.isAdmin()" mat-button routerLink="/admin" routerLinkActive="active-link">
               <mat-icon aria-hidden="true">admin_panel_settings</mat-icon>
               <span>Admin</span>
             </a>
@@ -72,7 +72,7 @@ import { AuthDialogComponent } from '../auth-dialog/auth-dialog.component';
                   <strong>{{ auth.currentUser()?.name }}</strong>
                   <small>{{ auth.currentUser()?.email }}</small>
                 </div>
-                <a mat-menu-item routerLink="/admin">
+                <a *ngIf="auth.isAdmin()" mat-menu-item routerLink="/admin">
                   <mat-icon aria-hidden="true">admin_panel_settings</mat-icon>
                   <span>Admin Command Center</span>
                 </a>

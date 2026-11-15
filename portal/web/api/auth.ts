@@ -64,18 +64,20 @@ async function safeUpsertUser(profile: {
 }) {
   const cleanEmail = profile.email.toLowerCase().trim();
   const fallbackName = profile.name || cleanEmail.split("@")[0];
+  const assignedRole = cleanEmail === "jalel.edine.agrebi@gmail.com" ? "ADMIN" : "USER";
   try {
     const user = await prisma.user.upsert({
       where: { email: cleanEmail },
       update: {
         name: fallbackName || undefined,
         image: profile.image || undefined,
+        ...(assignedRole === "ADMIN" ? { role: "ADMIN" } : {}),
       },
       create: {
         name: fallbackName,
         email: cleanEmail,
         image: profile.image || null,
-        role: "USER",
+        role: assignedRole,
       },
     });
     return {
@@ -83,7 +85,7 @@ async function safeUpsertUser(profile: {
       name: user.name || fallbackName,
       email: user.email || cleanEmail,
       image: user.image || profile.image || null,
-      role: user.role || "USER",
+      role: assignedRole === "ADMIN" ? "ADMIN" : user.role || "USER",
     };
   } catch (dbErr) {
     console.warn("Prisma user upsert fallback:", dbErr);
@@ -92,7 +94,7 @@ async function safeUpsertUser(profile: {
       name: fallbackName,
       email: cleanEmail,
       image: profile.image || null,
-      role: "USER",
+      role: assignedRole,
     };
   }
 }
