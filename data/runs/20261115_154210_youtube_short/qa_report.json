@@ -1,12 +1,12 @@
 {
-  "passed": false,
-  "revision_round": 0,
+  "passed": true,
+  "revision_round": 1,
   "checks": [
     {
       "check": "length",
       "lang": "en",
       "ok": true,
-      "detail": "42.6s (must be under 60s; target 32-50s)",
+      "detail": "40.7s (must be under 60s; target 32-50s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -14,7 +14,7 @@
       "check": "target length",
       "lang": "en",
       "ok": true,
-      "detail": "42.6s",
+      "detail": "40.7s",
       "send_to": null,
       "severity": "minor"
     },
@@ -46,7 +46,7 @@
       "check": "loudness",
       "lang": "en",
       "ok": true,
-      "detail": "-14.3 LUFS, peak -1.4 dBFS (target -14 LUFS, peak <= -1)",
+      "detail": "-14.1 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -54,7 +54,7 @@
       "check": "hook timing",
       "lang": "en",
       "ok": true,
-      "detail": "scene_01 spoken in 2.4s (target <= 4s)",
+      "detail": "scene_01 spoken in 2.8s (target <= 4s)",
       "send_to": null,
       "severity": "minor"
     },
@@ -62,7 +62,7 @@
       "check": "caption sync",
       "lang": "en",
       "ok": true,
-      "detail": "107 words, 38 caption events",
+      "detail": "98 words, 36 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -94,23 +94,15 @@
       "check": "accuracy review",
       "lang": "en",
       "ok": false,
-      "detail": "The claim in scene 06 that 'established' network sync means someone is receiving location data is false. The code *#0228# is a Samsung diagnostic tool for battery status; 'established' refers to a connection with the cellular network or charger status, not a hidden spyware link. Change the script to focus on battery health rather than tracking.",
+      "detail": "The code provided (*#0228#) is specific to Samsung devices, not all smartphones. Update the script to specify Samsung or Android.",
       "send_to": "script",
-      "severity": "blocker"
-    },
-    {
-      "check": "sensitivity review",
-      "lang": "en",
-      "ok": false,
-      "detail": "The script contains misleading claims about surveillance ('someone else is receiving your location data in real time'). This triggers platform policies against misinformation/conspiracy theories. Rewrite to state 'Check your connection health' instead of 'someone is receiving your location data'.",
-      "send_to": "script",
-      "severity": "blocker"
+      "severity": "minor"
     },
     {
       "check": "accuracy review",
       "lang": "en",
       "ok": false,
-      "detail": "Scene 03 mentions 'star-hash-zero-two-two-eight-hash' works to unlock the menu instantly, but this MMI code is specific to Samsung devices and will not work on iPhones or many other Android brands. Add 'On Samsung devices' to the narration to be accurate.",
+      "detail": "While high cycle counts correlate with throttling on some devices, it is a hardware-specific management strategy (like Apple's performance management) and not a universal rule for all phones. Add 'often' or 'can be' to 'your phone's processor is likely being throttled'.",
       "send_to": "script",
       "severity": "minor"
     },
