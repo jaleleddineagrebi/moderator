@@ -158,10 +158,39 @@ jobs:
           PYTHONIOENCODING: utf-8
         run: |
           uv sync --locked -q
-          set -o pipefail
           cmd=(uv run python -m moderator upload "runs/$RUN_ID" --approved-by "github:$APPROVER" --privacy "$PRIVACY")
           if [ -n "$LANGS" ]; then cmd+=(--langs "$LANGS"); fi
-          "${cmd[@]}" | tee result.txt
+          set +e
+          "${cmd[@]}" > result.txt 2> err.txt
+          rc=$?
+          set -e
+          cat result.txt
+          if [ "$rc" -ne 0 ]; then
+            cat err.txt >&2
+            bash .github/scripts/push-gh-pages.sh --run-id "$RUN_ID" || true
+            if grep -qiE "uploadLimitExceeded|UploadLimitExceededError|exceeded the number of videos" err.txt; then
+              echo "::warning::YouTube channel reached its rolling 24-hour video upload cap (uploadLimitExceeded). Issue kept open for retry."
+              {
+                echo "### ⏳ YouTube 24-Hour Channel Upload Limit Reached (\`uploadLimitExceeded\`)"
+                echo ""
+                echo "YouTube temporarily paused new uploads on this channel because it hit the rolling 24-hour video upload cap (~6–10 videos/24h for channels without **Advanced features** unlocked)."
+                echo ""
+                echo "#### How to remove this daily cap permanently:"
+                echo "1. Open **YouTube Studio → Settings → Channel → Feature eligibility**"
+                echo "2. Enable **2. Intermediate features** (Phone SMS verification) and **3. Advanced features** (30-second video verification or valid ID) — this raises the daily limit to **50–100+ videos/day**."
+                echo ""
+                echo "#### What happens next:"
+                echo "- Your approved Short MP4 and metadata are safely saved in the GitHub Pages dashboard."
+                echo "- This issue remains **open** — simply comment \`/approve\` (or \`/approve $PRIVACY\`) again once a 24-hour slot opens up."
+              } > reply.md
+              cat reply.md >> "$GITHUB_STEP_SUMMARY"
+              if [ "$EVENT_NAME" = "issue_comment" ]; then
+                gh issue comment "$ISSUE" -R "$GITHUB_REPOSITORY" --body-file reply.md
+              fi
+              exit 0
+            fi
+            exit "$rc"
+          fi
           {
             echo "### Published to YouTube"
             echo ""
