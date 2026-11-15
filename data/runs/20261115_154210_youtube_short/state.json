@@ -427,7 +427,7 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 17,
+      "progress": 41,
       "started_at": "2026-11-15T15:42:38+00:00",
       "ended_at": null,
       "attempt": 1,
@@ -459,6 +459,16 @@
           "ts": "2026-11-15T15:42:46+00:00",
           "level": "info",
           "msg": "scene_01: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-15T15:42:57+00:00",
+          "level": "info",
+          "msg": "scene_02: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-15T15:43:00+00:00",
+          "level": "info",
+          "msg": "scene_03: stock_video (pixabay)"
         }
       ],
       "errors": [],
@@ -472,10 +482,10 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "running",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-15T15:42:42+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-15T15:43:02+00:00",
       "attempt": 2,
       "retries": 1,
       "max_retries": 2,
@@ -489,7 +499,9 @@
           "en": "en-US-AriaNeural"
         }
       },
-      "outputs": {},
+      "outputs": {
+        "timings_en": "timings_en.json"
+      },
       "logs": [
         {
           "ts": "2026-11-15T15:42:38+00:00",
@@ -515,6 +527,21 @@
           "ts": "2026-11-15T15:42:42+00:00",
           "level": "info",
           "msg": "Narrating en with en-US-AriaNeural"
+        },
+        {
+          "ts": "2026-11-15T15:42:52+00:00",
+          "level": "info",
+          "msg": "en voiceover: 41.9s"
+        },
+        {
+          "ts": "2026-11-15T15:42:52+00:00",
+          "level": "info",
+          "msg": "Generating an ambient music bed (no library tracks with license files found)"
+        },
+        {
+          "ts": "2026-11-15T15:43:02+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [
@@ -652,7 +679,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-15T15:42:51+00:00",
+    "exported_at": "2026-11-15T15:43:14+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/43731309010"
   }

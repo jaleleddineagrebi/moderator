@@ -1,0 +1,590 @@
+{
+  "voice": "en-US-AriaNeural",
+  "duration": 41.9161,
+  "scenes": [
+    {
+      "scene": "scene_01",
+      "start": 0.0,
+      "end": 2.352,
+      "words": [
+        {
+          "start": 0.097,
+          "end": 0.274,
+          "text": "You"
+        },
+        {
+          "start": 0.286,
+          "end": 0.392,
+          "text": "are"
+        },
+        {
+          "start": 0.404,
+          "end": 0.628,
+          "text": "being"
+        },
+        {
+          "start": 0.64,
+          "end": 0.97,
+          "text": "tracked"
+        },
+        {
+          "start": 0.982,
+          "end": 1.182,
+          "text": "right"
+        },
+        {
+          "start": 1.194,
+          "end": 1.524,
+          "text": "now"
+        }
+      ]
+    },
+    {
+      "scene": "scene_02",
+      "start": 2.442,
+      "end": 9.834,
+      "words": [
+        {
+          "start": 2.539,
+          "end": 2.905,
+          "text": "Most"
+        },
+        {
+          "start": 2.917,
+          "end": 3.2,
+          "text": "people"
+        },
+        {
+          "start": 3.211,
+          "end": 3.447,
+          "text": "think"
+        },
+        {
+          "start": 3.459,
+          "end": 3.6,
+          "text": "their"
+        },
+        {
+          "start": 3.612,
+          "end": 3.907,
+          "text": "phone"
+        },
+        {
+          "start": 3.919,
+          "end": 4.284,
+          "text": "settings"
+        },
+        {
+          "start": 4.296,
+          "end": 4.497,
+          "text": "show"
+        },
+        {
+          "start": 4.509,
+          "end": 5.027,
+          "text": "everything"
+        },
+        {
+          "start": 5.346,
+          "end": 5.475,
+          "text": "but"
+        },
+        {
+          "start": 5.487,
+          "end": 6.313,
+          "text": "manufacturers"
+        },
+        {
+          "start": 6.325,
+          "end": 6.619,
+          "text": "hide"
+        },
+        {
+          "start": 6.631,
+          "end": 6.725,
+          "text": "the"
+        },
+        {
+          "start": 6.737,
+          "end": 6.95,
+          "text": "real"
+        },
+        {
+          "start": 6.961,
+          "end": 7.622,
+          "text": "diagnostic"
+        },
+        {
+          "start": 7.633,
+          "end": 8.011,
+          "text": "data"
+        },
+        {
+          "start": 8.023,
+          "end": 8.152,
+          "text": "in"
+        },
+        {
+          "start": 8.164,
+          "end": 8.211,
+          "text": "a"
+        },
+        {
+          "start": 8.223,
+          "end": 8.565,
+          "text": "secret"
+        },
+        {
+          "start": 8.577,
+          "end": 9.001,
+          "text": "vault"
+        }
+      ]
+    },
+    {
+      "scene": "scene_03",
+      "start": 9.924,
+      "end": 16.548,
+      "words": [
+        {
+          "start": 10.021,
+          "end": 10.34,
+          "text": "Open"
+        },
+        {
+          "start": 10.351,
+          "end": 10.469,
+          "text": "your"
+        },
+        {
+          "start": 10.481,
+          "end": 10.917,
+          "text": "dialer"
+        },
+        {
+          "start": 10.929,
+          "end": 11.035,
+          "text": "and"
+        },
+        {
+          "start": 11.047,
+          "end": 11.318,
+          "text": "type"
+        },
+        {
+          "start": 11.33,
+          "end": 12.993,
+          "text": "star-hash-zero-two-two-eight-hash"
+        },
+        {
+          "start": 13.005,
+          "end": 13.134,
+          "text": "to"
+        },
+        {
+          "start": 13.146,
+          "end": 13.582,
+          "text": "unlock"
+        },
+        {
+          "start": 13.594,
+          "end": 13.7,
+          "text": "the"
+        },
+        {
+          "start": 13.712,
+          "end": 13.936,
+          "text": "deep"
+        },
+        {
+          "start": 13.948,
+          "end": 14.314,
+          "text": "battery"
+        },
+        {
+          "start": 14.325,
+          "end": 14.738,
+          "text": "status"
+        },
+        {
+          "start": 14.75,
+          "end": 15.057,
+          "text": "menu"
+        },
+        {
+          "start": 15.068,
+          "end": 15.717,
+          "text": "instantly"
+        }
+      ]
+    },
+    {
+      "scene": "scene_04",
+      "start": 16.638,
+      "end": 21.63,
+      "words": [
+        {
+          "start": 16.735,
+          "end": 16.912,
+          "text": "But"
+        },
+        {
+          "start": 16.924,
+          "end": 17.148,
+          "text": "here"
+        },
+        {
+          "start": 17.16,
+          "end": 17.266,
+          "text": "is"
+        },
+        {
+          "start": 17.278,
+          "end": 17.372,
+          "text": "the"
+        },
+        {
+          "start": 17.384,
+          "end": 17.714,
+          "text": "creepy"
+        },
+        {
+          "start": 17.726,
+          "end": 18.08,
+          "text": "part"
+        },
+        {
+          "start": 18.292,
+          "end": 18.41,
+          "text": "you"
+        },
+        {
+          "start": 18.422,
+          "end": 18.575,
+          "text": "need"
+        },
+        {
+          "start": 18.587,
+          "end": 18.657,
+          "text": "to"
+        },
+        {
+          "start": 18.669,
+          "end": 18.893,
+          "text": "look"
+        },
+        {
+          "start": 18.905,
+          "end": 18.964,
+          "text": "at"
+        },
+        {
+          "start": 18.976,
+          "end": 19.047,
+          "text": "the"
+        },
+        {
+          "start": 19.058,
+          "end": 19.471,
+          "text": "network"
+        },
+        {
+          "start": 19.483,
+          "end": 19.73,
+          "text": "sync"
+        },
+        {
+          "start": 19.742,
+          "end": 20.202,
+          "text": "status"
+        },
+        {
+          "start": 20.214,
+          "end": 20.285,
+          "text": "at"
+        },
+        {
+          "start": 20.297,
+          "end": 20.379,
+          "text": "the"
+        },
+        {
+          "start": 20.391,
+          "end": 20.815,
+          "text": "bottom"
+        }
+      ]
+    },
+    {
+      "scene": "scene_05",
+      "start": 21.72,
+      "end": 28.776,
+      "words": [
+        {
+          "start": 21.817,
+          "end": 21.994,
+          "text": "If"
+        },
+        {
+          "start": 22.006,
+          "end": 22.136,
+          "text": "your"
+        },
+        {
+          "start": 22.147,
+          "end": 22.525,
+          "text": "battery"
+        },
+        {
+          "start": 22.537,
+          "end": 22.937,
+          "text": "cycles"
+        },
+        {
+          "start": 22.949,
+          "end": 23.079,
+          "text": "are"
+        },
+        {
+          "start": 23.091,
+          "end": 23.327,
+          "text": "over"
+        },
+        {
+          "start": 23.338,
+          "end": 23.586,
+          "text": "five"
+        },
+        {
+          "start": 23.598,
+          "end": 23.963,
+          "text": "hundred"
+        },
+        {
+          "start": 24.305,
+          "end": 24.447,
+          "text": "your"
+        },
+        {
+          "start": 24.459,
+          "end": 25.013,
+          "text": "performance"
+        },
+        {
+          "start": 25.025,
+          "end": 25.143,
+          "text": "is"
+        },
+        {
+          "start": 25.154,
+          "end": 25.39,
+          "text": "being"
+        },
+        {
+          "start": 25.402,
+          "end": 26.015,
+          "text": "intentionally"
+        },
+        {
+          "start": 26.027,
+          "end": 26.511,
+          "text": "throttled"
+        },
+        {
+          "start": 26.522,
+          "end": 26.652,
+          "text": "by"
+        },
+        {
+          "start": 26.664,
+          "end": 27.065,
+          "text": "planned"
+        },
+        {
+          "start": 27.077,
+          "end": 27.961,
+          "text": "obsolescence"
+        }
+      ]
+    },
+    {
+      "scene": "scene_06",
+      "start": 28.866,
+      "end": 36.21,
+      "words": [
+        {
+          "start": 28.963,
+          "end": 29.27,
+          "text": "Check"
+        },
+        {
+          "start": 29.282,
+          "end": 29.388,
+          "text": "if"
+        },
+        {
+          "start": 29.399,
+          "end": 29.859,
+          "text": "external"
+        },
+        {
+          "start": 29.871,
+          "end": 30.225,
+          "text": "syncing"
+        },
+        {
+          "start": 30.237,
+          "end": 30.355,
+          "text": "is"
+        },
+        {
+          "start": 30.366,
+          "end": 30.791,
+          "text": "active"
+        },
+        {
+          "start": 31.098,
+          "end": 31.204,
+          "text": "if"
+        },
+        {
+          "start": 31.216,
+          "end": 31.333,
+          "text": "it"
+        },
+        {
+          "start": 31.345,
+          "end": 31.581,
+          "text": "says"
+        },
+        {
+          "start": 31.593,
+          "end": 32.23,
+          "text": "established"
+        },
+        {
+          "start": 32.466,
+          "end": 32.76,
+          "text": "someone"
+        },
+        {
+          "start": 32.772,
+          "end": 33.008,
+          "text": "else"
+        },
+        {
+          "start": 33.02,
+          "end": 33.126,
+          "text": "is"
+        },
+        {
+          "start": 33.138,
+          "end": 33.562,
+          "text": "receiving"
+        },
+        {
+          "start": 33.574,
+          "end": 33.68,
+          "text": "your"
+        },
+        {
+          "start": 33.692,
+          "end": 34.199,
+          "text": "location"
+        },
+        {
+          "start": 34.211,
+          "end": 34.553,
+          "text": "data"
+        },
+        {
+          "start": 34.565,
+          "end": 34.706,
+          "text": "in"
+        },
+        {
+          "start": 34.718,
+          "end": 34.93,
+          "text": "real"
+        },
+        {
+          "start": 34.942,
+          "end": 35.366,
+          "text": "time"
+        }
+      ]
+    },
+    {
+      "scene": "scene_07",
+      "start": 36.3,
+      "end": 41.916,
+      "words": [
+        {
+          "start": 36.397,
+          "end": 37.022,
+          "text": "Subscribe"
+        },
+        {
+          "start": 37.034,
+          "end": 37.175,
+          "text": "for"
+        },
+        {
+          "start": 37.187,
+          "end": 37.399,
+          "text": "more"
+        },
+        {
+          "start": 37.411,
+          "end": 37.789,
+          "text": "secret"
+        },
+        {
+          "start": 37.8,
+          "end": 38.178,
+          "text": "codes"
+        },
+        {
+          "start": 38.19,
+          "end": 38.308,
+          "text": "and"
+        },
+        {
+          "start": 38.319,
+          "end": 38.72,
+          "text": "comment"
+        },
+        {
+          "start": 38.732,
+          "end": 38.85,
+          "text": "your"
+        },
+        {
+          "start": 38.862,
+          "end": 39.216,
+          "text": "battery"
+        },
+        {
+          "start": 39.227,
+          "end": 39.558,
+          "text": "cycle"
+        },
+        {
+          "start": 39.569,
+          "end": 39.817,
+          "text": "count"
+        },
+        {
+          "start": 39.829,
+          "end": 40.218,
+          "text": "below"
+        },
+        {
+          "start": 40.536,
+          "end": 41.079,
+          "text": "because"
+        }
+      ]
+    }
+  ]
+}
