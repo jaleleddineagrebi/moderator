@@ -1,6 +1,6 @@
 {
   "passed": false,
-  "revision_round": 1,
+  "revision_round": 2,
   "checks": [
     {
       "check": "length",
@@ -91,35 +91,19 @@
       "severity": "blocker"
     },
     {
-      "check": "copyright review",
+      "check": "spelling review",
       "lang": "en",
       "ok": false,
-      "detail": "The title, description, and thumbnail text use the trademarked brand name 'IKEA'. Change 'IKEA' to 'Furniture stores' to avoid trademark infringement.",
-      "send_to": "packaging",
-      "severity": "blocker"
-    },
-    {
-      "check": "grammar review",
-      "lang": "en",
-      "ok": false,
-      "detail": "In scene_01, 'You’re being trapped' is passive and slightly awkward. Change to 'Furniture stores are trapping you.' for a more active voice.",
+      "detail": "In scene_04, the term 'Bulla Bulla' is a misspelling of 'Balla Balla'. Change 'Bulla Bulla strategy' to 'Balla Balla strategy' in the narration and 'BULLA BULLA TRICK' to 'BALLA BALLA TRICK' on screen.",
       "send_to": "script",
-      "severity": "minor"
-    },
-    {
-      "check": "people rule",
-      "lang": null,
-      "ok": false,
-      "detail": "scene_01: a woman is visible in the background, showing her full body. Replace with footage without women (a face-only close-up is the only exception).",
-      "send_to": "visuals",
       "severity": "blocker"
     },
     {
       "check": "people rule",
       "lang": null,
-      "ok": false,
-      "detail": "thumbnail_en: a woman is visible in the background, showing her full body. Replace with footage without women (a face-only close-up is the only exception).",
-      "send_to": "packaging",
+      "ok": true,
+      "detail": "no women beyond face close-ups in 7 scenes and 1 thumbnail(s)",
+      "send_to": null,
       "severity": "blocker"
     }
   ]

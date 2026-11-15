@@ -11,7 +11,5 @@
 - ✅ **visual licenses**: 7 assets: pixabay
 - ✅ **visual diversity**: all scenes use distinct footage
 - ✅ **audio licenses**: music: original work, no third-party rights; sfx: original work, no third-party rights; voice: synthetic voice; no third-party performance rights
-- ❌ **copyright review** [en]: The title, description, and thumbnail text use the trademarked brand name 'IKEA'. Change 'IKEA' to 'Furniture stores' to avoid trademark infringement. → sent to packaging
-- ⚠️ **grammar review** [en]: In scene_01, 'You’re being trapped' is passive and slightly awkward. Change to 'Furniture stores are trapping you.' for a more active voice.
-- ❌ **people rule**: scene_01: a woman is visible in the background, showing her full body. Replace with footage without women (a face-only close-up is the only exception). → sent to visuals
-- ❌ **people rule**: thumbnail_en: a woman is visible in the background, showing her full body. Replace with footage without women (a face-only close-up is the only exception). → sent to packaging
+- ❌ **spelling review** [en]: In scene_04, the term 'Bulla Bulla' is a misspelling of 'Balla Balla'. Change 'Bulla Bulla strategy' to 'Balla Balla strategy' in the narration and 'BULLA BULLA TRICK' to 'BALLA BALLA TRICK' on screen. → sent to script
+- ✅ **people rule**: no women beyond face close-ups in 7 scenes and 1 thumbnail(s)
