@@ -22,6 +22,11 @@ from googleapiclient.http import MediaFileUpload
 from .. import ROOT
 
 UPLOAD_SCOPES = ["https://www.googleapis.com/auth/youtube.upload", "https://www.googleapis.com/auth/youtube.readonly"]
+
+
+class UploadLimitExceededError(RuntimeError):
+    """Raised when YouTube blocks an upload due to the channel's rolling 24-hour upload cap or daily API quota."""
+
 # Full channel management (edit/delete videos, branding). Only `optimize-channel` uses it, with its own
 # local token file; the upload token (also the GitHub secret) keeps UPLOAD_SCOPES so a leak cannot wreck the channel.
 MANAGE_SCOPES = [
@@ -127,8 +132,31 @@ def upload(lang: str, video: Path, meta: dict, privacy: str, thumbnail: Path | N
     request = yt.videos().insert(part="snippet,status", body=body,
                                  media_body=MediaFileUpload(str(video), mimetype="video/mp4", chunksize=8 << 20, resumable=True))
     response = None
-    while response is None:
-        _, response = request.next_chunk()
+    try:
+        while response is None:
+            _, response = request.next_chunk()
+    except Exception as err:  # noqa: BLE001
+        err_text = str(err)
+        if "uploadLimitExceeded" in err_text or "exceeded the number of videos they may upload" in err_text:
+            raise UploadLimitExceededError(
+                f"YouTube blocked the upload for '{lang}' because this channel reached its rolling 24-hour video upload limit "
+                "(reason: uploadLimitExceeded).\n"
+                "Why this happens:\n"
+                "  - YouTube restricts channels without 'Advanced features' unlocked to ~6-10 video uploads per rolling 24 hours "
+                "(across both the API and YouTube Studio).\n"
+                "How to fix permanently:\n"
+                "  1. Open YouTube Studio -> Settings -> Channel -> Feature eligibility.\n"
+                "  2. Enable '2. Intermediate features' (phone SMS verification) and '3. Advanced features' "
+                "(30-second video verification, valid ID, or channel history) to raise the daily limit to 50-100+ videos/day.\n"
+                "What to do now:\n"
+                "  - Wait a few hours for your rolling 24-hour upload window to free a slot, then comment `/approve` again on the issue."
+            ) from err
+        if "quotaExceeded" in err_text:
+            raise UploadLimitExceededError(
+                f"Google Cloud YouTube Data API v3 daily quota (10,000 units/day; 1,600 per upload) is exhausted for today.\n"
+                "Wait until midnight Pacific Time (PT) for the daily quota reset, then comment `/approve` again."
+            ) from err
+        raise
     video_url = f"https://youtube.com/watch?v={response['id']}" if is_long else f"https://youtube.com/shorts/{response['id']}"
     result = {"id": response["id"], "url": video_url,
               "privacy": response["status"]["privacyStatus"], "channel": channel_title(creds)}

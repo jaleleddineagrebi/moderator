@@ -83,16 +83,39 @@ def approve_and_upload(store: StateStore, approved_by: str, privacy: str, langs:
     qa_out = d["steps"]["qa"]["outputs"]
     meta = json.loads((run_dir / d["steps"]["packaging"]["outputs"]["metadata"]).read_text(encoding="utf-8"))
     target_langs = normalize_langs(langs) if langs else normalize_langs(d["params"].get("languages"))
-    results = []
+
+    uploads_file = run_dir / "uploads.json"
+    existing_uploads: list[dict] = list(d.get("uploads") or [])
+    if uploads_file.is_file():
+        try:
+            loaded = json.loads(uploads_file.read_text(encoding="utf-8"))
+            if isinstance(loaded, list):
+                existing_uploads = loaded
+        except Exception:
+            pass
+    existing_by_lang = {
+        u["lang"]: u for u in existing_uploads if isinstance(u, dict) and u.get("lang") and u.get("url")
+    }
+
+    results = [u for u in existing_uploads if isinstance(u, dict) and u.get("lang") not in target_langs]
     for lang in target_langs:
+        if lang in existing_by_lang:
+            cached = existing_by_lang[lang]
+            results.append(cached)
+            store.notify(f"Skipped {lang} (already uploaded: {cached['url']})", "info")
+            continue
         video = run_dir / qa_out[f"video_{lang}"]
         thumb = qa_out.get(f"thumbnail_{lang}")
         res = youtube_upload.upload(lang, video, meta[lang], privacy, Path(run_dir / thumb) if thumb else None)
-        results.append({"lang": lang, **res})
+        entry = {"lang": lang, **res}
+        results.append(entry)
+        with store.mutate() as s:
+            s["uploads"] = list(results)
+        uploads_file.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
         store.notify(f"Uploaded {lang} to '{res['channel']}' as {res['privacy']}: {res['url']}", "success")
     with store.mutate() as s:
         s["uploads"] = results
-    (run_dir / "uploads.json").write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
+    uploads_file.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
     return results
 
 

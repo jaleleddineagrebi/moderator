@@ -1,0 +1,52 @@
+{
+  "@context": "https://agenticresourcediscovery.org/context/v1",
+  "entries": [
+    {
+      "identifier": "urn:air:mindcoder.com:docs:llms",
+      "displayName": "Mind Decoded LLM Documentation & Article Index",
+      "type": "text/markdown",
+      "url": "https://mindcoder.com/llms.txt",
+      "description": "Structured Markdown guide and complete index of Mind Decoded cognitive science, psychology, and artificial intelligence research articles for AI agents and LLMs.",
+      "capabilities": ["ReadDocumentation", "BrowseArticles", "DiscoverTopics"],
+      "representativeQueries": [
+        "what articles are published on Mind Decoded",
+        "summarize the latest psychology and AI insights on mindcoder.com",
+        "find cognitive bias research and companion YouTube Shorts"
+      ],
+      "tags": ["psychology", "cognitive-bias", "artificial-intelligence", "neuroscience", "llms-txt"],
+      "version": "1.0.0",
+      "updatedAt": "2026-11-13T16:30:00Z"
+    },
+    {
+      "identifier": "urn:air:mindcoder.com:api:posts",
+      "displayName": "Mind Decoded Research Publications API",
+      "type": "application/json",
+      "url": "https://mindcoder.com/api/posts",
+      "description": "Public JSON API returning published cognitive science, behavioral psychology, and human-AI interaction articles along with companion YouTube Short metadata.",
+      "capabilities": ["ListPosts", "GetPostBySlug", "GetCompanionShorts"],
+      "representativeQueries": [
+        "fetch latest psychology and AI articles as JSON",
+        "get article details by slug from Mind Decoded",
+        "list YouTube Shorts linked to cognitive bias articles"
+      ],
+      "tags": ["api", "posts", "psychology", "ai", "youtube-shorts"],
+      "version": "1.0.0",
+      "updatedAt": "2026-11-13T16:30:00Z"
+    },
+    {
+      "identifier": "urn:air:mindcoder.com:feed:rss",
+      "displayName": "Mind Decoded RSS 2.0 Syndication Feed",
+      "type": "application/rss+xml",
+      "url": "https://mindcoder.com/rss.xml",
+      "description": "Automated RSS 2.0 XML syndication feed of daily cognitive psychology and AI research publications.",
+      "capabilities": ["SubscribeFeed", "SyndicateArticles"],
+      "representativeQueries": [
+        "subscribe to Mind Decoded RSS feed",
+        "get XML feed of daily psychology and AI articles"
+      ],
+      "tags": ["rss", "syndication", "xml", "feed"],
+      "version": "2.0.0",
+      "updatedAt": "2026-11-13T16:30:00Z"
+    }
+  ]
+}

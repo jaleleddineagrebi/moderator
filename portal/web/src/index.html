@@ -31,11 +31,13 @@
   <meta name="twitter:image"
     content="https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&w=1200&q=80">
 
-  <!-- Canonical, Sitemap & RSS Discovery -->
+  <!-- Canonical, Sitemap, RSS & AI Agent Discovery -->
   <link id="canonical-link" rel="canonical" href="https://mindcoder.com/">
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
   <link rel="alternate" type="application/rss+xml" title="Mind Decoded — Daily Psychology & AI RSS Feed"
     href="/rss.xml">
+  <link rel="ard" type="application/json" href="/.well-known/ard.json">
+  <link rel="llms-txt" type="text/markdown" href="/llms.txt">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -87,7 +89,12 @@
 </head>
 
 <body class="mat-typography mat-app-background">
-  <app-root></app-root>
+  <app-root>
+    <main>
+      <h1>Mind Decoded — Psychology, Cognitive Biases &amp; Artificial Intelligence Research Portal</h1>
+      <p>Daily curated research exploring cognitive biases, mental models, neuroscience, and human-AI interaction.</p>
+    </main>
+  </app-root>
 </body>
 
 </html>

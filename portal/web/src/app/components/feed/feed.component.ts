@@ -19,7 +19,7 @@ import { PostCardComponent } from '../post-card/post-card.component';
       <!-- Hero Banner -->
       <header class="hero-section">
         <div class="hero-badge">
-          <mat-icon class="badge-icon">psychology_alt</mat-icon>
+          <mat-icon class="badge-icon" aria-hidden="true">psychology_alt</mat-icon>
           <span>Daily Cognitive Science & Machine Intelligence</span>
         </div>
         <h1 class="hero-title">
@@ -32,7 +32,7 @@ import { PostCardComponent } from '../post-card/post-card.component';
         <!-- Live Visibility & Research Impact Strip -->
         <div class="visibility-bar" aria-label="Portal Visibility Metrics">
           <div class="vis-metric">
-            <mat-icon class="vis-icon">visibility</mat-icon>
+            <mat-icon class="vis-icon" aria-hidden="true">visibility</mat-icon>
             <div class="vis-data">
               <span class="vis-value">{{ analytics.summary().totalViews | number }}</span>
               <span class="vis-label">Reader Views</span>
@@ -40,7 +40,7 @@ import { PostCardComponent } from '../post-card/post-card.component';
           </div>
           <div class="vis-divider"></div>
           <div class="vis-metric">
-            <mat-icon class="vis-icon">article</mat-icon>
+            <mat-icon class="vis-icon" aria-hidden="true">article</mat-icon>
             <div class="vis-data">
               <span class="vis-value">{{ analytics.summary().totalPosts || posts().length }}</span>
               <span class="vis-label">Published Insights</span>
@@ -48,7 +48,7 @@ import { PostCardComponent } from '../post-card/post-card.component';
           </div>
           <div class="vis-divider"></div>
           <div class="vis-metric">
-            <mat-icon class="vis-icon yt-vis">smart_display</mat-icon>
+            <mat-icon class="vis-icon yt-vis" aria-hidden="true">smart_display</mat-icon>
             <div class="vis-data">
               <span class="vis-value">{{ analytics.summary().totalShorts || shortsCount }}</span>
               <span class="vis-label">YouTube Shorts</span>
@@ -56,7 +56,7 @@ import { PostCardComponent } from '../post-card/post-card.component';
           </div>
           <div class="vis-divider"></div>
           <div class="vis-metric">
-            <mat-icon class="vis-icon react-vis">bolt</mat-icon>
+            <mat-icon class="vis-icon react-vis" aria-hidden="true">bolt</mat-icon>
             <div class="vis-data">
               <span class="vis-value">{{ analytics.summary().totalReactions + analytics.summary().totalComments }}</span>
               <span class="vis-label">Interactions</span>
@@ -65,22 +65,22 @@ import { PostCardComponent } from '../post-card/post-card.component';
         </div>
 
         <!-- Topic Chips Filter -->
-        <div class="filter-chips">
-          <mat-chip-set>
-            <mat-chip-option
-              *ngFor="let topic of topics"
-              [selected]="selectedTopic() === topic"
-              (selectionChange)="onSelectTopic(topic)"
-              class="topic-chip"
-            >
-              {{ topic }}
-            </mat-chip-option>
-          </mat-chip-set>
+        <div class="filter-chips" role="group" aria-label="Filter insights by topic">
+          <button
+            *ngFor="let topic of topics"
+            type="button"
+            class="topic-chip-btn"
+            [class.active]="selectedTopic() === topic"
+            [attr.aria-pressed]="selectedTopic() === topic"
+            (click)="onSelectTopic(topic)"
+          >
+            {{ topic }}
+          </button>
         </div>
       </header>
 
       <!-- Articles Grid -->
-      <main class="posts-grid-section">
+      <section class="posts-grid-section" aria-label="Published Research Articles">
         <ng-container *ngIf="!isLoading(); else loadingState">
           <div *ngIf="filteredPosts().length > 0; else emptyState" class="posts-grid">
             <app-post-card
@@ -91,7 +91,7 @@ import { PostCardComponent } from '../post-card/post-card.component';
 
           <ng-template #emptyState>
             <div class="empty-feed">
-              <mat-icon class="empty-icon">search_off</mat-icon>
+              <mat-icon class="empty-icon" aria-hidden="true">search_off</mat-icon>
               <h3>No articles found</h3>
               <p>Check back after today's automated daily AI publication schedule!</p>
             </div>
@@ -104,7 +104,7 @@ import { PostCardComponent } from '../post-card/post-card.component';
             <p>Gathering cognitive insights...</p>
           </div>
         </ng-template>
-      </main>
+      </section>
     </div>
   `,
   styles: [`
@@ -236,10 +236,32 @@ import { PostCardComponent } from '../post-card/post-card.component';
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
+      gap: 8px;
 
-      .topic-chip {
+      .topic-chip-btn {
+        font-family: inherit;
         font-weight: 600;
         font-size: 13px;
+        padding: 8px 16px;
+        border-radius: 9999px;
+        border: 1px solid #cbd5e1;
+        background-color: #ffffff;
+        color: #334155;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+          border-color: #3b82f6;
+          color: #1d4ed8;
+          background-color: #f8fafc;
+        }
+
+        &.active {
+          background-color: #eff6ff;
+          border-color: #3b82f6;
+          color: #1d4ed8;
+          box-shadow: 0 1px 3px rgba(37, 99, 235, 0.12);
+        }
       }
     }
 

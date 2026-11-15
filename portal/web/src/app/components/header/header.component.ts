@@ -14,78 +14,85 @@ import { AuthDialogComponent } from '../auth-dialog/auth-dialog.component';
   standalone: true,
   imports: [CommonModule, RouterModule, MatToolbarModule, MatButtonModule, MatIconModule, MatMenuModule],
   template: `
-    <mat-toolbar class="main-toolbar mat-elevation-z1">
-      <div class="toolbar-content container">
-        <!-- Brand Logo & Title -->
-        <a routerLink="/" class="brand-link">
-          <div class="logo-circle">
-            <mat-icon class="brand-icon">psychology</mat-icon>
-          </div>
-          <div class="brand-text">
-            <span class="brand-title">MIND DECODED</span>
-            <span class="brand-subtitle">Psychology & Artificial Intelligence</span>
-          </div>
-        </a>
+    <header role="banner">
+      <mat-toolbar class="main-toolbar mat-elevation-z1">
+        <div class="toolbar-content container">
+          <!-- Brand Logo & Title -->
+          <a routerLink="/" class="brand-link" aria-label="Mind Decoded Home">
+            <div class="logo-circle" aria-hidden="true">
+              <mat-icon class="brand-icon" aria-hidden="true">psychology</mat-icon>
+            </div>
+            <div class="brand-text">
+              <span class="brand-title">MIND DECODED</span>
+              <span class="brand-subtitle">Psychology & Artificial Intelligence</span>
+            </div>
+          </a>
 
-        <!-- Navigation Links -->
-        <nav class="nav-links">
-          <a mat-button routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
-            <mat-icon>article</mat-icon>
-            <span>Daily Insights</span>
-          </a>
-          <a mat-button routerLink="/shorts" routerLinkActive="active-link">
-            <mat-icon>smart_display</mat-icon>
-            <span>YouTube Shorts</span>
-          </a>
-          <a mat-button routerLink="/contact" routerLinkActive="active-link">
-            <mat-icon>mail_outline</mat-icon>
-            <span>Contact</span>
-          </a>
-          <a *ngIf="isAdmin" mat-button routerLink="/admin" routerLinkActive="active-link">
-            <mat-icon>admin_panel_settings</mat-icon>
-            <span>Admin</span>
-          </a>
-        </nav>
+          <!-- Navigation Links -->
+          <nav class="nav-links" aria-label="Primary Navigation">
+            <a mat-button routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
+              <mat-icon aria-hidden="true">article</mat-icon>
+              <span>Daily Insights</span>
+            </a>
+            <a mat-button routerLink="/shorts" routerLinkActive="active-link">
+              <mat-icon aria-hidden="true">smart_display</mat-icon>
+              <span>YouTube Shorts</span>
+            </a>
+            <a mat-button routerLink="/contact" routerLinkActive="active-link">
+              <mat-icon aria-hidden="true">mail_outline</mat-icon>
+              <span>Contact</span>
+            </a>
+            <a *ngIf="isAdmin" mat-button routerLink="/admin" routerLinkActive="active-link">
+              <mat-icon aria-hidden="true">admin_panel_settings</mat-icon>
+              <span>Admin</span>
+            </a>
+          </nav>
 
-        <!-- Right Action: User Auth -->
-        <div class="auth-action">
-          <ng-container *ngIf="auth.isAuthenticated(); else loginTrigger">
-            <button mat-icon-button [matMenuTriggerFor]="userMenu" class="user-avatar-btn">
-              <img
-                *ngIf="auth.currentUser()?.image; else avatarFallback"
-                [src]="auth.currentUser()?.image"
-                [alt]="auth.currentUser()?.name || 'User'"
-                class="avatar-img"
-              />
-              <ng-template #avatarFallback>
-                <mat-icon>account_circle</mat-icon>
-              </ng-template>
-            </button>
-            <mat-menu #userMenu="matMenu">
-              <div class="user-menu-header">
-                <strong>{{ auth.currentUser()?.name }}</strong>
-                <small>{{ auth.currentUser()?.email }}</small>
-              </div>
-              <a mat-menu-item routerLink="/admin">
-                <mat-icon>admin_panel_settings</mat-icon>
-                <span>Admin Command Center</span>
-              </a>
-              <button mat-menu-item (click)="auth.logout()">
-                <mat-icon>logout</mat-icon>
-                <span>Sign Out</span>
+          <!-- Right Action: User Auth -->
+          <div class="auth-action">
+            <ng-container *ngIf="auth.isAuthenticated(); else loginTrigger">
+              <button
+                mat-icon-button
+                [matMenuTriggerFor]="userMenu"
+                class="user-avatar-btn"
+                aria-label="Open user account menu"
+              >
+                <img
+                  *ngIf="auth.currentUser()?.image; else avatarFallback"
+                  [src]="auth.currentUser()?.image"
+                  [alt]="auth.currentUser()?.name || 'Signed in user'"
+                  class="avatar-img"
+                />
+                <ng-template #avatarFallback>
+                  <mat-icon aria-hidden="true">account_circle</mat-icon>
+                </ng-template>
               </button>
-            </mat-menu>
-          </ng-container>
+              <mat-menu #userMenu="matMenu">
+                <div class="user-menu-header">
+                  <strong>{{ auth.currentUser()?.name }}</strong>
+                  <small>{{ auth.currentUser()?.email }}</small>
+                </div>
+                <a mat-menu-item routerLink="/admin">
+                  <mat-icon aria-hidden="true">admin_panel_settings</mat-icon>
+                  <span>Admin Command Center</span>
+                </a>
+                <button mat-menu-item (click)="auth.logout()">
+                  <mat-icon aria-hidden="true">logout</mat-icon>
+                  <span>Sign Out</span>
+                </button>
+              </mat-menu>
+            </ng-container>
 
-          <ng-template #loginTrigger>
-            <button mat-flat-button color="primary" class="signin-btn" (click)="openAuthDialog()">
-              <mat-icon>login</mat-icon>
-              <span>Sign In</span>
-            </button>
-          </ng-template>
+            <ng-template #loginTrigger>
+              <button mat-flat-button color="primary" class="signin-btn" (click)="openAuthDialog()">
+                <mat-icon aria-hidden="true">login</mat-icon>
+                <span>Sign In</span>
+              </button>
+            </ng-template>
+          </div>
         </div>
-      </div>
-    </mat-toolbar>
+      </mat-toolbar>
+    </header>
   `,
   styles: [`
     .main-toolbar {

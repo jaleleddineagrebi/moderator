@@ -573,6 +573,19 @@ def test_youtube_upload_credentials_single_and_multi_channel_and_publish(tmp_pat
     assert store.data["status"] == "done"
     assert (run_dir / "uploads.json").is_file()
 
+    # Re-running approve_and_upload skips already-uploaded languages so daily upload slots are never wasted
+    upload_calls = []
+    monkeypatch.setattr(
+        youtube_upload,
+        "upload",
+        lambda lang, video, meta, privacy, thumbnail=None: (upload_calls.append(lang), {"id": "dup", "url": "x", "privacy": privacy, "channel": "C"})[1],
+    )
+    res_retry = publish.approve_and_upload(store, approved_by="github:jaleleddineagrebi", privacy="unlisted")
+    assert len(res_retry) == 1
+    assert res_retry[0]["id"] == "abc123XYZ"
+    assert upload_calls == []
+
+
 
 def test_export_pages_seed_and_run_snapshots_with_pruning(tmp_path):
     from moderator.pages import export_pages
