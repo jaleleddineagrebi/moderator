@@ -1,3 +1,4 @@
+// Shared Prisma client helper (prefixed with "_" so Vercel does not count it against the 12-function Hobby limit).
 import { PrismaClient } from "@prisma/client";
 
 const globalForPrisma = globalThis as unknown as {
@@ -11,4 +12,3 @@ export const prisma =
   });
 
 if (process.env.NODE_ENV !== "production") globalForPrisma.prisma = prisma;
-
