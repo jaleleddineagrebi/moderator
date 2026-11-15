@@ -91,6 +91,15 @@ interface AdminDashboardData {
   ],
   template: `
     <div class="admin-page container">
+      <!-- Non-Admin Access Guard -->
+      <div *ngIf="!auth.isAdmin()" class="empty-state" style="margin-top: 48px;">
+        <mat-icon>lock</mat-icon>
+        <h2>Admin Access Only</h2>
+        <p>This command center is restricted to the portal administrator (Jalel).</p>
+        <a mat-flat-button color="primary" routerLink="/" style="margin-top: 12px;">Return to Home</a>
+      </div>
+
+      <ng-container *ngIf="auth.isAdmin()">
       <!-- Top Header -->
       <header class="admin-header">
         <div>
@@ -379,6 +388,7 @@ interface AdminDashboardData {
             </table>
           </div>
         </section>
+      </ng-container>
       </ng-container>
     </div>
   `,
@@ -703,12 +713,26 @@ export class AdminComponent implements OnInit {
   sendingReplyId = signal<string | null>(null);
 
   ngOnInit(): void {
-    this.loadAdminData();
+    if (this.auth.isAdmin()) {
+      this.loadAdminData();
+    } else {
+      this.isLoading.set(false);
+    }
+  }
+
+  private get adminHeaders(): Record<string, string> {
+    return {
+      'x-admin-email': (this.auth.currentUser()?.email || '').toLowerCase().trim(),
+    };
   }
 
   loadAdminData(): void {
+    if (!this.auth.isAdmin()) {
+      this.isLoading.set(false);
+      return;
+    }
     this.isLoading.set(true);
-    this.http.get<AdminDashboardData>('/api/admin').subscribe({
+    this.http.get<AdminDashboardData>('/api/admin', { headers: this.adminHeaders }).subscribe({
       next: (res) => {
         this.data.set(res);
         this.isLoading.set(false);
@@ -721,7 +745,7 @@ export class AdminComponent implements OnInit {
 
   sendCommentReply(postId: string, parentId: string): void {
     const content = (this.replyDrafts[parentId] || '').trim();
-    if (!content) return;
+    if (!content || !this.auth.isAdmin()) return;
 
     const user = this.auth.currentUser();
     this.sendingReplyId.set(parentId);
@@ -732,7 +756,7 @@ export class AdminComponent implements OnInit {
       content,
       adminName: user?.name || 'Jalel — Mind Decoded',
       adminEmail: user?.email || 'jalel.edine.agrebi@gmail.com',
-    }).subscribe({
+    }, { headers: this.adminHeaders }).subscribe({
       next: () => {
         this.replyDrafts[parentId] = '';
         this.sendingReplyId.set(null);
@@ -745,13 +769,15 @@ export class AdminComponent implements OnInit {
   }
 
   deleteComment(commentId: string): void {
-    this.http.post('/api/admin', { action: 'delete_comment', commentId }).subscribe({
+    if (!this.auth.isAdmin()) return;
+    this.http.post('/api/admin', { action: 'delete_comment', commentId }, { headers: this.adminHeaders }).subscribe({
       next: () => this.loadAdminData(),
     });
   }
 
   deleteContact(contactId: string): void {
-    this.http.post('/api/admin', { action: 'delete_contact', contactId }).subscribe({
+    if (!this.auth.isAdmin()) return;
+    this.http.post('/api/admin', { action: 'delete_contact', contactId }, { headers: this.adminHeaders }).subscribe({
       next: () => this.loadAdminData(),
     });
   }
@@ -766,3 +792,4 @@ export class AdminComponent implements OnInit {
     return `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(to)}&su=${su}&body=${body}`;
   }
 }
+
