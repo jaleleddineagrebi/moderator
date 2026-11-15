@@ -1,4 +1,4 @@
-# QA report: CHANGES NEEDED
+# QA report: PASSED
 
 - ✅ **length** [en]: 40.3s (must be under 60s; target 32-50s)
 - ✅ **target length** [en]: 40.3s
@@ -11,4 +11,4 @@
 - ✅ **visual licenses**: 6 assets: pixabay
 - ✅ **visual diversity**: all scenes use distinct footage
 - ✅ **audio licenses**: music: original work, no third-party rights; sfx: original work, no third-party rights; voice: synthetic voice; no third-party performance rights
-- ❌ **people rule**: scene_04: multiple women are clearly visible in the crowd on the street throughout the scene. Replace with footage without women (a face-only close-up is the only exception). → sent to visuals
+- ✅ **people rule**: no women beyond face close-ups in 6 scenes and 1 thumbnail(s)
