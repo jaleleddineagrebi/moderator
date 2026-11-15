@@ -1,23 +1,23 @@
 # The Hidden Code Exposing Your Phone's Real Owner
-Estimated narration: en 38.9s
+Estimated narration: en 35.6s
 
-## scene_01 · A man in a dark hoodie backlit by a blue computer screen looking directly into the camera lens with a serious expression.
-EN  [YOU ARE BEING TRACKED]  You are being tracked right now.
+## scene_01 · Macro shot of a man's thumb hovering over a glowing smartphone screen in a dark room.
+EN  [TYPE THIS NOW]  You need to type this code immediately.
 
-## scene_02 · Macro shot of mechanical gears spinning rapidly behind a digital overlay of binary code.
-EN  [HIDDEN SYSTEM DATA]  Most people think their phone settings show everything, but manufacturers hide the real diagnostic data in a secret vault.
+## scene_02 · Abstract blue binary code streaming vertically down the screen like a digital waterfall.
+EN  [HIDDEN HEALTH MENU]  Most people ignore their phone's secret health menu where the real diagnostic data is buried.
 
-## scene_03 · Close up of a man's thumb typing numbers quickly on a smartphone's numerical dial pad.
-EN  [TYPE THIS CODE]  Open your dialer and type star-hash-zero-two-two-eight-hash to unlock the deep battery status menu instantly.
+## scene_03 · Close-up of fingers rapidly tapping a numerical dial pad on a sleek modern phone.
+EN  [UNLOCK SECRET DATA]  Open your dialer and type star-hash-zero-two-two-eight-hash to unlock the hidden battery status screen instantly.
 
-## scene_04 · A digital glitch effect distorting a city landscape at night with neon lights flickering.
-EN  [THE CREEPY PART]  But here is the creepy part: you need to look at the network sync status at the bottom.
+## scene_04 · A digital oscilloscope showing a fluctuating electric green wave on a black background.
+EN  [THE CRAZY PART]  But here is the crazy part. Watch how your voltage drops when the screen brightness changes.
 
-## scene_05 · Time-lapse of an hourglass with sand running out quickly against a dark background.
-EN  [PLANNED OBSOLESCENCE]  If your battery cycles are over five hundred, your performance is being intentionally throttled by planned obsolescence.
+## scene_05 · An hourglass with golden sand falling rapidly through the glass neck in slow motion.
+EN  [PERFORMANCE THROTTLING]  If your battery cycles have passed five hundred, your phone's processor is likely being throttled for stability.
 
-## scene_06 · Large server room with rows of blinking green and red LED lights in the dark.
-EN  [EXTERNAL SYNCING]  Check if external syncing is active; if it says 'established', someone else is receiving your location data in real time.
+## scene_06 · A high-tech digital pulse radiating outward from a central point on a circuit board map.
+EN  [CONNECTION HEALTH]  Verify your network connection health at the bottom; poor signal logic can drain your power overnight.
 
-## scene_07 · A man pointing his finger directly at the viewer with a confident nod.
-EN  [SUBSCRIBE 🔔]  Subscribe for more secret codes and comment your battery cycle count below, because...
+## scene_07 · A man in a tech studio pointing directly at the camera with an encouraging expression.
+EN  [SUBSCRIBE 🔔]  Subscribe for more phone secrets and comment your battery cycle count below, because...

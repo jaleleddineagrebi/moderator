@@ -1,0 +1,126 @@
+{
+  "passed": false,
+  "revision_round": 0,
+  "checks": [
+    {
+      "check": "length",
+      "lang": "en",
+      "ok": true,
+      "detail": "42.6s (must be under 60s; target 32-50s)",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "target length",
+      "lang": "en",
+      "ok": true,
+      "detail": "42.6s",
+      "send_to": null,
+      "severity": "minor"
+    },
+    {
+      "check": "aspect ratio",
+      "lang": "en",
+      "ok": true,
+      "detail": "1080x1920",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "video codec",
+      "lang": "en",
+      "ok": true,
+      "detail": "h264",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "audio track",
+      "lang": "en",
+      "ok": true,
+      "detail": "present",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "loudness",
+      "lang": "en",
+      "ok": true,
+      "detail": "-14.3 LUFS, peak -1.4 dBFS (target -14 LUFS, peak <= -1)",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "hook timing",
+      "lang": "en",
+      "ok": true,
+      "detail": "scene_01 spoken in 2.4s (target <= 4s)",
+      "send_to": null,
+      "severity": "minor"
+    },
+    {
+      "check": "caption sync",
+      "lang": "en",
+      "ok": true,
+      "detail": "107 words, 38 caption events",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "visual licenses",
+      "lang": null,
+      "ok": true,
+      "detail": "7 assets: pixabay",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "visual diversity",
+      "lang": null,
+      "ok": true,
+      "detail": "all scenes use distinct footage",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "audio licenses",
+      "lang": null,
+      "ok": true,
+      "detail": "music: original work, no third-party rights; sfx: original work, no third-party rights; voice: synthetic voice; no third-party performance rights",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "accuracy review",
+      "lang": "en",
+      "ok": false,
+      "detail": "The claim in scene 06 that 'established' network sync means someone is receiving location data is false. The code *#0228# is a Samsung diagnostic tool for battery status; 'established' refers to a connection with the cellular network or charger status, not a hidden spyware link. Change the script to focus on battery health rather than tracking.",
+      "send_to": "script",
+      "severity": "blocker"
+    },
+    {
+      "check": "sensitivity review",
+      "lang": "en",
+      "ok": false,
+      "detail": "The script contains misleading claims about surveillance ('someone else is receiving your location data in real time'). This triggers platform policies against misinformation/conspiracy theories. Rewrite to state 'Check your connection health' instead of 'someone is receiving your location data'.",
+      "send_to": "script",
+      "severity": "blocker"
+    },
+    {
+      "check": "accuracy review",
+      "lang": "en",
+      "ok": false,
+      "detail": "Scene 03 mentions 'star-hash-zero-two-two-eight-hash' works to unlock the menu instantly, but this MMI code is specific to Samsung devices and will not work on iPhones or many other Android brands. Add 'On Samsung devices' to the narration to be accurate.",
+      "send_to": "script",
+      "severity": "minor"
+    },
+    {
+      "check": "people rule",
+      "lang": null,
+      "ok": true,
+      "detail": "no women beyond face close-ups in 7 scenes and 1 thumbnail(s)",
+      "send_to": null,
+      "severity": "blocker"
+    }
+  ]
+}

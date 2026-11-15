@@ -3,17 +3,17 @@
   "scenes": [
     {
       "vo": {
-        "en": "You are being tracked right now."
+        "en": "You need to type this code immediately."
       },
       "on_screen": {
-        "en": "YOU ARE BEING TRACKED"
+        "en": "TYPE THIS NOW"
       },
       "visual": {
-        "description": "A man in a dark hoodie backlit by a blue computer screen looking directly into the camera lens with a serious expression.",
+        "description": "Macro shot of a man's thumb hovering over a glowing smartphone screen in a dark room.",
         "search_terms": [
-          "man cyber silhouette",
-          "hacker dark room",
-          "cybersecurity man"
+          "hand typing smartphone",
+          "phone screen glow",
+          "mobile device macro"
         ],
         "prefer": "video"
       },
@@ -21,17 +21,17 @@
     },
     {
       "vo": {
-        "en": "Most people think their phone settings show everything, but manufacturers hide the real diagnostic data in a secret vault."
+        "en": "Most people ignore their phone's secret health menu where the real diagnostic data is buried."
       },
       "on_screen": {
-        "en": "HIDDEN SYSTEM DATA"
+        "en": "HIDDEN HEALTH MENU"
       },
       "visual": {
-        "description": "Macro shot of mechanical gears spinning rapidly behind a digital overlay of binary code.",
+        "description": "Abstract blue binary code streaming vertically down the screen like a digital waterfall.",
         "search_terms": [
-          "spinning metal gears",
-          "clockwork mechanism",
-          "industrial machinery"
+          "matrix code scrolling",
+          "digital binary data",
+          "cyber background"
         ],
         "prefer": "video"
       },
@@ -39,17 +39,17 @@
     },
     {
       "vo": {
-        "en": "Open your dialer and type star-hash-zero-two-two-eight-hash to unlock the deep battery status menu instantly."
+        "en": "Open your dialer and type star-hash-zero-two-two-eight-hash to unlock the hidden battery status screen instantly."
       },
       "on_screen": {
-        "en": "TYPE THIS CODE"
+        "en": "UNLOCK SECRET DATA"
       },
       "visual": {
-        "description": "Close up of a man's thumb typing numbers quickly on a smartphone's numerical dial pad.",
+        "description": "Close-up of fingers rapidly tapping a numerical dial pad on a sleek modern phone.",
         "search_terms": [
-          "hand typing phone",
+          "finger tapping screen",
           "dialing numbers",
-          "touching screen"
+          "smartphone interface"
         ],
         "prefer": "video"
       },
@@ -57,17 +57,17 @@
     },
     {
       "vo": {
-        "en": "But here is the creepy part: you need to look at the network sync status at the bottom."
+        "en": "But here is the crazy part. Watch how your voltage drops when the screen brightness changes."
       },
       "on_screen": {
-        "en": "THE CREEPY PART"
+        "en": "THE CRAZY PART"
       },
       "visual": {
-        "description": "A digital glitch effect distorting a city landscape at night with neon lights flickering.",
+        "description": "A digital oscilloscope showing a fluctuating electric green wave on a black background.",
         "search_terms": [
-          "digital glitch texture",
-          "cyberpunk city night",
-          "vhs overlay"
+          "neon voltage meter",
+          "electricity pulse",
+          "blue energy wave"
         ],
         "prefer": "video"
       },
@@ -75,17 +75,17 @@
     },
     {
       "vo": {
-        "en": "If your battery cycles are over five hundred, your performance is being intentionally throttled by planned obsolescence."
+        "en": "If your battery cycles have passed five hundred, your phone's processor is likely being throttled for stability."
       },
       "on_screen": {
-        "en": "PLANNED OBSOLESCENCE"
+        "en": "PERFORMANCE THROTTLING"
       },
       "visual": {
-        "description": "Time-lapse of an hourglass with sand running out quickly against a dark background.",
+        "description": "An hourglass with golden sand falling rapidly through the glass neck in slow motion.",
         "search_terms": [
           "hourglass sand falling",
-          "time running out",
-          "sandglass macro"
+          "gears turning slowly",
+          "mechanical clockwork"
         ],
         "prefer": "video"
       },
@@ -93,17 +93,17 @@
     },
     {
       "vo": {
-        "en": "Check if external syncing is active; if it says 'established', someone else is receiving your location data in real time."
+        "en": "Verify your network connection health at the bottom; poor signal logic can drain your power overnight."
       },
       "on_screen": {
-        "en": "EXTERNAL SYNCING"
+        "en": "CONNECTION HEALTH"
       },
       "visual": {
-        "description": "Large server room with rows of blinking green and red LED lights in the dark.",
+        "description": "A high-tech digital pulse radiating outward from a central point on a circuit board map.",
         "search_terms": [
-          "data center servers",
-          "blinking network lights",
-          "mainframe room"
+          "wifi signal pulse",
+          "telecommunication tower",
+          "blue digital circuit"
         ],
         "prefer": "video"
       },
@@ -111,17 +111,17 @@
     },
     {
       "vo": {
-        "en": "Subscribe for more secret codes and comment your battery cycle count below, because..."
+        "en": "Subscribe for more phone secrets and comment your battery cycle count below, because..."
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "A man pointing his finger directly at the viewer with a confident nod.",
+        "description": "A man in a tech studio pointing directly at the camera with an encouraging expression.",
         "search_terms": [
-          "man pointing camera",
-          "male portrait gesture",
-          "confident man"
+          "man pointing finger",
+          "confident male face",
+          "person nodding"
         ],
         "prefer": "video"
       },
@@ -133,6 +133,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 38.9
+    "en": 35.6
   }
 }
