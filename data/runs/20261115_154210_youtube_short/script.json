@@ -1,0 +1,138 @@
+{
+  "title": "The Hidden Code Exposing Your Phone's Real Owner",
+  "scenes": [
+    {
+      "vo": {
+        "en": "You are being tracked right now."
+      },
+      "on_screen": {
+        "en": "YOU ARE BEING TRACKED"
+      },
+      "visual": {
+        "description": "A man in a dark hoodie backlit by a blue computer screen looking directly into the camera lens with a serious expression.",
+        "search_terms": [
+          "man cyber silhouette",
+          "hacker dark room",
+          "cybersecurity man"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Most people think their phone settings show everything, but manufacturers hide the real diagnostic data in a secret vault."
+      },
+      "on_screen": {
+        "en": "HIDDEN SYSTEM DATA"
+      },
+      "visual": {
+        "description": "Macro shot of mechanical gears spinning rapidly behind a digital overlay of binary code.",
+        "search_terms": [
+          "spinning metal gears",
+          "clockwork mechanism",
+          "industrial machinery"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Open your dialer and type star-hash-zero-two-two-eight-hash to unlock the deep battery status menu instantly."
+      },
+      "on_screen": {
+        "en": "TYPE THIS CODE"
+      },
+      "visual": {
+        "description": "Close up of a man's thumb typing numbers quickly on a smartphone's numerical dial pad.",
+        "search_terms": [
+          "hand typing phone",
+          "dialing numbers",
+          "touching screen"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "But here is the creepy part: you need to look at the network sync status at the bottom."
+      },
+      "on_screen": {
+        "en": "THE CREEPY PART"
+      },
+      "visual": {
+        "description": "A digital glitch effect distorting a city landscape at night with neon lights flickering.",
+        "search_terms": [
+          "digital glitch texture",
+          "cyberpunk city night",
+          "vhs overlay"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "If your battery cycles are over five hundred, your performance is being intentionally throttled by planned obsolescence."
+      },
+      "on_screen": {
+        "en": "PLANNED OBSOLESCENCE"
+      },
+      "visual": {
+        "description": "Time-lapse of an hourglass with sand running out quickly against a dark background.",
+        "search_terms": [
+          "hourglass sand falling",
+          "time running out",
+          "sandglass macro"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "Check if external syncing is active; if it says 'established', someone else is receiving your location data in real time."
+      },
+      "on_screen": {
+        "en": "EXTERNAL SYNCING"
+      },
+      "visual": {
+        "description": "Large server room with rows of blinking green and red LED lights in the dark.",
+        "search_terms": [
+          "data center servers",
+          "blinking network lights",
+          "mainframe room"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for more secret codes and comment your battery cycle count below, because..."
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "A man pointing his finger directly at the viewer with a confident nod.",
+        "search_terms": [
+          "man pointing camera",
+          "male portrait gesture",
+          "confident man"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "battery-life-tracking-secret",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 38.9
+  }
+}
