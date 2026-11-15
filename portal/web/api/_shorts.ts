@@ -1,5 +1,5 @@
 // Helpers for the companion YouTube Short of a post (not an API route: files starting with "_" are ignored by Vercel).
-import { prisma } from "./prisma";
+import { prisma } from "./_prisma";
 
 // A YouTube video ID is exactly 11 characters. Moderator run folder names such as
 // "20261105_141814_youtube_short" are NOT video IDs and can never be played.

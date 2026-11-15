@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { prisma } from "./prisma";
+import { prisma } from "./_prisma";
 
 // Web portal OAuth 2.0 credentials (from client_secret_redirect.json, project web-site-psy-514112)
 // Note: Do NOT read process.env.GOOGLE_CLIENT_ID if it points to the YouTube CLI project (771258975279-...)

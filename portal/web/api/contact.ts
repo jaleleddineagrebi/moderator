@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import { randomUUID } from "crypto";
-import { prisma } from "./prisma";
+import { prisma } from "./_prisma";
 
 let contactTableEnsured = false;
 
