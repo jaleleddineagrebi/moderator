@@ -1,0 +1,59 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:01.72,Headline,,0,0,0,,{\fad(150,150)}ICE WATER GLITCH
+Dialogue: 1,0:00:01.82,0:00:09.32,Headline,,0,0,0,,{\fad(150,150)}ANCIENT SURVIVAL TRIGGER
+Dialogue: 1,0:00:09.42,0:00:16.08,Headline,,0,0,0,,{\fad(150,150)}DEEP OCEAN ILLUSION
+Dialogue: 1,0:00:16.18,0:00:22.15,Headline,,0,0,0,,{\fad(150,150)}HEART RATE CRASHES
+Dialogue: 1,0:00:22.25,0:00:29.70,Headline,,0,0,0,,{\fad(150,150)}VAGUS NERVE RESET
+Dialogue: 1,0:00:29.80,0:00:35.84,Headline,,0,0,0,,{\fad(150,150)}EMERGENCY BRAKE ACTIVATED
+Dialogue: 1,0:00:35.94,0:00:41.73,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 0,0:00:00.09,0:00:00.42,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Put ice on
+Dialogue: 0,0:00:00.42,0:00:01.01,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}cheeks{\c&H00FFFFFF&} right
+Dialogue: 0,0:00:01.03,0:00:01.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}now
+Dialogue: 0,0:00:01.86,0:00:02.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Dunking{\c&H00FFFFFF&} your face
+Dialogue: 0,0:00:02.96,0:00:04.21,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}into {\c&H0000E5FF&}freezing{\c&H00FFFFFF&} water
+Dialogue: 0,0:00:04.43,0:00:05.80,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}triggers{\c&H00FFFFFF&} an ancient
+Dialogue: 0,0:00:05.80,0:00:07.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}survival{\c&H00FFFFFF&} glitch buried
+Dialogue: 0,0:00:07.49,0:00:08.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}inside your {\c&H0000E5FF&}nervous{\c&H00FFFFFF&}
+Dialogue: 0,0:00:08.53,0:00:08.94,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}system
+Dialogue: 0,0:00:09.49,0:00:10.80,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Freezing {\c&H0000E5FF&}temperatures{\c&H00FFFFFF&} hitting
+Dialogue: 0,0:00:10.80,0:00:11.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your eyes {\c&H0000E5FF&}trick{\c&H00FFFFFF&}
+Dialogue: 0,0:00:11.92,0:00:12.86,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}brain{\c&H00FFFFFF&} into
+Dialogue: 0,0:00:12.86,0:00:14.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}believing{\c&H00FFFFFF&} you just
+Dialogue: 0,0:00:14.12,0:00:15.07,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}plunged{\c&H00FFFFFF&} into the
+Dialogue: 0,0:00:15.08,0:00:15.69,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}deep {\c&H0000E5FF&}ocean{\c&H00FFFFFF&}
+Dialogue: 0,0:00:16.24,0:00:16.64,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Here
+Dialogue: 0,0:00:16.84,0:00:17.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is the {\c&H0000E5FF&}crazy{\c&H00FFFFFF&}
+Dialogue: 0,0:00:17.36,0:00:17.76,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}part
+Dialogue: 0,0:00:18.10,0:00:18.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}heart{\c&H00FFFFFF&} rate
+Dialogue: 0,0:00:18.98,0:00:20.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}instantly{\c&H00FFFFFF&} plummets twenty
+Dialogue: 0,0:00:20.43,0:00:21.22,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to {\c&H0000E5FF&}thirty{\c&H00FFFFFF&} beats
+Dialogue: 0,0:00:21.22,0:00:21.76,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}per {\c&H0000E5FF&}minute{\c&H00FFFFFF&}
+Dialogue: 0,0:00:22.29,0:00:23.45,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}This {\c&H0000E5FF&}mammalian{\c&H00FFFFFF&} dive
+Dialogue: 0,0:00:23.65,0:00:25.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}reflex{\c&H00FFFFFF&} forces your
+Dialogue: 0,0:00:25.11,0:00:26.35,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}vagus{\c&H00FFFFFF&} nerve to
+Dialogue: 0,0:00:26.36,0:00:27.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}instantly{\c&H00FFFFFF&} crush panic
+Dialogue: 0,0:00:27.68,0:00:29.31,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}attacks{\c&H00FFFFFF&} and stress
+Dialogue: 0,0:00:29.85,0:00:30.73,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Scientists{\c&H00FFFFFF&} call it
+Dialogue: 0,0:00:30.75,0:00:32.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}nature's ultimate {\c&H0000E5FF&}emergency{\c&H00FFFFFF&}
+Dialogue: 0,0:00:32.52,0:00:34.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}brake whenever {\c&H0000E5FF&}adrenaline{\c&H00FFFFFF&}
+Dialogue: 0,0:00:34.16,0:00:34.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}spirals{\c&H00FFFFFF&} out of
+Dialogue: 0,0:00:34.94,0:00:35.44,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}control
+Dialogue: 0,0:00:35.99,0:00:37.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Subscribe for {\c&H0000E5FF&}tomorrow's{\c&H00FFFFFF&}
+Dialogue: 0,0:00:37.19,0:00:38.14,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}secret{\c&H00FFFFFF&} body hack
+Dialogue: 0,0:00:38.37,0:00:39.09,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} if your
+Dialogue: 0,0:00:39.10,0:00:39.89,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}pulse {\c&H0000E5FF&}dropped{\c&H00FFFFFF&} which
+Dialogue: 0,0:00:39.89,0:00:40.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is why you
+Dialogue: 0,0:00:40.24,0:00:40.73,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}must
