@@ -1,0 +1,136 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,86,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,110,1
+Style: Headline,Noto Sans Black,64,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,65,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:06.95,Headline,,0,0,0,,{\fad(150,150)}Menus Are Engineered Traps
+Dialogue: 1,0:00:07.05,0:00:17.19,Headline,,0,0,0,,{\fad(150,150)}Erasing The Dollar Sign
+Dialogue: 1,0:00:17.29,0:00:29.19,Headline,,0,0,0,,{\fad(150,150)}The Golden Triangle Trap
+Dialogue: 1,0:00:29.29,0:00:39.33,Headline,,0,0,0,,{\fad(150,150)}The Anchor Decoy Trick
+Dialogue: 1,0:00:39.43,0:00:51.95,Headline,,0,0,0,,{\fad(150,150)}Sensory Words Exploit You
+Dialogue: 1,0:00:52.05,0:01:03.27,Headline,,0,0,0,,{\fad(150,150)}The Strategic Border Box
+Dialogue: 1,0:01:03.37,0:01:13.64,Headline,,0,0,0,,{\fad(150,150)}The Compromise Size Illusion
+Dialogue: 1,0:01:13.74,0:01:26.04,Headline,,0,0,0,,{\fad(150,150)}The Kiosk Shame Eraser
+Dialogue: 1,0:01:26.14,0:01:39.45,Headline,,0,0,0,,{\fad(150,150)}Algorithmic Upselling At Checkout
+Dialogue: 1,0:01:39.55,0:01:50.96,Headline,,0,0,0,,{\fad(150,150)}Default Tipping Pressure
+Dialogue: 1,0:01:51.06,0:02:00.77,Headline,,0,0,0,,{\fad(150,150)}Read The Menu Backwards
+Dialogue: 1,0:02:00.87,0:02:11.02,Headline,,0,0,0,,{\fad(150,150)}Which Trap Got You?
+Dialogue: 0,0:00:00.10,0:00:01.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}restaurant{\c&H00FFFFFF&} menu
+Dialogue: 0,0:00:01.14,0:00:02.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is {\c&H0000E5FF&}psychologically{\c&H00FFFFFF&} engineered
+Dialogue: 0,0:00:02.64,0:00:03.16,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to {\c&H0000E5FF&}drain{\c&H00FFFFFF&} your
+Dialogue: 0,0:00:03.17,0:00:03.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}wallet
+Dialogue: 0,0:00:04.50,0:00:05.22,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Wait {\c&H0000E5FF&}until{\c&H00FFFFFF&} you
+Dialogue: 0,0:00:05.24,0:00:06.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}see {\c&H0000E5FF&}number{\c&H00FFFFFF&} one
+Dialogue: 0,0:00:07.10,0:00:08.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}First {\c&H0000E5FF&}notice{\c&H00FFFFFF&} the
+Dialogue: 0,0:00:08.26,0:00:09.45,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}missing{\c&H00FFFFFF&} dollar signs
+Dialogue: 0,0:00:10.26,0:00:11.53,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Research{\c&H00FFFFFF&} shows removing
+Dialogue: 0,0:00:11.54,0:00:12.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}currency{\c&H00FFFFFF&} symbols detaches
+Dialogue: 0,0:00:12.95,0:00:13.49,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you from {\c&H0000E5FF&}real{\c&H00FFFFFF&}
+Dialogue: 0,0:00:13.50,0:00:14.95,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}money {\c&H0000E5FF&}instantly{\c&H00FFFFFF&} boosting
+Dialogue: 0,0:00:14.96,0:00:15.76,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}spending{\c&H00FFFFFF&} by eight
+Dialogue: 0,0:00:15.78,0:00:16.32,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}percent
+Dialogue: 0,0:00:17.34,0:00:18.19,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your gaze {\c&H0000E5FF&}doesn't{\c&H00FFFFFF&}
+Dialogue: 0,0:00:18.20,0:00:19.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}wander {\c&H0000E5FF&}naturally{\c&H00FFFFFF&}
+Dialogue: 0,0:00:19.93,0:00:21.03,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Eye-tracking{\c&H00FFFFFF&} proves you
+Dialogue: 0,0:00:21.04,0:00:21.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}look dead {\c&H0000E5FF&}center{\c&H00FFFFFF&}
+Dialogue: 0,0:00:22.08,0:00:22.50,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}jump{\c&H00FFFFFF&} to the
+Dialogue: 0,0:00:22.52,0:00:23.46,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}top {\c&H0000E5FF&}right{\c&H00FFFFFF&} then
+Dialogue: 0,0:00:23.47,0:00:24.28,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}glance{\c&H00FFFFFF&} left
+Dialogue: 0,0:00:25.10,0:00:26.27,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}That {\c&H0000E5FF&}top-right{\c&H00FFFFFF&} spot
+Dialogue: 0,0:00:26.28,0:00:26.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is {\c&H0000E5FF&}reserved{\c&H00FFFFFF&} for
+Dialogue: 0,0:00:26.94,0:00:27.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}their {\c&H0000E5FF&}highest{\c&H00FFFFFF&} profit
+Dialogue: 0,0:00:27.83,0:00:28.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}margin
+Dialogue: 0,0:00:29.34,0:00:29.90,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Ever{\c&H00FFFFFF&} see a
+Dialogue: 0,0:00:29.91,0:00:31.50,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}ridiculous {\c&H0000E5FF&}eighty-dollar{\c&H00FFFFFF&} steak
+Dialogue: 0,0:00:32.32,0:00:32.98,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It’s not {\c&H0000E5FF&}meant{\c&H00FFFFFF&}
+Dialogue: 0,0:00:32.99,0:00:33.47,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to {\c&H0000E5FF&}sell{\c&H00FFFFFF&}
+Dialogue: 0,0:00:34.30,0:00:34.96,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It’s an {\c&H0000E5FF&}anchor{\c&H00FFFFFF&}
+Dialogue: 0,0:00:34.97,0:00:35.69,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}designed{\c&H00FFFFFF&} to make
+Dialogue: 0,0:00:35.70,0:00:36.77,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}forty-dollar{\c&H00FFFFFF&} chicken
+Dialogue: 0,0:00:36.78,0:00:37.45,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}feel{\c&H00FFFFFF&} like an
+Dialogue: 0,0:00:37.46,0:00:38.47,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}absolute{\c&H00FFFFFF&} bargain
+Dialogue: 0,0:00:39.48,0:00:40.20,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}They {\c&H0000E5FF&}never{\c&H00FFFFFF&} sell
+Dialogue: 0,0:00:40.21,0:00:40.95,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}plain{\c&H00FFFFFF&} fish
+Dialogue: 0,0:00:41.77,0:00:43.44,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It's {\c&H0000E5FF&}line-caught{\c&H00FFFFFF&} pan-seared
+Dialogue: 0,0:00:43.45,0:00:44.35,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}wild {\c&H0000E5FF&}salmon{\c&H00FFFFFF&} with
+Dialogue: 0,0:00:44.36,0:00:45.22,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}heirloom{\c&H00FFFFFF&} glaze
+Dialogue: 0,0:00:46.03,0:00:47.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Descriptive{\c&H00FFFFFF&} labels trigger
+Dialogue: 0,0:00:47.34,0:00:49.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}sensory {\c&H0000E5FF&}anticipation{\c&H00FFFFFF&} driving
+Dialogue: 0,0:00:49.35,0:00:50.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}sales up {\c&H0000E5FF&}twenty-seven{\c&H00FFFFFF&}
+Dialogue: 0,0:00:50.55,0:00:51.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}percent
+Dialogue: 0,0:00:52.10,0:00:53.10,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}A dish {\c&H0000E5FF&}isolated{\c&H00FFFFFF&}
+Dialogue: 0,0:00:53.11,0:00:53.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}in an {\c&H0000E5FF&}elegant{\c&H00FFFFFF&}
+Dialogue: 0,0:00:53.83,0:00:55.03,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}border draws {\c&H0000E5FF&}immediate{\c&H00FFFFFF&}
+Dialogue: 0,0:00:55.05,0:00:55.97,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}visual {\c&H0000E5FF&}gravity{\c&H00FFFFFF&}
+Dialogue: 0,0:00:56.79,0:00:57.78,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It triggers {\c&H0000E5FF&}selective{\c&H00FFFFFF&}
+Dialogue: 0,0:00:57.79,0:00:59.41,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}attention{\c&H00FFFFFF&} framing regular
+Dialogue: 0,0:00:59.42,0:01:00.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}pasta{\c&H00FFFFFF&} as a
+Dialogue: 0,0:01:00.13,0:01:01.27,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}luxury {\c&H0000E5FF&}specialty{\c&H00FFFFFF&} you
+Dialogue: 0,0:01:01.28,0:01:01.92,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}can't {\c&H0000E5FF&}afford{\c&H00FFFFFF&} to
+Dialogue: 0,0:01:01.93,0:01:02.40,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}skip
+Dialogue: 0,0:01:03.42,0:01:04.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Three {\c&H0000E5FF&}beverage{\c&H00FFFFFF&} sizes
+Dialogue: 0,0:01:04.53,0:01:05.48,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}exist {\c&H0000E5FF&}solely{\c&H00FFFFFF&} to
+Dialogue: 0,0:01:05.50,0:01:06.16,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}nudge you {\c&H0000E5FF&}toward{\c&H00FFFFFF&}
+Dialogue: 0,0:01:06.17,0:01:06.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}middle{\c&H00FFFFFF&}
+Dialogue: 0,0:01:07.42,0:01:08.01,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}By {\c&H0000E5FF&}making{\c&H00FFFFFF&} the
+Dialogue: 0,0:01:08.02,0:01:08.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}small{\c&H00FFFFFF&} look tiny
+Dialogue: 0,0:01:08.92,0:01:10.09,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and {\c&H0000E5FF&}overpriced{\c&H00FFFFFF&} the
+Dialogue: 0,0:01:10.11,0:01:11.17,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}giant {\c&H0000E5FF&}medium{\c&H00FFFFFF&} feels
+Dialogue: 0,0:01:11.18,0:01:11.77,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}like{\c&H00FFFFFF&} the only
+Dialogue: 0,0:01:11.78,0:01:12.78,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}sensible{\c&H00FFFFFF&} choice
+Dialogue: 0,0:01:13.78,0:01:14.30,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Now for the
+Dialogue: 0,0:01:14.31,0:01:15.26,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}most {\c&H0000E5FF&}lethal{\c&H00FFFFFF&} trap
+Dialogue: 0,0:01:15.48,0:01:16.99,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}digital {\c&H0000E5FF&}ordering{\c&H00FFFFFF&} kiosks
+Dialogue: 0,0:01:17.80,0:01:19.39,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Fast-food giants {\c&H0000E5FF&}discovered{\c&H00FFFFFF&}
+Dialogue: 0,0:01:19.41,0:01:20.28,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}that {\c&H0000E5FF&}removing{\c&H00FFFFFF&} human
+Dialogue: 0,0:01:20.29,0:01:21.79,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}interaction{\c&H00FFFFFF&} obliterates social
+Dialogue: 0,0:01:21.80,0:01:23.42,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}shame causing {\c&H0000E5FF&}customers{\c&H00FFFFFF&}
+Dialogue: 0,0:01:23.43,0:01:24.16,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to order {\c&H0000E5FF&}twenty{\c&H00FFFFFF&}
+Dialogue: 0,0:01:24.17,0:01:25.17,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}percent{\c&H00FFFFFF&} more food
+Dialogue: 0,0:01:26.19,0:01:27.16,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}These {\c&H0000E5FF&}screens{\c&H00FFFFFF&} use
+Dialogue: 0,0:01:27.18,0:01:29.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}hyper-targeted{\c&H00FFFFFF&} algorithmic nudges
+Dialogue: 0,0:01:29.99,0:01:31.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Fast visuals {\c&H0000E5FF&}pre-checked{\c&H00FFFFFF&}
+Dialogue: 0,0:01:31.62,0:01:32.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}add-ons{\c&H00FFFFFF&} and visual
+Dialogue: 0,0:01:32.89,0:01:34.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}countdowns{\c&H00FFFFFF&} create subtle
+Dialogue: 0,0:01:34.17,0:01:36.04,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}urgency slipping {\c&H0000E5FF&}high-margin{\c&H00FFFFFF&}
+Dialogue: 0,0:01:36.05,0:01:36.81,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}extras{\c&H00FFFFFF&} into your
+Dialogue: 0,0:01:36.82,0:01:37.59,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}cart {\c&H0000E5FF&}before{\c&H00FFFFFF&} your
+Dialogue: 0,0:01:37.60,0:01:38.58,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}logic{\c&H00FFFFFF&} kicks in
+Dialogue: 0,0:01:39.59,0:01:40.30,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Then {\c&H0000E5FF&}comes{\c&H00FFFFFF&} the
+Dialogue: 0,0:01:40.31,0:01:41.20,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}payment {\c&H0000E5FF&}terminal{\c&H00FFFFFF&}
+Dialogue: 0,0:01:42.02,0:01:42.99,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}By {\c&H0000E5FF&}setting{\c&H00FFFFFF&} default
+Dialogue: 0,0:01:43.00,0:01:44.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}tip prompts {\c&H0000E5FF&}starting{\c&H00FFFFFF&}
+Dialogue: 0,0:01:44.03,0:01:45.21,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}at {\c&H0000E5FF&}twenty-five{\c&H00FFFFFF&} percent
+Dialogue: 0,0:01:45.47,0:01:46.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}restaurants{\c&H00FFFFFF&} exploit awkward
+Dialogue: 0,0:01:46.94,0:01:48.48,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}pressure{\c&H00FFFFFF&} forcing instant
+Dialogue: 0,0:01:48.50,0:01:49.32,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}overpayment{\c&H00FFFFFF&} with a
+Dialogue: 0,0:01:49.33,0:01:50.10,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}single{\c&H00FFFFFF&} tap
+Dialogue: 0,0:01:51.11,0:01:51.85,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Beat the {\c&H0000E5FF&}system{\c&H00FFFFFF&}
+Dialogue: 0,0:01:51.86,0:01:52.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}with the {\c&H0000E5FF&}bottom-up{\c&H00FFFFFF&}
+Dialogue: 0,0:01:52.54,0:01:53.04,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}scan
+Dialogue: 0,0:01:53.87,0:01:54.90,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Always{\c&H00FFFFFF&} read menus
+Dialogue: 0,0:01:54.92,0:01:56.28,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}backwards{\c&H00FFFFFF&} starting from
+Dialogue: 0,0:01:56.30,0:01:57.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}plain{\c&H00FFFFFF&} text
+Dialogue: 0,0:01:57.10,0:01:57.62,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}at the {\c&H0000E5FF&}bottom{\c&H00FFFFFF&}
+Dialogue: 0,0:01:57.63,0:01:58.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}where{\c&H00FFFFFF&} the most
+Dialogue: 0,0:01:58.12,0:01:59.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}cost-effective{\c&H00FFFFFF&} real food
+Dialogue: 0,0:01:59.37,0:01:59.90,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}hides
+Dialogue: 0,0:02:00.92,0:02:02.06,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Subscribe{\c&H00FFFFFF&} for weekly
+Dialogue: 0,0:02:02.08,0:02:02.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}deep {\c&H0000E5FF&}dives{\c&H00FFFFFF&} into
+Dialogue: 0,0:02:02.89,0:02:03.73,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the hidden {\c&H0000E5FF&}systems{\c&H00FFFFFF&}
+Dialogue: 0,0:02:03.74,0:02:04.50,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}shaping{\c&H00FFFFFF&} your daily
+Dialogue: 0,0:02:04.52,0:02:05.14,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}choices
+Dialogue: 0,0:02:05.96,0:02:06.69,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Drop a {\c&H0000E5FF&}comment{\c&H00FFFFFF&}
+Dialogue: 0,0:02:06.71,0:02:07.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}below{\c&H00FFFFFF&} which of
+Dialogue: 0,0:02:07.63,0:02:08.44,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}these{\c&H00FFFFFF&} menu traps
+Dialogue: 0,0:02:08.45,0:02:08.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}has {\c&H0000E5FF&}caught{\c&H00FFFFFF&} you
+Dialogue: 0,0:02:08.92,0:02:09.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}off {\c&H0000E5FF&}guard{\c&H00FFFFFF&}
