@@ -3,70 +3,70 @@
     "scene": "scene_01",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-26793/",
-    "author": "SamuelFJohanns",
+    "page": "https://pixabay.com/videos/id-3168/",
+    "author": "Coverr-Free-Footage",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "man cyber silhouette",
-    "description": "A man in a dark hoodie backlit by a blue computer screen looking directly into the camera lens with a serious expression."
+    "query": "hand typing smartphone",
+    "description": "Macro shot of a man's thumb hovering over a glowing smartphone screen in a dark room."
   },
   {
     "scene": "scene_02",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-61621/",
-    "author": "wastedgeneration",
+    "page": "https://pixabay.com/videos/id-81185/",
+    "author": "ChristianBodhi",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "spinning metal gears",
-    "description": "Macro shot of mechanical gears spinning rapidly behind a digital overlay of binary code."
+    "query": "matrix code scrolling",
+    "description": "Abstract blue binary code streaming vertically down the screen like a digital waterfall."
   },
   {
     "scene": "scene_03",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-169446/",
-    "author": "magicmore",
+    "page": "https://pixabay.com/videos/id-122440/",
+    "author": "Engin_Akyurt",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "hand typing phone",
-    "description": "Close up of a man's thumb typing numbers quickly on a smartphone's numerical dial pad."
+    "query": "finger tapping screen",
+    "description": "Close-up of fingers rapidly tapping a numerical dial pad on a sleek modern phone."
   },
   {
     "scene": "scene_04",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-27228/",
-    "author": "RAHADstudio",
+    "page": "https://pixabay.com/videos/id-254330/",
+    "author": "Kaffeesüchtig",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "digital glitch texture",
-    "description": "A digital glitch effect distorting a city landscape at night with neon lights flickering."
+    "query": "neon voltage meter",
+    "description": "A digital oscilloscope showing a fluctuating electric green wave on a black background."
   },
   {
     "scene": "scene_05",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-216134/",
-    "author": "JoshuaWoroniecki",
+    "page": "https://pixabay.com/videos/id-284566/",
+    "author": "antonlukin",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
     "query": "hourglass sand falling",
-    "description": "Time-lapse of an hourglass with sand running out quickly against a dark background."
+    "description": "An hourglass with golden sand falling rapidly through the glass neck in slow motion."
   },
   {
     "scene": "scene_06",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-221299/",
-    "author": "choxyltd",
+    "page": "https://pixabay.com/videos/id-274039/",
+    "author": "Engin_Akyurt",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "data center servers",
-    "description": "Large server room with rows of blinking green and red LED lights in the dark."
+    "query": "wifi signal pulse",
+    "description": "A high-tech digital pulse radiating outward from a central point on a circuit board map."
   },
   {
     "scene": "scene_07",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-24497/",
-    "author": "ninosouza",
+    "page": "https://pixabay.com/videos/id-181376/",
+    "author": "NickyPe",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "man pointing camera",
-    "description": "A man pointing his finger directly at the viewer with a confident nod."
+    "query": "man pointing finger",
+    "description": "A man in a tech studio pointing directly at the camera with an encouraging expression."
   }
 ]

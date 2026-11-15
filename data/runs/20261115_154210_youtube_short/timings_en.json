@@ -1,11 +1,11 @@
 {
   "voice": "en-US-AriaNeural",
-  "duration": 41.9161,
+  "duration": 39.996054,
   "scenes": [
     {
       "scene": "scene_01",
       "start": 0.0,
-      "end": 2.352,
+      "end": 2.808,
       "words": [
         {
           "start": 0.097,
@@ -14,574 +14,529 @@
         },
         {
           "start": 0.286,
-          "end": 0.392,
-          "text": "are"
+          "end": 0.463,
+          "text": "need"
         },
         {
-          "start": 0.404,
-          "end": 0.628,
-          "text": "being"
+          "start": 0.475,
+          "end": 0.557,
+          "text": "to"
         },
         {
-          "start": 0.64,
-          "end": 0.97,
-          "text": "tracked"
+          "start": 0.569,
+          "end": 0.84,
+          "text": "type"
         },
         {
-          "start": 0.982,
-          "end": 1.182,
-          "text": "right"
+          "start": 0.852,
+          "end": 1.029,
+          "text": "this"
         },
         {
-          "start": 1.194,
-          "end": 1.524,
-          "text": "now"
+          "start": 1.041,
+          "end": 1.312,
+          "text": "code"
+        },
+        {
+          "start": 1.324,
+          "end": 1.984,
+          "text": "immediately"
         }
       ]
     },
     {
       "scene": "scene_02",
-      "start": 2.442,
-      "end": 9.834,
+      "start": 2.898,
+      "end": 8.418,
       "words": [
         {
-          "start": 2.539,
-          "end": 2.905,
+          "start": 2.995,
+          "end": 3.373,
           "text": "Most"
         },
         {
-          "start": 2.917,
-          "end": 3.2,
+          "start": 3.384,
+          "end": 3.691,
           "text": "people"
         },
         {
-          "start": 3.211,
-          "end": 3.447,
-          "text": "think"
+          "start": 3.703,
+          "end": 4.068,
+          "text": "ignore"
         },
         {
-          "start": 3.459,
-          "end": 3.6,
+          "start": 4.08,
+          "end": 4.21,
           "text": "their"
         },
         {
-          "start": 3.612,
-          "end": 3.907,
-          "text": "phone"
+          "start": 4.222,
+          "end": 4.575,
+          "text": "phone's"
         },
         {
-          "start": 3.919,
-          "end": 4.284,
-          "text": "settings"
-        },
-        {
-          "start": 4.296,
-          "end": 4.497,
-          "text": "show"
-        },
-        {
-          "start": 4.509,
-          "end": 5.027,
-          "text": "everything"
-        },
-        {
-          "start": 5.346,
-          "end": 5.475,
-          "text": "but"
-        },
-        {
-          "start": 5.487,
-          "end": 6.313,
-          "text": "manufacturers"
-        },
-        {
-          "start": 6.325,
-          "end": 6.619,
-          "text": "hide"
-        },
-        {
-          "start": 6.631,
-          "end": 6.725,
-          "text": "the"
-        },
-        {
-          "start": 6.737,
-          "end": 6.95,
-          "text": "real"
-        },
-        {
-          "start": 6.961,
-          "end": 7.622,
-          "text": "diagnostic"
-        },
-        {
-          "start": 7.633,
-          "end": 8.011,
-          "text": "data"
-        },
-        {
-          "start": 8.023,
-          "end": 8.152,
-          "text": "in"
-        },
-        {
-          "start": 8.164,
-          "end": 8.211,
-          "text": "a"
-        },
-        {
-          "start": 8.223,
-          "end": 8.565,
+          "start": 4.587,
+          "end": 4.894,
           "text": "secret"
         },
         {
-          "start": 8.577,
-          "end": 9.001,
-          "text": "vault"
+          "start": 4.906,
+          "end": 5.153,
+          "text": "health"
+        },
+        {
+          "start": 5.165,
+          "end": 5.507,
+          "text": "menu"
+        },
+        {
+          "start": 5.519,
+          "end": 5.684,
+          "text": "where"
+        },
+        {
+          "start": 5.696,
+          "end": 5.778,
+          "text": "the"
+        },
+        {
+          "start": 5.79,
+          "end": 6.026,
+          "text": "real"
+        },
+        {
+          "start": 6.038,
+          "end": 6.674,
+          "text": "diagnostic"
+        },
+        {
+          "start": 6.686,
+          "end": 6.957,
+          "text": "data"
+        },
+        {
+          "start": 6.969,
+          "end": 7.099,
+          "text": "is"
+        },
+        {
+          "start": 7.111,
+          "end": 7.594,
+          "text": "buried"
         }
       ]
     },
     {
       "scene": "scene_03",
-      "start": 9.924,
-      "end": 16.548,
+      "start": 8.508,
+      "end": 15.132,
       "words": [
         {
-          "start": 10.021,
-          "end": 10.34,
+          "start": 8.605,
+          "end": 8.924,
           "text": "Open"
         },
         {
-          "start": 10.351,
-          "end": 10.469,
+          "start": 8.935,
+          "end": 9.065,
           "text": "your"
         },
         {
-          "start": 10.481,
-          "end": 10.917,
+          "start": 9.077,
+          "end": 9.525,
           "text": "dialer"
         },
         {
-          "start": 10.929,
-          "end": 11.035,
+          "start": 9.537,
+          "end": 9.643,
           "text": "and"
         },
         {
-          "start": 11.047,
-          "end": 11.318,
+          "start": 9.655,
+          "end": 9.926,
           "text": "type"
         },
         {
-          "start": 11.33,
-          "end": 12.993,
+          "start": 9.938,
+          "end": 11.6,
           "text": "star-hash-zero-two-two-eight-hash"
         },
         {
-          "start": 13.005,
-          "end": 13.134,
+          "start": 11.612,
+          "end": 11.73,
           "text": "to"
         },
         {
-          "start": 13.146,
-          "end": 13.582,
+          "start": 11.742,
+          "end": 12.19,
           "text": "unlock"
         },
         {
-          "start": 13.594,
-          "end": 13.7,
+          "start": 12.202,
+          "end": 12.273,
           "text": "the"
         },
         {
-          "start": 13.712,
-          "end": 13.936,
-          "text": "deep"
+          "start": 12.284,
+          "end": 12.567,
+          "text": "hidden"
         },
         {
-          "start": 13.948,
-          "end": 14.314,
+          "start": 12.579,
+          "end": 12.945,
           "text": "battery"
         },
         {
-          "start": 14.325,
-          "end": 14.738,
+          "start": 12.957,
+          "end": 13.334,
           "text": "status"
         },
         {
-          "start": 14.75,
-          "end": 15.057,
-          "text": "menu"
+          "start": 13.346,
+          "end": 13.652,
+          "text": "screen"
         },
         {
-          "start": 15.068,
-          "end": 15.717,
+          "start": 13.664,
+          "end": 14.289,
           "text": "instantly"
         }
       ]
     },
     {
       "scene": "scene_04",
-      "start": 16.638,
-      "end": 21.63,
+      "start": 15.222,
+      "end": 21.462,
       "words": [
         {
-          "start": 16.735,
-          "end": 16.912,
+          "start": 15.319,
+          "end": 15.484,
           "text": "But"
         },
         {
-          "start": 16.924,
-          "end": 17.148,
+          "start": 15.496,
+          "end": 15.732,
           "text": "here"
         },
         {
-          "start": 17.16,
-          "end": 17.266,
+          "start": 15.744,
+          "end": 15.85,
           "text": "is"
         },
         {
-          "start": 17.278,
-          "end": 17.372,
+          "start": 15.862,
+          "end": 15.956,
           "text": "the"
         },
         {
-          "start": 17.384,
-          "end": 17.714,
-          "text": "creepy"
+          "start": 15.968,
+          "end": 16.322,
+          "text": "crazy"
         },
         {
-          "start": 17.726,
-          "end": 18.08,
+          "start": 16.333,
+          "end": 16.758,
           "text": "part"
         },
         {
-          "start": 18.292,
-          "end": 18.41,
-          "text": "you"
+          "start": 17.569,
+          "end": 17.899,
+          "text": "Watch"
         },
         {
-          "start": 18.422,
-          "end": 18.575,
-          "text": "need"
+          "start": 17.911,
+          "end": 18.017,
+          "text": "how"
         },
         {
-          "start": 18.587,
-          "end": 18.657,
-          "text": "to"
+          "start": 18.029,
+          "end": 18.194,
+          "text": "your"
         },
         {
-          "start": 18.669,
-          "end": 18.893,
-          "text": "look"
+          "start": 18.205,
+          "end": 18.618,
+          "text": "voltage"
         },
         {
-          "start": 18.905,
-          "end": 18.964,
-          "text": "at"
+          "start": 18.63,
+          "end": 19.019,
+          "text": "drops"
         },
         {
-          "start": 18.976,
-          "end": 19.047,
+          "start": 19.031,
+          "end": 19.149,
+          "text": "when"
+        },
+        {
+          "start": 19.161,
+          "end": 19.231,
           "text": "the"
         },
         {
-          "start": 19.058,
-          "end": 19.471,
-          "text": "network"
+          "start": 19.243,
+          "end": 19.562,
+          "text": "screen"
         },
         {
-          "start": 19.483,
-          "end": 19.73,
-          "text": "sync"
+          "start": 19.573,
+          "end": 19.998,
+          "text": "brightness"
         },
         {
-          "start": 19.742,
-          "end": 20.202,
-          "text": "status"
-        },
-        {
-          "start": 20.214,
-          "end": 20.285,
-          "text": "at"
-        },
-        {
-          "start": 20.297,
-          "end": 20.379,
-          "text": "the"
-        },
-        {
-          "start": 20.391,
-          "end": 20.815,
-          "text": "bottom"
+          "start": 20.01,
+          "end": 20.647,
+          "text": "changes"
         }
       ]
     },
     {
       "scene": "scene_05",
-      "start": 21.72,
-      "end": 28.776,
+      "start": 21.552,
+      "end": 27.96,
       "words": [
         {
-          "start": 21.817,
-          "end": 21.994,
+          "start": 21.649,
+          "end": 21.814,
           "text": "If"
         },
         {
-          "start": 22.006,
-          "end": 22.136,
+          "start": 21.826,
+          "end": 21.944,
           "text": "your"
         },
         {
-          "start": 22.147,
-          "end": 22.525,
+          "start": 21.956,
+          "end": 22.333,
           "text": "battery"
         },
         {
-          "start": 22.537,
-          "end": 22.937,
+          "start": 22.345,
+          "end": 22.758,
           "text": "cycles"
         },
         {
-          "start": 22.949,
-          "end": 23.079,
-          "text": "are"
+          "start": 22.769,
+          "end": 22.876,
+          "text": "have"
         },
         {
-          "start": 23.091,
-          "end": 23.327,
-          "text": "over"
+          "start": 22.887,
+          "end": 23.229,
+          "text": "passed"
         },
         {
-          "start": 23.338,
-          "end": 23.586,
+          "start": 23.241,
+          "end": 23.453,
           "text": "five"
         },
         {
-          "start": 23.598,
-          "end": 23.963,
+          "start": 23.465,
+          "end": 23.831,
           "text": "hundred"
         },
         {
-          "start": 24.305,
-          "end": 24.447,
+          "start": 24.161,
+          "end": 24.291,
           "text": "your"
         },
         {
-          "start": 24.459,
-          "end": 25.013,
-          "text": "performance"
+          "start": 24.302,
+          "end": 24.633,
+          "text": "phone's"
         },
         {
-          "start": 25.025,
-          "end": 25.143,
+          "start": 24.644,
+          "end": 25.222,
+          "text": "processor"
+        },
+        {
+          "start": 25.234,
+          "end": 25.364,
           "text": "is"
         },
         {
-          "start": 25.154,
-          "end": 25.39,
+          "start": 25.376,
+          "end": 25.718,
+          "text": "likely"
+        },
+        {
+          "start": 25.729,
+          "end": 25.953,
           "text": "being"
         },
         {
-          "start": 25.402,
-          "end": 26.015,
-          "text": "intentionally"
-        },
-        {
-          "start": 26.027,
-          "end": 26.511,
+          "start": 25.965,
+          "end": 26.366,
           "text": "throttled"
         },
         {
-          "start": 26.522,
-          "end": 26.652,
-          "text": "by"
+          "start": 26.378,
+          "end": 26.508,
+          "text": "for"
         },
         {
-          "start": 26.664,
-          "end": 27.065,
-          "text": "planned"
-        },
-        {
-          "start": 27.077,
-          "end": 27.961,
-          "text": "obsolescence"
+          "start": 26.519,
+          "end": 27.144,
+          "text": "stability"
         }
       ]
     },
     {
       "scene": "scene_06",
-      "start": 28.866,
-      "end": 36.21,
+      "start": 28.05,
+      "end": 34.314,
       "words": [
         {
-          "start": 28.963,
-          "end": 29.27,
-          "text": "Check"
+          "start": 28.147,
+          "end": 28.69,
+          "text": "Verify"
         },
         {
-          "start": 29.282,
-          "end": 29.388,
-          "text": "if"
-        },
-        {
-          "start": 29.399,
-          "end": 29.859,
-          "text": "external"
-        },
-        {
-          "start": 29.871,
-          "end": 30.225,
-          "text": "syncing"
-        },
-        {
-          "start": 30.237,
-          "end": 30.355,
-          "text": "is"
-        },
-        {
-          "start": 30.366,
-          "end": 30.791,
-          "text": "active"
-        },
-        {
-          "start": 31.098,
-          "end": 31.204,
-          "text": "if"
-        },
-        {
-          "start": 31.216,
-          "end": 31.333,
-          "text": "it"
-        },
-        {
-          "start": 31.345,
-          "end": 31.581,
-          "text": "says"
-        },
-        {
-          "start": 31.593,
-          "end": 32.23,
-          "text": "established"
-        },
-        {
-          "start": 32.466,
-          "end": 32.76,
-          "text": "someone"
-        },
-        {
-          "start": 32.772,
-          "end": 33.008,
-          "text": "else"
-        },
-        {
-          "start": 33.02,
-          "end": 33.126,
-          "text": "is"
-        },
-        {
-          "start": 33.138,
-          "end": 33.562,
-          "text": "receiving"
-        },
-        {
-          "start": 33.574,
-          "end": 33.68,
+          "start": 28.701,
+          "end": 28.866,
           "text": "your"
         },
         {
-          "start": 33.692,
-          "end": 34.199,
-          "text": "location"
+          "start": 28.878,
+          "end": 29.267,
+          "text": "network"
         },
         {
-          "start": 34.211,
-          "end": 34.553,
-          "text": "data"
+          "start": 29.279,
+          "end": 29.727,
+          "text": "connection"
         },
         {
-          "start": 34.565,
-          "end": 34.706,
-          "text": "in"
+          "start": 29.739,
+          "end": 30.022,
+          "text": "health"
         },
         {
-          "start": 34.718,
-          "end": 34.93,
-          "text": "real"
+          "start": 30.034,
+          "end": 30.093,
+          "text": "at"
         },
         {
-          "start": 34.942,
-          "end": 35.366,
-          "text": "time"
+          "start": 30.105,
+          "end": 30.187,
+          "text": "the"
+        },
+        {
+          "start": 30.199,
+          "end": 30.588,
+          "text": "bottom"
+        },
+        {
+          "start": 30.871,
+          "end": 31.119,
+          "text": "poor"
+        },
+        {
+          "start": 31.131,
+          "end": 31.508,
+          "text": "signal"
+        },
+        {
+          "start": 31.52,
+          "end": 31.909,
+          "text": "logic"
+        },
+        {
+          "start": 31.921,
+          "end": 32.05,
+          "text": "can"
+        },
+        {
+          "start": 32.062,
+          "end": 32.333,
+          "text": "drain"
+        },
+        {
+          "start": 32.345,
+          "end": 32.451,
+          "text": "your"
+        },
+        {
+          "start": 32.463,
+          "end": 32.864,
+          "text": "power"
+        },
+        {
+          "start": 32.876,
+          "end": 33.477,
+          "text": "overnight"
         }
       ]
     },
     {
       "scene": "scene_07",
-      "start": 36.3,
-      "end": 41.916,
+      "start": 34.404,
+      "end": 39.996,
       "words": [
         {
-          "start": 36.397,
-          "end": 37.022,
+          "start": 34.501,
+          "end": 35.126,
           "text": "Subscribe"
         },
         {
-          "start": 37.034,
-          "end": 37.175,
+          "start": 35.138,
+          "end": 35.268,
           "text": "for"
         },
         {
-          "start": 37.187,
-          "end": 37.399,
+          "start": 35.279,
+          "end": 35.492,
           "text": "more"
         },
         {
-          "start": 37.411,
-          "end": 37.789,
-          "text": "secret"
+          "start": 35.504,
+          "end": 35.787,
+          "text": "phone"
         },
         {
-          "start": 37.8,
-          "end": 38.178,
-          "text": "codes"
+          "start": 35.798,
+          "end": 36.235,
+          "text": "secrets"
         },
         {
-          "start": 38.19,
-          "end": 38.308,
+          "start": 36.246,
+          "end": 36.388,
           "text": "and"
         },
         {
-          "start": 38.319,
-          "end": 38.72,
+          "start": 36.4,
+          "end": 36.801,
           "text": "comment"
         },
         {
-          "start": 38.732,
-          "end": 38.85,
+          "start": 36.813,
+          "end": 36.93,
           "text": "your"
         },
         {
-          "start": 38.862,
-          "end": 39.216,
+          "start": 36.942,
+          "end": 37.308,
           "text": "battery"
         },
         {
-          "start": 39.227,
-          "end": 39.558,
+          "start": 37.32,
+          "end": 37.65,
           "text": "cycle"
         },
         {
-          "start": 39.569,
-          "end": 39.817,
+          "start": 37.662,
+          "end": 37.909,
           "text": "count"
         },
         {
-          "start": 39.829,
-          "end": 40.218,
+          "start": 37.921,
+          "end": 38.298,
           "text": "below"
         },
         {
-          "start": 40.536,
-          "end": 41.079,
+          "start": 38.629,
+          "end": 39.171,
           "text": "because"
         }
       ]
