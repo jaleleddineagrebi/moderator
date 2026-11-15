@@ -6,7 +6,7 @@ from moderator.tools.visual_rules import PEOPLE_RULE
 from moderator.tools.languages import LANGS, describe, lang_schema, names, normalize_langs
 
 BUDGET_SECONDS = (32, 46)  # crisp high-retention Shorts sweet spot (~34-44s final video; >90% completion rate)
-LONG_BUDGET_SECONDS = (150, 240)  # 2.5 to 4-minute high-retention Deep-Dive video
+LONG_BUDGET_SECONDS = (95, 135)  # 1.5 to 2.2-minute fast-paced Deep-Dive (~6-7s per scene cut for high retention)
 
 
 def make_schema(langs: list[str], *, is_long: bool = False) -> dict:

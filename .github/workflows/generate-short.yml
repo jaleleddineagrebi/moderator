@@ -8,13 +8,11 @@ name: Generate Short
 # or trigger the `Upload Short` workflow).
 on:
   schedule:
-    # 4 Viral Shorts per day (rotates across 4 viral pillars automatically)
+    # 4 Viral Shorts per day (rotates across 4 viral pillars automatically; 100% 9:16 Shorts Feed)
     - cron: "17 2 * * *"      # 02:17 UTC (Slot 1: Early Morning Short)
     - cron: "17 8 * * *"      # 08:17 UTC (Slot 2: Morning Prime Short)
     - cron: "17 14 * * *"     # 14:17 UTC (Slot 3: Afternoon Prime Short)
     - cron: "17 20 * * *"     # 20:17 UTC (Slot 4: Evening Prime Short)
-    # 2 Widescreen 16:9 Long-Form Deep-Dive videos per week (Wednesday & Sunday 16:47 UTC)
-    - cron: "47 16 * * 3,0"   # 16:47 UTC (Long-Form 16:9 Deep-Dive Funnel)
   workflow_dispatch:
     inputs:
       format:
@@ -137,7 +135,7 @@ jobs:
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
-          INPUT_FORMAT: ${{ inputs.format || (github.event.schedule == '47 16 * * 3,0' && 'long') || 'short' }}
+          INPUT_FORMAT: ${{ inputs.format || 'short' }}
           INPUT_PILLAR: ${{ inputs.pillar }}
           INPUT_TOPIC: ${{ inputs.topic }}
           INPUT_LANGS: ${{ inputs.languages || vars.MODERATOR_LANGUAGES }}
