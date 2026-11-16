@@ -9,11 +9,11 @@
         "en": "STARE AT THE DOT"
       },
       "visual": {
-        "description": "A stark black circle perfectly centered on a clean white background.",
+        "description": "A sharp, solid black circle pulsing slightly in the center of a minimalist white frame.",
         "search_terms": [
-          "black circle center",
+          "black circle pulsing",
           "minimalist dot",
-          "focus point"
+          "focal point animation"
         ],
         "prefer": "video"
       },
@@ -21,17 +21,17 @@
     },
     {
       "vo": {
-        "en": "Keep your eyes locked. We're about to force your brain to see a ghost."
+        "en": "Keep your eyes locked right there. Your brain is about to break reality."
       },
       "on_screen": {
-        "en": "BRAIN GLITCH INCOMING"
+        "en": "REALITY IS BREAKING"
       },
       "visual": {
-        "description": "Distorted digital glitch effects flickering across a dark monitor.",
+        "description": "Green binary code falling rapidly down a black screen in a matrix-style data stream.",
         "search_terms": [
-          "digital glitch screen",
-          "cyber static noise",
-          "vhs distortion"
+          "falling binary code",
+          "digital data rain",
+          "cyber security screen"
         ],
         "prefer": "video"
       },
@@ -39,17 +39,17 @@
     },
     {
       "vo": {
-        "en": "Focus on the center while the magenta circles spin. Your vision is already adapting."
+        "en": "Focus hard while the purple circles rotate. Do not blink or look away."
       },
       "on_screen": {
         "en": "DON'T BLINK"
       },
       "visual": {
-        "description": "Extreme macro close-up of a man's eye with the pupil subtly dilating.",
+        "description": "An extreme macro close-up of a man's eye staring intensely with a reflecting light.",
         "search_terms": [
-          "macro human eye",
-          "pupil dilating",
-          "intense stare man"
+          "macro male eye",
+          "staring pupil",
+          "human eye iris"
         ],
         "prefer": "video"
       },
@@ -57,17 +57,17 @@
     },
     {
       "vo": {
-        "en": "Wait, here is the creepy part. The color is about to vanish completely."
+        "en": "Wait, here is the creepy part. The colors are about to vanish entirely."
       },
       "on_screen": {
-        "en": "WATCH IT VANISH"
+        "en": "WATCH THEM DISAPPEAR"
       },
       "visual": {
-        "description": "Thick white smoke or fog slowly clearing to reveal a dark, empty landscape.",
+        "description": "Dark, heavy storm clouds moving rapidly across a twilight sky, creating a sense of transition.",
         "search_terms": [
-          "fog disappearing mountain",
-          "vanishing smoke",
-          "ink fading water"
+          "fast moving clouds",
+          "time lapse storm",
+          "dark sky motion"
         ],
         "prefer": "video"
       },
@@ -75,17 +75,17 @@
     },
     {
       "vo": {
-        "en": "See that? A ghostly green orb just appeared, but there is no green here."
+        "en": "Look closely. A ghostly green orb is now circling, but there is zero green on this screen."
       },
       "on_screen": {
-        "en": "GHOSTLY GREEN APPEARS"
+        "en": "GHOST COLOR DETECTED"
       },
       "visual": {
-        "description": "Bright green aurora borealis lights waving across a starry night sky.",
+        "description": "Vibrant emerald green laser beams cutting through a dark room filled with haze.",
         "search_terms": [
-          "green aurora motion",
-          "emerald neon glow",
-          "green laser light"
+          "green laser beams",
+          "emerald light scan",
+          "neon light tunnel"
         ],
         "prefer": "video"
       },
@@ -93,17 +93,17 @@
     },
     {
       "vo": {
-        "en": "It is the Troxler Effect. Your neurons got tired, so your mind filled the gap."
+        "en": "This is the Lilac Chaser illusion. Your neurons are over-stimulated, forcing your mind to invent a color."
       },
       "on_screen": {
-        "en": "BRAIN FILLING GAPS"
+        "en": "LILAC CHASER ILLUSION"
       },
       "visual": {
-        "description": "Intricate golden clockwork gears and cogs turning together in a dark void.",
+        "description": "Intricate golden clockwork gears and cogs rotating in perfect synchronization on a dark background.",
         "search_terms": [
-          "cogs turning animation",
-          "mechanical gears",
-          "abstract clockwork"
+          "mechanical gears moving",
+          "clockwork cogs",
+          "rotating engine parts"
         ],
         "prefer": "video"
       },
@@ -111,17 +111,17 @@
     },
     {
       "vo": {
-        "en": "Comment YES if it worked and subscribe for tomorrow's test, because you must..."
+        "en": "Subscribe for tomorrow's brain test and comment YES if it worked, because you must..."
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "A man's hand holding a smartphone and tapping the screen with his thumb.",
+        "description": "A man's hand interacting with a high-tech glowing interface on a dark glass table.",
         "search_terms": [
-          "finger tapping phone",
-          "hand clicking screen",
-          "smartphone interaction"
+          "hand touching screen",
+          "digital interface interaction",
+          "tapping glowing button"
         ],
         "prefer": "video"
       },
@@ -133,6 +133,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 32.0
+    "en": 33.5
   }
 }
