@@ -12,4 +12,4 @@
 - ✅ **visual diversity**: all scenes use distinct footage
 - ✅ **audio licenses**: music: original work, no third-party rights; sfx: original work, no third-party rights; voice: synthetic voice; no third-party performance rights
 - ❌ **visual_fit review** [en]: The visual queries for scenes 01 through 06 do not include the Lilac Chaser illusion, which is the core subject of the video. The narration asks the viewer to 'stare at the black dot' and 'watch the purple circles', but the stock queries are for 'black circle pulsing', 'binary code', 'male eye', 'clouds', 'green laser beams', and 'gears'. Fix: Source or generate a specific 'Lilac Chaser optical illusion' video clip for scenes 01-06 so the narration matches the visuals. → sent to visuals
-- ❌ **people rule**: scene_07: visible are the hands and bare legs of a woman in all three frames. Replace with footage without women (a face-only close-up is the only exception). → sent to visuals
+- ✅ **people rule**: no women beyond face close-ups in 7 scenes and 1 thumbnail(s)
