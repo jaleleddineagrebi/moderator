@@ -1,0 +1,525 @@
+{
+  "voice": "en-US-AriaNeural",
+  "duration": 36.972063,
+  "scenes": [
+    {
+      "scene": "scene_01",
+      "start": 0.0,
+      "end": 2.424,
+      "words": [
+        {
+          "start": 0.097,
+          "end": 0.357,
+          "text": "Look"
+        },
+        {
+          "start": 0.368,
+          "end": 0.463,
+          "text": "at"
+        },
+        {
+          "start": 0.475,
+          "end": 0.592,
+          "text": "your"
+        },
+        {
+          "start": 0.604,
+          "end": 1.017,
+          "text": "pupils"
+        },
+        {
+          "start": 1.029,
+          "end": 1.229,
+          "text": "right"
+        },
+        {
+          "start": 1.241,
+          "end": 1.595,
+          "text": "now"
+        }
+      ]
+    },
+    {
+      "scene": "scene_02",
+      "start": 2.514,
+      "end": 7.314,
+      "words": [
+        {
+          "start": 2.611,
+          "end": 2.882,
+          "text": "Your"
+        },
+        {
+          "start": 2.894,
+          "end": 3.13,
+          "text": "eyes"
+        },
+        {
+          "start": 3.142,
+          "end": 3.236,
+          "text": "are"
+        },
+        {
+          "start": 3.248,
+          "end": 3.661,
+          "text": "snitching"
+        },
+        {
+          "start": 3.673,
+          "end": 3.779,
+          "text": "on"
+        },
+        {
+          "start": 3.79,
+          "end": 3.908,
+          "text": "your"
+        },
+        {
+          "start": 3.92,
+          "end": 4.309,
+          "text": "deepest"
+        },
+        {
+          "start": 4.321,
+          "end": 4.781,
+          "text": "secrets"
+        },
+        {
+          "start": 4.793,
+          "end": 5.052,
+          "text": "every"
+        },
+        {
+          "start": 5.064,
+          "end": 5.371,
+          "text": "single"
+        },
+        {
+          "start": 5.382,
+          "end": 5.595,
+          "text": "day"
+        },
+        {
+          "start": 5.606,
+          "end": 5.925,
+          "text": "without"
+        },
+        {
+          "start": 5.937,
+          "end": 6.043,
+          "text": "you"
+        },
+        {
+          "start": 6.055,
+          "end": 6.479,
+          "text": "knowing"
+        }
+      ]
+    },
+    {
+      "scene": "scene_03",
+      "start": 7.404,
+      "end": 14.124,
+      "words": [
+        {
+          "start": 7.501,
+          "end": 7.831,
+          "text": "Open"
+        },
+        {
+          "start": 7.843,
+          "end": 7.949,
+          "text": "your"
+        },
+        {
+          "start": 7.961,
+          "end": 8.209,
+          "text": "front"
+        },
+        {
+          "start": 8.221,
+          "end": 8.704,
+          "text": "camera"
+        },
+        {
+          "start": 9.515,
+          "end": 9.963,
+          "text": "Now"
+        },
+        {
+          "start": 10.14,
+          "end": 10.34,
+          "text": "think"
+        },
+        {
+          "start": 10.352,
+          "end": 10.435,
+          "text": "of"
+        },
+        {
+          "start": 10.446,
+          "end": 10.765,
+          "text": "someone"
+        },
+        {
+          "start": 10.777,
+          "end": 10.883,
+          "text": "you’re"
+        },
+        {
+          "start": 10.895,
+          "end": 11.26,
+          "text": "truly"
+        },
+        {
+          "start": 11.272,
+          "end": 11.755,
+          "text": "obsessed"
+        },
+        {
+          "start": 11.767,
+          "end": 11.944,
+          "text": "with"
+        },
+        {
+          "start": 11.956,
+          "end": 12.074,
+          "text": "or"
+        },
+        {
+          "start": 12.086,
+          "end": 12.451,
+          "text": "deeply"
+        },
+        {
+          "start": 12.463,
+          "end": 12.923,
+          "text": "attracted"
+        },
+        {
+          "start": 12.935,
+          "end": 13.277,
+          "text": "to"
+        }
+      ]
+    },
+    {
+      "scene": "scene_04",
+      "start": 14.214,
+      "end": 16.998,
+      "words": [
+        {
+          "start": 14.311,
+          "end": 14.712,
+          "text": "Wait"
+        },
+        {
+          "start": 14.936,
+          "end": 15.148,
+          "text": "here"
+        },
+        {
+          "start": 15.16,
+          "end": 15.255,
+          "text": "is"
+        },
+        {
+          "start": 15.266,
+          "end": 15.361,
+          "text": "the"
+        },
+        {
+          "start": 15.373,
+          "end": 15.715,
+          "text": "creepy"
+        },
+        {
+          "start": 15.726,
+          "end": 16.174,
+          "text": "part"
+        }
+      ]
+    },
+    {
+      "scene": "scene_05",
+      "start": 17.088,
+      "end": 24.552,
+      "words": [
+        {
+          "start": 17.185,
+          "end": 17.456,
+          "text": "Your"
+        },
+        {
+          "start": 17.468,
+          "end": 17.999,
+          "text": "autonomic"
+        },
+        {
+          "start": 18.011,
+          "end": 18.353,
+          "text": "nervous"
+        },
+        {
+          "start": 18.364,
+          "end": 18.754,
+          "text": "system"
+        },
+        {
+          "start": 18.765,
+          "end": 19.025,
+          "text": "just"
+        },
+        {
+          "start": 19.037,
+          "end": 19.367,
+          "text": "flooded"
+        },
+        {
+          "start": 19.379,
+          "end": 19.508,
+          "text": "your"
+        },
+        {
+          "start": 19.52,
+          "end": 19.815,
+          "text": "brain"
+        },
+        {
+          "start": 19.827,
+          "end": 19.968,
+          "text": "with"
+        },
+        {
+          "start": 19.98,
+          "end": 20.522,
+          "text": "dopamine"
+        },
+        {
+          "start": 20.888,
+          "end": 21.254,
+          "text": "forcing"
+        },
+        {
+          "start": 21.265,
+          "end": 21.383,
+          "text": "your"
+        },
+        {
+          "start": 21.395,
+          "end": 21.82,
+          "text": "pupils"
+        },
+        {
+          "start": 21.831,
+          "end": 21.914,
+          "text": "to"
+        },
+        {
+          "start": 21.926,
+          "end": 22.409,
+          "text": "dilate"
+        },
+        {
+          "start": 22.421,
+          "end": 22.562,
+          "text": "by"
+        },
+        {
+          "start": 22.574,
+          "end": 23.164,
+          "text": "forty-five"
+        },
+        {
+          "start": 23.176,
+          "end": 23.718,
+          "text": "percent"
+        }
+      ]
+    },
+    {
+      "scene": "scene_06",
+      "start": 24.642,
+      "end": 31.05,
+      "words": [
+        {
+          "start": 24.739,
+          "end": 24.892,
+          "text": "It"
+        },
+        {
+          "start": 24.904,
+          "end": 24.999,
+          "text": "is"
+        },
+        {
+          "start": 25.01,
+          "end": 25.081,
+          "text": "a"
+        },
+        {
+          "start": 25.093,
+          "end": 25.8,
+          "text": "biological"
+        },
+        {
+          "start": 25.812,
+          "end": 26.154,
+          "text": "glitch"
+        },
+        {
+          "start": 26.166,
+          "end": 26.26,
+          "text": "you"
+        },
+        {
+          "start": 26.272,
+          "end": 26.602,
+          "text": "cannot"
+        },
+        {
+          "start": 26.614,
+          "end": 26.992,
+          "text": "stop"
+        },
+        {
+          "start": 27.275,
+          "end": 27.817,
+          "text": "exposing"
+        },
+        {
+          "start": 27.829,
+          "end": 27.935,
+          "text": "your"
+        },
+        {
+          "start": 27.947,
+          "end": 28.206,
+          "text": "true"
+        },
+        {
+          "start": 28.218,
+          "end": 28.654,
+          "text": "feelings"
+        },
+        {
+          "start": 28.666,
+          "end": 28.76,
+          "text": "to"
+        },
+        {
+          "start": 28.772,
+          "end": 29.173,
+          "text": "anyone"
+        },
+        {
+          "start": 29.185,
+          "end": 29.55,
+          "text": "watching"
+        },
+        {
+          "start": 29.562,
+          "end": 29.668,
+          "text": "you"
+        },
+        {
+          "start": 29.68,
+          "end": 30.234,
+          "text": "closely"
+        }
+      ]
+    },
+    {
+      "scene": "scene_07",
+      "start": 31.14,
+      "end": 36.972,
+      "words": [
+        {
+          "start": 31.237,
+          "end": 31.85,
+          "text": "Subscribe"
+        },
+        {
+          "start": 31.862,
+          "end": 32.004,
+          "text": "for"
+        },
+        {
+          "start": 32.015,
+          "end": 32.239,
+          "text": "more"
+        },
+        {
+          "start": 32.251,
+          "end": 32.499,
+          "text": "brain"
+        },
+        {
+          "start": 32.511,
+          "end": 32.817,
+          "text": "hacks"
+        },
+        {
+          "start": 32.829,
+          "end": 32.923,
+          "text": "and"
+        },
+        {
+          "start": 32.935,
+          "end": 33.336,
+          "text": "comment"
+        },
+        {
+          "start": 33.348,
+          "end": 33.631,
+          "text": "WIDE"
+        },
+        {
+          "start": 33.643,
+          "end": 33.725,
+          "text": "if"
+        },
+        {
+          "start": 33.737,
+          "end": 33.961,
+          "text": "yours"
+        },
+        {
+          "start": 33.973,
+          "end": 34.457,
+          "text": "changed"
+        },
+        {
+          "start": 34.669,
+          "end": 34.81,
+          "text": "which"
+        },
+        {
+          "start": 34.822,
+          "end": 34.905,
+          "text": "is"
+        },
+        {
+          "start": 34.916,
+          "end": 35.388,
+          "text": "exactly"
+        },
+        {
+          "start": 35.4,
+          "end": 35.553,
+          "text": "why"
+        },
+        {
+          "start": 35.565,
+          "end": 35.718,
+          "text": "you"
+        },
+        {
+          "start": 35.73,
+          "end": 36.155,
+          "text": "should"
+        }
+      ]
+    }
+  ]
+}
