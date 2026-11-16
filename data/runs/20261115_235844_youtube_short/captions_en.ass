@@ -1,0 +1,55 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:02.32,Headline,,0,0,0,,{\fad(150,150)}STARE AT THE DOT
+Dialogue: 1,0:00:02.42,0:00:07.47,Headline,,0,0,0,,{\fad(150,150)}BRAIN GLITCH INCOMING
+Dialogue: 1,0:00:07.57,0:00:13.52,Headline,,0,0,0,,{\fad(150,150)}DON'T BLINK
+Dialogue: 1,0:00:13.62,0:00:19.27,Headline,,0,0,0,,{\fad(150,150)}WATCH IT VANISH
+Dialogue: 1,0:00:19.37,0:00:24.98,Headline,,0,0,0,,{\fad(150,150)}GHOSTLY GREEN APPEARS
+Dialogue: 1,0:00:25.08,0:00:31.11,Headline,,0,0,0,,{\fad(150,150)}BRAIN FILLING GAPS
+Dialogue: 1,0:00:31.21,0:00:36.66,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 0,0:00:00.10,0:00:00.71,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Stare{\c&H00FFFFFF&} at the
+Dialogue: 0,0:00:00.72,0:00:01.47,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}black{\c&H00FFFFFF&} dot
+Dialogue: 0,0:00:02.47,0:00:03.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Keep{\c&H00FFFFFF&} your eyes
+Dialogue: 0,0:00:03.16,0:00:03.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}locked
+Dialogue: 0,0:00:04.45,0:00:05.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}We're{\c&H00FFFFFF&} about to
+Dialogue: 0,0:00:05.01,0:00:05.74,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}force{\c&H00FFFFFF&} your brain
+Dialogue: 0,0:00:05.75,0:00:06.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to see a
+Dialogue: 0,0:00:06.11,0:00:06.60,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}ghost
+Dialogue: 0,0:00:07.62,0:00:08.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Focus{\c&H00FFFFFF&} on the
+Dialogue: 0,0:00:08.26,0:00:08.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}center{\c&H00FFFFFF&} while the
+Dialogue: 0,0:00:08.89,0:00:10.14,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}magenta{\c&H00FFFFFF&} circles spin
+Dialogue: 0,0:00:10.97,0:00:11.64,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}vision{\c&H00FFFFFF&} is
+Dialogue: 0,0:00:11.65,0:00:12.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}already {\c&H0000E5FF&}adapting{\c&H00FFFFFF&}
+Dialogue: 0,0:00:13.66,0:00:14.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Wait{\c&H00FFFFFF&} here is
+Dialogue: 0,0:00:14.62,0:00:15.53,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}creepy{\c&H00FFFFFF&} part
+Dialogue: 0,0:00:16.34,0:00:16.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}The {\c&H0000E5FF&}color{\c&H00FFFFFF&} is
+Dialogue: 0,0:00:16.94,0:00:17.74,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}about to {\c&H0000E5FF&}vanish{\c&H00FFFFFF&}
+Dialogue: 0,0:00:17.75,0:00:18.39,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}completely
+Dialogue: 0,0:00:19.42,0:00:20.10,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}See that
+Dialogue: 0,0:00:20.91,0:00:21.79,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}A {\c&H0000E5FF&}ghostly{\c&H00FFFFFF&} green
+Dialogue: 0,0:00:21.80,0:00:22.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}orb just {\c&H0000E5FF&}appeared{\c&H00FFFFFF&}
+Dialogue: 0,0:00:22.88,0:00:23.28,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}but {\c&H0000E5FF&}there{\c&H00FFFFFF&} is
+Dialogue: 0,0:00:23.29,0:00:24.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}no {\c&H0000E5FF&}green{\c&H00FFFFFF&} here
+Dialogue: 0,0:00:25.12,0:00:25.51,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It is the
+Dialogue: 0,0:00:25.51,0:00:26.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Troxler{\c&H00FFFFFF&} Effect
+Dialogue: 0,0:00:27.35,0:00:28.20,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}neurons{\c&H00FFFFFF&} got
+Dialogue: 0,0:00:28.21,0:00:29.14,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}tired{\c&H00FFFFFF&} so your
+Dialogue: 0,0:00:29.15,0:00:29.81,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}mind {\c&H0000E5FF&}filled{\c&H00FFFFFF&} the
+Dialogue: 0,0:00:29.83,0:00:30.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}gap
+Dialogue: 0,0:00:31.26,0:00:32.06,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Comment{\c&H00FFFFFF&} YES if
+Dialogue: 0,0:00:32.08,0:00:32.59,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}it {\c&H0000E5FF&}worked{\c&H00FFFFFF&} and
+Dialogue: 0,0:00:32.61,0:00:33.73,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}subscribe for {\c&H0000E5FF&}tomorrow's{\c&H00FFFFFF&}
+Dialogue: 0,0:00:33.74,0:00:34.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}test {\c&H0000E5FF&}because{\c&H00FFFFFF&} you
+Dialogue: 0,0:00:34.73,0:00:35.19,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}must
