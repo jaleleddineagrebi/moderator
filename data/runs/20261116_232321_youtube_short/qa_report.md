@@ -12,4 +12,5 @@
 - ✅ **visual diversity**: all scenes use distinct footage
 - ✅ **audio licenses**: music: original work, no third-party rights; sfx: original work, no third-party rights; voice: synthetic voice; no third-party performance rights
 - ⚠️ **accuracy review** [en]: The visual query for scene_06 'ticking clock fast' does not match the script's focus on the sound of cart wheels on tiles. Change the query to 'grocery cart wheels' or 'man pushing shopping cart fast' to better fit the 'brain deception' context.
-- ❌ **people rule**: scene_07: Women are clearly visible in the crowded background across all frames, including a woman in a checkered top in the rightmost frame.. Replace with footage without women (a face-only close-up is the only exception). → sent to visuals
+- ❌ **people rule**: scene_02: multiple women are visible in the background crowd in all three frames. Replace with footage without women (a face-only close-up is the only exception). → sent to visuals
+- ❌ **people rule**: scene_07: a woman is visible in the foreground (left side) and another is walking in the distance in the center in all three frames. Replace with footage without women (a face-only close-up is the only exception). → sent to visuals

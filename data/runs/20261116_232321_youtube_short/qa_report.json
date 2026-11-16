@@ -1,6 +1,6 @@
 {
   "passed": false,
-  "revision_round": 0,
+  "revision_round": 1,
   "checks": [
     {
       "check": "length",
@@ -102,7 +102,15 @@
       "check": "people rule",
       "lang": null,
       "ok": false,
-      "detail": "scene_07: Women are clearly visible in the crowded background across all frames, including a woman in a checkered top in the rightmost frame.. Replace with footage without women (a face-only close-up is the only exception).",
+      "detail": "scene_02: multiple women are visible in the background crowd in all three frames. Replace with footage without women (a face-only close-up is the only exception).",
+      "send_to": "visuals",
+      "severity": "blocker"
+    },
+    {
+      "check": "people rule",
+      "lang": null,
+      "ok": false,
+      "detail": "scene_07: a woman is visible in the foreground (left side) and another is walking in the distance in the center in all three frames. Replace with footage without women (a face-only close-up is the only exception).",
       "send_to": "visuals",
       "severity": "blocker"
     }
