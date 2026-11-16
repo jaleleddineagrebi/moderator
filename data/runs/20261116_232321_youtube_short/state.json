@@ -937,6 +937,11 @@
           "ts": "2026-11-16T23:45:44+00:00",
           "level": "info",
           "msg": "Gemini (gemini-3.8-flash) answered from CACHE (0 API tokens consumed, $0.00 cost)"
+        },
+        {
+          "ts": "2026-11-16T23:45:51+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.8-flash, medium complexity, thinking low)"
         }
       ],
       "errors": [],
@@ -998,7 +1003,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-16T23:45:49+00:00",
+    "exported_at": "2026-11-16T23:46:07+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/43978762425"
   }
