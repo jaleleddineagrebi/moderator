@@ -1,0 +1,71 @@
+[
+  {
+    "slug": "the-mirroring-reflex-ai-and-your-internal-map-1116",
+    "title": "The Mirroring Reflex: AI and Your Internal Map",
+    "hook": "When you draw a 'Q' on your forehead, you reveal whether your brain prioritizes internal consistency or external social signaling. AI is now hacking that exact same cognitive architecture.",
+    "summary": "The 'Q' test highlights our inherent struggle between egocentric and allocentric spatial orientation. As we offload our internal models to AI, we risk losing the ability to distinguish between our own intentions and the algorithmic mirror held up to us.",
+    "contentMarkdown": "## The Psychological Paradox\n\nThere is a classic experiment in developmental psychology: ask a person to draw a 'Q' on their own forehead. If the tail of the 'Q' points to your left (the viewer's right), you have drawn it from an *allocentric* perspective—you are prioritizing how the world sees you. If it points to your right, you have drawn it from an *egocentric* perspective—you are prioritizing your own internal map. This simple geometry is a proxy for how we integrate external information into our self-concept. In the age of AI, we are increasingly drawing our 'Q's for an invisible, synthetic audience, allowing the algorithm to dictate our spatial and cognitive orientation.\n\n## What the Science Shows\n\nNeuroscience tells us that the human brain does not hold a static map of the world; it engages in constant, computationally expensive re-mapping. We use the Theory of Mind (ToM) network to simulate how others perceive us, a process that consumes significant metabolic energy. However, when we interact with AI, we trigger a 'shortcut' in this network. Because AI mimics human syntax and responsiveness, our brains mistakenly categorize these systems as 'subjects' rather than 'tools.' We begin to mirror the AI’s logical framing, unconsciously aligning our thoughts with the model's latent biases. We are no longer drawing our own 'Q'; we are tracing the lines of the predictive text engine.\n\n## Daily Brain Bias Check\n\nToday, observe how you phrase your prompts to an AI. Do you ask for objective information, or do you find yourself 'explaining' the context as if the AI is a peer whose approval you seek? If you feel a need to qualify your input with polite social framing or personal justification, note it. This is your brain’s social-mirroring circuit working overtime to accommodate a machine that does not care for your social standing.\n\n## Practical Takeaway\n\nTo reclaim your cognitive sovereignty, treat AI as a rigid, non-social tool rather than a conversational partner. When seeking data, frame your queries in raw, objective technical requirements rather than narrative formats. By stripping the 'social' veneer off the interaction, you prevent your brain from slipping into the perspective-taking trap, keeping your internal 'Q' oriented toward your own goals, not the algorithm's reflection.",
+    "coverImageUrl": "https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&w=1200&q=80",
+    "imageCredit": "Robina Weermeijer via Unsplash",
+    "tags": [
+      "Cognitive Bias",
+      "Neuroscience",
+      "Theory of Mind",
+      "Human-AI Interaction"
+    ],
+    "sourceUrls": [
+      "https://arxiv.org",
+      "https://nature.com/neuro"
+    ],
+    "aiModelUsed": "gemini-3.1-flash-lite",
+    "synthesisCostUsd": 0.001168,
+    "youtubeShortId": "p6zyhTfRPGI",
+    "youtubeShort": {
+      "id": "p6zyhTfRPGI",
+      "title": "Draw A Q On Your Forehead (Test) #shorts",
+      "youtubeUrl": "https://www.youtube.com/shorts/p6zyhTfRPGI",
+      "embedUrl": "https://www.youtube.com/embed/p6zyhTfRPGI",
+      "topic": "Draw A Q On Your Forehead (Test) #shorts",
+      "hookAngle": "Did your Q tail point left or right? Comment below 👇",
+      "publishedAt": "2026-11-16T17:14:51Z",
+      "angle": "Did your Q tail point left or right? Comment below 👇"
+    },
+    "status": "PUBLISHED",
+    "publishedAt": "2026-11-16T17:38:25.013164+00:00"
+  },
+  {
+    "slug": "the-decoy-choice-why-ai-design-hides-your-agency-1116",
+    "title": "The Decoy Choice: Why AI Design Hides Your Agency",
+    "hook": "You believe you are carefully selecting your path through an AI interface, but your brain is merely sliding down a pre-carved cognitive groove. AI systems don't just answer questions; they architect the very decisions you think are entirely your own.",
+    "summary": "When presented with curated generative options, the human brain relies on heuristic shortcuts rather than exhaustive evaluation. AI interfaces leverage this cognitive bottleneck to subtly hijack choice architecture, steering human intention without our conscious awareness.",
+    "contentMarkdown": "## The Psychological Paradox\n\nHuman agency feels absolute. When an AI presents three distinct pathways, drafts, or solutions, we assume we are exercising rigorous editorial control. Yet, cognitive psychology reveals a striking vulnerability: bounded rationality. Our brains abhor the metabolic cost of generating novel alternatives from scratch. When faced with a structured menu of synthetic choices, the human mind instinctively truncates its search space, adopting the AI's provided frame as its cognitive baseline. We mistake selection for creation, falling prey to a profound illusion of autonomy.\n\n## What the Science Shows\n\nNeuroscientific studies on decision-making under constrained options demonstrate that the prefrontal cortex drastically reduces active deliberation when a default menu is present. Functional neuroimaging shows lowered activation in areas responsible for conflict monitoring and divergent thinking when individuals evaluate pre-packaged suggestions versus generating solutions independently. Furthermore, anchoring effects and framing biases ensure that the *first* or most prominently highlighted AI-generated option disproportionately captures our endorsement. The brain conserves glucose by outsourcing the architecture of the decision itself to the machine, effectively turning active creators into passive rubber-stampers.\n\n## Daily Brain Bias Check\n\nTake a moment to review your last three interactions with an AI assistant where it provided multiple options, bullet points, or recommended next steps. Did you genuinely evaluate alternative paths outside of what the model suggested, or did you simply pick the least objectionable item from its pre-selected buffet?\n\n## Practical Takeaway\n\nCombat choice architecture by forcing a cognitive pause. Before selecting any AI-generated recommendation, draft at least one alternative solution entirely from your own mind. This simple friction reactivates dormant prefrontal pathways, breaking the spell of the decoy choice and restoring genuine human agency.",
+    "coverImageUrl": "https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=1200&q=80",
+    "imageCredit": "Antoine Dautry via Unsplash",
+    "tags": [
+      "Choice Architecture",
+      "Cognitive Bias",
+      "Human-AI Teaming",
+      "Decision Making",
+      "Neuroscience"
+    ],
+    "sourceUrls": [
+      "https://arxiv.org",
+      "https://nature.com/neuro"
+    ],
+    "aiModelUsed": "gemini-3.5-flash-lite",
+    "synthesisCostUsd": 0.00097,
+    "youtubeShortId": "XdtUb6WaQFw",
+    "youtubeShort": {
+      "id": "XdtUb6WaQFw",
+      "title": "Why Your Brain Falls For The Big Cart Trap #shorts",
+      "youtubeUrl": "https://www.youtube.com/shorts/XdtUb6WaQFw",
+      "embedUrl": "https://www.youtube.com/embed/XdtUb6WaQFw",
+      "topic": "Why Your Brain Falls For The Big Cart Trap #shorts",
+      "hookAngle": "Cart or basket? Comment your go-to below 👇",
+      "publishedAt": "2026-11-14T14:30:16Z",
+      "angle": "Cart or basket? Comment your go-to below 👇"
+    },
+    "status": "PUBLISHED",
+    "publishedAt": "2026-11-16T17:38:30.238720+00:00"
+  }
+]
