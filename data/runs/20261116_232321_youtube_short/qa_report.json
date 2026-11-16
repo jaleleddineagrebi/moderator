@@ -1,6 +1,6 @@
 {
   "passed": false,
-  "revision_round": 1,
+  "revision_round": 2,
   "checks": [
     {
       "check": "length",
@@ -102,7 +102,7 @@
       "check": "people rule",
       "lang": null,
       "ok": false,
-      "detail": "scene_02: multiple women are visible in the background crowd in all three frames. Replace with footage without women (a face-only close-up is the only exception).",
+      "detail": "scene_02: multiple women are clearly visible in the crowd within the mall in all three frames. Replace with footage without women (a face-only close-up is the only exception).",
       "send_to": "visuals",
       "severity": "blocker"
     },
@@ -110,7 +110,7 @@
       "check": "people rule",
       "lang": null,
       "ok": false,
-      "detail": "scene_07: a woman is visible in the foreground (left side) and another is walking in the distance in the center in all three frames. Replace with footage without women (a face-only close-up is the only exception).",
+      "detail": "scene_07: a woman in a sleeveless checkered top is clearly visible on the right in the third frame, and other women are visible in the background crowd throughout the scene. Replace with footage without women (a face-only close-up is the only exception).",
       "send_to": "visuals",
       "severity": "blocker"
     }
