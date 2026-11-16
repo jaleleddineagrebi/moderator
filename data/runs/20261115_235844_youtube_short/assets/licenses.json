@@ -3,70 +3,70 @@
     "scene": "scene_01",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-3735/",
-    "author": "Skylent",
+    "page": "https://pixabay.com/videos/id-138891/",
+    "author": "ChristianBodhi",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "black circle center",
-    "description": "A stark black circle perfectly centered on a clean white background."
+    "query": "black circle pulsing",
+    "description": "A sharp, solid black circle pulsing slightly in the center of a minimalist white frame."
   },
   {
     "scene": "scene_02",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-45249/",
-    "author": "simovina",
+    "page": "https://pixabay.com/videos/id-216134/",
+    "author": "JoshuaWoroniecki",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "digital glitch screen",
-    "description": "Distorted digital glitch effects flickering across a dark monitor."
+    "query": "falling binary code",
+    "description": "Green binary code falling rapidly down a black screen in a matrix-style data stream."
   },
   {
     "scene": "scene_03",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-40739/",
-    "author": "RoyBuri",
+    "page": "https://pixabay.com/videos/id-39711/",
+    "author": "104paul",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "macro human eye",
-    "description": "Extreme macro close-up of a man's eye with the pupil subtly dilating."
+    "query": "macro male eye",
+    "description": "An extreme macro close-up of a man's eye staring intensely with a reflecting light."
   },
   {
     "scene": "scene_04",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-277097/",
-    "author": "vecax",
+    "page": "https://pixabay.com/videos/id-236926/",
+    "author": "asifsharif",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "fog disappearing mountain",
-    "description": "Thick white smoke or fog slowly clearing to reveal a dark, empty landscape."
+    "query": "fast moving clouds",
+    "description": "Dark, heavy storm clouds moving rapidly across a twilight sky, creating a sense of transition."
   },
   {
     "scene": "scene_05",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-90998/",
-    "author": "domukuk",
+    "page": "https://pixabay.com/videos/id-5713/",
+    "author": "tmeier1964",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "green aurora motion",
-    "description": "Bright green aurora borealis lights waving across a starry night sky."
+    "query": "green laser beams",
+    "description": "Vibrant emerald green laser beams cutting through a dark room filled with haze."
   },
   {
     "scene": "scene_06",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-71563/",
-    "author": "hamzaaslammiczon",
+    "page": "https://pixabay.com/videos/id-3012/",
+    "author": "InspiredImages",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "cogs turning animation",
-    "description": "Intricate golden clockwork gears and cogs turning together in a dark void."
+    "query": "mechanical gears moving",
+    "description": "Intricate golden clockwork gears and cogs rotating in perfect synchronization on a dark background."
   },
   {
     "scene": "scene_07",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-148493/",
-    "author": "Henhen1",
+    "page": "https://pixabay.com/videos/id-233400/",
+    "author": "Yasir1120",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "finger tapping phone",
-    "description": "A man's hand holding a smartphone and tapping the screen with his thumb."
+    "query": "hand touching screen",
+    "description": "A man's hand interacting with a high-tech glowing interface on a dark glass table."
   }
 ]
