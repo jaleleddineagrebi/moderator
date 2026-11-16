@@ -1,0 +1,72 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-3735/",
+    "author": "Skylent",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "black circle center",
+    "description": "A stark black circle perfectly centered on a clean white background."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-45249/",
+    "author": "simovina",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "digital glitch screen",
+    "description": "Distorted digital glitch effects flickering across a dark monitor."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-40739/",
+    "author": "RoyBuri",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "macro human eye",
+    "description": "Extreme macro close-up of a man's eye with the pupil subtly dilating."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-277097/",
+    "author": "vecax",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "fog disappearing mountain",
+    "description": "Thick white smoke or fog slowly clearing to reveal a dark, empty landscape."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-90998/",
+    "author": "domukuk",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "green aurora motion",
+    "description": "Bright green aurora borealis lights waving across a starry night sky."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-71563/",
+    "author": "hamzaaslammiczon",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "cogs turning animation",
+    "description": "Intricate golden clockwork gears and cogs turning together in a dark void."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-148493/",
+    "author": "Henhen1",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "finger tapping phone",
+    "description": "A man's hand holding a smartphone and tapping the screen with his thumb."
+  }
+]
