@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-16T18:41:23+00:00",
+  "updated_at": "2026-11-16T18:41:46+00:00",
   "repo": "jaleleddineagrebi/moderator",
   "live_run_id": "20261116_183830_youtube_short",
   "runs": [
@@ -9,13 +9,13 @@
       "workflow_title": "YouTube Short",
       "topic": "",
       "status": "running",
-      "progress": 94,
+      "progress": 100,
       "started_at": "2026-11-16T18:38:30+00:00",
       "ended_at": null,
-      "cost_usd": 0.0108,
+      "cost_usd": 0.0125,
       "is_live": true,
       "has_uploads": false,
-      "issue_url": "",
+      "issue_url": "https://github.com/jaleleddineagrebi/moderator/issues/110",
       "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/43930844796"
     },
     {
