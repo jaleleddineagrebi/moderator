@@ -1,0 +1,138 @@
+{
+  "title": "The Pupil Expansion Glitch",
+  "scenes": [
+    {
+      "vo": {
+        "en": "Look at your pupils right now."
+      },
+      "on_screen": {
+        "en": "LOOK AT YOUR PUPILS"
+      },
+      "visual": {
+        "description": "Macro extreme close-up of a man's eye iris contracting and expanding with high detail.",
+        "search_terms": [
+          "macro male eye",
+          "human iris expansion",
+          "pupil close up"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Your eyes are snitching on your deepest secrets every single day without you knowing."
+      },
+      "on_screen": {
+        "en": "YOUR EYES ARE SNITCHING"
+      },
+      "visual": {
+        "description": "A man's hands holding an old-fashioned hand mirror in a dimly lit room.",
+        "search_terms": [
+          "man holding mirror",
+          "reflection in glass",
+          "vintage hand mirror"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Open your front camera. Now, think of someone you’re truly obsessed with or deeply attracted to."
+      },
+      "on_screen": {
+        "en": "THINK OF THEM NOW"
+      },
+      "visual": {
+        "description": "A person's thumb scrolling through a smartphone screen rapidly in the dark.",
+        "search_terms": [
+          "man using smartphone",
+          "scrolling phone screen",
+          "dark room mobile"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "Wait, here is the creepy part."
+      },
+      "on_screen": {
+        "en": "THE CREEPY PART"
+      },
+      "visual": {
+        "description": "Low angle shot of a man standing under a flickering street lamp at night.",
+        "search_terms": [
+          "flickering street light",
+          "mysterious man shadow",
+          "night urban atmosphere"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Your autonomic nervous system just flooded your brain with dopamine, forcing your pupils to dilate by forty-five percent."
+      },
+      "on_screen": {
+        "en": "DOPAMINE FLOOD"
+      },
+      "visual": {
+        "description": "Abstract animation of glowing blue and gold neurons firing inside a digital brain.",
+        "search_terms": [
+          "neurons firing animation",
+          "abstract brain signals",
+          "digital neural network"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "It is a biological glitch you cannot stop, exposing your true feelings to anyone watching you closely."
+      },
+      "on_screen": {
+        "en": "YOU CAN'T HIDE IT"
+      },
+      "visual": {
+        "description": "A close-up of a man's face partially hidden in shadows, looking directly into the lens.",
+        "search_terms": [
+          "man intense gaze",
+          "dramatic face shadows",
+          "serious eye contact"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for more brain hacks and comment WIDE if yours changed, which is exactly why you should..."
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "A finger pressing a glowing holographic button on a futuristic interface.",
+        "search_terms": [
+          "digital button press",
+          "futuristic ui touch",
+          "interactive glowing screen"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "pupil-size-deception",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 34.2
+  }
+}
