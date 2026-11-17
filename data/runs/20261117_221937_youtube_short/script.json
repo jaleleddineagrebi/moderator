@@ -11,9 +11,9 @@
       "visual": {
         "description": "Close up shot of masculine hands pulling a crisp brand-new hundred dollar bill out of a sleek dark leather wallet.",
         "search_terms": [
-          "crisp hundred dollar bill",
-          "wallet cash leather",
-          "counting money hands"
+          "crisp hundred bill",
+          "leather wallet cash",
+          "hands counting money"
         ],
         "prefer": "video"
       },
@@ -21,17 +21,17 @@
     },
     {
       "vo": {
-        "en": "You feel an immediate sting of pain, yet five twenty-dollar bills feel like worthless monopoly paper."
+        "en": "You feel an immediate sting of pain, yet five twenty-dollar bills feel like worthless paper."
       },
       "on_screen": {
-        "en": "FEELS LIKE PLAY MONEY"
+        "en": "FEELS LIKE TOY MONEY"
       },
       "visual": {
-        "description": "High angle dynamic shot of crumpled twenty dollar bills tossed carelessly onto a rustic wooden table.",
+        "description": "High angle dynamic shot of crumpled twenty dollar bills tossed carelessly onto a dark wooden table.",
         "search_terms": [
           "twenty dollar bills",
-          "poker table money",
-          "cash falling tabletop"
+          "cash falling tabletop",
+          "handling paper currency"
         ],
         "prefer": "video"
       },
@@ -39,17 +39,17 @@
     },
     {
       "vo": {
-        "en": "MIT neuro-economists call this the denomination effect. Your brain treats large single notes as protected treasure."
+        "en": "Economists call this the denomination effect. Your brain treats large single notes as protected treasure."
       },
       "on_screen": {
-        "en": "DENOMINATION EFFECT"
+        "en": "THE DENOMINATION EFFECT"
       },
       "visual": {
         "description": "Glowing three-dimensional digital model of a human brain with firing golden neural pathways and data graphics.",
         "search_terms": [
-          "brain scan visualization",
-          "neural synapse glowing",
-          "futuristic neuroscience hologram"
+          "glowing brain hologram",
+          "neural synapse firing",
+          "neuroscience data visualization"
         ],
         "prefer": "video"
       },
@@ -65,9 +65,9 @@
       "visual": {
         "description": "Cinematic tracking shot behind a solitary man standing before a brightly lit glowing vending machine on a dark night.",
         "search_terms": [
-          "man neon alley rain",
-          "vending machine glowing",
-          "cinematic night urban"
+          "man vending machine",
+          "neon night street",
+          "cinematic dark alley"
         ],
         "prefer": "video"
       },
@@ -83,8 +83,8 @@
       "visual": {
         "description": "Dark espresso pouring into a ceramic cup on a stainless steel cafe bar next to loose coins.",
         "search_terms": [
-          "espresso coffee machine",
-          "barista counter money",
+          "espresso machine pouring",
+          "coins cafe counter",
           "steaming coffee cup"
         ],
         "prefer": "video"
@@ -99,11 +99,11 @@
         "en": "MONEY VANISHES INSTANTLY"
       },
       "visual": {
-        "description": "Fast-moving supermarket checkout conveyor belt carrying snacks and candy past a red laser scanner.",
+        "description": "Fast-moving supermarket checkout conveyor belt carrying snacks and soda past a red laser scanner.",
         "search_terms": [
-          "supermarket checkout conveyor",
-          "shopping impulse items",
-          "cash register scanner"
+          "supermarket conveyor belt",
+          "impulse shopping items",
+          "checkout barcode scanner"
         ],
         "prefer": "video"
       },
@@ -111,7 +111,7 @@
     },
     {
       "vo": {
-        "en": "Subscribe for tomorrow's brain test, comment the dumbest thing you bought after breaking cash, and remember never to"
+        "en": "Subscribe for tomorrow's brain test, comment the dumbest impulse buy you made, and think twice before you"
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
@@ -119,9 +119,9 @@
       "visual": {
         "description": "Macro close-up shot of massive steel bank vault gears smoothly rotating and locking into place.",
         "search_terms": [
-          "bank vault lock turning",
+          "bank vault turning",
           "mechanical steel gears",
-          "heavy safe door closing"
+          "safe door locking"
         ],
         "prefer": "video"
       },
@@ -133,6 +133,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 36.4
+    "en": 35.3
   }
 }
