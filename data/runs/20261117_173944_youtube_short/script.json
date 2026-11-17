@@ -1,0 +1,138 @@
+{
+  "title": "The Double Nose Glitch",
+  "scenes": [
+    {
+      "vo": {
+        "en": "Cross your fingers just like this."
+      },
+      "on_screen": {
+        "en": "CROSS YOUR FINGERS"
+      },
+      "visual": {
+        "description": "Close-up of a man's hands crossing his middle finger over his index finger in a slow, deliberate motion.",
+        "search_terms": [
+          "man crossing fingers",
+          "hand close up",
+          "human fingers motion"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Put your middle finger right over your index finger and hold them tight together."
+      },
+      "on_screen": {
+        "en": "OVERLAP YOUR FINGERS"
+      },
+      "visual": {
+        "description": "Macro shot of fingers overlapping with high detail on skin texture and grip.",
+        "search_terms": [
+          "fingers macro",
+          "hand detail",
+          "holding fingers tight"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Now close your eyes and rub the very tip of your nose using the gap between your fingers."
+      },
+      "on_screen": {
+        "en": "RUB YOUR NOSE"
+      },
+      "visual": {
+        "description": "A man with his eyes closed touching the tip of his nose with his crossed fingers.",
+        "search_terms": [
+          "man touching nose",
+          "eyes closed male",
+          "sensory touch face"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "Wait until you feel this part, because your brain is about to glitch out completely."
+      },
+      "on_screen": {
+        "en": "BRAIN GLITCH INCOMING"
+      },
+      "visual": {
+        "description": "Abstract digital glitch overlaying a dark background with pulsing yellow highlights.",
+        "search_terms": [
+          "digital glitch motion",
+          "abstract signal interference",
+          "cyber texture"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Your nerves are screaming that there are two separate noses under your touch, even though you know better."
+      },
+      "on_screen": {
+        "en": "TWO NOSES?!"
+      },
+      "visual": {
+        "description": "A man looking into the camera with a shocked and confused facial expression.",
+        "search_terms": [
+          "man shocked face",
+          "confused male expression",
+          "surprised person"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "This Aristotle Illusion happens because your sensory map fails to account for your crossed finger positions."
+      },
+      "on_screen": {
+        "en": "ARISTOTLE ILLUSION"
+      },
+      "visual": {
+        "description": "Animation of neural pathways or a blue circuit board lighting up in patterns.",
+        "search_terms": [
+          "neural network animation",
+          "circuit board glowing",
+          "brain science visual"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for more brain hacks and comment GLITCH if this worked on you, which is exactly why..."
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "A man pointing directly at the camera with a confident smile and nodding.",
+        "search_terms": [
+          "man pointing camera",
+          "confident male nodding",
+          "person suggesting action"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "double-nose-glitch",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 37.8
+  }
+}
