@@ -1,4 +1,4 @@
-# QA report: CHANGES NEEDED
+# QA report: PASSED
 
 - ✅ **length** [en]: 36.5s (must be under 60s; target 32-50s)
 - ✅ **target length** [en]: 36.5s
@@ -11,6 +11,5 @@
 - ✅ **visual licenses**: 7 assets: pixabay
 - ✅ **visual diversity**: all scenes use distinct footage
 - ✅ **audio licenses**: music: original work, no third-party rights; sfx: original work, no third-party rights; voice: synthetic voice; no third-party performance rights
-- ⚠️ **accuracy review** [en]: The tag 'optical illusion' is incorrect as the Aristotle Illusion is a tactile illusion, not a visual/optical one. Replace 'optical illusion' with 'tactile illusion'.
-- ❌ **people rule**: scene_01: A woman is walking across the street, visible from head to knee in the second frame.. Replace with footage without women (a face-only close-up is the only exception). → sent to visuals
-- ❌ **people rule**: thumbnail_en: A girl is visible on the far right of the frame, from head to foot, while crossing the street.. Replace with footage without women (a face-only close-up is the only exception). → sent to packaging
+- ⚠️ **grammar review** [en]: The script ends with a trailing 'which is exactly why...' at the end of scene 7. Remove the phrase 'which is exactly why...' to ensure a clean loop or a finished sentence.
+- ✅ **people rule**: no women beyond face close-ups in 7 scenes and 1 thumbnail(s)

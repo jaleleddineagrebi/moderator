@@ -1,6 +1,6 @@
 {
-  "passed": false,
-  "revision_round": 0,
+  "passed": true,
+  "revision_round": 1,
   "checks": [
     {
       "check": "length",
@@ -91,27 +91,19 @@
       "severity": "blocker"
     },
     {
-      "check": "accuracy review",
+      "check": "grammar review",
       "lang": "en",
       "ok": false,
-      "detail": "The tag 'optical illusion' is incorrect as the Aristotle Illusion is a tactile illusion, not a visual/optical one. Replace 'optical illusion' with 'tactile illusion'.",
-      "send_to": "packaging",
+      "detail": "The script ends with a trailing 'which is exactly why...' at the end of scene 7. Remove the phrase 'which is exactly why...' to ensure a clean loop or a finished sentence.",
+      "send_to": "script",
       "severity": "minor"
     },
     {
       "check": "people rule",
       "lang": null,
-      "ok": false,
-      "detail": "scene_01: A woman is walking across the street, visible from head to knee in the second frame.. Replace with footage without women (a face-only close-up is the only exception).",
-      "send_to": "visuals",
-      "severity": "blocker"
-    },
-    {
-      "check": "people rule",
-      "lang": null,
-      "ok": false,
-      "detail": "thumbnail_en: A girl is visible on the far right of the frame, from head to foot, while crossing the street.. Replace with footage without women (a face-only close-up is the only exception).",
-      "send_to": "packaging",
+      "ok": true,
+      "detail": "no women beyond face close-ups in 7 scenes and 1 thumbnail(s)",
+      "send_to": null,
       "severity": "blocker"
     }
   ]
