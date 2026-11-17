@@ -1356,6 +1356,11 @@
           "ts": "2026-11-17T23:02:42+00:00",
           "level": "warning",
           "msg": "Model 'gemini-3.8-flash' returned 503; falling back to 'gemini-3.7-flash'"
+        },
+        {
+          "ts": "2026-11-17T23:03:08+00:00",
+          "level": "warning",
+          "msg": "'gemini-3.7-flash' returned 503; retrying once in 2s"
         }
       ],
       "errors": [],
@@ -1417,7 +1422,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-17T23:02:49+00:00",
+    "exported_at": "2026-11-17T23:03:22+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/44188767778"
   }
