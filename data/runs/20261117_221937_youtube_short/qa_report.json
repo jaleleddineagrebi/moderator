@@ -1,0 +1,118 @@
+{
+  "passed": false,
+  "revision_round": 0,
+  "checks": [
+    {
+      "check": "length",
+      "lang": "en",
+      "ok": true,
+      "detail": "41.8s (must be under 60s; target 32-50s)",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "target length",
+      "lang": "en",
+      "ok": true,
+      "detail": "41.8s",
+      "send_to": null,
+      "severity": "minor"
+    },
+    {
+      "check": "aspect ratio",
+      "lang": "en",
+      "ok": true,
+      "detail": "1080x1920",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "video codec",
+      "lang": "en",
+      "ok": true,
+      "detail": "h264",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "audio track",
+      "lang": "en",
+      "ok": true,
+      "detail": "present",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "loudness",
+      "lang": "en",
+      "ok": true,
+      "detail": "-14.0 LUFS, peak -1.4 dBFS (target -14 LUFS, peak <= -1)",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "hook timing",
+      "lang": "en",
+      "ok": true,
+      "detail": "scene_01 spoken in 2.7s (target <= 4s)",
+      "send_to": null,
+      "severity": "minor"
+    },
+    {
+      "check": "caption sync",
+      "lang": "en",
+      "ok": true,
+      "detail": "100 words, 35 caption events",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "visual licenses",
+      "lang": null,
+      "ok": true,
+      "detail": "7 assets: pixabay",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "visual diversity",
+      "lang": null,
+      "ok": true,
+      "detail": "all scenes use distinct footage",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "audio licenses",
+      "lang": null,
+      "ok": true,
+      "detail": "music: original work, no third-party rights; sfx: original work, no third-party rights; voice: synthetic voice; no third-party performance rights",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "copyright review",
+      "lang": "en",
+      "ok": false,
+      "detail": "Monopoly is a trademarked board game by Hasbro. Change 'worthless monopoly paper' to 'worthless play money' to avoid trademark infringement.",
+      "send_to": "script",
+      "severity": "minor"
+    },
+    {
+      "check": "grammar review",
+      "lang": "en",
+      "ok": false,
+      "detail": "The final sentence in scene_07 is cut off abruptly ('and remember never to'). Either complete the thought or seamlessly loop back to scene_01 by changing it to: 'and remember never to... Break a hundred-dollar bill right now.' Ensure the voiceover has a complete ending or explicit looping phrasing like 'and remember never to do this.'",
+      "send_to": "script",
+      "severity": "blocker"
+    },
+    {
+      "check": "people rule",
+      "lang": null,
+      "ok": false,
+      "detail": "scene_04: two women walking on the street shown with full bodies and clothing. Replace with footage without women (a face-only close-up is the only exception).",
+      "send_to": "visuals",
+      "severity": "blocker"
+    }
+  ]
+}
