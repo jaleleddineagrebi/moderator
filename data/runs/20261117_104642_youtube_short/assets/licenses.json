@@ -1,0 +1,72 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-11721/",
+    "author": "Iconikmg",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man using phone dark",
+    "description": "A close-up of a man's eyes illuminated by a glowing smartphone screen in a dark room."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-134872/",
+    "author": "anijom",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "smartphone status bar",
+    "description": "Extreme macro shot of the top status bar of a smartphone showing a tiny colored privacy indicator."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-3611/",
+    "author": "Coverr-Free-Footage",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "audio waveform motion",
+    "description": "A digital audio waveform moving across the screen with a glitch effect."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-180776/",
+    "author": "Darioguzben",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hacker typing dark",
+    "description": "A silhouette of a hooded man typing rapidly on a keyboard in a dark office."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-9490/",
+    "author": "chayka1270",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hand swiping smartphone",
+    "description": "A man's hand swiping down on a smartphone screen to reveal the control panel settings."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-50176/",
+    "author": "roldavidespin",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "security camera lens",
+    "description": "A security camera lens rotating slowly, reflecting a digital screen."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-6590/",
+    "author": "Yoniteck",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "restart phone animation",
+    "description": "A hand pressing a large 'power off' button on a screen followed by a digital shield icon appearing."
+  }
+]

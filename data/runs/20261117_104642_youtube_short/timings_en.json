@@ -1,0 +1,585 @@
+{
+  "voice": "en-US-AriaNeural",
+  "duration": 41.556032,
+  "scenes": [
+    {
+      "scene": "scene_01",
+      "start": 0.0,
+      "end": 2.4,
+      "words": [
+        {
+          "start": 0.097,
+          "end": 0.274,
+          "text": "You"
+        },
+        {
+          "start": 0.286,
+          "end": 0.392,
+          "text": "are"
+        },
+        {
+          "start": 0.404,
+          "end": 0.616,
+          "text": "being"
+        },
+        {
+          "start": 0.628,
+          "end": 1.005,
+          "text": "watched"
+        },
+        {
+          "start": 1.017,
+          "end": 1.217,
+          "text": "right"
+        },
+        {
+          "start": 1.229,
+          "end": 1.559,
+          "text": "now"
+        }
+      ]
+    },
+    {
+      "scene": "scene_02",
+      "start": 2.49,
+      "end": 7.938,
+      "words": [
+        {
+          "start": 2.587,
+          "end": 2.87,
+          "text": "Check"
+        },
+        {
+          "start": 2.882,
+          "end": 2.976,
+          "text": "the"
+        },
+        {
+          "start": 2.988,
+          "end": 3.248,
+          "text": "top"
+        },
+        {
+          "start": 3.259,
+          "end": 3.613,
+          "text": "corner"
+        },
+        {
+          "start": 3.625,
+          "end": 3.684,
+          "text": "of"
+        },
+        {
+          "start": 3.696,
+          "end": 3.825,
+          "text": "your"
+        },
+        {
+          "start": 3.837,
+          "end": 4.262,
+          "text": "phone"
+        },
+        {
+          "start": 5.073,
+          "end": 5.261,
+          "text": "Is"
+        },
+        {
+          "start": 5.273,
+          "end": 5.462,
+          "text": "there"
+        },
+        {
+          "start": 5.473,
+          "end": 5.532,
+          "text": "a"
+        },
+        {
+          "start": 5.544,
+          "end": 5.851,
+          "text": "tiny"
+        },
+        {
+          "start": 5.863,
+          "end": 6.24,
+          "text": "green"
+        },
+        {
+          "start": 6.252,
+          "end": 6.417,
+          "text": "or"
+        },
+        {
+          "start": 6.429,
+          "end": 6.771,
+          "text": "orange"
+        },
+        {
+          "start": 6.782,
+          "end": 7.124,
+          "text": "dot"
+        }
+      ]
+    },
+    {
+      "scene": "scene_03",
+      "start": 8.028,
+      "end": 14.556,
+      "words": [
+        {
+          "start": 8.125,
+          "end": 8.42,
+          "text": "That"
+        },
+        {
+          "start": 8.432,
+          "end": 8.691,
+          "text": "isn't"
+        },
+        {
+          "start": 8.703,
+          "end": 8.762,
+          "text": "a"
+        },
+        {
+          "start": 8.774,
+          "end": 9.175,
+          "text": "design"
+        },
+        {
+          "start": 9.187,
+          "end": 9.67,
+          "text": "feature"
+        },
+        {
+          "start": 10.493,
+          "end": 10.669,
+          "text": "It"
+        },
+        {
+          "start": 10.681,
+          "end": 10.964,
+          "text": "means"
+        },
+        {
+          "start": 10.976,
+          "end": 11.106,
+          "text": "an"
+        },
+        {
+          "start": 11.118,
+          "end": 11.389,
+          "text": "app"
+        },
+        {
+          "start": 11.401,
+          "end": 11.53,
+          "text": "is"
+        },
+        {
+          "start": 11.542,
+          "end": 12.014,
+          "text": "actively"
+        },
+        {
+          "start": 12.026,
+          "end": 12.332,
+          "text": "using"
+        },
+        {
+          "start": 12.344,
+          "end": 12.462,
+          "text": "your"
+        },
+        {
+          "start": 12.474,
+          "end": 12.898,
+          "text": "camera"
+        },
+        {
+          "start": 12.91,
+          "end": 13.016,
+          "text": "or"
+        },
+        {
+          "start": 13.028,
+          "end": 13.724,
+          "text": "microphone"
+        }
+      ]
+    },
+    {
+      "scene": "scene_04",
+      "start": 14.646,
+      "end": 19.926,
+      "words": [
+        {
+          "start": 14.743,
+          "end": 14.908,
+          "text": "But"
+        },
+        {
+          "start": 14.92,
+          "end": 15.156,
+          "text": "here"
+        },
+        {
+          "start": 15.168,
+          "end": 15.274,
+          "text": "is"
+        },
+        {
+          "start": 15.286,
+          "end": 15.38,
+          "text": "the"
+        },
+        {
+          "start": 15.392,
+          "end": 15.722,
+          "text": "creepy"
+        },
+        {
+          "start": 15.734,
+          "end": 16.182,
+          "text": "part"
+        },
+        {
+          "start": 16.993,
+          "end": 17.24,
+          "text": "This"
+        },
+        {
+          "start": 17.252,
+          "end": 17.547,
+          "text": "only"
+        },
+        {
+          "start": 17.559,
+          "end": 17.995,
+          "text": "catches"
+        },
+        {
+          "start": 18.007,
+          "end": 18.113,
+          "text": "the"
+        },
+        {
+          "start": 18.125,
+          "end": 18.62,
+          "text": "amateur"
+        },
+        {
+          "start": 18.632,
+          "end": 19.092,
+          "text": "apps"
+        }
+      ]
+    },
+    {
+      "scene": "scene_05",
+      "start": 20.016,
+      "end": 24.6,
+      "words": [
+        {
+          "start": 20.113,
+          "end": 20.325,
+          "text": "Pull"
+        },
+        {
+          "start": 20.337,
+          "end": 20.573,
+          "text": "down"
+        },
+        {
+          "start": 20.585,
+          "end": 20.691,
+          "text": "your"
+        },
+        {
+          "start": 20.703,
+          "end": 21.068,
+          "text": "control"
+        },
+        {
+          "start": 21.08,
+          "end": 21.552,
+          "text": "center"
+        },
+        {
+          "start": 21.564,
+          "end": 21.693,
+          "text": "and"
+        },
+        {
+          "start": 21.705,
+          "end": 21.882,
+          "text": "look"
+        },
+        {
+          "start": 21.894,
+          "end": 21.988,
+          "text": "for"
+        },
+        {
+          "start": 22.0,
+          "end": 22.094,
+          "text": "the"
+        },
+        {
+          "start": 22.106,
+          "end": 22.413,
+          "text": "screen"
+        },
+        {
+          "start": 22.425,
+          "end": 22.837,
+          "text": "mirroring"
+        },
+        {
+          "start": 22.849,
+          "end": 23.226,
+          "text": "icon"
+        },
+        {
+          "start": 23.238,
+          "end": 23.427,
+          "text": "right"
+        },
+        {
+          "start": 23.439,
+          "end": 23.769,
+          "text": "now"
+        }
+      ]
+    },
+    {
+      "scene": "scene_06",
+      "start": 24.69,
+      "end": 30.33,
+      "words": [
+        {
+          "start": 24.787,
+          "end": 24.964,
+          "text": "If"
+        },
+        {
+          "start": 24.976,
+          "end": 25.247,
+          "text": "that"
+        },
+        {
+          "start": 25.259,
+          "end": 25.624,
+          "text": "icon"
+        },
+        {
+          "start": 25.636,
+          "end": 25.742,
+          "text": "is"
+        },
+        {
+          "start": 25.754,
+          "end": 26.025,
+          "text": "blue"
+        },
+        {
+          "start": 26.037,
+          "end": 26.179,
+          "text": "or"
+        },
+        {
+          "start": 26.19,
+          "end": 26.462,
+          "text": "shows"
+        },
+        {
+          "start": 26.474,
+          "end": 26.532,
+          "text": "a"
+        },
+        {
+          "start": 26.544,
+          "end": 26.933,
+          "text": "strange"
+        },
+        {
+          "start": 26.945,
+          "end": 27.334,
+          "text": "device"
+        },
+        {
+          "start": 27.346,
+          "end": 27.641,
+          "text": "name"
+        },
+        {
+          "start": 27.9,
+          "end": 28.007,
+          "text": "your"
+        },
+        {
+          "start": 28.018,
+          "end": 28.348,
+          "text": "screen"
+        },
+        {
+          "start": 28.36,
+          "end": 28.455,
+          "text": "is"
+        },
+        {
+          "start": 28.466,
+          "end": 28.679,
+          "text": "being"
+        },
+        {
+          "start": 28.69,
+          "end": 29.504,
+          "text": "broadcasted"
+        }
+      ]
+    },
+    {
+      "scene": "scene_07",
+      "start": 30.42,
+      "end": 41.556,
+      "words": [
+        {
+          "start": 30.517,
+          "end": 30.765,
+          "text": "Kill"
+        },
+        {
+          "start": 30.777,
+          "end": 30.93,
+          "text": "your"
+        },
+        {
+          "start": 30.942,
+          "end": 31.461,
+          "text": "Wi-Fi"
+        },
+        {
+          "start": 31.472,
+          "end": 31.649,
+          "text": "and"
+        },
+        {
+          "start": 31.661,
+          "end": 31.897,
+          "text": "check"
+        },
+        {
+          "start": 31.909,
+          "end": 32.027,
+          "text": "your"
+        },
+        {
+          "start": 32.038,
+          "end": 32.545,
+          "text": "permissions"
+        },
+        {
+          "start": 32.557,
+          "end": 33.206,
+          "text": "immediately"
+        },
+        {
+          "start": 34.028,
+          "end": 34.618,
+          "text": "Subscribe"
+        },
+        {
+          "start": 34.63,
+          "end": 34.712,
+          "text": "to"
+        },
+        {
+          "start": 34.724,
+          "end": 34.96,
+          "text": "stay"
+        },
+        {
+          "start": 34.972,
+          "end": 35.503,
+          "text": "protected"
+        },
+        {
+          "start": 35.514,
+          "end": 35.609,
+          "text": "and"
+        },
+        {
+          "start": 35.62,
+          "end": 35.998,
+          "text": "comment"
+        },
+        {
+          "start": 36.01,
+          "end": 36.304,
+          "text": "CLEAN"
+        },
+        {
+          "start": 36.316,
+          "end": 36.411,
+          "text": "if"
+        },
+        {
+          "start": 36.422,
+          "end": 36.54,
+          "text": "you're"
+        },
+        {
+          "start": 36.552,
+          "end": 37.024,
+          "text": "safe"
+        },
+        {
+          "start": 37.837,
+          "end": 38.038,
+          "text": "Your"
+        },
+        {
+          "start": 38.05,
+          "end": 38.403,
+          "text": "digital"
+        },
+        {
+          "start": 38.415,
+          "end": 38.745,
+          "text": "ghost"
+        },
+        {
+          "start": 38.757,
+          "end": 38.863,
+          "text": "is"
+        },
+        {
+          "start": 38.875,
+          "end": 39.276,
+          "text": "lurking"
+        },
+        {
+          "start": 39.512,
+          "end": 39.665,
+          "text": "which"
+        },
+        {
+          "start": 39.677,
+          "end": 39.76,
+          "text": "is"
+        },
+        {
+          "start": 39.771,
+          "end": 40.278,
+          "text": "exactly"
+        },
+        {
+          "start": 40.29,
+          "end": 40.715,
+          "text": "why"
+        }
+      ]
+    }
+  ]
+}
