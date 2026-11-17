@@ -1,12 +1,12 @@
 {
   "passed": false,
-  "revision_round": 1,
+  "revision_round": 2,
   "checks": [
     {
       "check": "length",
       "lang": "en",
       "ok": true,
-      "detail": "39.9s (must be under 60s; target 32-50s)",
+      "detail": "37.0s (must be under 60s; target 32-50s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -14,7 +14,7 @@
       "check": "target length",
       "lang": "en",
       "ok": true,
-      "detail": "39.9s",
+      "detail": "37.0s",
       "send_to": null,
       "severity": "minor"
     },
@@ -46,7 +46,7 @@
       "check": "loudness",
       "lang": "en",
       "ok": true,
-      "detail": "-14.0 LUFS, peak -1.4 dBFS (target -14 LUFS, peak <= -1)",
+      "detail": "-13.9 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -62,7 +62,7 @@
       "check": "caption sync",
       "lang": "en",
       "ok": true,
-      "detail": "97 words, 33 caption events",
+      "detail": "94 words, 34 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -94,7 +94,7 @@
       "check": "grammar review",
       "lang": "en",
       "ok": false,
-      "detail": "Scene 07 ends mid-sentence. Fix by adding 'break that bill.' to the end of the script: '...and think twice before you break that bill.'",
+      "detail": "The narration in scene_07 ends abruptly in the middle of a sentence ('think twice before you'). Fix: Change 'think twice before you' to 'think twice before you spend.'",
       "send_to": "script",
       "severity": "blocker"
     },
