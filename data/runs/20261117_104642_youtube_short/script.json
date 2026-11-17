@@ -11,9 +11,9 @@
       "visual": {
         "description": "A close-up of a man's eyes illuminated by a glowing smartphone screen in a dark room.",
         "search_terms": [
-          "man using phone dark",
-          "smartphone glow face",
-          "digital surveillance"
+          "man eyes phone glow",
+          "dark room smartphone",
+          "digital surveillance eye"
         ],
         "prefer": "video"
       },
@@ -29,9 +29,9 @@
       "visual": {
         "description": "Extreme macro shot of the top status bar of a smartphone showing a tiny colored privacy indicator.",
         "search_terms": [
-          "smartphone status bar",
           "macro phone screen",
-          "phone notification icons"
+          "status bar icons",
+          "smartphone top display"
         ],
         "prefer": "video"
       },
@@ -45,11 +45,11 @@
         "en": "LIVE SPYING ACTIVE"
       },
       "visual": {
-        "description": "A digital audio waveform moving across the screen with a glitch effect.",
+        "description": "Abstract digital data stream with binary codes moving across a dark blue background.",
         "search_terms": [
-          "audio waveform motion",
-          "digital glitch background",
-          "microphone sound waves"
+          "abstract data flow",
+          "digital network lines",
+          "binary code animation"
         ],
         "prefer": "video"
       },
@@ -63,11 +63,11 @@
         "en": "THE CREEPY PART"
       },
       "visual": {
-        "description": "A silhouette of a hooded man typing rapidly on a keyboard in a dark office.",
+        "description": "A mysterious silhouette of a hooded man typing rapidly in a dimly lit office.",
         "search_terms": [
-          "hacker typing dark",
-          "man computer silhouette",
-          "cyber security threat"
+          "mysterious hooded man",
+          "typing dark room",
+          "hacker silhouette computer"
         ],
         "prefer": "video"
       },
@@ -81,11 +81,11 @@
         "en": "CHECK MIRRORING NOW"
       },
       "visual": {
-        "description": "A man's hand swiping down on a smartphone screen to reveal the control panel settings.",
+        "description": "A hand swiping down on a smartphone screen to reveal the control panel settings interface.",
         "search_terms": [
-          "hand swiping smartphone",
+          "hand swiping interface",
           "phone control center",
-          "interface navigation"
+          "finger touch screen"
         ],
         "prefer": "video"
       },
@@ -93,17 +93,17 @@
     },
     {
       "vo": {
-        "en": "If that icon is blue or shows a strange device name, your screen is being broadcasted."
+        "en": "If that icon is blue or shows a strange device, someone could be viewing your screen."
       },
       "on_screen": {
         "en": "THEY SEE EVERYTHING"
       },
       "visual": {
-        "description": "A security camera lens rotating slowly, reflecting a digital screen.",
+        "description": "A security camera lens rotating slowly, reflecting a digital screen in its glass.",
         "search_terms": [
-          "security camera lens",
-          "surveillance monitoring",
-          "cctv rotation"
+          "security camera rotation",
+          "magnifying glass screen",
+          "surveillance monitor"
         ],
         "prefer": "video"
       },
@@ -111,17 +111,17 @@
     },
     {
       "vo": {
-        "en": "Kill your Wi-Fi and check your permissions immediately. Subscribe to stay protected and comment CLEAN if you're safe. Your digital ghost is lurking, which is exactly why"
+        "en": "Kill your Wi-Fi and reset your permissions. Subscribe to stay protected and comment CLEAN if you're safe, which is exactly why"
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "A hand pressing a large 'power off' button on a screen followed by a digital shield icon appearing.",
+        "description": "A glowing digital shield icon appearing on a screen, symbolizing a secure connection.",
         "search_terms": [
-          "restart phone animation",
           "digital shield icon",
-          "security confirm button"
+          "padlock closing animation",
+          "confirm security button"
         ],
         "prefer": "video"
       },
@@ -133,6 +133,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 38.5
+    "en": 36.4
   }
 }

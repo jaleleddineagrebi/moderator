@@ -1,6 +1,6 @@
 {
   "voice": "en-US-AriaNeural",
-  "duration": 41.556032,
+  "duration": 38.532041,
   "scenes": [
     {
       "scene": "scene_01",
@@ -355,7 +355,7 @@
     {
       "scene": "scene_06",
       "start": 24.69,
-      "end": 30.33,
+      "end": 30.018,
       "words": [
         {
           "start": 24.787,
@@ -364,219 +364,189 @@
         },
         {
           "start": 24.976,
-          "end": 25.247,
+          "end": 25.235,
           "text": "that"
         },
         {
-          "start": 25.259,
-          "end": 25.624,
+          "start": 25.247,
+          "end": 25.636,
           "text": "icon"
         },
         {
-          "start": 25.636,
-          "end": 25.742,
+          "start": 25.648,
+          "end": 25.754,
           "text": "is"
         },
         {
-          "start": 25.754,
-          "end": 26.025,
+          "start": 25.766,
+          "end": 26.037,
           "text": "blue"
         },
         {
-          "start": 26.037,
-          "end": 26.179,
+          "start": 26.049,
+          "end": 26.19,
           "text": "or"
         },
         {
-          "start": 26.19,
-          "end": 26.462,
+          "start": 26.202,
+          "end": 26.485,
           "text": "shows"
         },
         {
-          "start": 26.474,
-          "end": 26.532,
+          "start": 26.497,
+          "end": 26.556,
           "text": "a"
         },
         {
-          "start": 26.544,
-          "end": 26.933,
+          "start": 26.568,
+          "end": 26.981,
           "text": "strange"
         },
         {
-          "start": 26.945,
-          "end": 27.334,
+          "start": 26.992,
+          "end": 27.441,
           "text": "device"
         },
         {
-          "start": 27.346,
-          "end": 27.641,
-          "text": "name"
+          "start": 27.653,
+          "end": 27.983,
+          "text": "someone"
         },
         {
-          "start": 27.9,
-          "end": 28.007,
+          "start": 27.995,
+          "end": 28.124,
+          "text": "could"
+        },
+        {
+          "start": 28.136,
+          "end": 28.254,
+          "text": "be"
+        },
+        {
+          "start": 28.266,
+          "end": 28.573,
+          "text": "viewing"
+        },
+        {
+          "start": 28.584,
+          "end": 28.702,
           "text": "your"
         },
         {
-          "start": 28.018,
-          "end": 28.348,
+          "start": 28.714,
+          "end": 29.186,
           "text": "screen"
-        },
-        {
-          "start": 28.36,
-          "end": 28.455,
-          "text": "is"
-        },
-        {
-          "start": 28.466,
-          "end": 28.679,
-          "text": "being"
-        },
-        {
-          "start": 28.69,
-          "end": 29.504,
-          "text": "broadcasted"
         }
       ]
     },
     {
       "scene": "scene_07",
-      "start": 30.42,
-      "end": 41.556,
+      "start": 30.108,
+      "end": 38.532,
       "words": [
         {
-          "start": 30.517,
-          "end": 30.765,
+          "start": 30.205,
+          "end": 30.453,
           "text": "Kill"
         },
         {
-          "start": 30.777,
-          "end": 30.93,
+          "start": 30.465,
+          "end": 30.618,
           "text": "your"
         },
         {
-          "start": 30.942,
-          "end": 31.461,
+          "start": 30.63,
+          "end": 31.125,
           "text": "Wi-Fi"
         },
         {
-          "start": 31.472,
-          "end": 31.649,
+          "start": 31.137,
+          "end": 31.314,
           "text": "and"
         },
         {
-          "start": 31.661,
-          "end": 31.897,
-          "text": "check"
+          "start": 31.325,
+          "end": 31.738,
+          "text": "reset"
         },
         {
-          "start": 31.909,
-          "end": 32.027,
+          "start": 31.75,
+          "end": 31.856,
           "text": "your"
         },
         {
-          "start": 32.038,
-          "end": 32.545,
+          "start": 31.868,
+          "end": 32.587,
           "text": "permissions"
         },
         {
-          "start": 32.557,
-          "end": 33.206,
-          "text": "immediately"
-        },
-        {
-          "start": 34.028,
-          "end": 34.618,
+          "start": 33.398,
+          "end": 33.988,
           "text": "Subscribe"
         },
         {
-          "start": 34.63,
-          "end": 34.712,
+          "start": 34.0,
+          "end": 34.094,
           "text": "to"
         },
         {
-          "start": 34.724,
-          "end": 34.96,
+          "start": 34.106,
+          "end": 34.353,
           "text": "stay"
         },
         {
-          "start": 34.972,
-          "end": 35.503,
+          "start": 34.365,
+          "end": 34.896,
           "text": "protected"
         },
         {
-          "start": 35.514,
-          "end": 35.609,
+          "start": 34.908,
+          "end": 35.002,
           "text": "and"
         },
         {
-          "start": 35.62,
-          "end": 35.998,
+          "start": 35.014,
+          "end": 35.391,
           "text": "comment"
         },
         {
-          "start": 36.01,
-          "end": 36.304,
+          "start": 35.403,
+          "end": 35.698,
           "text": "CLEAN"
         },
         {
-          "start": 36.316,
-          "end": 36.411,
+          "start": 35.709,
+          "end": 35.804,
           "text": "if"
         },
         {
-          "start": 36.422,
-          "end": 36.54,
+          "start": 35.816,
+          "end": 35.922,
           "text": "you're"
         },
         {
-          "start": 36.552,
-          "end": 37.024,
+          "start": 35.933,
+          "end": 36.311,
           "text": "safe"
         },
         {
-          "start": 37.837,
-          "end": 38.038,
-          "text": "Your"
-        },
-        {
-          "start": 38.05,
-          "end": 38.403,
-          "text": "digital"
-        },
-        {
-          "start": 38.415,
-          "end": 38.745,
-          "text": "ghost"
-        },
-        {
-          "start": 38.757,
-          "end": 38.863,
-          "text": "is"
-        },
-        {
-          "start": 38.875,
-          "end": 39.276,
-          "text": "lurking"
-        },
-        {
-          "start": 39.512,
-          "end": 39.665,
+          "start": 36.523,
+          "end": 36.676,
           "text": "which"
         },
         {
-          "start": 39.677,
-          "end": 39.76,
+          "start": 36.688,
+          "end": 36.771,
           "text": "is"
         },
         {
-          "start": 39.771,
-          "end": 40.278,
+          "start": 36.783,
+          "end": 37.266,
           "text": "exactly"
         },
         {
-          "start": 40.29,
-          "end": 40.715,
+          "start": 37.278,
+          "end": 37.702,
           "text": "why"
         }
       ]
