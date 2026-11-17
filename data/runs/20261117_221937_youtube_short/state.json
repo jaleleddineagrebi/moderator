@@ -532,7 +532,7 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 0,
+      "progress": 66,
       "started_at": "2026-11-17T23:00:48+00:00",
       "ended_at": null,
       "attempt": 3,
@@ -677,6 +677,26 @@
           "ts": "2026-11-17T23:00:48+00:00",
           "level": "info",
           "msg": "Replacing scene_04; keeping 1 unchanged scene(s)"
+        },
+        {
+          "ts": "2026-11-17T23:01:00+00:00",
+          "level": "info",
+          "msg": "scene_04: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-17T23:01:08+00:00",
+          "level": "info",
+          "msg": "scene_03: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-17T23:01:14+00:00",
+          "level": "info",
+          "msg": "scene_02: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-17T23:01:20+00:00",
+          "level": "info",
+          "msg": "scene_05: stock_video (pixabay)"
         }
       ],
       "errors": [],
@@ -816,6 +836,11 @@
           "ts": "2026-11-17T23:00:48+00:00",
           "level": "info",
           "msg": "Narrating en with en-US-AndrewMultilingualNeural"
+        },
+        {
+          "ts": "2026-11-17T23:01:20+00:00",
+          "level": "error",
+          "msg": "NoAudioReceived: No audio was received. Please verify that your parameters are correct."
         }
       ],
       "errors": [
@@ -827,6 +852,12 @@
         },
         {
           "ts": "2026-11-17T22:59:04+00:00",
+          "attempt": 1,
+          "strategy": "primary_voice",
+          "error": "NoAudioReceived: No audio was received. Please verify that your parameters are correct."
+        },
+        {
+          "ts": "2026-11-17T23:01:20+00:00",
           "attempt": 1,
           "strategy": "primary_voice",
           "error": "NoAudioReceived: No audio was received. Please verify that your parameters are correct."
@@ -1261,7 +1292,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-17T23:00:59+00:00",
+    "exported_at": "2026-11-17T23:01:21+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/44188767778"
   }
