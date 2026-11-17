@@ -1,0 +1,60 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:02.44,Headline,,0,0,0,,{\fad(150,150)}YOU ARE BEING WATCHED
+Dialogue: 1,0:00:02.54,0:00:07.98,Headline,,0,0,0,,{\fad(150,150)}CHECK THE DOT
+Dialogue: 1,0:00:08.08,0:00:14.60,Headline,,0,0,0,,{\fad(150,150)}LIVE SPYING ACTIVE
+Dialogue: 1,0:00:14.70,0:00:19.97,Headline,,0,0,0,,{\fad(150,150)}THE CREEPY PART
+Dialogue: 1,0:00:20.07,0:00:24.64,Headline,,0,0,0,,{\fad(150,150)}CHECK MIRRORING NOW
+Dialogue: 1,0:00:24.74,0:00:30.37,Headline,,0,0,0,,{\fad(150,150)}THEY SEE EVERYTHING
+Dialogue: 1,0:00:30.47,0:00:42.21,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 0,0:00:00.10,0:00:00.62,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You are {\c&H0000E5FF&}being{\c&H00FFFFFF&}
+Dialogue: 0,0:00:00.63,0:00:01.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}watched{\c&H00FFFFFF&} right now
+Dialogue: 0,0:00:02.59,0:00:03.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Check{\c&H00FFFFFF&} the top
+Dialogue: 0,0:00:03.26,0:00:03.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}corner{\c&H00FFFFFF&} of your
+Dialogue: 0,0:00:03.84,0:00:04.26,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}phone
+Dialogue: 0,0:00:05.07,0:00:05.53,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Is {\c&H0000E5FF&}there{\c&H00FFFFFF&} a
+Dialogue: 0,0:00:05.54,0:00:06.42,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}tiny {\c&H0000E5FF&}green{\c&H00FFFFFF&} or
+Dialogue: 0,0:00:06.43,0:00:07.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}orange{\c&H00FFFFFF&} dot
+Dialogue: 0,0:00:08.12,0:00:08.76,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}That {\c&H0000E5FF&}isn't{\c&H00FFFFFF&} a
+Dialogue: 0,0:00:08.77,0:00:09.67,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}design {\c&H0000E5FF&}feature{\c&H00FFFFFF&}
+Dialogue: 0,0:00:10.49,0:00:11.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It {\c&H0000E5FF&}means{\c&H00FFFFFF&} an
+Dialogue: 0,0:00:11.12,0:00:12.01,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}app is {\c&H0000E5FF&}actively{\c&H00FFFFFF&}
+Dialogue: 0,0:00:12.03,0:00:12.90,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}using your {\c&H0000E5FF&}camera{\c&H00FFFFFF&}
+Dialogue: 0,0:00:12.91,0:00:13.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}or {\c&H0000E5FF&}microphone{\c&H00FFFFFF&}
+Dialogue: 0,0:00:14.74,0:00:15.27,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}But {\c&H0000E5FF&}here{\c&H00FFFFFF&} is
+Dialogue: 0,0:00:15.29,0:00:16.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}creepy{\c&H00FFFFFF&} part
+Dialogue: 0,0:00:16.99,0:00:18.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}This only {\c&H0000E5FF&}catches{\c&H00FFFFFF&}
+Dialogue: 0,0:00:18.01,0:00:19.09,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}amateur{\c&H00FFFFFF&} apps
+Dialogue: 0,0:00:20.11,0:00:20.69,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Pull{\c&H00FFFFFF&} down your
+Dialogue: 0,0:00:20.70,0:00:21.69,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}control{\c&H00FFFFFF&} center and
+Dialogue: 0,0:00:21.70,0:00:22.10,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}look{\c&H00FFFFFF&} for the
+Dialogue: 0,0:00:22.11,0:00:23.23,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}screen {\c&H0000E5FF&}mirroring{\c&H00FFFFFF&} icon
+Dialogue: 0,0:00:23.24,0:00:23.77,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}right{\c&H00FFFFFF&} now
+Dialogue: 0,0:00:24.79,0:00:25.62,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}If that {\c&H0000E5FF&}icon{\c&H00FFFFFF&}
+Dialogue: 0,0:00:25.64,0:00:26.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is {\c&H0000E5FF&}blue{\c&H00FFFFFF&} or
+Dialogue: 0,0:00:26.19,0:00:26.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}shows a {\c&H0000E5FF&}strange{\c&H00FFFFFF&}
+Dialogue: 0,0:00:26.95,0:00:28.01,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}device{\c&H00FFFFFF&} name your
+Dialogue: 0,0:00:28.02,0:00:28.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}screen{\c&H00FFFFFF&} is being
+Dialogue: 0,0:00:28.69,0:00:29.50,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}broadcasted
+Dialogue: 0,0:00:30.52,0:00:31.46,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Kill your {\c&H0000E5FF&}Wi-Fi{\c&H00FFFFFF&}
+Dialogue: 0,0:00:31.47,0:00:32.03,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and {\c&H0000E5FF&}check{\c&H00FFFFFF&} your
+Dialogue: 0,0:00:32.04,0:00:33.21,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}permissions{\c&H00FFFFFF&} immediately
+Dialogue: 0,0:00:34.03,0:00:34.96,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Subscribe{\c&H00FFFFFF&} to stay
+Dialogue: 0,0:00:34.97,0:00:36.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}protected{\c&H00FFFFFF&} and comment
+Dialogue: 0,0:00:36.01,0:00:36.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}CLEAN if {\c&H0000E5FF&}you're{\c&H00FFFFFF&}
+Dialogue: 0,0:00:36.55,0:00:37.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}safe
+Dialogue: 0,0:00:37.84,0:00:38.74,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}digital{\c&H00FFFFFF&} ghost
+Dialogue: 0,0:00:38.76,0:00:39.66,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is {\c&H0000E5FF&}lurking{\c&H00FFFFFF&} which
+Dialogue: 0,0:00:39.68,0:00:40.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is {\c&H0000E5FF&}exactly{\c&H00FFFFFF&} why
