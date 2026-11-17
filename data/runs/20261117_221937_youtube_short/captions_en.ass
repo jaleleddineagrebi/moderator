@@ -13,44 +13,42 @@ Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 Dialogue: 1,0:00:00.05,0:00:02.75,Headline,,0,0,0,,{\fad(150,150)}BREAK THIS BILL NOW
-Dialogue: 1,0:00:02.85,0:00:09.18,Headline,,0,0,0,,{\fad(150,150)}FEELS LIKE PLAY MONEY
-Dialogue: 1,0:00:09.28,0:00:17.24,Headline,,0,0,0,,{\fad(150,150)}DENOMINATION EFFECT
-Dialogue: 1,0:00:17.34,0:00:21.36,Headline,,0,0,0,,{\fad(150,150)}THE SINISTER TRAP
-Dialogue: 1,0:00:21.46,0:00:27.38,Headline,,0,0,0,,{\fad(150,150)}MENTAL BARRIER COLLAPSES
-Dialogue: 1,0:00:27.48,0:00:34.02,Headline,,0,0,0,,{\fad(150,150)}MONEY VANISHES INSTANTLY
-Dialogue: 1,0:00:34.12,0:00:41.73,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 1,0:00:02.85,0:00:08.60,Headline,,0,0,0,,{\fad(150,150)}FEELS LIKE TOY MONEY
+Dialogue: 1,0:00:08.70,0:00:15.87,Headline,,0,0,0,,{\fad(150,150)}THE DENOMINATION EFFECT
+Dialogue: 1,0:00:15.97,0:00:19.99,Headline,,0,0,0,,{\fad(150,150)}THE SINISTER TRAP
+Dialogue: 1,0:00:20.09,0:00:26.01,Headline,,0,0,0,,{\fad(150,150)}MENTAL BARRIER COLLAPSES
+Dialogue: 1,0:00:26.11,0:00:32.65,Headline,,0,0,0,,{\fad(150,150)}MONEY VANISHES INSTANTLY
+Dialogue: 1,0:00:32.75,0:00:39.83,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
 Dialogue: 0,0:00:00.10,0:00:01.10,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Break a {\c&H0000E5FF&}hundred-dollar{\c&H00FFFFFF&}
 Dialogue: 0,0:00:01.11,0:00:01.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}bill {\c&H0000E5FF&}right{\c&H00FFFFFF&} now
-Dialogue: 0,0:00:02.90,0:00:03.45,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You {\c&H0000E5FF&}feel{\c&H00FFFFFF&} an
-Dialogue: 0,0:00:03.46,0:00:04.28,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}immediate{\c&H00FFFFFF&} sting of
-Dialogue: 0,0:00:04.29,0:00:05.47,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}pain{\c&H00FFFFFF&} yet five
-Dialogue: 0,0:00:05.48,0:00:06.65,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}twenty-dollar{\c&H00FFFFFF&} bills feel
-Dialogue: 0,0:00:06.66,0:00:07.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}like {\c&H0000E5FF&}worthless{\c&H00FFFFFF&} monopoly
-Dialogue: 0,0:00:07.83,0:00:08.30,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}paper
-Dialogue: 0,0:00:09.32,0:00:11.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}MIT {\c&H0000E5FF&}neuro-economists{\c&H00FFFFFF&} call
-Dialogue: 0,0:00:11.12,0:00:12.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}this the {\c&H0000E5FF&}denomination{\c&H00FFFFFF&}
-Dialogue: 0,0:00:12.12,0:00:12.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}effect
-Dialogue: 0,0:00:13.44,0:00:14.26,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your brain {\c&H0000E5FF&}treats{\c&H00FFFFFF&}
-Dialogue: 0,0:00:14.28,0:00:15.23,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}large {\c&H0000E5FF&}single{\c&H00FFFFFF&} notes
-Dialogue: 0,0:00:15.24,0:00:16.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}as {\c&H0000E5FF&}protected{\c&H00FFFFFF&} treasure
-Dialogue: 0,0:00:17.38,0:00:17.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}But {\c&H0000E5FF&}here{\c&H00FFFFFF&} is
-Dialogue: 0,0:00:17.89,0:00:18.81,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the truly {\c&H0000E5FF&}sinister{\c&H00FFFFFF&}
-Dialogue: 0,0:00:18.82,0:00:19.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}trap {\c&H0000E5FF&}waiting{\c&H00FFFFFF&} inside
-Dialogue: 0,0:00:19.92,0:00:20.48,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}mind{\c&H00FFFFFF&}
-Dialogue: 0,0:00:21.50,0:00:22.22,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Once you {\c&H0000E5FF&}crack{\c&H00FFFFFF&}
-Dialogue: 0,0:00:22.24,0:00:22.87,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}that {\c&H0000E5FF&}hundred{\c&H00FFFFFF&} for
-Dialogue: 0,0:00:22.89,0:00:23.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a {\c&H0000E5FF&}two-dollar{\c&H00FFFFFF&} coffee
-Dialogue: 0,0:00:24.21,0:00:24.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your brain {\c&H0000E5FF&}writes{\c&H00FFFFFF&}
-Dialogue: 0,0:00:24.93,0:00:25.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}off the {\c&H0000E5FF&}rest{\c&H00FFFFFF&}
-Dialogue: 0,0:00:25.57,0:00:26.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}as {\c&H0000E5FF&}already{\c&H00FFFFFF&} spent
-Dialogue: 0,0:00:27.52,0:00:28.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}The {\c&H0000E5FF&}psychological{\c&H00FFFFFF&} barrier
-Dialogue: 0,0:00:28.83,0:00:29.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}vanishes{\c&H00FFFFFF&} and you
-Dialogue: 0,0:00:29.94,0:00:30.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}recklessly{\c&H00FFFFFF&} blow the
-Dialogue: 0,0:00:30.84,0:00:31.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}change on {\c&H0000E5FF&}impulse{\c&H00FFFFFF&}
-Dialogue: 0,0:00:31.84,0:00:33.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}junk {\c&H0000E5FF&}before{\c&H00FFFFFF&} sunset
-Dialogue: 0,0:00:34.16,0:00:35.40,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Subscribe for {\c&H0000E5FF&}tomorrow's{\c&H00FFFFFF&}
-Dialogue: 0,0:00:35.41,0:00:36.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}brain test {\c&H0000E5FF&}comment{\c&H00FFFFFF&}
-Dialogue: 0,0:00:36.74,0:00:37.40,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}dumbest{\c&H00FFFFFF&} thing
-Dialogue: 0,0:00:37.41,0:00:38.10,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you {\c&H0000E5FF&}bought{\c&H00FFFFFF&} after
-Dialogue: 0,0:00:38.12,0:00:39.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}breaking{\c&H00FFFFFF&} cash and
-Dialogue: 0,0:00:39.25,0:00:40.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}remember{\c&H00FFFFFF&} never to
+Dialogue: 0,0:00:02.90,0:00:03.44,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You {\c&H0000E5FF&}feel{\c&H00FFFFFF&} an
+Dialogue: 0,0:00:03.45,0:00:04.27,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}immediate{\c&H00FFFFFF&} sting of
+Dialogue: 0,0:00:04.28,0:00:05.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}pain{\c&H00FFFFFF&} yet five
+Dialogue: 0,0:00:05.45,0:00:06.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}twenty-dollar{\c&H00FFFFFF&} bills feel
+Dialogue: 0,0:00:06.63,0:00:07.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}like {\c&H0000E5FF&}worthless{\c&H00FFFFFF&} paper
+Dialogue: 0,0:00:08.75,0:00:09.96,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Economists{\c&H00FFFFFF&} call this
+Dialogue: 0,0:00:09.98,0:00:11.26,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}denomination{\c&H00FFFFFF&} effect
+Dialogue: 0,0:00:12.07,0:00:12.90,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your brain {\c&H0000E5FF&}treats{\c&H00FFFFFF&}
+Dialogue: 0,0:00:12.91,0:00:13.86,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}large {\c&H0000E5FF&}single{\c&H00FFFFFF&} notes
+Dialogue: 0,0:00:13.88,0:00:15.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}as {\c&H0000E5FF&}protected{\c&H00FFFFFF&} treasure
+Dialogue: 0,0:00:16.02,0:00:16.51,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}But {\c&H0000E5FF&}here{\c&H00FFFFFF&} is
+Dialogue: 0,0:00:16.52,0:00:17.44,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the truly {\c&H0000E5FF&}sinister{\c&H00FFFFFF&}
+Dialogue: 0,0:00:17.45,0:00:18.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}trap {\c&H0000E5FF&}waiting{\c&H00FFFFFF&} inside
+Dialogue: 0,0:00:18.55,0:00:19.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}mind{\c&H00FFFFFF&}
+Dialogue: 0,0:00:20.14,0:00:20.86,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Once you {\c&H0000E5FF&}crack{\c&H00FFFFFF&}
+Dialogue: 0,0:00:20.87,0:00:21.50,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}that {\c&H0000E5FF&}hundred{\c&H00FFFFFF&} for
+Dialogue: 0,0:00:21.52,0:00:22.51,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a {\c&H0000E5FF&}two-dollar{\c&H00FFFFFF&} coffee
+Dialogue: 0,0:00:22.84,0:00:23.55,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your brain {\c&H0000E5FF&}writes{\c&H00FFFFFF&}
+Dialogue: 0,0:00:23.56,0:00:24.19,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}off the {\c&H0000E5FF&}rest{\c&H00FFFFFF&}
+Dialogue: 0,0:00:24.21,0:00:25.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}as {\c&H0000E5FF&}already{\c&H00FFFFFF&} spent
+Dialogue: 0,0:00:26.16,0:00:27.45,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}The {\c&H0000E5FF&}psychological{\c&H00FFFFFF&} barrier
+Dialogue: 0,0:00:27.46,0:00:28.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}vanishes{\c&H00FFFFFF&} and you
+Dialogue: 0,0:00:28.57,0:00:29.46,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}recklessly{\c&H00FFFFFF&} blow the
+Dialogue: 0,0:00:29.47,0:00:30.46,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}change on {\c&H0000E5FF&}impulse{\c&H00FFFFFF&}
+Dialogue: 0,0:00:30.47,0:00:31.78,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}junk {\c&H0000E5FF&}before{\c&H00FFFFFF&} sunset
+Dialogue: 0,0:00:32.80,0:00:34.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Subscribe for {\c&H0000E5FF&}tomorrow's{\c&H00FFFFFF&}
+Dialogue: 0,0:00:34.03,0:00:35.28,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}brain test {\c&H0000E5FF&}comment{\c&H00FFFFFF&}
+Dialogue: 0,0:00:35.30,0:00:36.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}dumbest{\c&H00FFFFFF&} impulse
+Dialogue: 0,0:00:36.16,0:00:36.75,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}buy you {\c&H0000E5FF&}made{\c&H00FFFFFF&}
+Dialogue: 0,0:00:36.96,0:00:37.73,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and {\c&H0000E5FF&}think{\c&H00FFFFFF&} twice
+Dialogue: 0,0:00:37.74,0:00:38.35,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}before{\c&H00FFFFFF&} you
