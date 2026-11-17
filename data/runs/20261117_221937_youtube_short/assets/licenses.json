@@ -13,60 +13,60 @@
     "scene": "scene_02",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-18244/",
-    "author": "Lirofilm",
+    "page": "https://pixabay.com/videos/id-20857/",
+    "author": "RoyBuri",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "twenty dollar bills",
-    "description": "High angle dynamic shot of crumpled twenty dollar bills tossed carelessly onto a dark wooden table."
+    "query": "falling paper money",
+    "description": "Dynamic shot of several twenty dollar bills falling through the air against a dark background."
   },
   {
     "scene": "scene_03",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-262188/",
-    "author": "Kost9n4",
+    "page": "https://pixabay.com/videos/id-137197/",
+    "author": "tintin025",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "brain scan visualization",
-    "description": "Glowing three-dimensional digital model of a human brain with firing golden neural pathways and data graphics."
+    "query": "pulsing digital brain",
+    "description": "Digital rendering of a human brain with gold neural connections pulsing with light."
   },
   {
     "scene": "scene_04",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-83178/",
-    "author": "Kmeel_com",
+    "page": "https://pixabay.com/videos/id-7686/",
+    "author": "Espace-Aventures",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "man vending machine",
-    "description": "Cinematic tracking shot behind a solitary man standing before a brightly lit glowing vending machine on a dark night."
+    "query": "man at atm",
+    "description": "Cinematic shot of a man standing in front of a glowing ATM machine at night in a city."
   },
   {
     "scene": "scene_05",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-46989/",
-    "author": "NickyPe",
+    "page": "https://pixabay.com/videos/id-134/",
+    "author": "Coverr-Free-Footage",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "espresso coffee machine",
-    "description": "Dark espresso pouring into a ceramic cup on a stainless steel cafe bar next to loose coins."
+    "query": "espresso machine pouring",
+    "description": "Espresso dripping into a white ceramic cup from a professional machine in slow motion."
   },
   {
     "scene": "scene_06",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-5628/",
-    "author": "Coverr-Free-Footage",
+    "page": "https://pixabay.com/videos/id-59138/",
+    "author": "Hassas_Arts",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "supermarket conveyor belt",
-    "description": "Fast-moving supermarket checkout conveyor belt carrying snacks and soda past a red laser scanner."
+    "query": "supermarket checkout items",
+    "description": "Fast-moving supermarket conveyor belt carrying snacks and candy bars past a scanner."
   },
   {
     "scene": "scene_07",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-120255/",
+    "page": "https://pixabay.com/videos/id-359377/",
     "author": "Engin_Akyurt",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "bank vault lock turning",
-    "description": "Macro close-up shot of massive steel bank vault gears smoothly rotating and locking into place."
+    "query": "bank vault gears",
+    "description": "Macro shot of heavy steel bank vault gears rotating and locking shut."
   }
 ]
