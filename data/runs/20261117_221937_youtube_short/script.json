@@ -11,9 +11,9 @@
       "visual": {
         "description": "Close up shot of masculine hands pulling a crisp brand-new hundred dollar bill out of a sleek dark leather wallet.",
         "search_terms": [
-          "crisp hundred bill",
-          "leather wallet cash",
-          "hands counting money"
+          "counting hundred dollar bills",
+          "opening leather wallet",
+          "cash money hands"
         ],
         "prefer": "video"
       },
@@ -21,17 +21,17 @@
     },
     {
       "vo": {
-        "en": "You feel an immediate sting of pain, yet five twenty-dollar bills feel like worthless paper."
+        "en": "You feel a physical sting of pain, yet five twenties feel like worthless play money."
       },
       "on_screen": {
         "en": "FEELS LIKE TOY MONEY"
       },
       "visual": {
-        "description": "High angle dynamic shot of crumpled twenty dollar bills tossed carelessly onto a dark wooden table.",
+        "description": "Dynamic shot of several twenty dollar bills falling through the air against a dark background.",
         "search_terms": [
-          "twenty dollar bills",
-          "cash falling tabletop",
-          "handling paper currency"
+          "falling paper money",
+          "cash floating dark",
+          "twenty dollar currency"
         ],
         "prefer": "video"
       },
@@ -39,17 +39,17 @@
     },
     {
       "vo": {
-        "en": "Economists call this the denomination effect. Your brain treats large single notes as protected treasure."
+        "en": "This is the Denomination Effect. Your brain treats large single notes like sacred, protected treasure."
       },
       "on_screen": {
-        "en": "THE DENOMINATION EFFECT"
+        "en": "SACRED TREASURE"
       },
       "visual": {
-        "description": "Glowing three-dimensional digital model of a human brain with firing golden neural pathways and data graphics.",
+        "description": "Digital rendering of a human brain with gold neural connections pulsing with light.",
         "search_terms": [
-          "glowing brain hologram",
-          "neural synapse firing",
-          "neuroscience data visualization"
+          "pulsing digital brain",
+          "gold neural network",
+          "brain hologram science"
         ],
         "prefer": "video"
       },
@@ -57,17 +57,17 @@
     },
     {
       "vo": {
-        "en": "But here is the truly sinister trap waiting inside your mind."
+        "en": "But here is the truly sinister part that drains your savings."
       },
       "on_screen": {
-        "en": "THE SINISTER TRAP"
+        "en": "THE SAVINGS TRAP"
       },
       "visual": {
-        "description": "Cinematic tracking shot behind a solitary man standing before a brightly lit glowing vending machine on a dark night.",
+        "description": "Cinematic shot of a man standing in front of a glowing ATM machine at night in a city.",
         "search_terms": [
-          "man vending machine",
-          "neon night street",
-          "cinematic dark alley"
+          "man at atm",
+          "night city lights",
+          "street corner night"
         ],
         "prefer": "video"
       },
@@ -75,17 +75,17 @@
     },
     {
       "vo": {
-        "en": "Once you crack that hundred for a two-dollar coffee, your brain writes off the rest as already spent."
+        "en": "Once you crack that hundred for a cheap coffee, your mental barrier completely collapses."
       },
       "on_screen": {
-        "en": "MENTAL BARRIER COLLAPSES"
+        "en": "BARRIER COLLAPSES"
       },
       "visual": {
-        "description": "Dark espresso pouring into a ceramic cup on a stainless steel cafe bar next to loose coins.",
+        "description": "Espresso dripping into a white ceramic cup from a professional machine in slow motion.",
         "search_terms": [
           "espresso machine pouring",
-          "coins cafe counter",
-          "steaming coffee cup"
+          "steaming coffee cup",
+          "cafe barista counter"
         ],
         "prefer": "video"
       },
@@ -93,17 +93,17 @@
     },
     {
       "vo": {
-        "en": "The psychological barrier vanishes, and you recklessly blow the change on impulse junk before sunset."
+        "en": "Your brain writes off the rest as already spent, so you blow the change on junk."
       },
       "on_screen": {
-        "en": "MONEY VANISHES INSTANTLY"
+        "en": "IMPULSE SPENDING"
       },
       "visual": {
-        "description": "Fast-moving supermarket checkout conveyor belt carrying snacks and soda past a red laser scanner.",
+        "description": "Fast-moving supermarket conveyor belt carrying snacks and candy bars past a scanner.",
         "search_terms": [
-          "supermarket conveyor belt",
-          "impulse shopping items",
-          "checkout barcode scanner"
+          "supermarket checkout items",
+          "grocery conveyor belt",
+          "scanning snack food"
         ],
         "prefer": "video"
       },
@@ -111,17 +111,17 @@
     },
     {
       "vo": {
-        "en": "Subscribe for tomorrow's brain test, comment the dumbest impulse buy you made, and think twice before you"
+        "en": "Subscribe for tomorrow's brain hack, comment the dumbest thing you ever bought, and think twice before you"
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "Macro close-up shot of massive steel bank vault gears smoothly rotating and locking into place.",
+        "description": "Macro shot of heavy steel bank vault gears rotating and locking shut.",
         "search_terms": [
-          "bank vault turning",
-          "mechanical steel gears",
-          "safe door locking"
+          "bank vault gears",
+          "mechanical safe locking",
+          "heavy steel mechanism"
         ],
         "prefer": "video"
       },
@@ -133,6 +133,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 35.3
+    "en": 34.2
   }
 }

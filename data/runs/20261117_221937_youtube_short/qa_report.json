@@ -1,12 +1,12 @@
 {
   "passed": false,
-  "revision_round": 0,
+  "revision_round": 1,
   "checks": [
     {
       "check": "length",
       "lang": "en",
       "ok": true,
-      "detail": "41.8s (must be under 60s; target 32-50s)",
+      "detail": "39.9s (must be under 60s; target 32-50s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -14,7 +14,7 @@
       "check": "target length",
       "lang": "en",
       "ok": true,
-      "detail": "41.8s",
+      "detail": "39.9s",
       "send_to": null,
       "severity": "minor"
     },
@@ -62,7 +62,7 @@
       "check": "caption sync",
       "lang": "en",
       "ok": true,
-      "detail": "100 words, 35 caption events",
+      "detail": "97 words, 33 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -91,27 +91,19 @@
       "severity": "blocker"
     },
     {
-      "check": "copyright review",
-      "lang": "en",
-      "ok": false,
-      "detail": "Monopoly is a trademarked board game by Hasbro. Change 'worthless monopoly paper' to 'worthless play money' to avoid trademark infringement.",
-      "send_to": "script",
-      "severity": "minor"
-    },
-    {
       "check": "grammar review",
       "lang": "en",
       "ok": false,
-      "detail": "The final sentence in scene_07 is cut off abruptly ('and remember never to'). Either complete the thought or seamlessly loop back to scene_01 by changing it to: 'and remember never to... Break a hundred-dollar bill right now.' Ensure the voiceover has a complete ending or explicit looping phrasing like 'and remember never to do this.'",
+      "detail": "Scene 07 ends mid-sentence. Fix by adding 'break that bill.' to the end of the script: '...and think twice before you break that bill.'",
       "send_to": "script",
       "severity": "blocker"
     },
     {
       "check": "people rule",
       "lang": null,
-      "ok": false,
-      "detail": "scene_04: two women walking on the street shown with full bodies and clothing. Replace with footage without women (a face-only close-up is the only exception).",
-      "send_to": "visuals",
+      "ok": true,
+      "detail": "no women beyond face close-ups in 7 scenes and 1 thumbnail(s)",
+      "send_to": null,
       "severity": "blocker"
     }
   ]
