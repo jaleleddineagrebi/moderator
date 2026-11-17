@@ -1,0 +1,72 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-153458/",
+    "author": "34168960",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "crisp hundred dollar bill",
+    "description": "Close up shot of masculine hands pulling a crisp brand-new hundred dollar bill out of a sleek dark leather wallet."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-93550/",
+    "author": "NickyPe",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "twenty dollar bills",
+    "description": "High angle dynamic shot of crumpled twenty dollar bills tossed carelessly onto a rustic wooden table."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-262188/",
+    "author": "Kost9n4",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "brain scan visualization",
+    "description": "Glowing three-dimensional digital model of a human brain with firing golden neural pathways and data graphics."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-39837/",
+    "author": "AlexKopeykin",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man neon alley rain",
+    "description": "Cinematic tracking shot behind a solitary man standing before a brightly lit glowing vending machine on a dark night."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-46989/",
+    "author": "NickyPe",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "espresso coffee machine",
+    "description": "Dark espresso pouring into a ceramic cup on a stainless steel cafe bar next to loose coins."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-3585/",
+    "author": "Life-Of-Vids",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "supermarket checkout conveyor",
+    "description": "Fast-moving supermarket checkout conveyor belt carrying snacks and candy past a red laser scanner."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-120255/",
+    "author": "Engin_Akyurt",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "bank vault lock turning",
+    "description": "Macro close-up shot of massive steel bank vault gears smoothly rotating and locking into place."
+  }
+]
