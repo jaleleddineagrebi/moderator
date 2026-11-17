@@ -1,0 +1,138 @@
+{
+  "title": "The Invisible Screen Mirroring Trap",
+  "scenes": [
+    {
+      "vo": {
+        "en": "You are being watched right now."
+      },
+      "on_screen": {
+        "en": "YOU ARE BEING WATCHED"
+      },
+      "visual": {
+        "description": "A close-up of a man's eyes illuminated by a glowing smartphone screen in a dark room.",
+        "search_terms": [
+          "man using phone dark",
+          "smartphone glow face",
+          "digital surveillance"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Check the top corner of your phone. Is there a tiny green or orange dot?"
+      },
+      "on_screen": {
+        "en": "CHECK THE DOT"
+      },
+      "visual": {
+        "description": "Extreme macro shot of the top status bar of a smartphone showing a tiny colored privacy indicator.",
+        "search_terms": [
+          "smartphone status bar",
+          "macro phone screen",
+          "phone notification icons"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "That isn't a design feature. It means an app is actively using your camera or microphone."
+      },
+      "on_screen": {
+        "en": "LIVE SPYING ACTIVE"
+      },
+      "visual": {
+        "description": "A digital audio waveform moving across the screen with a glitch effect.",
+        "search_terms": [
+          "audio waveform motion",
+          "digital glitch background",
+          "microphone sound waves"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "But here is the creepy part. This only catches the amateur apps."
+      },
+      "on_screen": {
+        "en": "THE CREEPY PART"
+      },
+      "visual": {
+        "description": "A silhouette of a hooded man typing rapidly on a keyboard in a dark office.",
+        "search_terms": [
+          "hacker typing dark",
+          "man computer silhouette",
+          "cyber security threat"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Pull down your control center and look for the screen mirroring icon right now."
+      },
+      "on_screen": {
+        "en": "CHECK MIRRORING NOW"
+      },
+      "visual": {
+        "description": "A man's hand swiping down on a smartphone screen to reveal the control panel settings.",
+        "search_terms": [
+          "hand swiping smartphone",
+          "phone control center",
+          "interface navigation"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "If that icon is blue or shows a strange device name, your screen is being broadcasted."
+      },
+      "on_screen": {
+        "en": "THEY SEE EVERYTHING"
+      },
+      "visual": {
+        "description": "A security camera lens rotating slowly, reflecting a digital screen.",
+        "search_terms": [
+          "security camera lens",
+          "surveillance monitoring",
+          "cctv rotation"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Kill your Wi-Fi and check your permissions immediately. Subscribe to stay protected and comment CLEAN if you're safe. Your digital ghost is lurking, which is exactly why"
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "A hand pressing a large 'power off' button on a screen followed by a digital shield icon appearing.",
+        "search_terms": [
+          "restart phone animation",
+          "digital shield icon",
+          "security confirm button"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "phone-screen-recording-trap",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 38.5
+  }
+}
