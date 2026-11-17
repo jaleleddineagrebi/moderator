@@ -1,0 +1,138 @@
+{
+  "title": "The $100 Bill Brain Glitch",
+  "scenes": [
+    {
+      "vo": {
+        "en": "Break a hundred-dollar bill right now."
+      },
+      "on_screen": {
+        "en": "BREAK THIS BILL NOW"
+      },
+      "visual": {
+        "description": "Close up shot of masculine hands pulling a crisp brand-new hundred dollar bill out of a sleek dark leather wallet.",
+        "search_terms": [
+          "crisp hundred dollar bill",
+          "wallet cash leather",
+          "counting money hands"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "You feel an immediate sting of pain, yet five twenty-dollar bills feel like worthless monopoly paper."
+      },
+      "on_screen": {
+        "en": "FEELS LIKE PLAY MONEY"
+      },
+      "visual": {
+        "description": "High angle dynamic shot of crumpled twenty dollar bills tossed carelessly onto a rustic wooden table.",
+        "search_terms": [
+          "twenty dollar bills",
+          "poker table money",
+          "cash falling tabletop"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "MIT neuro-economists call this the denomination effect. Your brain treats large single notes as protected treasure."
+      },
+      "on_screen": {
+        "en": "DENOMINATION EFFECT"
+      },
+      "visual": {
+        "description": "Glowing three-dimensional digital model of a human brain with firing golden neural pathways and data graphics.",
+        "search_terms": [
+          "brain scan visualization",
+          "neural synapse glowing",
+          "futuristic neuroscience hologram"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "But here is the truly sinister trap waiting inside your mind."
+      },
+      "on_screen": {
+        "en": "THE SINISTER TRAP"
+      },
+      "visual": {
+        "description": "Cinematic tracking shot behind a solitary man standing before a brightly lit glowing vending machine on a dark night.",
+        "search_terms": [
+          "man neon alley rain",
+          "vending machine glowing",
+          "cinematic night urban"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Once you crack that hundred for a two-dollar coffee, your brain writes off the rest as already spent."
+      },
+      "on_screen": {
+        "en": "MENTAL BARRIER COLLAPSES"
+      },
+      "visual": {
+        "description": "Dark espresso pouring into a ceramic cup on a stainless steel cafe bar next to loose coins.",
+        "search_terms": [
+          "espresso coffee machine",
+          "barista counter money",
+          "steaming coffee cup"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "The psychological barrier vanishes, and you recklessly blow the change on impulse junk before sunset."
+      },
+      "on_screen": {
+        "en": "MONEY VANISHES INSTANTLY"
+      },
+      "visual": {
+        "description": "Fast-moving supermarket checkout conveyor belt carrying snacks and candy past a red laser scanner.",
+        "search_terms": [
+          "supermarket checkout conveyor",
+          "shopping impulse items",
+          "cash register scanner"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for tomorrow's brain test, comment the dumbest thing you bought after breaking cash, and remember never to"
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "Macro close-up shot of massive steel bank vault gears smoothly rotating and locking into place.",
+        "search_terms": [
+          "bank vault lock turning",
+          "mechanical steel gears",
+          "heavy safe door closing"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "denomination-effect-spending-trap",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 36.4
+  }
+}

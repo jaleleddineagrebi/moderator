@@ -1,0 +1,555 @@
+{
+  "voice": "en-US-AriaNeural",
+  "duration": 41.076077,
+  "scenes": [
+    {
+      "scene": "scene_01",
+      "start": 0.0,
+      "end": 2.712,
+      "words": [
+        {
+          "start": 0.097,
+          "end": 0.392,
+          "text": "Break"
+        },
+        {
+          "start": 0.404,
+          "end": 0.451,
+          "text": "a"
+        },
+        {
+          "start": 0.463,
+          "end": 1.1,
+          "text": "hundred-dollar"
+        },
+        {
+          "start": 1.111,
+          "end": 1.324,
+          "text": "bill"
+        },
+        {
+          "start": 1.335,
+          "end": 1.524,
+          "text": "right"
+        },
+        {
+          "start": 1.536,
+          "end": 1.878,
+          "text": "now"
+        }
+      ]
+    },
+    {
+      "scene": "scene_02",
+      "start": 2.802,
+      "end": 9.138,
+      "words": [
+        {
+          "start": 2.899,
+          "end": 3.088,
+          "text": "You"
+        },
+        {
+          "start": 3.1,
+          "end": 3.359,
+          "text": "feel"
+        },
+        {
+          "start": 3.371,
+          "end": 3.453,
+          "text": "an"
+        },
+        {
+          "start": 3.465,
+          "end": 3.902,
+          "text": "immediate"
+        },
+        {
+          "start": 3.913,
+          "end": 4.185,
+          "text": "sting"
+        },
+        {
+          "start": 4.196,
+          "end": 4.279,
+          "text": "of"
+        },
+        {
+          "start": 4.291,
+          "end": 4.644,
+          "text": "pain"
+        },
+        {
+          "start": 4.951,
+          "end": 5.14,
+          "text": "yet"
+        },
+        {
+          "start": 5.152,
+          "end": 5.47,
+          "text": "five"
+        },
+        {
+          "start": 5.482,
+          "end": 6.071,
+          "text": "twenty-dollar"
+        },
+        {
+          "start": 6.083,
+          "end": 6.402,
+          "text": "bills"
+        },
+        {
+          "start": 6.413,
+          "end": 6.649,
+          "text": "feel"
+        },
+        {
+          "start": 6.661,
+          "end": 6.85,
+          "text": "like"
+        },
+        {
+          "start": 6.861,
+          "end": 7.333,
+          "text": "worthless"
+        },
+        {
+          "start": 7.345,
+          "end": 7.817,
+          "text": "monopoly"
+        },
+        {
+          "start": 7.828,
+          "end": 8.3,
+          "text": "paper"
+        }
+      ]
+    },
+    {
+      "scene": "scene_03",
+      "start": 9.228,
+      "end": 17.196,
+      "words": [
+        {
+          "start": 9.325,
+          "end": 9.868,
+          "text": "MIT"
+        },
+        {
+          "start": 9.879,
+          "end": 10.858,
+          "text": "neuro-economists"
+        },
+        {
+          "start": 10.87,
+          "end": 11.106,
+          "text": "call"
+        },
+        {
+          "start": 11.118,
+          "end": 11.318,
+          "text": "this"
+        },
+        {
+          "start": 11.33,
+          "end": 11.424,
+          "text": "the"
+        },
+        {
+          "start": 11.436,
+          "end": 12.108,
+          "text": "denomination"
+        },
+        {
+          "start": 12.12,
+          "end": 12.627,
+          "text": "effect"
+        },
+        {
+          "start": 13.438,
+          "end": 13.662,
+          "text": "Your"
+        },
+        {
+          "start": 13.674,
+          "end": 13.945,
+          "text": "brain"
+        },
+        {
+          "start": 13.957,
+          "end": 14.263,
+          "text": "treats"
+        },
+        {
+          "start": 14.275,
+          "end": 14.617,
+          "text": "large"
+        },
+        {
+          "start": 14.629,
+          "end": 14.936,
+          "text": "single"
+        },
+        {
+          "start": 14.947,
+          "end": 15.23,
+          "text": "notes"
+        },
+        {
+          "start": 15.242,
+          "end": 15.384,
+          "text": "as"
+        },
+        {
+          "start": 15.395,
+          "end": 15.879,
+          "text": "protected"
+        },
+        {
+          "start": 15.891,
+          "end": 16.362,
+          "text": "treasure"
+        }
+      ]
+    },
+    {
+      "scene": "scene_04",
+      "start": 17.286,
+      "end": 21.318,
+      "words": [
+        {
+          "start": 17.383,
+          "end": 17.548,
+          "text": "But"
+        },
+        {
+          "start": 17.56,
+          "end": 17.76,
+          "text": "here"
+        },
+        {
+          "start": 17.772,
+          "end": 17.878,
+          "text": "is"
+        },
+        {
+          "start": 17.89,
+          "end": 17.985,
+          "text": "the"
+        },
+        {
+          "start": 17.996,
+          "end": 18.362,
+          "text": "truly"
+        },
+        {
+          "start": 18.374,
+          "end": 18.81,
+          "text": "sinister"
+        },
+        {
+          "start": 18.822,
+          "end": 19.128,
+          "text": "trap"
+        },
+        {
+          "start": 19.14,
+          "end": 19.482,
+          "text": "waiting"
+        },
+        {
+          "start": 19.494,
+          "end": 19.907,
+          "text": "inside"
+        },
+        {
+          "start": 19.919,
+          "end": 20.001,
+          "text": "your"
+        },
+        {
+          "start": 20.013,
+          "end": 20.485,
+          "text": "mind"
+        }
+      ]
+    },
+    {
+      "scene": "scene_05",
+      "start": 21.408,
+      "end": 27.336,
+      "words": [
+        {
+          "start": 21.505,
+          "end": 21.8,
+          "text": "Once"
+        },
+        {
+          "start": 21.812,
+          "end": 21.906,
+          "text": "you"
+        },
+        {
+          "start": 21.918,
+          "end": 22.224,
+          "text": "crack"
+        },
+        {
+          "start": 22.236,
+          "end": 22.342,
+          "text": "that"
+        },
+        {
+          "start": 22.354,
+          "end": 22.708,
+          "text": "hundred"
+        },
+        {
+          "start": 22.72,
+          "end": 22.873,
+          "text": "for"
+        },
+        {
+          "start": 22.885,
+          "end": 22.932,
+          "text": "a"
+        },
+        {
+          "start": 22.944,
+          "end": 23.404,
+          "text": "two-dollar"
+        },
+        {
+          "start": 23.416,
+          "end": 23.875,
+          "text": "coffee"
+        },
+        {
+          "start": 24.206,
+          "end": 24.335,
+          "text": "your"
+        },
+        {
+          "start": 24.347,
+          "end": 24.654,
+          "text": "brain"
+        },
+        {
+          "start": 24.666,
+          "end": 24.913,
+          "text": "writes"
+        },
+        {
+          "start": 24.925,
+          "end": 25.09,
+          "text": "off"
+        },
+        {
+          "start": 25.102,
+          "end": 25.196,
+          "text": "the"
+        },
+        {
+          "start": 25.208,
+          "end": 25.562,
+          "text": "rest"
+        },
+        {
+          "start": 25.574,
+          "end": 25.68,
+          "text": "as"
+        },
+        {
+          "start": 25.692,
+          "end": 26.045,
+          "text": "already"
+        },
+        {
+          "start": 26.057,
+          "end": 26.517,
+          "text": "spent"
+        }
+      ]
+    },
+    {
+      "scene": "scene_06",
+      "start": 27.426,
+      "end": 33.978,
+      "words": [
+        {
+          "start": 27.523,
+          "end": 27.688,
+          "text": "The"
+        },
+        {
+          "start": 27.7,
+          "end": 28.431,
+          "text": "psychological"
+        },
+        {
+          "start": 28.443,
+          "end": 28.82,
+          "text": "barrier"
+        },
+        {
+          "start": 28.832,
+          "end": 29.422,
+          "text": "vanishes"
+        },
+        {
+          "start": 29.669,
+          "end": 29.799,
+          "text": "and"
+        },
+        {
+          "start": 29.811,
+          "end": 29.929,
+          "text": "you"
+        },
+        {
+          "start": 29.941,
+          "end": 30.448,
+          "text": "recklessly"
+        },
+        {
+          "start": 30.46,
+          "end": 30.707,
+          "text": "blow"
+        },
+        {
+          "start": 30.719,
+          "end": 30.825,
+          "text": "the"
+        },
+        {
+          "start": 30.837,
+          "end": 31.238,
+          "text": "change"
+        },
+        {
+          "start": 31.25,
+          "end": 31.356,
+          "text": "on"
+        },
+        {
+          "start": 31.368,
+          "end": 31.827,
+          "text": "impulse"
+        },
+        {
+          "start": 31.839,
+          "end": 32.193,
+          "text": "junk"
+        },
+        {
+          "start": 32.205,
+          "end": 32.523,
+          "text": "before"
+        },
+        {
+          "start": 32.535,
+          "end": 33.148,
+          "text": "sunset"
+        }
+      ]
+    },
+    {
+      "scene": "scene_07",
+      "start": 34.068,
+      "end": 41.076,
+      "words": [
+        {
+          "start": 34.165,
+          "end": 34.778,
+          "text": "Subscribe"
+        },
+        {
+          "start": 34.79,
+          "end": 34.932,
+          "text": "for"
+        },
+        {
+          "start": 34.943,
+          "end": 35.403,
+          "text": "tomorrow's"
+        },
+        {
+          "start": 35.415,
+          "end": 35.675,
+          "text": "brain"
+        },
+        {
+          "start": 35.686,
+          "end": 36.099,
+          "text": "test"
+        },
+        {
+          "start": 36.359,
+          "end": 36.724,
+          "text": "comment"
+        },
+        {
+          "start": 36.736,
+          "end": 36.83,
+          "text": "the"
+        },
+        {
+          "start": 36.842,
+          "end": 37.172,
+          "text": "dumbest"
+        },
+        {
+          "start": 37.184,
+          "end": 37.396,
+          "text": "thing"
+        },
+        {
+          "start": 37.408,
+          "end": 37.526,
+          "text": "you"
+        },
+        {
+          "start": 37.538,
+          "end": 37.821,
+          "text": "bought"
+        },
+        {
+          "start": 37.833,
+          "end": 38.104,
+          "text": "after"
+        },
+        {
+          "start": 38.116,
+          "end": 38.458,
+          "text": "breaking"
+        },
+        {
+          "start": 38.469,
+          "end": 38.882,
+          "text": "cash"
+        },
+        {
+          "start": 39.13,
+          "end": 39.236,
+          "text": "and"
+        },
+        {
+          "start": 39.248,
+          "end": 39.613,
+          "text": "remember"
+        },
+        {
+          "start": 39.625,
+          "end": 39.896,
+          "text": "never"
+        },
+        {
+          "start": 39.908,
+          "end": 40.25,
+          "text": "to"
+        }
+      ]
+    }
+  ]
+}
