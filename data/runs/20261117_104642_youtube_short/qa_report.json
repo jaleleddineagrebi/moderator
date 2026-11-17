@@ -1,12 +1,12 @@
 {
   "passed": false,
-  "revision_round": 0,
+  "revision_round": 1,
   "checks": [
     {
       "check": "length",
       "lang": "en",
       "ok": true,
-      "detail": "42.3s (must be under 60s; target 32-50s)",
+      "detail": "39.2s (must be under 60s; target 32-50s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -14,7 +14,7 @@
       "check": "target length",
       "lang": "en",
       "ok": true,
-      "detail": "42.3s",
+      "detail": "39.2s",
       "send_to": null,
       "severity": "minor"
     },
@@ -46,7 +46,7 @@
       "check": "loudness",
       "lang": "en",
       "ok": true,
-      "detail": "-14.4 LUFS, peak -1.4 dBFS (target -14 LUFS, peak <= -1)",
+      "detail": "-14.3 LUFS, peak -1.4 dBFS (target -14 LUFS, peak <= -1)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -62,7 +62,7 @@
       "check": "caption sync",
       "lang": "en",
       "ok": true,
-      "detail": "106 words, 39 caption events",
+      "detail": "100 words, 37 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -94,7 +94,7 @@
       "check": "accuracy review",
       "lang": "en",
       "ok": false,
-      "detail": "In scene 06, the claim that a blue icon or strange device name means your screen is being broadcasted is misleading; the blue indicator often means an active system function like AirPlay or Location Services, and device names often refer to known home hardware. Change 'your screen is being broadcasted' to 'someone could be viewing your screen'.",
+      "detail": "The script incorrectly states that a blue mirroring icon or strange device name always means someone else is spying. In iOS, the mirroring icon turns blue when the user is intentionally using AirPlay or Screen Mirroring. Fix: Rephrase to 'If you didn't turn it on, someone could be viewing your screen.'",
       "send_to": "script",
       "severity": "blocker"
     },
@@ -102,7 +102,15 @@
       "check": "grammar review",
       "lang": "en",
       "ok": false,
-      "detail": "In scene 06, the word 'broadcasted' is technically incorrect in modern usage, though common. The past tense of broadcast is 'broadcast'. Fix: 'your screen is being broadcast'.",
+      "detail": "In the description, 'everyday' is used as an adverb. Fix: Change 'everyday' to 'every day'.",
+      "send_to": "packaging",
+      "severity": "minor"
+    },
+    {
+      "check": "grammar review",
+      "lang": "en",
+      "ok": false,
+      "detail": "The script ends with a trailing 'which is exactly why' that does not connect to a concluding thought. Fix: Remove 'which is exactly why' from the end of scene_07.",
       "send_to": "script",
       "severity": "minor"
     },

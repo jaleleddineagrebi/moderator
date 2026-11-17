@@ -9,11 +9,11 @@
         "en": "YOU ARE BEING WATCHED"
       },
       "visual": {
-        "description": "A close-up of a man's eyes illuminated by a glowing smartphone screen in a dark room.",
+        "description": "A close-up of a man's eyes intensely reflecting the blue light of a smartphone screen in a dark room.",
         "search_terms": [
-          "man eyes phone glow",
+          "man eyes phone light",
           "dark room smartphone",
-          "digital surveillance eye"
+          "digital reflection eye"
         ],
         "prefer": "video"
       },
@@ -21,17 +21,17 @@
     },
     {
       "vo": {
-        "en": "Check the top corner of your phone. Is there a tiny green or orange dot?"
+        "en": "Look at the top corner of your phone. Is there a tiny orange or green dot?"
       },
       "on_screen": {
         "en": "CHECK THE DOT"
       },
       "visual": {
-        "description": "Extreme macro shot of the top status bar of a smartphone showing a tiny colored privacy indicator.",
+        "description": "Macro shot of a smartphone's top notch area showing a glowing green privacy indicator.",
         "search_terms": [
           "macro phone screen",
-          "status bar icons",
-          "smartphone top display"
+          "privacy indicator dot",
+          "smartphone status bar"
         ],
         "prefer": "video"
       },
@@ -39,17 +39,17 @@
     },
     {
       "vo": {
-        "en": "That isn't a design feature. It means an app is actively using your camera or microphone."
+        "en": "That isn't just a design choice. It means an app is actively using your camera or microphone without you knowing."
       },
       "on_screen": {
-        "en": "LIVE SPYING ACTIVE"
+        "en": "HIDDEN ACCESS ACTIVE"
       },
       "visual": {
-        "description": "Abstract digital data stream with binary codes moving across a dark blue background.",
+        "description": "A dark silhouette of a hand holding a phone, with a digital camera aperture icon overlay.",
         "search_terms": [
-          "abstract data flow",
-          "digital network lines",
-          "binary code animation"
+          "hand holding phone silhouette",
+          "digital camera aperture",
+          "cyber security symbol"
         ],
         "prefer": "video"
       },
@@ -57,17 +57,17 @@
     },
     {
       "vo": {
-        "en": "But here is the creepy part. This only catches the amateur apps."
+        "en": "But here is the creepy part. Those dots only catch the basic apps."
       },
       "on_screen": {
         "en": "THE CREEPY PART"
       },
       "visual": {
-        "description": "A mysterious silhouette of a hooded man typing rapidly in a dimly lit office.",
+        "description": "A mysterious man wearing a hoodie typing rapidly on a laptop in a dimly lit office.",
         "search_terms": [
-          "mysterious hooded man",
-          "typing dark room",
-          "hacker silhouette computer"
+          "man typing laptop dark",
+          "hooded man computer",
+          "fast typing fingers"
         ],
         "prefer": "video"
       },
@@ -75,7 +75,7 @@
     },
     {
       "vo": {
-        "en": "Pull down your control center and look for the screen mirroring icon right now."
+        "en": "Swipe down your control center and look for the screen mirroring icon immediately."
       },
       "on_screen": {
         "en": "CHECK MIRRORING NOW"
@@ -93,7 +93,7 @@
     },
     {
       "vo": {
-        "en": "If that icon is blue or shows a strange device, someone could be viewing your screen."
+        "en": "If you didn't turn it on and it's glowing or showing a weird device name, someone could be viewing your screen."
       },
       "on_screen": {
         "en": "THEY SEE EVERYTHING"
@@ -102,8 +102,8 @@
         "description": "A security camera lens rotating slowly, reflecting a digital screen in its glass.",
         "search_terms": [
           "security camera rotation",
-          "magnifying glass screen",
-          "surveillance monitor"
+          "surveillance monitor",
+          "spy camera lens"
         ],
         "prefer": "video"
       },
@@ -111,7 +111,7 @@
     },
     {
       "vo": {
-        "en": "Kill your Wi-Fi and reset your permissions. Subscribe to stay protected and comment CLEAN if you're safe, which is exactly why"
+        "en": "Reset your privacy settings and subscribe to stay protected. Comment CLEAN if you're safe, which is exactly why"
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
@@ -119,9 +119,9 @@
       "visual": {
         "description": "A glowing digital shield icon appearing on a screen, symbolizing a secure connection.",
         "search_terms": [
-          "digital shield icon",
-          "padlock closing animation",
-          "confirm security button"
+          "digital shield animation",
+          "security lock closing",
+          "cyber safety icon"
         ],
         "prefer": "video"
       },
@@ -133,6 +133,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 36.4
+    "en": 38.9
   }
 }
