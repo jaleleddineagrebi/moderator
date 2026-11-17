@@ -1,0 +1,68 @@
+{
+  "niche": "Mind Hacks, AI Secrets, Bizarre Body Science & Hidden Power Dynamics",
+  "languages": [
+    "en"
+  ],
+  "ideas": [
+    {
+      "id": "double-nose-glitch",
+      "title": "The Double Nose Glitch",
+      "angle": "The viewer crosses their fingers and touches their nose, creating the tactile illusion of having two noses. This forces a physical action that guarantees retention as they wait for the 'glitch' to happen, followed by a comment trigger asking if it worked.",
+      "hook": {
+        "en": "Cross your fingers just like this."
+      },
+      "keywords": [
+        "brain glitch",
+        "aristotle illusion",
+        "body hacks",
+        "sensory trick",
+        "human body"
+      ],
+      "reason": "Tactile illusions like the Aristotle Illusion are currently trending in the 'brain test' niche because they are low-friction and provide immediate physical feedback, driving 100%+ average percentage viewed.",
+      "sources": [
+        "Britannica: Aristotle Illusion",
+        "Journal of Perception: Tactile Spatial Mapping"
+      ]
+    },
+    {
+      "id": "peripheral-color-lie",
+      "title": "The Peripheral Color Lie",
+      "angle": "A live vision test where the viewer stares at a center point while colors change in their periphery. It reveals that your brain 'hallucinates' peripheral color based on memory because your outer retina mostly sees in black and white.",
+      "hook": {
+        "en": "Stare at this dot and don't blink."
+      },
+      "keywords": [
+        "vision glitch",
+        "eye test",
+        "human brain",
+        "biological secret",
+        "optical illusion"
+      ],
+      "reason": "Interactive vision tests have the highest 're-watch' value as viewers repeat the clip to verify what they missed, pushing APV over 110%.",
+      "sources": [
+        "Journal of Vision: Peripheral Color Perception",
+        "Nature Communications: Brain filling-in mechanisms"
+      ]
+    },
+    {
+      "id": "elbow-pain-glitch",
+      "title": "The Elbow Pain Glitch",
+      "angle": "The viewer is challenged to pinch the skin on their elbow (the weenus) as hard as possible. They discover it's almost impossible to feel pain there, revealing a 'dead zone' in human nerve density. Drives high comment volume from skeptics.",
+      "hook": {
+        "en": "Pinch your elbow skin right now."
+      },
+      "keywords": [
+        "body glitch",
+        "human biology",
+        "pain receptors",
+        "survival science",
+        "anatomy facts"
+      ],
+      "reason": "Physical 'body cheats' create high engagement because the viewer can instantly verify the claim. This specific trick is highly shareable and generates 'did it work for you?' comment threads.",
+      "sources": [
+        "University of Washington: Somatosensory System and Nerve Density",
+        "Neuroscience: Receptive fields and tactile sensitivity"
+      ]
+    }
+  ]
+}
