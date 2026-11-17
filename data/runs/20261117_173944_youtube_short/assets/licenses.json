@@ -1,0 +1,72 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-10836/",
+    "author": "Coverr-Free-Footage",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man crossing fingers",
+    "description": "Close-up of a man's hands crossing his middle finger over his index finger in a slow, deliberate motion."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-1085/",
+    "author": "Vimeo-Free-Videos",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "fingers macro",
+    "description": "Macro shot of fingers overlapping with high detail on skin texture and grip."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-240283/",
+    "author": "Engin_Akyurt",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man touching nose",
+    "description": "A man with his eyes closed touching the tip of his nose with his crossed fingers."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-27228/",
+    "author": "RAHADstudio",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "digital glitch motion",
+    "description": "Abstract digital glitch overlaying a dark background with pulsing yellow highlights."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-203252/",
+    "author": "conte_public",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man shocked face",
+    "description": "A man looking into the camera with a shocked and confused facial expression."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-86211/",
+    "author": "TRAPHITHO",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "neural network animation",
+    "description": "Animation of neural pathways or a blue circuit board lighting up in patterns."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-21188/",
+    "author": "easyprovids",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man pointing camera",
+    "description": "A man pointing directly at the camera with a confident smile and nodding."
+  }
+]
