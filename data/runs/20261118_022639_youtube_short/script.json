@@ -3,7 +3,7 @@
   "scenes": [
     {
       "vo": {
-        "en": "Stare at the cross. Do not blink."
+        "en": "Stare at the center right now."
       },
       "on_screen": {
         "en": "DON'T BLINK"
@@ -21,7 +21,7 @@
     },
     {
       "vo": {
-        "en": "Keep your eyes glued to that center point while I explain this glitch."
+        "en": "Keep your eyes glued firmly to that point while I explain this glitch."
       },
       "on_screen": {
         "en": "EYES GLUED HERE"
@@ -39,7 +39,7 @@
     },
     {
       "vo": {
-        "en": "Right now, your brain is deciding the colors around the cross are useless data."
+        "en": "Right now, your brain is deciding the colors surrounding the cross are completely useless data."
       },
       "on_screen": {
         "en": "DELETING USELESS DATA"
@@ -57,7 +57,7 @@
     },
     {
       "vo": {
-        "en": "But here is the creepy part: your neurons are literally muting your sight."
+        "en": "But here is the creepy part: your own neurons are literally muting your sight."
       },
       "on_screen": {
         "en": "IT GETS CREEPIER"
@@ -75,7 +75,7 @@
     },
     {
       "vo": {
-        "en": "Because the image isn't moving, your visual cortex stops processing the background entirely."
+        "en": "Because the image stays still, your visual cortex stops processing the entire background."
       },
       "on_screen": {
         "en": "BRAIN STOPS PROCESSING"
@@ -93,7 +93,7 @@
     },
     {
       "vo": {
-        "en": "Look now. The colors have vanished, leaving only a grey void behind."
+        "en": "Look closely now. The colors have vanished, leaving only a grey void behind."
       },
       "on_screen": {
         "en": "EVERYTHING VANISHED"
@@ -111,7 +111,7 @@
     },
     {
       "vo": {
-        "en": "Subscribe for more brain tests and comment YES if it worked. Your eyes are lying, so you must"
+        "en": "Subscribe for more daily brain tests and comment YES if it worked, which is why you must"
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
@@ -133,6 +133,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 32.7
+    "en": 33.1
   }
 }
