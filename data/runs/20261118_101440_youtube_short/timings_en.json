@@ -1,0 +1,513 @@
+{
+  "voice": "en-US-AriaNeural",
+  "duration": 36.810068,
+  "scenes": [
+    {
+      "scene": "scene_01",
+      "start": 0.0,
+      "end": 2.832,
+      "words": [
+        {
+          "start": 0.097,
+          "end": 0.38,
+          "text": "Check"
+        },
+        {
+          "start": 0.392,
+          "end": 0.51,
+          "text": "your"
+        },
+        {
+          "start": 0.522,
+          "end": 0.875,
+          "text": "battery"
+        },
+        {
+          "start": 0.887,
+          "end": 1.43,
+          "text": "percentage"
+        },
+        {
+          "start": 1.442,
+          "end": 1.654,
+          "text": "right"
+        },
+        {
+          "start": 1.666,
+          "end": 2.019,
+          "text": "now"
+        }
+      ]
+    },
+    {
+      "scene": "scene_02",
+      "start": 2.922,
+      "end": 10.29,
+      "words": [
+        {
+          "start": 3.019,
+          "end": 3.444,
+          "text": "Modern"
+        },
+        {
+          "start": 3.455,
+          "end": 4.033,
+          "text": "websites"
+        },
+        {
+          "start": 4.045,
+          "end": 4.281,
+          "text": "don't"
+        },
+        {
+          "start": 4.293,
+          "end": 4.517,
+          "text": "just"
+        },
+        {
+          "start": 4.529,
+          "end": 4.812,
+          "text": "track"
+        },
+        {
+          "start": 4.823,
+          "end": 5.307,
+          "text": "cookies"
+        },
+        {
+          "start": 5.602,
+          "end": 5.72,
+          "text": "they"
+        },
+        {
+          "start": 5.731,
+          "end": 6.227,
+          "text": "quietly"
+        },
+        {
+          "start": 6.239,
+          "end": 6.675,
+          "text": "access"
+        },
+        {
+          "start": 6.687,
+          "end": 6.734,
+          "text": "a"
+        },
+        {
+          "start": 6.746,
+          "end": 7.029,
+          "text": "hidden"
+        },
+        {
+          "start": 7.04,
+          "end": 7.406,
+          "text": "browser"
+        },
+        {
+          "start": 7.418,
+          "end": 7.701,
+          "text": "tool"
+        },
+        {
+          "start": 7.713,
+          "end": 7.948,
+          "text": "called"
+        },
+        {
+          "start": 7.96,
+          "end": 8.019,
+          "text": "the"
+        },
+        {
+          "start": 8.031,
+          "end": 8.397,
+          "text": "Battery"
+        },
+        {
+          "start": 8.408,
+          "end": 8.821,
+          "text": "Status"
+        },
+        {
+          "start": 8.833,
+          "end": 9.446,
+          "text": "API"
+        }
+      ]
+    },
+    {
+      "scene": "scene_03",
+      "start": 10.38,
+      "end": 16.044,
+      "words": [
+        {
+          "start": 10.477,
+          "end": 10.678,
+          "text": "It"
+        },
+        {
+          "start": 10.689,
+          "end": 10.937,
+          "text": "reads"
+        },
+        {
+          "start": 10.949,
+          "end": 11.043,
+          "text": "your"
+        },
+        {
+          "start": 11.055,
+          "end": 11.444,
+          "text": "exact"
+        },
+        {
+          "start": 11.456,
+          "end": 11.798,
+          "text": "charge"
+        },
+        {
+          "start": 11.81,
+          "end": 12.128,
+          "text": "level"
+        },
+        {
+          "start": 12.14,
+          "end": 12.222,
+          "text": "and"
+        },
+        {
+          "start": 12.234,
+          "end": 12.553,
+          "text": "drain"
+        },
+        {
+          "start": 12.564,
+          "end": 12.859,
+          "text": "speed"
+        },
+        {
+          "start": 12.871,
+          "end": 13.154,
+          "text": "down"
+        },
+        {
+          "start": 13.166,
+          "end": 13.26,
+          "text": "to"
+        },
+        {
+          "start": 13.272,
+          "end": 13.626,
+          "text": "several"
+        },
+        {
+          "start": 13.638,
+          "end": 14.015,
+          "text": "decimal"
+        },
+        {
+          "start": 14.027,
+          "end": 14.439,
+          "text": "places"
+        },
+        {
+          "start": 14.451,
+          "end": 14.581,
+          "text": "in"
+        },
+        {
+          "start": 14.593,
+          "end": 14.793,
+          "text": "real"
+        },
+        {
+          "start": 14.805,
+          "end": 15.23,
+          "text": "time"
+        }
+      ]
+    },
+    {
+      "scene": "scene_04",
+      "start": 16.134,
+      "end": 21.63,
+      "words": [
+        {
+          "start": 16.231,
+          "end": 16.467,
+          "text": "Here"
+        },
+        {
+          "start": 16.479,
+          "end": 16.585,
+          "text": "is"
+        },
+        {
+          "start": 16.597,
+          "end": 16.691,
+          "text": "the"
+        },
+        {
+          "start": 16.703,
+          "end": 17.045,
+          "text": "creepy"
+        },
+        {
+          "start": 17.057,
+          "end": 17.387,
+          "text": "part"
+        },
+        {
+          "start": 17.587,
+          "end": 17.894,
+          "text": "going"
+        },
+        {
+          "start": 17.906,
+          "end": 18.684,
+          "text": "incognito"
+        },
+        {
+          "start": 18.696,
+          "end": 18.873,
+          "text": "or"
+        },
+        {
+          "start": 18.884,
+          "end": 19.215,
+          "text": "using"
+        },
+        {
+          "start": 19.226,
+          "end": 19.274,
+          "text": "a"
+        },
+        {
+          "start": 19.285,
+          "end": 19.816,
+          "text": "VPN"
+        },
+        {
+          "start": 19.828,
+          "end": 19.934,
+          "text": "will"
+        },
+        {
+          "start": 19.946,
+          "end": 20.158,
+          "text": "not"
+        },
+        {
+          "start": 20.17,
+          "end": 20.524,
+          "text": "protect"
+        },
+        {
+          "start": 20.535,
+          "end": 20.807,
+          "text": "you"
+        }
+      ]
+    },
+    {
+      "scene": "scene_05",
+      "start": 21.72,
+      "end": 28.872,
+      "words": [
+        {
+          "start": 21.817,
+          "end": 22.183,
+          "text": "Data"
+        },
+        {
+          "start": 22.195,
+          "end": 22.619,
+          "text": "brokers"
+        },
+        {
+          "start": 22.631,
+          "end": 23.044,
+          "text": "combine"
+        },
+        {
+          "start": 23.055,
+          "end": 23.22,
+          "text": "this"
+        },
+        {
+          "start": 23.232,
+          "end": 23.952,
+          "text": "microscopic"
+        },
+        {
+          "start": 23.963,
+          "end": 24.282,
+          "text": "data"
+        },
+        {
+          "start": 24.294,
+          "end": 24.423,
+          "text": "to"
+        },
+        {
+          "start": 24.435,
+          "end": 24.93,
+          "text": "instantly"
+        },
+        {
+          "start": 24.942,
+          "end": 25.544,
+          "text": "reconstruct"
+        },
+        {
+          "start": 25.555,
+          "end": 25.662,
+          "text": "your"
+        },
+        {
+          "start": 25.673,
+          "end": 26.228,
+          "text": "identity"
+        },
+        {
+          "start": 26.239,
+          "end": 26.605,
+          "text": "across"
+        },
+        {
+          "start": 26.617,
+          "end": 27.018,
+          "text": "totally"
+        },
+        {
+          "start": 27.029,
+          "end": 27.419,
+          "text": "separate"
+        },
+        {
+          "start": 27.43,
+          "end": 28.044,
+          "text": "browsers"
+        }
+      ]
+    },
+    {
+      "scene": "scene_06",
+      "start": 28.962,
+      "end": 36.81,
+      "words": [
+        {
+          "start": 29.059,
+          "end": 29.472,
+          "text": "Comment"
+        },
+        {
+          "start": 29.484,
+          "end": 29.602,
+          "text": "your"
+        },
+        {
+          "start": 29.613,
+          "end": 30.062,
+          "text": "exact"
+        },
+        {
+          "start": 30.073,
+          "end": 30.462,
+          "text": "battery"
+        },
+        {
+          "start": 30.474,
+          "end": 31.005,
+          "text": "percentage"
+        },
+        {
+          "start": 31.017,
+          "end": 31.394,
+          "text": "below"
+        },
+        {
+          "start": 31.406,
+          "end": 31.547,
+          "text": "to"
+        },
+        {
+          "start": 31.559,
+          "end": 31.83,
+          "text": "find"
+        },
+        {
+          "start": 31.842,
+          "end": 31.937,
+          "text": "your"
+        },
+        {
+          "start": 31.948,
+          "end": 32.302,
+          "text": "digital"
+        },
+        {
+          "start": 32.314,
+          "end": 32.691,
+          "text": "twin"
+        },
+        {
+          "start": 32.998,
+          "end": 33.128,
+          "text": "and"
+        },
+        {
+          "start": 33.139,
+          "end": 33.658,
+          "text": "subscribe"
+        },
+        {
+          "start": 33.67,
+          "end": 33.788,
+          "text": "for"
+        },
+        {
+          "start": 33.8,
+          "end": 34.083,
+          "text": "daily"
+        },
+        {
+          "start": 34.095,
+          "end": 34.33,
+          "text": "tech"
+        },
+        {
+          "start": 34.342,
+          "end": 34.743,
+          "text": "hacks"
+        },
+        {
+          "start": 34.932,
+          "end": 35.085,
+          "text": "which"
+        },
+        {
+          "start": 35.097,
+          "end": 35.191,
+          "text": "is"
+        },
+        {
+          "start": 35.203,
+          "end": 35.368,
+          "text": "why"
+        },
+        {
+          "start": 35.38,
+          "end": 35.51,
+          "text": "you"
+        },
+        {
+          "start": 35.521,
+          "end": 35.993,
+          "text": "must"
+        }
+      ]
+    }
+  ]
+}
