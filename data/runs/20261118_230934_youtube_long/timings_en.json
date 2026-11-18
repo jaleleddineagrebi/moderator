@@ -1,0 +1,1525 @@
+{
+  "voice": "en-US-AndrewMultilingualNeural",
+  "duration": 104.814104,
+  "scenes": [
+    {
+      "scene": "scene_01",
+      "start": 0.0,
+      "end": 7.68,
+      "words": [
+        {
+          "start": 0.083,
+          "end": 0.177,
+          "text": "Look"
+        },
+        {
+          "start": 0.177,
+          "end": 0.224,
+          "text": "at"
+        },
+        {
+          "start": 0.224,
+          "end": 0.342,
+          "text": "their"
+        },
+        {
+          "start": 0.342,
+          "end": 0.743,
+          "text": "feet"
+        },
+        {
+          "start": 1.12,
+          "end": 1.179,
+          "text": "It"
+        },
+        {
+          "start": 1.179,
+          "end": 1.403,
+          "text": "tells"
+        },
+        {
+          "start": 1.403,
+          "end": 1.474,
+          "text": "you"
+        },
+        {
+          "start": 1.486,
+          "end": 1.922,
+          "text": "more"
+        },
+        {
+          "start": 1.934,
+          "end": 2.028,
+          "text": "than"
+        },
+        {
+          "start": 2.028,
+          "end": 2.182,
+          "text": "their"
+        },
+        {
+          "start": 2.193,
+          "end": 2.7,
+          "text": "words"
+        },
+        {
+          "start": 2.854,
+          "end": 3.101,
+          "text": "ever"
+        },
+        {
+          "start": 3.101,
+          "end": 3.432,
+          "text": "will"
+        },
+        {
+          "start": 3.821,
+          "end": 4.021,
+          "text": "Stick"
+        },
+        {
+          "start": 4.021,
+          "end": 4.41,
+          "text": "around"
+        },
+        {
+          "start": 4.41,
+          "end": 4.564,
+          "text": "for"
+        },
+        {
+          "start": 4.564,
+          "end": 5.024,
+          "text": "secret"
+        },
+        {
+          "start": 5.035,
+          "end": 5.495,
+          "text": "seven"
+        },
+        {
+          "start": 5.507,
+          "end": 5.59,
+          "text": "to"
+        },
+        {
+          "start": 5.601,
+          "end": 5.92,
+          "text": "see"
+        },
+        {
+          "start": 5.92,
+          "end": 6.049,
+          "text": "the"
+        },
+        {
+          "start": 6.109,
+          "end": 6.568,
+          "text": "ultimate"
+        },
+        {
+          "start": 6.58,
+          "end": 6.934,
+          "text": "power"
+        },
+        {
+          "start": 6.934,
+          "end": 7.323,
+          "text": "tell"
+        }
+      ]
+    },
+    {
+      "scene": "scene_02",
+      "start": 7.77,
+      "end": 15.954,
+      "words": [
+        {
+          "start": 7.864,
+          "end": 8.147,
+          "text": "Secret"
+        },
+        {
+          "start": 8.147,
+          "end": 8.336,
+          "text": "number"
+        },
+        {
+          "start": 8.336,
+          "end": 8.584,
+          "text": "one"
+        },
+        {
+          "start": 8.996,
+          "end": 9.079,
+          "text": "The"
+        },
+        {
+          "start": 9.091,
+          "end": 9.445,
+          "text": "feet"
+        },
+        {
+          "start": 9.456,
+          "end": 9.716,
+          "text": "never"
+        },
+        {
+          "start": 9.728,
+          "end": 10.093,
+          "text": "lie"
+        },
+        {
+          "start": 10.47,
+          "end": 10.553,
+          "text": "If"
+        },
+        {
+          "start": 10.553,
+          "end": 10.836,
+          "text": "someone’s"
+        },
+        {
+          "start": 10.836,
+          "end": 11.32,
+          "text": "torso"
+        },
+        {
+          "start": 11.32,
+          "end": 11.473,
+          "text": "is"
+        },
+        {
+          "start": 11.473,
+          "end": 12.003,
+          "text": "facing"
+        },
+        {
+          "start": 12.004,
+          "end": 12.228,
+          "text": "you"
+        },
+        {
+          "start": 12.393,
+          "end": 12.511,
+          "text": "but"
+        },
+        {
+          "start": 12.522,
+          "end": 12.652,
+          "text": "their"
+        },
+        {
+          "start": 12.652,
+          "end": 12.994,
+          "text": "feet"
+        },
+        {
+          "start": 12.994,
+          "end": 13.348,
+          "text": "point"
+        },
+        {
+          "start": 13.36,
+          "end": 13.56,
+          "text": "toward"
+        },
+        {
+          "start": 13.56,
+          "end": 13.631,
+          "text": "the"
+        },
+        {
+          "start": 13.643,
+          "end": 14.079,
+          "text": "exit"
+        },
+        {
+          "start": 14.35,
+          "end": 14.492,
+          "text": "they’re"
+        },
+        {
+          "start": 14.504,
+          "end": 15.022,
+          "text": "desperate"
+        },
+        {
+          "start": 15.034,
+          "end": 15.117,
+          "text": "to"
+        },
+        {
+          "start": 15.129,
+          "end": 15.588,
+          "text": "leave"
+        }
+      ]
+    },
+    {
+      "scene": "scene_03",
+      "start": 16.044,
+      "end": 24.636,
+      "words": [
+        {
+          "start": 16.138,
+          "end": 16.445,
+          "text": "Secret"
+        },
+        {
+          "start": 16.445,
+          "end": 16.704,
+          "text": "two"
+        },
+        {
+          "start": 17.211,
+          "end": 17.459,
+          "text": "Watch"
+        },
+        {
+          "start": 17.459,
+          "end": 17.553,
+          "text": "the"
+        },
+        {
+          "start": 17.565,
+          "end": 17.777,
+          "text": "blink"
+        },
+        {
+          "start": 17.778,
+          "end": 18.049,
+          "text": "rate"
+        },
+        {
+          "start": 18.426,
+          "end": 18.827,
+          "text": "Normal"
+        },
+        {
+          "start": 18.898,
+          "end": 19.098,
+          "text": "is"
+        },
+        {
+          "start": 19.24,
+          "end": 19.393,
+          "text": "eight"
+        },
+        {
+          "start": 19.405,
+          "end": 19.499,
+          "text": "to"
+        },
+        {
+          "start": 19.499,
+          "end": 19.759,
+          "text": "twenty"
+        },
+        {
+          "start": 19.759,
+          "end": 19.888,
+          "text": "per"
+        },
+        {
+          "start": 19.888,
+          "end": 20.266,
+          "text": "minute"
+        },
+        {
+          "start": 20.655,
+          "end": 20.749,
+          "text": "If"
+        },
+        {
+          "start": 20.749,
+          "end": 20.808,
+          "text": "it"
+        },
+        {
+          "start": 20.82,
+          "end": 21.197,
+          "text": "spikes"
+        },
+        {
+          "start": 21.197,
+          "end": 21.693,
+          "text": "suddenly"
+        },
+        {
+          "start": 21.881,
+          "end": 21.976,
+          "text": "they"
+        },
+        {
+          "start": 21.976,
+          "end": 22.082,
+          "text": "are"
+        },
+        {
+          "start": 22.094,
+          "end": 22.353,
+          "text": "under"
+        },
+        {
+          "start": 22.365,
+          "end": 22.872,
+          "text": "intense"
+        },
+        {
+          "start": 22.872,
+          "end": 23.485,
+          "text": "pressure"
+        },
+        {
+          "start": 23.638,
+          "end": 23.792,
+          "text": "or"
+        },
+        {
+          "start": 23.803,
+          "end": 24.299,
+          "text": "lying"
+        }
+      ]
+    },
+    {
+      "scene": "scene_04",
+      "start": 24.726,
+      "end": 34.422,
+      "words": [
+        {
+          "start": 24.82,
+          "end": 25.162,
+          "text": "Secret"
+        },
+        {
+          "start": 25.162,
+          "end": 25.551,
+          "text": "three"
+        },
+        {
+          "start": 25.952,
+          "end": 26.011,
+          "text": "The"
+        },
+        {
+          "start": 26.011,
+          "end": 26.483,
+          "text": "Mirroring"
+        },
+        {
+          "start": 26.495,
+          "end": 26.884,
+          "text": "Lag"
+        },
+        {
+          "start": 27.261,
+          "end": 27.474,
+          "text": "People"
+        },
+        {
+          "start": 27.474,
+          "end": 27.922,
+          "text": "naturally"
+        },
+        {
+          "start": 27.922,
+          "end": 28.334,
+          "text": "mimic"
+        },
+        {
+          "start": 28.346,
+          "end": 28.57,
+          "text": "those"
+        },
+        {
+          "start": 28.57,
+          "end": 28.688,
+          "text": "they"
+        },
+        {
+          "start": 28.7,
+          "end": 29.16,
+          "text": "like"
+        },
+        {
+          "start": 29.549,
+          "end": 29.643,
+          "text": "If"
+        },
+        {
+          "start": 29.655,
+          "end": 29.773,
+          "text": "they"
+        },
+        {
+          "start": 29.785,
+          "end": 30.327,
+          "text": "copy"
+        },
+        {
+          "start": 30.339,
+          "end": 30.492,
+          "text": "your"
+        },
+        {
+          "start": 30.504,
+          "end": 31.188,
+          "text": "movements"
+        },
+        {
+          "start": 31.271,
+          "end": 31.872,
+          "text": "instantly"
+        },
+        {
+          "start": 32.273,
+          "end": 32.356,
+          "text": "they"
+        },
+        {
+          "start": 32.356,
+          "end": 32.45,
+          "text": "are"
+        },
+        {
+          "start": 32.45,
+          "end": 32.827,
+          "text": "likely"
+        },
+        {
+          "start": 32.839,
+          "end": 33.11,
+          "text": "trying"
+        },
+        {
+          "start": 33.122,
+          "end": 33.169,
+          "text": "to"
+        },
+        {
+          "start": 33.169,
+          "end": 33.806,
+          "text": "manipulate"
+        },
+        {
+          "start": 33.818,
+          "end": 34.077,
+          "text": "you"
+        }
+      ]
+    },
+    {
+      "scene": "scene_05",
+      "start": 34.512,
+      "end": 44.112,
+      "words": [
+        {
+          "start": 34.606,
+          "end": 34.901,
+          "text": "Secret"
+        },
+        {
+          "start": 34.901,
+          "end": 35.255,
+          "text": "four"
+        },
+        {
+          "start": 35.526,
+          "end": 35.609,
+          "text": "The"
+        },
+        {
+          "start": 35.621,
+          "end": 35.797,
+          "text": "Eye"
+        },
+        {
+          "start": 35.809,
+          "end": 36.434,
+          "text": "Flash"
+        },
+        {
+          "start": 36.8,
+          "end": 36.859,
+          "text": "A"
+        },
+        {
+          "start": 36.87,
+          "end": 37.295,
+          "text": "quick"
+        },
+        {
+          "start": 37.519,
+          "end": 38.003,
+          "text": "subtle"
+        },
+        {
+          "start": 38.014,
+          "end": 38.474,
+          "text": "widening"
+        },
+        {
+          "start": 38.474,
+          "end": 38.533,
+          "text": "of"
+        },
+        {
+          "start": 38.533,
+          "end": 38.616,
+          "text": "the"
+        },
+        {
+          "start": 38.616,
+          "end": 39.158,
+          "text": "eyes"
+        },
+        {
+          "start": 39.276,
+          "end": 39.477,
+          "text": "during"
+        },
+        {
+          "start": 39.477,
+          "end": 39.524,
+          "text": "a"
+        },
+        {
+          "start": 39.536,
+          "end": 40.337,
+          "text": "conversation"
+        },
+        {
+          "start": 40.491,
+          "end": 41.08,
+          "text": "signals"
+        },
+        {
+          "start": 41.139,
+          "end": 41.564,
+          "text": "genuine"
+        },
+        {
+          "start": 41.564,
+          "end": 42.26,
+          "text": "surprise"
+        },
+        {
+          "start": 42.484,
+          "end": 42.578,
+          "text": "or"
+        },
+        {
+          "start": 42.578,
+          "end": 42.613,
+          "text": "a"
+        },
+        {
+          "start": 42.613,
+          "end": 42.885,
+          "text": "hidden"
+        },
+        {
+          "start": 42.885,
+          "end": 43.274,
+          "text": "flash"
+        },
+        {
+          "start": 43.274,
+          "end": 43.333,
+          "text": "of"
+        },
+        {
+          "start": 43.333,
+          "end": 43.757,
+          "text": "fear"
+        }
+      ]
+    },
+    {
+      "scene": "scene_06",
+      "start": 44.202,
+      "end": 53.346,
+      "words": [
+        {
+          "start": 44.296,
+          "end": 44.615,
+          "text": "Secret"
+        },
+        {
+          "start": 44.627,
+          "end": 45.086,
+          "text": "five"
+        },
+        {
+          "start": 45.346,
+          "end": 46.395,
+          "text": "Micro-shrugs"
+        },
+        {
+          "start": 46.785,
+          "end": 46.867,
+          "text": "If"
+        },
+        {
+          "start": 46.867,
+          "end": 47.103,
+          "text": "someone"
+        },
+        {
+          "start": 47.115,
+          "end": 47.28,
+          "text": "makes"
+        },
+        {
+          "start": 47.28,
+          "end": 47.327,
+          "text": "a"
+        },
+        {
+          "start": 47.339,
+          "end": 47.822,
+          "text": "confident"
+        },
+        {
+          "start": 47.834,
+          "end": 48.247,
+          "text": "claim"
+        },
+        {
+          "start": 48.471,
+          "end": 48.636,
+          "text": "but"
+        },
+        {
+          "start": 48.648,
+          "end": 48.931,
+          "text": "one"
+        },
+        {
+          "start": 48.931,
+          "end": 49.344,
+          "text": "shoulder"
+        },
+        {
+          "start": 49.355,
+          "end": 49.756,
+          "text": "hitches"
+        },
+        {
+          "start": 49.768,
+          "end": 50.452,
+          "text": "slightly"
+        },
+        {
+          "start": 50.676,
+          "end": 50.77,
+          "text": "they"
+        },
+        {
+          "start": 50.77,
+          "end": 50.924,
+          "text": "do"
+        },
+        {
+          "start": 50.924,
+          "end": 51.207,
+          "text": "not"
+        },
+        {
+          "start": 51.218,
+          "end": 51.584,
+          "text": "actually"
+        },
+        {
+          "start": 51.596,
+          "end": 52.009,
+          "text": "believe"
+        },
+        {
+          "start": 52.009,
+          "end": 52.079,
+          "text": "the"
+        },
+        {
+          "start": 52.091,
+          "end": 52.351,
+          "text": "words"
+        },
+        {
+          "start": 52.351,
+          "end": 52.457,
+          "text": "they"
+        },
+        {
+          "start": 52.457,
+          "end": 52.551,
+          "text": "are"
+        },
+        {
+          "start": 52.563,
+          "end": 52.987,
+          "text": "saying"
+        }
+      ]
+    },
+    {
+      "scene": "scene_07",
+      "start": 53.436,
+      "end": 63.54,
+      "words": [
+        {
+          "start": 53.53,
+          "end": 53.861,
+          "text": "Secret"
+        },
+        {
+          "start": 53.872,
+          "end": 54.45,
+          "text": "six"
+        },
+        {
+          "start": 54.651,
+          "end": 55.087,
+          "text": "Protective"
+        },
+        {
+          "start": 55.087,
+          "end": 55.7,
+          "text": "barriers"
+        },
+        {
+          "start": 56.078,
+          "end": 56.549,
+          "text": "Crossing"
+        },
+        {
+          "start": 56.561,
+          "end": 57.115,
+          "text": "arms"
+        },
+        {
+          "start": 57.316,
+          "end": 57.504,
+          "text": "or"
+        },
+        {
+          "start": 57.516,
+          "end": 57.882,
+          "text": "placing"
+        },
+        {
+          "start": 57.894,
+          "end": 57.976,
+          "text": "an"
+        },
+        {
+          "start": 57.988,
+          "end": 58.46,
+          "text": "object"
+        },
+        {
+          "start": 58.471,
+          "end": 58.566,
+          "text": "like"
+        },
+        {
+          "start": 58.566,
+          "end": 58.613,
+          "text": "a"
+        },
+        {
+          "start": 58.613,
+          "end": 59.014,
+          "text": "coffee"
+        },
+        {
+          "start": 59.014,
+          "end": 59.285,
+          "text": "cup"
+        },
+        {
+          "start": 59.403,
+          "end": 59.792,
+          "text": "between"
+        },
+        {
+          "start": 59.792,
+          "end": 59.945,
+          "text": "you"
+        },
+        {
+          "start": 60.075,
+          "end": 60.5,
+          "text": "acts"
+        },
+        {
+          "start": 60.7,
+          "end": 60.818,
+          "text": "as"
+        },
+        {
+          "start": 60.818,
+          "end": 60.865,
+          "text": "a"
+        },
+        {
+          "start": 60.877,
+          "end": 61.679,
+          "text": "subconscious"
+        },
+        {
+          "start": 61.679,
+          "end": 62.162,
+          "text": "shield"
+        },
+        {
+          "start": 62.174,
+          "end": 62.434,
+          "text": "against"
+        },
+        {
+          "start": 62.434,
+          "end": 62.516,
+          "text": "your"
+        },
+        {
+          "start": 62.516,
+          "end": 63.177,
+          "text": "influence"
+        }
+      ]
+    },
+    {
+      "scene": "scene_08",
+      "start": 63.63,
+      "end": 72.486,
+      "words": [
+        {
+          "start": 63.724,
+          "end": 64.066,
+          "text": "Secret"
+        },
+        {
+          "start": 64.078,
+          "end": 64.467,
+          "text": "seven"
+        },
+        {
+          "start": 64.868,
+          "end": 64.927,
+          "text": "The"
+        },
+        {
+          "start": 64.927,
+          "end": 65.387,
+          "text": "Duchenne"
+        },
+        {
+          "start": 65.387,
+          "end": 65.823,
+          "text": "check"
+        },
+        {
+          "start": 66.213,
+          "end": 66.26,
+          "text": "A"
+        },
+        {
+          "start": 66.272,
+          "end": 66.507,
+          "text": "real"
+        },
+        {
+          "start": 66.507,
+          "end": 66.967,
+          "text": "smile"
+        },
+        {
+          "start": 66.979,
+          "end": 67.333,
+          "text": "reaches"
+        },
+        {
+          "start": 67.333,
+          "end": 67.451,
+          "text": "the"
+        },
+        {
+          "start": 67.451,
+          "end": 68.052,
+          "text": "eyes"
+        },
+        {
+          "start": 68.146,
+          "end": 68.241,
+          "text": "and"
+        },
+        {
+          "start": 68.241,
+          "end": 68.654,
+          "text": "creates"
+        },
+        {
+          "start": 68.665,
+          "end": 69.243,
+          "text": "wrinkles"
+        },
+        {
+          "start": 69.632,
+          "end": 69.715,
+          "text": "If"
+        },
+        {
+          "start": 69.727,
+          "end": 69.809,
+          "text": "the"
+        },
+        {
+          "start": 69.821,
+          "end": 70.045,
+          "text": "eyes"
+        },
+        {
+          "start": 70.057,
+          "end": 70.257,
+          "text": "stay"
+        },
+        {
+          "start": 70.269,
+          "end": 70.741,
+          "text": "flat"
+        },
+        {
+          "start": 70.989,
+          "end": 71.083,
+          "text": "you"
+        },
+        {
+          "start": 71.083,
+          "end": 71.189,
+          "text": "are"
+        },
+        {
+          "start": 71.201,
+          "end": 71.46,
+          "text": "looking"
+        },
+        {
+          "start": 71.472,
+          "end": 71.519,
+          "text": "at"
+        },
+        {
+          "start": 71.519,
+          "end": 71.543,
+          "text": "a"
+        },
+        {
+          "start": 71.555,
+          "end": 72.121,
+          "text": "mask"
+        }
+      ]
+    },
+    {
+      "scene": "scene_09",
+      "start": 72.576,
+      "end": 80.136,
+      "words": [
+        {
+          "start": 72.659,
+          "end": 72.847,
+          "text": "Dark"
+        },
+        {
+          "start": 72.847,
+          "end": 73.684,
+          "text": "psychology"
+        },
+        {
+          "start": 73.826,
+          "end": 74.121,
+          "text": "isn't"
+        },
+        {
+          "start": 74.121,
+          "end": 74.345,
+          "text": "just"
+        },
+        {
+          "start": 74.345,
+          "end": 74.628,
+          "text": "about"
+        },
+        {
+          "start": 74.64,
+          "end": 74.97,
+          "text": "reading"
+        },
+        {
+          "start": 74.982,
+          "end": 75.418,
+          "text": "people"
+        },
+        {
+          "start": 75.843,
+          "end": 75.89,
+          "text": "it"
+        },
+        {
+          "start": 75.89,
+          "end": 75.972,
+          "text": "is"
+        },
+        {
+          "start": 75.972,
+          "end": 76.208,
+          "text": "about"
+        },
+        {
+          "start": 76.208,
+          "end": 76.574,
+          "text": "seeing"
+        },
+        {
+          "start": 76.574,
+          "end": 76.633,
+          "text": "the"
+        },
+        {
+          "start": 76.644,
+          "end": 77.175,
+          "text": "truth"
+        },
+        {
+          "start": 77.222,
+          "end": 77.434,
+          "text": "that"
+        },
+        {
+          "start": 77.541,
+          "end": 77.942,
+          "text": "everyone"
+        },
+        {
+          "start": 77.942,
+          "end": 78.177,
+          "text": "else"
+        },
+        {
+          "start": 78.177,
+          "end": 78.531,
+          "text": "tries"
+        },
+        {
+          "start": 78.531,
+          "end": 78.59,
+          "text": "to"
+        },
+        {
+          "start": 78.59,
+          "end": 78.944,
+          "text": "hide"
+        },
+        {
+          "start": 78.944,
+          "end": 79.026,
+          "text": "in"
+        },
+        {
+          "start": 79.038,
+          "end": 79.357,
+          "text": "plain"
+        },
+        {
+          "start": 79.357,
+          "end": 79.805,
+          "text": "sight"
+        }
+      ]
+    },
+    {
+      "scene": "scene_10",
+      "start": 80.226,
+      "end": 88.674,
+      "words": [
+        {
+          "start": 80.32,
+          "end": 80.438,
+          "text": "Don't"
+        },
+        {
+          "start": 80.45,
+          "end": 80.592,
+          "text": "just"
+        },
+        {
+          "start": 80.603,
+          "end": 80.71,
+          "text": "look"
+        },
+        {
+          "start": 80.709,
+          "end": 80.827,
+          "text": "for"
+        },
+        {
+          "start": 80.827,
+          "end": 81.016,
+          "text": "one"
+        },
+        {
+          "start": 81.016,
+          "end": 81.417,
+          "text": "sign"
+        },
+        {
+          "start": 81.806,
+          "end": 82.231,
+          "text": "Professional"
+        },
+        {
+          "start": 82.231,
+          "end": 82.938,
+          "text": "profilers"
+        },
+        {
+          "start": 82.938,
+          "end": 83.257,
+          "text": "look"
+        },
+        {
+          "start": 83.386,
+          "end": 83.563,
+          "text": "for"
+        },
+        {
+          "start": 83.563,
+          "end": 84.259,
+          "text": "clusters"
+        },
+        {
+          "start": 84.66,
+          "end": 84.849,
+          "text": "Three"
+        },
+        {
+          "start": 84.86,
+          "end": 85.238,
+          "text": "signs"
+        },
+        {
+          "start": 85.238,
+          "end": 85.332,
+          "text": "in"
+        },
+        {
+          "start": 85.332,
+          "end": 85.379,
+          "text": "a"
+        },
+        {
+          "start": 85.379,
+          "end": 85.804,
+          "text": "row"
+        },
+        {
+          "start": 85.969,
+          "end": 86.205,
+          "text": "mean"
+        },
+        {
+          "start": 86.276,
+          "end": 86.405,
+          "text": "you"
+        },
+        {
+          "start": 86.417,
+          "end": 86.582,
+          "text": "have"
+        },
+        {
+          "start": 86.582,
+          "end": 86.924,
+          "text": "found"
+        },
+        {
+          "start": 86.924,
+          "end": 86.96,
+          "text": "a"
+        },
+        {
+          "start": 86.96,
+          "end": 87.714,
+          "text": "psychological"
+        },
+        {
+          "start": 87.714,
+          "end": 88.327,
+          "text": "breakthrough"
+        }
+      ]
+    },
+    {
+      "scene": "scene_11",
+      "start": 88.764,
+      "end": 96.372,
+      "words": [
+        {
+          "start": 88.858,
+          "end": 89.189,
+          "text": "Apply"
+        },
+        {
+          "start": 89.189,
+          "end": 89.377,
+          "text": "these"
+        },
+        {
+          "start": 89.377,
+          "end": 89.837,
+          "text": "secrets"
+        },
+        {
+          "start": 89.849,
+          "end": 89.92,
+          "text": "in"
+        },
+        {
+          "start": 89.931,
+          "end": 90.014,
+          "text": "your"
+        },
+        {
+          "start": 90.014,
+          "end": 90.356,
+          "text": "next"
+        },
+        {
+          "start": 90.356,
+          "end": 90.792,
+          "text": "meeting"
+        },
+        {
+          "start": 90.969,
+          "end": 91.064,
+          "text": "or"
+        },
+        {
+          "start": 91.075,
+          "end": 91.429,
+          "text": "social"
+        },
+        {
+          "start": 91.441,
+          "end": 91.747,
+          "text": "event"
+        },
+        {
+          "start": 92.125,
+          "end": 92.196,
+          "text": "You"
+        },
+        {
+          "start": 92.196,
+          "end": 92.278,
+          "text": "will"
+        },
+        {
+          "start": 92.278,
+          "end": 92.372,
+          "text": "be"
+        },
+        {
+          "start": 92.384,
+          "end": 92.939,
+          "text": "surprised"
+        },
+        {
+          "start": 93.045,
+          "end": 93.21,
+          "text": "how"
+        },
+        {
+          "start": 93.222,
+          "end": 93.505,
+          "text": "much"
+        },
+        {
+          "start": 93.505,
+          "end": 93.894,
+          "text": "people"
+        },
+        {
+          "start": 93.894,
+          "end": 94.401,
+          "text": "reveal"
+        },
+        {
+          "start": 94.578,
+          "end": 94.684,
+          "text": "when"
+        },
+        {
+          "start": 94.696,
+          "end": 94.825,
+          "text": "they"
+        },
+        {
+          "start": 94.837,
+          "end": 95.108,
+          "text": "think"
+        },
+        {
+          "start": 95.12,
+          "end": 95.203,
+          "text": "they"
+        },
+        {
+          "start": 95.214,
+          "end": 95.297,
+          "text": "are"
+        },
+        {
+          "start": 95.297,
+          "end": 95.533,
+          "text": "being"
+        },
+        {
+          "start": 95.533,
+          "end": 96.028,
+          "text": "quiet"
+        }
+      ]
+    },
+    {
+      "scene": "scene_12",
+      "start": 96.462,
+      "end": 104.814,
+      "words": [
+        {
+          "start": 96.556,
+          "end": 97.134,
+          "text": "Subscribe"
+        },
+        {
+          "start": 97.134,
+          "end": 97.346,
+          "text": "for"
+        },
+        {
+          "start": 97.346,
+          "end": 97.771,
+          "text": "weekly"
+        },
+        {
+          "start": 97.912,
+          "end": 98.184,
+          "text": "deep"
+        },
+        {
+          "start": 98.184,
+          "end": 98.644,
+          "text": "dives"
+        },
+        {
+          "start": 98.655,
+          "end": 98.797,
+          "text": "into"
+        },
+        {
+          "start": 98.797,
+          "end": 99.139,
+          "text": "human"
+        },
+        {
+          "start": 99.139,
+          "end": 99.41,
+          "text": "power"
+        },
+        {
+          "start": 99.41,
+          "end": 100.106,
+          "text": "dynamics"
+        },
+        {
+          "start": 100.495,
+          "end": 100.637,
+          "text": "Which"
+        },
+        {
+          "start": 100.637,
+          "end": 100.684,
+          "text": "of"
+        },
+        {
+          "start": 100.684,
+          "end": 100.849,
+          "text": "these"
+        },
+        {
+          "start": 100.861,
+          "end": 101.179,
+          "text": "seven"
+        },
+        {
+          "start": 101.179,
+          "end": 101.639,
+          "text": "secrets"
+        },
+        {
+          "start": 101.651,
+          "end": 102.052,
+          "text": "shocked"
+        },
+        {
+          "start": 102.052,
+          "end": 102.122,
+          "text": "you"
+        },
+        {
+          "start": 102.134,
+          "end": 102.193,
+          "text": "the"
+        },
+        {
+          "start": 102.193,
+          "end": 102.665,
+          "text": "most"
+        },
+        {
+          "start": 103.042,
+          "end": 103.302,
+          "text": "Comment"
+        },
+        {
+          "start": 103.302,
+          "end": 103.714,
+          "text": "below"
+        },
+        {
+          "start": 103.821,
+          "end": 103.938,
+          "text": "and"
+        },
+        {
+          "start": 103.95,
+          "end": 104.068,
+          "text": "let"
+        },
+        {
+          "start": 104.068,
+          "end": 104.174,
+          "text": "us"
+        },
+        {
+          "start": 104.186,
+          "end": 104.481,
+          "text": "know"
+        }
+      ]
+    }
+  ]
+}

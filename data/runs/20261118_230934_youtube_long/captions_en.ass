@@ -1,0 +1,131 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,86,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,110,1
+Style: Headline,Noto Sans Black,64,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,65,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:07.72,Headline,,0,0,0,,{\fad(150,150)}WATCH THEIR FEET
+Dialogue: 1,0:00:07.82,0:00:15.99,Headline,,0,0,0,,{\fad(150,150)}DIRECTION OF INTEREST
+Dialogue: 1,0:00:16.09,0:00:24.68,Headline,,0,0,0,,{\fad(150,150)}THE BLINK SPIKE
+Dialogue: 1,0:00:24.78,0:00:34.46,Headline,,0,0,0,,{\fad(150,150)}FORCED MIRRORING
+Dialogue: 1,0:00:34.56,0:00:44.15,Headline,,0,0,0,,{\fad(150,150)}MICRO EYE FLASH
+Dialogue: 1,0:00:44.25,0:00:53.39,Headline,,0,0,0,,{\fad(150,150)}THE SHOULDER HITCH
+Dialogue: 1,0:00:53.49,0:01:03.58,Headline,,0,0,0,,{\fad(150,150)}SUBVIRTUAL SHIELDING
+Dialogue: 1,0:01:03.68,0:01:12.53,Headline,,0,0,0,,{\fad(150,150)}SPOT THE FAKE
+Dialogue: 1,0:01:12.63,0:01:20.18,Headline,,0,0,0,,{\fad(150,150)}SEE THE TRUTH
+Dialogue: 1,0:01:20.28,0:01:28.71,Headline,,0,0,0,,{\fad(150,150)}RULE OF THREE
+Dialogue: 1,0:01:28.81,0:01:36.41,Headline,,0,0,0,,{\fad(150,150)}UNMASK THEM
+Dialogue: 1,0:01:36.51,0:01:45.46,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE NOW
+Dialogue: 0,0:00:00.08,0:00:00.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Look at {\c&H0000E5FF&}their{\c&H00FFFFFF&}
+Dialogue: 0,0:00:00.34,0:00:00.74,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}feet
+Dialogue: 0,0:00:01.12,0:00:01.49,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It {\c&H0000E5FF&}tells{\c&H00FFFFFF&} you
+Dialogue: 0,0:00:01.49,0:00:02.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}more than {\c&H0000E5FF&}their{\c&H00FFFFFF&}
+Dialogue: 0,0:00:02.19,0:00:03.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}words{\c&H00FFFFFF&} ever will
+Dialogue: 0,0:00:03.82,0:00:04.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Stick {\c&H0000E5FF&}around{\c&H00FFFFFF&} for
+Dialogue: 0,0:00:04.56,0:00:05.59,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}secret{\c&H00FFFFFF&} seven to
+Dialogue: 0,0:00:05.60,0:00:06.57,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}see the {\c&H0000E5FF&}ultimate{\c&H00FFFFFF&}
+Dialogue: 0,0:00:06.58,0:00:07.32,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}power{\c&H00FFFFFF&} tell
+Dialogue: 0,0:00:07.86,0:00:08.58,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Secret{\c&H00FFFFFF&} number one
+Dialogue: 0,0:00:09.00,0:00:09.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}The feet {\c&H0000E5FF&}never{\c&H00FFFFFF&}
+Dialogue: 0,0:00:09.73,0:00:10.13,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}lie
+Dialogue: 0,0:00:10.47,0:00:11.32,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}If {\c&H0000E5FF&}someone’s{\c&H00FFFFFF&} torso
+Dialogue: 0,0:00:11.32,0:00:12.23,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is {\c&H0000E5FF&}facing{\c&H00FFFFFF&} you
+Dialogue: 0,0:00:12.39,0:00:12.99,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}but {\c&H0000E5FF&}their{\c&H00FFFFFF&} feet
+Dialogue: 0,0:00:12.99,0:00:13.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}point {\c&H0000E5FF&}toward{\c&H00FFFFFF&} the
+Dialogue: 0,0:00:13.64,0:00:15.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}exit they’re {\c&H0000E5FF&}desperate{\c&H00FFFFFF&}
+Dialogue: 0,0:00:15.03,0:00:15.59,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to {\c&H0000E5FF&}leave{\c&H00FFFFFF&}
+Dialogue: 0,0:00:16.14,0:00:16.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Secret{\c&H00FFFFFF&} two
+Dialogue: 0,0:00:17.21,0:00:17.78,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Watch{\c&H00FFFFFF&} the blink
+Dialogue: 0,0:00:17.78,0:00:18.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}rate
+Dialogue: 0,0:00:18.43,0:00:19.39,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Normal{\c&H00FFFFFF&} is eight
+Dialogue: 0,0:00:19.41,0:00:19.89,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to {\c&H0000E5FF&}twenty{\c&H00FFFFFF&} per
+Dialogue: 0,0:00:19.89,0:00:20.29,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}minute
+Dialogue: 0,0:00:20.66,0:00:21.20,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}If it {\c&H0000E5FF&}spikes{\c&H00FFFFFF&}
+Dialogue: 0,0:00:21.20,0:00:22.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}suddenly{\c&H00FFFFFF&} they are
+Dialogue: 0,0:00:22.09,0:00:23.48,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}under intense {\c&H0000E5FF&}pressure{\c&H00FFFFFF&}
+Dialogue: 0,0:00:23.64,0:00:24.30,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}or {\c&H0000E5FF&}lying{\c&H00FFFFFF&}
+Dialogue: 0,0:00:24.82,0:00:25.55,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Secret{\c&H00FFFFFF&} three
+Dialogue: 0,0:00:25.95,0:00:26.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}The {\c&H0000E5FF&}Mirroring{\c&H00FFFFFF&} Lag
+Dialogue: 0,0:00:27.26,0:00:28.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}People {\c&H0000E5FF&}naturally{\c&H00FFFFFF&} mimic
+Dialogue: 0,0:00:28.35,0:00:29.16,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}those{\c&H00FFFFFF&} they like
+Dialogue: 0,0:00:29.55,0:00:30.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}If {\c&H0000E5FF&}they{\c&H00FFFFFF&} copy
+Dialogue: 0,0:00:30.34,0:00:31.87,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}movements{\c&H00FFFFFF&} instantly
+Dialogue: 0,0:00:32.27,0:00:32.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}they are {\c&H0000E5FF&}likely{\c&H00FFFFFF&}
+Dialogue: 0,0:00:32.84,0:00:33.81,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}trying to {\c&H0000E5FF&}manipulate{\c&H00FFFFFF&}
+Dialogue: 0,0:00:33.82,0:00:34.22,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you
+Dialogue: 0,0:00:34.61,0:00:35.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Secret{\c&H00FFFFFF&} four The
+Dialogue: 0,0:00:35.62,0:00:36.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Eye {\c&H0000E5FF&}Flash{\c&H00FFFFFF&}
+Dialogue: 0,0:00:36.80,0:00:38.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}A quick {\c&H0000E5FF&}subtle{\c&H00FFFFFF&}
+Dialogue: 0,0:00:38.01,0:00:38.62,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}widening{\c&H00FFFFFF&} of the
+Dialogue: 0,0:00:38.62,0:00:39.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}eyes {\c&H0000E5FF&}during{\c&H00FFFFFF&} a
+Dialogue: 0,0:00:39.54,0:00:41.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}conversation{\c&H00FFFFFF&} signals genuine
+Dialogue: 0,0:00:41.56,0:00:42.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}surprise{\c&H00FFFFFF&} or a
+Dialogue: 0,0:00:42.61,0:00:43.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}hidden{\c&H00FFFFFF&} flash of
+Dialogue: 0,0:00:43.33,0:00:43.76,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}fear
+Dialogue: 0,0:00:44.30,0:00:46.40,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Secret five {\c&H0000E5FF&}Micro-shrugs{\c&H00FFFFFF&}
+Dialogue: 0,0:00:46.78,0:00:47.28,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}If {\c&H0000E5FF&}someone{\c&H00FFFFFF&} makes
+Dialogue: 0,0:00:47.28,0:00:48.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a {\c&H0000E5FF&}confident{\c&H00FFFFFF&} claim
+Dialogue: 0,0:00:48.47,0:00:49.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}but one {\c&H0000E5FF&}shoulder{\c&H00FFFFFF&}
+Dialogue: 0,0:00:49.35,0:00:50.77,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}hitches {\c&H0000E5FF&}slightly{\c&H00FFFFFF&} they
+Dialogue: 0,0:00:50.77,0:00:51.58,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}do not {\c&H0000E5FF&}actually{\c&H00FFFFFF&}
+Dialogue: 0,0:00:51.60,0:00:52.35,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}believe{\c&H00FFFFFF&} the words
+Dialogue: 0,0:00:52.35,0:00:52.99,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}they are {\c&H0000E5FF&}saying{\c&H00FFFFFF&}
+Dialogue: 0,0:00:53.53,0:00:55.09,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Secret six {\c&H0000E5FF&}Protective{\c&H00FFFFFF&}
+Dialogue: 0,0:00:55.09,0:00:55.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}barriers
+Dialogue: 0,0:00:56.08,0:00:57.50,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Crossing{\c&H00FFFFFF&} arms or
+Dialogue: 0,0:00:57.52,0:00:58.46,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}placing{\c&H00FFFFFF&} an object
+Dialogue: 0,0:00:58.47,0:00:59.01,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}like a {\c&H0000E5FF&}coffee{\c&H00FFFFFF&}
+Dialogue: 0,0:00:59.01,0:00:59.95,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}cup {\c&H0000E5FF&}between{\c&H00FFFFFF&} you
+Dialogue: 0,0:01:00.08,0:01:00.87,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}acts{\c&H00FFFFFF&} as a
+Dialogue: 0,0:01:00.88,0:01:02.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}subconscious{\c&H00FFFFFF&} shield against
+Dialogue: 0,0:01:02.43,0:01:03.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}influence{\c&H00FFFFFF&}
+Dialogue: 0,0:01:03.72,0:01:04.47,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Secret{\c&H00FFFFFF&} seven
+Dialogue: 0,0:01:04.87,0:01:05.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}The {\c&H0000E5FF&}Duchenne{\c&H00FFFFFF&} check
+Dialogue: 0,0:01:06.21,0:01:06.97,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}A real {\c&H0000E5FF&}smile{\c&H00FFFFFF&}
+Dialogue: 0,0:01:06.98,0:01:08.05,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}reaches{\c&H00FFFFFF&} the eyes
+Dialogue: 0,0:01:08.15,0:01:09.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and creates {\c&H0000E5FF&}wrinkles{\c&H00FFFFFF&}
+Dialogue: 0,0:01:09.63,0:01:10.05,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}If the {\c&H0000E5FF&}eyes{\c&H00FFFFFF&}
+Dialogue: 0,0:01:10.06,0:01:11.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}stay{\c&H00FFFFFF&} flat you
+Dialogue: 0,0:01:11.08,0:01:11.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}are {\c&H0000E5FF&}looking{\c&H00FFFFFF&} at
+Dialogue: 0,0:01:11.52,0:01:12.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a {\c&H0000E5FF&}mask{\c&H00FFFFFF&}
+Dialogue: 0,0:01:12.66,0:01:14.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Dark {\c&H0000E5FF&}psychology{\c&H00FFFFFF&} isn't
+Dialogue: 0,0:01:14.12,0:01:14.97,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}just about {\c&H0000E5FF&}reading{\c&H00FFFFFF&}
+Dialogue: 0,0:01:14.98,0:01:15.42,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}people
+Dialogue: 0,0:01:15.84,0:01:16.21,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}it is {\c&H0000E5FF&}about{\c&H00FFFFFF&}
+Dialogue: 0,0:01:16.21,0:01:17.17,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}seeing{\c&H00FFFFFF&} the truth
+Dialogue: 0,0:01:17.22,0:01:18.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}that {\c&H0000E5FF&}everyone{\c&H00FFFFFF&} else
+Dialogue: 0,0:01:18.18,0:01:18.94,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}tries{\c&H00FFFFFF&} to hide
+Dialogue: 0,0:01:18.94,0:01:19.81,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}in {\c&H0000E5FF&}plain{\c&H00FFFFFF&} sight
+Dialogue: 0,0:01:20.32,0:01:20.71,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Don't{\c&H00FFFFFF&} just look
+Dialogue: 0,0:01:20.71,0:01:21.42,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}for one {\c&H0000E5FF&}sign{\c&H00FFFFFF&}
+Dialogue: 0,0:01:21.81,0:01:23.26,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Professional{\c&H00FFFFFF&} profilers look
+Dialogue: 0,0:01:23.39,0:01:24.26,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}for {\c&H0000E5FF&}clusters{\c&H00FFFFFF&}
+Dialogue: 0,0:01:24.66,0:01:25.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Three{\c&H00FFFFFF&} signs in
+Dialogue: 0,0:01:25.33,0:01:26.20,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a row {\c&H0000E5FF&}mean{\c&H00FFFFFF&}
+Dialogue: 0,0:01:26.28,0:01:26.92,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you have {\c&H0000E5FF&}found{\c&H00FFFFFF&}
+Dialogue: 0,0:01:26.92,0:01:28.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a {\c&H0000E5FF&}psychological{\c&H00FFFFFF&} breakthrough
+Dialogue: 0,0:01:28.86,0:01:29.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Apply these {\c&H0000E5FF&}secrets{\c&H00FFFFFF&}
+Dialogue: 0,0:01:29.85,0:01:30.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}in your {\c&H0000E5FF&}next{\c&H00FFFFFF&}
+Dialogue: 0,0:01:30.36,0:01:31.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}meeting{\c&H00FFFFFF&} or social
+Dialogue: 0,0:01:31.44,0:01:31.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}event
+Dialogue: 0,0:01:32.12,0:01:32.38,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You will be
+Dialogue: 0,0:01:32.38,0:01:33.50,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}surprised{\c&H00FFFFFF&} how much
+Dialogue: 0,0:01:33.50,0:01:34.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}people{\c&H00FFFFFF&} reveal when
+Dialogue: 0,0:01:34.70,0:01:35.20,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}they {\c&H0000E5FF&}think{\c&H00FFFFFF&} they
+Dialogue: 0,0:01:35.21,0:01:36.03,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}are {\c&H0000E5FF&}being{\c&H00FFFFFF&} quiet
+Dialogue: 0,0:01:36.56,0:01:37.77,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Subscribe{\c&H00FFFFFF&} for weekly
+Dialogue: 0,0:01:37.91,0:01:38.80,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}deep {\c&H0000E5FF&}dives{\c&H00FFFFFF&} into
+Dialogue: 0,0:01:38.80,0:01:40.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}human power {\c&H0000E5FF&}dynamics{\c&H00FFFFFF&}
+Dialogue: 0,0:01:40.50,0:01:40.86,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Which{\c&H00FFFFFF&} of these
+Dialogue: 0,0:01:40.86,0:01:42.05,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}seven {\c&H0000E5FF&}secrets{\c&H00FFFFFF&} shocked
+Dialogue: 0,0:01:42.05,0:01:42.67,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you the {\c&H0000E5FF&}most{\c&H00FFFFFF&}
+Dialogue: 0,0:01:43.04,0:01:43.94,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Comment{\c&H00FFFFFF&} below and
+Dialogue: 0,0:01:43.95,0:01:44.48,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}let us {\c&H0000E5FF&}know{\c&H00FFFFFF&}

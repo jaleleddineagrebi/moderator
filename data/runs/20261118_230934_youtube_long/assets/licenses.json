@@ -1,0 +1,122 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-250826/",
+    "author": "Matthias_Groeneveld",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "walking shoes pavement",
+    "description": "Extreme close up of leather shoes walking on a concrete sidewalk."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-202753/",
+    "author": "Matthias_Groeneveld",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man standing suit",
+    "description": "A man in a suit standing, with his body angled toward a conversation but his feet pointed toward a doorway."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-116041/",
+    "author": "11352507",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "eye blinking macro",
+    "description": "Macro shot of a man's eye blinking rapidly in a dark environment with blue lighting."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-45358/",
+    "author": "NickyPe",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "men drinking coffee",
+    "description": "Two men at a table; one picks up a glass, and the other does the same action exactly one second later."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-61290/",
+    "author": "Engin_Akyurt",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "surprised man face",
+    "description": "High contrast close-up of a man's face as his eyes widen for a split second."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-4948/",
+    "author": "klimkin",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "shoulder shrug close",
+    "description": "A man talking in a formal setting while one of his shoulders lifts slightly while his head stays still."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-181114/",
+    "author": "MagicTV",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man crossing arms",
+    "description": "A man sitting at a desk firmly crossing his arms across his chest while looking at a laptop."
+  },
+  {
+    "scene": "scene_08",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-135320/",
+    "author": "zillurrahman1",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "fake smile man",
+    "description": "Split screen showing a man's mouth smiling on one side and his expressionless eyes on the other."
+  },
+  {
+    "scene": "scene_09",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-35590/",
+    "author": "pnepalensis",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "digital data brain",
+    "description": "Digital matrix or binary code overlaying a silhouette of a man's head."
+  },
+  {
+    "scene": "scene_10",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-180776/",
+    "author": "Darioguzben",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "writing checklist pen",
+    "description": "A man's hand checking off three boxes on a notepad with a fountain pen."
+  },
+  {
+    "scene": "scene_11",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-138504/",
+    "author": "Matthias_Groeneveld",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "empty dark office",
+    "description": "A dark boardroom with empty chairs and a single spotlight on the head of the table."
+  },
+  {
+    "scene": "scene_12",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-214736/",
+    "author": "u_l60ths3fo3",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "pressing phone button",
+    "description": "Close up of a finger pressing a button on a smartphone screen."
+  }
+]
