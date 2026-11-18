@@ -1,0 +1,505 @@
+{
+  "voice": "en-US-AriaNeural",
+  "duration": 36.348095,
+  "scenes": [
+    {
+      "scene": "scene_01",
+      "start": 0.0,
+      "end": 3.792,
+      "words": [
+        {
+          "start": 0.097,
+          "end": 0.498,
+          "text": "Stare"
+        },
+        {
+          "start": 0.51,
+          "end": 0.592,
+          "text": "at"
+        },
+        {
+          "start": 0.604,
+          "end": 0.687,
+          "text": "the"
+        },
+        {
+          "start": 0.699,
+          "end": 1.241,
+          "text": "cross"
+        },
+        {
+          "start": 2.052,
+          "end": 2.252,
+          "text": "Do"
+        },
+        {
+          "start": 2.264,
+          "end": 2.512,
+          "text": "not"
+        },
+        {
+          "start": 2.524,
+          "end": 2.96,
+          "text": "blink"
+        }
+      ]
+    },
+    {
+      "scene": "scene_02",
+      "start": 3.882,
+      "end": 8.034,
+      "words": [
+        {
+          "start": 3.979,
+          "end": 4.215,
+          "text": "Keep"
+        },
+        {
+          "start": 4.227,
+          "end": 4.38,
+          "text": "your"
+        },
+        {
+          "start": 4.392,
+          "end": 4.604,
+          "text": "eyes"
+        },
+        {
+          "start": 4.616,
+          "end": 4.899,
+          "text": "glued"
+        },
+        {
+          "start": 4.911,
+          "end": 4.982,
+          "text": "to"
+        },
+        {
+          "start": 4.993,
+          "end": 5.206,
+          "text": "that"
+        },
+        {
+          "start": 5.217,
+          "end": 5.536,
+          "text": "center"
+        },
+        {
+          "start": 5.548,
+          "end": 5.866,
+          "text": "point"
+        },
+        {
+          "start": 5.878,
+          "end": 6.019,
+          "text": "while"
+        },
+        {
+          "start": 6.031,
+          "end": 6.114,
+          "text": "I"
+        },
+        {
+          "start": 6.125,
+          "end": 6.574,
+          "text": "explain"
+        },
+        {
+          "start": 6.585,
+          "end": 6.727,
+          "text": "this"
+        },
+        {
+          "start": 6.739,
+          "end": 7.21,
+          "text": "glitch"
+        }
+      ]
+    },
+    {
+      "scene": "scene_03",
+      "start": 8.124,
+      "end": 13.188,
+      "words": [
+        {
+          "start": 8.221,
+          "end": 8.504,
+          "text": "Right"
+        },
+        {
+          "start": 8.516,
+          "end": 8.834,
+          "text": "now"
+        },
+        {
+          "start": 9.188,
+          "end": 9.33,
+          "text": "your"
+        },
+        {
+          "start": 9.341,
+          "end": 9.613,
+          "text": "brain"
+        },
+        {
+          "start": 9.624,
+          "end": 9.719,
+          "text": "is"
+        },
+        {
+          "start": 9.731,
+          "end": 10.167,
+          "text": "deciding"
+        },
+        {
+          "start": 10.179,
+          "end": 10.273,
+          "text": "the"
+        },
+        {
+          "start": 10.285,
+          "end": 10.627,
+          "text": "colors"
+        },
+        {
+          "start": 10.639,
+          "end": 10.91,
+          "text": "around"
+        },
+        {
+          "start": 10.922,
+          "end": 10.981,
+          "text": "the"
+        },
+        {
+          "start": 10.992,
+          "end": 11.358,
+          "text": "cross"
+        },
+        {
+          "start": 11.37,
+          "end": 11.535,
+          "text": "are"
+        },
+        {
+          "start": 11.547,
+          "end": 11.936,
+          "text": "useless"
+        },
+        {
+          "start": 11.948,
+          "end": 12.36,
+          "text": "data"
+        }
+      ]
+    },
+    {
+      "scene": "scene_04",
+      "start": 13.278,
+      "end": 17.814,
+      "words": [
+        {
+          "start": 13.375,
+          "end": 13.528,
+          "text": "But"
+        },
+        {
+          "start": 13.54,
+          "end": 13.764,
+          "text": "here"
+        },
+        {
+          "start": 13.776,
+          "end": 13.882,
+          "text": "is"
+        },
+        {
+          "start": 13.894,
+          "end": 13.988,
+          "text": "the"
+        },
+        {
+          "start": 14.0,
+          "end": 14.342,
+          "text": "creepy"
+        },
+        {
+          "start": 14.354,
+          "end": 14.684,
+          "text": "part"
+        },
+        {
+          "start": 14.908,
+          "end": 15.038,
+          "text": "your"
+        },
+        {
+          "start": 15.05,
+          "end": 15.474,
+          "text": "neurons"
+        },
+        {
+          "start": 15.486,
+          "end": 15.604,
+          "text": "are"
+        },
+        {
+          "start": 15.616,
+          "end": 16.064,
+          "text": "literally"
+        },
+        {
+          "start": 16.076,
+          "end": 16.37,
+          "text": "muting"
+        },
+        {
+          "start": 16.382,
+          "end": 16.5,
+          "text": "your"
+        },
+        {
+          "start": 16.512,
+          "end": 16.984,
+          "text": "sight"
+        }
+      ]
+    },
+    {
+      "scene": "scene_05",
+      "start": 17.904,
+      "end": 23.832,
+      "words": [
+        {
+          "start": 18.001,
+          "end": 18.39,
+          "text": "Because"
+        },
+        {
+          "start": 18.402,
+          "end": 18.508,
+          "text": "the"
+        },
+        {
+          "start": 18.52,
+          "end": 18.862,
+          "text": "image"
+        },
+        {
+          "start": 18.874,
+          "end": 19.11,
+          "text": "isn't"
+        },
+        {
+          "start": 19.121,
+          "end": 19.499,
+          "text": "moving"
+        },
+        {
+          "start": 19.77,
+          "end": 19.888,
+          "text": "your"
+        },
+        {
+          "start": 19.9,
+          "end": 20.277,
+          "text": "visual"
+        },
+        {
+          "start": 20.289,
+          "end": 20.796,
+          "text": "cortex"
+        },
+        {
+          "start": 20.808,
+          "end": 21.126,
+          "text": "stops"
+        },
+        {
+          "start": 21.138,
+          "end": 21.704,
+          "text": "processing"
+        },
+        {
+          "start": 21.716,
+          "end": 21.798,
+          "text": "the"
+        },
+        {
+          "start": 21.81,
+          "end": 22.329,
+          "text": "background"
+        },
+        {
+          "start": 22.341,
+          "end": 23.013,
+          "text": "entirely"
+        }
+      ]
+    },
+    {
+      "scene": "scene_06",
+      "start": 23.922,
+      "end": 29.466,
+      "words": [
+        {
+          "start": 24.019,
+          "end": 24.302,
+          "text": "Look"
+        },
+        {
+          "start": 24.314,
+          "end": 24.715,
+          "text": "now"
+        },
+        {
+          "start": 25.526,
+          "end": 25.679,
+          "text": "The"
+        },
+        {
+          "start": 25.691,
+          "end": 26.021,
+          "text": "colors"
+        },
+        {
+          "start": 26.033,
+          "end": 26.151,
+          "text": "have"
+        },
+        {
+          "start": 26.163,
+          "end": 26.646,
+          "text": "vanished"
+        },
+        {
+          "start": 26.858,
+          "end": 27.177,
+          "text": "leaving"
+        },
+        {
+          "start": 27.189,
+          "end": 27.46,
+          "text": "only"
+        },
+        {
+          "start": 27.472,
+          "end": 27.53,
+          "text": "a"
+        },
+        {
+          "start": 27.542,
+          "end": 27.778,
+          "text": "grey"
+        },
+        {
+          "start": 27.79,
+          "end": 28.085,
+          "text": "void"
+        },
+        {
+          "start": 28.097,
+          "end": 28.639,
+          "text": "behind"
+        }
+      ]
+    },
+    {
+      "scene": "scene_07",
+      "start": 29.556,
+      "end": 36.348,
+      "words": [
+        {
+          "start": 29.653,
+          "end": 30.266,
+          "text": "Subscribe"
+        },
+        {
+          "start": 30.278,
+          "end": 30.408,
+          "text": "for"
+        },
+        {
+          "start": 30.42,
+          "end": 30.644,
+          "text": "more"
+        },
+        {
+          "start": 30.656,
+          "end": 30.903,
+          "text": "brain"
+        },
+        {
+          "start": 30.915,
+          "end": 31.281,
+          "text": "tests"
+        },
+        {
+          "start": 31.292,
+          "end": 31.446,
+          "text": "and"
+        },
+        {
+          "start": 31.457,
+          "end": 31.858,
+          "text": "comment"
+        },
+        {
+          "start": 31.87,
+          "end": 32.141,
+          "text": "YES"
+        },
+        {
+          "start": 32.153,
+          "end": 32.259,
+          "text": "if"
+        },
+        {
+          "start": 32.271,
+          "end": 32.377,
+          "text": "it"
+        },
+        {
+          "start": 32.389,
+          "end": 32.825,
+          "text": "worked"
+        },
+        {
+          "start": 33.636,
+          "end": 33.907,
+          "text": "Your"
+        },
+        {
+          "start": 33.919,
+          "end": 34.143,
+          "text": "eyes"
+        },
+        {
+          "start": 34.155,
+          "end": 34.249,
+          "text": "are"
+        },
+        {
+          "start": 34.261,
+          "end": 34.639,
+          "text": "lying"
+        },
+        {
+          "start": 34.792,
+          "end": 34.922,
+          "text": "so"
+        },
+        {
+          "start": 34.933,
+          "end": 35.075,
+          "text": "you"
+        },
+        {
+          "start": 35.087,
+          "end": 35.535,
+          "text": "should"
+        }
+      ]
+    }
+  ]
+}

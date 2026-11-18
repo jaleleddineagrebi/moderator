@@ -1,0 +1,56 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:03.83,Headline,,0,0,0,,{\fad(150,150)}DON'T BLINK
+Dialogue: 1,0:00:03.93,0:00:08.07,Headline,,0,0,0,,{\fad(150,150)}EYES GLUED HERE
+Dialogue: 1,0:00:08.17,0:00:13.23,Headline,,0,0,0,,{\fad(150,150)}DELETING USELESS DATA
+Dialogue: 1,0:00:13.33,0:00:17.85,Headline,,0,0,0,,{\fad(150,150)}IT GETS CREEPIER
+Dialogue: 1,0:00:17.95,0:00:23.87,Headline,,0,0,0,,{\fad(150,150)}BRAIN STOPS PROCESSING
+Dialogue: 1,0:00:23.97,0:00:29.51,Headline,,0,0,0,,{\fad(150,150)}EVERYTHING VANISHED
+Dialogue: 1,0:00:29.61,0:00:37.00,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 0,0:00:00.10,0:00:00.69,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Stare{\c&H00FFFFFF&} at the
+Dialogue: 0,0:00:00.70,0:00:01.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}cross
+Dialogue: 0,0:00:02.05,0:00:02.96,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Do not {\c&H0000E5FF&}blink{\c&H00FFFFFF&}
+Dialogue: 0,0:00:03.98,0:00:04.60,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Keep{\c&H00FFFFFF&} your eyes
+Dialogue: 0,0:00:04.62,0:00:05.21,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}glued{\c&H00FFFFFF&} to that
+Dialogue: 0,0:00:05.22,0:00:06.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}center{\c&H00FFFFFF&} point while
+Dialogue: 0,0:00:06.03,0:00:06.73,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}I {\c&H0000E5FF&}explain{\c&H00FFFFFF&} this
+Dialogue: 0,0:00:06.74,0:00:07.21,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}glitch
+Dialogue: 0,0:00:08.22,0:00:08.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Right{\c&H00FFFFFF&} now
+Dialogue: 0,0:00:09.19,0:00:09.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}brain{\c&H00FFFFFF&} is
+Dialogue: 0,0:00:09.73,0:00:10.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}deciding{\c&H00FFFFFF&} the colors
+Dialogue: 0,0:00:10.64,0:00:11.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}around{\c&H00FFFFFF&} the cross
+Dialogue: 0,0:00:11.37,0:00:12.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}are {\c&H0000E5FF&}useless{\c&H00FFFFFF&} data
+Dialogue: 0,0:00:13.38,0:00:13.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}But {\c&H0000E5FF&}here{\c&H00FFFFFF&} is
+Dialogue: 0,0:00:13.89,0:00:14.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}creepy{\c&H00FFFFFF&} part
+Dialogue: 0,0:00:14.91,0:00:15.60,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}neurons{\c&H00FFFFFF&} are
+Dialogue: 0,0:00:15.62,0:00:16.50,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}literally{\c&H00FFFFFF&} muting your
+Dialogue: 0,0:00:16.51,0:00:16.98,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}sight
+Dialogue: 0,0:00:18.00,0:00:18.86,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Because{\c&H00FFFFFF&} the image
+Dialogue: 0,0:00:18.87,0:00:19.89,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}isn't {\c&H0000E5FF&}moving{\c&H00FFFFFF&} your
+Dialogue: 0,0:00:19.90,0:00:21.13,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}visual{\c&H00FFFFFF&} cortex stops
+Dialogue: 0,0:00:21.14,0:00:22.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}processing{\c&H00FFFFFF&} the background
+Dialogue: 0,0:00:22.34,0:00:23.01,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}entirely
+Dialogue: 0,0:00:24.02,0:00:24.71,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Look{\c&H00FFFFFF&} now
+Dialogue: 0,0:00:25.53,0:00:26.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}The {\c&H0000E5FF&}colors{\c&H00FFFFFF&} have
+Dialogue: 0,0:00:26.16,0:00:27.46,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}vanished{\c&H00FFFFFF&} leaving only
+Dialogue: 0,0:00:27.47,0:00:28.09,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a {\c&H0000E5FF&}grey{\c&H00FFFFFF&} void
+Dialogue: 0,0:00:28.10,0:00:28.64,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}behind
+Dialogue: 0,0:00:29.65,0:00:30.64,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Subscribe{\c&H00FFFFFF&} for more
+Dialogue: 0,0:00:30.66,0:00:31.45,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}brain{\c&H00FFFFFF&} tests and
+Dialogue: 0,0:00:31.46,0:00:32.26,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} YES if
+Dialogue: 0,0:00:32.27,0:00:32.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}it {\c&H0000E5FF&}worked{\c&H00FFFFFF&}
+Dialogue: 0,0:00:33.64,0:00:34.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}eyes{\c&H00FFFFFF&} are
+Dialogue: 0,0:00:34.26,0:00:35.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}lying{\c&H00FFFFFF&} so you
+Dialogue: 0,0:00:35.09,0:00:35.53,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}should
