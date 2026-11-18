@@ -3,60 +3,70 @@
     "scene": "scene_01",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-42963/",
-    "author": "MaxMedyk",
+    "page": "https://pixabay.com/videos/id-129422/",
+    "author": "SYG_Anime",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "man hand grabbing product",
-    "description": "A close-up shot of a man's hand reaching out to grab a premium leather wallet on a display shelf."
+    "query": "hand reaching product",
+    "description": "A close-up of a man's hand reaching out and grasping a luxury item on a high-end store shelf."
   },
   {
     "scene": "scene_02",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-153460/",
-    "author": "34168960",
+    "page": "https://pixabay.com/videos/id-286036/",
+    "author": "Matthias_Groeneveld",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "digital timer counting",
-    "description": "A digital stopwatch counting up rapidly overlaying a man holding a high-end camera."
+    "query": "man holding box",
+    "description": "A man standing in an aisle, holding a sleek box and examining it closely with focused eyes."
   },
   {
     "scene": "scene_03",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-207982/",
-    "author": "TungArt7",
+    "page": "https://pixabay.com/videos/id-14869/",
+    "author": "moshehar",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "man admiring object",
-    "description": "A man looking at a product in his hands with a look of deep satisfaction and personal connection."
+    "query": "man looking happy",
+    "description": "A man looking at a new gadget in his hands with a very proud and satisfied expression."
   },
   {
     "scene": "scene_04",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-287749/",
-    "author": "Kanenori",
+    "page": "https://pixabay.com/videos/id-21698/",
+    "author": "Video89evenements",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "placing item back",
-    "description": "Slow motion shot of a man reluctantly placing a box back onto a store shelf and pulling his hand away."
+    "query": "hand releasing object",
+    "description": "Close-up of a hand slowly and reluctantly letting go of a product and pulling away from a shelf."
   },
   {
     "scene": "scene_05",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-133988/",
-    "author": "zubair9900",
+    "page": "https://pixabay.com/videos/id-239700/",
+    "author": "awojcikkk",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "hand lifting mug",
-    "description": "A man's hand lifting a ceramic coffee mug from a wooden desk in a cozy office setting."
+    "query": "brain neurons firing",
+    "description": "An abstract 3D animation of neural pathways lighting up or a brain scan glowing with blue light."
   },
   {
     "scene": "scene_06",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-48891/",
-    "author": "Hassas_Arts",
+    "page": "https://pixabay.com/videos/id-11288/",
+    "author": "GreenCardShow",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "clicking subscribe button",
-    "description": "A close-up of a finger clicking the subscribe button on a screen followed by a man nodding at the camera."
+    "query": "hand holding phone",
+    "description": "A first-person perspective of a hand lifting a smartphone or a ceramic mug from a desk."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-154373/",
+    "author": "berctk",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "subscribe button click",
+    "description": "A close-up of a mouse cursor clicking a red subscribe button on a screen followed by a man nodding."
   }
 ]
