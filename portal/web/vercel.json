@@ -5,6 +5,14 @@
   "outputDirectory": "dist",
   "rewrites": [
     {
+      "source": "/privacy",
+      "destination": "/privacy_policy.html"
+    },
+    {
+      "source": "/terms",
+      "destination": "/term_of-service.html"
+    },
+    {
       "source": "/sitemap.xml",
       "destination": "/api/seo?type=sitemap"
     },
