@@ -1,12 +1,12 @@
 {
-  "passed": false,
-  "revision_round": 0,
+  "passed": true,
+  "revision_round": 1,
   "checks": [
     {
       "check": "length",
       "lang": "en",
       "ok": true,
-      "detail": "38.7s (must be under 60s; target 32-50s)",
+      "detail": "43.8s (must be under 60s; target 32-50s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -14,7 +14,7 @@
       "check": "target length",
       "lang": "en",
       "ok": true,
-      "detail": "38.7s",
+      "detail": "43.8s",
       "send_to": null,
       "severity": "minor"
     },
@@ -46,7 +46,7 @@
       "check": "loudness",
       "lang": "en",
       "ok": true,
-      "detail": "-14.2 LUFS, peak -1.4 dBFS (target -14 LUFS, peak <= -1)",
+      "detail": "-14.2 LUFS, peak -1.0 dBFS (target -14 LUFS, peak <= -1)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -62,7 +62,7 @@
       "check": "caption sync",
       "lang": "en",
       "ok": true,
-      "detail": "97 words, 36 caption events",
+      "detail": "107 words, 40 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -70,7 +70,7 @@
       "check": "visual licenses",
       "lang": null,
       "ok": true,
-      "detail": "6 assets: pixabay",
+      "detail": "7 assets: pixabay",
       "send_to": null,
       "severity": "blocker"
     },
@@ -94,16 +94,16 @@
       "check": "grammar review",
       "lang": "en",
       "ok": false,
-      "detail": "Scene 6 script ends mid-sentence with 'which is exactly why'. Remove the trailing clause or complete the thought. Fix: Change to 'Subscribe for more brain hacks—and comment GOT ME if you felt that ownership shift!'",
+      "detail": "Scene 07 ends with 'which is exactly why' but the loop back to the beginning of the video (Scene 01) would result in the sentence: 'which is exactly why Stop touching things in the store.' This is grammatically incorrect. Change the end of Scene 07 to: 'which is exactly why you should'",
       "send_to": "script",
-      "severity": "blocker"
+      "severity": "minor"
     },
     {
       "check": "people rule",
       "lang": null,
-      "ok": false,
-      "detail": "scene_05: A woman is clearly visible from the waist up (including shoulders and torso) in all three frames of the scene.. Replace with footage without women (a face-only close-up is the only exception).",
-      "send_to": "visuals",
+      "ok": true,
+      "detail": "no women beyond face close-ups in 7 scenes and 1 thumbnail(s)",
+      "send_to": null,
       "severity": "blocker"
     }
   ]
