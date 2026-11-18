@@ -1,12 +1,12 @@
 {
   "passed": false,
-  "revision_round": 0,
+  "revision_round": 1,
   "checks": [
     {
       "check": "length",
       "lang": "en",
       "ok": true,
-      "detail": "37.5s (must be under 60s; target 32-50s)",
+      "detail": "45.2s (must be under 60s; target 32-50s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -14,7 +14,7 @@
       "check": "target length",
       "lang": "en",
       "ok": true,
-      "detail": "37.5s",
+      "detail": "45.2s",
       "send_to": null,
       "severity": "minor"
     },
@@ -46,7 +46,7 @@
       "check": "loudness",
       "lang": "en",
       "ok": true,
-      "detail": "-14.2 LUFS, peak -1.4 dBFS (target -14 LUFS, peak <= -1)",
+      "detail": "-15.0 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -54,7 +54,7 @@
       "check": "hook timing",
       "lang": "en",
       "ok": true,
-      "detail": "scene_01 spoken in 2.8s (target <= 4s)",
+      "detail": "scene_01 spoken in 2.0s (target <= 4s)",
       "send_to": null,
       "severity": "minor"
     },
@@ -62,7 +62,7 @@
       "check": "caption sync",
       "lang": "en",
       "ok": true,
-      "detail": "93 words, 32 caption events",
+      "detail": "114 words, 41 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -70,7 +70,7 @@
       "check": "visual licenses",
       "lang": null,
       "ok": true,
-      "detail": "6 assets: pixabay",
+      "detail": "7 assets: pixabay",
       "send_to": null,
       "severity": "blocker"
     },
@@ -91,19 +91,19 @@
       "severity": "blocker"
     },
     {
-      "check": "accuracy review",
+      "check": "grammar review",
       "lang": "en",
       "ok": false,
-      "detail": "The claim that the Battery Status API is used to 'instantly reconstruct your identity across totally separate browsers' is factually incorrect. Major browsers like Safari, Firefox, and Brave have removed or restricted this API specifically to prevent fingerprinting, and Chrome limits its precision. It is used as one of many signals for fingerprinting, but cannot 'instantly reconstruct identity' on its own. Change 'instantly reconstruct your identity' to 'help fingerprint your device' in the script.",
+      "detail": "The narration in scene_07 ends with a non-sequitur 'which is exactly why you...' that creates an incomplete and nonsensical sentence. Remove 'which is exactly why you...' so the sentence ends at 'secrets'.",
       "send_to": "script",
       "severity": "blocker"
     },
     {
       "check": "people rule",
       "lang": null,
-      "ok": true,
-      "detail": "no women beyond face close-ups in 6 scenes and 1 thumbnail(s)",
-      "send_to": null,
+      "ok": false,
+      "detail": "scene_06: A woman is shown from the chest up, including her arm and hand, in the first and second frames.. Replace with footage without women (a face-only close-up is the only exception).",
+      "send_to": "visuals",
       "severity": "blocker"
     }
   ]
