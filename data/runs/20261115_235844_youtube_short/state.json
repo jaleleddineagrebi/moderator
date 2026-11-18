@@ -2,7 +2,7 @@
   "run_id": "20261115_235844_youtube_short",
   "workflow": "youtube_short",
   "workflow_title": "YouTube Short",
-  "status": "running",
+  "status": "done",
   "params": {
     "languages": [
       "en"
@@ -66,7 +66,7 @@
     "llm": "gemini"
   },
   "started_at": "2026-11-15T23:58:44+00:00",
-  "ended_at": null,
+  "ended_at": "2026-11-18T12:46:32+00:00",
   "revision_rounds": 2,
   "cost": {
     "total_usd": 0.029234,
@@ -1051,7 +1051,7 @@
         "packaging"
       ],
       "checkpoint": "C",
-      "status": "waiting_for_approval",
+      "status": "done",
       "progress": 100,
       "started_at": "2026-11-16T00:04:22+00:00",
       "ended_at": "2026-11-16T00:04:35+00:00",
@@ -1239,11 +1239,11 @@
       "type": "approve",
       "step": "qa",
       "route_to": "edit",
-      "status": "pending",
+      "status": "approved",
       "options": [],
       "choice": null,
-      "comment": null,
-      "decided_at": null
+      "comment": "approved by github:jaleleddineagrebi",
+      "decided_at": "2026-11-18T12:46:32+00:00"
     }
   },
   "notifications": [
@@ -1258,12 +1258,37 @@
       "level": "action",
       "msg": "Approval needed: Approve the final videos (never uploaded without your OK)",
       "step": "qa"
+    },
+    {
+      "ts": "2026-11-18T12:46:43+00:00",
+      "level": "success",
+      "msg": "Uploaded en to 'jalel eddine agrebi' as private: https://youtube.com/shorts/6hPMOWhd8ng",
+      "step": null
+    }
+  ],
+  "uploads": [
+    {
+      "lang": "en",
+      "id": "6hPMOWhd8ng",
+      "url": "https://youtube.com/shorts/6hPMOWhd8ng",
+      "privacy": "private",
+      "channel": "jalel eddine agrebi",
+      "thumbnail": "set"
     }
   ],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-16T00:04:51+00:00",
-    "uploads": [],
+    "exported_at": "2026-11-18T12:46:48+00:00",
+    "uploads": [
+      {
+        "lang": "en",
+        "id": "6hPMOWhd8ng",
+        "url": "https://youtube.com/shorts/6hPMOWhd8ng",
+        "privacy": "private",
+        "channel": "jalel eddine agrebi",
+        "thumbnail": "set"
+      }
+    ],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/43777616239",
     "issue_url": "https://github.com/jaleleddineagrebi/moderator/issues/107"
   }
