@@ -1,0 +1,120 @@
+{
+  "title": "The Paralyzed Tendon Glitch",
+  "scenes": [
+    {
+      "vo": {
+        "en": "You cannot lift your ring finger."
+      },
+      "on_screen": {
+        "en": "YOU CAN'T LIFT IT"
+      },
+      "visual": {
+        "description": "A man's hand pressed flat against a dark wooden table, with one finger visibly twitching but failing to move.",
+        "search_terms": [
+          "male hand table",
+          "finger struggling motion",
+          "tense hand muscles"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Put your hand flat. Fold your middle finger under so the knuckle touches the table. Keep the rest straight."
+      },
+      "on_screen": {
+        "en": "FOLD MIDDLE FINGER"
+      },
+      "visual": {
+        "description": "Close up of a hand demonstrating the specific tucking position on a clean surface.",
+        "search_terms": [
+          "hand palm down",
+          "folding finger palm",
+          "hand on surface"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Lift your thumb. Easy. Index? Simple. Even the pinky works. Your brain thinks it’s in total control."
+      },
+      "on_screen": {
+        "en": "TEST YOUR CONTROL"
+      },
+      "visual": {
+        "description": "A sequence of different fingers lifting one by one while the middle finger remains tucked.",
+        "search_terms": [
+          "thumb lifting motion",
+          "index finger tapping",
+          "hand dexterity"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "But here is the creepy part. Try lifting your ring finger. Seriously, try as hard as you can."
+      },
+      "on_screen": {
+        "en": "NOW TRY THIS"
+      },
+      "visual": {
+        "description": "A man looking directly at the camera with a shocked or frustrated expression, gesturing toward his hand.",
+        "search_terms": [
+          "frustrated man face",
+          "confused expression face",
+          "close up man"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "You’re stuck. These fingers share the same extensor tendon. Pinning one down mechanically locks the other. It’s a hardware limitation."
+      },
+      "on_screen": {
+        "en": "TENDON LOCK GLITCH"
+      },
+      "visual": {
+        "description": "Abstract animation of mechanical gears or intertwined cables being pulled tight and locking up.",
+        "search_terms": [
+          "mechanical pulley system",
+          "interconnected cables",
+          "metallic gears locking"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for tomorrow’s brain test and comment GLITCH if you failed. It’s crazy how..."
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "A hand holding a smartphone and tapping the screen quickly to scroll through content.",
+        "search_terms": [
+          "scrolling on phone",
+          "tapping mobile screen",
+          "hand clicking button"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    }
+  ],
+  "idea_id": "paralyzed-tendon-glitch",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 34.2
+  }
+}
