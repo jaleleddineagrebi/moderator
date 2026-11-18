@@ -276,12 +276,12 @@
       "checkpoint": "A",
       "status": "running",
       "progress": 25,
-      "started_at": "2026-11-18T22:22:46+00:00",
+      "started_at": "2026-11-18T22:32:48+00:00",
       "ended_at": null,
-      "attempt": 2,
-      "retries": 1,
+      "attempt": 3,
+      "retries": 2,
       "max_retries": 2,
-      "strategy": "web_only",
+      "strategy": "no_web",
       "inputs": {
         "niche": "Mind Hacks, AI Secrets, Bizarre Body Science & Hidden Power Dynamics — Focus Pillar: Hidden Money Traps, Billionaire Strategy & Consumer Mind Tricks",
         "topic": null,
@@ -345,6 +345,26 @@
           "ts": "2026-11-18T22:22:46+00:00",
           "level": "info",
           "msg": "Asking Gemini (gemini-3.8-flash, high complexity, thinking high)"
+        },
+        {
+          "ts": "2026-11-18T22:32:46+00:00",
+          "level": "error",
+          "msg": "ReadTimeout: "
+        },
+        {
+          "ts": "2026-11-18T22:32:48+00:00",
+          "level": "info",
+          "msg": "Attempt 3/3, strategy 'no_web'"
+        },
+        {
+          "ts": "2026-11-18T22:32:48+00:00",
+          "level": "info",
+          "msg": "Rotating viral pillar for this run: Hidden Money Traps, Billionaire Strategy & Consumer Mind Tricks (money_power)"
+        },
+        {
+          "ts": "2026-11-18T22:32:48+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.8-flash, high complexity, thinking high)"
         }
       ],
       "errors": [
@@ -352,6 +372,12 @@
           "ts": "2026-11-18T22:22:45+00:00",
           "attempt": 1,
           "strategy": "web_and_youtube",
+          "error": "ReadTimeout: "
+        },
+        {
+          "ts": "2026-11-18T22:32:46+00:00",
+          "attempt": 2,
+          "strategy": "web_only",
           "error": "ReadTimeout: "
         }
       ],
@@ -532,7 +558,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-18T22:22:54+00:00",
+    "exported_at": "2026-11-18T22:32:57+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/44406203587"
   }
