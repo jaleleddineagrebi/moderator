@@ -2,7 +2,7 @@
   "run_id": "20261118_101440_youtube_short",
   "workflow": "youtube_short",
   "workflow_title": "YouTube Short",
-  "status": "running",
+  "status": "done",
   "params": {
     "languages": [
       "en"
@@ -66,7 +66,7 @@
     "llm": "gemini"
   },
   "started_at": "2026-11-18T10:14:40+00:00",
-  "ended_at": null,
+  "ended_at": "2026-11-18T10:34:57+00:00",
   "revision_rounds": 2,
   "cost": {
     "total_usd": 0.049788,
@@ -1132,7 +1132,7 @@
         "packaging"
       ],
       "checkpoint": "C",
-      "status": "waiting_for_approval",
+      "status": "done",
       "progress": 100,
       "started_at": "2026-11-18T10:32:08+00:00",
       "ended_at": "2026-11-18T10:32:24+00:00",
@@ -1341,11 +1341,11 @@
       "type": "approve",
       "step": "qa",
       "route_to": "edit",
-      "status": "pending",
+      "status": "approved",
       "options": [],
       "choice": null,
-      "comment": null,
-      "decided_at": null
+      "comment": "approved by github:jaleleddineagrebi",
+      "decided_at": "2026-11-18T10:34:57+00:00"
     }
   },
   "notifications": [
@@ -1364,7 +1364,7 @@
   ],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-18T10:32:37+00:00",
+    "exported_at": "2026-11-18T10:35:01+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/44283457900",
     "issue_url": "https://github.com/jaleleddineagrebi/moderator/issues/121"
