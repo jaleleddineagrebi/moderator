@@ -69,11 +69,11 @@
   "ended_at": null,
   "revision_rounds": 1,
   "cost": {
-    "total_usd": 0.023093,
+    "total_usd": 0.030159,
     "budget_usd": 1.0,
     "by_agent": {
       "trend_researcher": 0.003727,
-      "scriptwriter": 0.016197,
+      "scriptwriter": 0.023263,
       "packaging": 0.00047,
       "qa_reviewer": 0.0027
     }
@@ -361,10 +361,10 @@
         "research"
       ],
       "checkpoint": "B",
-      "status": "running",
-      "progress": 10,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-18T10:28:19+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-18T10:28:28+00:00",
       "attempt": 2,
       "retries": 0,
       "max_retries": 2,
@@ -425,6 +425,26 @@
           "ts": "2026-11-18T10:28:19+00:00",
           "level": "info",
           "msg": "Asking Gemini (gemini-3.8-flash, high complexity, thinking high)"
+        },
+        {
+          "ts": "2026-11-18T10:28:28+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3-flash-preview) answered in 9.1s (tokens in 2024, out 1040, thinking 978)"
+        },
+        {
+          "ts": "2026-11-18T10:28:28+00:00",
+          "level": "info",
+          "msg": "Estimated narration: en 41.5s"
+        },
+        {
+          "ts": "2026-11-18T10:28:28+00:00",
+          "level": "info",
+          "msg": "Finished, waiting for your approval"
+        },
+        {
+          "ts": "2026-11-18T10:28:28+00:00",
+          "level": "info",
+          "msg": "Approved by schedule (auto-approve)"
         }
       ],
       "errors": [],
@@ -435,7 +455,7 @@
           "comment": "QA found:\n[en] accuracy review: The claim that the Battery Status API is used to 'instantly reconstruct your identity across totally separate browsers' is factually incorrect. Major browsers like Safari, Firefox, and Brave have removed or restricted this API specifically to prevent fingerprinting, and Chrome limits its precision. It is used as one of many signals for fingerprinting, but cannot 'instantly reconstruct identity' on its own. Change 'instantly reconstruct your identity' to 'help fingerprint your device' in the script."
         }
       ],
-      "cost_usd": 0.016197
+      "cost_usd": 0.023263
     },
     "visuals": {
       "title": "Source scene visuals",
@@ -444,11 +464,11 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "queued",
-      "progress": 0,
-      "started_at": "2026-11-18T10:21:22+00:00",
-      "ended_at": "2026-11-18T10:21:55+00:00",
-      "attempt": 1,
+      "status": "running",
+      "progress": 17,
+      "started_at": "2026-11-18T10:28:28+00:00",
+      "ended_at": null,
+      "attempt": 2,
       "retries": 0,
       "max_retries": 2,
       "strategy": "stock_video",
@@ -515,6 +535,21 @@
           "ts": "2026-11-18T10:28:19+00:00",
           "level": "info",
           "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-18T10:28:28+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'stock_video'"
+        },
+        {
+          "ts": "2026-11-18T10:28:28+00:00",
+          "level": "info",
+          "msg": "Visual diversity: excluding 299 footage sources used in recent Shorts"
+        },
+        {
+          "ts": "2026-11-18T10:28:46+00:00",
+          "level": "info",
+          "msg": "scene_02: stock_video (pixabay)"
         }
       ],
       "errors": [],
@@ -528,21 +563,21 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "queued",
+      "status": "running",
       "progress": 0,
-      "started_at": "2026-11-18T10:21:55+00:00",
-      "ended_at": "2026-11-18T10:22:02+00:00",
-      "attempt": 2,
+      "started_at": "2026-11-18T10:28:28+00:00",
+      "ended_at": null,
+      "attempt": 3,
       "retries": 0,
       "max_retries": 2,
-      "strategy": "alternate_voice",
+      "strategy": "primary_voice",
       "inputs": {
         "script": "script.json",
         "languages": [
           "en"
         ],
         "voices": {
-          "en": "en-US-AriaNeural"
+          "en": "en-US-AndrewMultilingualNeural"
         }
       },
       "outputs": {
@@ -593,6 +628,16 @@
           "ts": "2026-11-18T10:28:19+00:00",
           "level": "info",
           "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-18T10:28:28+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'primary_voice'"
+        },
+        {
+          "ts": "2026-11-18T10:28:28+00:00",
+          "level": "info",
+          "msg": "Narrating en with en-US-AndrewMultilingualNeural"
         }
       ],
       "errors": [
@@ -895,11 +940,11 @@
       "type": "approve",
       "step": "script",
       "route_to": "script",
-      "status": "idle",
+      "status": "approved",
       "options": [],
       "choice": null,
       "comment": null,
-      "decided_at": "2026-11-18T10:21:22+00:00"
+      "decided_at": "2026-11-18T10:28:28+00:00"
     },
     "C": {
       "title": "Approve the final videos (never uploaded without your OK)",
@@ -916,7 +961,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-18T10:28:27+00:00",
+    "exported_at": "2026-11-18T10:28:48+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/44283457900"
   }

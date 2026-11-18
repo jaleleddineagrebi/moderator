@@ -9,12 +9,12 @@
         "en": "CHECK YOUR BATTERY NOW"
       },
       "visual": {
-        "description": "Macro shot of a man's thumb tapping on an illuminated smartphone screen showing a battery level indicator.",
+        "description": "Macro close-up of a man's finger interacting with a glowing battery icon on a smartphone screen in a dark room.",
         "search_terms": [
-          "smartphone battery icon",
-          "hand holding phone",
-          "phone screen close up",
-          "mobile battery level"
+          "smartphone battery indicator",
+          "finger touching screen",
+          "glowing mobile screen",
+          "hand holding phone"
         ],
         "prefer": "video"
       },
@@ -22,18 +22,18 @@
     },
     {
       "vo": {
-        "en": "Modern websites don't just track cookies; they quietly access a hidden browser tool called the Battery Status API."
+        "en": "Most websites aren't just looking at cookies. They're quietly querying a hidden tool called the Battery Status API."
       },
       "on_screen": {
-        "en": "HIDDEN BATTERY TRACKING API"
+        "en": "HIDDEN TRACKING API"
       },
       "visual": {
-        "description": "Fast-moving lines of glowing green code and data packets scrolling rapidly down a dark monitor screen.",
+        "description": "Rapidly scrolling green lines of computer code on a high-tech monitor in a dark office.",
         "search_terms": [
-          "programming code screen",
-          "terminal text scrolling",
-          "matrix code green",
-          "computer programming monitor"
+          "programming code scrolling",
+          "hacker screen text",
+          "data stream monitor",
+          "binary code animation"
         ],
         "prefer": "video"
       },
@@ -41,18 +41,18 @@
     },
     {
       "vo": {
-        "en": "It reads your exact charge level and drain speed down to several decimal places in real time."
+        "en": "This reads your exact charge level and discharge rate down to eight decimal places, creating a unique digital signal."
       },
       "on_screen": {
-        "en": "DECIMAL LEVEL PRECISION"
+        "en": "8 DECIMAL PLACES"
       },
       "visual": {
-        "description": "Futuristic telemetry HUD interface displaying rapidly changing percentages and battery discharge graph vectors.",
+        "description": "A digital display showing rapidly changing decimal numbers and fluctuating bar graphs.",
         "search_terms": [
-          "digital dashboard data",
-          "analytics numbers flickering",
-          "cyber telemetry screen",
-          "digital readout display"
+          "digital readout numbers",
+          "data visualization display",
+          "electronic counter blinking",
+          "futuristic interface hud"
         ],
         "prefer": "video"
       },
@@ -60,18 +60,18 @@
     },
     {
       "vo": {
-        "en": "Here is the creepy part: going incognito or using a VPN will not protect you."
+        "en": "But here is the creepy part: going incognito or using a VPN will not stop this tracking."
       },
       "on_screen": {
-        "en": "INCOGNITO CANNOT SAVE YOU"
+        "en": "VPN CAN'T STOP THIS"
       },
       "visual": {
-        "description": "A man in a dark room illuminated only by multiple bright computer screens reflecting off his glasses.",
+        "description": "A man wearing a hoodie sitting in front of three glowing monitors, his face partially obscured by shadows.",
         "search_terms": [
-          "man dark room computer",
-          "hooded computer user",
-          "cyber security specialist",
-          "person glowing monitor"
+          "man at computer dark",
+          "cyber security expert",
+          "hooded man technology",
+          "surveillance room person"
         ],
         "prefer": "video"
       },
@@ -79,18 +79,18 @@
     },
     {
       "vo": {
-        "en": "Data brokers combine this microscopic data to instantly reconstruct your identity across totally separate browsers."
+        "en": "Data brokers use these hyper-specific readings to help fingerprint your device across totally different browsers without your permission."
       },
       "on_screen": {
-        "en": "TRACKED ACROSS EVERY TAB"
+        "en": "FINGERPRINT YOUR DEVICE"
       },
       "visual": {
-        "description": "Tower of enterprise server racks with pulsing blue and amber LEDs inside a futuristic server room corridor.",
+        "description": "Close up of blue network cables plugged into a blinking server rack in a massive data center.",
         "search_terms": [
-          "server rack blinking",
+          "server room blinking lights",
           "data center cables",
-          "network server lights",
-          "cloud server room"
+          "network hardware fiber",
+          "computer server rack"
         ],
         "prefer": "video"
       },
@@ -98,22 +98,41 @@
     },
     {
       "vo": {
-        "en": "Comment your exact battery percentage below to find your digital twin, and subscribe for daily tech hacks, which is why you must..."
+        "en": "By matching these micro-patterns, they link your private browsing sessions directly back to your real identity."
+      },
+      "on_screen": {
+        "en": "REAL IDENTITY LINKED"
+      },
+      "visual": {
+        "description": "Abstract visualization of glowing dots connecting together to form a digital silhouette of a man.",
+        "search_terms": [
+          "connecting dots network",
+          "digital identity abstract",
+          "particle connection lines",
+          "data link animation"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Comment your exact percentage below to find your digital twin and subscribe for more secrets, which is exactly why you..."
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "Close up of a man's hands rapidly typing out text on a glowing mechanical keyboard in a moody studio.",
+        "description": "Close up of a man's hands typing rapidly on a mechanical keyboard with colorful backlighting.",
         "search_terms": [
-          "hands typing keyboard",
-          "mechanical keyboard rgb",
-          "typing keyboard close up",
-          "fast typing hands"
+          "hands typing fast",
+          "mechanical keyboard close-up",
+          "gamer typing backlit",
+          "keyboard typing motion"
         ],
         "prefer": "video"
       },
-      "id": "scene_06"
+      "id": "scene_07"
     }
   ],
   "idea_id": "battery-status-tracking-secret",
@@ -121,6 +140,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 33.8
+    "en": 41.5
   }
 }

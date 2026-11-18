@@ -1,20 +1,23 @@
 # Why Websites Check Your Exact Battery Percentage
-Estimated narration: en 33.8s
+Estimated narration: en 41.5s
 
-## scene_01 · Macro shot of a man's thumb tapping on an illuminated smartphone screen showing a battery level indicator.
+## scene_01 · Macro close-up of a man's finger interacting with a glowing battery icon on a smartphone screen in a dark room.
 EN  [CHECK YOUR BATTERY NOW]  Check your battery percentage right now.
 
-## scene_02 · Fast-moving lines of glowing green code and data packets scrolling rapidly down a dark monitor screen.
-EN  [HIDDEN BATTERY TRACKING API]  Modern websites don't just track cookies; they quietly access a hidden browser tool called the Battery Status API.
+## scene_02 · Rapidly scrolling green lines of computer code on a high-tech monitor in a dark office.
+EN  [HIDDEN TRACKING API]  Most websites aren't just looking at cookies. They're quietly querying a hidden tool called the Battery Status API.
 
-## scene_03 · Futuristic telemetry HUD interface displaying rapidly changing percentages and battery discharge graph vectors.
-EN  [DECIMAL LEVEL PRECISION]  It reads your exact charge level and drain speed down to several decimal places in real time.
+## scene_03 · A digital display showing rapidly changing decimal numbers and fluctuating bar graphs.
+EN  [8 DECIMAL PLACES]  This reads your exact charge level and discharge rate down to eight decimal places, creating a unique digital signal.
 
-## scene_04 · A man in a dark room illuminated only by multiple bright computer screens reflecting off his glasses.
-EN  [INCOGNITO CANNOT SAVE YOU]  Here is the creepy part: going incognito or using a VPN will not protect you.
+## scene_04 · A man wearing a hoodie sitting in front of three glowing monitors, his face partially obscured by shadows.
+EN  [VPN CAN'T STOP THIS]  But here is the creepy part: going incognito or using a VPN will not stop this tracking.
 
-## scene_05 · Tower of enterprise server racks with pulsing blue and amber LEDs inside a futuristic server room corridor.
-EN  [TRACKED ACROSS EVERY TAB]  Data brokers combine this microscopic data to instantly reconstruct your identity across totally separate browsers.
+## scene_05 · Close up of blue network cables plugged into a blinking server rack in a massive data center.
+EN  [FINGERPRINT YOUR DEVICE]  Data brokers use these hyper-specific readings to help fingerprint your device across totally different browsers without your permission.
 
-## scene_06 · Close up of a man's hands rapidly typing out text on a glowing mechanical keyboard in a moody studio.
-EN  [SUBSCRIBE 🔔]  Comment your exact battery percentage below to find your digital twin, and subscribe for daily tech hacks, which is why you must...
+## scene_06 · Abstract visualization of glowing dots connecting together to form a digital silhouette of a man.
+EN  [REAL IDENTITY LINKED]  By matching these micro-patterns, they link your private browsing sessions directly back to your real identity.
+
+## scene_07 · Close up of a man's hands typing rapidly on a mechanical keyboard with colorful backlighting.
+EN  [SUBSCRIBE 🔔]  Comment your exact percentage below to find your digital twin and subscribe for more secrets, which is exactly why you...
