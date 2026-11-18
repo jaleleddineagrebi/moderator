@@ -20,4 +20,4 @@ EN  [BRAIN STOPS PROCESSING]  Because the image isn't moving, your visual cortex
 EN  [EVERYTHING VANISHED]  Look now. The colors have vanished, leaving only a grey void behind.
 
 ## scene_07 · A hand holding a smartphone and tapping the screen to interact with an app.
-EN  [SUBSCRIBE 🔔]  Subscribe for more brain tests and comment YES if it worked. Your eyes are lying, so you should
+EN  [SUBSCRIBE 🔔]  Subscribe for more brain tests and comment YES if it worked. Your eyes are lying, so you must
