@@ -1,0 +1,62 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-134872/",
+    "author": "anijom",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "smartphone battery icon",
+    "description": "Macro shot of a man's thumb tapping on an illuminated smartphone screen showing a battery level indicator."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-136268/",
+    "author": "blackmarketmusic",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "programming code screen",
+    "description": "Fast-moving lines of glowing green code and data packets scrolling rapidly down a dark monitor screen."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-232538/",
+    "author": "Darioguzben",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "digital dashboard data",
+    "description": "Futuristic telemetry HUD interface displaying rapidly changing percentages and battery discharge graph vectors."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-11721/",
+    "author": "Iconikmg",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man dark room computer",
+    "description": "A man in a dark room illuminated only by multiple bright computer screens reflecting off his glasses."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-1029/",
+    "author": "Coverr-Free-Footage",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "server rack blinking",
+    "description": "Tower of enterprise server racks with pulsing blue and amber LEDs inside a futuristic server room corridor."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-8246/",
+    "author": "Coverr-Free-Footage",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hands typing keyboard",
+    "description": "Close up of a man's hands rapidly typing out text on a glowing mechanical keyboard in a moody studio."
+  }
+]
