@@ -1,0 +1,126 @@
+{
+  "title": "Why Websites Check Your Exact Battery Percentage",
+  "scenes": [
+    {
+      "vo": {
+        "en": "Check your battery percentage right now."
+      },
+      "on_screen": {
+        "en": "CHECK YOUR BATTERY NOW"
+      },
+      "visual": {
+        "description": "Macro shot of a man's thumb tapping on an illuminated smartphone screen showing a battery level indicator.",
+        "search_terms": [
+          "smartphone battery icon",
+          "hand holding phone",
+          "phone screen close up",
+          "mobile battery level"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Modern websites don't just track cookies; they quietly access a hidden browser tool called the Battery Status API."
+      },
+      "on_screen": {
+        "en": "HIDDEN BATTERY TRACKING API"
+      },
+      "visual": {
+        "description": "Fast-moving lines of glowing green code and data packets scrolling rapidly down a dark monitor screen.",
+        "search_terms": [
+          "programming code screen",
+          "terminal text scrolling",
+          "matrix code green",
+          "computer programming monitor"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "It reads your exact charge level and drain speed down to several decimal places in real time."
+      },
+      "on_screen": {
+        "en": "DECIMAL LEVEL PRECISION"
+      },
+      "visual": {
+        "description": "Futuristic telemetry HUD interface displaying rapidly changing percentages and battery discharge graph vectors.",
+        "search_terms": [
+          "digital dashboard data",
+          "analytics numbers flickering",
+          "cyber telemetry screen",
+          "digital readout display"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "Here is the creepy part: going incognito or using a VPN will not protect you."
+      },
+      "on_screen": {
+        "en": "INCOGNITO CANNOT SAVE YOU"
+      },
+      "visual": {
+        "description": "A man in a dark room illuminated only by multiple bright computer screens reflecting off his glasses.",
+        "search_terms": [
+          "man dark room computer",
+          "hooded computer user",
+          "cyber security specialist",
+          "person glowing monitor"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Data brokers combine this microscopic data to instantly reconstruct your identity across totally separate browsers."
+      },
+      "on_screen": {
+        "en": "TRACKED ACROSS EVERY TAB"
+      },
+      "visual": {
+        "description": "Tower of enterprise server racks with pulsing blue and amber LEDs inside a futuristic server room corridor.",
+        "search_terms": [
+          "server rack blinking",
+          "data center cables",
+          "network server lights",
+          "cloud server room"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "Comment your exact battery percentage below to find your digital twin, and subscribe for daily tech hacks, which is why you must..."
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "Close up of a man's hands rapidly typing out text on a glowing mechanical keyboard in a moody studio.",
+        "search_terms": [
+          "hands typing keyboard",
+          "mechanical keyboard rgb",
+          "typing keyboard close up",
+          "fast typing hands"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    }
+  ],
+  "idea_id": "battery-status-tracking-secret",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 33.8
+  }
+}
