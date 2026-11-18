@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18T12:44:22+00:00",
+  "updated_at": "2026-11-18T12:45:07+00:00",
   "repo": "jaleleddineagrebi/moderator",
   "live_run_id": "20261118_101440_youtube_short",
   "runs": [
@@ -41,10 +41,10 @@
       "status": "done",
       "progress": 100,
       "started_at": "2026-11-17T22:19:37+00:00",
-      "ended_at": "2026-11-18T08:11:03+00:00",
+      "ended_at": "2026-11-18T12:44:55+00:00",
       "cost_usd": 0.0704,
       "is_live": false,
-      "has_uploads": false,
+      "has_uploads": true,
       "issue_url": "https://github.com/jaleleddineagrebi/moderator/issues/117",
       "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/44188767778"
     },

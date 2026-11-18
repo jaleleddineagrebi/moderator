@@ -66,7 +66,7 @@
     "llm": "gemini"
   },
   "started_at": "2026-11-17T22:19:37+00:00",
-  "ended_at": "2026-11-18T08:11:03+00:00",
+  "ended_at": "2026-11-18T12:44:55+00:00",
   "revision_rounds": 2,
   "cost": {
     "total_usd": 0.070394,
@@ -1439,7 +1439,7 @@
       "options": [],
       "choice": null,
       "comment": "approved by github:jaleleddineagrebi",
-      "decided_at": "2026-11-18T08:11:03+00:00"
+      "decided_at": "2026-11-18T12:44:55+00:00"
     }
   },
   "notifications": [
@@ -1454,12 +1454,37 @@
       "level": "action",
       "msg": "Approval needed: Approve the final videos (never uploaded without your OK)",
       "step": "qa"
+    },
+    {
+      "ts": "2026-11-18T12:45:03+00:00",
+      "level": "success",
+      "msg": "Uploaded en to 'jalel eddine agrebi' as private: https://youtube.com/shorts/09yRifk4z0I",
+      "step": null
+    }
+  ],
+  "uploads": [
+    {
+      "lang": "en",
+      "id": "09yRifk4z0I",
+      "url": "https://youtube.com/shorts/09yRifk4z0I",
+      "privacy": "private",
+      "channel": "jalel eddine agrebi",
+      "thumbnail": "set"
     }
   ],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-18T08:11:07+00:00",
-    "uploads": [],
+    "exported_at": "2026-11-18T12:45:07+00:00",
+    "uploads": [
+      {
+        "lang": "en",
+        "id": "09yRifk4z0I",
+        "url": "https://youtube.com/shorts/09yRifk4z0I",
+        "privacy": "private",
+        "channel": "jalel eddine agrebi",
+        "thumbnail": "set"
+      }
+    ],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/44188767778",
     "issue_url": "https://github.com/jaleleddineagrebi/moderator/issues/117"
   }
