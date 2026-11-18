@@ -1,12 +1,12 @@
 {
   "passed": false,
-  "revision_round": 1,
+  "revision_round": 2,
   "checks": [
     {
       "check": "length",
       "lang": "en",
       "ok": true,
-      "detail": "45.2s (must be under 60s; target 32-50s)",
+      "detail": "42.2s (must be under 60s; target 32-50s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -14,7 +14,7 @@
       "check": "target length",
       "lang": "en",
       "ok": true,
-      "detail": "45.2s",
+      "detail": "42.2s",
       "send_to": null,
       "severity": "minor"
     },
@@ -62,7 +62,7 @@
       "check": "caption sync",
       "lang": "en",
       "ok": true,
-      "detail": "114 words, 41 caption events",
+      "detail": "108 words, 40 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -94,16 +94,16 @@
       "check": "grammar review",
       "lang": "en",
       "ok": false,
-      "detail": "The narration in scene_07 ends with a non-sequitur 'which is exactly why you...' that creates an incomplete and nonsensical sentence. Remove 'which is exactly why you...' so the sentence ends at 'secrets'.",
+      "detail": "The script in scene_07 ends with a nonsensical sentence fragment: '...which is exactly why you'. Remove this fragment and end the sentence at 'secrets'.",
       "send_to": "script",
       "severity": "blocker"
     },
     {
       "check": "people rule",
       "lang": null,
-      "ok": false,
-      "detail": "scene_06: A woman is shown from the chest up, including her arm and hand, in the first and second frames.. Replace with footage without women (a face-only close-up is the only exception).",
-      "send_to": "visuals",
+      "ok": true,
+      "detail": "no women beyond face close-ups in 7 scenes and 1 thumbnail(s)",
+      "send_to": null,
       "severity": "blocker"
     }
   ]
