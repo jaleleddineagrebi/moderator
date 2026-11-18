@@ -235,6 +235,16 @@ ${itemsXml}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>${baseUrl}/privacy_policy.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>${baseUrl}/term_of-service.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
 ${postUrlsXml}
 </urlset>`;
 

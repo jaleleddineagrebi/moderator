@@ -39,6 +39,8 @@ import { MatIconModule } from '@angular/material/icon';
             <a routerLink="/">Daily Insights</a>
             <a routerLink="/shorts">YouTube Shorts</a>
             <a routerLink="/contact">Contact Us</a>
+            <a href="/privacy_policy.html">Privacy Policy</a>
+            <a href="/term_of-service.html">Terms of Service</a>
             <a *ngIf="auth.isAdmin()" routerLink="/admin">Admin Dashboard</a>
             <a href="/rss.xml" target="_blank" rel="noopener">RSS Feed</a>
             <a href="/sitemap.xml" target="_blank" rel="noopener">XML Sitemap</a>

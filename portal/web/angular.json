@@ -32,6 +32,8 @@
               "src/favicon.ico",
               "src/favicon.svg",
               "src/llms.txt",
+              "src/privacy_policy.html",
+              "src/term_of-service.html",
               "src/.well-known",
               "src/assets"
             ],
