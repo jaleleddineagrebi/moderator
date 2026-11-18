@@ -1,0 +1,56 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:02.63,Headline,,0,0,0,,{\fad(150,150)}STOP TOUCHING EVERYTHING
+Dialogue: 1,0:00:02.73,0:00:08.41,Headline,,0,0,0,,{\fad(150,150)}THE 30-SECOND RULE
+Dialogue: 1,0:00:08.51,0:00:15.94,Headline,,0,0,0,,{\fad(150,150)}YOU ALREADY OWN IT
+Dialogue: 1,0:00:16.04,0:00:21.41,Headline,,0,0,0,,{\fad(150,150)}IT HURTS TO LEAVE
+Dialogue: 1,0:00:21.51,0:00:31.31,Headline,,0,0,0,,{\fad(150,150)}TRY IT NOW
+Dialogue: 1,0:00:31.41,0:00:38.61,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 0,0:00:00.10,0:00:01.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Stop {\c&H0000E5FF&}touching{\c&H00FFFFFF&} things
+Dialogue: 0,0:00:01.16,0:00:01.75,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}in the {\c&H0000E5FF&}store{\c&H00FFFFFF&}
+Dialogue: 0,0:00:02.78,0:00:03.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Retailers{\c&H00FFFFFF&} know that
+Dialogue: 0,0:00:03.85,0:00:04.30,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}if you {\c&H0000E5FF&}hold{\c&H00FFFFFF&}
+Dialogue: 0,0:00:04.31,0:00:04.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}an {\c&H0000E5FF&}item{\c&H00FFFFFF&} for
+Dialogue: 0,0:00:04.92,0:00:05.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}just thirty {\c&H0000E5FF&}seconds{\c&H00FFFFFF&}
+Dialogue: 0,0:00:06.22,0:00:06.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}brain{\c&H00FFFFFF&} flips
+Dialogue: 0,0:00:06.94,0:00:07.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a {\c&H0000E5FF&}switch{\c&H00FFFFFF&}
+Dialogue: 0,0:00:08.56,0:00:09.57,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Suddenly{\c&H00FFFFFF&} you don't
+Dialogue: 0,0:00:09.58,0:00:10.31,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}just{\c&H00FFFFFF&} want it
+Dialogue: 0,0:00:11.14,0:00:11.75,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You {\c&H0000E5FF&}feel{\c&H00FFFFFF&} like
+Dialogue: 0,0:00:11.76,0:00:12.53,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you {\c&H0000E5FF&}already{\c&H00FFFFFF&} own
+Dialogue: 0,0:00:12.54,0:00:12.94,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}it
+Dialogue: 0,0:00:13.64,0:00:14.10,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}This is the
+Dialogue: 0,0:00:14.11,0:00:15.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Endowment{\c&H00FFFFFF&} Effect
+Dialogue: 0,0:00:16.09,0:00:16.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}But {\c&H0000E5FF&}here{\c&H00FFFFFF&} is
+Dialogue: 0,0:00:16.64,0:00:17.47,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}creepy{\c&H00FFFFFF&} part
+Dialogue: 0,0:00:17.69,0:00:18.35,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}putting{\c&H00FFFFFF&} it back
+Dialogue: 0,0:00:18.36,0:00:19.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}actually{\c&H00FFFFFF&} triggers physical
+Dialogue: 0,0:00:19.62,0:00:20.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}pain{\c&H00FFFFFF&} in your
+Dialogue: 0,0:00:20.12,0:00:20.53,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}brain
+Dialogue: 0,0:00:21.55,0:00:22.37,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Try it now
+Dialogue: 0,0:00:23.18,0:00:23.67,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Pick{\c&H00FFFFFF&} up your
+Dialogue: 0,0:00:23.68,0:00:24.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}phone{\c&H00FFFFFF&} or a
+Dialogue: 0,0:00:24.26,0:00:25.10,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}nearby{\c&H00FFFFFF&} mug
+Dialogue: 0,0:00:25.91,0:00:26.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Hold{\c&H00FFFFFF&} it
+Dialogue: 0,0:00:27.36,0:00:28.13,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Feel that {\c&H0000E5FF&}shift{\c&H00FFFFFF&}
+Dialogue: 0,0:00:28.14,0:00:28.71,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}in {\c&H0000E5FF&}value{\c&H00FFFFFF&}
+Dialogue: 0,0:00:29.52,0:00:30.44,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}That's{\c&H00FFFFFF&} the trap
+Dialogue: 0,0:00:31.46,0:00:32.46,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Subscribe{\c&H00FFFFFF&} for more
+Dialogue: 0,0:00:32.47,0:00:33.50,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}brain{\c&H00FFFFFF&} hacks and
+Dialogue: 0,0:00:33.51,0:00:34.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} GOT ME
+Dialogue: 0,0:00:34.25,0:00:34.71,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}if you {\c&H0000E5FF&}felt{\c&H00FFFFFF&}
+Dialogue: 0,0:00:34.73,0:00:35.76,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}that {\c&H0000E5FF&}ownership{\c&H00FFFFFF&} shift
+Dialogue: 0,0:00:35.95,0:00:36.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}which is {\c&H0000E5FF&}exactly{\c&H00FFFFFF&}
+Dialogue: 0,0:00:36.71,0:00:37.13,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}why
