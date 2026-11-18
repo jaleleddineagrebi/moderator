@@ -69,11 +69,11 @@
   "ended_at": null,
   "revision_rounds": 2,
   "cost": {
-    "total_usd": 0.033307,
+    "total_usd": 0.046761,
     "budget_usd": 1.0,
     "by_agent": {
       "trend_researcher": 0.003727,
-      "scriptwriter": 0.023263,
+      "scriptwriter": 0.036716,
       "packaging": 0.000932,
       "qa_reviewer": 0.005387
     }
@@ -361,10 +361,10 @@
         "research"
       ],
       "checkpoint": "B",
-      "status": "running",
-      "progress": 10,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-18T10:30:33+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-18T10:30:50+00:00",
       "attempt": 3,
       "retries": 0,
       "max_retries": 2,
@@ -460,6 +460,26 @@
           "ts": "2026-11-18T10:30:33+00:00",
           "level": "info",
           "msg": "Asking Gemini (gemini-3.8-flash, high complexity, thinking high)"
+        },
+        {
+          "ts": "2026-11-18T10:30:50+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3-flash-preview) answered in 17.4s (tokens in 2247, out 977, thinking 3133)"
+        },
+        {
+          "ts": "2026-11-18T10:30:50+00:00",
+          "level": "info",
+          "msg": "Estimated narration: en 39.3s"
+        },
+        {
+          "ts": "2026-11-18T10:30:50+00:00",
+          "level": "info",
+          "msg": "Finished, waiting for your approval"
+        },
+        {
+          "ts": "2026-11-18T10:30:50+00:00",
+          "level": "info",
+          "msg": "Approved by schedule (auto-approve)"
         }
       ],
       "errors": [],
@@ -475,7 +495,7 @@
           "comment": "QA found:\n[en] grammar review: The narration in scene_07 ends with a non-sequitur 'which is exactly why you...' that creates an incomplete and nonsensical sentence. Remove 'which is exactly why you...' so the sentence ends at 'secrets'."
         }
       ],
-      "cost_usd": 0.023263
+      "cost_usd": 0.036716
     },
     "visuals": {
       "title": "Source scene visuals",
@@ -484,11 +504,11 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "needs_revision",
-      "progress": 0,
-      "started_at": "2026-11-18T10:28:28+00:00",
-      "ended_at": "2026-11-18T10:29:10+00:00",
-      "attempt": 2,
+      "status": "running",
+      "progress": 29,
+      "started_at": "2026-11-18T10:30:50+00:00",
+      "ended_at": null,
+      "attempt": 3,
       "retries": 0,
       "max_retries": 2,
       "strategy": "stock_video",
@@ -615,6 +635,36 @@
           "ts": "2026-11-18T10:30:33+00:00",
           "level": "warning",
           "msg": "Sent back by qa: QA found:\n[all] people rule: scene_06: A woman is shown from the chest up, including her arm and hand, in the first and second frames.. Replace with footage without women (a face-only close-up is the only exception)."
+        },
+        {
+          "ts": "2026-11-18T10:30:50+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'stock_video'"
+        },
+        {
+          "ts": "2026-11-18T10:30:50+00:00",
+          "level": "info",
+          "msg": "Revision feedback: QA found:\n[all] people rule: scene_06: A woman is shown from the chest up, including her arm and hand, in the first and second frames.. Replace with footage without women (a face-only close-up is the only exception)."
+        },
+        {
+          "ts": "2026-11-18T10:30:50+00:00",
+          "level": "info",
+          "msg": "Visual diversity: excluding 299 footage sources used in recent Shorts"
+        },
+        {
+          "ts": "2026-11-18T10:30:50+00:00",
+          "level": "info",
+          "msg": "Replacing scene_06; keeping 1 unchanged scene(s)"
+        },
+        {
+          "ts": "2026-11-18T10:31:02+00:00",
+          "level": "info",
+          "msg": "scene_03: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-18T10:31:05+00:00",
+          "level": "info",
+          "msg": "scene_02: stock_video (pixabay)"
         }
       ],
       "errors": [],
@@ -634,11 +684,11 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "queued",
+      "status": "running",
       "progress": 0,
-      "started_at": "2026-11-18T10:28:28+00:00",
-      "ended_at": "2026-11-18T10:29:14+00:00",
-      "attempt": 3,
+      "started_at": "2026-11-18T10:30:50+00:00",
+      "ended_at": null,
+      "attempt": 4,
       "retries": 0,
       "max_retries": 2,
       "strategy": "primary_voice",
@@ -729,6 +779,16 @@
           "ts": "2026-11-18T10:30:33+00:00",
           "level": "info",
           "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-18T10:30:50+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'primary_voice'"
+        },
+        {
+          "ts": "2026-11-18T10:30:50+00:00",
+          "level": "info",
+          "msg": "Narrating en with en-US-AndrewMultilingualNeural"
         }
       ],
       "errors": [
@@ -1142,11 +1202,11 @@
       "type": "approve",
       "step": "script",
       "route_to": "script",
-      "status": "idle",
+      "status": "approved",
       "options": [],
       "choice": null,
       "comment": null,
-      "decided_at": "2026-11-18T10:28:28+00:00"
+      "decided_at": "2026-11-18T10:30:50+00:00"
     },
     "C": {
       "title": "Approve the final videos (never uploaded without your OK)",
@@ -1163,7 +1223,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-18T10:30:47+00:00",
+    "exported_at": "2026-11-18T10:31:06+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/44283457900"
   }

@@ -6,15 +6,14 @@
         "en": "Check your battery percentage right now."
       },
       "on_screen": {
-        "en": "CHECK YOUR BATTERY NOW"
+        "en": "CHECK YOUR BATTERY"
       },
       "visual": {
-        "description": "Macro close-up of a man's finger interacting with a glowing battery icon on a smartphone screen in a dark room.",
+        "description": "Macro close-up of a man's thumb tapping on a glowing smartphone screen battery indicator.",
         "search_terms": [
-          "smartphone battery indicator",
-          "finger touching screen",
-          "glowing mobile screen",
-          "hand holding phone"
+          "smartphone battery icon",
+          "thumb tapping screen",
+          "glowing mobile phone"
         ],
         "prefer": "video"
       },
@@ -25,15 +24,14 @@
         "en": "Most websites aren't just looking at cookies. They're quietly querying a hidden tool called the Battery Status API."
       },
       "on_screen": {
-        "en": "HIDDEN TRACKING API"
+        "en": "HIDDEN TRACKING TOOL"
       },
       "visual": {
-        "description": "Rapidly scrolling green lines of computer code on a high-tech monitor in a dark office.",
+        "description": "A dark server room with rows of machines and blinking blue led lights on networking equipment.",
         "search_terms": [
-          "programming code scrolling",
-          "hacker screen text",
-          "data stream monitor",
-          "binary code animation"
+          "server rack blinking",
+          "datacenter network cables",
+          "computer server room"
         ],
         "prefer": "video"
       },
@@ -41,18 +39,17 @@
     },
     {
       "vo": {
-        "en": "This reads your exact charge level and discharge rate down to eight decimal places, creating a unique digital signal."
+        "en": "This reads your exact charge level down to eight decimal places, creating a unique digital signature."
       },
       "on_screen": {
         "en": "8 DECIMAL PLACES"
       },
       "visual": {
-        "description": "A digital display showing rapidly changing decimal numbers and fluctuating bar graphs.",
+        "description": "Close up of an electronic digital display with rapidly changing green decimal numbers and gauges.",
         "search_terms": [
-          "digital readout numbers",
-          "data visualization display",
-          "electronic counter blinking",
-          "futuristic interface hud"
+          "digital readout counter",
+          "electronic display numbers",
+          "data visualization screen"
         ],
         "prefer": "video"
       },
@@ -60,18 +57,17 @@
     },
     {
       "vo": {
-        "en": "But here is the creepy part: going incognito or using a VPN will not stop this tracking."
+        "en": "But here is the creepy part: using a VPN or incognito mode will not stop this tracking."
       },
       "on_screen": {
-        "en": "VPN CAN'T STOP THIS"
+        "en": "VPN CAN'T STOP IT"
       },
       "visual": {
-        "description": "A man wearing a hoodie sitting in front of three glowing monitors, his face partially obscured by shadows.",
+        "description": "Silhouette of a man in a dark hoodie sitting in front of three glowing computer monitors in a dark room.",
         "search_terms": [
           "man at computer dark",
-          "cyber security expert",
-          "hooded man technology",
-          "surveillance room person"
+          "hacker silhouette typing",
+          "cyber security workspace"
         ],
         "prefer": "video"
       },
@@ -79,18 +75,17 @@
     },
     {
       "vo": {
-        "en": "Data brokers use these hyper-specific readings to help fingerprint your device across totally different browsers without your permission."
+        "en": "Data brokers use these readings to help fingerprint your device across different browsers without your permission."
       },
       "on_screen": {
         "en": "FINGERPRINT YOUR DEVICE"
       },
       "visual": {
-        "description": "Close up of blue network cables plugged into a blinking server rack in a massive data center.",
+        "description": "Fast-scrolling green binary code and matrix-style data streams on a black background.",
         "search_terms": [
-          "server room blinking lights",
-          "data center cables",
-          "network hardware fiber",
-          "computer server rack"
+          "green binary code",
+          "scrolling data screen",
+          "matrix code falling"
         ],
         "prefer": "video"
       },
@@ -101,15 +96,14 @@
         "en": "By matching these micro-patterns, they link your private browsing sessions directly back to your real identity."
       },
       "on_screen": {
-        "en": "REAL IDENTITY LINKED"
+        "en": "IDENTITY LINKED"
       },
       "visual": {
-        "description": "Abstract visualization of glowing dots connecting together to form a digital silhouette of a man.",
+        "description": "Abstract 3D network of glowing lines and dots connecting to form a global map or node system.",
         "search_terms": [
           "connecting dots network",
-          "digital identity abstract",
-          "particle connection lines",
-          "data link animation"
+          "abstract data mesh",
+          "global connection lines"
         ],
         "prefer": "video"
       },
@@ -117,7 +111,7 @@
     },
     {
       "vo": {
-        "en": "Comment your exact percentage below to find your digital twin and subscribe for more secrets, which is exactly why you..."
+        "en": "Comment your percentage below to find your digital twin and subscribe for more secrets, which is exactly why you"
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
@@ -125,10 +119,9 @@
       "visual": {
         "description": "Close up of a man's hands typing rapidly on a mechanical keyboard with colorful backlighting.",
         "search_terms": [
-          "hands typing fast",
-          "mechanical keyboard close-up",
-          "gamer typing backlit",
-          "keyboard typing motion"
+          "man typing keyboard",
+          "hands using laptop",
+          "mechanical keyboard typing"
         ],
         "prefer": "video"
       },
@@ -140,6 +133,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 41.5
+    "en": 39.3
   }
 }
