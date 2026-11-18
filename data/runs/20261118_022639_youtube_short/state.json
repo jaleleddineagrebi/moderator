@@ -69,12 +69,13 @@
   "ended_at": null,
   "revision_rounds": 0,
   "cost": {
-    "total_usd": 0.033189,
+    "total_usd": 0.034226,
     "budget_usd": 1.0,
     "by_agent": {
       "trend_researcher": 0.014929,
       "scriptwriter": 0.017798,
-      "packaging": 0.000462
+      "packaging": 0.000462,
+      "qa_reviewer": 0.001037
     }
   },
   "agents": {
@@ -812,11 +813,46 @@
           "ts": "2026-11-18T02:38:57+00:00",
           "level": "info",
           "msg": "Asking Gemini (gemini-3.8-flash, medium complexity, thinking low)"
+        },
+        {
+          "ts": "2026-11-18T02:39:13+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3-flash-preview) answered in 16.3s (tokens in 1221, out 142, thinking 0)"
+        },
+        {
+          "ts": "2026-11-18T02:39:18+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.8-flash, medium complexity, thinking low)"
+        },
+        {
+          "ts": "2026-11-18T02:39:18+00:00",
+          "level": "warning",
+          "msg": "'gemini-3-flash-preview' is out of daily quota; skipping it for the rest of this run"
+        },
+        {
+          "ts": "2026-11-18T02:39:18+00:00",
+          "level": "warning",
+          "msg": "Model 'gemini-3-flash-preview' returned 429; falling back to 'gemini-3.7-flash'"
+        },
+        {
+          "ts": "2026-11-18T02:39:18+00:00",
+          "level": "warning",
+          "msg": "'gemini-3.7-flash' is out of daily quota; skipping it for the rest of this run"
+        },
+        {
+          "ts": "2026-11-18T02:39:18+00:00",
+          "level": "warning",
+          "msg": "Model 'gemini-3.7-flash' returned 429; falling back to 'gemini-3.6-flash'"
+        },
+        {
+          "ts": "2026-11-18T02:39:21+00:00",
+          "level": "warning",
+          "msg": "'gemini-3.6-flash' returned 503; retrying once in 2s"
         }
       ],
       "errors": [],
       "feedback": [],
-      "cost_usd": 0.0
+      "cost_usd": 0.001037
     }
   },
   "checkpoints": {
@@ -873,7 +909,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-18T02:39:08+00:00",
+    "exported_at": "2026-11-18T02:39:25+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/44223238125"
   }
