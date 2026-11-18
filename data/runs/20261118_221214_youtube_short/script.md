@@ -1,20 +1,23 @@
 # The Touch Trap
-Estimated narration: en 34.9s
+Estimated narration: en 38.9s
 
-## scene_01 · A close-up shot of a man's hand reaching out to grab a premium leather wallet on a display shelf.
-EN  [STOP TOUCHING EVERYTHING]  Stop touching things in the store.
+## scene_01 · A close-up of a man's hand reaching out and grasping a luxury item on a high-end store shelf.
+EN  [STOP TOUCHING THINGS]  Stop touching things in the store.
 
-## scene_02 · A digital stopwatch counting up rapidly overlaying a man holding a high-end camera.
-EN  [THE 30-SECOND RULE]  Retailers know that if you hold an item for just thirty seconds, your brain flips a switch.
+## scene_02 · A man standing in an aisle, holding a sleek box and examining it closely with focused eyes.
+EN  [THE 30-SECOND GLITCH]  Retailers know that holding an item for thirty seconds flips a psychological switch in your head.
 
-## scene_03 · A man looking at a product in his hands with a look of deep satisfaction and personal connection.
-EN  [YOU ALREADY OWN IT]  Suddenly, you don't just want it. You feel like you already own it. This is the Endowment Effect.
+## scene_03 · A man looking at a new gadget in his hands with a very proud and satisfied expression.
+EN  [THE ENDOWMENT EFFECT]  Suddenly, you don't just want it. You feel like you already own it. This is the Endowment Effect.
 
-## scene_04 · Slow motion shot of a man reluctantly placing a box back onto a store shelf and pulling his hand away.
-EN  [IT HURTS TO LEAVE]  But here is the creepy part: putting it back actually triggers physical pain in your brain.
+## scene_04 · Close-up of a hand slowly and reluctantly letting go of a product and pulling away from a shelf.
+EN  [IT PHYSICALLY HURTS]  But here is the creepy part: putting it back actually triggers physical pain in your brain.
 
-## scene_05 · A man's hand lifting a ceramic coffee mug from a wooden desk in a cozy office setting.
-EN  [TRY IT NOW]  Try it now. Pick up your phone or a nearby mug. Hold it. Feel that shift in value? That's the trap.
+## scene_05 · An abstract 3D animation of neural pathways lighting up or a brain scan glowing with blue light.
+EN  [MENTAL PROPERTY LOSS]  Your subconscious treats the object like your own property. Leaving without it feels like a personal loss.
 
-## scene_06 · A close-up of a finger clicking the subscribe button on a screen followed by a man nodding at the camera.
-EN  [SUBSCRIBE 🔔]  Subscribe for more brain hacks—and comment GOT ME if you felt that ownership shift, which is exactly why
+## scene_06 · A first-person perspective of a hand lifting a smartphone or a ceramic mug from a desk.
+EN  [TEST IT NOW]  Test it right now. Pick up any object nearby. Hold it. That ownership shift is the trap.
+
+## scene_07 · A close-up of a mouse cursor clicking a red subscribe button on a screen followed by a man nodding.
+EN  [SUBSCRIBE 🔔]  Subscribe for tomorrow's brain test and comment GOT ME if you felt it, which is exactly why

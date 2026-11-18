@@ -6,14 +6,14 @@
         "en": "Stop touching things in the store."
       },
       "on_screen": {
-        "en": "STOP TOUCHING EVERYTHING"
+        "en": "STOP TOUCHING THINGS"
       },
       "visual": {
-        "description": "A close-up shot of a man's hand reaching out to grab a premium leather wallet on a display shelf.",
+        "description": "A close-up of a man's hand reaching out and grasping a luxury item on a high-end store shelf.",
         "search_terms": [
-          "man hand grabbing product",
-          "luxury store shelf",
-          "reaching for item"
+          "hand reaching product",
+          "luxury shop shelf",
+          "man grabbing item"
         ],
         "prefer": "video"
       },
@@ -21,17 +21,17 @@
     },
     {
       "vo": {
-        "en": "Retailers know that if you hold an item for just thirty seconds, your brain flips a switch."
+        "en": "Retailers know that holding an item for thirty seconds flips a psychological switch in your head."
       },
       "on_screen": {
-        "en": "THE 30-SECOND RULE"
+        "en": "THE 30-SECOND GLITCH"
       },
       "visual": {
-        "description": "A digital stopwatch counting up rapidly overlaying a man holding a high-end camera.",
+        "description": "A man standing in an aisle, holding a sleek box and examining it closely with focused eyes.",
         "search_terms": [
-          "digital timer counting",
-          "man holding camera",
-          "stopwatch overlay"
+          "man holding box",
+          "customer hands store",
+          "checking product price"
         ],
         "prefer": "video"
       },
@@ -42,14 +42,14 @@
         "en": "Suddenly, you don't just want it. You feel like you already own it. This is the Endowment Effect."
       },
       "on_screen": {
-        "en": "YOU ALREADY OWN IT"
+        "en": "THE ENDOWMENT EFFECT"
       },
       "visual": {
-        "description": "A man looking at a product in his hands with a look of deep satisfaction and personal connection.",
+        "description": "A man looking at a new gadget in his hands with a very proud and satisfied expression.",
         "search_terms": [
-          "man admiring object",
-          "holding item closely",
-          "satisfied buyer face"
+          "man looking happy",
+          "proud owner face",
+          "holding new gadget"
         ],
         "prefer": "video"
       },
@@ -60,14 +60,14 @@
         "en": "But here is the creepy part: putting it back actually triggers physical pain in your brain."
       },
       "on_screen": {
-        "en": "IT HURTS TO LEAVE"
+        "en": "IT PHYSICALLY HURTS"
       },
       "visual": {
-        "description": "Slow motion shot of a man reluctantly placing a box back onto a store shelf and pulling his hand away.",
+        "description": "Close-up of a hand slowly and reluctantly letting go of a product and pulling away from a shelf.",
         "search_terms": [
-          "placing item back",
-          "sad man store",
-          "hand leaving shelf"
+          "hand releasing object",
+          "putting back item",
+          "disappointed man face"
         ],
         "prefer": "video"
       },
@@ -75,17 +75,17 @@
     },
     {
       "vo": {
-        "en": "Try it now. Pick up your phone or a nearby mug. Hold it. Feel that shift in value? That's the trap."
+        "en": "Your subconscious treats the object like your own property. Leaving without it feels like a personal loss."
       },
       "on_screen": {
-        "en": "TRY IT NOW"
+        "en": "MENTAL PROPERTY LOSS"
       },
       "visual": {
-        "description": "A man's hand lifting a ceramic coffee mug from a wooden desk in a cozy office setting.",
+        "description": "An abstract 3D animation of neural pathways lighting up or a brain scan glowing with blue light.",
         "search_terms": [
-          "hand lifting mug",
-          "office desk items",
-          "picking up phone"
+          "brain neurons firing",
+          "abstract mental connection",
+          "digital pulse light"
         ],
         "prefer": "video"
       },
@@ -93,21 +93,39 @@
     },
     {
       "vo": {
-        "en": "Subscribe for more brain hacks—and comment GOT ME if you felt that ownership shift, which is exactly why"
+        "en": "Test it right now. Pick up any object nearby. Hold it. That ownership shift is the trap."
+      },
+      "on_screen": {
+        "en": "TEST IT NOW"
+      },
+      "visual": {
+        "description": "A first-person perspective of a hand lifting a smartphone or a ceramic mug from a desk.",
+        "search_terms": [
+          "hand holding phone",
+          "picking up mug",
+          "person holding object"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for tomorrow's brain test and comment GOT ME if you felt it, which is exactly why"
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "A close-up of a finger clicking the subscribe button on a screen followed by a man nodding at the camera.",
+        "description": "A close-up of a mouse cursor clicking a red subscribe button on a screen followed by a man nodding.",
         "search_terms": [
-          "clicking subscribe button",
-          "man nodding approval",
-          "social media interaction"
+          "subscribe button click",
+          "social media mouse",
+          "man nodding head"
         ],
         "prefer": "video"
       },
-      "id": "scene_06"
+      "id": "scene_07"
     }
   ],
   "idea_id": "the-touch-trap",
@@ -115,6 +133,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 34.9
+    "en": 38.9
   }
 }
