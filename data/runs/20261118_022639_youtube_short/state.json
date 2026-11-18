@@ -753,6 +753,7 @@
         }
       },
       "outputs": {
+        "voiceover_en": "voiceover_en.mp3",
         "timings_en": "timings_en.json"
       },
       "logs": [
@@ -1075,6 +1076,7 @@
         "strategy": "transitions"
       },
       "outputs": {
+        "video_en": "final_short_en.mp4",
         "captions_en": "captions_en.ass"
       },
       "logs": [
@@ -1146,10 +1148,10 @@
         "packaging"
       ],
       "checkpoint": "C",
-      "status": "running",
-      "progress": 60,
+      "status": "waiting_for_approval",
+      "progress": 100,
       "started_at": "2026-11-18T02:43:09+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-18T02:43:17+00:00",
       "attempt": 3,
       "retries": 0,
       "max_retries": 2,
@@ -1166,6 +1168,7 @@
       "outputs": {
         "report": "qa_report.md",
         "data": "qa_report.json",
+        "video_en": "final_short_en.mp4",
         "thumbnail_en": "thumbnail_en.png"
       },
       "logs": [
@@ -1303,6 +1306,26 @@
           "ts": "2026-11-18T02:43:12+00:00",
           "level": "info",
           "msg": "Gemini (gemini-3.5-flash-lite) answered in 1.5s (tokens in 1223, out 99, thinking 0)"
+        },
+        {
+          "ts": "2026-11-18T02:43:17+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3.8-flash) answered from CACHE (0 API tokens consumed, $0.00 cost)"
+        },
+        {
+          "ts": "2026-11-18T02:43:17+00:00",
+          "level": "warning",
+          "msg": "1 blocking issue(s); sending back to: script"
+        },
+        {
+          "ts": "2026-11-18T02:43:17+00:00",
+          "level": "info",
+          "msg": "Finished, waiting for your approval"
+        },
+        {
+          "ts": "2026-11-18T02:43:17+00:00",
+          "level": "warning",
+          "msg": "Revision limit (2 rounds) reached; passing the issues to you instead"
         }
       ],
       "errors": [],
@@ -1354,18 +1377,32 @@
       "type": "approve",
       "step": "qa",
       "route_to": "edit",
-      "status": "idle",
+      "status": "pending",
       "options": [],
       "choice": null,
       "comment": null,
       "decided_at": null
     }
   },
-  "notifications": [],
+  "notifications": [
+    {
+      "ts": "2026-11-18T02:43:17+00:00",
+      "level": "warning",
+      "msg": "Reviewer still had issues after 2 revision rounds. Check its report.",
+      "step": "qa"
+    },
+    {
+      "ts": "2026-11-18T02:43:17+00:00",
+      "level": "action",
+      "msg": "Approval needed: Approve the final videos (never uploaded without your OK)",
+      "step": "qa"
+    }
+  ],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-18T02:43:14+00:00",
+    "exported_at": "2026-11-18T02:43:29+00:00",
     "uploads": [],
-    "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/44223238125"
+    "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/44223238125",
+    "issue_url": "https://github.com/jaleleddineagrebi/moderator/issues/119"
   }
 }

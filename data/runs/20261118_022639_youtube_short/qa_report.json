@@ -1,12 +1,12 @@
 {
   "passed": false,
-  "revision_round": 1,
+  "revision_round": 2,
   "checks": [
     {
       "check": "length",
       "lang": "en",
       "ok": true,
-      "detail": "34.2s (must be under 60s; target 32-50s)",
+      "detail": "35.4s (must be under 60s; target 32-50s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -14,7 +14,7 @@
       "check": "target length",
       "lang": "en",
       "ok": true,
-      "detail": "34.2s",
+      "detail": "35.4s",
       "send_to": null,
       "severity": "minor"
     },
@@ -46,7 +46,7 @@
       "check": "loudness",
       "lang": "en",
       "ok": true,
-      "detail": "-14.1 LUFS, peak -1.4 dBFS (target -14 LUFS, peak <= -1)",
+      "detail": "-14.5 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -54,7 +54,7 @@
       "check": "hook timing",
       "lang": "en",
       "ok": true,
-      "detail": "scene_01 spoken in 2.4s (target <= 4s)",
+      "detail": "scene_01 spoken in 1.9s (target <= 4s)",
       "send_to": null,
       "severity": "minor"
     },
@@ -62,7 +62,7 @@
       "check": "caption sync",
       "lang": "en",
       "ok": true,
-      "detail": "90 words, 35 caption events",
+      "detail": "91 words, 34 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -94,7 +94,7 @@
       "check": "grammar review",
       "lang": "en",
       "ok": false,
-      "detail": "Scene 07 voiceover cuts off mid-sentence (\"Your eyes are lying, so you must\"). Complete the sentence with \"subscribe.\" or remove the trailing fragment.",
+      "detail": "Scene 07 voiceover ends abruptly and incoherently with 'which is why you must'. Fix: Remove 'which is why you must' so the sentence ends naturally at 'worked'.",
       "send_to": "script",
       "severity": "blocker"
     },
