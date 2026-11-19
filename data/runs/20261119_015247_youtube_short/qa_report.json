@@ -1,12 +1,12 @@
 {
-  "passed": false,
-  "revision_round": 0,
+  "passed": true,
+  "revision_round": 1,
   "checks": [
     {
       "check": "length",
       "lang": "en",
       "ok": true,
-      "detail": "42.0s (must be under 60s; target 32-50s)",
+      "detail": "43.3s (must be under 60s; target 32-50s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -14,7 +14,7 @@
       "check": "target length",
       "lang": "en",
       "ok": true,
-      "detail": "42.0s",
+      "detail": "43.3s",
       "send_to": null,
       "severity": "minor"
     },
@@ -46,7 +46,7 @@
       "check": "loudness",
       "lang": "en",
       "ok": true,
-      "detail": "-14.1 LUFS, peak -1.4 dBFS (target -14 LUFS, peak <= -1)",
+      "detail": "-14.3 LUFS, peak -1.4 dBFS (target -14 LUFS, peak <= -1)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -54,15 +54,23 @@
       "check": "hook timing",
       "lang": "en",
       "ok": true,
-      "detail": "scene_01 spoken in 3.2s (target <= 4s)",
+      "detail": "scene_01 spoken in 4.2s (target <= 4s)",
       "send_to": null,
+      "severity": "minor"
+    },
+    {
+      "check": "hook sharpness",
+      "lang": "en",
+      "ok": false,
+      "detail": "scene_01 is 4.2s (tighter <3.5s performs better)",
+      "send_to": "script",
       "severity": "minor"
     },
     {
       "check": "caption sync",
       "lang": "en",
       "ok": true,
-      "detail": "99 words, 38 caption events",
+      "detail": "102 words, 39 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -88,14 +96,6 @@
       "ok": true,
       "detail": "music: original work, no third-party rights; sfx: original work, no third-party rights; voice: synthetic voice; no third-party performance rights",
       "send_to": null,
-      "severity": "blocker"
-    },
-    {
-      "check": "accuracy review",
-      "lang": "en",
-      "ok": false,
-      "detail": "The narration in scene 01 asks the viewer to pick a color, but the reveal in scene 06 claims they were picturing a red triangle. A shape was never requested in the instructions. Change scene 01 vo to 'Pick a color and a shape.' and on_screen to 'PICK A COLOR & SHAPE' to make the trick logically consistent.",
-      "send_to": "script",
       "severity": "blocker"
     },
     {
