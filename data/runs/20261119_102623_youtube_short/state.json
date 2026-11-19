@@ -708,10 +708,10 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "running",
-      "progress": 80,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-19T10:33:39+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-19T10:34:39+00:00",
       "attempt": 3,
       "retries": 0,
       "max_retries": 2,
@@ -808,6 +808,11 @@
           "ts": "2026-11-19T10:34:36+00:00",
           "level": "info",
           "msg": "Generating an ambient music bed (no library tracks with license files found)"
+        },
+        {
+          "ts": "2026-11-19T10:34:39+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [],
@@ -991,11 +996,11 @@
         "audio"
       ],
       "checkpoint": null,
-      "status": "queued",
+      "status": "running",
       "progress": 0,
-      "started_at": "2026-11-19T10:31:41+00:00",
-      "ended_at": "2026-11-19T10:32:32+00:00",
-      "attempt": 2,
+      "started_at": "2026-11-19T10:34:39+00:00",
+      "ended_at": null,
+      "attempt": 3,
       "retries": 0,
       "max_retries": 2,
       "strategy": "transitions",
@@ -1063,6 +1068,16 @@
           "ts": "2026-11-19T10:33:18+00:00",
           "level": "info",
           "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-19T10:34:39+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'transitions'"
+        },
+        {
+          "ts": "2026-11-19T10:34:39+00:00",
+          "level": "info",
+          "msg": "Rendering en: 7 scenes, 39.2s, xfade transitions"
         }
       ],
       "errors": [],
@@ -1240,7 +1255,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-19T10:34:37+00:00",
+    "exported_at": "2026-11-19T10:34:57+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/44505555543"
   }

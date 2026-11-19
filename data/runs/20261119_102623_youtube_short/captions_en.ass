@@ -13,50 +13,54 @@ Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 Dialogue: 1,0:00:00.05,0:00:01.91,Headline,,0,0,0,,{\fad(150,150)}I READ YOUR MIND
-Dialogue: 1,0:00:02.01,0:00:10.07,Headline,,0,0,0,,{\fad(150,150)}ANSWER FAST!
-Dialogue: 1,0:00:10.17,0:00:15.68,Headline,,0,0,0,,{\fad(150,150)}PICK A NUMBER
-Dialogue: 1,0:00:15.78,0:00:20.81,Headline,,0,0,0,,{\fad(150,150)}MENTAL TRAP...
-Dialogue: 1,0:00:20.91,0:00:25.89,Headline,,0,0,0,,{\fad(150,150)}TOOL AND COLOR?
-Dialogue: 1,0:00:25.99,0:00:32.05,Headline,,0,0,0,,{\fad(150,150)}RED HAMMER!
-Dialogue: 1,0:00:32.15,0:00:37.26,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 1,0:00:02.01,0:00:09.54,Headline,,0,0,0,,{\fad(150,150)}ANSWER FAST!
+Dialogue: 1,0:00:09.64,0:00:15.46,Headline,,0,0,0,,{\fad(150,150)}PICK A NUMBER
+Dialogue: 1,0:00:15.56,0:00:21.57,Headline,,0,0,0,,{\fad(150,150)}MENTAL TRAP...
+Dialogue: 1,0:00:21.67,0:00:27.26,Headline,,0,0,0,,{\fad(150,150)}TOOL AND COLOR?
+Dialogue: 1,0:00:27.36,0:00:33.87,Headline,,0,0,0,,{\fad(150,150)}RED HAMMER!
+Dialogue: 1,0:00:33.97,0:00:39.11,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
 Dialogue: 0,0:00:00.09,0:00:00.32,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}I'm {\c&H0000E5FF&}going{\c&H00FFFFFF&} to
 Dialogue: 0,0:00:00.32,0:00:00.97,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}read{\c&H00FFFFFF&} your mind
-Dialogue: 0,0:00:02.06,0:00:02.69,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Do not {\c&H0000E5FF&}pause{\c&H00FFFFFF&}
-Dialogue: 0,0:00:02.69,0:00:03.26,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}this {\c&H0000E5FF&}video{\c&H00FFFFFF&}
-Dialogue: 0,0:00:03.65,0:00:04.45,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Answer{\c&H00FFFFFF&} fast
-Dialogue: 0,0:00:04.84,0:00:05.22,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}What is two
-Dialogue: 0,0:00:05.22,0:00:05.94,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}plus two
-Dialogue: 0,0:00:06.35,0:00:07.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Four{\c&H00FFFFFF&} plus four
-Dialogue: 0,0:00:07.39,0:00:08.06,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Eight{\c&H00FFFFFF&} plus eight
-Dialogue: 0,0:00:08.44,0:00:09.69,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Sixteen{\c&H00FFFFFF&} plus sixteen
-Dialogue: 0,0:00:10.21,0:00:11.31,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Now {\c&H0000E5FF&}quickly{\c&H00FFFFFF&} pick
-Dialogue: 0,0:00:11.32,0:00:11.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a number {\c&H0000E5FF&}between{\c&H00FFFFFF&}
-Dialogue: 0,0:00:11.88,0:00:12.79,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}twelve{\c&H00FFFFFF&} and five
-Dialogue: 0,0:00:13.18,0:00:13.90,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Don't {\c&H0000E5FF&}overthink{\c&H00FFFFFF&} it
-Dialogue: 0,0:00:14.12,0:00:14.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}just{\c&H00FFFFFF&} grab the
-Dialogue: 0,0:00:14.69,0:00:15.27,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}first{\c&H00FFFFFF&} one
-Dialogue: 0,0:00:15.83,0:00:16.23,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Wait
-Dialogue: 0,0:00:16.50,0:00:16.80,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}here{\c&H00FFFFFF&} is the
-Dialogue: 0,0:00:16.80,0:00:17.47,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}creepy{\c&H00FFFFFF&} part
-Dialogue: 0,0:00:17.85,0:00:18.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}brain{\c&H00FFFFFF&} is
-Dialogue: 0,0:00:18.70,0:00:19.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}already{\c&H00FFFFFF&} falling into
-Dialogue: 0,0:00:19.63,0:00:20.42,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}my {\c&H0000E5FF&}mental{\c&H00FFFFFF&} trap
-Dialogue: 0,0:00:20.95,0:00:21.35,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Quick
-Dialogue: 0,0:00:21.57,0:00:22.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Name a {\c&H0000E5FF&}common{\c&H00FFFFFF&}
-Dialogue: 0,0:00:22.12,0:00:22.77,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}tool{\c&H00FFFFFF&} and a
-Dialogue: 0,0:00:22.77,0:00:23.49,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}bright{\c&H00FFFFFF&} color
-Dialogue: 0,0:00:23.88,0:00:24.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Think{\c&H00FFFFFF&} of them
-Dialogue: 0,0:00:24.12,0:00:24.90,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}right{\c&H00FFFFFF&} now and
-Dialogue: 0,0:00:24.91,0:00:25.51,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}hold{\c&H00FFFFFF&} them
-Dialogue: 0,0:00:26.03,0:00:26.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You are {\c&H0000E5FF&}thinking{\c&H00FFFFFF&}
-Dialogue: 0,0:00:26.54,0:00:26.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}of a Red
-Dialogue: 0,0:00:26.91,0:00:27.31,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Hammer
-Dialogue: 0,0:00:27.67,0:00:28.45,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Most {\c&H0000E5FF&}people{\c&H00FFFFFF&} choose
-Dialogue: 0,0:00:28.46,0:00:29.75,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}exactly{\c&H00FFFFFF&} that due
-Dialogue: 0,0:00:29.76,0:00:30.89,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to a {\c&H0000E5FF&}psychological{\c&H00FFFFFF&}
-Dialogue: 0,0:00:30.96,0:00:31.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}heuristic
-Dialogue: 0,0:00:32.19,0:00:33.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Subscribe for {\c&H0000E5FF&}tomorrow's{\c&H00FFFFFF&}
-Dialogue: 0,0:00:33.13,0:00:34.30,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}brain{\c&H00FFFFFF&} test and
-Dialogue: 0,0:00:34.30,0:00:35.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} YES if
-Dialogue: 0,0:00:35.12,0:00:35.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}I got you
-Dialogue: 0,0:00:35.53,0:00:36.27,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}because{\c&H00FFFFFF&} I will
+Dialogue: 0,0:00:02.07,0:00:02.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Do not {\c&H0000E5FF&}blink{\c&H00FFFFFF&}
+Dialogue: 0,0:00:03.06,0:00:04.06,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Answer{\c&H00FFFFFF&} these fast
+Dialogue: 0,0:00:04.45,0:00:04.89,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}What is two
+Dialogue: 0,0:00:04.89,0:00:05.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}plus two
+Dialogue: 0,0:00:05.91,0:00:06.58,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Four{\c&H00FFFFFF&} plus four
+Dialogue: 0,0:00:06.96,0:00:07.62,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Eight{\c&H00FFFFFF&} plus eight
+Dialogue: 0,0:00:08.02,0:00:09.14,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Sixteen{\c&H00FFFFFF&} plus sixteen
+Dialogue: 0,0:00:09.68,0:00:10.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Now
+Dialogue: 0,0:00:10.40,0:00:10.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}quickly{\c&H00FFFFFF&} pick a
+Dialogue: 0,0:00:10.88,0:00:11.73,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}number {\c&H0000E5FF&}between{\c&H00FFFFFF&} twelve
+Dialogue: 0,0:00:11.75,0:00:12.28,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and {\c&H0000E5FF&}five{\c&H00FFFFFF&}
+Dialogue: 0,0:00:12.67,0:00:13.07,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Don't{\c&H00FFFFFF&} stop to
+Dialogue: 0,0:00:13.07,0:00:14.13,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}think{\c&H00FFFFFF&} just grab
+Dialogue: 0,0:00:14.14,0:00:14.62,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}first{\c&H00FFFFFF&} one
+Dialogue: 0,0:00:14.63,0:00:15.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you see
+Dialogue: 0,0:00:15.60,0:00:16.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Wait
+Dialogue: 0,0:00:16.28,0:00:16.64,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}here{\c&H00FFFFFF&} is the
+Dialogue: 0,0:00:16.64,0:00:17.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}creepy{\c&H00FFFFFF&} part
+Dialogue: 0,0:00:17.70,0:00:18.48,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}brain{\c&H00FFFFFF&} is
+Dialogue: 0,0:00:18.49,0:00:20.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}already falling {\c&H0000E5FF&}directly{\c&H00FFFFFF&}
+Dialogue: 0,0:00:20.14,0:00:20.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}into my {\c&H0000E5FF&}mental{\c&H00FFFFFF&}
+Dialogue: 0,0:00:20.72,0:00:21.17,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}trap
+Dialogue: 0,0:00:21.72,0:00:22.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Quick
+Dialogue: 0,0:00:22.36,0:00:22.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Name a {\c&H0000E5FF&}common{\c&H00FFFFFF&}
+Dialogue: 0,0:00:22.91,0:00:23.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}tool{\c&H00FFFFFF&} and a
+Dialogue: 0,0:00:23.63,0:00:24.38,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}bright{\c&H00FFFFFF&} color
+Dialogue: 0,0:00:24.76,0:00:25.27,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Name them {\c&H0000E5FF&}right{\c&H00FFFFFF&}
+Dialogue: 0,0:00:25.27,0:00:26.29,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}now and {\c&H0000E5FF&}hold{\c&H00FFFFFF&}
+Dialogue: 0,0:00:26.31,0:00:26.57,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}them{\c&H00FFFFFF&} in your
+Dialogue: 0,0:00:26.57,0:00:26.96,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}head
+Dialogue: 0,0:00:27.40,0:00:27.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You are {\c&H0000E5FF&}thinking{\c&H00FFFFFF&}
+Dialogue: 0,0:00:27.88,0:00:28.26,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}of a Red
+Dialogue: 0,0:00:28.26,0:00:28.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Hammer
+Dialogue: 0,0:00:29.07,0:00:29.81,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Most {\c&H0000E5FF&}people{\c&H00FFFFFF&} choose
+Dialogue: 0,0:00:29.81,0:00:30.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}exactly{\c&H00FFFFFF&} that due
+Dialogue: 0,0:00:30.89,0:00:31.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to a {\c&H0000E5FF&}predictable{\c&H00FFFFFF&}
+Dialogue: 0,0:00:31.88,0:00:33.51,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}psychological{\c&H00FFFFFF&} heuristic
+Dialogue: 0,0:00:34.01,0:00:34.97,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Subscribe for {\c&H0000E5FF&}tomorrow's{\c&H00FFFFFF&}
+Dialogue: 0,0:00:34.98,0:00:36.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}brain{\c&H00FFFFFF&} test and
+Dialogue: 0,0:00:36.12,0:00:36.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} YES if
+Dialogue: 0,0:00:36.88,0:00:37.27,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}I got you
+Dialogue: 0,0:00:37.27,0:00:37.86,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}because{\c&H00FFFFFF&} I know
+Dialogue: 0,0:00:37.86,0:00:38.26,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}I
