@@ -1,12 +1,12 @@
 {
   "passed": false,
-  "revision_round": 0,
+  "revision_round": 1,
   "checks": [
     {
       "check": "length",
       "lang": "en",
       "ok": true,
-      "detail": "36.8s (must be under 60s; target 32-50s)",
+      "detail": "37.3s (must be under 60s; target 32-50s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -14,7 +14,7 @@
       "check": "target length",
       "lang": "en",
       "ok": true,
-      "detail": "36.8s",
+      "detail": "37.3s",
       "send_to": null,
       "severity": "minor"
     },
@@ -46,7 +46,7 @@
       "check": "loudness",
       "lang": "en",
       "ok": true,
-      "detail": "-14.4 LUFS, peak -1.4 dBFS (target -14 LUFS, peak <= -1)",
+      "detail": "-14.5 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -62,7 +62,7 @@
       "check": "caption sync",
       "lang": "en",
       "ok": true,
-      "detail": "102 words, 41 caption events",
+      "detail": "108 words, 41 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -94,7 +94,7 @@
       "check": "grammar review",
       "lang": "en",
       "ok": false,
-      "detail": "In scene_07, the narration ends abruptly mid-sentence with 'This works because I will'. Remove the incomplete sentence from the end of the voiceover.",
+      "detail": "The VO in scene 07 ends with 'because I will', which is a sentence fragment and logically incomplete. Change to 'because I know I did.' or similar to complete the thought.",
       "send_to": "script",
       "severity": "blocker"
     },
