@@ -31,6 +31,11 @@ export const routes: Routes = [
     title: 'Admin Command Center | Mind Decoded'
   },
   {
+    path: 'gym',
+    loadComponent: () => import('./components/gym/gym.component').then((m) => m.GymComponent),
+    title: 'Gym Back Office | Mind Decoded'
+  },
+  {
     path: '**',
     redirectTo: ''
   }
