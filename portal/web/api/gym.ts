@@ -1,14 +1,16 @@
 // Gym back office API (members, sports, coaches, monthly fees and coach commissions).
-// Access = phone number on a list of at most MAX_PHONES people + a one-time code sent on WhatsApp (Twilio Verify).
+// Access = phone number on a list of at most MAX_PHONES people + the 6-digit code of an authenticator app (TOTP, RFC 6238).
+// Nothing is sent anywhere: each person scans a QR code once (Google Authenticator etc.).
 // After the code is accepted the server hands out a signed 12h session token; every other request must carry it.
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { createHmac, randomUUID, timingSafeEqual } from "crypto";
+import { createCipheriv, createDecipheriv, createHash, createHmac, randomBytes, randomUUID, timingSafeEqual } from "crypto";
 import { prisma } from "./_prisma";
 
 const MAX_PHONES = 4; // owner included
 const SESSION_HOURS = 12;
-// "whatsapp" (default) or "sms"; WhatsApp must be enabled on the Twilio Verify service.
-const OTP_CHANNEL = process.env["GYM_OTP_CHANNEL"] === "sms" ? "sms" : "whatsapp";
+const MAX_FAILS = 5; // wrong codes before a short lock
+const LOCK_MINUTES = 5;
+const ISSUER = "Gym Mind Decoded";
 
 /** Normalises a phone number to E.164. 8 digits are taken as Tunisian (+216). */
 function normalizePhone(v: unknown): string | null {
@@ -21,7 +23,6 @@ function normalizePhone(v: unknown): string | null {
 const ownerPhone = (): string | null => normalizePhone(process.env["GYM_OWNER_PHONE"]);
 
 async function isAllowed(phone: string): Promise<boolean> {
-  if (phone === ownerPhone()) return true;
   const rows: any[] = await prisma.$queryRawUnsafe(`SELECT "phone" FROM "GymPhone" WHERE "phone" = $1`, phone);
   return rows.length > 0;
 }
@@ -39,18 +40,66 @@ function makeToken(phone: string): { token: string; expiresAt: number } {
   return { token: `${payload}.${sign(payload)}`, expiresAt };
 }
 
-// ---------- one-time code via Twilio Verify ----------
-async function twilio(path: "Verifications" | "VerificationCheck", form: Record<string, string>): Promise<any> {
-  const sid = process.env["TWILIO_ACCOUNT_SID"], tok = process.env["TWILIO_AUTH_TOKEN"], svc = process.env["TWILIO_VERIFY_SID"];
-  if (!sid || !tok || !svc) throw new Error("Twilio is not configured");
-  const r = await fetch(`https://verify.twilio.com/v2/Services/${svc}/${path}`, {
-    method: "POST",
-    headers: { Authorization: "Basic " + Buffer.from(`${sid}:${tok}`).toString("base64"), "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(form).toString(),
-  });
-  const body: any = await r.json().catch(() => ({}));
-  if (!r.ok && r.status !== 404) console.warn("twilio verify error", r.status, body?.code);
-  return { ok: r.ok, body };
+// ---------- TOTP (RFC 6238: HMAC-SHA1, 6 digits, 30 s) ----------
+const B32 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567";
+function base32(buf: Buffer): string {
+  let bits = 0, value = 0, out = "";
+  for (const byte of buf) {
+    value = (value << 8) | byte; bits += 8;
+    while (bits >= 5) { out += B32[(value >>> (bits - 5)) & 31]; bits -= 5; }
+  }
+  if (bits > 0) out += B32[(value << (5 - bits)) & 31];
+  return out;
+}
+function unbase32(str: string): Buffer {
+  let bits = 0, value = 0; const out: number[] = [];
+  for (const ch of str) {
+    value = (value << 5) | B32.indexOf(ch); bits += 5;
+    if (bits >= 8) { out.push((value >>> (bits - 8)) & 255); bits -= 8; }
+  }
+  return Buffer.from(out);
+}
+function hotp(secret: string, counter: number): string {
+  const msg = Buffer.alloc(8);
+  msg.writeUInt32BE(Math.floor(counter / 2 ** 32), 0);
+  msg.writeUInt32BE(counter >>> 0, 4);
+  const h = createHmac("sha1", unbase32(secret)).update(msg).digest();
+  const o = h[h.length - 1] & 15;
+  const n = ((h[o] & 127) << 24) | (h[o + 1] << 16) | (h[o + 2] << 8) | h[o + 3];
+  return String(n % 1_000_000).padStart(6, "0");
+}
+/** Returns the matching 30 s step (so it can be used only once), or null. Accepts one step of clock drift. */
+function checkTotp(secret: string, code: string, now = Date.now()): number | null {
+  const step = Math.floor(now / 30_000);
+  for (const s of [step, step - 1, step + 1]) {
+    const expected = Buffer.from(hotp(secret, s));
+    const given = Buffer.from(code);
+    if (expected.length === given.length && timingSafeEqual(expected, given)) return s;
+  }
+  return null;
+}
+
+// secrets are encrypted at rest with a key derived from GYM_SESSION_SECRET
+const dataKey = () => createHash("sha256").update("gym-totp:" + secret()).digest();
+function seal(plain: string): string {
+  const iv = randomBytes(12);
+  const c = createCipheriv("aes-256-gcm", dataKey(), iv);
+  const enc = Buffer.concat([c.update(plain, "utf8"), c.final()]);
+  return [iv, c.getAuthTag(), enc].map((b) => b.toString("base64")).join(".");
+}
+function unseal(blob: string): string {
+  const [iv, tag, enc] = blob.split(".").map((x) => Buffer.from(x, "base64"));
+  const d = createDecipheriv("aes-256-gcm", dataKey(), iv);
+  d.setAuthTag(tag);
+  return Buffer.concat([d.update(enc), d.final()]).toString("utf8");
+}
+
+/** Creates (or replaces) the authenticator secret of a person and returns what to show ONCE for enrolment. */
+async function enroll(phone: string): Promise<{ secret: string; uri: string }> {
+  const sec = base32(randomBytes(20));
+  await prisma.$executeRawUnsafe(`UPDATE "GymPhone" SET "secret"=$2, "lastStep"=0, "fails"=0, "lockedUntil"=NULL WHERE "phone"=$1`, phone, seal(sec));
+  const uri = `otpauth://totp/${encodeURIComponent(ISSUER)}:${encodeURIComponent(phone)}?secret=${sec}&issuer=${encodeURIComponent(ISSUER)}&algorithm=SHA1&digits=6&period=30`;
+  return { secret: sec, uri };
 }
 
 let tablesReady: Promise<void> | null = null;
@@ -58,7 +107,7 @@ function ensureTables(): Promise<void> {
   if (!tablesReady) {
     tablesReady = (async () => {
       const stmts = [
-        `CREATE TABLE IF NOT EXISTS "GymPhone" ("phone" TEXT PRIMARY KEY, "name" TEXT, "addedBy" TEXT, "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP)`,
+        `CREATE TABLE IF NOT EXISTS "GymPhone" ("phone" TEXT PRIMARY KEY, "name" TEXT, "addedBy" TEXT, "secret" TEXT, "lastStep" INTEGER NOT NULL DEFAULT 0, "fails" INTEGER NOT NULL DEFAULT 0, "lockedUntil" TIMESTAMP(3), "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP)`,
         `CREATE TABLE IF NOT EXISTS "GymSport" ("id" TEXT PRIMARY KEY, "name" TEXT NOT NULL UNIQUE, "monthlyFee" DOUBLE PRECISION NOT NULL DEFAULT 0, "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP)`,
         `CREATE TABLE IF NOT EXISTS "GymCoach" ("id" TEXT PRIMARY KEY, "name" TEXT NOT NULL, "email" TEXT, "phone" TEXT, "commissionPct" DOUBLE PRECISION NOT NULL DEFAULT 0, "active" BOOLEAN NOT NULL DEFAULT TRUE, "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP)`,
         `CREATE TABLE IF NOT EXISTS "GymMember" ("id" TEXT PRIMARY KEY, "name" TEXT NOT NULL, "email" TEXT, "phone" TEXT, "sportId" TEXT REFERENCES "GymSport"("id") ON DELETE SET NULL, "coachId" TEXT REFERENCES "GymCoach"("id") ON DELETE SET NULL, "monthlyFee" DOUBLE PRECISION NOT NULL DEFAULT 0, "joinedAt" TEXT NOT NULL, "active" BOOLEAN NOT NULL DEFAULT TRUE, "notes" TEXT, "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP)`,
@@ -183,7 +232,7 @@ async function buildState(month: string) {
 }
 
 // ---------- actions ----------
-async function runAction(body: any, who: { phone: string; owner: boolean }): Promise<void> {
+async function runAction(body: any, who: { phone: string; owner: boolean }): Promise<{ enrollment: { secret: string; uri: string } } | void> {
   const id = typeof body.id === "string" && body.id ? body.id : null;
   switch (body.action) {
     case "sport_save": {
@@ -240,20 +289,27 @@ async function runAction(body: any, who: { phone: string; owner: boolean }): Pro
       if (!who.owner) throw new BadRequest("Seul le propriétaire peut gérer les accès");
       const phone = normalizePhone(body.phone);
       if (!phone) throw new BadRequest("Numéro invalide (exemple : +21620123456)");
-      if (phone === ownerPhone()) return;
-      // the cap is checked inside the INSERT so two concurrent requests cannot exceed it (owner takes one slot)
+      // the cap is checked inside the INSERT so two concurrent requests cannot exceed it
       const added = await prisma.$executeRawUnsafe(
-        `INSERT INTO "GymPhone" ("phone","name","addedBy") SELECT $1,$2,$3 WHERE (SELECT COUNT(*) FROM "GymPhone") + 1 < $4 ON CONFLICT DO NOTHING`,
+        `INSERT INTO "GymPhone" ("phone","name","addedBy") SELECT $1,$2,$3 WHERE (SELECT COUNT(*) FROM "GymPhone") < $4 ON CONFLICT DO NOTHING`,
         phone, str(body.name, 80), who.phone, MAX_PHONES);
       if (!added) {
         const exists: any[] = await prisma.$queryRawUnsafe(`SELECT 1 FROM "GymPhone" WHERE "phone"=$1`, phone);
-        if (!exists.length) throw new BadRequest(`Maximum ${MAX_PHONES} personnes (propriétaire inclus)`);
+        throw new BadRequest(exists.length ? "Ce numéro est déjà dans la liste" : `Maximum ${MAX_PHONES} personnes (propriétaire inclus)`);
       }
-      return;
+      return { enrollment: await enroll(phone) };
+    }
+    case "phone_reset": { // lost phone: new QR code, the old one stops working
+      if (!who.owner) throw new BadRequest("Seul le propriétaire peut gérer les accès");
+      const phone = normalizePhone(body.phone);
+      const exists: any[] = phone ? await prisma.$queryRawUnsafe(`SELECT 1 FROM "GymPhone" WHERE "phone"=$1`, phone) : [];
+      if (!phone || !exists.length) throw new BadRequest("Numéro inconnu");
+      return { enrollment: await enroll(phone) };
     }
     case "phone_remove": {
       if (!who.owner) throw new BadRequest("Seul le propriétaire peut gérer les accès");
       const phone = normalizePhone(body.phone);
+      if (phone === ownerPhone()) throw new BadRequest("Le propriétaire ne peut pas être retiré");
       if (phone) await prisma.$executeRawUnsafe(`DELETE FROM "GymPhone" WHERE "phone"=$1`, phone);
       return;
     }
@@ -262,29 +318,44 @@ async function runAction(body: any, who: { phone: string; owner: boolean }): Pro
   }
 }
 
-/** Public steps of the login: send the code / check the code. Never reveals whether a number is on the list. */
+const sameText = (a: string, b: string) => {
+  const x = Buffer.from(a), y = Buffer.from(b);
+  return x.length === y.length && timingSafeEqual(x, y);
+};
+
+/** One-time first setup of the owner: needs GYM_SETUP_KEY and only works while the owner has no authenticator yet. */
+async function ownerSetup(body: any, res: VercelResponse) {
+  const key = process.env["GYM_SETUP_KEY"] || "";
+  const owner = ownerPhone();
+  if (key.length < 16 || !owner || !sameText(String(body.setupKey || ""), key)) return res.status(403).json({ error: "Clé de configuration invalide" });
+  const rows: any[] = await prisma.$queryRawUnsafe(`SELECT "secret" FROM "GymPhone" WHERE "phone"=$1`, owner);
+  if (rows.length && rows[0].secret) return res.status(409).json({ error: "Déjà configuré" });
+  await prisma.$executeRawUnsafe(`INSERT INTO "GymPhone" ("phone","name","addedBy") VALUES ($1,'Propriétaire',$1) ON CONFLICT DO NOTHING`, owner);
+  return res.status(200).json({ ok: true, enrollment: await enroll(owner) });
+}
+
+/** Login = phone number + current authenticator code. Every failure looks the same. */
 async function login(body: any, res: VercelResponse) {
+  const bad = () => res.status(400).json({ error: "Numéro ou code invalide" });
   const phone = normalizePhone(body.phone);
-  if (!phone) return res.status(400).json({ error: "Numéro invalide (exemple : +21620123456)" });
-
-  if (body.action === "otp_send") {
-    if (await isAllowed(phone)) {
-      try {
-        await twilio("Verifications", { To: phone, Channel: OTP_CHANNEL });
-      } catch (e) {
-        console.error("otp_send failed:", e);
-        return res.status(503).json({ error: "L'envoi du code n'est pas configuré" });
-      }
-    }
-    return res.status(200).json({ ok: true, message: "Si ce numéro est autorisé, un code vient d'être envoyé sur WhatsApp." });
+  const code = String(body.code || "").replace(/\s/g, "");
+  if (!phone || !/^\d{6}$/.test(code)) return bad();
+  const rows: any[] = await prisma.$queryRawUnsafe(`SELECT * FROM "GymPhone" WHERE "phone"=$1`, phone);
+  const row = rows[0];
+  if (!row || !row.secret) return bad();
+  if (row.lockedUntil && new Date(row.lockedUntil).getTime() > Date.now()) {
+    return res.status(429).json({ error: `Trop d'essais, réessayez dans quelques minutes` });
   }
-
-  const code = String(body.code || "").trim();
-  if (!/^\d{4,10}$/.test(code)) return res.status(400).json({ error: "Code invalide" });
-  const bad = () => res.status(400).json({ error: "Code invalide ou expiré" });
-  if (!(await isAllowed(phone))) return bad();
-  const check = await twilio("VerificationCheck", { To: phone, Code: code });
-  if (check.body?.status !== "approved") return bad();
+  const step = checkTotp(unseal(row.secret), code);
+  if (step === null || step <= row.lastStep) { // wrong code, or the same code used twice
+    await prisma.$executeRawUnsafe(
+      `UPDATE "GymPhone" SET "fails" = "fails" + 1,
+         "lockedUntil" = CASE WHEN "fails" + 1 >= $2 THEN NOW() + ($3 || ' minutes')::interval ELSE "lockedUntil" END,
+         "fails" = CASE WHEN "fails" + 1 >= $2 THEN 0 ELSE "fails" + 1 END
+       WHERE "phone"=$1`, phone, MAX_FAILS, String(LOCK_MINUTES));
+    return bad();
+  }
+  await prisma.$executeRawUnsafe(`UPDATE "GymPhone" SET "lastStep"=$2, "fails"=0, "lockedUntil"=NULL WHERE "phone"=$1`, phone, step);
   return res.status(200).json({ ok: true, ...makeToken(phone) });
 }
 
@@ -292,9 +363,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   res.setHeader("Cache-Control", "no-store");
   try {
     await ensureTables();
-    if (req.method === "POST" && (req.body?.action === "otp_send" || req.body?.action === "otp_verify")) {
-      return await login(req.body, res);
-    }
+    if (req.method === "POST" && req.body?.action === "login") return await login(req.body, res);
+    if (req.method === "POST" && req.body?.action === "owner_setup") return await ownerSetup(req.body, res);
     const who = await authenticate(req);
     if (!who) return res.status(403).json({ error: "Accès refusé." });
 
@@ -303,8 +373,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       return res.status(200).json({ me: who.phone, canManage: who.owner, ...(await buildState(month)) });
     }
     if (req.method === "POST") {
-      await runAction(req.body || {}, who);
-      return res.status(200).json({ ok: true });
+      const result = await runAction(req.body || {}, who);
+      return res.status(200).json({ ok: true, ...(result || {}) });
     }
     return res.status(405).json({ error: "Méthode non autorisée" });
   } catch (e: any) {
