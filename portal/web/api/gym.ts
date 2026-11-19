@@ -1,31 +1,26 @@
 // Gym back office API (members, sports, coaches, monthly fees and coach commissions).
-// Access = phone number on a list of at most MAX_PHONES people + the 6-digit code of an authenticator app (TOTP, RFC 6238).
-// Nothing is sent anywhere: each person scans a QR code once (Google Authenticator etc.).
-// After the code is accepted the server hands out a signed 12h session token; every other request must carry it.
+// Access = one of at most MAX_ACCOUNTS user name + password accounts, defined in the GYM_ACCOUNTS env var as
+// "user:salt:scryptHash;user:salt:scryptHash" (create them with scripts/gym-accounts.mjs).
+// A successful login returns a signed 12h session token; every other request must carry it.
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { createCipheriv, createDecipheriv, createHash, createHmac, randomBytes, randomUUID, timingSafeEqual } from "crypto";
+import { createHmac, randomUUID, scryptSync, timingSafeEqual } from "crypto";
 import { prisma } from "./_prisma";
 
-const MAX_PHONES = 4; // owner included
+const MAX_ACCOUNTS = 4;
 const SESSION_HOURS = 12;
-const MAX_FAILS = 5; // wrong codes before a short lock
+const MAX_FAILS = 5; // wrong passwords before a short lock
 const LOCK_MINUTES = 5;
-const ISSUER = "Gym Mind Decoded";
 
-/** Normalises a phone number to E.164. 8 digits are taken as Tunisian (+216). */
-function normalizePhone(v: unknown): string | null {
-  let p = String(v ?? "").replace(/[\s.\-()]/g, "");
-  if (p.startsWith("00")) p = "+" + p.slice(2);
-  if (/^\d{8}$/.test(p)) p = "+216" + p;
-  return /^\+[1-9]\d{7,14}$/.test(p) ? p : null;
+type Account = { user: string; salt: string; hash: Buffer };
+function accounts(): Account[] {
+  return (process.env["GYM_ACCOUNTS"] || "")
+    .split(";").map((x) => x.trim()).filter(Boolean).slice(0, MAX_ACCOUNTS)
+    .map((x) => x.split(":"))
+    .filter((p) => p.length === 3 && /^[a-z0-9._-]{3,30}$/.test(p[0]) && /^[0-9a-f]+$/.test(p[1]) && /^[0-9a-f]{64}$/.test(p[2]))
+    .map(([user, salt, hash]) => ({ user, salt, hash: Buffer.from(hash, "hex") }));
 }
-
-const ownerPhone = (): string | null => normalizePhone(process.env["GYM_OWNER_PHONE"]);
-
-async function isAllowed(phone: string): Promise<boolean> {
-  const rows: any[] = await prisma.$queryRawUnsafe(`SELECT "phone" FROM "GymPhone" WHERE "phone" = $1`, phone);
-  return rows.length > 0;
-}
+const findAccount = (user: string) => accounts().find((a) => a.user === user) || null;
+const DUMMY_SALT = "00".repeat(16);
 
 // ---------- session token (stateless, HMAC-signed) ----------
 function secret(): string {
@@ -34,72 +29,10 @@ function secret(): string {
   return s;
 }
 const sign = (payload: string) => createHmac("sha256", secret()).update(payload).digest("base64url");
-function makeToken(phone: string): { token: string; expiresAt: number } {
+function makeToken(user: string): { token: string; expiresAt: number } {
   const expiresAt = Date.now() + SESSION_HOURS * 3600_000;
-  const payload = Buffer.from(JSON.stringify({ p: phone, e: expiresAt })).toString("base64url");
+  const payload = Buffer.from(JSON.stringify({ u: user, e: expiresAt })).toString("base64url");
   return { token: `${payload}.${sign(payload)}`, expiresAt };
-}
-
-// ---------- TOTP (RFC 6238: HMAC-SHA1, 6 digits, 30 s) ----------
-const B32 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567";
-function base32(buf: Buffer): string {
-  let bits = 0, value = 0, out = "";
-  for (const byte of buf) {
-    value = (value << 8) | byte; bits += 8;
-    while (bits >= 5) { out += B32[(value >>> (bits - 5)) & 31]; bits -= 5; }
-  }
-  if (bits > 0) out += B32[(value << (5 - bits)) & 31];
-  return out;
-}
-function unbase32(str: string): Buffer {
-  let bits = 0, value = 0; const out: number[] = [];
-  for (const ch of str) {
-    value = (value << 5) | B32.indexOf(ch); bits += 5;
-    if (bits >= 8) { out.push((value >>> (bits - 8)) & 255); bits -= 8; }
-  }
-  return Buffer.from(out);
-}
-function hotp(secret: string, counter: number): string {
-  const msg = Buffer.alloc(8);
-  msg.writeUInt32BE(Math.floor(counter / 2 ** 32), 0);
-  msg.writeUInt32BE(counter >>> 0, 4);
-  const h = createHmac("sha1", unbase32(secret)).update(msg).digest();
-  const o = h[h.length - 1] & 15;
-  const n = ((h[o] & 127) << 24) | (h[o + 1] << 16) | (h[o + 2] << 8) | h[o + 3];
-  return String(n % 1_000_000).padStart(6, "0");
-}
-/** Returns the matching 30 s step (so it can be used only once), or null. Accepts one step of clock drift. */
-function checkTotp(secret: string, code: string, now = Date.now()): number | null {
-  const step = Math.floor(now / 30_000);
-  for (const s of [step, step - 1, step + 1]) {
-    const expected = Buffer.from(hotp(secret, s));
-    const given = Buffer.from(code);
-    if (expected.length === given.length && timingSafeEqual(expected, given)) return s;
-  }
-  return null;
-}
-
-// secrets are encrypted at rest with a key derived from GYM_SESSION_SECRET
-const dataKey = () => createHash("sha256").update("gym-totp:" + secret()).digest();
-function seal(plain: string): string {
-  const iv = randomBytes(12);
-  const c = createCipheriv("aes-256-gcm", dataKey(), iv);
-  const enc = Buffer.concat([c.update(plain, "utf8"), c.final()]);
-  return [iv, c.getAuthTag(), enc].map((b) => b.toString("base64")).join(".");
-}
-function unseal(blob: string): string {
-  const [iv, tag, enc] = blob.split(".").map((x) => Buffer.from(x, "base64"));
-  const d = createDecipheriv("aes-256-gcm", dataKey(), iv);
-  d.setAuthTag(tag);
-  return Buffer.concat([d.update(enc), d.final()]).toString("utf8");
-}
-
-/** Creates (or replaces) the authenticator secret of a person and returns what to show ONCE for enrolment. */
-async function enroll(phone: string): Promise<{ secret: string; uri: string }> {
-  const sec = base32(randomBytes(20));
-  await prisma.$executeRawUnsafe(`UPDATE "GymPhone" SET "secret"=$2, "lastStep"=0, "fails"=0, "lockedUntil"=NULL WHERE "phone"=$1`, phone, seal(sec));
-  const uri = `otpauth://totp/${encodeURIComponent(ISSUER)}:${encodeURIComponent(phone)}?secret=${sec}&issuer=${encodeURIComponent(ISSUER)}&algorithm=SHA1&digits=6&period=30`;
-  return { secret: sec, uri };
 }
 
 let tablesReady: Promise<void> | null = null;
@@ -107,7 +40,7 @@ function ensureTables(): Promise<void> {
   if (!tablesReady) {
     tablesReady = (async () => {
       const stmts = [
-        `CREATE TABLE IF NOT EXISTS "GymPhone" ("phone" TEXT PRIMARY KEY, "name" TEXT, "addedBy" TEXT, "secret" TEXT, "lastStep" INTEGER NOT NULL DEFAULT 0, "fails" INTEGER NOT NULL DEFAULT 0, "lockedUntil" TIMESTAMP(3), "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP)`,
+        `CREATE TABLE IF NOT EXISTS "GymLogin" ("username" TEXT PRIMARY KEY, "fails" INTEGER NOT NULL DEFAULT 0, "lockedUntil" TIMESTAMP(3))`,
         `CREATE TABLE IF NOT EXISTS "GymSport" ("id" TEXT PRIMARY KEY, "name" TEXT NOT NULL UNIQUE, "monthlyFee" DOUBLE PRECISION NOT NULL DEFAULT 0, "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP)`,
         `CREATE TABLE IF NOT EXISTS "GymCoach" ("id" TEXT PRIMARY KEY, "name" TEXT NOT NULL, "email" TEXT, "phone" TEXT, "commissionPct" DOUBLE PRECISION NOT NULL DEFAULT 0, "active" BOOLEAN NOT NULL DEFAULT TRUE, "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP)`,
         `CREATE TABLE IF NOT EXISTS "GymMember" ("id" TEXT PRIMARY KEY, "name" TEXT NOT NULL, "email" TEXT, "phone" TEXT, "sportId" TEXT REFERENCES "GymSport"("id") ON DELETE SET NULL, "coachId" TEXT REFERENCES "GymCoach"("id") ON DELETE SET NULL, "monthlyFee" DOUBLE PRECISION NOT NULL DEFAULT 0, "joinedAt" TEXT NOT NULL, "active" BOOLEAN NOT NULL DEFAULT TRUE, "notes" TEXT, "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP)`,
@@ -123,8 +56,8 @@ function ensureTables(): Promise<void> {
   return tablesReady;
 }
 
-/** Returns the phone of the signed-in person (still on the list), or null. */
-async function authenticate(req: VercelRequest): Promise<{ phone: string; owner: boolean } | null> {
+/** Returns the signed-in user name (account must still exist), or null. */
+async function authenticate(req: VercelRequest): Promise<{ user: string } | null> {
   const header = String(req.headers["authorization"] || "");
   const token = header.startsWith("Bearer ") ? header.slice(7).trim() : "";
   const [payload, mac] = token.split(".");
@@ -134,9 +67,8 @@ async function authenticate(req: VercelRequest): Promise<{ phone: string; owner:
   if (expected.length !== given.length || !timingSafeEqual(expected, given)) return null;
   let data: any;
   try { data = JSON.parse(Buffer.from(payload, "base64url").toString("utf8")); } catch { return null; }
-  if (!data?.p || typeof data.e !== "number" || data.e < Date.now()) return null;
-  if (!(await isAllowed(data.p))) return null; // removed from the list = locked out immediately
-  return { phone: data.p, owner: data.p === ownerPhone() };
+  if (!data?.u || typeof data.e !== "number" || data.e < Date.now()) return null;
+  return findAccount(data.u) ? { user: data.u } : null; // account removed from GYM_ACCOUNTS = locked out
 }
 
 // ---------- validation helpers ----------
@@ -164,13 +96,12 @@ const currentPeriod = () => new Date().toISOString().slice(0, 7);
 
 // ---------- monthly calculation ----------
 async function buildState(month: string) {
-  const [sports, coaches, members, payments, payouts, phones] = (await Promise.all([
+  const [sports, coaches, members, payments, payouts] = (await Promise.all([
     prisma.$queryRawUnsafe(`SELECT * FROM "GymSport" ORDER BY "name"`),
     prisma.$queryRawUnsafe(`SELECT * FROM "GymCoach" ORDER BY "name"`),
     prisma.$queryRawUnsafe(`SELECT * FROM "GymMember" ORDER BY "name"`),
     prisma.$queryRawUnsafe(`SELECT * FROM "GymPayment" WHERE "period" = $1`, month),
     prisma.$queryRawUnsafe(`SELECT * FROM "GymCoachPayout" WHERE "period" = $1`, month),
-    prisma.$queryRawUnsafe(`SELECT "phone","name" FROM "GymPhone" ORDER BY "createdAt"`),
   ])) as any[][];
 
   const paidByMember = new Map<string, any>(payments.map((p) => [p.memberId, p]));
@@ -217,9 +148,6 @@ async function buildState(month: string) {
     sports,
     coaches,
     members: memberRows,
-    phones,
-    ownerPhone: ownerPhone(),
-    maxPhones: MAX_PHONES,
     report: {
       activeMembers: billed.length,
       due, collected, outstanding: round2(Math.max(0, due - collected)),
@@ -232,7 +160,7 @@ async function buildState(month: string) {
 }
 
 // ---------- actions ----------
-async function runAction(body: any, who: { phone: string; owner: boolean }): Promise<{ enrollment: { secret: string; uri: string } } | void> {
+async function runAction(body: any, who: { user: string }): Promise<void> {
   const id = typeof body.id === "string" && body.id ? body.id : null;
   switch (body.action) {
     case "sport_save": {
@@ -285,78 +213,38 @@ async function runAction(body: any, who: { phone: string; owner: boolean }): Pro
     case "payout_delete":
       await prisma.$executeRawUnsafe(`DELETE FROM "GymCoachPayout" WHERE "coachId"=$1 AND "period"=$2`, str(body.coachId, 64, true), period(body.period));
       return;
-    case "phone_add": {
-      if (!who.owner) throw new BadRequest("Seul le propriétaire peut gérer les accès");
-      const phone = normalizePhone(body.phone);
-      if (!phone) throw new BadRequest("Numéro invalide (exemple : +21620123456)");
-      // the cap is checked inside the INSERT so two concurrent requests cannot exceed it
-      const added = await prisma.$executeRawUnsafe(
-        `INSERT INTO "GymPhone" ("phone","name","addedBy") SELECT $1,$2,$3 WHERE (SELECT COUNT(*) FROM "GymPhone") < $4 ON CONFLICT DO NOTHING`,
-        phone, str(body.name, 80), who.phone, MAX_PHONES);
-      if (!added) {
-        const exists: any[] = await prisma.$queryRawUnsafe(`SELECT 1 FROM "GymPhone" WHERE "phone"=$1`, phone);
-        throw new BadRequest(exists.length ? "Ce numéro est déjà dans la liste" : `Maximum ${MAX_PHONES} personnes (propriétaire inclus)`);
-      }
-      return { enrollment: await enroll(phone) };
-    }
-    case "phone_reset": { // lost phone: new QR code, the old one stops working
-      if (!who.owner) throw new BadRequest("Seul le propriétaire peut gérer les accès");
-      const phone = normalizePhone(body.phone);
-      const exists: any[] = phone ? await prisma.$queryRawUnsafe(`SELECT 1 FROM "GymPhone" WHERE "phone"=$1`, phone) : [];
-      if (!phone || !exists.length) throw new BadRequest("Numéro inconnu");
-      return { enrollment: await enroll(phone) };
-    }
-    case "phone_remove": {
-      if (!who.owner) throw new BadRequest("Seul le propriétaire peut gérer les accès");
-      const phone = normalizePhone(body.phone);
-      if (phone === ownerPhone()) throw new BadRequest("Le propriétaire ne peut pas être retiré");
-      if (phone) await prisma.$executeRawUnsafe(`DELETE FROM "GymPhone" WHERE "phone"=$1`, phone);
-      return;
-    }
     default:
       throw new BadRequest("Action inconnue");
   }
 }
 
-const sameText = (a: string, b: string) => {
-  const x = Buffer.from(a), y = Buffer.from(b);
-  return x.length === y.length && timingSafeEqual(x, y);
-};
-
-/** One-time first setup of the owner: needs GYM_SETUP_KEY and only works while the owner has no authenticator yet. */
-async function ownerSetup(body: any, res: VercelResponse) {
-  const key = process.env["GYM_SETUP_KEY"] || "";
-  const owner = ownerPhone();
-  if (key.length < 16 || !owner || !sameText(String(body.setupKey || ""), key)) return res.status(403).json({ error: "Clé de configuration invalide" });
-  const rows: any[] = await prisma.$queryRawUnsafe(`SELECT "secret" FROM "GymPhone" WHERE "phone"=$1`, owner);
-  if (rows.length && rows[0].secret) return res.status(409).json({ error: "Déjà configuré" });
-  await prisma.$executeRawUnsafe(`INSERT INTO "GymPhone" ("phone","name","addedBy") VALUES ($1,'Propriétaire',$1) ON CONFLICT DO NOTHING`, owner);
-  return res.status(200).json({ ok: true, enrollment: await enroll(owner) });
-}
-
-/** Login = phone number + current authenticator code. Every failure looks the same. */
+/** Login = user name + password. Every failure looks the same, and repeated failures lock the account briefly. */
 async function login(body: any, res: VercelResponse) {
-  const bad = () => res.status(400).json({ error: "Numéro ou code invalide" });
-  const phone = normalizePhone(body.phone);
-  const code = String(body.code || "").replace(/\s/g, "");
-  if (!phone || !/^\d{6}$/.test(code)) return bad();
-  const rows: any[] = await prisma.$queryRawUnsafe(`SELECT * FROM "GymPhone" WHERE "phone"=$1`, phone);
-  const row = rows[0];
-  if (!row || !row.secret) return bad();
-  if (row.lockedUntil && new Date(row.lockedUntil).getTime() > Date.now()) {
-    return res.status(429).json({ error: `Trop d'essais, réessayez dans quelques minutes` });
+  const bad = () => res.status(400).json({ error: "Identifiant ou mot de passe incorrect" });
+  const user = String(body.username || "").trim().toLowerCase().slice(0, 40);
+  const pw = String(body.password || "").slice(0, 200);
+  if (!user || !pw) return bad();
+
+  const acc = findAccount(user);
+  // always run one scrypt so an unknown user takes as long as a known one
+  const candidate = scryptSync(pw, acc ? acc.salt : DUMMY_SALT, 32, { N: 16384 });
+  if (!acc) return bad();
+
+  const rows: any[] = await prisma.$queryRawUnsafe(`SELECT "lockedUntil" FROM "GymLogin" WHERE "username"=$1`, user);
+  if (rows[0]?.lockedUntil && new Date(rows[0].lockedUntil).getTime() > Date.now()) {
+    return res.status(429).json({ error: "Trop d'essais, réessayez dans quelques minutes" });
   }
-  const step = checkTotp(unseal(row.secret), code);
-  if (step === null || step <= row.lastStep) { // wrong code, or the same code used twice
+  if (!timingSafeEqual(candidate, acc.hash)) {
     await prisma.$executeRawUnsafe(
-      `UPDATE "GymPhone" SET "fails" = "fails" + 1,
-         "lockedUntil" = CASE WHEN "fails" + 1 >= $2 THEN NOW() + ($3 || ' minutes')::interval ELSE "lockedUntil" END,
-         "fails" = CASE WHEN "fails" + 1 >= $2 THEN 0 ELSE "fails" + 1 END
-       WHERE "phone"=$1`, phone, MAX_FAILS, String(LOCK_MINUTES));
+      `INSERT INTO "GymLogin" ("username","fails") VALUES ($1,1)
+       ON CONFLICT ("username") DO UPDATE SET
+         "lockedUntil" = CASE WHEN "GymLogin"."fails" + 1 >= $2 THEN NOW() + ($3 || ' minutes')::interval ELSE "GymLogin"."lockedUntil" END,
+         "fails" = CASE WHEN "GymLogin"."fails" + 1 >= $2 THEN 0 ELSE "GymLogin"."fails" + 1 END`,
+      user, MAX_FAILS, String(LOCK_MINUTES));
     return bad();
   }
-  await prisma.$executeRawUnsafe(`UPDATE "GymPhone" SET "lastStep"=$2, "fails"=0, "lockedUntil"=NULL WHERE "phone"=$1`, phone, step);
-  return res.status(200).json({ ok: true, ...makeToken(phone) });
+  await prisma.$executeRawUnsafe(`DELETE FROM "GymLogin" WHERE "username"=$1`, user);
+  return res.status(200).json({ ok: true, user, ...makeToken(user) });
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
@@ -364,17 +252,16 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
     await ensureTables();
     if (req.method === "POST" && req.body?.action === "login") return await login(req.body, res);
-    if (req.method === "POST" && req.body?.action === "owner_setup") return await ownerSetup(req.body, res);
     const who = await authenticate(req);
     if (!who) return res.status(403).json({ error: "Accès refusé." });
 
     if (req.method === "GET") {
       const month = period(String(req.query["month"] || currentPeriod()));
-      return res.status(200).json({ me: who.phone, canManage: who.owner, ...(await buildState(month)) });
+      return res.status(200).json({ me: who.user, ...(await buildState(month)) });
     }
     if (req.method === "POST") {
-      const result = await runAction(req.body || {}, who);
-      return res.status(200).json({ ok: true, ...(result || {}) });
+      await runAction(req.body || {}, who);
+      return res.status(200).json({ ok: true });
     }
     return res.status(405).json({ error: "Méthode non autorisée" });
   } catch (e: any) {

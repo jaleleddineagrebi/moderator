@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Meta } from '@angular/platform-browser';
 
-type Tab = 'month' | 'members' | 'coaches' | 'sports' | 'admins';
+type Tab = 'month' | 'members' | 'coaches' | 'sports';
 
 const STATUS_FR: Record<string, string> = { paid: 'payé', partial: 'partiel', unpaid: 'impayé', 'n/a': '-' };
 
@@ -16,31 +16,17 @@ const STATUS_FR: Record<string, string> = { paid: 'payé', partial: 'partiel', u
   <div class="gym container">
     <h1>Gestion de la salle</h1>
 
-    <!-- QR code shown once after the owner setup or after adding / resetting a person -->
-    <div class="enroll" *ngIf="enroll() as e">
-      <h2>Configurer Google Authenticator{{ e.phone ? ' pour ' + e.phone : '' }}</h2>
-      <p class="muted">Dans Google Authenticator : « + » puis « Scanner un code QR ». Ce code ne sera plus affiché ensuite.</p>
-      <img *ngIf="e.qr" [src]="e.qr" alt="Code QR Google Authenticator" width="220" height="220">
-      <p class="muted">Saisie manuelle : <code>{{ e.secret }}</code></p>
-      <button class="btn primary" (click)="enroll.set(null)">C'est fait</button>
-    </div>
-
-    <ng-container *ngIf="!token() && !enroll()">
-      <p class="muted">Espace réservé. Entrez votre numéro de téléphone autorisé et le code affiché dans Google Authenticator.</p>
-      <form class="login" *ngIf="!setupMode()" (ngSubmit)="login()">
-        <input type="tel" inputmode="tel" autocomplete="tel" placeholder="Téléphone (ex : 20 123 456 ou +216...)" [(ngModel)]="phone" name="ph" required>
-        <input type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="7" placeholder="Code à 6 chiffres" [(ngModel)]="code" name="cd" required>
+    <ng-container *ngIf="!token()">
+      <p class="muted">Espace réservé. Connectez-vous avec votre identifiant et votre mot de passe.</p>
+      <form class="login" (ngSubmit)="login()">
+        <input type="text" autocomplete="username" autocapitalize="none" placeholder="Identifiant" [(ngModel)]="username" name="us" required>
+        <input type="password" autocomplete="current-password" placeholder="Mot de passe" [(ngModel)]="password" name="pw" required>
         <button class="btn primary" type="submit" [disabled]="busy()">Se connecter</button>
       </form>
-      <form class="login" *ngIf="setupMode()" (ngSubmit)="ownerSetup()">
-        <input type="password" autocomplete="off" placeholder="Clé de configuration (GYM_SETUP_KEY)" [(ngModel)]="setupKey" name="sk" required>
-        <button class="btn primary" type="submit" [disabled]="busy()">Configurer le propriétaire</button>
-      </form>
-      <button class="btn sm ghost" (click)="setupMode.set(!setupMode()); error.set('')">{{ setupMode() ? 'Retour à la connexion' : 'Première configuration (propriétaire)' }}</button>
       <p class="err" *ngIf="error()">{{ error() }}</p>
     </ng-container>
 
-    <ng-container *ngIf="token() && s() && !enroll()">
+    <ng-container *ngIf="token() && s()">
       <ng-container *ngIf="s() as d">
       <div class="bar">
         <label>Mois <input type="month" [ngModel]="month()" (ngModelChange)="setMonth($event)"></label>
@@ -173,26 +159,6 @@ const STATUS_FR: Record<string, string> = { paid: 'payé', partial: 'partiel', u
         </table>
       </section>
 
-      <!-- ACCÈS -->
-      <section *ngIf="tab() === 'admins'">
-        <h2>Numéros autorisés ({{ d.phones.length }} / {{ d.maxPhones }})</h2>
-        <p class="muted">Seules ces personnes peuvent se connecter, avec le code de leur application Google Authenticator.</p>
-        <ul>
-          <li *ngFor="let p of d.phones">{{ p.phone }} <span class="muted" *ngIf="p.name">({{ p.name }})</span>
-            <span class="pill paid" *ngIf="p.phone === d.ownerPhone">propriétaire</span>
-            <ng-container *ngIf="d.canManage">
-              <button class="btn sm ghost" (click)="resetPhone(p.phone)">Nouveau QR</button>
-              <button class="btn sm danger" *ngIf="p.phone !== d.ownerPhone" (click)="post({action:'phone_remove', phone:p.phone})">Retirer</button>
-            </ng-container></li>
-        </ul>
-        <form class="grid" *ngIf="d.canManage && d.phones.length < d.maxPhones" (ngSubmit)="addPhone()">
-          <input placeholder="Nom (facultatif)" [(ngModel)]="newName" name="nm">
-          <input type="tel" placeholder="Téléphone du nouvel accès" [(ngModel)]="newPhone" name="np" required>
-          <span><button class="btn primary" type="submit">Ajouter et afficher le QR</button></span>
-        </form>
-        <p class="muted" *ngIf="d.canManage && d.phones.length >= d.maxPhones">Limite de {{ d.maxPhones }} personnes atteinte : retirez un numéro pour en ajouter un autre.</p>
-        <p class="muted">« Nouveau QR » sert si quelqu'un perd son téléphone : l'ancien code cesse de fonctionner.</p>
-      </section>
       </ng-container>
     </ng-container>
   </div>
@@ -203,8 +169,6 @@ const STATUS_FR: Record<string, string> = { paid: 'payé', partial: 'partiel', u
     .muted { color: #64748b; font-size: .9rem; } .err { color: #b91c1c; }
     .login { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; max-width: 560px; margin: 12px 0; }
     .login input { flex: 1; min-width: 220px; }
-    .enroll { background: #f1f5f9; border-radius: 12px; padding: 16px; max-width: 420px; }
-    code { word-break: break-all; }
     .bar { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; margin-bottom: 8px; }
     .tabs { display: flex; gap: 4px; flex-wrap: wrap; border-bottom: 1px solid #cbd5e1; margin: 12px 0; }
     .tabs button { background: none; border: 0; padding: 10px 14px; cursor: pointer; font: inherit; border-bottom: 3px solid transparent; }
@@ -231,20 +195,15 @@ export class GymComponent implements OnInit {
   private readonly http = inject(HttpClient);
   private readonly meta = inject(Meta);
 
-  readonly tabs: [Tab, string][] = [['month', 'Mensuel'], ['members', 'Membres'], ['coaches', 'Coachs'], ['sports', 'Sports'], ['admins', 'Admins']];
+  readonly tabs: [Tab, string][] = [['month', 'Mensuel'], ['members', 'Membres'], ['coaches', 'Coachs'], ['sports', 'Sports']];
   readonly tab = signal<Tab>('month');
   readonly token = signal<string>('');
   readonly error = signal<string>('');
   readonly s = signal<any>(null);
   readonly month = signal<string>(new Date().toISOString().slice(0, 7));
-  readonly setupMode = signal(false);
   readonly busy = signal(false);
-  readonly enroll = signal<{ phone: string; secret: string; qr: string } | null>(null);
-  phone = '';
-  code = '';
-  setupKey = '';
-  newPhone = '';
-  newName = '';
+  username = '';
+  password = '';
 
   mForm: any = this.blankMember();
   cForm: any = { id: null, name: '', email: '', phone: '', commissionPct: 0, active: true };
@@ -264,36 +223,20 @@ export class GymComponent implements OnInit {
     } catch { /* storage unavailable */ }
   }
 
-  // ---------- connexion : numéro autorisé + code Google Authenticator ----------
+  // ---------- connexion : identifiant + mot de passe ----------
   login(): void {
     this.error.set(''); this.busy.set(true);
-    this.http.post<any>('/api/gym', { action: 'login', phone: this.phone, code: this.code }).subscribe({
+    this.http.post<any>('/api/gym', { action: 'login', username: this.username, password: this.password }).subscribe({
       next: (r) => {
         this.busy.set(false);
         this.token.set(r.token);
         this.tokenExpiry = r.expiresAt;
         try { sessionStorage.setItem('gym_session', JSON.stringify({ token: r.token, expiresAt: r.expiresAt })); } catch { /* ignore */ }
-        this.code = '';
+        this.password = '';
         this.load();
       },
-      error: (e) => { this.busy.set(false); this.code = ''; this.error.set(e?.error?.error || 'Connexion impossible'); },
+      error: (e) => { this.busy.set(false); this.password = ''; this.error.set(e?.error?.error || 'Connexion impossible'); },
     });
-  }
-
-  ownerSetup(): void {
-    this.error.set(''); this.busy.set(true);
-    this.http.post<any>('/api/gym', { action: 'owner_setup', setupKey: this.setupKey }).subscribe({
-      next: (r) => { this.busy.set(false); this.setupKey = ''; this.setupMode.set(false); this.showEnrollment(r.enrollment); },
-      error: (e) => { this.busy.set(false); this.error.set(e?.error?.error || 'Configuration impossible'); },
-    });
-  }
-
-  /** Draws the QR code in the browser: the secret never goes to a third-party service. */
-  private async showEnrollment(en: { secret: string; uri: string }): Promise<void> {
-    const phone = decodeURIComponent(en.uri.split('/totp/')[1]?.split('?')[0]?.split(':')[1] || '');
-    const mod: any = await import('qrcode');
-    const qr: string = await (mod.toDataURL || mod.default.toDataURL)(en.uri, { width: 220, margin: 1 });
-    this.enroll.set({ phone, secret: en.secret.match(/.{1,4}/g)?.join(' ') || en.secret, qr });
   }
 
   logout(): void {
@@ -321,8 +264,8 @@ export class GymComponent implements OnInit {
   }
 
   post(body: any, then?: () => void): void {
-    this.http.post<any>('/api/gym', body, { headers: this.headers() }).subscribe({
-      next: (r) => { then?.(); if (r?.enrollment) this.showEnrollment(r.enrollment); this.load(); },
+    this.http.post('/api/gym', body, { headers: this.headers() }).subscribe({
+      next: () => { then?.(); this.load(); },
       error: (e) => this.fail(e),
     });
   }
@@ -374,10 +317,4 @@ export class GymComponent implements OnInit {
   editSport(sp: any): void { this.spForm = { ...sp }; }
   resetSport(): void { this.spForm = { id: null, name: '', monthlyFee: 0 }; }
   saveSport(): void { this.post({ action: 'sport_save', ...this.spForm }, () => this.resetSport()); }
-
-  // ---------- accès ----------
-  addPhone(): void { this.post({ action: 'phone_add', phone: this.newPhone, name: this.newName }, () => { this.newPhone = ''; this.newName = ''; }); }
-  resetPhone(phone: string): void {
-    if (confirm(`Générer un nouveau QR pour ${phone} ? L'ancien code cessera de fonctionner.`)) this.post({ action: 'phone_reset', phone });
-  }
 }
