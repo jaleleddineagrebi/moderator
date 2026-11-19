@@ -1,0 +1,138 @@
+{
+  "title": "The Impossible Number 6 Glitch",
+  "scenes": [
+    {
+      "vo": {
+        "en": "You will fail this simple test."
+      },
+      "on_screen": {
+        "en": "YOU WILL FAIL"
+      },
+      "visual": {
+        "description": "Macro close-up of a high-speed vintage stopwatch rapidly ticking under dramatic dark studio lighting.",
+        "search_terms": [
+          "stopwatch ticking macro",
+          "digital timer counting",
+          "dark clock studio"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Lift your right foot off the ground and spin it in a clockwise circle."
+      },
+      "on_screen": {
+        "en": "SPIN FOOT CLOCKWISE"
+      },
+      "visual": {
+        "description": "Low-angle tracking shot of a man's sneaker suspended in the air, tracing an even clockwise circle.",
+        "search_terms": [
+          "sneaker foot rotating",
+          "man shoe circling",
+          "athletic shoe ground"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Keep that circle going. Now, use your right index finger to draw the number six in the air."
+      },
+      "on_screen": {
+        "en": "DRAW NUMBER SIX"
+      },
+      "visual": {
+        "description": "First-person perspective of a man's hand tracing the numeral six in mid-air against a moody black backdrop.",
+        "search_terms": [
+          "finger pointing drawing",
+          "man hand gesture",
+          "drawing in air"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "Here is the creepy part. Look down at your spinning foot right now."
+      },
+      "on_screen": {
+        "en": "LOOK AT YOUR FOOT"
+      },
+      "visual": {
+        "description": "A rapid first-person point-of-view camera plunge looking straight down toward feet on hardwood flooring.",
+        "search_terms": [
+          "point of view floor",
+          "feet looking down",
+          "man sneakers motion"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Your foot instantly switched directions and started spinning counter-clockwise, completely overriding your control."
+      },
+      "on_screen": {
+        "en": "SUB-CONSCIOUS OVERRIDE"
+      },
+      "visual": {
+        "description": "Close-up of a sneaker suddenly jerking and snapping into an involuntary reverse spin.",
+        "search_terms": [
+          "foot switching direction",
+          "sneakers sudden turn",
+          "foot stepping abruptly"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "Your left motor cortex cannot calculate opposing circular movements on the same side of your body."
+      },
+      "on_screen": {
+        "en": "MOTOR CORTEX GLITCH"
+      },
+      "visual": {
+        "description": "Macro shot of complex mechanical brass clockwork gears jamming and stuttering under bright cyber lighting.",
+        "search_terms": [
+          "clockwork gears moving",
+          "mechanical cogs rotating",
+          "vintage mechanism gears"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for tomorrow's brain hack, and comment if your foot glitched, which is why..."
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "A man's thumb firmly tapping a glowing neon subscribe button on a modern smartphone display.",
+        "search_terms": [
+          "hand tapping phone",
+          "smartphone glowing screen",
+          "neon notification icon"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "number-6-foot-glitch",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 34.2
+  }
+}
