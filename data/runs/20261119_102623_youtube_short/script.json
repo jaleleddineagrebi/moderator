@@ -11,9 +11,9 @@
       "visual": {
         "description": "A close-up shot of a man's eyes staring intensely into the lens in a dimly lit room.",
         "search_terms": [
-          "man staring intensely",
-          "close up eyes",
-          "mysterious man shadow"
+          "close up eyes man",
+          "intense gaze male",
+          "mysterious shadow man"
         ],
         "prefer": "video"
       },
@@ -21,17 +21,17 @@
     },
     {
       "vo": {
-        "en": "Do not pause this video. Answer fast. What is two plus two? Four plus four? Eight plus eight? Sixteen plus sixteen?"
+        "en": "Do not blink. Answer these fast. What is two plus two? Four plus four? Eight plus eight? Sixteen plus sixteen?"
       },
       "on_screen": {
         "en": "ANSWER FAST!"
       },
       "visual": {
-        "description": "A rapid sequence of a person's fingers furiously typing on a vintage calculator.",
+        "description": "Rapid sequence of mechanical digits flipping and fingers typing fast on a vintage keypad.",
         "search_terms": [
-          "fingers typing calculator",
-          "vintage keypad fast",
-          "mechanical counting"
+          "vintage calculator buttons",
+          "mechanical digits flipping",
+          "fast typing hands"
         ],
         "prefer": "video"
       },
@@ -39,17 +39,17 @@
     },
     {
       "vo": {
-        "en": "Now, quickly pick a number between twelve and five. Don't overthink it, just grab the first one."
+        "en": "Now, quickly pick a number between twelve and five. Don't stop to think, just grab the first one you see."
       },
       "on_screen": {
         "en": "PICK A NUMBER"
       },
       "visual": {
-        "description": "A hand pointing directly at the camera as if making a selection in mid-air.",
+        "description": "A man's hand pointing at invisible floating numbers in a high-tech interface style.",
         "search_terms": [
-          "hand pointing camera",
-          "finger selection air",
-          "choosing direction man"
+          "hand selecting option",
+          "finger pointing forward",
+          "man choosing path"
         ],
         "prefer": "video"
       },
@@ -57,17 +57,17 @@
     },
     {
       "vo": {
-        "en": "Wait, here is the creepy part. Your brain is already falling into my mental trap."
+        "en": "Wait, here is the creepy part. Your brain is already falling directly into my mental trap."
       },
       "on_screen": {
         "en": "MENTAL TRAP..."
       },
       "visual": {
-        "description": "Abstract digital glitch effects and distorted colors flashing across the screen.",
+        "description": "A stylized 3D model of a human brain with blue electrical pulses firing between neurons.",
         "search_terms": [
-          "digital glitch distortion",
-          "blue static motion",
-          "abstract energy waves"
+          "brain neural activity",
+          "blue electrical pulses",
+          "human brain model"
         ],
         "prefer": "video"
       },
@@ -75,17 +75,17 @@
     },
     {
       "vo": {
-        "en": "Quick! Name a common tool and a bright color. Think of them right now and hold them."
+        "en": "Quick! Name a common tool and a bright color. Name them right now and hold them in your head."
       },
       "on_screen": {
         "en": "TOOL AND COLOR?"
       },
       "visual": {
-        "description": "Close up of vibrant red paint being stirred into a pot with a wooden stick.",
+        "description": "Vibrant red liquid paint being swirled together in a studio setting.",
         "search_terms": [
-          "mixing red paint",
-          "painter studio colors",
-          "artistic palette motion"
+          "liquid red paint",
+          "mixing oil colors",
+          "paintbrush strokes canvas"
         ],
         "prefer": "video"
       },
@@ -93,17 +93,17 @@
     },
     {
       "vo": {
-        "en": "You are thinking of a Red Hammer. Most people choose exactly that due to a psychological heuristic."
+        "en": "You are thinking of a Red Hammer. Most people choose exactly that due to a predictable psychological heuristic."
       },
       "on_screen": {
         "en": "RED HAMMER!"
       },
       "visual": {
-        "description": "A crisp shot of a heavy hammer with a bright red handle resting on a wooden table.",
+        "description": "A cinematic shot of a heavy steel hammer resting on a rustic wooden workbench.",
         "search_terms": [
-          "red hammer tool",
-          "workshop bench hammer",
-          "carpentry tools motion"
+          "heavy steel hammer",
+          "wooden workshop bench",
+          "toolbox equipment motion"
         ],
         "prefer": "video"
       },
@@ -111,7 +111,7 @@
     },
     {
       "vo": {
-        "en": "Subscribe for tomorrow's brain test and comment YES if I got you, because I will"
+        "en": "Subscribe for tomorrow's brain test and comment YES if I got you, because I know I"
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
@@ -119,9 +119,9 @@
       "visual": {
         "description": "A man nodding confidently at the camera and tapping his temple with his index finger.",
         "search_terms": [
-          "man nodding smiling",
-          "finger tapping temple",
-          "confident man gesture"
+          "man nodding camera",
+          "finger tap temple",
+          "confident smile male"
         ],
         "prefer": "video"
       },
@@ -133,6 +133,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 39.3
+    "en": 41.8
   }
 }
