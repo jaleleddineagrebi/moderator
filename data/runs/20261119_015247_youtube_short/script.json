@@ -1,0 +1,138 @@
+{
+  "title": "The Interactive Color Mind-Reading Test",
+  "scenes": [
+    {
+      "vo": {
+        "en": "Look at me. Pick a color."
+      },
+      "on_screen": {
+        "en": "PICK A COLOR"
+      },
+      "visual": {
+        "description": "Extreme close-up of a man's intense eye staring directly into the lens with a flickering light effect.",
+        "search_terms": [
+          "man staring intensity",
+          "close-up male eye",
+          "macro pupil"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Don't overthink it. Just grab the first one that pops into your head."
+      },
+      "on_screen": {
+        "en": "FIRST CHOICE ONLY"
+      },
+      "visual": {
+        "description": "Fast-paced montage of a man's hands shuffling a deck of cards with high speed and motion blur.",
+        "search_terms": [
+          "hands moving fast",
+          "shuffling cards",
+          "blurred motion hands"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Now, double the intensity of that color in your mind. Imagine it filling the entire room you’re sitting in."
+      },
+      "on_screen": {
+        "en": "MAKE IT BRIGHTER"
+      },
+      "visual": {
+        "description": "Slow motion shot of vibrant red ink dropping into clear water and spreading aggressively.",
+        "search_terms": [
+          "red ink water",
+          "color explosion slow",
+          "paint mixing"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "Wait, I can see you trying to change your mind. Stay focused. Don't switch it now."
+      },
+      "on_screen": {
+        "en": "STAY FOCUSED"
+      },
+      "visual": {
+        "description": "A serious man in a suit points directly at the camera with a stern, knowing expression.",
+        "search_terms": [
+          "serious male face",
+          "man warning gesture",
+          "stop sign hand"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Most people try to be unique, but your brain follows predictable neural shortcuts I've secretly triggered."
+      },
+      "on_screen": {
+        "en": "BRAIN HACKED"
+      },
+      "visual": {
+        "description": "High-tech motion graphics showing glowing blue neural pathways or digital circuit connections moving rapidly.",
+        "search_terms": [
+          "digital brain neurons",
+          "circuit board glowing",
+          "data flow motion"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "Right now, you are picturing a bright Red Triangle. Did I just catch you?"
+      },
+      "on_screen": {
+        "en": "RED TRIANGLE?"
+      },
+      "visual": {
+        "description": "A glowing red neon triangle pulsing against a pitch-black background.",
+        "search_terms": [
+          "red neon triangle",
+          "geometric shape glowing",
+          "abstract red light"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for tomorrow’s brain test and comment YES if this worked. You can't help but..."
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "Close up of a man's hands rapidly typing on a smartphone screen in a dark environment.",
+        "search_terms": [
+          "typing on smartphone",
+          "hand tapping screen",
+          "mobile notification"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "color-mind-control-test",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 36.0
+  }
+}
