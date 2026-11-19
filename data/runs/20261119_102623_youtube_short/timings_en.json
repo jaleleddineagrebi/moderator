@@ -1,6 +1,6 @@
 {
   "voice": "en-US-AndrewMultilingualNeural",
-  "duration": 36.612086,
+  "duration": 38.460091,
   "scenes": [
     {
       "scene": "scene_01",
@@ -42,552 +42,587 @@
     {
       "scene": "scene_02",
       "start": 1.962,
-      "end": 10.026,
+      "end": 9.498,
       "words": [
         {
-          "start": 2.056,
-          "end": 2.127,
+          "start": 2.068,
+          "end": 2.139,
           "text": "Do"
         },
         {
           "start": 2.139,
-          "end": 2.328,
+          "end": 2.339,
           "text": "not"
         },
         {
-          "start": 2.328,
-          "end": 2.693,
-          "text": "pause"
+          "start": 2.339,
+          "end": 2.681,
+          "text": "blink"
         },
         {
-          "start": 2.693,
-          "end": 2.823,
-          "text": "this"
-        },
-        {
-          "start": 2.835,
-          "end": 3.259,
-          "text": "video"
-        },
-        {
-          "start": 3.648,
-          "end": 3.92,
+          "start": 3.059,
+          "end": 3.318,
           "text": "Answer"
         },
         {
-          "start": 3.92,
-          "end": 4.45,
+          "start": 3.318,
+          "end": 3.53,
+          "text": "these"
+        },
+        {
+          "start": 3.53,
+          "end": 4.061,
           "text": "fast"
         },
         {
-          "start": 4.839,
-          "end": 4.898,
+          "start": 4.45,
+          "end": 4.509,
           "text": "What"
         },
         {
-          "start": 4.898,
-          "end": 4.993,
+          "start": 4.509,
+          "end": 4.615,
           "text": "is"
         },
         {
-          "start": 4.993,
-          "end": 5.217,
+          "start": 4.627,
+          "end": 4.886,
           "text": "two"
+        },
+        {
+          "start": 4.887,
+          "end": 5.217,
+          "text": "plus"
         },
         {
           "start": 5.217,
-          "end": 5.594,
-          "text": "plus"
-        },
-        {
-          "start": 5.606,
-          "end": 5.936,
+          "end": 5.535,
           "text": "two"
         },
         {
-          "start": 6.349,
-          "end": 6.431,
+          "start": 5.912,
+          "end": 5.983,
           "text": "Four"
         },
         {
-          "start": 6.431,
-          "end": 6.691,
+          "start": 5.995,
+          "end": 6.243,
           "text": "plus"
         },
         {
-          "start": 6.703,
-          "end": 7.021,
+          "start": 6.254,
+          "end": 6.585,
           "text": "four"
         },
         {
-          "start": 7.387,
-          "end": 7.528,
+          "start": 6.962,
+          "end": 7.08,
           "text": "Eight"
         },
         {
-          "start": 7.528,
-          "end": 7.799,
+          "start": 7.08,
+          "end": 7.363,
           "text": "plus"
         },
         {
-          "start": 7.799,
-          "end": 8.059,
+          "start": 7.375,
+          "end": 7.622,
           "text": "eight"
         },
         {
-          "start": 8.436,
-          "end": 8.896,
+          "start": 8.023,
+          "end": 8.46,
           "text": "Sixteen"
         },
         {
-          "start": 8.908,
-          "end": 9.12,
+          "start": 8.471,
+          "end": 8.625,
           "text": "plus"
         },
         {
-          "start": 9.12,
-          "end": 9.686,
+          "start": 8.625,
+          "end": 9.144,
           "text": "sixteen"
         }
       ]
     },
     {
       "scene": "scene_03",
-      "start": 10.116,
-      "end": 15.636,
+      "start": 9.588,
+      "end": 15.42,
       "words": [
         {
-          "start": 10.21,
-          "end": 10.552,
+          "start": 9.682,
+          "end": 10.001,
           "text": "Now"
         },
         {
-          "start": 10.788,
-          "end": 11.118,
+          "start": 10.402,
+          "end": 10.696,
           "text": "quickly"
         },
         {
-          "start": 11.13,
-          "end": 11.307,
+          "start": 10.697,
+          "end": 10.85,
           "text": "pick"
         },
         {
-          "start": 11.319,
-          "end": 11.354,
+          "start": 10.862,
+          "end": 10.885,
           "text": "a"
         },
         {
-          "start": 11.354,
-          "end": 11.59,
+          "start": 10.885,
+          "end": 11.121,
           "text": "number"
         },
         {
-          "start": 11.59,
-          "end": 11.885,
+          "start": 11.121,
+          "end": 11.428,
           "text": "between"
         },
         {
-          "start": 11.885,
-          "end": 12.215,
+          "start": 11.428,
+          "end": 11.734,
           "text": "twelve"
         },
         {
-          "start": 12.227,
-          "end": 12.286,
+          "start": 11.746,
+          "end": 11.793,
           "text": "and"
         },
         {
-          "start": 12.286,
-          "end": 12.793,
+          "start": 11.793,
+          "end": 12.277,
           "text": "five"
         },
         {
-          "start": 13.182,
-          "end": 13.288,
+          "start": 12.666,
+          "end": 12.772,
           "text": "Don't"
         },
         {
-          "start": 13.3,
-          "end": 13.724,
-          "text": "overthink"
+          "start": 12.784,
+          "end": 12.996,
+          "text": "stop"
         },
         {
-          "start": 13.724,
-          "end": 13.901,
-          "text": "it"
+          "start": 12.996,
+          "end": 13.067,
+          "text": "to"
         },
         {
-          "start": 14.125,
-          "end": 14.302,
+          "start": 13.067,
+          "end": 13.48,
+          "text": "think"
+        },
+        {
+          "start": 13.609,
+          "end": 13.774,
           "text": "just"
         },
         {
-          "start": 14.302,
-          "end": 14.597,
+          "start": 13.774,
+          "end": 14.128,
           "text": "grab"
         },
         {
-          "start": 14.609,
-          "end": 14.68,
+          "start": 14.14,
+          "end": 14.211,
           "text": "the"
         },
         {
-          "start": 14.691,
-          "end": 15.069,
+          "start": 14.222,
+          "end": 14.517,
           "text": "first"
         },
         {
-          "start": 15.069,
-          "end": 15.269,
+          "start": 14.529,
+          "end": 14.623,
           "text": "one"
+        },
+        {
+          "start": 14.635,
+          "end": 14.706,
+          "text": "you"
+        },
+        {
+          "start": 14.706,
+          "end": 15.083,
+          "text": "see"
         }
       ]
     },
     {
       "scene": "scene_04",
-      "start": 15.726,
-      "end": 20.766,
+      "start": 15.51,
+      "end": 21.534,
       "words": [
         {
-          "start": 15.832,
-          "end": 16.127,
+          "start": 15.604,
+          "end": 15.911,
           "text": "Wait"
         },
         {
-          "start": 16.504,
-          "end": 16.622,
+          "start": 16.276,
+          "end": 16.418,
           "text": "here"
         },
         {
-          "start": 16.622,
-          "end": 16.705,
+          "start": 16.477,
+          "end": 16.56,
           "text": "is"
         },
         {
-          "start": 16.705,
-          "end": 16.787,
+          "start": 16.571,
+          "end": 16.642,
           "text": "the"
         },
         {
-          "start": 16.799,
-          "end": 17.118,
+          "start": 16.642,
+          "end": 16.972,
           "text": "creepy"
         },
         {
-          "start": 17.117,
-          "end": 17.471,
+          "start": 16.972,
+          "end": 17.326,
           "text": "part"
         },
         {
-          "start": 17.849,
-          "end": 17.955,
+          "start": 17.703,
+          "end": 17.821,
           "text": "Your"
         },
         {
-          "start": 17.955,
-          "end": 18.403,
+          "start": 17.833,
+          "end": 18.258,
           "text": "brain"
         },
         {
-          "start": 18.568,
-          "end": 18.698,
+          "start": 18.34,
+          "end": 18.482,
           "text": "is"
         },
         {
-          "start": 18.698,
-          "end": 18.969,
+          "start": 18.493,
+          "end": 18.8,
           "text": "already"
         },
         {
-          "start": 18.969,
-          "end": 19.464,
+          "start": 18.8,
+          "end": 19.225,
           "text": "falling"
         },
         {
-          "start": 19.464,
-          "end": 19.629,
+          "start": 19.236,
+          "end": 20.015,
+          "text": "directly"
+        },
+        {
+          "start": 20.144,
+          "end": 20.357,
           "text": "into"
         },
         {
-          "start": 19.629,
-          "end": 19.724,
+          "start": 20.357,
+          "end": 20.475,
           "text": "my"
         },
         {
-          "start": 19.724,
-          "end": 19.983,
+          "start": 20.475,
+          "end": 20.722,
           "text": "mental"
         },
         {
-          "start": 19.983,
-          "end": 20.419,
+          "start": 20.722,
+          "end": 21.17,
           "text": "trap"
         }
       ]
     },
     {
       "scene": "scene_05",
-      "start": 20.856,
-      "end": 25.848,
+      "start": 21.624,
+      "end": 27.216,
       "words": [
         {
-          "start": 20.95,
-          "end": 21.21,
+          "start": 21.718,
+          "end": 21.99,
           "text": "Quick"
         },
         {
-          "start": 21.575,
-          "end": 21.717,
+          "start": 22.355,
+          "end": 22.508,
           "text": "Name"
         },
         {
-          "start": 21.717,
-          "end": 21.752,
+          "start": 22.508,
+          "end": 22.556,
           "text": "a"
         },
         {
-          "start": 21.764,
-          "end": 22.106,
+          "start": 22.556,
+          "end": 22.909,
           "text": "common"
         },
         {
-          "start": 22.118,
-          "end": 22.483,
+          "start": 22.909,
+          "end": 23.334,
           "text": "tool"
         },
         {
-          "start": 22.672,
-          "end": 22.719,
+          "start": 23.511,
+          "end": 23.57,
           "text": "and"
         },
         {
-          "start": 22.719,
-          "end": 22.766,
+          "start": 23.582,
+          "end": 23.629,
           "text": "a"
         },
         {
-          "start": 22.766,
-          "end": 23.073,
+          "start": 23.629,
+          "end": 23.971,
           "text": "bright"
         },
         {
-          "start": 23.085,
-          "end": 23.486,
+          "start": 23.971,
+          "end": 24.383,
           "text": "color"
         },
         {
-          "start": 23.875,
-          "end": 23.969,
-          "text": "Think"
+          "start": 24.761,
+          "end": 24.938,
+          "text": "Name"
         },
         {
-          "start": 23.969,
-          "end": 24.016,
-          "text": "of"
-        },
-        {
-          "start": 24.016,
-          "end": 24.123,
+          "start": 24.938,
+          "end": 25.056,
           "text": "them"
         },
         {
-          "start": 24.123,
-          "end": 24.311,
+          "start": 25.056,
+          "end": 25.268,
           "text": "right"
         },
         {
-          "start": 24.311,
-          "end": 24.665,
+          "start": 25.268,
+          "end": 25.61,
           "text": "now"
         },
         {
-          "start": 24.818,
-          "end": 24.901,
+          "start": 25.834,
+          "end": 25.94,
           "text": "and"
         },
         {
-          "start": 24.913,
-          "end": 25.255,
+          "start": 25.952,
+          "end": 26.294,
           "text": "hold"
         },
         {
-          "start": 25.266,
-          "end": 25.514,
+          "start": 26.306,
+          "end": 26.412,
           "text": "them"
+        },
+        {
+          "start": 26.412,
+          "end": 26.459,
+          "text": "in"
+        },
+        {
+          "start": 26.471,
+          "end": 26.565,
+          "text": "your"
+        },
+        {
+          "start": 26.565,
+          "end": 26.872,
+          "text": "head"
         }
       ]
     },
     {
       "scene": "scene_06",
-      "start": 25.938,
-      "end": 32.01,
+      "start": 27.306,
+      "end": 33.834,
       "words": [
         {
-          "start": 26.032,
-          "end": 26.103,
+          "start": 27.4,
+          "end": 27.471,
           "text": "You"
         },
         {
-          "start": 26.103,
-          "end": 26.186,
+          "start": 27.471,
+          "end": 27.554,
           "text": "are"
         },
         {
-          "start": 26.186,
-          "end": 26.539,
+          "start": 27.554,
+          "end": 27.884,
           "text": "thinking"
         },
         {
-          "start": 26.539,
-          "end": 26.587,
+          "start": 27.884,
+          "end": 27.919,
           "text": "of"
         },
         {
-          "start": 26.587,
-          "end": 26.622,
+          "start": 27.919,
+          "end": 27.955,
           "text": "a"
         },
         {
-          "start": 26.622,
-          "end": 26.905,
+          "start": 27.955,
+          "end": 28.261,
           "text": "Red"
         },
         {
-          "start": 26.905,
-          "end": 27.306,
+          "start": 28.261,
+          "end": 28.698,
           "text": "Hammer"
         },
         {
-          "start": 27.672,
-          "end": 27.872,
+          "start": 29.075,
+          "end": 29.264,
           "text": "Most"
         },
         {
-          "start": 27.872,
-          "end": 28.131,
+          "start": 29.264,
+          "end": 29.511,
           "text": "people"
         },
         {
-          "start": 28.131,
-          "end": 28.45,
+          "start": 29.511,
+          "end": 29.806,
           "text": "choose"
         },
         {
-          "start": 28.462,
-          "end": 29.228,
+          "start": 29.806,
+          "end": 30.384,
           "text": "exactly"
         },
         {
-          "start": 29.358,
-          "end": 29.57,
+          "start": 30.384,
+          "end": 30.62,
           "text": "that"
         },
         {
-          "start": 29.582,
-          "end": 29.747,
+          "start": 30.69,
+          "end": 30.879,
           "text": "due"
         },
         {
-          "start": 29.759,
-          "end": 29.888,
+          "start": 30.891,
+          "end": 31.021,
           "text": "to"
         },
         {
-          "start": 29.888,
-          "end": 29.947,
+          "start": 31.021,
+          "end": 31.115,
           "text": "a"
         },
         {
-          "start": 29.947,
-          "end": 30.891,
+          "start": 31.115,
+          "end": 31.716,
+          "text": "predictable"
+        },
+        {
+          "start": 31.881,
+          "end": 32.754,
           "text": "psychological"
         },
         {
-          "start": 30.962,
-          "end": 31.681,
+          "start": 32.825,
+          "end": 33.509,
           "text": "heuristic"
         }
       ]
     },
     {
       "scene": "scene_07",
-      "start": 32.1,
-      "end": 36.612,
+      "start": 33.924,
+      "end": 38.46,
       "words": [
         {
-          "start": 32.194,
-          "end": 32.631,
+          "start": 34.007,
+          "end": 34.455,
           "text": "Subscribe"
         },
         {
-          "start": 32.631,
-          "end": 32.737,
+          "start": 34.455,
+          "end": 34.584,
           "text": "for"
         },
         {
-          "start": 32.737,
-          "end": 33.114,
+          "start": 34.584,
+          "end": 34.974,
           "text": "tomorrow's"
         },
         {
-          "start": 33.126,
-          "end": 33.409,
+          "start": 34.985,
+          "end": 35.257,
           "text": "brain"
         },
         {
-          "start": 33.409,
-          "end": 33.845,
+          "start": 35.257,
+          "end": 35.716,
           "text": "test"
         },
         {
-          "start": 34.187,
-          "end": 34.305,
+          "start": 36.023,
+          "end": 36.117,
           "text": "and"
         },
         {
-          "start": 34.305,
-          "end": 34.706,
+          "start": 36.117,
+          "end": 36.495,
           "text": "comment"
         },
         {
-          "start": 34.706,
-          "end": 35.001,
+          "start": 36.507,
+          "end": 36.766,
           "text": "YES"
         },
         {
-          "start": 35.013,
-          "end": 35.119,
+          "start": 36.778,
+          "end": 36.884,
           "text": "if"
         },
         {
-          "start": 35.119,
-          "end": 35.201,
+          "start": 36.884,
+          "end": 36.966,
           "text": "I"
         },
         {
-          "start": 35.213,
-          "end": 35.425,
+          "start": 36.966,
+          "end": 37.179,
           "text": "got"
         },
         {
-          "start": 35.425,
-          "end": 35.508,
+          "start": 37.179,
+          "end": 37.261,
           "text": "you"
         },
         {
-          "start": 35.532,
-          "end": 35.815,
+          "start": 37.273,
+          "end": 37.544,
           "text": "because"
         },
         {
-          "start": 35.815,
-          "end": 35.909,
+          "start": 37.544,
+          "end": 37.591,
           "text": "I"
         },
         {
-          "start": 35.909,
-          "end": 36.275,
-          "text": "will"
+          "start": 37.603,
+          "end": 37.863,
+          "text": "know"
+        },
+        {
+          "start": 37.863,
+          "end": 38.122,
+          "text": "I"
         }
       ]
     }
