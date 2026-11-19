@@ -1,0 +1,138 @@
+{
+  "title": "The Red Hammer Brain Glitch",
+  "scenes": [
+    {
+      "vo": {
+        "en": "I will read your mind now."
+      },
+      "on_screen": {
+        "en": "I READ YOUR MIND"
+      },
+      "visual": {
+        "description": "A close-up shot of a man staring intensely and directly into the camera lens with a focused expression.",
+        "search_terms": [
+          "man staring camera",
+          "close up eyes",
+          "focused gaze"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Stay focused. Answer these out loud as fast as you can. What’s 2 plus 2? 4 plus 4? 8 plus 8? 16 plus 16?"
+      },
+      "on_screen": {
+        "en": "ANSWER FAST!"
+      },
+      "visual": {
+        "description": "Fast-paced montage of digital numbers flashing on a screen and a ticking mechanical clock.",
+        "search_terms": [
+          "fast counting numbers",
+          "digital clock ticking",
+          "stopwatch running"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Now, pick a number between twelve and five. Don't overthink it, just grab one!"
+      },
+      "on_screen": {
+        "en": "PICK A NUMBER"
+      },
+      "visual": {
+        "description": "A man's hand reaching out and pointing toward the viewer as if selecting something in the air.",
+        "search_terms": [
+          "hand picking object",
+          "finger pointing",
+          "choosing path"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "Wait, this is the part where your brain starts to glitch."
+      },
+      "on_screen": {
+        "en": "BRAIN GLITCHING..."
+      },
+      "visual": {
+        "description": "A high-energy digital glitch effect with distorted colors and static across the screen.",
+        "search_terms": [
+          "tv static glitch",
+          "abstract energy motion",
+          "digital distortion"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Quick, name a common tool and a bright color. Got them? Keep them in your head."
+      },
+      "on_screen": {
+        "en": "TOOL AND COLOR?"
+      },
+      "visual": {
+        "description": "A top-down view of vibrant red paint being mixed and a blurred toolbox in the background.",
+        "search_terms": [
+          "red paint mixing",
+          "toolbox hardware",
+          "workshop tools"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "You are currently thinking of a Red Hammer. Over ninety percent of people choose exactly that."
+      },
+      "on_screen": {
+        "en": "RED HAMMER!"
+      },
+      "visual": {
+        "description": "A clear, sharp shot of a hammer with a bright red handle resting on a wooden workbench.",
+        "search_terms": [
+          "red hammer tool",
+          "hammer hitting nail",
+          "carpentry tools"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for tomorrow's mind test and comment YES if this worked on you. This works because I will"
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "A man nodding knowingly at the camera while tapping his temple with one finger.",
+        "search_terms": [
+          "man nodding approval",
+          "finger tapping temple",
+          "satisfied man"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "red-hammer-brain-glitch",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 38.2
+  }
+}
