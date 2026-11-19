@@ -3,17 +3,17 @@
   "scenes": [
     {
       "vo": {
-        "en": "I will read your mind now."
+        "en": "I'm going to read your mind."
       },
       "on_screen": {
         "en": "I READ YOUR MIND"
       },
       "visual": {
-        "description": "A close-up shot of a man staring intensely and directly into the camera lens with a focused expression.",
+        "description": "A close-up shot of a man's eyes staring intensely into the lens in a dimly lit room.",
         "search_terms": [
-          "man staring camera",
+          "man staring intensely",
           "close up eyes",
-          "focused gaze"
+          "mysterious man shadow"
         ],
         "prefer": "video"
       },
@@ -21,17 +21,17 @@
     },
     {
       "vo": {
-        "en": "Stay focused. Answer these out loud as fast as you can. What’s 2 plus 2? 4 plus 4? 8 plus 8? 16 plus 16?"
+        "en": "Do not pause this video. Answer fast. What is two plus two? Four plus four? Eight plus eight? Sixteen plus sixteen?"
       },
       "on_screen": {
         "en": "ANSWER FAST!"
       },
       "visual": {
-        "description": "Fast-paced montage of digital numbers flashing on a screen and a ticking mechanical clock.",
+        "description": "A rapid sequence of a person's fingers furiously typing on a vintage calculator.",
         "search_terms": [
-          "fast counting numbers",
-          "digital clock ticking",
-          "stopwatch running"
+          "fingers typing calculator",
+          "vintage keypad fast",
+          "mechanical counting"
         ],
         "prefer": "video"
       },
@@ -39,17 +39,17 @@
     },
     {
       "vo": {
-        "en": "Now, pick a number between twelve and five. Don't overthink it, just grab one!"
+        "en": "Now, quickly pick a number between twelve and five. Don't overthink it, just grab the first one."
       },
       "on_screen": {
         "en": "PICK A NUMBER"
       },
       "visual": {
-        "description": "A man's hand reaching out and pointing toward the viewer as if selecting something in the air.",
+        "description": "A hand pointing directly at the camera as if making a selection in mid-air.",
         "search_terms": [
-          "hand picking object",
-          "finger pointing",
-          "choosing path"
+          "hand pointing camera",
+          "finger selection air",
+          "choosing direction man"
         ],
         "prefer": "video"
       },
@@ -57,17 +57,17 @@
     },
     {
       "vo": {
-        "en": "Wait, this is the part where your brain starts to glitch."
+        "en": "Wait, here is the creepy part. Your brain is already falling into my mental trap."
       },
       "on_screen": {
-        "en": "BRAIN GLITCHING..."
+        "en": "MENTAL TRAP..."
       },
       "visual": {
-        "description": "A high-energy digital glitch effect with distorted colors and static across the screen.",
+        "description": "Abstract digital glitch effects and distorted colors flashing across the screen.",
         "search_terms": [
-          "tv static glitch",
-          "abstract energy motion",
-          "digital distortion"
+          "digital glitch distortion",
+          "blue static motion",
+          "abstract energy waves"
         ],
         "prefer": "video"
       },
@@ -75,17 +75,17 @@
     },
     {
       "vo": {
-        "en": "Quick, name a common tool and a bright color. Got them? Keep them in your head."
+        "en": "Quick! Name a common tool and a bright color. Think of them right now and hold them."
       },
       "on_screen": {
         "en": "TOOL AND COLOR?"
       },
       "visual": {
-        "description": "A top-down view of vibrant red paint being mixed and a blurred toolbox in the background.",
+        "description": "Close up of vibrant red paint being stirred into a pot with a wooden stick.",
         "search_terms": [
-          "red paint mixing",
-          "toolbox hardware",
-          "workshop tools"
+          "mixing red paint",
+          "painter studio colors",
+          "artistic palette motion"
         ],
         "prefer": "video"
       },
@@ -93,17 +93,17 @@
     },
     {
       "vo": {
-        "en": "You are currently thinking of a Red Hammer. Over ninety percent of people choose exactly that."
+        "en": "You are thinking of a Red Hammer. Most people choose exactly that due to a psychological heuristic."
       },
       "on_screen": {
         "en": "RED HAMMER!"
       },
       "visual": {
-        "description": "A clear, sharp shot of a hammer with a bright red handle resting on a wooden workbench.",
+        "description": "A crisp shot of a heavy hammer with a bright red handle resting on a wooden table.",
         "search_terms": [
           "red hammer tool",
-          "hammer hitting nail",
-          "carpentry tools"
+          "workshop bench hammer",
+          "carpentry tools motion"
         ],
         "prefer": "video"
       },
@@ -111,17 +111,17 @@
     },
     {
       "vo": {
-        "en": "Subscribe for tomorrow's mind test and comment YES if this worked on you. This works because I will"
+        "en": "Subscribe for tomorrow's brain test and comment YES if I got you, because I will"
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "A man nodding knowingly at the camera while tapping his temple with one finger.",
+        "description": "A man nodding confidently at the camera and tapping his temple with his index finger.",
         "search_terms": [
-          "man nodding approval",
+          "man nodding smiling",
           "finger tapping temple",
-          "satisfied man"
+          "confident man gesture"
         ],
         "prefer": "video"
       },
@@ -133,6 +133,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 38.2
+    "en": 39.3
   }
 }
