@@ -11,6 +11,8 @@ const SESSION_HOURS = 12;
 const MAX_FAILS = 5; // wrong passwords before a short lock
 const LOCK_MINUTES = 5;
 
+class ConfigError extends Error {}
+
 type Account = { user: string; salt: string; hash: Buffer };
 function accounts(): Account[] {
   return (process.env["GYM_ACCOUNTS"] || "")
@@ -25,7 +27,7 @@ const DUMMY_SALT = "00".repeat(16);
 // ---------- session token (stateless, HMAC-signed) ----------
 function secret(): string {
   const s = process.env["GYM_SESSION_SECRET"] || "";
-  if (s.length < 24) throw new Error("GYM_SESSION_SECRET is missing or too short");
+  if (s.length < 24) throw new ConfigError("Configuration manquante : GYM_SESSION_SECRET (32 caractères minimum) n'est pas définie sur le serveur");
   return s;
 }
 const sign = (payload: string) => createHmac("sha256", secret()).update(payload).digest("base64url");
@@ -250,7 +252,12 @@ async function login(body: any, res: VercelResponse) {
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   res.setHeader("Cache-Control", "no-store");
   try {
-    await ensureTables();
+    try {
+      await ensureTables();
+    } catch (e) {
+      console.error("gym ensureTables failed:", e);
+      return res.status(500).json({ error: "Base de données indisponible (voir les logs Vercel)" });
+    }
     if (req.method === "POST" && req.body?.action === "login") return await login(req.body, res);
     const who = await authenticate(req);
     if (!who) return res.status(403).json({ error: "Accès refusé." });
@@ -265,6 +272,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     }
     return res.status(405).json({ error: "Méthode non autorisée" });
   } catch (e: any) {
+    if (e instanceof ConfigError) { console.error("gym config error:", e.message); return res.status(500).json({ error: e.message }); }
     if (e instanceof BadRequest) return res.status(400).json({ error: e.message });
     if (/duplicate key|unique/i.test(String(e?.message))) return res.status(409).json({ error: "Ce nom existe déjà" });
     console.error("gym api error:", e);
