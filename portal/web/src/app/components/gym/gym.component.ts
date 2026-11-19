@@ -1,13 +1,10 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, OnInit, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
-import { GOOGLE_CLIENT_ID } from '../../services/auth.service';
+import { Meta } from '@angular/platform-browser';
 
-declare const google: any;
-
-type Tab = 'month' | 'members' | 'coaches' | 'sports' | 'admins';
+type Tab = 'month' | 'members' | 'coaches' | 'sports';
 
 const STATUS_FR: Record<string, string> = { paid: 'payé', partial: 'partiel', unpaid: 'impayé', 'n/a': '-' };
 
@@ -20,15 +17,21 @@ const STATUS_FR: Record<string, string> = { paid: 'payé', partial: 'partiel', u
     <h1>Gestion de la salle</h1>
 
     <ng-container *ngIf="!token()">
-      <p class="muted">Espace réservé aux administrateurs. Connectez-vous avec le compte Google autorisé.</p>
-      <button class="btn primary" (click)="signIn()">Se connecter avec Google</button>
+      <p class="muted">Espace réservé. Connectez-vous avec votre identifiant et votre mot de passe.</p>
+      <form class="login" (ngSubmit)="login()">
+        <input type="text" autocomplete="username" autocapitalize="none" placeholder="Identifiant" [(ngModel)]="username" name="us" required>
+        <input type="password" autocomplete="current-password" placeholder="Mot de passe" [(ngModel)]="password" name="pw" required>
+        <button class="btn primary" type="submit" [disabled]="busy()">Se connecter</button>
+      </form>
       <p class="err" *ngIf="error()">{{ error() }}</p>
     </ng-container>
 
-    <ng-container *ngIf="token() && s() as d">
+    <ng-container *ngIf="token() && s()">
+      <ng-container *ngIf="s() as d">
       <div class="bar">
         <label>Mois <input type="month" [ngModel]="month()" (ngModelChange)="setMonth($event)"></label>
         <span class="muted">{{ d.me }}</span>
+        <button class="btn sm ghost" (click)="logout()">Se déconnecter</button>
       </div>
       <p class="err" *ngIf="error()">{{ error() }}</p>
 
@@ -156,20 +159,7 @@ const STATUS_FR: Record<string, string> = { paid: 'payé', partial: 'partiel', u
         </table>
       </section>
 
-      <!-- ADMINISTRATEURS -->
-      <section *ngIf="tab() === 'admins'">
-        <h2>Comptes administrateurs ({{ d.fixedAdmins.length + d.admins.length }})</h2>
-        <p class="muted">Seuls ces comptes Google peuvent ouvrir cette page. Les comptes propriétaires sont définis sur le serveur et ne peuvent pas être retirés ici.</p>
-        <ul>
-          <li *ngFor="let e of d.fixedAdmins">{{ e }} <span class="pill paid">propriétaire</span></li>
-          <li *ngFor="let e of d.admins">{{ e }}
-            <button class="btn sm danger" *ngIf="d.canManageAdmins" (click)="post({action:'admin_remove', email:e})">Retirer</button></li>
-        </ul>
-        <form class="grid" *ngIf="d.canManageAdmins" (ngSubmit)="addAdmin()">
-          <input type="email" placeholder="E-mail Google du nouvel administrateur" [(ngModel)]="newAdmin" name="ad" required>
-          <span><button class="btn primary" type="submit">Ajouter</button></span>
-        </form>
-      </section>
+      </ng-container>
     </ng-container>
   </div>
   `,
@@ -177,6 +167,8 @@ const STATUS_FR: Record<string, string> = { paid: 'payé', partial: 'partiel', u
     .gym { padding: 24px 16px 64px; max-width: 1100px; margin: 0 auto; }
     h1 { margin: 0 0 12px; } h2 { margin: 28px 0 8px; font-size: 1.15rem; }
     .muted { color: #64748b; font-size: .9rem; } .err { color: #b91c1c; }
+    .login { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; max-width: 560px; margin: 12px 0; }
+    .login input { flex: 1; min-width: 220px; }
     .bar { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; margin-bottom: 8px; }
     .tabs { display: flex; gap: 4px; flex-wrap: wrap; border-bottom: 1px solid #cbd5e1; margin: 12px 0; }
     .tabs button { background: none; border: 0; padding: 10px 14px; cursor: pointer; font: inherit; border-bottom: 3px solid transparent; }
@@ -199,63 +191,72 @@ const STATUS_FR: Record<string, string> = { paid: 'payé', partial: 'partiel', u
     .pill.paid { background: #dcfce7; color: #166534; } .pill.partial { background: #fef3c7; color: #92400e; } .pill.unpaid { background: #fee2e2; color: #991b1b; }
   `]
 })
-export class GymComponent {
+export class GymComponent implements OnInit {
   private readonly http = inject(HttpClient);
-  private readonly router = inject(Router);
+  private readonly meta = inject(Meta);
 
-  readonly tabs: [Tab, string][] = [['month', 'Mensuel'], ['members', 'Membres'], ['coaches', 'Coachs'], ['sports', 'Sports'], ['admins', 'Admins']];
+  readonly tabs: [Tab, string][] = [['month', 'Mensuel'], ['members', 'Membres'], ['coaches', 'Coachs'], ['sports', 'Sports']];
   readonly tab = signal<Tab>('month');
   readonly token = signal<string>('');
   readonly error = signal<string>('');
   readonly s = signal<any>(null);
   readonly month = signal<string>(new Date().toISOString().slice(0, 7));
-  newAdmin = '';
+  readonly busy = signal(false);
+  username = '';
+  password = '';
 
   mForm: any = this.blankMember();
   cForm: any = { id: null, name: '', email: '', phone: '', commissionPct: 0, active: true };
   spForm: any = { id: null, name: '', monthlyFee: 0 };
 
-  private tokenClient: any;
   private tokenExpiry = 0;
 
-  // ---------- accès : un jeton Google, vérifié par le serveur à chaque appel ----------
-  signIn(): void {
-    this.error.set('');
-    if (typeof google === 'undefined' || !google.accounts?.oauth2) {
-      this.error.set('La connexion Google est en cours de chargement, réessayez dans un instant.');
-      return;
-    }
-    this.tokenClient = this.tokenClient || google.accounts.oauth2.initTokenClient({
-      client_id: GOOGLE_CLIENT_ID,
-      scope: 'openid email profile',
-      callback: (r: any) => {
-        if (r?.access_token) {
-          this.token.set(r.access_token);
-          this.tokenExpiry = Date.now() + (Number(r.expires_in) || 3000) * 1000;
-          this.load();
-        } else {
-          this.error.set('Connexion Google annulée.');
-        }
+  ngOnInit(): void {
+    this.meta.updateTag({ name: 'robots', content: 'noindex,nofollow' });
+    try {
+      const saved = JSON.parse(sessionStorage.getItem('gym_session') || 'null');
+      if (saved?.token && saved.expiresAt > Date.now()) {
+        this.token.set(saved.token);
+        this.tokenExpiry = saved.expiresAt;
+        this.load();
+      }
+    } catch { /* storage unavailable */ }
+  }
+
+  // ---------- connexion : identifiant + mot de passe ----------
+  login(): void {
+    this.error.set(''); this.busy.set(true);
+    this.http.post<any>('/api/gym', { action: 'login', username: this.username, password: this.password }).subscribe({
+      next: (r) => {
+        this.busy.set(false);
+        this.token.set(r.token);
+        this.tokenExpiry = r.expiresAt;
+        try { sessionStorage.setItem('gym_session', JSON.stringify({ token: r.token, expiresAt: r.expiresAt })); } catch { /* ignore */ }
+        this.password = '';
+        this.load();
       },
+      error: (e) => { this.busy.set(false); this.password = ''; this.error.set(e?.error?.error || 'Connexion impossible'); },
     });
-    this.tokenClient.requestAccessToken({ prompt: '' });
+  }
+
+  logout(): void {
+    this.token.set(''); this.s.set(null);
+    try { sessionStorage.removeItem('gym_session'); } catch { /* ignore */ }
   }
 
   private headers() { return { Authorization: `Bearer ${this.token()}` }; }
 
   private fail(err: any): void {
     if (err?.status === 403) {
-      // not an admin: leave without revealing anything about this page
-      this.token.set('');
-      this.s.set(null);
-      this.router.navigateByUrl('/', { replaceUrl: true });
+      this.logout();
+      this.error.set('Session expirée ou accès retiré, reconnectez-vous.');
     } else {
       this.error.set(err?.error?.error || 'La requête a échoué');
     }
   }
 
   load(): void {
-    if (this.tokenExpiry && Date.now() > this.tokenExpiry) { this.token.set(''); this.error.set('Session expirée, reconnectez-vous.'); return; }
+    if (this.tokenExpiry && Date.now() > this.tokenExpiry) { this.logout(); this.error.set('Session expirée, reconnectez-vous.'); return; }
     this.http.get<any>('/api/gym', { headers: this.headers(), params: { month: this.month() } }).subscribe({
       next: (d) => { this.s.set(d); this.error.set(''); },
       error: (e) => this.fail(e),
@@ -316,7 +317,4 @@ export class GymComponent {
   editSport(sp: any): void { this.spForm = { ...sp }; }
   resetSport(): void { this.spForm = { id: null, name: '', monthlyFee: 0 }; }
   saveSport(): void { this.post({ action: 'sport_save', ...this.spForm }, () => this.resetSport()); }
-
-  // ---------- administrateurs ----------
-  addAdmin(): void { this.post({ action: 'admin_add', email: this.newAdmin }, () => (this.newAdmin = '')); }
 }

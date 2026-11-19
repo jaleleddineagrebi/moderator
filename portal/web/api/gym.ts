@@ -1,18 +1,38 @@
 // Gym back office API (members, sports, coaches, monthly fees and coach commissions).
-// Every request must carry a Google access token; it is verified with Google on the server and the
-// e-mail must be on the admin list. The browser cannot grant itself access.
+// Access = one of at most MAX_ACCOUNTS user name + password accounts, defined in the GYM_ACCOUNTS env var as
+// "user:salt:scryptHash;user:salt:scryptHash" (create them with scripts/gym-accounts.mjs).
+// A successful login returns a signed 12h session token; every other request must carry it.
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { randomUUID } from "crypto";
+import { createHmac, randomUUID, scryptSync, timingSafeEqual } from "crypto";
 import { prisma } from "./_prisma";
 
-const OWNER = "jalel.edine.agrebi@gmail.com";
-const GOOGLE_CLIENT_ID =
-  process.env["GOOGLE_CLIENT_ID"] || "701586086068-v014k4trutnrdd5gob94i4bem6s3ktag.apps.googleusercontent.com";
+const MAX_ACCOUNTS = 4;
+const SESSION_HOURS = 12;
+const MAX_FAILS = 5; // wrong passwords before a short lock
+const LOCK_MINUTES = 5;
 
-// Admins that cannot be removed from the UI: the owner plus the GYM_ADMIN_EMAILS env var (comma separated).
-function fixedAdmins(): Set<string> {
-  const list = [OWNER, process.env["ADMIN_EMAIL"] || "", ...(process.env["GYM_ADMIN_EMAILS"] || "").split(",")];
-  return new Set(list.map((e) => e.toLowerCase().trim()).filter(Boolean));
+type Account = { user: string; salt: string; hash: Buffer };
+function accounts(): Account[] {
+  return (process.env["GYM_ACCOUNTS"] || "")
+    .split(";").map((x) => x.trim()).filter(Boolean).slice(0, MAX_ACCOUNTS)
+    .map((x) => x.split(":"))
+    .filter((p) => p.length === 3 && /^[a-z0-9._-]{3,30}$/.test(p[0]) && /^[0-9a-f]+$/.test(p[1]) && /^[0-9a-f]{64}$/.test(p[2]))
+    .map(([user, salt, hash]) => ({ user, salt, hash: Buffer.from(hash, "hex") }));
+}
+const findAccount = (user: string) => accounts().find((a) => a.user === user) || null;
+const DUMMY_SALT = "00".repeat(16);
+
+// ---------- session token (stateless, HMAC-signed) ----------
+function secret(): string {
+  const s = process.env["GYM_SESSION_SECRET"] || "";
+  if (s.length < 24) throw new Error("GYM_SESSION_SECRET is missing or too short");
+  return s;
+}
+const sign = (payload: string) => createHmac("sha256", secret()).update(payload).digest("base64url");
+function makeToken(user: string): { token: string; expiresAt: number } {
+  const expiresAt = Date.now() + SESSION_HOURS * 3600_000;
+  const payload = Buffer.from(JSON.stringify({ u: user, e: expiresAt })).toString("base64url");
+  return { token: `${payload}.${sign(payload)}`, expiresAt };
 }
 
 let tablesReady: Promise<void> | null = null;
@@ -20,7 +40,7 @@ function ensureTables(): Promise<void> {
   if (!tablesReady) {
     tablesReady = (async () => {
       const stmts = [
-        `CREATE TABLE IF NOT EXISTS "GymAdmin" ("email" TEXT PRIMARY KEY, "addedBy" TEXT, "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP)`,
+        `CREATE TABLE IF NOT EXISTS "GymLogin" ("username" TEXT PRIMARY KEY, "fails" INTEGER NOT NULL DEFAULT 0, "lockedUntil" TIMESTAMP(3))`,
         `CREATE TABLE IF NOT EXISTS "GymSport" ("id" TEXT PRIMARY KEY, "name" TEXT NOT NULL UNIQUE, "monthlyFee" DOUBLE PRECISION NOT NULL DEFAULT 0, "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP)`,
         `CREATE TABLE IF NOT EXISTS "GymCoach" ("id" TEXT PRIMARY KEY, "name" TEXT NOT NULL, "email" TEXT, "phone" TEXT, "commissionPct" DOUBLE PRECISION NOT NULL DEFAULT 0, "active" BOOLEAN NOT NULL DEFAULT TRUE, "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP)`,
         `CREATE TABLE IF NOT EXISTS "GymMember" ("id" TEXT PRIMARY KEY, "name" TEXT NOT NULL, "email" TEXT, "phone" TEXT, "sportId" TEXT REFERENCES "GymSport"("id") ON DELETE SET NULL, "coachId" TEXT REFERENCES "GymCoach"("id") ON DELETE SET NULL, "monthlyFee" DOUBLE PRECISION NOT NULL DEFAULT 0, "joinedAt" TEXT NOT NULL, "active" BOOLEAN NOT NULL DEFAULT TRUE, "notes" TEXT, "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP)`,
@@ -36,26 +56,19 @@ function ensureTables(): Promise<void> {
   return tablesReady;
 }
 
-/** Returns the verified admin e-mail, or null. */
-async function authenticate(req: VercelRequest): Promise<{ email: string; fixed: boolean } | null> {
+/** Returns the signed-in user name (account must still exist), or null. */
+async function authenticate(req: VercelRequest): Promise<{ user: string } | null> {
   const header = String(req.headers["authorization"] || "");
   const token = header.startsWith("Bearer ") ? header.slice(7).trim() : "";
-  if (!token) return null;
-  let info: any;
-  try {
-    const r = await fetch(`https://oauth2.googleapis.com/tokeninfo?access_token=${encodeURIComponent(token)}`);
-    if (!r.ok) return null;
-    info = await r.json();
-  } catch {
-    return null;
-  }
-  const verified = info?.email_verified === true || info?.email_verified === "true";
-  if (!verified || info?.aud !== GOOGLE_CLIENT_ID || !info?.email) return null;
-  const email = String(info.email).toLowerCase().trim();
-  const fixed = fixedAdmins().has(email);
-  if (fixed) return { email, fixed: true };
-  const rows: any[] = await prisma.$queryRawUnsafe(`SELECT "email" FROM "GymAdmin" WHERE "email" = $1`, email);
-  return rows.length ? { email, fixed: false } : null;
+  const [payload, mac] = token.split(".");
+  if (!payload || !mac) return null;
+  const expected = Buffer.from(sign(payload));
+  const given = Buffer.from(mac);
+  if (expected.length !== given.length || !timingSafeEqual(expected, given)) return null;
+  let data: any;
+  try { data = JSON.parse(Buffer.from(payload, "base64url").toString("utf8")); } catch { return null; }
+  if (!data?.u || typeof data.e !== "number" || data.e < Date.now()) return null;
+  return findAccount(data.u) ? { user: data.u } : null; // account removed from GYM_ACCOUNTS = locked out
 }
 
 // ---------- validation helpers ----------
@@ -83,13 +96,12 @@ const currentPeriod = () => new Date().toISOString().slice(0, 7);
 
 // ---------- monthly calculation ----------
 async function buildState(month: string) {
-  const [sports, coaches, members, payments, payouts, admins] = (await Promise.all([
+  const [sports, coaches, members, payments, payouts] = (await Promise.all([
     prisma.$queryRawUnsafe(`SELECT * FROM "GymSport" ORDER BY "name"`),
     prisma.$queryRawUnsafe(`SELECT * FROM "GymCoach" ORDER BY "name"`),
     prisma.$queryRawUnsafe(`SELECT * FROM "GymMember" ORDER BY "name"`),
     prisma.$queryRawUnsafe(`SELECT * FROM "GymPayment" WHERE "period" = $1`, month),
     prisma.$queryRawUnsafe(`SELECT * FROM "GymCoachPayout" WHERE "period" = $1`, month),
-    prisma.$queryRawUnsafe(`SELECT "email" FROM "GymAdmin" ORDER BY "email"`),
   ])) as any[][];
 
   const paidByMember = new Map<string, any>(payments.map((p) => [p.memberId, p]));
@@ -136,8 +148,6 @@ async function buildState(month: string) {
     sports,
     coaches,
     members: memberRows,
-    admins: admins.map((a) => a.email),
-    fixedAdmins: [...fixedAdmins()],
     report: {
       activeMembers: billed.length,
       due, collected, outstanding: round2(Math.max(0, due - collected)),
@@ -150,7 +160,7 @@ async function buildState(month: string) {
 }
 
 // ---------- actions ----------
-async function runAction(body: any, who: { email: string; fixed: boolean }): Promise<void> {
+async function runAction(body: any, who: { user: string }): Promise<void> {
   const id = typeof body.id === "string" && body.id ? body.id : null;
   switch (body.action) {
     case "sport_save": {
@@ -203,34 +213,51 @@ async function runAction(body: any, who: { email: string; fixed: boolean }): Pro
     case "payout_delete":
       await prisma.$executeRawUnsafe(`DELETE FROM "GymCoachPayout" WHERE "coachId"=$1 AND "period"=$2`, str(body.coachId, 64, true), period(body.period));
       return;
-    case "admin_add": {
-      if (!who.fixed) throw new BadRequest("Seul le propriétaire peut gérer les administrateurs");
-      const email = str(body.email, 200, true)!.toLowerCase();
-      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) throw new BadRequest("E-mail invalide");
-      await prisma.$executeRawUnsafe(`INSERT INTO "GymAdmin" ("email","addedBy") VALUES ($1,$2) ON CONFLICT DO NOTHING`, email, who.email);
-      return;
-    }
-    case "admin_remove": {
-      if (!who.fixed) throw new BadRequest("Seul le propriétaire peut gérer les administrateurs");
-      await prisma.$executeRawUnsafe(`DELETE FROM "GymAdmin" WHERE "email"=$1`, str(body.email, 200, true)!.toLowerCase());
-      return;
-    }
     default:
       throw new BadRequest("Action inconnue");
   }
+}
+
+/** Login = user name + password. Every failure looks the same, and repeated failures lock the account briefly. */
+async function login(body: any, res: VercelResponse) {
+  const bad = () => res.status(400).json({ error: "Identifiant ou mot de passe incorrect" });
+  const user = String(body.username || "").trim().toLowerCase().slice(0, 40);
+  const pw = String(body.password || "").slice(0, 200);
+  if (!user || !pw) return bad();
+
+  const acc = findAccount(user);
+  // always run one scrypt so an unknown user takes as long as a known one
+  const candidate = scryptSync(pw, acc ? acc.salt : DUMMY_SALT, 32, { N: 16384 });
+  if (!acc) return bad();
+
+  const rows: any[] = await prisma.$queryRawUnsafe(`SELECT "lockedUntil" FROM "GymLogin" WHERE "username"=$1`, user);
+  if (rows[0]?.lockedUntil && new Date(rows[0].lockedUntil).getTime() > Date.now()) {
+    return res.status(429).json({ error: "Trop d'essais, réessayez dans quelques minutes" });
+  }
+  if (!timingSafeEqual(candidate, acc.hash)) {
+    await prisma.$executeRawUnsafe(
+      `INSERT INTO "GymLogin" ("username","fails") VALUES ($1,1)
+       ON CONFLICT ("username") DO UPDATE SET
+         "lockedUntil" = CASE WHEN "GymLogin"."fails" + 1 >= $2 THEN NOW() + ($3 || ' minutes')::interval ELSE "GymLogin"."lockedUntil" END,
+         "fails" = CASE WHEN "GymLogin"."fails" + 1 >= $2 THEN 0 ELSE "GymLogin"."fails" + 1 END`,
+      user, MAX_FAILS, String(LOCK_MINUTES));
+    return bad();
+  }
+  await prisma.$executeRawUnsafe(`DELETE FROM "GymLogin" WHERE "username"=$1`, user);
+  return res.status(200).json({ ok: true, user, ...makeToken(user) });
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   res.setHeader("Cache-Control", "no-store");
   try {
     await ensureTables();
+    if (req.method === "POST" && req.body?.action === "login") return await login(req.body, res);
     const who = await authenticate(req);
     if (!who) return res.status(403).json({ error: "Accès refusé." });
 
     if (req.method === "GET") {
-      const raw = String(req.query["month"] || currentPeriod());
-      const month = period(raw);
-      return res.status(200).json({ me: who.email, canManageAdmins: who.fixed, ...(await buildState(month)) });
+      const month = period(String(req.query["month"] || currentPeriod()));
+      return res.status(200).json({ me: who.user, ...(await buildState(month)) });
     }
     if (req.method === "POST") {
       await runAction(req.body || {}, who);
@@ -239,8 +266,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(405).json({ error: "Méthode non autorisée" });
   } catch (e: any) {
     if (e instanceof BadRequest) return res.status(400).json({ error: e.message });
-    // unique violation, e.g. duplicate sport name
-    if (e?.code === "P2010" || /duplicate key|unique/i.test(String(e?.message))) return res.status(409).json({ error: "Ce nom existe déjà" });
+    if (/duplicate key|unique/i.test(String(e?.message))) return res.status(409).json({ error: "Ce nom existe déjà" });
     console.error("gym api error:", e);
     return res.status(500).json({ error: "Erreur du serveur" });
   }
