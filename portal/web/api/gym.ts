@@ -47,6 +47,7 @@ function ensureTables(): Promise<void> {
         `CREATE TABLE IF NOT EXISTS "GymCoach" ("id" TEXT PRIMARY KEY, "name" TEXT NOT NULL, "email" TEXT, "phone" TEXT, "commissionPct" DOUBLE PRECISION NOT NULL DEFAULT 0, "active" BOOLEAN NOT NULL DEFAULT TRUE, "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP)`,
         `CREATE TABLE IF NOT EXISTS "GymMember" ("id" TEXT PRIMARY KEY, "name" TEXT NOT NULL, "email" TEXT, "phone" TEXT, "sportId" TEXT REFERENCES "GymSport"("id") ON DELETE SET NULL, "coachId" TEXT REFERENCES "GymCoach"("id") ON DELETE SET NULL, "monthlyFee" DOUBLE PRECISION NOT NULL DEFAULT 0, "joinedAt" TEXT NOT NULL, "active" BOOLEAN NOT NULL DEFAULT TRUE, "notes" TEXT, "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP)`,
         `CREATE TABLE IF NOT EXISTS "GymPayment" ("memberId" TEXT NOT NULL REFERENCES "GymMember"("id") ON DELETE CASCADE, "period" TEXT NOT NULL, "amount" DOUBLE PRECISION NOT NULL, "method" TEXT, "note" TEXT, "paidAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP, PRIMARY KEY ("memberId", "period"))`,
+        `CREATE TABLE IF NOT EXISTS "GymExpense" ("id" TEXT PRIMARY KEY, "period" TEXT NOT NULL, "endPeriod" TEXT, "recurring" BOOLEAN NOT NULL DEFAULT FALSE, "category" TEXT NOT NULL, "label" TEXT, "amount" DOUBLE PRECISION NOT NULL, "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP)`,
         `CREATE TABLE IF NOT EXISTS "GymCoachPayout" ("coachId" TEXT NOT NULL REFERENCES "GymCoach"("id") ON DELETE CASCADE, "period" TEXT NOT NULL, "amount" DOUBLE PRECISION NOT NULL, "note" TEXT, "paidAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP, PRIMARY KEY ("coachId", "period"))`,
       ];
       for (const s of stmts) await prisma.$executeRawUnsafe(s);
@@ -96,73 +97,191 @@ const day = (v: unknown): string => {
 const round2 = (n: number) => Math.round(n * 1000) / 1000; // dinar: 3 decimals (millimes)
 const currentPeriod = () => new Date().toISOString().slice(0, 7);
 
-// ---------- monthly calculation ----------
-async function buildState(month: string) {
-  const [sports, coaches, members, payments, payouts] = (await Promise.all([
-    prisma.$queryRawUnsafe(`SELECT * FROM "GymSport" ORDER BY "name"`),
-    prisma.$queryRawUnsafe(`SELECT * FROM "GymCoach" ORDER BY "name"`),
-    prisma.$queryRawUnsafe(`SELECT * FROM "GymMember" ORDER BY "name"`),
-    prisma.$queryRawUnsafe(`SELECT * FROM "GymPayment" WHERE "period" = $1`, month),
-    prisma.$queryRawUnsafe(`SELECT * FROM "GymCoachPayout" WHERE "period" = $1`, month),
-  ])) as any[][];
+// ---------- monthly / yearly calculation ----------
+type Dataset = { sports: any[]; coaches: any[]; members: any[]; payments: Map<string, Map<string, any>>; payouts: Map<string, Map<string, any>>; expenses: any[] };
 
-  const paidByMember = new Map<string, any>(payments.map((p) => [p.memberId, p]));
+const expenseApplies = (e: any, month: string) =>
+  e.recurring ? e.period <= month && (!e.endPeriod || e.endPeriod >= month) : e.period === month;
+
+function monthCalc(month: string, d: Dataset, detail: boolean) {
+  const paidByMember = d.payments.get(month) ?? new Map<string, any>();
+  const payoutByCoach = d.payouts.get(month) ?? new Map<string, any>();
   // A member is billed for a month if still active and already joined by the end of that month.
-  const billed = members.filter((m) => m.active && String(m.joinedAt).slice(0, 7) <= month);
-
-  const memberRows = members.map((m) => {
-    const isBilled = billed.includes(m);
+  const memberRows = d.members.map((m) => {
+    const billed = !!m.active && String(m.joinedAt).slice(0, 7) <= month;
     const pay = paidByMember.get(m.id);
-    const due = isBilled ? m.monthlyFee : 0;
+    const due = billed ? m.monthlyFee : 0;
     const paid = pay ? pay.amount : 0;
-    const status = !isBilled && !pay ? "n/a" : paid >= due && paid > 0 ? "paid" : paid > 0 ? "partial" : "unpaid";
-    return { ...m, billed: isBilled, due, paid, status, paymentMethod: pay?.method ?? null, paymentNote: pay?.note ?? null };
+    const status = !billed && !pay ? "n/a" : paid >= due && paid > 0 ? "paid" : paid > 0 ? "partial" : "unpaid";
+    return { ...m, billed, due, paid, status, paymentMethod: pay?.method ?? null, paymentNote: pay?.note ?? null };
   });
 
-  const payoutByCoach = new Map<string, any>(payouts.map((p) => [p.coachId, p]));
-  const coachRows = coaches.map((c) => {
+  const coachRows = d.coaches.map((c) => {
     const mine = memberRows.filter((m) => m.coachId === c.id && (m.billed || m.paid > 0));
-    const due = round2(mine.reduce((s, m) => s + m.due, 0));
-    const collected = round2(mine.reduce((s, m) => s + m.paid, 0));
+    const due = round2(mine.reduce((a, m) => a + m.due, 0));
+    const collected = round2(mine.reduce((a, m) => a + m.paid, 0));
     const commission = round2((collected * c.commissionPct) / 100); // earned on money actually collected
-    const potential = round2((due * c.commissionPct) / 100); // what it would be if everyone paid
     const payout = payoutByCoach.get(c.id);
     const paidOut = payout ? payout.amount : 0;
     return {
       id: c.id, name: c.name, commissionPct: c.commissionPct, members: mine.length,
-      due, collected, commission, potential, paidOut, balance: round2(commission - paidOut),
-      payoutNote: payout?.note ?? null,
+      due, collected, commission, potential: round2((due * c.commissionPct) / 100),
+      paidOut, balance: round2(commission - paidOut), payoutNote: payout?.note ?? null,
     };
   });
 
-  const due = round2(memberRows.reduce((s, m) => s + m.due, 0));
-  const collected = round2(memberRows.reduce((s, m) => s + m.paid, 0));
-  const commissions = round2(coachRows.reduce((s, c) => s + c.commission, 0));
-  const paidOut = round2(coachRows.reduce((s, c) => s + c.paidOut, 0));
-
-  const bySport = sports.map((s) => {
-    const mine = memberRows.filter((m) => m.sportId === s.id && (m.billed || m.paid > 0));
-    return { id: s.id, name: s.name, members: mine.length, due: round2(mine.reduce((a, m) => a + m.due, 0)), collected: round2(mine.reduce((a, m) => a + m.paid, 0)) };
-  });
-
-  return {
+  const expenseRows = d.expenses.filter((e) => expenseApplies(e, month));
+  const expenses = round2(expenseRows.reduce((a, e) => a + e.amount, 0));
+  const due = round2(memberRows.reduce((a, m) => a + m.due, 0));
+  const collected = round2(memberRows.reduce((a, m) => a + m.paid, 0));
+  const commissions = round2(coachRows.reduce((a, c) => a + c.commission, 0));
+  const paidOut = round2(coachRows.reduce((a, c) => a + c.paidOut, 0));
+  const summary = {
     month,
-    sports,
-    coaches,
-    members: memberRows,
+    activeMembers: memberRows.filter((m) => m.billed).length,
+    due, collected, outstanding: round2(Math.max(0, due - collected)),
+    commissions, paidOut, commissionsToPay: round2(commissions - paidOut),
+    expenses, net: round2(collected - commissions - expenses), // net = collected - coach commissions - other expenses
+  };
+  if (!detail) return { summary, expenseRows };
+
+  const byCategory: Record<string, number> = {};
+  for (const e of expenseRows) byCategory[e.category] = round2((byCategory[e.category] || 0) + e.amount);
+  const bySport = d.sports.map((sp) => {
+    const mine = memberRows.filter((m) => m.sportId === sp.id && (m.billed || m.paid > 0));
+    return { id: sp.id, name: sp.name, members: mine.length, due: round2(mine.reduce((a, m) => a + m.due, 0)), collected: round2(mine.reduce((a, m) => a + m.paid, 0)) };
+  });
+  return { summary, members: memberRows, coaches: coachRows, sports: bySport, expenseRows, expensesByCategory: byCategory };
+}
+
+async function loadDataset(year: string): Promise<Dataset> {
+  const [sports, coaches, members, payments, payouts, expenses] = (await Promise.all([
+    prisma.$queryRawUnsafe(`SELECT * FROM "GymSport" ORDER BY "name"`),
+    prisma.$queryRawUnsafe(`SELECT * FROM "GymCoach" ORDER BY "name"`),
+    prisma.$queryRawUnsafe(`SELECT * FROM "GymMember" ORDER BY "name"`),
+    prisma.$queryRawUnsafe(`SELECT * FROM "GymPayment" WHERE "period" LIKE $1`, `${year}-%`),
+    prisma.$queryRawUnsafe(`SELECT * FROM "GymCoachPayout" WHERE "period" LIKE $1`, `${year}-%`),
+    prisma.$queryRawUnsafe(`SELECT * FROM "GymExpense" ORDER BY "period", "category"`),
+  ])) as any[][];
+  const group = (rows: any[], key: string) => {
+    const m = new Map<string, Map<string, any>>();
+    for (const r of rows) { if (!m.has(r.period)) m.set(r.period, new Map()); m.get(r.period)!.set(r[key], r); }
+    return m;
+  };
+  return { sports, coaches, members, payments: group(payments, "memberId"), payouts: group(payouts, "coachId"), expenses };
+}
+
+async function buildState(month: string) {
+  const year = month.slice(0, 4);
+  const d = await loadDataset(year);
+  const cur = monthCalc(month, d, true) as any;
+  const months = Array.from({ length: 12 }, (_, i) => `${year}-${String(i + 1).padStart(2, "0")}`);
+  const series = months.map((m) => monthCalc(m, d, false));
+  const sum = (k: string) => round2(series.reduce((a, x: any) => a + x.summary[k], 0));
+  const yearCategories: Record<string, number> = {};
+  for (const x of series) for (const e of x.expenseRows) yearCategories[e.category] = round2((yearCategories[e.category] || 0) + e.amount);
+  return {
+    month, year,
+    sports: d.sports, coaches: d.coaches, members: cur.members,
+    expenses: d.expenses,
+    payments: [...d.payments.values()].flatMap((m) => [...m.values()]).map((x) => ({ memberId: x.memberId, period: x.period, amount: x.amount, method: x.method, note: x.note })),
     report: {
-      activeMembers: billed.length,
-      due, collected, outstanding: round2(Math.max(0, due - collected)),
-      commissions, paidOut, commissionsToPay: round2(commissions - paidOut),
-      net: round2(collected - commissions),
-      coaches: coachRows,
-      sports: bySport,
+      ...cur.summary, coaches: cur.coaches, sports: cur.sports,
+      expenseRows: cur.expenseRows, expensesByCategory: cur.expensesByCategory,
+    },
+    yearReport: {
+      months: series.map((x) => x.summary),
+      totals: { due: sum("due"), collected: sum("collected"), commissions: sum("commissions"), expenses: sum("expenses"), net: sum("net") },
+      expensesByCategory: yearCategories,
     },
   };
 }
 
+// ---------- Excel import (rows already parsed in the browser) ----------
+const MAX_IMPORT_ROWS = 2000;
+const key = (v: unknown) => String(v ?? "").trim().toLowerCase();
+
+/** Applies sheets Sports / Coachs / Membres / Paiements / Charges. All-or-nothing; sports and coaches are matched by name. */
+async function importData(data: any): Promise<Record<string, number>> {
+  const list = (x: unknown): any[] => (Array.isArray(x) ? x : []);
+  const d = { sports: list(data?.sports), coaches: list(data?.coaches), members: list(data?.members), payments: list(data?.payments), expenses: list(data?.expenses) };
+  const total = Object.values(d).reduce((a, x) => a + x.length, 0);
+  if (!total) throw new BadRequest("Le fichier ne contient aucune ligne à importer");
+  if (total > MAX_IMPORT_ROWS) throw new BadRequest(`Trop de lignes (maximum ${MAX_IMPORT_ROWS})`);
+
+  const [dbSports, dbCoaches, dbMembers] = (await Promise.all([
+    prisma.$queryRawUnsafe(`SELECT "id","name" FROM "GymSport"`),
+    prisma.$queryRawUnsafe(`SELECT "id","name" FROM "GymCoach"`),
+    prisma.$queryRawUnsafe(`SELECT "id","name" FROM "GymMember"`),
+  ])) as any[][];
+  const sportId = new Map<string, string>(dbSports.map((r) => [key(r.name), r.id]));
+  const coachId = new Map<string, string>(dbCoaches.map((r) => [key(r.name), r.id]));
+  const memberId = new Map<string, string>(dbMembers.map((r) => [key(r.name), r.id]));
+  const ops: any[] = [];
+  const run = (sql: string, ...a: any[]) => ops.push(prisma.$executeRawUnsafe(sql, ...a));
+  const where = (sheet: string, i: number) => `${sheet}, ligne ${i + 2}`;
+  const wrap = <T,>(sheet: string, i: number, fn: () => T): T => {
+    try { return fn(); } catch (e: any) { throw new BadRequest(`${where(sheet, i)} : ${e instanceof BadRequest ? e.message : "valeur invalide"}`); }
+  };
+  const ensureSport = (name: string) => {
+    if (!sportId.has(key(name))) { const id = randomUUID(); sportId.set(key(name), id); run(`INSERT INTO "GymSport" ("id","name","monthlyFee") VALUES ($1,$2,0)`, id, name); }
+    return sportId.get(key(name))!;
+  };
+  const ensureCoach = (name: string) => {
+    if (!coachId.has(key(name))) { const id = randomUUID(); coachId.set(key(name), id); run(`INSERT INTO "GymCoach" ("id","name","commissionPct") VALUES ($1,$2,0)`, id, name); }
+    return coachId.get(key(name))!;
+  };
+  const count: Record<string, number> = { sports: 0, coaches: 0, members: 0, payments: 0, expenses: 0 };
+
+  d.sports.forEach((r, i) => wrap("Sports", i, () => {
+    const name = str(r.name, 80, true)!, fee = num(r.monthlyFee ?? 0, 0, 100000);
+    const id = sportId.get(key(name));
+    if (id) run(`UPDATE "GymSport" SET "monthlyFee"=$2 WHERE "id"=$1`, id, fee);
+    else { const nid = randomUUID(); sportId.set(key(name), nid); run(`INSERT INTO "GymSport" ("id","name","monthlyFee") VALUES ($1,$2,$3)`, nid, name, fee); }
+    count["sports"]++;
+  }));
+  d.coaches.forEach((r, i) => wrap("Coachs", i, () => {
+    const name = str(r.name, 120, true)!, pct = num(r.commissionPct ?? 0, 0, 100);
+    const id = coachId.get(key(name));
+    if (id) run(`UPDATE "GymCoach" SET "email"=$2,"phone"=$3,"commissionPct"=$4 WHERE "id"=$1`, id, str(r.email, 200), str(r.phone, 40), pct);
+    else { const nid = randomUUID(); coachId.set(key(name), nid); run(`INSERT INTO "GymCoach" ("id","name","email","phone","commissionPct") VALUES ($1,$2,$3,$4,$5)`, nid, name, str(r.email, 200), str(r.phone, 40), pct); }
+    count["coaches"]++;
+  }));
+  d.members.forEach((r, i) => wrap("Membres", i, () => {
+    const name = str(r.name, 120, true)!;
+    const sport = str(r.sport, 80), coach = str(r.coach, 120);
+    const args = [
+      str(r.email, 200), str(r.phone, 40), sport ? ensureSport(sport) : null, coach ? ensureCoach(coach) : null,
+      num(r.monthlyFee ?? 0, 0, 100000), day(r.joinedAt), r.active !== false, str(r.notes, 500),
+    ] as const;
+    const id = memberId.get(key(name));
+    if (id) run(`UPDATE "GymMember" SET "email"=$2,"phone"=$3,"sportId"=$4,"coachId"=$5,"monthlyFee"=$6,"joinedAt"=$7,"active"=$8,"notes"=$9 WHERE "id"=$1`, id, ...args);
+    else { const nid = randomUUID(); memberId.set(key(name), nid); run(`INSERT INTO "GymMember" ("id","name","email","phone","sportId","coachId","monthlyFee","joinedAt","active","notes") VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)`, nid, name, ...args); }
+    count["members"]++;
+  }));
+  d.payments.forEach((r, i) => wrap("Paiements", i, () => {
+    const id = memberId.get(key(r.member));
+    if (!id) throw new BadRequest(`membre inconnu « ${String(r.member ?? "")} » (ajoutez-le dans la feuille Membres)`);
+    run(`INSERT INTO "GymPayment" ("memberId","period","amount","method","note") VALUES ($1,$2,$3,$4,$5)
+         ON CONFLICT ("memberId","period") DO UPDATE SET "amount"=$3,"method"=$4,"note"=$5`,
+        id, period(r.month), num(r.amount, 0, 100000), str(r.method, 40), str(r.note, 200));
+    count["payments"]++;
+  }));
+  d.expenses.forEach((r, i) => wrap("Charges", i, () => {
+    const recurring = /^(oui|yes|true|1|vrai|mensuel)$/i.test(String(r.recurring ?? ""));
+    const start = period(r.month);
+    const end = recurring && r.endMonth ? period(r.endMonth) : null;
+    run(`INSERT INTO "GymExpense" ("id","period","endPeriod","recurring","category","label","amount") VALUES ($1,$2,$3,$4,$5,$6,$7)`,
+        randomUUID(), start, end, recurring, str(r.category, 40, true), str(r.label, 120), num(r.amount, 0, 10_000_000));
+    count["expenses"]++;
+  }));
+
+  await prisma.$transaction(ops);
+  return count;
+}
+
 // ---------- actions ----------
-async function runAction(body: any, who: { user: string }): Promise<void> {
+async function runAction(body: any, who: { user: string }): Promise<{ imported: Record<string, number> } | void> {
   const id = typeof body.id === "string" && body.id ? body.id : null;
   switch (body.action) {
     case "sport_save": {
@@ -215,6 +334,21 @@ async function runAction(body: any, who: { user: string }): Promise<void> {
     case "payout_delete":
       await prisma.$executeRawUnsafe(`DELETE FROM "GymCoachPayout" WHERE "coachId"=$1 AND "period"=$2`, str(body.coachId, 64, true), period(body.period));
       return;
+    case "expense_save": {
+      const recurring = body.recurring === true;
+      const start = period(body.period);
+      const end = recurring && body.endPeriod ? period(body.endPeriod) : null;
+      if (end && end < start) throw new BadRequest("La fin doit être après le début");
+      const args = [start, end, recurring, str(body.category, 40, true), str(body.label, 120), num(body.amount, 0, 10_000_000)] as const;
+      if (id) await prisma.$executeRawUnsafe(`UPDATE "GymExpense" SET "period"=$2,"endPeriod"=$3,"recurring"=$4,"category"=$5,"label"=$6,"amount"=$7 WHERE "id"=$1`, id, ...args);
+      else await prisma.$executeRawUnsafe(`INSERT INTO "GymExpense" ("id","period","endPeriod","recurring","category","label","amount") VALUES ($1,$2,$3,$4,$5,$6,$7)`, randomUUID(), ...args);
+      return;
+    }
+    case "expense_delete":
+      await prisma.$executeRawUnsafe(`DELETE FROM "GymExpense" WHERE "id"=$1`, str(body.id, 64, true));
+      return;
+    case "import_data":
+      return { imported: await importData(body.data) };
     default:
       throw new BadRequest("Action inconnue");
   }
@@ -267,8 +401,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       return res.status(200).json({ me: who.user, ...(await buildState(month)) });
     }
     if (req.method === "POST") {
-      await runAction(req.body || {}, who);
-      return res.status(200).json({ ok: true });
+      const result = await runAction(req.body || {}, who);
+      return res.status(200).json({ ok: true, ...(result || {}) });
     }
     return res.status(405).json({ error: "Méthode non autorisée" });
   } catch (e: any) {
