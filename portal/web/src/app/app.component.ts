@@ -42,6 +42,7 @@ import { MatIconModule } from '@angular/material/icon';
             <a href="/privacy_policy.html">Privacy Policy</a>
             <a href="/term_of-service.html">Terms of Service</a>
             <a *ngIf="auth.isAdmin()" routerLink="/admin">Admin Dashboard</a>
+            <a *ngIf="auth.isAdmin()" routerLink="/gym">Gym Back Office</a>
             <a href="/rss.xml" target="_blank" rel="noopener">RSS Feed</a>
             <a href="/sitemap.xml" target="_blank" rel="noopener">XML Sitemap</a>
             <a href="/llms.txt" target="_blank" rel="noopener">AI Index (llms.txt)</a>
