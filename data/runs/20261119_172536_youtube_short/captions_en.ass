@@ -1,0 +1,51 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:02.70,Headline,,0,0,0,,{\fad(150,150)}BRAIN CAN'T MOVE THIS
+Dialogue: 1,0:00:02.80,0:00:09.03,Headline,,0,0,0,,{\fad(150,150)}TUCK MIDDLE FINGER
+Dialogue: 1,0:00:09.13,0:00:15.89,Headline,,0,0,0,,{\fad(150,150)}TRY TO LIFT IT
+Dialogue: 1,0:00:15.99,0:00:21.98,Headline,,0,0,0,,{\fad(150,150)}YOUR BRAIN DISCONNECTED
+Dialogue: 1,0:00:22.08,0:00:29.66,Headline,,0,0,0,,{\fad(150,150)}LOCKED TENDON SYSTEM
+Dialogue: 1,0:00:29.76,0:00:36.28,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 0,0:00:00.10,0:00:00.96,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your brain {\c&H0000E5FF&}cannot{\c&H00FFFFFF&}
+Dialogue: 0,0:00:00.97,0:00:01.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}move this {\c&H0000E5FF&}finger{\c&H00FFFFFF&}
+Dialogue: 0,0:00:02.85,0:00:03.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Lay your {\c&H0000E5FF&}palm{\c&H00FFFFFF&}
+Dialogue: 0,0:00:03.57,0:00:04.09,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}flat{\c&H00FFFFFF&} on a
+Dialogue: 0,0:00:04.10,0:00:04.60,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}desk
+Dialogue: 0,0:00:05.41,0:00:06.35,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Now {\c&H0000E5FF&}tuck{\c&H00FFFFFF&} your
+Dialogue: 0,0:00:06.36,0:00:07.39,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}middle finger {\c&H0000E5FF&}tightly{\c&H00FFFFFF&}
+Dialogue: 0,0:00:07.40,0:00:08.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}under{\c&H00FFFFFF&} your palm
+Dialogue: 0,0:00:09.18,0:00:09.77,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You can {\c&H0000E5FF&}lift{\c&H00FFFFFF&}
+Dialogue: 0,0:00:09.78,0:00:10.90,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}thumb{\c&H00FFFFFF&} index
+Dialogue: 0,0:00:11.07,0:00:12.14,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and pinky {\c&H0000E5FF&}easily{\c&H00FFFFFF&}
+Dialogue: 0,0:00:12.96,0:00:13.85,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}But now try
+Dialogue: 0,0:00:13.86,0:00:14.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to {\c&H0000E5FF&}lift{\c&H00FFFFFF&} your
+Dialogue: 0,0:00:14.36,0:00:15.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}ring {\c&H0000E5FF&}finger{\c&H00FFFFFF&}
+Dialogue: 0,0:00:16.04,0:00:17.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Wait it {\c&H0000E5FF&}feels{\c&H00FFFFFF&}
+Dialogue: 0,0:00:17.03,0:00:17.62,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}like your {\c&H0000E5FF&}brain{\c&H00FFFFFF&}
+Dialogue: 0,0:00:17.63,0:00:19.01,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}just {\c&H0000E5FF&}disconnected{\c&H00FFFFFF&} right
+Dialogue: 0,0:00:19.82,0:00:20.29,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}This is the
+Dialogue: 0,0:00:20.30,0:00:21.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}creepy{\c&H00FFFFFF&} part
+Dialogue: 0,0:00:22.13,0:00:22.75,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}middle{\c&H00FFFFFF&} and
+Dialogue: 0,0:00:22.77,0:00:23.69,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}ring {\c&H0000E5FF&}fingers{\c&H00FFFFFF&} share
+Dialogue: 0,0:00:23.70,0:00:24.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the same {\c&H0000E5FF&}extensor{\c&H00FFFFFF&}
+Dialogue: 0,0:00:24.62,0:00:25.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}tendon
+Dialogue: 0,0:00:25.93,0:00:26.69,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}By {\c&H0000E5FF&}pinning{\c&H00FFFFFF&} one
+Dialogue: 0,0:00:26.94,0:00:27.92,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you've {\c&H0000E5FF&}essentially{\c&H00FFFFFF&} locked
+Dialogue: 0,0:00:27.93,0:00:28.80,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}other's{\c&H00FFFFFF&} engine
+Dialogue: 0,0:00:29.80,0:00:30.80,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Subscribe{\c&H00FFFFFF&} for more
+Dialogue: 0,0:00:30.82,0:00:31.57,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}body {\c&H0000E5FF&}hacks{\c&H00FFFFFF&} and
+Dialogue: 0,0:00:31.58,0:00:32.40,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} STUCK if
+Dialogue: 0,0:00:32.41,0:00:33.06,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}this {\c&H0000E5FF&}worked{\c&H00FFFFFF&}
+Dialogue: 0,0:00:33.87,0:00:34.80,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}The {\c&H0000E5FF&}truth{\c&H00FFFFFF&} is

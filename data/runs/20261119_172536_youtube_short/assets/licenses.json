@@ -1,0 +1,62 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-73847/",
+    "author": "JustYøu",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man hand table",
+    "description": "A man's hand is shown flat on a dark wooden table, fingers spread out in a high-contrast cinematic shot."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-330898/",
+    "author": "danydory",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hand pressing down",
+    "description": "Close-up of a hand performing the specific movement, folding the middle finger underneath so the knuckle touches the surface."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-3593/",
+    "author": "Life-Of-Vids",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "fingers moving macro",
+    "description": "Macro shot of a hand struggling to lift the ring finger while the middle finger remains pinned down."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-42854/",
+    "author": "aghyadnajjar",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man shocked face",
+    "description": "A tight close-up of a man's face looking confused and staring down at his hand in disbelief."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-4939/",
+    "author": "motion5",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "mechanical gears turning",
+    "description": "Dynamic 3D animation of mechanical gears or anatomical structures showing how two parts are linked together."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-3160/",
+    "author": "Coverr-Free-Footage",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "typing fast keyboard",
+    "description": "A man quickly typing on a phone or laptop keyboard, followed by a nod towards the camera."
+  }
+]
