@@ -1,547 +1,562 @@
 {
   "voice": "en-US-AriaNeural",
-  "duration": 41.268073,
+  "duration": 42.612041,
   "scenes": [
     {
       "scene": "scene_01",
       "start": 0.0,
-      "end": 3.192,
+      "end": 4.176,
       "words": [
         {
           "start": 0.097,
-          "end": 0.368,
-          "text": "Look"
-        },
-        {
-          "start": 0.38,
-          "end": 0.486,
-          "text": "at"
-        },
-        {
-          "start": 0.498,
-          "end": 0.781,
-          "text": "me"
-        },
-        {
-          "start": 1.604,
-          "end": 1.84,
+          "end": 0.321,
           "text": "Pick"
         },
         {
-          "start": 1.851,
-          "end": 1.922,
+          "start": 0.333,
+          "end": 0.404,
           "text": "a"
         },
         {
-          "start": 1.934,
-          "end": 2.358,
+          "start": 0.416,
+          "end": 0.722,
           "text": "color"
+        },
+        {
+          "start": 0.734,
+          "end": 0.852,
+          "text": "and"
+        },
+        {
+          "start": 0.864,
+          "end": 0.899,
+          "text": "a"
+        },
+        {
+          "start": 0.911,
+          "end": 1.406,
+          "text": "shape"
+        },
+        {
+          "start": 2.217,
+          "end": 2.441,
+          "text": "I'm"
+        },
+        {
+          "start": 2.453,
+          "end": 2.712,
+          "text": "reading"
+        },
+        {
+          "start": 2.724,
+          "end": 2.842,
+          "text": "your"
+        },
+        {
+          "start": 2.854,
+          "end": 3.349,
+          "text": "mind"
         }
       ]
     },
     {
       "scene": "scene_02",
-      "start": 3.282,
-      "end": 8.562,
+      "start": 4.266,
+      "end": 9.906,
       "words": [
         {
-          "start": 3.379,
-          "end": 3.674,
+          "start": 4.363,
+          "end": 4.658,
           "text": "Don't"
         },
         {
-          "start": 3.686,
-          "end": 4.157,
+          "start": 4.67,
+          "end": 5.141,
           "text": "overthink"
         },
         {
-          "start": 4.169,
-          "end": 4.499,
+          "start": 5.153,
+          "end": 5.483,
           "text": "it"
         },
         {
-          "start": 5.322,
-          "end": 5.629,
-          "text": "Just"
+          "start": 6.306,
+          "end": 6.672,
+          "text": "First"
         },
         {
-          "start": 5.64,
-          "end": 5.923,
-          "text": "grab"
+          "start": 6.683,
+          "end": 6.896,
+          "text": "thing"
         },
         {
-          "start": 5.935,
-          "end": 6.018,
-          "text": "the"
-        },
-        {
-          "start": 6.03,
-          "end": 6.336,
-          "text": "first"
-        },
-        {
-          "start": 6.348,
-          "end": 6.525,
-          "text": "one"
-        },
-        {
-          "start": 6.537,
-          "end": 6.666,
+          "start": 6.908,
+          "end": 7.014,
           "text": "that"
         },
         {
-          "start": 6.678,
-          "end": 6.997,
-          "text": "pops"
+          "start": 7.025,
+          "end": 7.273,
+          "text": "hits"
         },
         {
-          "start": 7.008,
-          "end": 7.173,
-          "text": "into"
-        },
-        {
-          "start": 7.185,
-          "end": 7.327,
+          "start": 7.285,
+          "end": 7.391,
           "text": "your"
         },
         {
-          "start": 7.339,
-          "end": 7.728,
-          "text": "head"
+          "start": 7.403,
+          "end": 7.733,
+          "text": "brain"
+        },
+        {
+          "start": 8.04,
+          "end": 8.264,
+          "text": "lock"
+        },
+        {
+          "start": 8.275,
+          "end": 8.358,
+          "text": "it"
+        },
+        {
+          "start": 8.37,
+          "end": 8.511,
+          "text": "in"
+        },
+        {
+          "start": 8.523,
+          "end": 8.724,
+          "text": "right"
+        },
+        {
+          "start": 8.735,
+          "end": 9.077,
+          "text": "now"
         }
       ]
     },
     {
       "scene": "scene_03",
-      "start": 8.652,
-      "end": 15.708,
+      "start": 9.996,
+      "end": 15.684,
       "words": [
         {
-          "start": 8.749,
-          "end": 9.174,
-          "text": "Now"
+          "start": 10.093,
+          "end": 10.459,
+          "text": "Most"
         },
         {
-          "start": 9.362,
-          "end": 9.622,
-          "text": "double"
+          "start": 10.471,
+          "end": 10.754,
+          "text": "people"
         },
         {
-          "start": 9.634,
-          "end": 9.716,
-          "text": "the"
+          "start": 10.765,
+          "end": 10.966,
+          "text": "try"
         },
         {
-          "start": 9.728,
-          "end": 10.306,
-          "text": "intensity"
+          "start": 10.978,
+          "end": 11.06,
+          "text": "to"
         },
         {
-          "start": 10.318,
-          "end": 10.388,
-          "text": "of"
+          "start": 11.072,
+          "end": 11.32,
+          "text": "pick"
         },
         {
-          "start": 10.4,
-          "end": 10.601,
-          "text": "that"
+          "start": 11.331,
+          "end": 11.662,
+          "text": "something"
         },
         {
-          "start": 10.612,
-          "end": 10.895,
-          "text": "color"
+          "start": 11.673,
+          "end": 12.133,
+          "text": "complex"
         },
         {
-          "start": 10.907,
-          "end": 10.99,
-          "text": "in"
+          "start": 12.145,
+          "end": 12.228,
+          "text": "to"
         },
         {
-          "start": 11.002,
-          "end": 11.096,
+          "start": 12.239,
+          "end": 12.522,
+          "text": "trick"
+        },
+        {
+          "start": 12.534,
+          "end": 12.735,
+          "text": "me"
+        },
+        {
+          "start": 12.959,
+          "end": 13.088,
+          "text": "but"
+        },
+        {
+          "start": 13.1,
+          "end": 13.218,
+          "text": "I've"
+        },
+        {
+          "start": 13.23,
+          "end": 13.572,
+          "text": "already"
+        },
+        {
+          "start": 13.584,
+          "end": 13.902,
+          "text": "primed"
+        },
+        {
+          "start": 13.914,
+          "end": 14.008,
           "text": "your"
         },
         {
-          "start": 11.108,
-          "end": 11.591,
-          "text": "mind"
-        },
-        {
-          "start": 12.414,
-          "end": 12.909,
-          "text": "Imagine"
-        },
-        {
-          "start": 12.921,
-          "end": 13.027,
-          "text": "it"
-        },
-        {
-          "start": 13.039,
-          "end": 13.345,
-          "text": "filling"
-        },
-        {
-          "start": 13.357,
-          "end": 13.416,
-          "text": "the"
-        },
-        {
-          "start": 13.428,
-          "end": 13.911,
-          "text": "entire"
-        },
-        {
-          "start": 13.923,
-          "end": 14.159,
-          "text": "room"
-        },
-        {
-          "start": 14.171,
-          "end": 14.301,
-          "text": "you’re"
-        },
-        {
-          "start": 14.312,
-          "end": 14.607,
-          "text": "sitting"
-        },
-        {
-          "start": 14.619,
-          "end": 14.89,
-          "text": "in"
+          "start": 14.02,
+          "end": 14.857,
+          "text": "subconscious"
         }
       ]
     },
     {
       "scene": "scene_04",
-      "start": 15.798,
-      "end": 22.806,
+      "start": 15.774,
+      "end": 22.302,
       "words": [
         {
-          "start": 15.895,
-          "end": 16.331,
+          "start": 15.871,
+          "end": 16.402,
           "text": "Wait"
         },
         {
-          "start": 16.532,
-          "end": 16.591,
-          "text": "I"
-        },
-        {
-          "start": 16.603,
-          "end": 16.78,
-          "text": "can"
-        },
-        {
-          "start": 16.791,
-          "end": 16.933,
-          "text": "see"
-        },
-        {
-          "start": 16.945,
-          "end": 17.051,
-          "text": "you"
-        },
-        {
-          "start": 17.063,
-          "end": 17.346,
-          "text": "trying"
-        },
-        {
-          "start": 17.357,
-          "end": 17.428,
-          "text": "to"
-        },
-        {
-          "start": 17.44,
-          "end": 17.758,
-          "text": "change"
-        },
-        {
-          "start": 17.77,
-          "end": 17.841,
-          "text": "your"
-        },
-        {
-          "start": 17.853,
-          "end": 18.313,
-          "text": "mind"
-        },
-        {
-          "start": 19.123,
-          "end": 19.454,
-          "text": "Stay"
-        },
-        {
-          "start": 19.465,
-          "end": 20.149,
-          "text": "focused"
-        },
-        {
-          "start": 20.963,
-          "end": 21.234,
+          "start": 17.201,
+          "end": 17.437,
           "text": "Don't"
         },
         {
-          "start": 21.246,
-          "end": 21.494,
-          "text": "switch"
+          "start": 17.449,
+          "end": 17.566,
+          "text": "you"
         },
         {
-          "start": 21.506,
-          "end": 21.6,
+          "start": 17.578,
+          "end": 17.826,
+          "text": "dare"
+        },
+        {
+          "start": 17.838,
+          "end": 18.156,
+          "text": "change"
+        },
+        {
+          "start": 18.168,
+          "end": 18.451,
           "text": "it"
         },
         {
-          "start": 21.612,
-          "end": 21.977,
+          "start": 19.276,
+          "end": 19.418,
+          "text": "I"
+        },
+        {
+          "start": 19.43,
+          "end": 19.607,
+          "text": "can"
+        },
+        {
+          "start": 19.618,
+          "end": 19.76,
+          "text": "see"
+        },
+        {
+          "start": 19.772,
+          "end": 19.878,
+          "text": "you"
+        },
+        {
+          "start": 19.89,
+          "end": 20.232,
+          "text": "thinking"
+        },
+        {
+          "start": 20.243,
+          "end": 20.491,
+          "text": "about"
+        },
+        {
+          "start": 20.503,
+          "end": 20.904,
+          "text": "switching"
+        },
+        {
+          "start": 20.915,
+          "end": 21.104,
+          "text": "right"
+        },
+        {
+          "start": 21.116,
+          "end": 21.458,
           "text": "now"
         }
       ]
     },
     {
       "scene": "scene_05",
-      "start": 22.896,
-      "end": 29.232,
+      "start": 22.392,
+      "end": 29.568,
       "words": [
         {
-          "start": 22.993,
-          "end": 23.359,
-          "text": "Most"
+          "start": 22.489,
+          "end": 22.701,
+          "text": "Your"
         },
         {
-          "start": 23.371,
-          "end": 23.665,
-          "text": "people"
-        },
-        {
-          "start": 23.677,
-          "end": 23.878,
-          "text": "try"
-        },
-        {
-          "start": 23.889,
-          "end": 23.972,
-          "text": "to"
-        },
-        {
-          "start": 23.984,
-          "end": 24.102,
-          "text": "be"
-        },
-        {
-          "start": 24.113,
-          "end": 24.573,
-          "text": "unique"
-        },
-        {
-          "start": 24.833,
-          "end": 24.962,
-          "text": "but"
-        },
-        {
-          "start": 24.974,
-          "end": 25.116,
-          "text": "your"
-        },
-        {
-          "start": 25.128,
-          "end": 25.399,
+          "start": 22.713,
+          "end": 22.996,
           "text": "brain"
         },
         {
-          "start": 25.411,
-          "end": 25.8,
-          "text": "follows"
+          "start": 23.008,
+          "end": 23.409,
+          "text": "relies"
         },
         {
-          "start": 25.812,
-          "end": 26.366,
-          "text": "predictable"
+          "start": 23.421,
+          "end": 23.55,
+          "text": "on"
         },
         {
-          "start": 26.378,
-          "end": 26.672,
-          "text": "neural"
+          "start": 23.562,
+          "end": 24.058,
+          "text": "cognitive"
         },
         {
-          "start": 26.684,
-          "end": 27.262,
+          "start": 24.069,
+          "end": 24.777,
           "text": "shortcuts"
         },
         {
-          "start": 27.274,
-          "end": 27.427,
-          "text": "I've"
+          "start": 25.588,
+          "end": 25.788,
+          "text": "I'm"
         },
         {
-          "start": 27.439,
-          "end": 27.875,
-          "text": "secretly"
+          "start": 25.8,
+          "end": 26.142,
+          "text": "using"
         },
         {
-          "start": 27.887,
-          "end": 28.406,
-          "text": "triggered"
+          "start": 26.154,
+          "end": 26.401,
+          "text": "dark"
+        },
+        {
+          "start": 26.413,
+          "end": 27.074,
+          "text": "psychology"
+        },
+        {
+          "start": 27.085,
+          "end": 27.203,
+          "text": "to"
+        },
+        {
+          "start": 27.215,
+          "end": 27.522,
+          "text": "force"
+        },
+        {
+          "start": 27.533,
+          "end": 27.64,
+          "text": "your"
+        },
+        {
+          "start": 27.651,
+          "end": 27.97,
+          "text": "choice"
+        },
+        {
+          "start": 27.982,
+          "end": 28.17,
+          "text": "into"
+        },
+        {
+          "start": 28.182,
+          "end": 28.253,
+          "text": "a"
+        },
+        {
+          "start": 28.265,
+          "end": 28.736,
+          "text": "corner"
         }
       ]
     },
     {
       "scene": "scene_06",
-      "start": 29.322,
-      "end": 34.914,
+      "start": 29.658,
+      "end": 36.258,
       "words": [
         {
-          "start": 29.419,
-          "end": 29.69,
-          "text": "Right"
+          "start": 29.755,
+          "end": 29.92,
+          "text": "The"
         },
         {
-          "start": 29.702,
-          "end": 29.985,
-          "text": "now"
+          "start": 29.932,
+          "end": 30.25,
+          "text": "color"
         },
         {
-          "start": 30.221,
-          "end": 30.315,
-          "text": "you"
+          "start": 30.262,
+          "end": 30.404,
+          "text": "is"
         },
         {
-          "start": 30.327,
-          "end": 30.445,
-          "text": "are"
-        },
-        {
-          "start": 30.457,
-          "end": 30.952,
-          "text": "picturing"
-        },
-        {
-          "start": 30.964,
-          "end": 31.023,
-          "text": "a"
-        },
-        {
-          "start": 31.035,
-          "end": 31.341,
-          "text": "bright"
-        },
-        {
-          "start": 31.353,
-          "end": 31.565,
+          "start": 30.416,
+          "end": 30.816,
           "text": "Red"
         },
         {
-          "start": 31.577,
-          "end": 32.143,
+          "start": 31.627,
+          "end": 31.792,
+          "text": "The"
+        },
+        {
+          "start": 31.804,
+          "end": 32.123,
+          "text": "shape"
+        },
+        {
+          "start": 32.134,
+          "end": 32.241,
+          "text": "is"
+        },
+        {
+          "start": 32.252,
+          "end": 32.311,
+          "text": "a"
+        },
+        {
+          "start": 32.323,
+          "end": 32.924,
           "text": "Triangle"
         },
         {
-          "start": 32.954,
-          "end": 33.131,
-          "text": "Did"
-        },
-        {
-          "start": 33.143,
-          "end": 33.249,
+          "start": 33.75,
+          "end": 33.891,
           "text": "I"
         },
         {
-          "start": 33.261,
-          "end": 33.52,
+          "start": 33.903,
+          "end": 34.163,
           "text": "just"
         },
         {
-          "start": 33.532,
-          "end": 33.815,
-          "text": "catch"
+          "start": 34.174,
+          "end": 34.399,
+          "text": "caught"
         },
         {
-          "start": 33.827,
-          "end": 34.098,
+          "start": 34.41,
+          "end": 34.575,
           "text": "you"
+        },
+        {
+          "start": 34.811,
+          "end": 35.094,
+          "text": "didn't"
+        },
+        {
+          "start": 35.106,
+          "end": 35.436,
+          "text": "I"
         }
       ]
     },
     {
       "scene": "scene_07",
-      "start": 35.004,
-      "end": 41.268,
+      "start": 36.348,
+      "end": 42.612,
       "words": [
         {
-          "start": 35.101,
-          "end": 35.714,
+          "start": 36.445,
+          "end": 37.058,
           "text": "Subscribe"
         },
         {
-          "start": 35.726,
-          "end": 35.868,
+          "start": 37.07,
+          "end": 37.212,
           "text": "for"
         },
         {
-          "start": 35.879,
-          "end": 36.339,
-          "text": "tomorrow’s"
+          "start": 37.223,
+          "end": 37.683,
+          "text": "tomorrow's"
         },
         {
-          "start": 36.351,
-          "end": 36.634,
+          "start": 37.695,
+          "end": 37.978,
           "text": "brain"
         },
         {
-          "start": 36.646,
-          "end": 37.0,
+          "start": 37.99,
+          "end": 38.344,
           "text": "test"
         },
         {
-          "start": 37.012,
-          "end": 37.106,
+          "start": 38.356,
+          "end": 38.45,
           "text": "and"
         },
         {
-          "start": 37.118,
-          "end": 37.495,
+          "start": 38.462,
+          "end": 38.839,
           "text": "comment"
         },
         {
-          "start": 37.507,
-          "end": 37.79,
+          "start": 38.851,
+          "end": 39.134,
           "text": "YES"
         },
         {
-          "start": 37.802,
-          "end": 37.908,
+          "start": 39.146,
+          "end": 39.252,
           "text": "if"
         },
         {
-          "start": 37.92,
-          "end": 38.096,
+          "start": 39.264,
+          "end": 39.44,
           "text": "this"
         },
         {
-          "start": 38.108,
-          "end": 38.568,
+          "start": 39.452,
+          "end": 39.912,
           "text": "worked"
         },
         {
-          "start": 39.379,
-          "end": 39.544,
+          "start": 40.723,
+          "end": 40.888,
           "text": "You"
         },
         {
-          "start": 39.556,
-          "end": 39.804,
+          "start": 40.9,
+          "end": 41.148,
           "text": "can't"
         },
         {
-          "start": 39.815,
-          "end": 40.075,
+          "start": 41.159,
+          "end": 41.419,
           "text": "help"
         },
         {
-          "start": 40.087,
-          "end": 40.44,
+          "start": 41.431,
+          "end": 41.784,
           "text": "but"
         }
       ]
