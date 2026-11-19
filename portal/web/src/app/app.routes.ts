@@ -1,16 +1,8 @@
-import { inject } from '@angular/core';
-import { Router, Routes } from '@angular/router';
-import { AuthService } from './services/auth.service';
+import { Routes } from '@angular/router';
 import { FeedComponent } from './components/feed/feed.component';
 import { PostDetailComponent } from './components/post-detail/post-detail.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AdminComponent } from './components/admin/admin.component';
-
-// The gym page is not reachable without a signed-in account; the server then checks the admin list.
-const signedInOnly = () => {
-  const auth = inject(AuthService);
-  return auth.isAuthenticated() ? true : inject(Router).parseUrl('/');
-};
 
 export const routes: Routes = [
   {
@@ -40,7 +32,6 @@ export const routes: Routes = [
   },
   {
     path: 'gym',
-    canMatch: [signedInOnly],
     loadComponent: () => import('./components/gym/gym.component').then((m) => m.GymComponent),
     title: 'Gym Back Office | Mind Decoded'
   },

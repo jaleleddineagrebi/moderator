@@ -1,18 +1,54 @@
 // Gym back office API (members, sports, coaches, monthly fees and coach commissions).
-// Every request must carry a Google access token; it is verified with Google on the server and the
-// e-mail must be on the admin list. The browser cannot grant itself access.
+// Access = phone number on a list of at most MAX_PHONES people + an SMS code (Twilio Verify).
+// After the code is accepted the server hands out a signed 12h session token; every other request must carry it.
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { randomUUID } from "crypto";
+import { createHmac, randomUUID, timingSafeEqual } from "crypto";
 import { prisma } from "./_prisma";
 
-const OWNER = "jalel.edine.agrebi@gmail.com";
-const GOOGLE_CLIENT_ID =
-  process.env["GOOGLE_CLIENT_ID"] || "701586086068-v014k4trutnrdd5gob94i4bem6s3ktag.apps.googleusercontent.com";
+const MAX_PHONES = 4; // owner included
+const SESSION_HOURS = 12;
 
-// Admins that cannot be removed from the UI: the owner plus the GYM_ADMIN_EMAILS env var (comma separated).
-function fixedAdmins(): Set<string> {
-  const list = [OWNER, process.env["ADMIN_EMAIL"] || "", ...(process.env["GYM_ADMIN_EMAILS"] || "").split(",")];
-  return new Set(list.map((e) => e.toLowerCase().trim()).filter(Boolean));
+/** Normalises a phone number to E.164. 8 digits are taken as Tunisian (+216). */
+function normalizePhone(v: unknown): string | null {
+  let p = String(v ?? "").replace(/[\s.\-()]/g, "");
+  if (p.startsWith("00")) p = "+" + p.slice(2);
+  if (/^\d{8}$/.test(p)) p = "+216" + p;
+  return /^\+[1-9]\d{7,14}$/.test(p) ? p : null;
+}
+
+const ownerPhone = (): string | null => normalizePhone(process.env["GYM_OWNER_PHONE"]);
+
+async function isAllowed(phone: string): Promise<boolean> {
+  if (phone === ownerPhone()) return true;
+  const rows: any[] = await prisma.$queryRawUnsafe(`SELECT "phone" FROM "GymPhone" WHERE "phone" = $1`, phone);
+  return rows.length > 0;
+}
+
+// ---------- session token (stateless, HMAC-signed) ----------
+function secret(): string {
+  const s = process.env["GYM_SESSION_SECRET"] || "";
+  if (s.length < 24) throw new Error("GYM_SESSION_SECRET is missing or too short");
+  return s;
+}
+const sign = (payload: string) => createHmac("sha256", secret()).update(payload).digest("base64url");
+function makeToken(phone: string): { token: string; expiresAt: number } {
+  const expiresAt = Date.now() + SESSION_HOURS * 3600_000;
+  const payload = Buffer.from(JSON.stringify({ p: phone, e: expiresAt })).toString("base64url");
+  return { token: `${payload}.${sign(payload)}`, expiresAt };
+}
+
+// ---------- SMS code via Twilio Verify ----------
+async function twilio(path: "Verifications" | "VerificationCheck", form: Record<string, string>): Promise<any> {
+  const sid = process.env["TWILIO_ACCOUNT_SID"], tok = process.env["TWILIO_AUTH_TOKEN"], svc = process.env["TWILIO_VERIFY_SID"];
+  if (!sid || !tok || !svc) throw new Error("Twilio is not configured");
+  const r = await fetch(`https://verify.twilio.com/v2/Services/${svc}/${path}`, {
+    method: "POST",
+    headers: { Authorization: "Basic " + Buffer.from(`${sid}:${tok}`).toString("base64"), "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(form).toString(),
+  });
+  const body: any = await r.json().catch(() => ({}));
+  if (!r.ok && r.status !== 404) console.warn("twilio verify error", r.status, body?.code);
+  return { ok: r.ok, body };
 }
 
 let tablesReady: Promise<void> | null = null;
@@ -20,7 +56,7 @@ function ensureTables(): Promise<void> {
   if (!tablesReady) {
     tablesReady = (async () => {
       const stmts = [
-        `CREATE TABLE IF NOT EXISTS "GymAdmin" ("email" TEXT PRIMARY KEY, "addedBy" TEXT, "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP)`,
+        `CREATE TABLE IF NOT EXISTS "GymPhone" ("phone" TEXT PRIMARY KEY, "name" TEXT, "addedBy" TEXT, "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP)`,
         `CREATE TABLE IF NOT EXISTS "GymSport" ("id" TEXT PRIMARY KEY, "name" TEXT NOT NULL UNIQUE, "monthlyFee" DOUBLE PRECISION NOT NULL DEFAULT 0, "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP)`,
         `CREATE TABLE IF NOT EXISTS "GymCoach" ("id" TEXT PRIMARY KEY, "name" TEXT NOT NULL, "email" TEXT, "phone" TEXT, "commissionPct" DOUBLE PRECISION NOT NULL DEFAULT 0, "active" BOOLEAN NOT NULL DEFAULT TRUE, "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP)`,
         `CREATE TABLE IF NOT EXISTS "GymMember" ("id" TEXT PRIMARY KEY, "name" TEXT NOT NULL, "email" TEXT, "phone" TEXT, "sportId" TEXT REFERENCES "GymSport"("id") ON DELETE SET NULL, "coachId" TEXT REFERENCES "GymCoach"("id") ON DELETE SET NULL, "monthlyFee" DOUBLE PRECISION NOT NULL DEFAULT 0, "joinedAt" TEXT NOT NULL, "active" BOOLEAN NOT NULL DEFAULT TRUE, "notes" TEXT, "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP)`,
@@ -36,26 +72,20 @@ function ensureTables(): Promise<void> {
   return tablesReady;
 }
 
-/** Returns the verified admin e-mail, or null. */
-async function authenticate(req: VercelRequest): Promise<{ email: string; fixed: boolean } | null> {
+/** Returns the phone of the signed-in person (still on the list), or null. */
+async function authenticate(req: VercelRequest): Promise<{ phone: string; owner: boolean } | null> {
   const header = String(req.headers["authorization"] || "");
   const token = header.startsWith("Bearer ") ? header.slice(7).trim() : "";
-  if (!token) return null;
-  let info: any;
-  try {
-    const r = await fetch(`https://oauth2.googleapis.com/tokeninfo?access_token=${encodeURIComponent(token)}`);
-    if (!r.ok) return null;
-    info = await r.json();
-  } catch {
-    return null;
-  }
-  const verified = info?.email_verified === true || info?.email_verified === "true";
-  if (!verified || info?.aud !== GOOGLE_CLIENT_ID || !info?.email) return null;
-  const email = String(info.email).toLowerCase().trim();
-  const fixed = fixedAdmins().has(email);
-  if (fixed) return { email, fixed: true };
-  const rows: any[] = await prisma.$queryRawUnsafe(`SELECT "email" FROM "GymAdmin" WHERE "email" = $1`, email);
-  return rows.length ? { email, fixed: false } : null;
+  const [payload, mac] = token.split(".");
+  if (!payload || !mac) return null;
+  const expected = Buffer.from(sign(payload));
+  const given = Buffer.from(mac);
+  if (expected.length !== given.length || !timingSafeEqual(expected, given)) return null;
+  let data: any;
+  try { data = JSON.parse(Buffer.from(payload, "base64url").toString("utf8")); } catch { return null; }
+  if (!data?.p || typeof data.e !== "number" || data.e < Date.now()) return null;
+  if (!(await isAllowed(data.p))) return null; // removed from the list = locked out immediately
+  return { phone: data.p, owner: data.p === ownerPhone() };
 }
 
 // ---------- validation helpers ----------
@@ -83,13 +113,13 @@ const currentPeriod = () => new Date().toISOString().slice(0, 7);
 
 // ---------- monthly calculation ----------
 async function buildState(month: string) {
-  const [sports, coaches, members, payments, payouts, admins] = (await Promise.all([
+  const [sports, coaches, members, payments, payouts, phones] = (await Promise.all([
     prisma.$queryRawUnsafe(`SELECT * FROM "GymSport" ORDER BY "name"`),
     prisma.$queryRawUnsafe(`SELECT * FROM "GymCoach" ORDER BY "name"`),
     prisma.$queryRawUnsafe(`SELECT * FROM "GymMember" ORDER BY "name"`),
     prisma.$queryRawUnsafe(`SELECT * FROM "GymPayment" WHERE "period" = $1`, month),
     prisma.$queryRawUnsafe(`SELECT * FROM "GymCoachPayout" WHERE "period" = $1`, month),
-    prisma.$queryRawUnsafe(`SELECT "email" FROM "GymAdmin" ORDER BY "email"`),
+    prisma.$queryRawUnsafe(`SELECT "phone","name" FROM "GymPhone" ORDER BY "createdAt"`),
   ])) as any[][];
 
   const paidByMember = new Map<string, any>(payments.map((p) => [p.memberId, p]));
@@ -136,8 +166,9 @@ async function buildState(month: string) {
     sports,
     coaches,
     members: memberRows,
-    admins: admins.map((a) => a.email),
-    fixedAdmins: [...fixedAdmins()],
+    phones,
+    ownerPhone: ownerPhone(),
+    maxPhones: MAX_PHONES,
     report: {
       activeMembers: billed.length,
       due, collected, outstanding: round2(Math.max(0, due - collected)),
@@ -150,7 +181,7 @@ async function buildState(month: string) {
 }
 
 // ---------- actions ----------
-async function runAction(body: any, who: { email: string; fixed: boolean }): Promise<void> {
+async function runAction(body: any, who: { phone: string; owner: boolean }): Promise<void> {
   const id = typeof body.id === "string" && body.id ? body.id : null;
   switch (body.action) {
     case "sport_save": {
@@ -203,16 +234,25 @@ async function runAction(body: any, who: { email: string; fixed: boolean }): Pro
     case "payout_delete":
       await prisma.$executeRawUnsafe(`DELETE FROM "GymCoachPayout" WHERE "coachId"=$1 AND "period"=$2`, str(body.coachId, 64, true), period(body.period));
       return;
-    case "admin_add": {
-      if (!who.fixed) throw new BadRequest("Seul le propriétaire peut gérer les administrateurs");
-      const email = str(body.email, 200, true)!.toLowerCase();
-      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) throw new BadRequest("E-mail invalide");
-      await prisma.$executeRawUnsafe(`INSERT INTO "GymAdmin" ("email","addedBy") VALUES ($1,$2) ON CONFLICT DO NOTHING`, email, who.email);
+    case "phone_add": {
+      if (!who.owner) throw new BadRequest("Seul le propriétaire peut gérer les accès");
+      const phone = normalizePhone(body.phone);
+      if (!phone) throw new BadRequest("Numéro invalide (exemple : +21620123456)");
+      if (phone === ownerPhone()) return;
+      // the cap is checked inside the INSERT so two concurrent requests cannot exceed it (owner takes one slot)
+      const added = await prisma.$executeRawUnsafe(
+        `INSERT INTO "GymPhone" ("phone","name","addedBy") SELECT $1,$2,$3 WHERE (SELECT COUNT(*) FROM "GymPhone") + 1 < $4 ON CONFLICT DO NOTHING`,
+        phone, str(body.name, 80), who.phone, MAX_PHONES);
+      if (!added) {
+        const exists: any[] = await prisma.$queryRawUnsafe(`SELECT 1 FROM "GymPhone" WHERE "phone"=$1`, phone);
+        if (!exists.length) throw new BadRequest(`Maximum ${MAX_PHONES} personnes (propriétaire inclus)`);
+      }
       return;
     }
-    case "admin_remove": {
-      if (!who.fixed) throw new BadRequest("Seul le propriétaire peut gérer les administrateurs");
-      await prisma.$executeRawUnsafe(`DELETE FROM "GymAdmin" WHERE "email"=$1`, str(body.email, 200, true)!.toLowerCase());
+    case "phone_remove": {
+      if (!who.owner) throw new BadRequest("Seul le propriétaire peut gérer les accès");
+      const phone = normalizePhone(body.phone);
+      if (phone) await prisma.$executeRawUnsafe(`DELETE FROM "GymPhone" WHERE "phone"=$1`, phone);
       return;
     }
     default:
@@ -220,17 +260,45 @@ async function runAction(body: any, who: { email: string; fixed: boolean }): Pro
   }
 }
 
+/** Public steps of the login: send the code / check the code. Never reveals whether a number is on the list. */
+async function login(body: any, res: VercelResponse) {
+  const phone = normalizePhone(body.phone);
+  if (!phone) return res.status(400).json({ error: "Numéro invalide (exemple : +21620123456)" });
+
+  if (body.action === "otp_send") {
+    if (await isAllowed(phone)) {
+      try {
+        await twilio("Verifications", { To: phone, Channel: "sms" });
+      } catch (e) {
+        console.error("otp_send failed:", e);
+        return res.status(503).json({ error: "L'envoi de SMS n'est pas configuré" });
+      }
+    }
+    return res.status(200).json({ ok: true, message: "Si ce numéro est autorisé, un code vient d'être envoyé par SMS." });
+  }
+
+  const code = String(body.code || "").trim();
+  if (!/^\d{4,10}$/.test(code)) return res.status(400).json({ error: "Code invalide" });
+  const bad = () => res.status(400).json({ error: "Code invalide ou expiré" });
+  if (!(await isAllowed(phone))) return bad();
+  const check = await twilio("VerificationCheck", { To: phone, Code: code });
+  if (check.body?.status !== "approved") return bad();
+  return res.status(200).json({ ok: true, ...makeToken(phone) });
+}
+
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   res.setHeader("Cache-Control", "no-store");
   try {
     await ensureTables();
+    if (req.method === "POST" && (req.body?.action === "otp_send" || req.body?.action === "otp_verify")) {
+      return await login(req.body, res);
+    }
     const who = await authenticate(req);
     if (!who) return res.status(403).json({ error: "Accès refusé." });
 
     if (req.method === "GET") {
-      const raw = String(req.query["month"] || currentPeriod());
-      const month = period(raw);
-      return res.status(200).json({ me: who.email, canManageAdmins: who.fixed, ...(await buildState(month)) });
+      const month = period(String(req.query["month"] || currentPeriod()));
+      return res.status(200).json({ me: who.phone, canManage: who.owner, ...(await buildState(month)) });
     }
     if (req.method === "POST") {
       await runAction(req.body || {}, who);
@@ -239,8 +307,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(405).json({ error: "Méthode non autorisée" });
   } catch (e: any) {
     if (e instanceof BadRequest) return res.status(400).json({ error: e.message });
-    // unique violation, e.g. duplicate sport name
-    if (e?.code === "P2010" || /duplicate key|unique/i.test(String(e?.message))) return res.status(409).json({ error: "Ce nom existe déjà" });
+    if (/duplicate key|unique/i.test(String(e?.message))) return res.status(409).json({ error: "Ce nom existe déjà" });
     console.error("gym api error:", e);
     return res.status(500).json({ error: "Erreur du serveur" });
   }
