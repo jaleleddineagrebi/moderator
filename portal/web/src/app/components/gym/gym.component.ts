@@ -17,13 +17,13 @@ const STATUS_FR: Record<string, string> = { paid: 'payé', partial: 'partiel', u
     <h1>Gestion de la salle</h1>
 
     <ng-container *ngIf="!token()">
-      <p class="muted">Espace réservé. Entrez votre numéro de téléphone autorisé pour recevoir un code par SMS.</p>
+      <p class="muted">Espace réservé. Entrez votre numéro de téléphone autorisé pour recevoir un code sur WhatsApp.</p>
       <form class="login" *ngIf="!codeSent()" (ngSubmit)="sendCode()">
-        <input type="tel" inputmode="tel" autocomplete="tel" placeholder="Téléphone (ex : 20 123 456 ou +216...)" [(ngModel)]="phone" name="ph" required>
+        <input type="tel" inputmode="tel" autocomplete="tel" placeholder="Téléphone (WhatsApp, ex : 20 123 456 ou +216...)" [(ngModel)]="phone" name="ph" required>
         <button class="btn primary" type="submit" [disabled]="busy()">Recevoir le code</button>
       </form>
       <form class="login" *ngIf="codeSent()" (ngSubmit)="verifyCode()">
-        <input type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="10" placeholder="Code reçu par SMS" [(ngModel)]="code" name="cd" required>
+        <input type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="10" placeholder="Code reçu sur WhatsApp" [(ngModel)]="code" name="cd" required>
         <button class="btn primary" type="submit" [disabled]="busy()">Se connecter</button>
         <button class="btn ghost" type="button" (click)="codeSent.set(false); code = ''">Changer de numéro</button>
       </form>
@@ -166,7 +166,7 @@ const STATUS_FR: Record<string, string> = { paid: 'payé', partial: 'partiel', u
       <!-- ACCÈS -->
       <section *ngIf="tab() === 'admins'">
         <h2>Numéros autorisés ({{ 1 + d.phones.length }} / {{ d.maxPhones }})</h2>
-        <p class="muted">Seules ces personnes peuvent se connecter, avec un code SMS. Le numéro du propriétaire est défini sur le serveur.</p>
+        <p class="muted">Seules ces personnes peuvent se connecter, avec un code WhatsApp. Le numéro du propriétaire est défini sur le serveur.</p>
         <ul>
           <li>{{ d.ownerPhone }} <span class="pill paid">propriétaire</span></li>
           <li *ngFor="let p of d.phones">{{ p.phone }} <span class="muted" *ngIf="p.name">({{ p.name }})</span>
@@ -246,7 +246,7 @@ export class GymComponent implements OnInit {
     } catch { /* storage unavailable */ }
   }
 
-  // ---------- connexion : numéro autorisé + code SMS ----------
+  // ---------- connexion : numéro autorisé + code WhatsApp ----------
   sendCode(): void {
     this.error.set(''); this.info.set(''); this.busy.set(true);
     this.http.post<any>('/api/gym', { action: 'otp_send', phone: this.phone }).subscribe({

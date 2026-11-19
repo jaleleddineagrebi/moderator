@@ -1,5 +1,5 @@
 // Gym back office API (members, sports, coaches, monthly fees and coach commissions).
-// Access = phone number on a list of at most MAX_PHONES people + an SMS code (Twilio Verify).
+// Access = phone number on a list of at most MAX_PHONES people + a one-time code sent on WhatsApp (Twilio Verify).
 // After the code is accepted the server hands out a signed 12h session token; every other request must carry it.
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import { createHmac, randomUUID, timingSafeEqual } from "crypto";
@@ -7,6 +7,8 @@ import { prisma } from "./_prisma";
 
 const MAX_PHONES = 4; // owner included
 const SESSION_HOURS = 12;
+// "whatsapp" (default) or "sms"; WhatsApp must be enabled on the Twilio Verify service.
+const OTP_CHANNEL = process.env["GYM_OTP_CHANNEL"] === "sms" ? "sms" : "whatsapp";
 
 /** Normalises a phone number to E.164. 8 digits are taken as Tunisian (+216). */
 function normalizePhone(v: unknown): string | null {
@@ -37,7 +39,7 @@ function makeToken(phone: string): { token: string; expiresAt: number } {
   return { token: `${payload}.${sign(payload)}`, expiresAt };
 }
 
-// ---------- SMS code via Twilio Verify ----------
+// ---------- one-time code via Twilio Verify ----------
 async function twilio(path: "Verifications" | "VerificationCheck", form: Record<string, string>): Promise<any> {
   const sid = process.env["TWILIO_ACCOUNT_SID"], tok = process.env["TWILIO_AUTH_TOKEN"], svc = process.env["TWILIO_VERIFY_SID"];
   if (!sid || !tok || !svc) throw new Error("Twilio is not configured");
@@ -268,13 +270,13 @@ async function login(body: any, res: VercelResponse) {
   if (body.action === "otp_send") {
     if (await isAllowed(phone)) {
       try {
-        await twilio("Verifications", { To: phone, Channel: "sms" });
+        await twilio("Verifications", { To: phone, Channel: OTP_CHANNEL });
       } catch (e) {
         console.error("otp_send failed:", e);
-        return res.status(503).json({ error: "L'envoi de SMS n'est pas configuré" });
+        return res.status(503).json({ error: "L'envoi du code n'est pas configuré" });
       }
     }
-    return res.status(200).json({ ok: true, message: "Si ce numéro est autorisé, un code vient d'être envoyé par SMS." });
+    return res.status(200).json({ ok: true, message: "Si ce numéro est autorisé, un code vient d'être envoyé sur WhatsApp." });
   }
 
   const code = String(body.code || "").trim();
