@@ -3,17 +3,17 @@
   "scenes": [
     {
       "vo": {
-        "en": "Look at me. Pick a color."
+        "en": "Pick a color and a shape. I'm reading your mind."
       },
       "on_screen": {
-        "en": "PICK A COLOR"
+        "en": "PICK A COLOR & SHAPE"
       },
       "visual": {
-        "description": "Extreme close-up of a man's intense eye staring directly into the lens with a flickering light effect.",
+        "description": "Macro shot of a man's eye dilating with a flickering colorful light reflected in the pupil.",
         "search_terms": [
-          "man staring intensity",
-          "close-up male eye",
-          "macro pupil"
+          "macro eye dilation",
+          "man intense stare",
+          "pupil focus video"
         ],
         "prefer": "video"
       },
@@ -21,17 +21,17 @@
     },
     {
       "vo": {
-        "en": "Don't overthink it. Just grab the first one that pops into your head."
+        "en": "Don't overthink it. First thing that hits your brain, lock it in right now."
       },
       "on_screen": {
-        "en": "FIRST CHOICE ONLY"
+        "en": "LOCK IT IN"
       },
       "visual": {
-        "description": "Fast-paced montage of a man's hands shuffling a deck of cards with high speed and motion blur.",
+        "description": "Close up of hands rapidly shuffling a deck of cards with motion blur.",
         "search_terms": [
+          "shuffling playing cards",
           "hands moving fast",
-          "shuffling cards",
-          "blurred motion hands"
+          "card trick close up"
         ],
         "prefer": "video"
       },
@@ -39,17 +39,17 @@
     },
     {
       "vo": {
-        "en": "Now, double the intensity of that color in your mind. Imagine it filling the entire room you’re sitting in."
+        "en": "Most people try to pick something complex to trick me, but I've already primed your subconscious."
       },
       "on_screen": {
-        "en": "MAKE IT BRIGHTER"
+        "en": "ALREADY PRIMED"
       },
       "visual": {
-        "description": "Slow motion shot of vibrant red ink dropping into clear water and spreading aggressively.",
+        "description": "High-tech animation of blue glowing neurons firing and connecting across a dark space.",
         "search_terms": [
-          "red ink water",
-          "color explosion slow",
-          "paint mixing"
+          "digital nerve connection",
+          "abstract blue sparks",
+          "brain firing neurons"
         ],
         "prefer": "video"
       },
@@ -57,17 +57,17 @@
     },
     {
       "vo": {
-        "en": "Wait, I can see you trying to change your mind. Stay focused. Don't switch it now."
+        "en": "Wait. Don't you dare change it. I can see you thinking about switching right now."
       },
       "on_screen": {
-        "en": "STAY FOCUSED"
+        "en": "DON'T CHANGE IT"
       },
       "visual": {
-        "description": "A serious man in a suit points directly at the camera with a stern, knowing expression.",
+        "description": "A man in a dark suit pointing his finger directly at the lens with a serious, knowing look.",
         "search_terms": [
-          "serious male face",
-          "man warning gesture",
-          "stop sign hand"
+          "serious man pointing",
+          "man face warning",
+          "finger wagging no"
         ],
         "prefer": "video"
       },
@@ -75,17 +75,17 @@
     },
     {
       "vo": {
-        "en": "Most people try to be unique, but your brain follows predictable neural shortcuts I've secretly triggered."
+        "en": "Your brain relies on cognitive shortcuts. I'm using dark psychology to force your choice into a corner."
       },
       "on_screen": {
         "en": "BRAIN HACKED"
       },
       "visual": {
-        "description": "High-tech motion graphics showing glowing blue neural pathways or digital circuit connections moving rapidly.",
+        "description": "Fast-paced geometric tunnel of white lines rushing toward the viewer in a black void.",
         "search_terms": [
-          "digital brain neurons",
-          "circuit board glowing",
-          "data flow motion"
+          "fast geometric tunnel",
+          "abstract motion lines",
+          "vortex speed video"
         ],
         "prefer": "video"
       },
@@ -93,17 +93,17 @@
     },
     {
       "vo": {
-        "en": "Right now, you are picturing a bright Red Triangle. Did I just catch you?"
+        "en": "The color is Red. The shape is a Triangle. I just caught you, didn't I?"
       },
       "on_screen": {
-        "en": "RED TRIANGLE?"
+        "en": "RED TRIANGLE"
       },
       "visual": {
-        "description": "A glowing red neon triangle pulsing against a pitch-black background.",
+        "description": "A vibrant red neon triangle pulsing and glowing against a dark, foggy background.",
         "search_terms": [
-          "red neon triangle",
-          "geometric shape glowing",
-          "abstract red light"
+          "neon red triangle",
+          "glowing geometric shape",
+          "pulsating red light"
         ],
         "prefer": "video"
       },
@@ -111,17 +111,17 @@
     },
     {
       "vo": {
-        "en": "Subscribe for tomorrow’s brain test and comment YES if this worked. You can't help but..."
+        "en": "Subscribe for tomorrow's brain test and comment YES if this worked. You can't help but..."
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "Close up of a man's hands rapidly typing on a smartphone screen in a dark environment.",
+        "description": "Extreme close up of a thumb hitting a subscribe button on a glowing mobile screen.",
         "search_terms": [
-          "typing on smartphone",
-          "hand tapping screen",
-          "mobile notification"
+          "phone screen tapping",
+          "hand scrolling feed",
+          "mobile app usage"
         ],
         "prefer": "video"
       },
@@ -133,6 +133,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 36.0
+    "en": 37.1
   }
 }

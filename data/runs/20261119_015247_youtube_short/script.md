@@ -1,23 +1,23 @@
 # The Interactive Color Mind-Reading Test
-Estimated narration: en 36.0s
+Estimated narration: en 37.1s
 
-## scene_01 · Extreme close-up of a man's intense eye staring directly into the lens with a flickering light effect.
-EN  [PICK A COLOR]  Look at me. Pick a color.
+## scene_01 · Macro shot of a man's eye dilating with a flickering colorful light reflected in the pupil.
+EN  [PICK A COLOR & SHAPE]  Pick a color and a shape. I'm reading your mind.
 
-## scene_02 · Fast-paced montage of a man's hands shuffling a deck of cards with high speed and motion blur.
-EN  [FIRST CHOICE ONLY]  Don't overthink it. Just grab the first one that pops into your head.
+## scene_02 · Close up of hands rapidly shuffling a deck of cards with motion blur.
+EN  [LOCK IT IN]  Don't overthink it. First thing that hits your brain, lock it in right now.
 
-## scene_03 · Slow motion shot of vibrant red ink dropping into clear water and spreading aggressively.
-EN  [MAKE IT BRIGHTER]  Now, double the intensity of that color in your mind. Imagine it filling the entire room you’re sitting in.
+## scene_03 · High-tech animation of blue glowing neurons firing and connecting across a dark space.
+EN  [ALREADY PRIMED]  Most people try to pick something complex to trick me, but I've already primed your subconscious.
 
-## scene_04 · A serious man in a suit points directly at the camera with a stern, knowing expression.
-EN  [STAY FOCUSED]  Wait, I can see you trying to change your mind. Stay focused. Don't switch it now.
+## scene_04 · A man in a dark suit pointing his finger directly at the lens with a serious, knowing look.
+EN  [DON'T CHANGE IT]  Wait. Don't you dare change it. I can see you thinking about switching right now.
 
-## scene_05 · High-tech motion graphics showing glowing blue neural pathways or digital circuit connections moving rapidly.
-EN  [BRAIN HACKED]  Most people try to be unique, but your brain follows predictable neural shortcuts I've secretly triggered.
+## scene_05 · Fast-paced geometric tunnel of white lines rushing toward the viewer in a black void.
+EN  [BRAIN HACKED]  Your brain relies on cognitive shortcuts. I'm using dark psychology to force your choice into a corner.
 
-## scene_06 · A glowing red neon triangle pulsing against a pitch-black background.
-EN  [RED TRIANGLE?]  Right now, you are picturing a bright Red Triangle. Did I just catch you?
+## scene_06 · A vibrant red neon triangle pulsing and glowing against a dark, foggy background.
+EN  [RED TRIANGLE]  The color is Red. The shape is a Triangle. I just caught you, didn't I?
 
-## scene_07 · Close up of a man's hands rapidly typing on a smartphone screen in a dark environment.
-EN  [SUBSCRIBE 🔔]  Subscribe for tomorrow’s brain test and comment YES if this worked. You can't help but...
+## scene_07 · Extreme close up of a thumb hitting a subscribe button on a glowing mobile screen.
+EN  [SUBSCRIBE 🔔]  Subscribe for tomorrow's brain test and comment YES if this worked. You can't help but...
