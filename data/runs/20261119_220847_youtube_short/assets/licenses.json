@@ -1,0 +1,72 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-15615/",
+    "author": "Matthias_Groeneveld",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "stopwatch ticking macro",
+    "description": "Macro close-up of a high-speed vintage stopwatch rapidly ticking under dramatic dark studio lighting."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-4722/",
+    "author": "Coverr-Free-Footage",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "sneaker foot rotating",
+    "description": "Low-angle tracking shot of a man's sneaker suspended in the air, tracing an even clockwise circle."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-24449/",
+    "author": "ktstruongpham",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "finger pointing drawing",
+    "description": "First-person perspective of a man's hand tracing the numeral six in mid-air against a moody black backdrop."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-205119/",
+    "author": "sangphotography",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "point of view floor",
+    "description": "A rapid first-person point-of-view camera plunge looking straight down toward feet on hardwood flooring."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-3171/",
+    "author": "Coverr-Free-Footage",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "foot switching direction",
+    "description": "Close-up of a sneaker suddenly jerking and snapping into an involuntary reverse spin."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-61621/",
+    "author": "wastedgeneration",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "clockwork gears moving",
+    "description": "Macro shot of complex mechanical brass clockwork gears jamming and stuttering under bright cyber lighting."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-148493/",
+    "author": "Henhen1",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hand tapping phone",
+    "description": "A man's thumb firmly tapping a glowing neon subscribe button on a modern smartphone display."
+  }
+]
