@@ -1,0 +1,59 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:03.23,Headline,,0,0,0,,{\fad(150,150)}PICK A COLOR
+Dialogue: 1,0:00:03.33,0:00:08.60,Headline,,0,0,0,,{\fad(150,150)}FIRST CHOICE ONLY
+Dialogue: 1,0:00:08.70,0:00:15.75,Headline,,0,0,0,,{\fad(150,150)}MAKE IT BRIGHTER
+Dialogue: 1,0:00:15.85,0:00:22.85,Headline,,0,0,0,,{\fad(150,150)}STAY FOCUSED
+Dialogue: 1,0:00:22.95,0:00:29.27,Headline,,0,0,0,,{\fad(150,150)}BRAIN HACKED
+Dialogue: 1,0:00:29.37,0:00:34.95,Headline,,0,0,0,,{\fad(150,150)}RED TRIANGLE?
+Dialogue: 1,0:00:35.05,0:00:41.92,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 0,0:00:00.10,0:00:00.78,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Look{\c&H00FFFFFF&} at me
+Dialogue: 0,0:00:01.60,0:00:02.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Pick a {\c&H0000E5FF&}color{\c&H00FFFFFF&}
+Dialogue: 0,0:00:03.38,0:00:04.50,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Don't {\c&H0000E5FF&}overthink{\c&H00FFFFFF&} it
+Dialogue: 0,0:00:05.32,0:00:06.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Just{\c&H00FFFFFF&} grab the
+Dialogue: 0,0:00:06.03,0:00:06.67,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}first{\c&H00FFFFFF&} one that
+Dialogue: 0,0:00:06.68,0:00:07.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}pops{\c&H00FFFFFF&} into your
+Dialogue: 0,0:00:07.34,0:00:07.74,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}head
+Dialogue: 0,0:00:08.75,0:00:09.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Now {\c&H0000E5FF&}double{\c&H00FFFFFF&} the
+Dialogue: 0,0:00:09.73,0:00:10.60,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}intensity{\c&H00FFFFFF&} of that
+Dialogue: 0,0:00:10.61,0:00:11.10,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}color{\c&H00FFFFFF&} in your
+Dialogue: 0,0:00:11.11,0:00:11.59,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}mind
+Dialogue: 0,0:00:12.41,0:00:13.35,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Imagine{\c&H00FFFFFF&} it filling
+Dialogue: 0,0:00:13.36,0:00:14.16,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}entire{\c&H00FFFFFF&} room
+Dialogue: 0,0:00:14.17,0:00:14.89,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you’re {\c&H0000E5FF&}sitting{\c&H00FFFFFF&} in
+Dialogue: 0,0:00:15.89,0:00:16.78,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Wait{\c&H00FFFFFF&} I can
+Dialogue: 0,0:00:16.79,0:00:17.35,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}see you {\c&H0000E5FF&}trying{\c&H00FFFFFF&}
+Dialogue: 0,0:00:17.36,0:00:17.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to {\c&H0000E5FF&}change{\c&H00FFFFFF&} your
+Dialogue: 0,0:00:17.85,0:00:18.31,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}mind
+Dialogue: 0,0:00:19.12,0:00:20.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Stay {\c&H0000E5FF&}focused{\c&H00FFFFFF&}
+Dialogue: 0,0:00:20.96,0:00:21.60,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Don't {\c&H0000E5FF&}switch{\c&H00FFFFFF&} it
+Dialogue: 0,0:00:21.61,0:00:22.01,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}now
+Dialogue: 0,0:00:22.99,0:00:23.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Most {\c&H0000E5FF&}people{\c&H00FFFFFF&} try
+Dialogue: 0,0:00:23.89,0:00:24.57,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to be {\c&H0000E5FF&}unique{\c&H00FFFFFF&}
+Dialogue: 0,0:00:24.83,0:00:25.40,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}but your {\c&H0000E5FF&}brain{\c&H00FFFFFF&}
+Dialogue: 0,0:00:25.41,0:00:26.67,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}follows {\c&H0000E5FF&}predictable{\c&H00FFFFFF&} neural
+Dialogue: 0,0:00:26.68,0:00:27.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}shortcuts{\c&H00FFFFFF&} I've secretly
+Dialogue: 0,0:00:27.89,0:00:28.41,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}triggered
+Dialogue: 0,0:00:29.42,0:00:30.32,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Right{\c&H00FFFFFF&} now you
+Dialogue: 0,0:00:30.33,0:00:31.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}are {\c&H0000E5FF&}picturing{\c&H00FFFFFF&} a
+Dialogue: 0,0:00:31.04,0:00:32.14,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}bright Red {\c&H0000E5FF&}Triangle{\c&H00FFFFFF&}
+Dialogue: 0,0:00:32.95,0:00:33.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Did I {\c&H0000E5FF&}just{\c&H00FFFFFF&}
+Dialogue: 0,0:00:33.53,0:00:34.10,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}catch{\c&H00FFFFFF&} you
+Dialogue: 0,0:00:35.10,0:00:36.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Subscribe for {\c&H0000E5FF&}tomorrow’s{\c&H00FFFFFF&}
+Dialogue: 0,0:00:36.35,0:00:37.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}brain{\c&H00FFFFFF&} test and
+Dialogue: 0,0:00:37.12,0:00:37.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} YES if
+Dialogue: 0,0:00:37.92,0:00:38.57,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}this {\c&H0000E5FF&}worked{\c&H00FFFFFF&}
+Dialogue: 0,0:00:39.38,0:00:40.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You {\c&H0000E5FF&}can't{\c&H00FFFFFF&} help
+Dialogue: 0,0:00:40.09,0:00:40.49,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}but
