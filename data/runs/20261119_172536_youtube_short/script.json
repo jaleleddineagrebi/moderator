@@ -1,0 +1,120 @@
+{
+  "title": "The Paralyzed Pinky Glitch",
+  "scenes": [
+    {
+      "vo": {
+        "en": "Your brain cannot move this finger."
+      },
+      "on_screen": {
+        "en": "BRAIN CAN'T MOVE THIS"
+      },
+      "visual": {
+        "description": "A man's hand is shown flat on a dark wooden table, fingers spread out in a high-contrast cinematic shot.",
+        "search_terms": [
+          "man hand table",
+          "human palm flat",
+          "finger close up"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Lay your palm flat on a desk. Now, tuck your middle finger tightly under your palm."
+      },
+      "on_screen": {
+        "en": "TUCK MIDDLE FINGER"
+      },
+      "visual": {
+        "description": "Close-up of a hand performing the specific movement, folding the middle finger underneath so the knuckle touches the surface.",
+        "search_terms": [
+          "hand pressing down",
+          "middle finger tucked",
+          "palm on wood"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "You can lift your thumb, index, and pinky easily. But now, try to lift your ring finger."
+      },
+      "on_screen": {
+        "en": "TRY TO LIFT IT"
+      },
+      "visual": {
+        "description": "Macro shot of a hand struggling to lift the ring finger while the middle finger remains pinned down.",
+        "search_terms": [
+          "fingers moving macro",
+          "hand struggle",
+          "nervous finger twitch"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "Wait, it feels like your brain just disconnected, right? This is the creepy part."
+      },
+      "on_screen": {
+        "en": "YOUR BRAIN DISCONNECTED"
+      },
+      "visual": {
+        "description": "A tight close-up of a man's face looking confused and staring down at his hand in disbelief.",
+        "search_terms": [
+          "man shocked face",
+          "confused person close-up",
+          "reaction face man"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Your middle and ring fingers share the same extensor tendon. By pinning one, you've essentially locked the other's engine."
+      },
+      "on_screen": {
+        "en": "LOCKED TENDON SYSTEM"
+      },
+      "visual": {
+        "description": "Dynamic 3D animation of mechanical gears or anatomical structures showing how two parts are linked together.",
+        "search_terms": [
+          "mechanical gears turning",
+          "abstract anatomy 3d",
+          "tension ropes pulling"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for more body hacks and comment STUCK if this worked. The truth is..."
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "A man quickly typing on a phone or laptop keyboard, followed by a nod towards the camera.",
+        "search_terms": [
+          "typing fast keyboard",
+          "scrolling phone hand",
+          "man nodding head"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    }
+  ],
+  "idea_id": "paralyzed-pinky-glitch",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 31.3
+  }
+}

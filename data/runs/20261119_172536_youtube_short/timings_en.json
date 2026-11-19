@@ -1,0 +1,478 @@
+{
+  "voice": "en-US-AriaNeural",
+  "duration": 35.634036,
+  "scenes": [
+    {
+      "scene": "scene_01",
+      "start": 0.0,
+      "end": 2.664,
+      "words": [
+        {
+          "start": 0.097,
+          "end": 0.298,
+          "text": "Your"
+        },
+        {
+          "start": 0.309,
+          "end": 0.604,
+          "text": "brain"
+        },
+        {
+          "start": 0.616,
+          "end": 0.958,
+          "text": "cannot"
+        },
+        {
+          "start": 0.97,
+          "end": 1.206,
+          "text": "move"
+        },
+        {
+          "start": 1.217,
+          "end": 1.406,
+          "text": "this"
+        },
+        {
+          "start": 1.418,
+          "end": 1.831,
+          "text": "finger"
+        }
+      ]
+    },
+    {
+      "scene": "scene_02",
+      "start": 2.754,
+      "end": 8.994,
+      "words": [
+        {
+          "start": 2.851,
+          "end": 3.075,
+          "text": "Lay"
+        },
+        {
+          "start": 3.087,
+          "end": 3.24,
+          "text": "your"
+        },
+        {
+          "start": 3.252,
+          "end": 3.559,
+          "text": "palm"
+        },
+        {
+          "start": 3.571,
+          "end": 3.889,
+          "text": "flat"
+        },
+        {
+          "start": 3.901,
+          "end": 4.007,
+          "text": "on"
+        },
+        {
+          "start": 4.019,
+          "end": 4.089,
+          "text": "a"
+        },
+        {
+          "start": 4.101,
+          "end": 4.596,
+          "text": "desk"
+        },
+        {
+          "start": 5.407,
+          "end": 5.796,
+          "text": "Now"
+        },
+        {
+          "start": 5.997,
+          "end": 6.233,
+          "text": "tuck"
+        },
+        {
+          "start": 6.245,
+          "end": 6.351,
+          "text": "your"
+        },
+        {
+          "start": 6.362,
+          "end": 6.61,
+          "text": "middle"
+        },
+        {
+          "start": 6.622,
+          "end": 6.976,
+          "text": "finger"
+        },
+        {
+          "start": 6.988,
+          "end": 7.388,
+          "text": "tightly"
+        },
+        {
+          "start": 7.4,
+          "end": 7.589,
+          "text": "under"
+        },
+        {
+          "start": 7.601,
+          "end": 7.742,
+          "text": "your"
+        },
+        {
+          "start": 7.754,
+          "end": 8.179,
+          "text": "palm"
+        }
+      ]
+    },
+    {
+      "scene": "scene_03",
+      "start": 9.084,
+      "end": 15.852,
+      "words": [
+        {
+          "start": 9.181,
+          "end": 9.358,
+          "text": "You"
+        },
+        {
+          "start": 9.37,
+          "end": 9.535,
+          "text": "can"
+        },
+        {
+          "start": 9.547,
+          "end": 9.771,
+          "text": "lift"
+        },
+        {
+          "start": 9.783,
+          "end": 9.9,
+          "text": "your"
+        },
+        {
+          "start": 9.912,
+          "end": 10.242,
+          "text": "thumb"
+        },
+        {
+          "start": 10.443,
+          "end": 10.903,
+          "text": "index"
+        },
+        {
+          "start": 11.068,
+          "end": 11.245,
+          "text": "and"
+        },
+        {
+          "start": 11.257,
+          "end": 11.646,
+          "text": "pinky"
+        },
+        {
+          "start": 11.658,
+          "end": 12.141,
+          "text": "easily"
+        },
+        {
+          "start": 12.964,
+          "end": 13.141,
+          "text": "But"
+        },
+        {
+          "start": 13.152,
+          "end": 13.494,
+          "text": "now"
+        },
+        {
+          "start": 13.648,
+          "end": 13.848,
+          "text": "try"
+        },
+        {
+          "start": 13.86,
+          "end": 13.942,
+          "text": "to"
+        },
+        {
+          "start": 13.954,
+          "end": 14.214,
+          "text": "lift"
+        },
+        {
+          "start": 14.225,
+          "end": 14.343,
+          "text": "your"
+        },
+        {
+          "start": 14.355,
+          "end": 14.556,
+          "text": "ring"
+        },
+        {
+          "start": 14.568,
+          "end": 15.016,
+          "text": "finger"
+        }
+      ]
+    },
+    {
+      "scene": "scene_04",
+      "start": 15.942,
+      "end": 21.942,
+      "words": [
+        {
+          "start": 16.039,
+          "end": 16.44,
+          "text": "Wait"
+        },
+        {
+          "start": 16.593,
+          "end": 16.711,
+          "text": "it"
+        },
+        {
+          "start": 16.723,
+          "end": 17.018,
+          "text": "feels"
+        },
+        {
+          "start": 17.03,
+          "end": 17.195,
+          "text": "like"
+        },
+        {
+          "start": 17.207,
+          "end": 17.313,
+          "text": "your"
+        },
+        {
+          "start": 17.325,
+          "end": 17.619,
+          "text": "brain"
+        },
+        {
+          "start": 17.631,
+          "end": 17.82,
+          "text": "just"
+        },
+        {
+          "start": 17.832,
+          "end": 18.468,
+          "text": "disconnected"
+        },
+        {
+          "start": 18.634,
+          "end": 19.011,
+          "text": "right"
+        },
+        {
+          "start": 19.822,
+          "end": 20.081,
+          "text": "This"
+        },
+        {
+          "start": 20.093,
+          "end": 20.199,
+          "text": "is"
+        },
+        {
+          "start": 20.211,
+          "end": 20.293,
+          "text": "the"
+        },
+        {
+          "start": 20.305,
+          "end": 20.647,
+          "text": "creepy"
+        },
+        {
+          "start": 20.659,
+          "end": 21.107,
+          "text": "part"
+        }
+      ]
+    },
+    {
+      "scene": "scene_05",
+      "start": 22.032,
+      "end": 29.616,
+      "words": [
+        {
+          "start": 22.129,
+          "end": 22.318,
+          "text": "Your"
+        },
+        {
+          "start": 22.33,
+          "end": 22.636,
+          "text": "middle"
+        },
+        {
+          "start": 22.648,
+          "end": 22.754,
+          "text": "and"
+        },
+        {
+          "start": 22.766,
+          "end": 22.99,
+          "text": "ring"
+        },
+        {
+          "start": 23.002,
+          "end": 23.415,
+          "text": "fingers"
+        },
+        {
+          "start": 23.426,
+          "end": 23.686,
+          "text": "share"
+        },
+        {
+          "start": 23.698,
+          "end": 23.804,
+          "text": "the"
+        },
+        {
+          "start": 23.816,
+          "end": 24.087,
+          "text": "same"
+        },
+        {
+          "start": 24.099,
+          "end": 24.606,
+          "text": "extensor"
+        },
+        {
+          "start": 24.617,
+          "end": 25.113,
+          "text": "tendon"
+        },
+        {
+          "start": 25.935,
+          "end": 26.1,
+          "text": "By"
+        },
+        {
+          "start": 26.112,
+          "end": 26.442,
+          "text": "pinning"
+        },
+        {
+          "start": 26.454,
+          "end": 26.69,
+          "text": "one"
+        },
+        {
+          "start": 26.938,
+          "end": 27.032,
+          "text": "you've"
+        },
+        {
+          "start": 27.044,
+          "end": 27.574,
+          "text": "essentially"
+        },
+        {
+          "start": 27.586,
+          "end": 27.916,
+          "text": "locked"
+        },
+        {
+          "start": 27.928,
+          "end": 28.023,
+          "text": "the"
+        },
+        {
+          "start": 28.034,
+          "end": 28.341,
+          "text": "other's"
+        },
+        {
+          "start": 28.353,
+          "end": 28.801,
+          "text": "engine"
+        }
+      ]
+    },
+    {
+      "scene": "scene_06",
+      "start": 29.706,
+      "end": 35.634,
+      "words": [
+        {
+          "start": 29.803,
+          "end": 30.416,
+          "text": "Subscribe"
+        },
+        {
+          "start": 30.428,
+          "end": 30.57,
+          "text": "for"
+        },
+        {
+          "start": 30.581,
+          "end": 30.805,
+          "text": "more"
+        },
+        {
+          "start": 30.817,
+          "end": 31.112,
+          "text": "body"
+        },
+        {
+          "start": 31.124,
+          "end": 31.454,
+          "text": "hacks"
+        },
+        {
+          "start": 31.466,
+          "end": 31.572,
+          "text": "and"
+        },
+        {
+          "start": 31.584,
+          "end": 31.961,
+          "text": "comment"
+        },
+        {
+          "start": 31.973,
+          "end": 32.28,
+          "text": "STUCK"
+        },
+        {
+          "start": 32.291,
+          "end": 32.398,
+          "text": "if"
+        },
+        {
+          "start": 32.409,
+          "end": 32.586,
+          "text": "this"
+        },
+        {
+          "start": 32.598,
+          "end": 33.058,
+          "text": "worked"
+        },
+        {
+          "start": 33.869,
+          "end": 34.022,
+          "text": "The"
+        },
+        {
+          "start": 34.034,
+          "end": 34.411,
+          "text": "truth"
+        },
+        {
+          "start": 34.423,
+          "end": 34.8,
+          "text": "is"
+        }
+      ]
+    }
+  ]
+}
