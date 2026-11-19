@@ -62,23 +62,23 @@ async function authenticate(req: VercelRequest): Promise<{ email: string; fixed:
 class BadRequest extends Error {}
 const str = (v: unknown, max: number, required = false): string | null => {
   const s = typeof v === "string" ? v.trim().slice(0, max) : "";
-  if (!s && required) throw new BadRequest("A required text field is missing");
+  if (!s && required) throw new BadRequest("Un champ obligatoire est vide");
   return s || null;
 };
 const num = (v: unknown, min: number, max: number): number => {
   const n = typeof v === "number" ? v : Number(v);
-  if (!Number.isFinite(n) || n < min || n > max) throw new BadRequest(`Number out of range (${min}-${max})`);
-  return Math.round(n * 100) / 100;
+  if (!Number.isFinite(n) || n < min || n > max) throw new BadRequest(`Nombre hors limites (${min} à ${max})`);
+  return Math.round(n * 1000) / 1000;
 };
 const period = (v: unknown): string => {
-  if (typeof v !== "string" || !/^\d{4}-(0[1-9]|1[0-2])$/.test(v)) throw new BadRequest("Month must look like 2026-11");
+  if (typeof v !== "string" || !/^\d{4}-(0[1-9]|1[0-2])$/.test(v)) throw new BadRequest("Le mois doit ressembler à 2026-11");
   return v;
 };
 const day = (v: unknown): string => {
-  if (typeof v !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(v) || Number.isNaN(Date.parse(v))) throw new BadRequest("Date must look like 2026-11-18");
+  if (typeof v !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(v) || Number.isNaN(Date.parse(v))) throw new BadRequest("La date doit ressembler à 2026-11-18");
   return v;
 };
-const round2 = (n: number) => Math.round(n * 100) / 100;
+const round2 = (n: number) => Math.round(n * 1000) / 1000; // dinar: 3 decimals (millimes)
 const currentPeriod = () => new Date().toISOString().slice(0, 7);
 
 // ---------- monthly calculation ----------
@@ -204,19 +204,19 @@ async function runAction(body: any, who: { email: string; fixed: boolean }): Pro
       await prisma.$executeRawUnsafe(`DELETE FROM "GymCoachPayout" WHERE "coachId"=$1 AND "period"=$2`, str(body.coachId, 64, true), period(body.period));
       return;
     case "admin_add": {
-      if (!who.fixed) throw new BadRequest("Only the owner can manage admins");
+      if (!who.fixed) throw new BadRequest("Seul le propriétaire peut gérer les administrateurs");
       const email = str(body.email, 200, true)!.toLowerCase();
-      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) throw new BadRequest("Invalid e-mail");
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) throw new BadRequest("E-mail invalide");
       await prisma.$executeRawUnsafe(`INSERT INTO "GymAdmin" ("email","addedBy") VALUES ($1,$2) ON CONFLICT DO NOTHING`, email, who.email);
       return;
     }
     case "admin_remove": {
-      if (!who.fixed) throw new BadRequest("Only the owner can manage admins");
+      if (!who.fixed) throw new BadRequest("Seul le propriétaire peut gérer les administrateurs");
       await prisma.$executeRawUnsafe(`DELETE FROM "GymAdmin" WHERE "email"=$1`, str(body.email, 200, true)!.toLowerCase());
       return;
     }
     default:
-      throw new BadRequest("Unknown action");
+      throw new BadRequest("Action inconnue");
   }
 }
 
@@ -225,7 +225,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
     await ensureTables();
     const who = await authenticate(req);
-    if (!who) return res.status(403).json({ error: "Forbidden: gym back office is restricted to admin accounts." });
+    if (!who) return res.status(403).json({ error: "Accès refusé." });
 
     if (req.method === "GET") {
       const raw = String(req.query["month"] || currentPeriod());
@@ -236,12 +236,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       await runAction(req.body || {}, who);
       return res.status(200).json({ ok: true });
     }
-    return res.status(405).json({ error: "Method not allowed" });
+    return res.status(405).json({ error: "Méthode non autorisée" });
   } catch (e: any) {
     if (e instanceof BadRequest) return res.status(400).json({ error: e.message });
     // unique violation, e.g. duplicate sport name
-    if (e?.code === "P2010" || /duplicate key|unique/i.test(String(e?.message))) return res.status(409).json({ error: "That name already exists" });
+    if (e?.code === "P2010" || /duplicate key|unique/i.test(String(e?.message))) return res.status(409).json({ error: "Ce nom existe déjà" });
     console.error("gym api error:", e);
-    return res.status(500).json({ error: "Gym API failed" });
+    return res.status(500).json({ error: "Erreur du serveur" });
   }
 }
