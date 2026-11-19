@@ -1,0 +1,62 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:01.91,Headline,,0,0,0,,{\fad(150,150)}I READ YOUR MIND
+Dialogue: 1,0:00:02.01,0:00:11.00,Headline,,0,0,0,,{\fad(150,150)}ANSWER FAST!
+Dialogue: 1,0:00:11.10,0:00:15.84,Headline,,0,0,0,,{\fad(150,150)}PICK A NUMBER
+Dialogue: 1,0:00:15.94,0:00:19.39,Headline,,0,0,0,,{\fad(150,150)}BRAIN GLITCHING...
+Dialogue: 1,0:00:19.49,0:00:24.38,Headline,,0,0,0,,{\fad(150,150)}TOOL AND COLOR?
+Dialogue: 1,0:00:24.48,0:00:29.84,Headline,,0,0,0,,{\fad(150,150)}RED HAMMER!
+Dialogue: 1,0:00:29.94,0:00:36.71,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 0,0:00:00.09,0:00:00.53,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}I will {\c&H0000E5FF&}read{\c&H00FFFFFF&}
+Dialogue: 0,0:00:00.54,0:00:01.16,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}mind{\c&H00FFFFFF&} now
+Dialogue: 0,0:00:02.06,0:00:02.85,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Stay {\c&H0000E5FF&}focused{\c&H00FFFFFF&}
+Dialogue: 0,0:00:03.24,0:00:03.81,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Answer{\c&H00FFFFFF&} these out
+Dialogue: 0,0:00:03.83,0:00:05.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}loud{\c&H00FFFFFF&} as fast
+Dialogue: 0,0:00:05.08,0:00:05.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}as you can
+Dialogue: 0,0:00:05.92,0:00:06.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}What’s {\c&H0000E5FF&}2{\c&H00FFFFFF&} plus
+Dialogue: 0,0:00:06.54,0:00:06.94,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}2
+Dialogue: 0,0:00:07.22,0:00:08.05,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}4{\c&H00FFFFFF&} plus 4
+Dialogue: 0,0:00:08.44,0:00:09.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}8{\c&H00FFFFFF&} plus 8
+Dialogue: 0,0:00:09.63,0:00:10.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}16{\c&H00FFFFFF&} plus 16
+Dialogue: 0,0:00:11.15,0:00:11.55,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Now
+Dialogue: 0,0:00:11.81,0:00:12.23,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}pick a {\c&H0000E5FF&}number{\c&H00FFFFFF&}
+Dialogue: 0,0:00:12.23,0:00:13.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}between{\c&H00FFFFFF&} twelve and
+Dialogue: 0,0:00:13.00,0:00:13.51,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}five
+Dialogue: 0,0:00:13.89,0:00:14.55,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Don't {\c&H0000E5FF&}overthink{\c&H00FFFFFF&} it
+Dialogue: 0,0:00:14.57,0:00:15.44,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}just{\c&H00FFFFFF&} grab one
+Dialogue: 0,0:00:16.00,0:00:16.85,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Wait{\c&H00FFFFFF&} this is
+Dialogue: 0,0:00:16.86,0:00:17.21,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the part {\c&H0000E5FF&}where{\c&H00FFFFFF&}
+Dialogue: 0,0:00:17.21,0:00:18.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your brain {\c&H0000E5FF&}starts{\c&H00FFFFFF&}
+Dialogue: 0,0:00:18.37,0:00:19.01,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to {\c&H0000E5FF&}glitch{\c&H00FFFFFF&}
+Dialogue: 0,0:00:19.53,0:00:19.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Quick
+Dialogue: 0,0:00:20.25,0:00:20.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}name a {\c&H0000E5FF&}common{\c&H00FFFFFF&}
+Dialogue: 0,0:00:20.82,0:00:21.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}tool{\c&H00FFFFFF&} and a
+Dialogue: 0,0:00:21.53,0:00:22.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}bright{\c&H00FFFFFF&} color
+Dialogue: 0,0:00:22.61,0:00:23.01,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Got {\c&H0000E5FF&}them{\c&H00FFFFFF&}
+Dialogue: 0,0:00:23.32,0:00:23.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Keep{\c&H00FFFFFF&} them in
+Dialogue: 0,0:00:23.63,0:00:24.03,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}head{\c&H00FFFFFF&}
+Dialogue: 0,0:00:24.52,0:00:25.09,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You are {\c&H0000E5FF&}currently{\c&H00FFFFFF&}
+Dialogue: 0,0:00:25.09,0:00:25.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}thinking{\c&H00FFFFFF&} of a
+Dialogue: 0,0:00:25.72,0:00:26.37,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Red {\c&H0000E5FF&}Hammer{\c&H00FFFFFF&}
+Dialogue: 0,0:00:26.74,0:00:27.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Over ninety {\c&H0000E5FF&}percent{\c&H00FFFFFF&}
+Dialogue: 0,0:00:27.54,0:00:28.41,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}of {\c&H0000E5FF&}people{\c&H00FFFFFF&} choose
+Dialogue: 0,0:00:28.49,0:00:29.47,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}exactly{\c&H00FFFFFF&} that
+Dialogue: 0,0:00:29.99,0:00:31.19,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Subscribe for {\c&H0000E5FF&}tomorrow's{\c&H00FFFFFF&}
+Dialogue: 0,0:00:31.20,0:00:32.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}mind{\c&H00FFFFFF&} test and
+Dialogue: 0,0:00:32.34,0:00:33.37,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} YES if
+Dialogue: 0,0:00:33.37,0:00:33.90,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}this {\c&H0000E5FF&}worked{\c&H00FFFFFF&} on
+Dialogue: 0,0:00:33.90,0:00:34.30,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you
+Dialogue: 0,0:00:34.48,0:00:35.14,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}This works {\c&H0000E5FF&}because{\c&H00FFFFFF&}
+Dialogue: 0,0:00:35.14,0:00:35.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}I will

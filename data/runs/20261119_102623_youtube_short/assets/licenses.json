@@ -1,0 +1,72 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-154384/",
+    "author": "IamFOSNA",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man staring camera",
+    "description": "A close-up shot of a man staring intensely and directly into the camera lens with a focused expression."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-59139/",
+    "author": "Hassas_Arts",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "fast counting numbers",
+    "description": "Fast-paced montage of digital numbers flashing on a screen and a ticking mechanical clock."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-133872/",
+    "author": "30037275",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hand picking object",
+    "description": "A man's hand reaching out and pointing toward the viewer as if selecting something in the air."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-45249/",
+    "author": "simovina",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "tv static glitch",
+    "description": "A high-energy digital glitch effect with distorted colors and static across the screen."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-16453/",
+    "author": "adonyig",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "red paint mixing",
+    "description": "A top-down view of vibrant red paint being mixed and a blurred toolbox in the background."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-205344/",
+    "author": "Kanenori",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "red hammer tool",
+    "description": "A clear, sharp shot of a hammer with a bright red handle resting on a wooden workbench."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-177164/",
+    "author": "ArtFlores99",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man nodding approval",
+    "description": "A man nodding knowingly at the camera while tapping his temple with one finger."
+  }
+]
