@@ -3,80 +3,80 @@
     "scene": "scene_01",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-126560/",
-    "author": "SoyKhaler",
+    "page": "https://pixabay.com/videos/id-61299/",
+    "author": "Engin_Akyurt",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
     "query": "man focused face",
-    "description": "Close-up of a man looking intensely at the camera with a focused expression."
+    "description": "Close-up of a man concentrating intensely with focused eyes."
   },
   {
     "scene": "scene_02",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-100344/",
-    "author": "egemen_izmirli",
+    "page": "https://pixabay.com/videos/id-87050/",
+    "author": "mootlak",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
     "query": "hands writing paper",
-    "description": "Close-up of hands quickly writing numbers on a piece of paper."
+    "description": "Close-up of male hands quickly writing mathematical equations on paper."
   },
   {
     "scene": "scene_03",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-320611/",
+    "page": "https://pixabay.com/videos/id-87884/",
     "author": "MagicTV",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
     "query": "night highway traffic",
-    "description": "Fast-paced time-lapse of a highway at night with car light trails."
+    "description": "Time-lapse of night highway traffic with fast light trails."
   },
   {
     "scene": "scene_04",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-380892/",
-    "author": "ShunyoNguyen",
+    "page": "https://pixabay.com/videos/id-131824/",
+    "author": "Marsel_beijing",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "vhs glitch overlay",
-    "description": "Static distortion and digital noise overlaying a dark background."
+    "query": "vhs glitch video",
+    "description": "Abstract digital static glitch effect on dark display."
   },
   {
     "scene": "scene_05",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-204582/",
-    "author": "crows",
+    "page": "https://pixabay.com/videos/id-136740/",
+    "author": "fotoblend",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
     "query": "mechanical stop watch",
-    "description": "Macro shot of a mechanical stopwatch ticking forward rapidly."
+    "description": "Macro shot of a mechanical stopwatch rapidly ticking."
   },
   {
     "scene": "scene_06",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-61291/",
-    "author": "Engin_Akyurt",
+    "page": "https://pixabay.com/videos/id-134507/",
+    "author": "Kaffeesüchtig",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
     "query": "man confused look",
-    "description": "A man looking confused and rubbing his head in disbelief."
+    "description": "Man looking shocked and shaking his head in confusion."
   },
   {
     "scene": "scene_07",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-199015/",
-    "author": "draisthetic",
+    "page": "https://pixabay.com/videos/id-19498/",
+    "author": "Evodesign",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "digital abstract lines",
-    "description": "Abstract visualization of glowing digital lines and geometric data flow."
+    "query": "digital brain mesh",
+    "description": "Glowing digital brain mesh animation processing data."
   },
   {
     "scene": "scene_08",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-4905/",
-    "author": "klimkin",
+    "page": "https://pixabay.com/videos/id-3180/",
+    "author": "Coverr-Free-Footage",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "phone notification tap",
-    "description": "Close-up of a finger tapping a smartphone notification on a screen."
+    "query": "phone screen click",
+    "description": "Man holding smartphone and clicking screen with thumb."
   }
 ]
