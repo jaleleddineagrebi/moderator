@@ -1,0 +1,72 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-80/",
+    "author": "DistillVideos",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "macro eye pupil",
+    "description": "Fast macro close-up of a man's dilated pupil reacting sharply to a sudden beam of light."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-1335/",
+    "author": "LisaRedfern",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "vintage typewriter typing",
+    "description": "Fast close-up of mechanical typewriter keys slamming ink onto paper in rapid succession."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-79759/",
+    "author": "WizArto",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man holding magnifying glass",
+    "description": "A man at a dark wooden desk leaning in with a magnifying glass to inspect documents in shock."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-227567/",
+    "author": "TatianaTz",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "server room flashing lights",
+    "description": "Abstract cybernetic data glitch distorting over flashing blue computer mainframe servers."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-135877/",
+    "author": "stefaniejockschat",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hands highlighting book",
+    "description": "Overhead view of male hands using a vibrant yellow marker to cross out words in a book."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-210573/",
+    "author": "u_xhp5h45w73",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "brain neural network firing",
+    "description": "Luminous blue electrical synapses firing across a rotating 3D neural brain network model."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-23803/",
+    "author": "TailorMadeForYou",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man scrolling smartphone dark",
+    "description": "A man in a dim room tapping and scrolling swiftly on a glowing smartphone screen."
+  }
+]
