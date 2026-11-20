@@ -7,7 +7,7 @@ import { GymBarsComponent, GymDonutComponent } from './gym-charts.component';
 
 type Tab = 'dash' | 'year' | 'members' | 'coaches' | 'sports' | 'expenses' | 'data';
 
-const STATUS_FR: Record<string, string> = { paid: 'payé', partial: 'partiel', unpaid: 'impayé', 'n/a': '-' };
+const STATUS_FR: Record<string, string> = { paid: 'payé', partial: 'partiel', unpaid: 'pas payé', 'n/a': '-' };
 const CATEGORIES = ['Loyer', 'Femme de ménage', 'Administration', 'Électricité & eau', 'Autre'];
 
 // ---- Excel columns (the same layout is used by export, template and import) ----
@@ -80,7 +80,9 @@ const toBool = (v: any) => (isEmpty(v) ? undefined : typeof v === 'boolean' ? v 
           <input type="month" [ngModel]="month()" (ngModelChange)="setMonth($event)">
           <button class="icon" (click)="shiftMonth(1)" aria-label="Mois suivant"><span class="material-icons">chevron_right</span></button>
         </div>
-        <div class="who"><span class="muted">{{ s()?.me }}</span><button class="btn sm ghost" (click)="logout()">Se déconnecter</button></div>
+        <div class="who"><span class="muted">{{ s()?.me }}</span>
+          <button class="btn sm ghost" *ngIf="finToken()" (click)="lockFinance()"><span class="material-icons">lock</span> Verrouiller</button>
+          <button class="btn sm ghost" (click)="logout()">Se déconnecter</button></div>
       </header>
 
       <nav class="tabs">
@@ -91,8 +93,20 @@ const toBool = (v: any) => (isEmpty(v) ? undefined : typeof v === 'boolean' ? v 
         <p class="err" *ngIf="error()">{{ error() }}</p>
         <p class="ok" *ngIf="notice()">{{ notice() }}</p>
 
+        <!-- ---------- CODE D'ACCÈS (tableau de bord + année) ---------- -->
+        <section class="card lockbox" *ngIf="(tab() === 'dash' || tab() === 'year') && !d.report">
+          <span class="material-icons big">lock</span>
+          <h3>Code d'accès requis</h3>
+          <p class="muted" *ngIf="d.financeConfigured !== false">Entrez le code d'accès pour voir le tableau de bord et l'année.</p>
+          <p class="err" *ngIf="d.financeConfigured === false">Le code d'accès n'est pas encore configuré sur le serveur (variable GYM_FINANCE_CODE).</p>
+          <form class="login-inline" (ngSubmit)="unlock()" *ngIf="d.financeConfigured !== false">
+            <input type="password" inputmode="numeric" autocomplete="off" placeholder="Code d'accès" [(ngModel)]="finCode" name="fc" required>
+            <button class="btn primary" type="submit" [disabled]="busy()">Déverrouiller</button>
+          </form>
+        </section>
+
         <!-- ---------- TABLEAU DE BORD ---------- -->
-        <section *ngIf="tab() === 'dash'">
+        <section *ngIf="tab() === 'dash' && d.report">
           <h2 class="title">{{ monthLabel() }}</h2>
           <div class="kpis">
             <div class="kpi"><span class="material-icons">groups</span><div><small>Membres actifs</small><b>{{ d.report.activeMembers }}</b></div></div>
@@ -156,7 +170,7 @@ const toBool = (v: any) => (isEmpty(v) ? undefined : typeof v === 'boolean' ? v 
         </section>
 
         <!-- ---------- ANNÉE ---------- -->
-        <section *ngIf="tab() === 'year'">
+        <section *ngIf="tab() === 'year' && d.yearReport">
           <div class="yearbar">
             <button class="icon" (click)="shiftYear(-1)"><span class="material-icons">chevron_left</span></button>
             <h2 class="title">Année {{ d.year }}</h2>
@@ -210,14 +224,31 @@ const toBool = (v: any) => (isEmpty(v) ? undefined : typeof v === 'boolean' ? v 
               <span class="actions"><button class="btn primary" type="submit">Enregistrer</button> <button class="btn ghost" type="button" *ngIf="mForm.id" (click)="resetMember()">Annuler</button></span>
             </form>
           </div>
-          <div class="card"><div class="scroll"><table>
-            <tr><th>Nom</th><th>Contact</th><th>Sport</th><th>Coach</th><th>Cotisation</th><th>Inscrit le</th><th>Actif</th><th></th></tr>
-            <tr *ngFor="let m of d.members" [class.dim]="!m.active">
-              <td><b>{{ m.name }}</b></td><td>{{ m.email || m.phone || '' }}</td><td>{{ sportName(m.sportId) }}</td><td>{{ coachName(m.coachId) }}</td>
-              <td>{{ money(m.monthlyFee) }}</td><td>{{ m.joinedAt }}</td><td>{{ m.active ? 'oui' : 'non' }}</td>
-              <td class="nowrap"><button class="btn sm" (click)="editMember(m)">Modifier</button> <button class="btn sm danger" (click)="del('member_delete', m.id, m.name)">Supprimer</button></td>
-            </tr>
-          </table></div></div>
+          <div class="card">
+            <h3>Membres : paiement de {{ monthLabel() }}
+              <span class="pill paid">{{ countOf(d, 'paid') }} payé(s)</span>
+              <span class="pill partial" *ngIf="countOf(d, 'partial')">{{ countOf(d, 'partial') }} partiel(s)</span>
+              <span class="pill unpaid">{{ countOf(d, 'unpaid') }} pas payé(s)</span>
+            </h3>
+            <div class="scroll"><table>
+              <tr><th>Nom</th><th>Contact</th><th>Sport</th><th>Coach</th><th>Cotisation</th><th>Paiement</th><th>Montant payé</th><th>Inscrit le</th><th>Actif</th><th></th></tr>
+              <tr *ngFor="let m of d.members" [class.dim]="!m.active">
+                <td><b>{{ m.name }}</b></td><td>{{ m.email || m.phone || '' }}</td><td>{{ sportName(m.sportId) }}</td><td>{{ coachName(m.coachId) }}</td>
+                <td>{{ money(m.monthlyFee) }}</td>
+                <td><span class="pill" [ngClass]="m.status">{{ statusFr(m.status) }}</span></td>
+                <td><b *ngIf="m.billed || m.paid > 0">{{ money(m.paid) }}</b><span class="muted small" *ngIf="m.status === 'partial'"> sur {{ money(m.due) }}</span></td>
+                <td>{{ m.joinedAt }}</td><td>{{ m.active ? 'oui' : 'non' }}</td>
+                <td class="nowrap">
+                  <ng-container *ngIf="m.billed || m.paid > 0">
+                    <button class="btn sm" (click)="pay(m, m.due)" *ngIf="m.status !== 'paid'">Marquer payé</button>
+                    <button class="btn sm ghost" (click)="payCustom(m)">Montant…</button>
+                    <button class="btn sm ghost" *ngIf="m.paid > 0" (click)="post({action:'payment_delete', memberId:m.id, period:month()})">Annuler</button>
+                  </ng-container>
+                  <button class="btn sm" (click)="editMember(m)">Modifier</button> <button class="btn sm danger" (click)="del('member_delete', m.id, m.name)">Supprimer</button>
+                </td>
+              </tr>
+            </table></div>
+          </div>
         </section>
 
         <!-- ---------- COACHS ---------- -->
@@ -278,7 +309,7 @@ const toBool = (v: any) => (isEmpty(v) ? undefined : typeof v === 'boolean' ? v 
               <span class="actions"><button class="btn primary" type="submit">Enregistrer</button> <button class="btn ghost" type="button" *ngIf="eForm.id" (click)="resetExpense()">Annuler</button></span>
             </form>
           </div>
-          <div class="card">
+          <div class="card" *ngIf="d.report">
             <h3>Charges prises en compte en {{ monthLabel() }} : {{ money(d.report.expenses) }}</h3>
             <div class="scroll"><table>
               <tr><th>Catégorie</th><th>Libellé</th><th>Montant</th></tr>
@@ -305,7 +336,7 @@ const toBool = (v: any) => (isEmpty(v) ? undefined : typeof v === 'boolean' ? v 
           <div class="cols">
             <div class="card">
               <h3><span class="material-icons">download</span> Exporter vers Excel</h3>
-              <p class="muted">Un fichier avec les feuilles Sports, Coachs, Membres, Paiements de {{ d.year }}, Charges et un rapport mensuel {{ d.year }}.</p>
+              <p class="muted">Un fichier avec les feuilles Sports, Coachs, Membres, Paiements de {{ d.year }}, Charges{{ d.yearReport ? ' et un rapport mensuel ' + d.year : ' (le rapport mensuel n\'est inclus qu\'après saisie du code d\'accès)' }}.</p>
               <div class="actions">
                 <button class="btn primary" (click)="exportXlsx()" [disabled]="busy()">Télécharger les données (.xlsx)</button>
                 <button class="btn ghost" (click)="downloadTemplate()" [disabled]="busy()">Modèle vide</button>
@@ -340,6 +371,9 @@ const toBool = (v: any) => (isEmpty(v) ? undefined : typeof v === 'boolean' ? v 
     .logo { width: 56px; height: 56px; border-radius: 16px; background: var(--accent); color: #fff; display: grid; place-items: center; margin: 0 auto; }
     .logo .material-icons { font-size: 30px; }
     .block { width: 100%; }
+    .lockbox { max-width: 420px; margin: 40px auto; text-align: center; display: grid; gap: 10px; justify-items: center; }
+    .lockbox h3 { justify-content: center; margin: 0; } .material-icons.big { font-size: 40px; color: var(--accent); }
+    .login-inline { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
 
     /* top bar + tabs */
     .topbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 12px 20px; background: var(--card); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 5; }
@@ -409,6 +443,9 @@ export class GymComponent implements OnInit {
   readonly s = signal<any>(null);
   readonly month = signal<string>(new Date().toISOString().slice(0, 7));
   readonly busy = signal(false);
+  readonly finToken = signal<string>(''); // access code unlock, kept in memory only
+  private finExpiry = 0;
+  finCode = '';
   username = '';
   password = '';
 
@@ -448,11 +485,29 @@ export class GymComponent implements OnInit {
   }
 
   logout(): void {
-    this.token.set(''); this.s.set(null);
+    this.token.set(''); this.s.set(null); this.finToken.set(''); this.finExpiry = 0;
     try { sessionStorage.removeItem('gym_session'); } catch { /* ignore */ }
   }
 
-  private headers() { return { Authorization: `Bearer ${this.token()}` }; }
+  private headers(): Record<string, string> {
+    const h: Record<string, string> = { Authorization: `Bearer ${this.token()}` };
+    if (this.finToken() && Date.now() < this.finExpiry) h['X-Finance-Token'] = this.finToken();
+    return h;
+  }
+
+  // ---------- code d'accès : tableau de bord + année ----------
+  unlock(): void {
+    this.error.set(''); this.busy.set(true);
+    this.http.post<any>('/api/gym', { action: 'unlock', code: this.finCode }, { headers: this.headers() }).subscribe({
+      next: (r) => {
+        this.busy.set(false); this.finCode = '';
+        this.finToken.set(r.financeToken); this.finExpiry = r.financeExpiresAt;
+        this.load();
+      },
+      error: (e) => { this.busy.set(false); this.finCode = ''; this.fail(e); },
+    });
+  }
+  lockFinance(): void { this.finToken.set(''); this.finExpiry = 0; this.load(); }
 
   private fail(err: any): void {
     if (err?.status === 403) {
@@ -503,7 +558,8 @@ export class GymComponent implements OnInit {
   statusFr(st: string): string { return STATUS_FR[st] || st; }
   sportName(id: string | null): string { return this.s()?.sports.find((x: any) => x.id === id)?.name || '-'; }
   coachName(id: string | null): string { return this.s()?.coaches.find((x: any) => x.id === id)?.name || '-'; }
-  barData(d: any): any[] { return d.yearReport.months; }
+  barData(d: any): any[] { return d.yearReport?.months || []; }
+  countOf(d: any, status: string): number { return d.members.filter((m: any) => m.status === status).length; }
   expensePeriod(e: any): string {
     return e.recurring ? `chaque mois depuis ${e.period}${e.endPeriod ? " jusqu'à " + e.endPeriod : ''}` : e.period;
   }
@@ -584,11 +640,11 @@ export class GymComponent implements OnInit {
         { sheet: 'Membres', data: [this.head(HEAD.Membres), ...d.members.map((m: any) => [m.name, this.cell(m.email), this.cell(m.phone), sport(m.sportId), coach(m.coachId), m.monthlyFee, m.joinedAt, m.active ? 'oui' : 'non', this.cell(m.notes)])] },
         { sheet: 'Paiements', data: [this.head(HEAD.Paiements), ...d.payments.map((p: any) => [nameOf.get(p.memberId) || '', p.period, p.amount, this.cell(p.method), this.cell(p.note)])] },
         { sheet: 'Charges', data: [this.head(HEAD.Charges), ...d.expenses.map((e: any) => [e.category, this.cell(e.label), e.amount, e.period, e.recurring ? 'oui' : 'non', this.cell(e.endPeriod)])] },
-        { sheet: `Rapport ${d.year}`, data: [
+        ...(d.yearReport ? [{ sheet: `Rapport ${d.year}`, data: [
           this.head(['Mois', 'Membres', 'Dû (DT)', 'Encaissé (DT)', 'Commissions (DT)', 'Autres charges (DT)', 'Résultat net (DT)']),
           ...d.yearReport.months.map((m: any) => [m.month, m.activeMembers, m.due, m.collected, m.commissions, m.expenses, m.net]),
           ['Total', null, d.yearReport.totals.due, d.yearReport.totals.collected, d.yearReport.totals.commissions, d.yearReport.totals.expenses, d.yearReport.totals.net],
-        ] },
+        ] }] : []),
       ], `salle-${d.year}.xlsx`);
     } catch { this.error.set('Export impossible'); }
     this.busy.set(false);

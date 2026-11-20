@@ -354,6 +354,20 @@ async function runAction(body: any, who: { user: string }): Promise<{ imported: 
   }
 }
 
+async function isLocked(key: string): Promise<boolean> {
+  const rows: any[] = await prisma.$queryRawUnsafe(`SELECT "lockedUntil" FROM "GymLogin" WHERE "username"=$1`, key);
+  return !!rows[0]?.lockedUntil && new Date(rows[0].lockedUntil).getTime() > Date.now();
+}
+async function recordFail(key: string): Promise<void> {
+  await prisma.$executeRawUnsafe(
+    `INSERT INTO "GymLogin" ("username","fails") VALUES ($1,1)
+     ON CONFLICT ("username") DO UPDATE SET
+       "lockedUntil" = CASE WHEN "GymLogin"."fails" + 1 >= $2 THEN NOW() + ($3 || ' minutes')::interval ELSE "GymLogin"."lockedUntil" END,
+       "fails" = CASE WHEN "GymLogin"."fails" + 1 >= $2 THEN 0 ELSE "GymLogin"."fails" + 1 END`,
+    key, MAX_FAILS, String(LOCK_MINUTES));
+}
+const clearFails = (key: string) => prisma.$executeRawUnsafe(`DELETE FROM "GymLogin" WHERE "username"=$1`, key);
+
 /** Login = user name + password. Every failure looks the same, and repeated failures lock the account briefly. */
 async function login(body: any, res: VercelResponse) {
   const bad = () => res.status(400).json({ error: "Identifiant ou mot de passe incorrect" });
@@ -365,22 +379,44 @@ async function login(body: any, res: VercelResponse) {
   // always run one scrypt so an unknown user takes as long as a known one
   const candidate = scryptSync(pw, acc ? acc.salt : DUMMY_SALT, 32, { N: 16384 });
   if (!acc) return bad();
-
-  const rows: any[] = await prisma.$queryRawUnsafe(`SELECT "lockedUntil" FROM "GymLogin" WHERE "username"=$1`, user);
-  if (rows[0]?.lockedUntil && new Date(rows[0].lockedUntil).getTime() > Date.now()) {
-    return res.status(429).json({ error: "Trop d'essais, réessayez dans quelques minutes" });
-  }
-  if (!timingSafeEqual(candidate, acc.hash)) {
-    await prisma.$executeRawUnsafe(
-      `INSERT INTO "GymLogin" ("username","fails") VALUES ($1,1)
-       ON CONFLICT ("username") DO UPDATE SET
-         "lockedUntil" = CASE WHEN "GymLogin"."fails" + 1 >= $2 THEN NOW() + ($3 || ' minutes')::interval ELSE "GymLogin"."lockedUntil" END,
-         "fails" = CASE WHEN "GymLogin"."fails" + 1 >= $2 THEN 0 ELSE "GymLogin"."fails" + 1 END`,
-      user, MAX_FAILS, String(LOCK_MINUTES));
-    return bad();
-  }
-  await prisma.$executeRawUnsafe(`DELETE FROM "GymLogin" WHERE "username"=$1`, user);
+  if (await isLocked(user)) return res.status(429).json({ error: "Trop d'essais, réessayez dans quelques minutes" });
+  if (!timingSafeEqual(candidate, acc.hash)) { await recordFail(user); return bad(); }
+  await clearFails(user);
   return res.status(200).json({ ok: true, user, ...makeToken(user) });
+}
+
+// ---------- access code for the financial views (dashboard + year) ----------
+const FINANCE_MINUTES = 30;
+const financeCode = (): string => {
+  const c = (process.env["GYM_FINANCE_CODE"] || "").trim();
+  return c.length >= 4 ? c : ""; // not configured = the financial views stay locked
+};
+const finSign = (payload: string) => createHmac("sha256", secret()).update("finance." + payload).digest("base64url");
+function makeFinanceToken(user: string): { financeToken: string; financeExpiresAt: number } {
+  const financeExpiresAt = Date.now() + FINANCE_MINUTES * 60_000;
+  const payload = Buffer.from(JSON.stringify({ u: user, e: financeExpiresAt })).toString("base64url");
+  return { financeToken: `${payload}.${finSign(payload)}`, financeExpiresAt };
+}
+function financeUnlocked(req: VercelRequest, user: string): boolean {
+  const [payload, mac] = String(req.headers["x-finance-token"] || "").split(".");
+  if (!payload || !mac) return false;
+  const expected = Buffer.from(finSign(payload)), given = Buffer.from(mac);
+  if (expected.length !== given.length || !timingSafeEqual(expected, given)) return false;
+  try {
+    const d = JSON.parse(Buffer.from(payload, "base64url").toString("utf8"));
+    return d.u === user && typeof d.e === "number" && d.e > Date.now();
+  } catch { return false; }
+}
+async function unlockFinance(body: any, user: string, res: VercelResponse) {
+  const code = financeCode();
+  if (!code) return res.status(503).json({ error: "Le code d'accès n'est pas configuré sur le serveur (GYM_FINANCE_CODE)" });
+  const key = `finance:${user}`;
+  if (await isLocked(key)) return res.status(429).json({ error: "Trop d'essais, réessayez dans quelques minutes" });
+  const given = createHmac("sha256", "cmp").update(String(body.code || "")).digest();
+  const wanted = createHmac("sha256", "cmp").update(code).digest();
+  if (!timingSafeEqual(given, wanted)) { await recordFail(key); return res.status(400).json({ error: "Code d'accès incorrect" }); }
+  await clearFails(key);
+  return res.status(200).json({ ok: true, ...makeFinanceToken(user) });
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
@@ -396,9 +432,19 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const who = await authenticate(req);
     if (!who) return res.status(403).json({ error: "Accès refusé." });
 
+    if (req.method === "POST" && req.body?.action === "unlock") return await unlockFinance(req.body, who.user, res);
+
     if (req.method === "GET") {
       const month = period(String(req.query["month"] || currentPeriod()));
-      return res.status(200).json({ me: who.user, ...(await buildState(month)) });
+      const state: any = await buildState(month);
+      // dashboard and year totals are only sent to someone who entered the access code
+      if (!financeUnlocked(req, who.user)) {
+        delete state.report;
+        delete state.yearReport;
+        state.financeLocked = true;
+        state.financeConfigured = !!financeCode();
+      }
+      return res.status(200).json({ me: who.user, ...state });
     }
     if (req.method === "POST") {
       const result = await runAction(req.body || {}, who);
