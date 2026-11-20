@@ -330,6 +330,11 @@
           "ts": "2026-11-20T10:05:46+00:00",
           "level": "warning",
           "msg": "Model 'gemini-3.8-flash' returned 503; falling back to 'gemini-3-flash-preview'"
+        },
+        {
+          "ts": "2026-11-20T10:06:16+00:00",
+          "level": "warning",
+          "msg": "Gemini connection timed out on default route; retrying over IPv4"
         }
       ],
       "errors": [],
@@ -510,7 +515,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-20T10:06:08+00:00",
+    "exported_at": "2026-11-20T10:06:25+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/44716170065"
   }
