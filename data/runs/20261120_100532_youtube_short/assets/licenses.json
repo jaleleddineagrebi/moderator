@@ -1,0 +1,82 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-62911/",
+    "author": "Zethian",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man intense stare",
+    "description": "A close-up of a man's face looking directly at the camera with intense concentration."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-21116/",
+    "author": "RafterJr72",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "neon numbers flashing",
+    "description": "Rapidly shifting digital neon numbers flashing across a dark background."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-277042/",
+    "author": "stefaniejockschat",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hand writing chalkboard",
+    "description": "A man's hands writing complex mathematical equations on a dusty chalkboard quickly."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-210934/",
+    "author": "Nerd_Nonsense",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "macro eye iris",
+    "description": "A macro close-up of a human eye iris dilating rapidly with a digital glitch overlay."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-310831/",
+    "author": "Mario_Krimer",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "dart hitting bullseye",
+    "description": "A dart flying through the air in slow motion and hitting the exact center of a bullseye."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-14900/",
+    "author": "cipnt",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "neural network pulse",
+    "description": "Abstract animation of blue electrical pulses moving through a network of neural pathways."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-32384/",
+    "author": "Graufilter",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hand moving chess",
+    "description": "A man's hand moving a chess piece strategically on a dark wooden board."
+  },
+  {
+    "scene": "scene_08",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-1048/",
+    "author": "Coverr-Free-Footage",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "finger tapping screen",
+    "description": "A hand holding a smartphone and tapping the screen repeatedly in a fast motion."
+  }
+]
