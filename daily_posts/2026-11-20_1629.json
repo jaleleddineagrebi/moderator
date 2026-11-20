@@ -1,0 +1,71 @@
+[
+  {
+    "slug": "the-blindspot-of-ai-collaboration-1120",
+    "title": "The Blindspot of AI Collaboration",
+    "hook": "You assume your focus on an AI's output ensures you are seeing the whole picture, but neuroimaging reveals your perceptual bandwidth is shrinking in real-time. What you miss while watching the screen might be more important than what you read.",
+    "summary": "When interacting with high-fluency AI outputs, our brains allocate attention so narrowly that we suffer from radical inattentional blindness, missing systemic flaws hiding in plain sight. This cognitive tunnel vision impairs our metacognitive monitoring and critical evaluation.",
+    "contentMarkdown": "## The Psychological Paradox\n\nWhen we collaborate with advanced artificial intelligence, we often feel hyper-attentive. We read the generated code, review the synthesized text, and trace the logical arguments line by line. Yet, cognitive neuroscience demonstrates a profound paradox: the smoother and more coherent the AI's output, the more vulnerable our brains are to inattentional blindness. \n\nRather than expanding our cognitive horizon, seamless AI interactions often induce a state of hyper-focused fixation. We become so engrossed in evaluating local details that we completely lose track of global context, structural omissions, and foundational assumptions.\n\n## What the Science Shows\n\nSeminal studies in cognitive psychology—such as the famous 'invisible gorilla' experiments—prove that when humans are engaged in a demanding visual or cognitive tracking task, unexpected stimuli passing right through our field of view go completely unnoticed. \n\nFunctional neuroimaging reveals a similar mechanism during human-AI teaming. When an AI presents a well-structured, fluent solution, the brain's Default Mode Network (associated with wandering thought and critical skepticism) down-regulates prematurely. Meanwhile, task-positive networks lock onto the provided syntax. This neurological shortcut conserves energy, but it blinds us to macro-level errors. The brain mistakes high linguistic fluency for logical infallibility, effectively filtering out anomalous data before it reaches conscious awareness.\n\n## Daily Brain Bias Check\n\nPause during your next AI collaboration session. Look away from the generated text and ask yourself: *What assumptions am I accepting just because they were phrased eloquently?* Actively search for what is *missing* from the output, rather than just grading what is present.\n\n## Practical Takeaway\n\nTo counteract inattentional blindness in the age of AI, introduce deliberate cognitive friction. Never review an AI output in its original format; force yourself to rephrase its core thesis, invert its logic, or deliberately look for one major structural omission before integrating its results into your work.",
+    "coverImageUrl": "https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=1200&q=80",
+    "imageCredit": "Antoine Dautry via Unsplash",
+    "tags": [
+      "Inattentional Blindness",
+      "Cognitive Bias",
+      "Neuroscience",
+      "Human-AI Teaming",
+      "Metacognition"
+    ],
+    "sourceUrls": [
+      "https://arxiv.org",
+      "https://nature.com/neuro"
+    ],
+    "aiModelUsed": "gemini-flash-lite-latest",
+    "synthesisCostUsd": 0.001081,
+    "youtubeShortId": "MOri8jHHhOs",
+    "youtubeShort": {
+      "id": "MOri8jHHhOs",
+      "title": "Your Brain Just Lied To You #shorts",
+      "youtubeUrl": "https://www.youtube.com/shorts/MOri8jHHhOs",
+      "embedUrl": "https://www.youtube.com/embed/MOri8jHHhOs",
+      "topic": "Your Brain Just Lied To You #shorts",
+      "hookAngle": "Did you see all 6 letters? Comment YES or NO below 👇",
+      "publishedAt": "2026-11-20T09:49:39Z",
+      "angle": "Did you see all 6 letters? Comment YES or NO below 👇"
+    },
+    "status": "PUBLISHED",
+    "publishedAt": "2026-11-20T16:29:22.858306+00:00"
+  },
+  {
+    "slug": "the-proprioceptive-glitch-ai-and-body-schema-erosion-1120",
+    "title": "The Proprioceptive Glitch: AI and Body-Schema Erosion",
+    "hook": "Why does your brain suddenly lose track of your own limbs when interacting with AI? You assume your body is a static anchor, but neuroscience reveals it is a fluid, hackable prediction map.",
+    "summary": "When we interact with seamless AI interfaces, the brain extends its 'body schema' into the digital tool, creating a proprioceptive lag that causes physical disorientation. This phenomenon, known as proprioceptive drift, highlights the vulnerability of our spatial awareness in highly immersive human-AI loops.",
+    "contentMarkdown": "## The Psychological Paradox\n\nWhen you engage with a hyper-responsive AI, your brain doesn't just treat the interface as a tool; it begins to incorporate the software's latency and logic into your internal body map. This is the 'proprioceptive glitch.' Your brain is constantly running an internal simulation of where your limbs are in space, a process known as proprioception. However, when an AI predicts your next intent with high precision, it creates a feedback loop that competes with your proprioceptive signals. You feel like the AI is an extension of your own intention, leading to a temporary 'disembodiment' where your physical movements—like a foot changing direction—feel foreign or dissociated from your conscious awareness.\n\n## What the Science Shows\n\nResearch into the 'Rubber Hand Illusion' has long demonstrated that the brain is remarkably plastic when it comes to body ownership. If sensory input (visual) overrides proprioceptive input (physical), the brain will rewrite its own map to accommodate the new reality. In human-AI interaction, we are seeing a digital-age version of this. When an AI agent performs a task before you finish thinking it, your parietal cortex—the region responsible for spatial awareness and sensory integration—experiences a 'prediction mismatch.' The brain struggles to reconcile the intent (yours) with the execution (the AI's). This often manifests as a momentary sensory glitch: you might miss a step, stumble, or feel that your limbs are moving without your explicit instruction, essentially 'glitching' out as your brain tries to re-anchor itself to physical space.\n\n## Daily Brain Bias Check\n\nDuring your next high-intensity AI session, perform a 'Body-Space Scan.' Mid-interaction, pause and ask yourself: \n1. Can I feel the weight of my feet on the floor without looking down? \n2. Did I feel a slight disorientation or a sudden 'jerk' in my posture when the AI responded? \nIf the answer is yes, you are experiencing the cost of digital assimilation—your brain is prioritizing the AI's logic over your physical grounding.\n\n## Practical Takeaway\n\nTo counter proprioceptive drift, implement 'analog anchoring' during deep work. Every 30 minutes, step away from the screen and perform a sensory-motor task that requires zero AI assistance—like stretching, balancing on one leg, or manually writing with a pen. These actions force the parietal cortex to re-engage with your biological hardware, snapping your sense of self back from the digital interface and into your physical frame.",
+    "coverImageUrl": "https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&w=1200&q=80",
+    "imageCredit": "Hal Gatewood via Unsplash",
+    "tags": [
+      "Neuroscience",
+      "Body Schema",
+      "Proprioception",
+      "Cognitive Bias"
+    ],
+    "sourceUrls": [
+      "https://arxiv.org",
+      "https://nature.com/neuro"
+    ],
+    "aiModelUsed": "gemini-3.1-flash-lite",
+    "synthesisCostUsd": 0.001249,
+    "youtubeShortId": "1CABLZHwPJs",
+    "youtubeShort": {
+      "id": "1CABLZHwPJs",
+      "title": "Your Brain Just Glitched #shorts",
+      "youtubeUrl": "https://www.youtube.com/shorts/1CABLZHwPJs",
+      "embedUrl": "https://www.youtube.com/embed/1CABLZHwPJs",
+      "topic": "Your Brain Just Glitched #shorts",
+      "hookAngle": "Did your foot change direction? Comment YES or NO below.",
+      "publishedAt": "2026-11-20T09:49:35Z",
+      "angle": "Did your foot change direction? Comment YES or NO below."
+    },
+    "status": "PUBLISHED",
+    "publishedAt": "2026-11-20T16:29:39.238714+00:00"
+  }
+]
