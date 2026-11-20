@@ -1,8 +1,23 @@
 {
-  "updated_at": "2026-11-20T09:48:28+00:00",
+  "updated_at": "2026-11-20T10:05:50+00:00",
   "repo": "jaleleddineagrebi/moderator",
-  "live_run_id": "20261120_014713_youtube_short",
+  "live_run_id": "20261120_100532_youtube_short",
   "runs": [
+    {
+      "run_id": "20261120_100532_youtube_short",
+      "workflow": "youtube_short",
+      "workflow_title": "YouTube Short",
+      "topic": "",
+      "status": "running",
+      "progress": 4,
+      "started_at": "2026-11-20T10:05:32+00:00",
+      "ended_at": null,
+      "cost_usd": 0.0,
+      "is_live": true,
+      "has_uploads": false,
+      "issue_url": "",
+      "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/44716170065"
+    },
     {
       "run_id": "20261120_014713_youtube_short",
       "workflow": "youtube_short",
@@ -13,7 +28,7 @@
       "started_at": "2026-11-20T01:47:13+00:00",
       "ended_at": "2026-11-20T09:27:07+00:00",
       "cost_usd": 0.0348,
-      "is_live": true,
+      "is_live": false,
       "has_uploads": true,
       "issue_url": "https://github.com/jaleleddineagrebi/moderator/issues/134",
       "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/44656078287"
@@ -137,21 +152,6 @@
       "has_uploads": true,
       "issue_url": "https://github.com/jaleleddineagrebi/moderator/issues/121",
       "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/44283457900"
-    },
-    {
-      "run_id": "20261118_022639_youtube_short",
-      "workflow": "youtube_short",
-      "workflow_title": "YouTube Short",
-      "topic": "",
-      "status": "done",
-      "progress": 100,
-      "started_at": "2026-11-18T02:26:39+00:00",
-      "ended_at": "2026-11-18T12:48:10+00:00",
-      "cost_usd": 0.0525,
-      "is_live": false,
-      "has_uploads": true,
-      "issue_url": "https://github.com/jaleleddineagrebi/moderator/issues/119",
-      "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/44223238125"
     }
   ],
   "seed_state": null
