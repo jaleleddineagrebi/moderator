@@ -1,0 +1,156 @@
+{
+  "title": "The 5000 Brain Glitch",
+  "scenes": [
+    {
+      "vo": {
+        "en": "Calculate these numbers in your head right now."
+      },
+      "on_screen": {
+        "en": "BRAIN GLITCH TEST"
+      },
+      "visual": {
+        "description": "A close-up of a man's face looking intensely focused and serious.",
+        "search_terms": [
+          "man focused expression",
+          "person concentrated face",
+          "intense look"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Start with one thousand. Add forty. Now add another thousand."
+      },
+      "on_screen": {
+        "en": "START CALCULATING"
+      },
+      "visual": {
+        "description": "Fast-moving digital numbers counting up on a dark background.",
+        "search_terms": [
+          "digital number counter",
+          "math calculation motion",
+          "floating numbers"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Quickly add thirty. Then add another thousand. Keep going."
+      },
+      "on_screen": {
+        "en": "KEEP ADDING"
+      },
+      "visual": {
+        "description": "A fast-paced time-lapse of a busy city street at night with light trails.",
+        "search_terms": [
+          "night city timelapse",
+          "fast traffic lights",
+          "urban motion"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "Wait, here is where your brain starts to glitch. Add twenty."
+      },
+      "on_screen": {
+        "en": "DON'T BLINK"
+      },
+      "visual": {
+        "description": "A screen displaying digital noise and glitch effects with flickering colors.",
+        "search_terms": [
+          "glitch screen effect",
+          "digital noise distortion",
+          "vhs static"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Add one thousand. Finally, add ten. Do you have the total yet?"
+      },
+      "on_screen": {
+        "en": "FINAL ADDITION"
+      },
+      "visual": {
+        "description": "A man's hand quickly writing numbers on a white piece of paper.",
+        "search_terms": [
+          "hand writing fast",
+          "pen on paper",
+          "writing numbers"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "If you said five thousand, you are wrong. The actual answer is four thousand one hundred."
+      },
+      "on_screen": {
+        "en": "YOU FAILED"
+      },
+      "visual": {
+        "description": "A man looking shocked and confused, scratching his head in disbelief.",
+        "search_terms": [
+          "surprised man face",
+          "confused person expression",
+          "man scratching head"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Your brain used a lazy pattern shortcut instead of doing the actual arithmetic."
+      },
+      "on_screen": {
+        "en": "COGNITIVE TRAP"
+      },
+      "visual": {
+        "description": "Mechanical gold gears and cogs rotating and interlocking smoothly.",
+        "search_terms": [
+          "mechanical gears rotation",
+          "clockwork mechanism",
+          "cogs turning"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for tomorrow's brain test and comment FAIL if you missed it. You must"
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "A close-up of a finger hovering over a smartphone screen.",
+        "search_terms": [
+          "finger touching screen",
+          "smartphone interaction",
+          "scrolling phone"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_08"
+    }
+  ],
+  "idea_id": "the-5000-brain-glitch",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 33.8
+  }
+}
