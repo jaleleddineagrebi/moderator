@@ -67,15 +67,15 @@
   },
   "started_at": "2026-11-20T01:47:13+00:00",
   "ended_at": null,
-  "revision_rounds": 0,
+  "revision_rounds": 1,
   "cost": {
-    "total_usd": 0.029417,
+    "total_usd": 0.031258,
     "budget_usd": 1.0,
     "by_agent": {
       "trend_researcher": 0.015219,
       "scriptwriter": 0.012296,
       "packaging": 0.000468,
-      "qa_reviewer": 0.001434
+      "qa_reviewer": 0.003275
     }
   },
   "agents": {
@@ -457,9 +457,9 @@
       "checkpoint": null,
       "status": "done",
       "progress": 100,
-      "started_at": "2026-11-20T01:53:00+00:00",
-      "ended_at": "2026-11-20T01:53:45+00:00",
-      "attempt": 1,
+      "started_at": "2026-11-20T01:56:03+00:00",
+      "ended_at": "2026-11-20T01:56:13+00:00",
+      "attempt": 2,
       "retries": 0,
       "max_retries": 2,
       "strategy": "stock_video",
@@ -526,10 +526,56 @@
           "ts": "2026-11-20T01:53:45+00:00",
           "level": "info",
           "msg": "Finished"
+        },
+        {
+          "ts": "2026-11-20T01:56:03+00:00",
+          "level": "warning",
+          "msg": "Sent back by qa: QA found:\n[en] visual_fit review: In scene_02, the viewer must count the letter F from the sentence ('Finished files are the result of years of scientific study combined with the experience of years.'), but the text is neither displayed on-screen nor included in the visual query ('vintage typewriter typing'). Add the full sentence to on-screen text or adjust visual query so the text appears clearly for viewers to read.\n[all] people rule: scene_06: A woman is shown with her hand, arm, and shoulder visible in the first two frames.. Replace with footage without women (a face-only close-up is the only exception)."
+        },
+        {
+          "ts": "2026-11-20T01:56:03+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'stock_video'"
+        },
+        {
+          "ts": "2026-11-20T01:56:03+00:00",
+          "level": "info",
+          "msg": "Revision feedback: QA found:\n[en] visual_fit review: In scene_02, the viewer must count the letter F from the sentence ('Finished files are the result of years of scientific study combined with the experience of years.'), but the text is neither displayed on-screen nor included in the visual query ('vintage typewriter typing'). Add the full sentence to on-screen text or adjust visual query so the text appears clearly for viewers to read.\n[all] people rule: scene_06: A woman is shown with her hand, arm, and shoulder visible in the first two frames.. Replace with footage without women (a face-only close-up is the only exception)."
+        },
+        {
+          "ts": "2026-11-20T01:56:03+00:00",
+          "level": "info",
+          "msg": "Visual diversity: excluding 300 footage sources used in recent Shorts"
+        },
+        {
+          "ts": "2026-11-20T01:56:03+00:00",
+          "level": "info",
+          "msg": "Replacing scene_02, scene_06; keeping 5 unchanged scene(s)"
+        },
+        {
+          "ts": "2026-11-20T01:56:11+00:00",
+          "level": "info",
+          "msg": "scene_06: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-20T01:56:12+00:00",
+          "level": "info",
+          "msg": "scene_02: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-20T01:56:13+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [],
-      "feedback": [],
+      "feedback": [
+        {
+          "ts": "2026-11-20T01:56:03+00:00",
+          "from": "qa",
+          "comment": "QA found:\n[en] visual_fit review: In scene_02, the viewer must count the letter F from the sentence ('Finished files are the result of years of scientific study combined with the experience of years.'), but the text is neither displayed on-screen nor included in the visual query ('vintage typewriter typing'). Add the full sentence to on-screen text or adjust visual query so the text appears clearly for viewers to read.\n[all] people rule: scene_06: A woman is shown with her hand, arm, and shoulder visible in the first two frames.. Replace with footage without women (a face-only close-up is the only exception)."
+        }
+      ],
       "cost_usd": 0.0
     },
     "audio": {
@@ -600,9 +646,9 @@
       "checkpoint": null,
       "status": "done",
       "progress": 100,
-      "started_at": "2026-11-20T01:53:45+00:00",
-      "ended_at": "2026-11-20T01:53:47+00:00",
-      "attempt": 1,
+      "started_at": "2026-11-20T01:56:13+00:00",
+      "ended_at": "2026-11-20T01:56:14+00:00",
+      "attempt": 2,
       "retries": 0,
       "max_retries": 2,
       "strategy": "banana_thumbnail",
@@ -683,6 +729,36 @@
           "ts": "2026-11-20T01:53:47+00:00",
           "level": "info",
           "msg": "Finished"
+        },
+        {
+          "ts": "2026-11-20T01:56:03+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'visuals' is being revised"
+        },
+        {
+          "ts": "2026-11-20T01:56:13+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'banana_thumbnail'"
+        },
+        {
+          "ts": "2026-11-20T01:56:13+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3.5-flash-lite) answered from CACHE (0 API tokens consumed, $0.00 cost)"
+        },
+        {
+          "ts": "2026-11-20T01:56:13+00:00",
+          "level": "info",
+          "msg": "Generating 9:16 image with Nano Banana (gemini-nano-banana-2.1)"
+        },
+        {
+          "ts": "2026-11-20T01:56:13+00:00",
+          "level": "warning",
+          "msg": "Nano Banana thumbnail background failed (Gemini API 429: daily quota used up (or model not enabled) for gemini-nano-banana-2.1, gemini-3.1-flash-image-preview, gemini-3.1-flash-image, gemini-2.5-flash-image); using scene_01 frame instead"
+        },
+        {
+          "ts": "2026-11-20T01:56:14+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [],
@@ -697,11 +773,11 @@
         "audio"
       ],
       "checkpoint": null,
-      "status": "done",
-      "progress": 100,
-      "started_at": "2026-11-20T01:53:46+00:00",
-      "ended_at": "2026-11-20T01:54:19+00:00",
-      "attempt": 1,
+      "status": "running",
+      "progress": 0,
+      "started_at": "2026-11-20T01:56:13+00:00",
+      "ended_at": null,
+      "attempt": 2,
       "retries": 0,
       "max_retries": 2,
       "strategy": "transitions",
@@ -744,6 +820,21 @@
           "ts": "2026-11-20T01:54:19+00:00",
           "level": "info",
           "msg": "Finished"
+        },
+        {
+          "ts": "2026-11-20T01:56:03+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'visuals' is being revised"
+        },
+        {
+          "ts": "2026-11-20T01:56:13+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'transitions'"
+        },
+        {
+          "ts": "2026-11-20T01:56:13+00:00",
+          "level": "info",
+          "msg": "Rendering en: 7 scenes, 33.3s, xfade transitions"
         }
       ],
       "errors": [],
@@ -758,10 +849,10 @@
         "packaging"
       ],
       "checkpoint": "C",
-      "status": "running",
-      "progress": 60,
+      "status": "queued",
+      "progress": 0,
       "started_at": "2026-11-20T01:54:19+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-20T01:56:03+00:00",
       "attempt": 1,
       "retries": 0,
       "max_retries": 2,
@@ -775,7 +866,11 @@
         ],
         "metadata": "metadata.json"
       },
-      "outputs": {},
+      "outputs": {
+        "report": "qa_report.md",
+        "data": "qa_report.json",
+        "thumbnail_en": "thumbnail_en.png"
+      },
       "logs": [
         {
           "ts": "2026-11-20T01:54:19+00:00",
@@ -791,11 +886,46 @@
           "ts": "2026-11-20T01:55:52+00:00",
           "level": "info",
           "msg": "Gemini (gemini-3.8-flash) answered in 90.0s (tokens in 1217, out 139, thinking 0)"
+        },
+        {
+          "ts": "2026-11-20T01:56:00+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.8-flash, medium complexity, thinking low)"
+        },
+        {
+          "ts": "2026-11-20T01:56:00+00:00",
+          "level": "warning",
+          "msg": "'gemini-3.8-flash' is out of daily quota; skipping it for the rest of this run"
+        },
+        {
+          "ts": "2026-11-20T01:56:00+00:00",
+          "level": "warning",
+          "msg": "Model 'gemini-3.8-flash' returned 429; falling back to 'gemini-3-flash-preview'"
+        },
+        {
+          "ts": "2026-11-20T01:56:03+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3-flash-preview) answered in 3.6s (tokens in 3490, out 32, thinking 0)"
+        },
+        {
+          "ts": "2026-11-20T01:56:03+00:00",
+          "level": "warning",
+          "msg": "2 blocking issue(s); sending back to: visuals"
+        },
+        {
+          "ts": "2026-11-20T01:56:03+00:00",
+          "level": "info",
+          "msg": "Finished, waiting for your approval"
+        },
+        {
+          "ts": "2026-11-20T01:56:03+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'visuals' is being revised"
         }
       ],
       "errors": [],
       "feedback": [],
-      "cost_usd": 0.001434
+      "cost_usd": 0.003275
     }
   },
   "checkpoints": {
@@ -852,7 +982,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-20T01:55:58+00:00",
+    "exported_at": "2026-11-20T01:56:16+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/44656078287"
   }
