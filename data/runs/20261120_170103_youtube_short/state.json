@@ -543,7 +543,7 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 26,
+      "progress": 48,
       "started_at": "2026-11-20T17:40:26+00:00",
       "ended_at": null,
       "attempt": 2,
@@ -643,6 +643,16 @@
           "ts": "2026-11-20T17:40:41+00:00",
           "level": "info",
           "msg": "scene_02: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-20T17:40:50+00:00",
+          "level": "info",
+          "msg": "scene_03: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-20T17:41:04+00:00",
+          "level": "info",
+          "msg": "scene_05: stock_video (pixabay)"
         }
       ],
       "errors": [],
@@ -656,10 +666,10 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "running",
-      "progress": 80,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-20T17:40:29+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-20T17:40:51+00:00",
       "attempt": 4,
       "retries": 1,
       "max_retries": 2,
@@ -756,6 +766,11 @@
           "ts": "2026-11-20T17:40:39+00:00",
           "level": "info",
           "msg": "Generating an ambient music bed (no library tracks with license files found)"
+        },
+        {
+          "ts": "2026-11-20T17:40:51+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [
@@ -1077,7 +1092,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-20T17:40:43+00:00",
+    "exported_at": "2026-11-20T17:41:05+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/44778843724"
   }
