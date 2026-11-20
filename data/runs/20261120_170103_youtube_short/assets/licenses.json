@@ -3,80 +3,80 @@
     "scene": "scene_01",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-177164/",
-    "author": "ArtFlores99",
+    "page": "https://pixabay.com/videos/id-126560/",
+    "author": "SoyKhaler",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "man focused expression",
-    "description": "A close-up of a man's face looking intensely focused and serious."
+    "query": "man focused face",
+    "description": "Close-up of a man looking intensely at the camera with a focused expression."
   },
   {
     "scene": "scene_02",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-19498/",
-    "author": "Evodesign",
+    "page": "https://pixabay.com/videos/id-100344/",
+    "author": "egemen_izmirli",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "digital number counter",
-    "description": "Fast-moving digital numbers counting up on a dark background."
+    "query": "hands writing paper",
+    "description": "Close-up of hands quickly writing numbers on a piece of paper."
   },
   {
     "scene": "scene_03",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-303794/",
-    "author": "engrahmad2653",
+    "page": "https://pixabay.com/videos/id-320611/",
+    "author": "MagicTV",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "night city timelapse",
-    "description": "A fast-paced time-lapse of a busy city street at night with light trails."
+    "query": "night highway traffic",
+    "description": "Fast-paced time-lapse of a highway at night with car light trails."
   },
   {
     "scene": "scene_04",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-7955/",
-    "author": "MilanWulf",
+    "page": "https://pixabay.com/videos/id-380892/",
+    "author": "ShunyoNguyen",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "glitch screen effect",
-    "description": "A screen displaying digital noise and glitch effects with flickering colors."
+    "query": "vhs glitch overlay",
+    "description": "Static distortion and digital noise overlaying a dark background."
   },
   {
     "scene": "scene_05",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-107242/",
-    "author": "mootlak",
+    "page": "https://pixabay.com/videos/id-204582/",
+    "author": "crows",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "hand writing fast",
-    "description": "A man's hand quickly writing numbers on a white piece of paper."
+    "query": "mechanical stop watch",
+    "description": "Macro shot of a mechanical stopwatch ticking forward rapidly."
   },
   {
     "scene": "scene_06",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-209854/",
-    "author": "conte_public",
+    "page": "https://pixabay.com/videos/id-61291/",
+    "author": "Engin_Akyurt",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "surprised man face",
-    "description": "A man looking shocked and confused, scratching his head in disbelief."
+    "query": "man confused look",
+    "description": "A man looking confused and rubbing his head in disbelief."
   },
   {
     "scene": "scene_07",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-22219/",
-    "author": "TintaPix",
+    "page": "https://pixabay.com/videos/id-199015/",
+    "author": "draisthetic",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "mechanical gears rotation",
-    "description": "Mechanical gold gears and cogs rotating and interlocking smoothly."
+    "query": "digital abstract lines",
+    "description": "Abstract visualization of glowing digital lines and geometric data flow."
   },
   {
     "scene": "scene_08",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-115465/",
-    "author": "wattana1stockphoto",
+    "page": "https://pixabay.com/videos/id-4905/",
+    "author": "klimkin",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "finger touching screen",
-    "description": "A close-up of a finger hovering over a smartphone screen."
+    "query": "phone notification tap",
+    "description": "Close-up of a finger tapping a smartphone notification on a screen."
   }
 ]
