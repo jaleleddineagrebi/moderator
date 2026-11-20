@@ -13,7 +13,7 @@
         "search_terms": [
           "man intense stare",
           "person thinking closeup",
-          "concentrating face"
+          "focused man looking"
         ],
         "prefer": "video"
       },
@@ -24,14 +24,14 @@
         "en": "Got it? Good. Multiply it by two, and add fourteen to that result."
       },
       "on_screen": {
-        "en": "MULTIPLY BY TWO ⚡"
+        "en": "ADD FOURTEEN ⚡"
       },
       "visual": {
         "description": "Rapidly shifting digital neon numbers flashing across a dark background.",
         "search_terms": [
           "neon numbers flashing",
-          "digital countdown motion",
-          "abstract math data"
+          "digital data motion",
+          "abstract math loop"
         ],
         "prefer": "video"
       },
@@ -57,7 +57,7 @@
     },
     {
       "vo": {
-        "en": "But here is the creepy part: you think you chose that number freely."
+        "en": "Wait, here is the creepy part: I already know your answer."
       },
       "on_screen": {
         "en": "THE CREEPY PART 👁️"
@@ -66,8 +66,8 @@
         "description": "A macro close-up of a human eye iris dilating rapidly with a digital glitch overlay.",
         "search_terms": [
           "macro eye iris",
-          "glitch effect screen",
-          "eye dilation closeup"
+          "eye dilation closeup",
+          "glitch effect screen"
         ],
         "prefer": "video"
       },
@@ -75,7 +75,7 @@
     },
     {
       "vo": {
-        "en": "Your brain actually just landed on the number seven."
+        "en": "Your result is the number seven."
       },
       "on_screen": {
         "en": "IT IS SEVEN 🎯"
@@ -85,7 +85,7 @@
         "search_terms": [
           "dart hitting bullseye",
           "arrow hitting target",
-          "slow motion impact"
+          "impact slow motion"
         ],
         "prefer": "video"
       },
@@ -93,17 +93,17 @@
     },
     {
       "vo": {
-        "en": "This statistical glitch exploits how your mind handles rapid-fire logic and patterns."
+        "en": "It’s not a glitch; it’s a mathematical certainty disguised as a mental illusion."
       },
       "on_screen": {
-        "en": "BRAIN GLITCH 🧠"
+        "en": "MATH CERTAINTY 📐"
       },
       "visual": {
-        "description": "Abstract animation of blue electrical pulses moving through a network of neural pathways.",
+        "description": "Detailed mechanical gears turning perfectly in sync inside a watch or engine.",
         "search_terms": [
-          "neural network pulse",
-          "abstract brain electricity",
-          "data stream flow"
+          "mechanical gears moving",
+          "clockwork mechanism",
+          "engine parts spinning"
         ],
         "prefer": "video"
       },
@@ -111,10 +111,10 @@
     },
     {
       "vo": {
-        "en": "It forces your subconscious into a predictable repetition loop that almost nobody escapes."
+        "en": "The algebra forces the answer to seven every time, regardless of the number you started with."
       },
       "on_screen": {
-        "en": "MIND CONTROLLED ⛓️"
+        "en": "ALGEBRA CONTROL ⛓️"
       },
       "visual": {
         "description": "A man's hand moving a chess piece strategically on a dark wooden board.",
@@ -151,6 +151,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 35.3
+    "en": 34.9
   }
 }
