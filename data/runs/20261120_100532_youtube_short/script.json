@@ -1,0 +1,156 @@
+{
+  "title": "The Interactive Red Number Glitch",
+  "scenes": [
+    {
+      "vo": {
+        "en": "Pick a number between five and twelve."
+      },
+      "on_screen": {
+        "en": "PICK A NUMBER 🧠"
+      },
+      "visual": {
+        "description": "A close-up of a man's face looking directly at the camera with intense concentration.",
+        "search_terms": [
+          "man intense stare",
+          "person thinking closeup",
+          "concentrating face"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Got it? Good. Multiply it by two, and add fourteen to that result."
+      },
+      "on_screen": {
+        "en": "MULTIPLY BY TWO ⚡"
+      },
+      "visual": {
+        "description": "Rapidly shifting digital neon numbers flashing across a dark background.",
+        "search_terms": [
+          "neon numbers flashing",
+          "digital countdown motion",
+          "abstract math data"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Now quickly divide that number by two, then subtract your original starting number."
+      },
+      "on_screen": {
+        "en": "SUBTRACT ORIGINAL 🧮"
+      },
+      "visual": {
+        "description": "A man's hands writing complex mathematical equations on a dusty chalkboard quickly.",
+        "search_terms": [
+          "hand writing chalkboard",
+          "math formula motion",
+          "calculating on board"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "But here is the creepy part: you think you chose that number freely."
+      },
+      "on_screen": {
+        "en": "THE CREEPY PART 👁️"
+      },
+      "visual": {
+        "description": "A macro close-up of a human eye iris dilating rapidly with a digital glitch overlay.",
+        "search_terms": [
+          "macro eye iris",
+          "glitch effect screen",
+          "eye dilation closeup"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Your brain actually just landed on the number seven."
+      },
+      "on_screen": {
+        "en": "IT IS SEVEN 🎯"
+      },
+      "visual": {
+        "description": "A dart flying through the air in slow motion and hitting the exact center of a bullseye.",
+        "search_terms": [
+          "dart hitting bullseye",
+          "arrow hitting target",
+          "slow motion impact"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "This statistical glitch exploits how your mind handles rapid-fire logic and patterns."
+      },
+      "on_screen": {
+        "en": "BRAIN GLITCH 🧠"
+      },
+      "visual": {
+        "description": "Abstract animation of blue electrical pulses moving through a network of neural pathways.",
+        "search_terms": [
+          "neural network pulse",
+          "abstract brain electricity",
+          "data stream flow"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "It forces your subconscious into a predictable repetition loop that almost nobody escapes."
+      },
+      "on_screen": {
+        "en": "MIND CONTROLLED ⛓️"
+      },
+      "visual": {
+        "description": "A man's hand moving a chess piece strategically on a dark wooden board.",
+        "search_terms": [
+          "hand moving chess",
+          "strategy board game",
+          "chess piece movement"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for tomorrow's brain test and comment YES if this worked on you... which is exactly why"
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "A hand holding a smartphone and tapping the screen repeatedly in a fast motion.",
+        "search_terms": [
+          "finger tapping screen",
+          "smartphone interaction",
+          "hand clicking button"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_08"
+    }
+  ],
+  "idea_id": "interactive-red-number-glitch",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 35.3
+  }
+}
