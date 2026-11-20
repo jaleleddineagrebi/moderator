@@ -1,6 +1,6 @@
 {
   "passed": false,
-  "revision_round": 0,
+  "revision_round": 1,
   "checks": [
     {
       "check": "length",
@@ -101,9 +101,9 @@
     {
       "check": "people rule",
       "lang": null,
-      "ok": false,
-      "detail": "scene_06: A woman is shown with her hand, arm, and shoulder visible in the first two frames.. Replace with footage without women (a face-only close-up is the only exception).",
-      "send_to": "visuals",
+      "ok": true,
+      "detail": "no women beyond face close-ups in 7 scenes and 1 thumbnail(s)",
+      "send_to": null,
       "severity": "blocker"
     }
   ]
