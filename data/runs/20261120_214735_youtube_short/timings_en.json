@@ -1,0 +1,520 @@
+{
+  "voice": "en-US-AndrewMultilingualNeural",
+  "duration": 35.004082,
+  "scenes": [
+    {
+      "scene": "scene_01",
+      "start": 0.0,
+      "end": 2.328,
+      "words": [
+        {
+          "start": 0.083,
+          "end": 0.259,
+          "text": "Never"
+        },
+        {
+          "start": 0.271,
+          "end": 0.436,
+          "text": "look"
+        },
+        {
+          "start": 0.436,
+          "end": 0.507,
+          "text": "at"
+        },
+        {
+          "start": 0.507,
+          "end": 0.66,
+          "text": "their"
+        },
+        {
+          "start": 0.66,
+          "end": 1.144,
+          "text": "eyes"
+        },
+        {
+          "start": 1.521,
+          "end": 1.639,
+          "text": "Look"
+        },
+        {
+          "start": 1.639,
+          "end": 1.969,
+          "text": "down"
+        }
+      ]
+    },
+    {
+      "scene": "scene_02",
+      "start": 2.418,
+      "end": 8.562,
+      "words": [
+        {
+          "start": 2.512,
+          "end": 2.595,
+          "text": "While"
+        },
+        {
+          "start": 2.595,
+          "end": 2.677,
+          "text": "we"
+        },
+        {
+          "start": 2.677,
+          "end": 3.055,
+          "text": "spend"
+        },
+        {
+          "start": 3.067,
+          "end": 3.55,
+          "text": "years"
+        },
+        {
+          "start": 3.55,
+          "end": 4.21,
+          "text": "perfecting"
+        },
+        {
+          "start": 4.21,
+          "end": 4.352,
+          "text": "our"
+        },
+        {
+          "start": 4.364,
+          "end": 4.777,
+          "text": "facial"
+        },
+        {
+          "start": 4.788,
+          "end": 5.508,
+          "text": "expressions"
+        },
+        {
+          "start": 5.897,
+          "end": 6.109,
+          "text": "our"
+        },
+        {
+          "start": 6.109,
+          "end": 6.557,
+          "text": "feet"
+        },
+        {
+          "start": 6.663,
+          "end": 7.111,
+          "text": "remain"
+        },
+        {
+          "start": 7.123,
+          "end": 7.701,
+          "text": "completely"
+        },
+        {
+          "start": 7.701,
+          "end": 8.208,
+          "text": "honest"
+        }
+      ]
+    },
+    {
+      "scene": "scene_03",
+      "start": 8.652,
+      "end": 14.316,
+      "words": [
+        {
+          "start": 8.735,
+          "end": 8.817,
+          "text": "If"
+        },
+        {
+          "start": 8.817,
+          "end": 8.852,
+          "text": "a"
+        },
+        {
+          "start": 8.852,
+          "end": 9.194,
+          "text": "man’s"
+        },
+        {
+          "start": 9.194,
+          "end": 9.607,
+          "text": "torso"
+        },
+        {
+          "start": 9.607,
+          "end": 10.091,
+          "text": "faces"
+        },
+        {
+          "start": 10.102,
+          "end": 10.385,
+          "text": "you"
+        },
+        {
+          "start": 10.527,
+          "end": 10.633,
+          "text": "but"
+        },
+        {
+          "start": 10.645,
+          "end": 10.786,
+          "text": "his"
+        },
+        {
+          "start": 10.798,
+          "end": 11.14,
+          "text": "feet"
+        },
+        {
+          "start": 11.14,
+          "end": 11.506,
+          "text": "point"
+        },
+        {
+          "start": 11.518,
+          "end": 11.753,
+          "text": "toward"
+        },
+        {
+          "start": 11.753,
+          "end": 11.812,
+          "text": "the"
+        },
+        {
+          "start": 11.812,
+          "end": 12.272,
+          "text": "exit"
+        },
+        {
+          "start": 12.614,
+          "end": 12.72,
+          "text": "his"
+        },
+        {
+          "start": 12.72,
+          "end": 13.062,
+          "text": "mind"
+        },
+        {
+          "start": 13.062,
+          "end": 13.192,
+          "text": "has"
+        },
+        {
+          "start": 13.192,
+          "end": 13.499,
+          "text": "already"
+        },
+        {
+          "start": 13.499,
+          "end": 13.959,
+          "text": "left"
+        }
+      ]
+    },
+    {
+      "scene": "scene_04",
+      "start": 14.406,
+      "end": 17.478,
+      "words": [
+        {
+          "start": 14.512,
+          "end": 14.583,
+          "text": "But"
+        },
+        {
+          "start": 14.583,
+          "end": 14.925,
+          "text": "here"
+        },
+        {
+          "start": 15.114,
+          "end": 15.208,
+          "text": "is"
+        },
+        {
+          "start": 15.208,
+          "end": 15.302,
+          "text": "the"
+        },
+        {
+          "start": 15.302,
+          "end": 15.75,
+          "text": "creepy"
+        },
+        {
+          "start": 15.75,
+          "end": 16.069,
+          "text": "part"
+        },
+        {
+          "start": 16.069,
+          "end": 16.328,
+          "text": "about"
+        },
+        {
+          "start": 16.34,
+          "end": 16.611,
+          "text": "true"
+        },
+        {
+          "start": 16.611,
+          "end": 17.13,
+          "text": "attraction"
+        }
+      ]
+    },
+    {
+      "scene": "scene_05",
+      "start": 17.568,
+      "end": 23.256,
+      "words": [
+        {
+          "start": 17.662,
+          "end": 17.733,
+          "text": "If"
+        },
+        {
+          "start": 17.733,
+          "end": 17.851,
+          "text": "his"
+        },
+        {
+          "start": 17.863,
+          "end": 18.099,
+          "text": "feet"
+        },
+        {
+          "start": 18.099,
+          "end": 18.323,
+          "text": "point"
+        },
+        {
+          "start": 18.323,
+          "end": 18.865,
+          "text": "directly"
+        },
+        {
+          "start": 18.877,
+          "end": 18.995,
+          "text": "at"
+        },
+        {
+          "start": 18.995,
+          "end": 19.231,
+          "text": "you"
+        },
+        {
+          "start": 19.679,
+          "end": 19.785,
+          "text": "he"
+        },
+        {
+          "start": 19.785,
+          "end": 19.903,
+          "text": "is"
+        },
+        {
+          "start": 19.903,
+          "end": 20.363,
+          "text": "fully"
+        },
+        {
+          "start": 20.363,
+          "end": 21.082,
+          "text": "engaged"
+        },
+        {
+          "start": 21.33,
+          "end": 21.872,
+          "text": "regardless"
+        },
+        {
+          "start": 21.884,
+          "end": 21.919,
+          "text": "of"
+        },
+        {
+          "start": 21.919,
+          "end": 22.002,
+          "text": "what"
+        },
+        {
+          "start": 22.002,
+          "end": 22.108,
+          "text": "his"
+        },
+        {
+          "start": 22.12,
+          "end": 22.391,
+          "text": "face"
+        },
+        {
+          "start": 22.403,
+          "end": 22.91,
+          "text": "says"
+        }
+      ]
+    },
+    {
+      "scene": "scene_06",
+      "start": 23.346,
+      "end": 29.25,
+      "words": [
+        {
+          "start": 23.44,
+          "end": 23.653,
+          "text": "This"
+        },
+        {
+          "start": 23.653,
+          "end": 24.16,
+          "text": "lower-limb"
+        },
+        {
+          "start": 24.16,
+          "end": 24.679,
+          "text": "leakage"
+        },
+        {
+          "start": 24.82,
+          "end": 24.926,
+          "text": "is"
+        },
+        {
+          "start": 24.926,
+          "end": 24.997,
+          "text": "a"
+        },
+        {
+          "start": 24.997,
+          "end": 25.563,
+          "text": "primal"
+        },
+        {
+          "start": 25.563,
+          "end": 26.129,
+          "text": "survival"
+        },
+        {
+          "start": 26.129,
+          "end": 26.766,
+          "text": "reflex"
+        },
+        {
+          "start": 26.837,
+          "end": 26.966,
+          "text": "that"
+        },
+        {
+          "start": 26.978,
+          "end": 27.072,
+          "text": "is"
+        },
+        {
+          "start": 27.084,
+          "end": 27.497,
+          "text": "almost"
+        },
+        {
+          "start": 27.497,
+          "end": 28.228,
+          "text": "impossible"
+        },
+        {
+          "start": 28.24,
+          "end": 28.334,
+          "text": "to"
+        },
+        {
+          "start": 28.346,
+          "end": 28.9,
+          "text": "fake"
+        }
+      ]
+    },
+    {
+      "scene": "scene_07",
+      "start": 29.34,
+      "end": 35.004,
+      "words": [
+        {
+          "start": 29.434,
+          "end": 29.977,
+          "text": "Subscribe"
+        },
+        {
+          "start": 29.977,
+          "end": 30.106,
+          "text": "for"
+        },
+        {
+          "start": 30.106,
+          "end": 30.519,
+          "text": "tomorrow's"
+        },
+        {
+          "start": 30.519,
+          "end": 30.861,
+          "text": "power"
+        },
+        {
+          "start": 30.861,
+          "end": 31.239,
+          "text": "hack"
+        },
+        {
+          "start": 31.368,
+          "end": 31.486,
+          "text": "and"
+        },
+        {
+          "start": 31.498,
+          "end": 31.958,
+          "text": "comment"
+        },
+        {
+          "start": 31.97,
+          "end": 32.335,
+          "text": "YES"
+        },
+        {
+          "start": 32.441,
+          "end": 32.536,
+          "text": "if"
+        },
+        {
+          "start": 32.536,
+          "end": 32.665,
+          "text": "you'll"
+        },
+        {
+          "start": 32.677,
+          "end": 33.031,
+          "text": "test"
+        },
+        {
+          "start": 33.031,
+          "end": 33.373,
+          "text": "this"
+        },
+        {
+          "start": 33.585,
+          "end": 34.14,
+          "text": "especially"
+        },
+        {
+          "start": 34.151,
+          "end": 34.423,
+          "text": "since"
+        },
+        {
+          "start": 34.434,
+          "end": 34.658,
+          "text": "you"
+        }
+      ]
+    }
+  ]
+}

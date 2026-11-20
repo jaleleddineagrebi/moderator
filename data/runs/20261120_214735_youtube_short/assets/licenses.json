@@ -1,0 +1,72 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-19456/",
+    "author": "OrcaTec",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "mens leather shoes",
+    "description": "A close-up, low-angle shot of a man's leather shoes walking confidently on a city sidewalk."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-177164/",
+    "author": "ArtFlores99",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man adjusting suit",
+    "description": "A man in a sharp suit adjusting his tie in a mirror, focusing on his upper body and hands."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-27539/",
+    "author": "socialsudo",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "men group legs",
+    "description": "Three men standing in a group on an office floor; one man's feet are clearly angled toward a doorway."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-13704/",
+    "author": "moshehar",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "dark dramatic hallway",
+    "description": "A dramatic shot of a man's silhouette standing at the end of a long, dimly lit corporate hallway."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-39183/",
+    "author": "movadspro",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man leaning wall",
+    "description": "A man leaning casually against a brick wall with both feet pointed straight toward the camera."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-29886/",
+    "author": "conolan",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "digital neural network",
+    "description": "Abstract blue digital pulses moving quickly through a network, symbolizing neural pathways."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-101929/",
+    "author": "Nick_the_Photographer",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hand holding smartphone",
+    "description": "A close-up of a man's hand holding a smartphone, his thumb hovering over the screen in a dark room."
+  }
+]
