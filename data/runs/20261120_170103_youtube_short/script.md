@@ -1,26 +1,26 @@
 # The 5000 Brain Glitch
 Estimated narration: en 33.8s
 
-## scene_01 · A close-up of a man's face looking intensely focused and serious.
-EN  [BRAIN GLITCH TEST]  Calculate these numbers in your head right now.
+## scene_01 · Close-up of a man looking intensely at the camera with a focused expression.
+EN  [TEST YOUR BRAIN]  Calculate these numbers in your head now.
 
-## scene_02 · Fast-moving digital numbers counting up on a dark background.
-EN  [START CALCULATING]  Start with one thousand. Add forty. Now add another thousand.
+## scene_02 · Close-up of hands quickly writing numbers on a piece of paper.
+EN  [ADD THEM FAST]  Start with one thousand. Add forty. Now add another thousand.
 
-## scene_03 · A fast-paced time-lapse of a busy city street at night with light trails.
-EN  [KEEP ADDING]  Quickly add thirty. Then add another thousand. Keep going.
+## scene_03 · Fast-paced time-lapse of a highway at night with car light trails.
+EN  [KEEP GOING]  Quickly add thirty. Then add another thousand. Keep going.
 
-## scene_04 · A screen displaying digital noise and glitch effects with flickering colors.
-EN  [DON'T BLINK]  Wait, here is where your brain starts to glitch. Add twenty.
+## scene_04 · Static distortion and digital noise overlaying a dark background.
+EN  [THE BRAIN GLITCH]  But here is the creepy part. Your brain is glitching. Add twenty.
 
-## scene_05 · A man's hand quickly writing numbers on a white piece of paper.
-EN  [FINAL ADDITION]  Add one thousand. Finally, add ten. Do you have the total yet?
+## scene_05 · Macro shot of a mechanical stopwatch ticking forward rapidly.
+EN  [FINAL STEP]  Add one thousand. Finally, add ten. Do you have the total?
 
-## scene_06 · A man looking shocked and confused, scratching his head in disbelief.
-EN  [YOU FAILED]  If you said five thousand, you are wrong. The actual answer is four thousand one hundred.
+## scene_06 · A man looking confused and rubbing his head in disbelief.
+EN  [YOU ARE WRONG]  If you said five thousand, you failed. The real answer is forty-one hundred.
 
-## scene_07 · Mechanical gold gears and cogs rotating and interlocking smoothly.
-EN  [COGNITIVE TRAP]  Your brain used a lazy pattern shortcut instead of doing the actual arithmetic.
+## scene_07 · Abstract visualization of glowing digital lines and geometric data flow.
+EN  [COGNITIVE TRAP]  Your mind used a lazy heuristic shortcut instead of doing the actual math.
 
-## scene_08 · A close-up of a finger hovering over a smartphone screen.
-EN  [SUBSCRIBE 🔔]  Subscribe for tomorrow's brain test and comment FAIL if you missed it. You must
+## scene_08 · Close-up of a finger tapping a smartphone notification on a screen.
+EN  [SUBSCRIBE 🔔]  Subscribe for tomorrow's brain test and comment FAIL if this tricked you, which is exactly why you must

@@ -3,17 +3,17 @@
   "scenes": [
     {
       "vo": {
-        "en": "Calculate these numbers in your head right now."
+        "en": "Calculate these numbers in your head now."
       },
       "on_screen": {
-        "en": "BRAIN GLITCH TEST"
+        "en": "TEST YOUR BRAIN"
       },
       "visual": {
-        "description": "A close-up of a man's face looking intensely focused and serious.",
+        "description": "Close-up of a man looking intensely at the camera with a focused expression.",
         "search_terms": [
-          "man focused expression",
-          "person concentrated face",
-          "intense look"
+          "man focused face",
+          "intense eyes",
+          "person thinking"
         ],
         "prefer": "video"
       },
@@ -24,14 +24,14 @@
         "en": "Start with one thousand. Add forty. Now add another thousand."
       },
       "on_screen": {
-        "en": "START CALCULATING"
+        "en": "ADD THEM FAST"
       },
       "visual": {
-        "description": "Fast-moving digital numbers counting up on a dark background.",
+        "description": "Close-up of hands quickly writing numbers on a piece of paper.",
         "search_terms": [
-          "digital number counter",
-          "math calculation motion",
-          "floating numbers"
+          "hands writing paper",
+          "pen moving fast",
+          "mathematical notes"
         ],
         "prefer": "video"
       },
@@ -42,14 +42,14 @@
         "en": "Quickly add thirty. Then add another thousand. Keep going."
       },
       "on_screen": {
-        "en": "KEEP ADDING"
+        "en": "KEEP GOING"
       },
       "visual": {
-        "description": "A fast-paced time-lapse of a busy city street at night with light trails.",
+        "description": "Fast-paced time-lapse of a highway at night with car light trails.",
         "search_terms": [
-          "night city timelapse",
-          "fast traffic lights",
-          "urban motion"
+          "night highway traffic",
+          "car light trails",
+          "fast city motion"
         ],
         "prefer": "video"
       },
@@ -57,17 +57,17 @@
     },
     {
       "vo": {
-        "en": "Wait, here is where your brain starts to glitch. Add twenty."
+        "en": "But here is the creepy part. Your brain is glitching. Add twenty."
       },
       "on_screen": {
-        "en": "DON'T BLINK"
+        "en": "THE BRAIN GLITCH"
       },
       "visual": {
-        "description": "A screen displaying digital noise and glitch effects with flickering colors.",
+        "description": "Static distortion and digital noise overlaying a dark background.",
         "search_terms": [
-          "glitch screen effect",
-          "digital noise distortion",
-          "vhs static"
+          "vhs glitch overlay",
+          "static television",
+          "analog distortion"
         ],
         "prefer": "video"
       },
@@ -75,17 +75,17 @@
     },
     {
       "vo": {
-        "en": "Add one thousand. Finally, add ten. Do you have the total yet?"
+        "en": "Add one thousand. Finally, add ten. Do you have the total?"
       },
       "on_screen": {
-        "en": "FINAL ADDITION"
+        "en": "FINAL STEP"
       },
       "visual": {
-        "description": "A man's hand quickly writing numbers on a white piece of paper.",
+        "description": "Macro shot of a mechanical stopwatch ticking forward rapidly.",
         "search_terms": [
-          "hand writing fast",
-          "pen on paper",
-          "writing numbers"
+          "mechanical stop watch",
+          "ticking clock",
+          "time measurement"
         ],
         "prefer": "video"
       },
@@ -93,17 +93,17 @@
     },
     {
       "vo": {
-        "en": "If you said five thousand, you are wrong. The actual answer is four thousand one hundred."
+        "en": "If you said five thousand, you failed. The real answer is forty-one hundred."
       },
       "on_screen": {
-        "en": "YOU FAILED"
+        "en": "YOU ARE WRONG"
       },
       "visual": {
-        "description": "A man looking shocked and confused, scratching his head in disbelief.",
+        "description": "A man looking confused and rubbing his head in disbelief.",
         "search_terms": [
-          "surprised man face",
-          "confused person expression",
-          "man scratching head"
+          "man confused look",
+          "person rubbing head",
+          "frustrated male"
         ],
         "prefer": "video"
       },
@@ -111,17 +111,17 @@
     },
     {
       "vo": {
-        "en": "Your brain used a lazy pattern shortcut instead of doing the actual arithmetic."
+        "en": "Your mind used a lazy heuristic shortcut instead of doing the actual math."
       },
       "on_screen": {
         "en": "COGNITIVE TRAP"
       },
       "visual": {
-        "description": "Mechanical gold gears and cogs rotating and interlocking smoothly.",
+        "description": "Abstract visualization of glowing digital lines and geometric data flow.",
         "search_terms": [
-          "mechanical gears rotation",
-          "clockwork mechanism",
-          "cogs turning"
+          "digital abstract lines",
+          "geometric data flow",
+          "neon connection"
         ],
         "prefer": "video"
       },
@@ -129,17 +129,17 @@
     },
     {
       "vo": {
-        "en": "Subscribe for tomorrow's brain test and comment FAIL if you missed it. You must"
+        "en": "Subscribe for tomorrow's brain test and comment FAIL if this tricked you, which is exactly why you must"
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "A close-up of a finger hovering over a smartphone screen.",
+        "description": "Close-up of a finger tapping a smartphone notification on a screen.",
         "search_terms": [
-          "finger touching screen",
-          "smartphone interaction",
-          "scrolling phone"
+          "phone notification tap",
+          "finger clicking button",
+          "screen touch"
         ],
         "prefer": "video"
       },
