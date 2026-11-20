@@ -1,0 +1,82 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-177164/",
+    "author": "ArtFlores99",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man focused expression",
+    "description": "A close-up of a man's face looking intensely focused and serious."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-19498/",
+    "author": "Evodesign",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "digital number counter",
+    "description": "Fast-moving digital numbers counting up on a dark background."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-303794/",
+    "author": "engrahmad2653",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "night city timelapse",
+    "description": "A fast-paced time-lapse of a busy city street at night with light trails."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-7955/",
+    "author": "MilanWulf",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "glitch screen effect",
+    "description": "A screen displaying digital noise and glitch effects with flickering colors."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-107242/",
+    "author": "mootlak",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hand writing fast",
+    "description": "A man's hand quickly writing numbers on a white piece of paper."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-209854/",
+    "author": "conte_public",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "surprised man face",
+    "description": "A man looking shocked and confused, scratching his head in disbelief."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-22219/",
+    "author": "TintaPix",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "mechanical gears rotation",
+    "description": "Mechanical gold gears and cogs rotating and interlocking smoothly."
+  },
+  {
+    "scene": "scene_08",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-115465/",
+    "author": "wattana1stockphoto",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "finger touching screen",
+    "description": "A close-up of a finger hovering over a smartphone screen."
+  }
+]
