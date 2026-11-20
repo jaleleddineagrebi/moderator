@@ -1,12 +1,12 @@
 {
-  "passed": false,
-  "revision_round": 1,
+  "passed": true,
+  "revision_round": 2,
   "checks": [
     {
       "check": "length",
       "lang": "en",
       "ok": true,
-      "detail": "45.2s (must be under 60s; target 32-50s)",
+      "detail": "44.4s (must be under 60s; target 32-50s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -14,7 +14,7 @@
       "check": "target length",
       "lang": "en",
       "ok": true,
-      "detail": "45.2s",
+      "detail": "44.4s",
       "send_to": null,
       "severity": "minor"
     },
@@ -62,7 +62,7 @@
       "check": "caption sync",
       "lang": "en",
       "ok": true,
-      "detail": "93 words, 37 caption events",
+      "detail": "90 words, 35 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -91,12 +91,12 @@
       "severity": "blocker"
     },
     {
-      "check": "accuracy review",
+      "check": "grammar review",
       "lang": "en",
       "ok": false,
-      "detail": "In scene_06, the claim that the real answer is 4100 is incorrect. 1000 + 40 + 1000 + 30 + 1000 + 20 + 1000 + 10 equals 4100, but the video script claims people say 5000 incorrectly because of a glitch. The math provided in the script actually adds up to 4100, so saying 4100 is the correct answer and 5000 is wrong is correct, but the prompt implies a trick. However, the sequence 4090 + 10 is where the 'glitch' usually happens making people say 5000. The script as written is factually consistent with the math, but the ending of scene_08 'which is exactly why you must' is a sentence fragment that cuts off. Change scene_08 narration to '...which is exactly why you should' to end more naturally or ensure the loop is seamless.",
+      "detail": "In scene_08, the voiceover ends awkwardly with an ungrammatical trailing clause: 'which is why you should'. Remove 'which is why you should' so the sentence ends cleanly after 'if this tricked you'.",
       "send_to": "script",
-      "severity": "blocker"
+      "severity": "minor"
     },
     {
       "check": "people rule",
