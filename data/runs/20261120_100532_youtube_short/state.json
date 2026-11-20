@@ -67,15 +67,15 @@
   },
   "started_at": "2026-11-20T10:05:32+00:00",
   "ended_at": null,
-  "revision_rounds": 0,
+  "revision_rounds": 1,
   "cost": {
-    "total_usd": 0.015975,
+    "total_usd": 0.017894,
     "budget_usd": 1.0,
     "by_agent": {
       "trend_researcher": 0.0028,
       "scriptwriter": 0.011689,
       "packaging": 0.000449,
-      "qa_reviewer": 0.001037
+      "qa_reviewer": 0.002956
     }
   },
   "agents": {
@@ -371,11 +371,11 @@
         "research"
       ],
       "checkpoint": "B",
-      "status": "done",
-      "progress": 100,
-      "started_at": "2026-11-20T10:15:35+00:00",
-      "ended_at": "2026-11-20T10:20:42+00:00",
-      "attempt": 1,
+      "status": "running",
+      "progress": 10,
+      "started_at": "2026-11-20T10:23:11+00:00",
+      "ended_at": null,
+      "attempt": 2,
       "retries": 0,
       "max_retries": 2,
       "strategy": "default",
@@ -420,10 +420,31 @@
           "ts": "2026-11-20T10:20:42+00:00",
           "level": "info",
           "msg": "Approved by schedule (auto-approve)"
+        },
+        {
+          "ts": "2026-11-20T10:23:11+00:00",
+          "level": "warning",
+          "msg": "Sent back by qa: QA found:\n[en] accuracy review: The narration in scene 06 and 07 describes the trick as a 'statistical glitch' and a 'subconscious repetition loop'. In reality, this is a simple algebraic equation ([(2x + 14) / 2] - x = 7) where the result is always 7 regardless of the starting number. The current script is factually misleading about how the trick works. Change scene 06 to explain it is a mathematical certainty rather than a psychological glitch."
+        },
+        {
+          "ts": "2026-11-20T10:23:11+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'default'"
+        },
+        {
+          "ts": "2026-11-20T10:23:11+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.8-flash, high complexity, thinking high)"
         }
       ],
       "errors": [],
-      "feedback": [],
+      "feedback": [
+        {
+          "ts": "2026-11-20T10:23:11+00:00",
+          "from": "qa",
+          "comment": "QA found:\n[en] accuracy review: The narration in scene 06 and 07 describes the trick as a 'statistical glitch' and a 'subconscious repetition loop'. In reality, this is a simple algebraic equation ([(2x + 14) / 2] - x = 7) where the result is always 7 regardless of the starting number. The current script is factually misleading about how the trick works. Change scene 06 to explain it is a mathematical certainty rather than a psychological glitch."
+        }
+      ],
       "cost_usd": 0.011689
     },
     "visuals": {
@@ -433,8 +454,8 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "done",
-      "progress": 100,
+      "status": "needs_revision",
+      "progress": 0,
       "started_at": "2026-11-20T10:20:42+00:00",
       "ended_at": "2026-11-20T10:21:45+00:00",
       "attempt": 1,
@@ -509,10 +530,26 @@
           "ts": "2026-11-20T10:21:45+00:00",
           "level": "info",
           "msg": "Finished"
+        },
+        {
+          "ts": "2026-11-20T10:23:11+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-20T10:23:11+00:00",
+          "level": "warning",
+          "msg": "Sent back by qa: QA found:\n[all] people rule: scene_02: A woman is clearly visible on a large digital screen on a building in the third frame, showing more than just a tight face-only close-up (shoulders and torso visible).. Replace with footage without women (a face-only close-up is the only exception)."
         }
       ],
       "errors": [],
-      "feedback": [],
+      "feedback": [
+        {
+          "ts": "2026-11-20T10:23:11+00:00",
+          "from": "qa",
+          "comment": "QA found:\n[all] people rule: scene_02: A woman is clearly visible on a large digital screen on a building in the third frame, showing more than just a tight face-only close-up (shoulders and torso visible).. Replace with footage without women (a face-only close-up is the only exception)."
+        }
+      ],
       "cost_usd": 0.0
     },
     "audio": {
@@ -522,12 +559,12 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "done",
-      "progress": 100,
+      "status": "queued",
+      "progress": 0,
       "started_at": "2026-11-20T10:20:45+00:00",
       "ended_at": "2026-11-20T10:21:13+00:00",
       "attempt": 2,
-      "retries": 1,
+      "retries": 0,
       "max_retries": 2,
       "strategy": "alternate_voice",
       "inputs": {
@@ -582,6 +619,11 @@
           "ts": "2026-11-20T10:21:13+00:00",
           "level": "info",
           "msg": "Finished"
+        },
+        {
+          "ts": "2026-11-20T10:23:11+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'script' is being revised"
         }
       ],
       "errors": [
@@ -603,8 +645,8 @@
         "visuals"
       ],
       "checkpoint": null,
-      "status": "done",
-      "progress": 100,
+      "status": "queued",
+      "progress": 0,
       "started_at": "2026-11-20T10:21:45+00:00",
       "ended_at": "2026-11-20T10:21:48+00:00",
       "attempt": 1,
@@ -688,6 +730,16 @@
           "ts": "2026-11-20T10:21:48+00:00",
           "level": "info",
           "msg": "Finished"
+        },
+        {
+          "ts": "2026-11-20T10:23:11+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-20T10:23:11+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'visuals' is being revised"
         }
       ],
       "errors": [],
@@ -702,8 +754,8 @@
         "audio"
       ],
       "checkpoint": null,
-      "status": "done",
-      "progress": 100,
+      "status": "queued",
+      "progress": 0,
       "started_at": "2026-11-20T10:21:45+00:00",
       "ended_at": "2026-11-20T10:22:38+00:00",
       "attempt": 1,
@@ -750,6 +802,16 @@
           "ts": "2026-11-20T10:22:38+00:00",
           "level": "info",
           "msg": "Finished"
+        },
+        {
+          "ts": "2026-11-20T10:23:11+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-20T10:23:11+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'visuals' is being revised"
         }
       ],
       "errors": [],
@@ -764,10 +826,10 @@
         "packaging"
       ],
       "checkpoint": "C",
-      "status": "running",
-      "progress": 60,
+      "status": "queued",
+      "progress": 0,
       "started_at": "2026-11-20T10:22:38+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-20T10:23:11+00:00",
       "attempt": 1,
       "retries": 0,
       "max_retries": 2,
@@ -781,7 +843,11 @@
         ],
         "metadata": "metadata.json"
       },
-      "outputs": {},
+      "outputs": {
+        "report": "qa_report.md",
+        "data": "qa_report.json",
+        "thumbnail_en": "thumbnail_en.png"
+      },
       "logs": [
         {
           "ts": "2026-11-20T10:22:38+00:00",
@@ -802,11 +868,36 @@
           "ts": "2026-11-20T10:22:52+00:00",
           "level": "info",
           "msg": "Asking Gemini (gemini-3.8-flash, medium complexity, thinking low)"
+        },
+        {
+          "ts": "2026-11-20T10:23:11+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3-flash-preview) answered in 18.5s (tokens in 3514, out 54, thinking 0)"
+        },
+        {
+          "ts": "2026-11-20T10:23:11+00:00",
+          "level": "warning",
+          "msg": "2 blocking issue(s); sending back to: script, visuals"
+        },
+        {
+          "ts": "2026-11-20T10:23:11+00:00",
+          "level": "info",
+          "msg": "Finished, waiting for your approval"
+        },
+        {
+          "ts": "2026-11-20T10:23:11+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-20T10:23:11+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'visuals' is being revised"
         }
       ],
       "errors": [],
       "feedback": [],
-      "cost_usd": 0.001037
+      "cost_usd": 0.002956
     }
   },
   "checkpoints": {
@@ -842,7 +933,7 @@
       "type": "approve",
       "step": "script",
       "route_to": "script",
-      "status": "approved",
+      "status": "idle",
       "options": [],
       "choice": null,
       "comment": null,
@@ -863,7 +954,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-20T10:23:02+00:00",
+    "exported_at": "2026-11-20T10:23:20+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/44716170065"
   }
