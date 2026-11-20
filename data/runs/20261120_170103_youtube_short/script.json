@@ -9,11 +9,11 @@
         "en": "TEST YOUR BRAIN"
       },
       "visual": {
-        "description": "Close-up of a man looking intensely at the camera with a focused expression.",
+        "description": "Close-up of a man concentrating intensely with focused eyes.",
         "search_terms": [
           "man focused face",
-          "intense eyes",
-          "person thinking"
+          "intense eyes look",
+          "thinking man close up"
         ],
         "prefer": "video"
       },
@@ -21,17 +21,17 @@
     },
     {
       "vo": {
-        "en": "Start with one thousand. Add forty. Now add another thousand."
+        "en": "Start with one thousand. Add forty. Add another thousand."
       },
       "on_screen": {
         "en": "ADD THEM FAST"
       },
       "visual": {
-        "description": "Close-up of hands quickly writing numbers on a piece of paper.",
+        "description": "Close-up of male hands quickly writing mathematical equations on paper.",
         "search_terms": [
           "hands writing paper",
           "pen moving fast",
-          "mathematical notes"
+          "writing math equations"
         ],
         "prefer": "video"
       },
@@ -39,17 +39,17 @@
     },
     {
       "vo": {
-        "en": "Quickly add thirty. Then add another thousand. Keep going."
+        "en": "Quickly add thirty. Now add another thousand. Stay focused."
       },
       "on_screen": {
         "en": "KEEP GOING"
       },
       "visual": {
-        "description": "Fast-paced time-lapse of a highway at night with car light trails.",
+        "description": "Time-lapse of night highway traffic with fast light trails.",
         "search_terms": [
           "night highway traffic",
           "car light trails",
-          "fast city motion"
+          "fast city night"
         ],
         "prefer": "video"
       },
@@ -57,17 +57,17 @@
     },
     {
       "vo": {
-        "en": "But here is the creepy part. Your brain is glitching. Add twenty."
+        "en": "But here is the creepy part. Your brain is failing. Add twenty."
       },
       "on_screen": {
         "en": "THE BRAIN GLITCH"
       },
       "visual": {
-        "description": "Static distortion and digital noise overlaying a dark background.",
+        "description": "Abstract digital static glitch effect on dark display.",
         "search_terms": [
-          "vhs glitch overlay",
-          "static television",
-          "analog distortion"
+          "vhs glitch video",
+          "digital signal static",
+          "screen noise motion"
         ],
         "prefer": "video"
       },
@@ -75,17 +75,17 @@
     },
     {
       "vo": {
-        "en": "Add one thousand. Finally, add ten. Do you have the total?"
+        "en": "Add one thousand. Now add ten. What is your final number?"
       },
       "on_screen": {
         "en": "FINAL STEP"
       },
       "visual": {
-        "description": "Macro shot of a mechanical stopwatch ticking forward rapidly.",
+        "description": "Macro shot of a mechanical stopwatch rapidly ticking.",
         "search_terms": [
           "mechanical stop watch",
-          "ticking clock",
-          "time measurement"
+          "ticking clock macro",
+          "timer counting fast"
         ],
         "prefer": "video"
       },
@@ -93,17 +93,17 @@
     },
     {
       "vo": {
-        "en": "If you said five thousand, you failed. The real answer is forty-one hundred."
+        "en": "If you said five thousand, you failed! The correct answer is forty-one hundred."
       },
       "on_screen": {
         "en": "YOU ARE WRONG"
       },
       "visual": {
-        "description": "A man looking confused and rubbing his head in disbelief.",
+        "description": "Man looking shocked and shaking his head in confusion.",
         "search_terms": [
           "man confused look",
-          "person rubbing head",
-          "frustrated male"
+          "frustrated man face",
+          "person shaking head"
         ],
         "prefer": "video"
       },
@@ -111,17 +111,17 @@
     },
     {
       "vo": {
-        "en": "Your mind used a lazy heuristic shortcut instead of doing the actual math."
+        "en": "Your brain took a lazy cognitive shortcut instead of doing simple addition."
       },
       "on_screen": {
         "en": "COGNITIVE TRAP"
       },
       "visual": {
-        "description": "Abstract visualization of glowing digital lines and geometric data flow.",
+        "description": "Glowing digital brain mesh animation processing data.",
         "search_terms": [
-          "digital abstract lines",
-          "geometric data flow",
-          "neon connection"
+          "digital brain mesh",
+          "cyber technology network",
+          "glowing data stream"
         ],
         "prefer": "video"
       },
@@ -129,17 +129,17 @@
     },
     {
       "vo": {
-        "en": "Subscribe for tomorrow's brain test and comment FAIL if this tricked you, which is exactly why you must"
+        "en": "Subscribe for tomorrow's brain test and comment FAIL if this tricked you, which is why you should"
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "Close-up of a finger tapping a smartphone notification on a screen.",
+        "description": "Man holding smartphone and clicking screen with thumb.",
         "search_terms": [
-          "phone notification tap",
-          "finger clicking button",
-          "screen touch"
+          "phone screen click",
+          "finger tapping smartphone",
+          "hand holding phone"
         ],
         "prefer": "video"
       },
@@ -151,6 +151,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 33.8
+    "en": 32.7
   }
 }

@@ -69,11 +69,11 @@
   "ended_at": null,
   "revision_rounds": 2,
   "cost": {
-    "total_usd": 0.043637,
+    "total_usd": 0.054638,
     "budget_usd": 1.0,
     "by_agent": {
       "trend_researcher": 0.00811,
-      "scriptwriter": 0.028809,
+      "scriptwriter": 0.03981,
       "packaging": 0.000902,
       "qa_reviewer": 0.005818
     }
@@ -439,10 +439,10 @@
         "research"
       ],
       "checkpoint": "B",
-      "status": "running",
-      "progress": 10,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-20T17:43:00+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-20T17:44:04+00:00",
       "attempt": 3,
       "retries": 0,
       "max_retries": 2,
@@ -568,6 +568,26 @@
           "ts": "2026-11-20T17:43:40+00:00",
           "level": "warning",
           "msg": "Model 'gemini-3.7-flash' returned 503; falling back to 'gemini-3.6-flash'"
+        },
+        {
+          "ts": "2026-11-20T17:44:04+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3.6-flash) answered in 64.3s (tokens in 2411, out 1012, thinking 3099)"
+        },
+        {
+          "ts": "2026-11-20T17:44:04+00:00",
+          "level": "info",
+          "msg": "Estimated narration: en 32.7s"
+        },
+        {
+          "ts": "2026-11-20T17:44:04+00:00",
+          "level": "info",
+          "msg": "Finished, waiting for your approval"
+        },
+        {
+          "ts": "2026-11-20T17:44:04+00:00",
+          "level": "info",
+          "msg": "Approved by schedule (auto-approve)"
         }
       ],
       "errors": [],
@@ -583,7 +603,7 @@
           "comment": "QA found:\n[en] accuracy review: In scene_06, the claim that the real answer is 4100 is incorrect. 1000 + 40 + 1000 + 30 + 1000 + 20 + 1000 + 10 equals 4100, but the video script claims people say 5000 incorrectly because of a glitch. The math provided in the script actually adds up to 4100, so saying 4100 is the correct answer and 5000 is wrong is correct, but the prompt implies a trick. However, the sequence 4090 + 10 is where the 'glitch' usually happens making people say 5000. The script as written is factually consistent with the math, but the ending of scene_08 'which is exactly why you must' is a sentence fragment that cuts off. Change scene_08 narration to '...which is exactly why you should' to end more naturally or ensure the loop is seamless."
         }
       ],
-      "cost_usd": 0.028809
+      "cost_usd": 0.03981
     },
     "visuals": {
       "title": "Source scene visuals",
@@ -592,11 +612,11 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "queued",
-      "progress": 0,
-      "started_at": "2026-11-20T17:40:26+00:00",
-      "ended_at": "2026-11-20T17:41:22+00:00",
-      "attempt": 2,
+      "status": "running",
+      "progress": 16,
+      "started_at": "2026-11-20T17:44:04+00:00",
+      "ended_at": null,
+      "attempt": 3,
       "retries": 0,
       "max_retries": 2,
       "strategy": "stock_video",
@@ -733,6 +753,21 @@
           "ts": "2026-11-20T17:43:00+00:00",
           "level": "info",
           "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-20T17:44:04+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'stock_video'"
+        },
+        {
+          "ts": "2026-11-20T17:44:04+00:00",
+          "level": "info",
+          "msg": "Visual diversity: excluding 300 footage sources used in recent Shorts"
+        },
+        {
+          "ts": "2026-11-20T17:44:19+00:00",
+          "level": "info",
+          "msg": "scene_02: stock_video (pixabay)"
         }
       ],
       "errors": [],
@@ -746,12 +781,12 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "queued",
+      "status": "running",
       "progress": 0,
-      "started_at": "2026-11-20T17:40:29+00:00",
-      "ended_at": "2026-11-20T17:40:51+00:00",
-      "attempt": 4,
-      "retries": 0,
+      "started_at": "2026-11-20T17:44:14+00:00",
+      "ended_at": null,
+      "attempt": 6,
+      "retries": 1,
       "max_retries": 2,
       "strategy": "alternate_voice",
       "inputs": {
@@ -856,6 +891,31 @@
           "ts": "2026-11-20T17:43:00+00:00",
           "level": "info",
           "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-20T17:44:04+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'primary_voice'"
+        },
+        {
+          "ts": "2026-11-20T17:44:04+00:00",
+          "level": "info",
+          "msg": "Narrating en with en-US-AndrewMultilingualNeural"
+        },
+        {
+          "ts": "2026-11-20T17:44:13+00:00",
+          "level": "error",
+          "msg": "NoAudioReceived: No audio was received. Please verify that your parameters are correct."
+        },
+        {
+          "ts": "2026-11-20T17:44:14+00:00",
+          "level": "info",
+          "msg": "Attempt 2/3, strategy 'alternate_voice'"
+        },
+        {
+          "ts": "2026-11-20T17:44:14+00:00",
+          "level": "info",
+          "msg": "Narrating en with en-US-AriaNeural"
         }
       ],
       "errors": [
@@ -867,6 +927,12 @@
         },
         {
           "ts": "2026-11-20T17:40:28+00:00",
+          "attempt": 1,
+          "strategy": "primary_voice",
+          "error": "NoAudioReceived: No audio was received. Please verify that your parameters are correct."
+        },
+        {
+          "ts": "2026-11-20T17:44:13+00:00",
           "attempt": 1,
           "strategy": "primary_voice",
           "error": "NoAudioReceived: No audio was received. Please verify that your parameters are correct."
@@ -1256,11 +1322,11 @@
       "type": "approve",
       "step": "script",
       "route_to": "script",
-      "status": "idle",
+      "status": "approved",
       "options": [],
       "choice": null,
       "comment": null,
-      "decided_at": "2026-11-20T17:40:26+00:00"
+      "decided_at": "2026-11-20T17:44:04+00:00"
     },
     "C": {
       "title": "Approve the final videos (never uploaded without your OK)",
@@ -1277,7 +1343,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-20T17:43:43+00:00",
+    "exported_at": "2026-11-20T17:44:19+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/44778843724"
   }
