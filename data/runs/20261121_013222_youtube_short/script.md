@@ -1,23 +1,23 @@
 # Pick Any Playing Card in 3 Seconds
-Estimated narration: en 35.3s
+Estimated narration: en 38.9s
 
-## scene_01 · Close-up of a magician's hands in dim cinematic lighting performing a fast riffle shuffle with playing cards.
-EN  [PICK A CARD NOW]  Pick any card right now.
+## scene_01 · Close-up of a man's hands performing a high-speed riffle shuffle with a deck of playing cards.
+EN  [PICK A CARD]  Pick a card right now.
 
-## scene_02 · A sleek digital countdown timer glowing red and ticking rapidly against a dark moody backdrop.
-EN  [LOCK IT IN]  Lock it in your mind. See the color, the suit, and the number clearly.
+## scene_02 · Extreme macro shot of a man's eye staring intensely with the iris slightly dilating.
+EN  [DON'T BLINK]  Don't blink and don't look away. Just picture one single card floating in total darkness.
 
-## scene_03 · Dynamic 3D animation of electric blue neural synapses firing rapid pulses through a human brain model.
-EN  [NO CHANGING]  Do not change your mind. Your subconscious just made an automatic split-second calculation.
+## scene_03 · A digital stopwatch counting down rapidly with glowing red numbers on a black screen.
+EN  [LOCK IT IN]  Lock in the color, the suit, and the number clearly. You think your choice is free, right?
 
-## scene_04 · A man seen in silhouette gazing into a fractured antique mirror in a dimly lit cinematic room.
-EN  [THE CREEPY PART]  Here is the creepy part. You genuinely believe you chose that card completely freely.
+## scene_04 · A mysterious man's silhouette standing in a doorway with dramatic cinematic backlighting.
+EN  [THE CREEPY PART]  But here is the creepy part. I already knew which card you were going to choose.
 
-## scene_05 · Slow motion shot of the Queen of Hearts and Ace of Spades landing on a luxurious dark felt surface.
-EN  [WAS THIS YOURS?]  Yet over sixty-five percent of you just locked onto the Queen of Hearts... or the Ace of Spades.
+## scene_05 · Slow motion shot of the Queen of Hearts and Ace of Spades falling onto a green felt table.
+EN  [WAS THIS IT?]  Over sixty-five percent of people under this rapid pressure choose the Queen of Hearts... or the Ace of Spades.
 
-## scene_06 · A man sitting at a dark mahogany desk under a warm lamp, flipping through pages of a thick psychology textbook.
-EN  [PSYCHOLOGICAL PRIMING]  Psychologists prove that rapid time pressure forces our cognitive bias toward extreme visual archetypes.
+## scene_06 · A man sitting in a dark library flipping through the pages of a massive psychology textbook.
+EN  [BRAIN GLITCH]  It's called psychological priming. Your brain takes the path of least resistance when forced to decide in seconds.
 
-## scene_07 · A close-up of a man's finger slamming down on an illuminated neon buzzer on a high-tech console.
-EN  [SUBSCRIBE 🔔]  Subscribe for tomorrow's brain hack, and comment if I caught you—because subconscious manipulation is real, which is why you
+## scene_07 · Close up of a hand holding a smartphone and tapping the screen with a glowing interface.
+EN  [SUBSCRIBE 🔔]  Subscribe for tomorrow's brain hack and comment YES if I caught you. This happens every time you
