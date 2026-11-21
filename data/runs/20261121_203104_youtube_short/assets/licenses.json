@@ -1,0 +1,72 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-202743/",
+    "author": "Matthias_Groeneveld",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man pointing finger",
+    "description": "A man's hand pointing directly at the camera with an urgent, authoritative gesture."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-133801/",
+    "author": "Engin_Akyurt",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "chalkboard math writing",
+    "description": "A man quickly writing mathematical equations on a dusty chalkboard."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-564/",
+    "author": "geralt",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "brain neural pulses",
+    "description": "An abstract 3D visualization of a human brain pulsing with bright blue light."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-34855/",
+    "author": "Danil_Shostak",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "macro eye dilating",
+    "description": "An extreme macro close-up of a human eye with the pupil dilating rapidly."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-144362/",
+    "author": "makowica65_esteer",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "mechanical clock gears",
+    "description": "Intricate mechanical clock gears and cogs rotating in a complex system."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-128125/",
+    "author": "adege",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "fresh carrots pile",
+    "description": "A fresh bunch of bright orange carrots with green tops lying on a wooden table."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-64594/",
+    "author": "Josh_Malic",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "touch screen tapping",
+    "description": "A close-up of a person's thumb tapping a smartphone screen repeatedly."
+  }
+]
