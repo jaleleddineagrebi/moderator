@@ -69,12 +69,13 @@
   "ended_at": null,
   "revision_rounds": 0,
   "cost": {
-    "total_usd": 0.01301,
+    "total_usd": 0.014275,
     "budget_usd": 1.0,
     "by_agent": {
       "trend_researcher": 0.002812,
       "scriptwriter": 0.009744,
-      "packaging": 0.000454
+      "packaging": 0.000454,
+      "qa_reviewer": 0.001265
     }
   },
   "agents": {
@@ -696,10 +697,10 @@
         "audio"
       ],
       "checkpoint": null,
-      "status": "running",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-21T09:55:24+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-21T09:56:05+00:00",
       "attempt": 1,
       "retries": 0,
       "max_retries": 2,
@@ -725,7 +726,9 @@
         ],
         "strategy": "transitions"
       },
-      "outputs": {},
+      "outputs": {
+        "captions_en": "captions_en.ass"
+      },
       "logs": [
         {
           "ts": "2026-11-21T09:55:24+00:00",
@@ -736,6 +739,11 @@
           "ts": "2026-11-21T09:55:24+00:00",
           "level": "info",
           "msg": "Rendering en: 7 scenes, 45.0s, xfade transitions"
+        },
+        {
+          "ts": "2026-11-21T09:56:05+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [],
@@ -750,20 +758,44 @@
         "packaging"
       ],
       "checkpoint": "C",
-      "status": "queued",
-      "progress": 0,
-      "started_at": null,
+      "status": "running",
+      "progress": 60,
+      "started_at": "2026-11-21T09:56:05+00:00",
       "ended_at": null,
-      "attempt": 0,
+      "attempt": 1,
       "retries": 0,
       "max_retries": 2,
-      "strategy": null,
-      "inputs": {},
+      "strategy": "full_review",
+      "inputs": {
+        "videos": {
+          "en": "final_short_en.mp4"
+        },
+        "languages": [
+          "en"
+        ],
+        "metadata": "metadata.json"
+      },
       "outputs": {},
-      "logs": [],
+      "logs": [
+        {
+          "ts": "2026-11-21T09:56:05+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'full_review'"
+        },
+        {
+          "ts": "2026-11-21T09:56:08+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.8-flash, medium complexity, thinking low)"
+        },
+        {
+          "ts": "2026-11-21T09:56:10+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3-flash-preview) answered in 1.9s (tokens in 1240, out 215, thinking 0)"
+        }
+      ],
       "errors": [],
       "feedback": [],
-      "cost_usd": 0.0
+      "cost_usd": 0.001265
     }
   },
   "checkpoints": {
@@ -820,7 +852,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-21T09:55:54+00:00",
+    "exported_at": "2026-11-21T09:56:13+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/44891679977"
   }
