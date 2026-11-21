@@ -1,12 +1,12 @@
 {
-  "passed": false,
-  "revision_round": 0,
+  "passed": true,
+  "revision_round": 1,
   "checks": [
     {
       "check": "length",
       "lang": "en",
       "ok": true,
-      "detail": "45.0s (must be under 60s; target 32-50s)",
+      "detail": "43.6s (must be under 60s; target 32-50s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -14,7 +14,7 @@
       "check": "target length",
       "lang": "en",
       "ok": true,
-      "detail": "45.0s",
+      "detail": "43.6s",
       "send_to": null,
       "severity": "minor"
     },
@@ -62,7 +62,7 @@
       "check": "caption sync",
       "lang": "en",
       "ok": true,
-      "detail": "110 words, 43 caption events",
+      "detail": "105 words, 39 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -94,16 +94,16 @@
       "check": "accuracy review",
       "lang": "en",
       "ok": false,
-      "detail": "The script says middle and ring fingers share the same extensor tendon. In reality, the index and little fingers have independent extensors (extensor indicis and extensor digiti minimi), while the middle and ring fingers only share the extensor digitorum communis. When the middle finger is flexed, it pulls the shared tendon down, preventing the ring finger from lifting. Change 'Your middle and ring fingers share the same extensor tendon' to 'Your middle and ring fingers share the same extensor digitorum tendon' or 'Your fingers share the same tendon'.",
+      "detail": "The script attributes the lock to the 'extensor digitorum' tendon alone, but specifically for the ring finger, the primary reason it cannot lift in this position is the lack of an independent extensor muscle (like the extensor indicis for the index or extensor digiti minimi for the pinky), combined with the interconnecting bands called juncturae tendinum. The explanation is slightly oversimplified. Fix: Change 'Your middle and ring fingers share the same extensor digitorum tendon' to 'Your fingers are connected by bands of tissue called juncturae tendinum' for higher accuracy.",
       "send_to": "script",
-      "severity": "blocker"
+      "severity": "minor"
     },
     {
-      "check": "visual_fit review",
+      "check": "grammar review",
       "lang": "en",
       "ok": false,
-      "detail": "In scene_01, the VO says 'You can't lift this finger' while the visual query is 'man pointing finger'. The query should specifically be 'human hand flat on table' to prepare for the trick instructions.",
-      "send_to": "visuals",
+      "detail": "In scene_07, the phrase 'which is exactly why...' is a dangling clause that does not connect to a preceding or following thought. Fix: Remove 'which is exactly why...' from the end of the script to make the sentence clean.",
+      "send_to": "script",
       "severity": "minor"
     },
     {
