@@ -1,0 +1,138 @@
+{
+  "title": "Pick Any Playing Card in 3 Seconds",
+  "scenes": [
+    {
+      "vo": {
+        "en": "Pick any card right now."
+      },
+      "on_screen": {
+        "en": "PICK A CARD NOW"
+      },
+      "visual": {
+        "description": "Close-up of a magician's hands in dim cinematic lighting performing a fast riffle shuffle with playing cards.",
+        "search_terms": [
+          "hands shuffling cards",
+          "magician card shuffle",
+          "deck cards riffle"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Lock it in your mind. See the color, the suit, and the number clearly."
+      },
+      "on_screen": {
+        "en": "LOCK IT IN"
+      },
+      "visual": {
+        "description": "A sleek digital countdown timer glowing red and ticking rapidly against a dark moody backdrop.",
+        "search_terms": [
+          "digital countdown timer red",
+          "stopwatch ticking dark",
+          "macro timer digits"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Do not change your mind. Your subconscious just made an automatic split-second calculation."
+      },
+      "on_screen": {
+        "en": "NO CHANGING"
+      },
+      "visual": {
+        "description": "Dynamic 3D animation of electric blue neural synapses firing rapid pulses through a human brain model.",
+        "search_terms": [
+          "neural network firing",
+          "electric synapses brain",
+          "glowing neuron pulses"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "Here is the creepy part. You genuinely believe you chose that card completely freely."
+      },
+      "on_screen": {
+        "en": "THE CREEPY PART"
+      },
+      "visual": {
+        "description": "A man seen in silhouette gazing into a fractured antique mirror in a dimly lit cinematic room.",
+        "search_terms": [
+          "man looking mirror shadow",
+          "silhouette man broken glass",
+          "dark reflection cinematic"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Yet over sixty-five percent of you just locked onto the Queen of Hearts... or the Ace of Spades."
+      },
+      "on_screen": {
+        "en": "WAS THIS YOURS?"
+      },
+      "visual": {
+        "description": "Slow motion shot of the Queen of Hearts and Ace of Spades landing on a luxurious dark felt surface.",
+        "search_terms": [
+          "playing cards slow motion drop",
+          "ace spades card felt",
+          "falling cards macro"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "Psychologists prove that rapid time pressure forces our cognitive bias toward extreme visual archetypes."
+      },
+      "on_screen": {
+        "en": "PSYCHOLOGICAL PRIMING"
+      },
+      "visual": {
+        "description": "A man sitting at a dark mahogany desk under a warm lamp, flipping through pages of a thick psychology textbook.",
+        "search_terms": [
+          "man turning book pages",
+          "dark library desk lamp",
+          "flipping textbook pages"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for tomorrow's brain hack, and comment if I caught you—because subconscious manipulation is real, which is why you"
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "A close-up of a man's finger slamming down on an illuminated neon buzzer on a high-tech console.",
+        "search_terms": [
+          "hand pressing neon button",
+          "finger hitting buzzer",
+          "illuminated red push switch"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "interactive-card-brain-glitch",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 35.3
+  }
+}
