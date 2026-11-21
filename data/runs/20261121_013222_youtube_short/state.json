@@ -69,9 +69,11 @@
   "ended_at": null,
   "revision_rounds": 0,
   "cost": {
-    "total_usd": 0.0,
+    "total_usd": 0.004338,
     "budget_usd": 1.0,
-    "by_agent": {}
+    "by_agent": {
+      "trend_researcher": 0.004338
+    }
   },
   "agents": {
     "trend_researcher": {
@@ -274,10 +276,10 @@
       "agent": "trend_researcher",
       "depends_on": [],
       "checkpoint": "A",
-      "status": "running",
-      "progress": 25,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-21T01:32:22+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-21T01:33:35+00:00",
       "attempt": 1,
       "retries": 0,
       "max_retries": 2,
@@ -289,7 +291,10 @@
           "en"
         ]
       },
-      "outputs": {},
+      "outputs": {
+        "ideas": "ideas.md",
+        "data": "ideas.json"
+      },
       "logs": [
         {
           "ts": "2026-11-21T01:32:22+00:00",
@@ -325,11 +330,26 @@
           "ts": "2026-11-21T01:32:53+00:00",
           "level": "warning",
           "msg": "Gemini connection timed out on default route; retrying over IPv4"
+        },
+        {
+          "ts": "2026-11-21T01:33:35+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3.8-flash) answered in 73.1s (tokens in 1404, out 876, thinking 0)"
+        },
+        {
+          "ts": "2026-11-21T01:33:35+00:00",
+          "level": "info",
+          "msg": "Finished, waiting for your approval"
+        },
+        {
+          "ts": "2026-11-21T01:33:35+00:00",
+          "level": "info",
+          "msg": "Approved by schedule (auto-approve) (choice: interactive-card-brain-glitch)"
         }
       ],
       "errors": [],
       "feedback": [],
-      "cost_usd": 0.0
+      "cost_usd": 0.004338
     },
     "script": {
       "title": "Write the script",
@@ -338,17 +358,34 @@
         "research"
       ],
       "checkpoint": "B",
-      "status": "queued",
-      "progress": 0,
-      "started_at": null,
+      "status": "running",
+      "progress": 10,
+      "started_at": "2026-11-21T01:33:35+00:00",
       "ended_at": null,
-      "attempt": 0,
+      "attempt": 1,
       "retries": 0,
       "max_retries": 2,
-      "strategy": null,
-      "inputs": {},
+      "strategy": "default",
+      "inputs": {
+        "idea": "Pick Any Playing Card in 3 Seconds",
+        "languages": [
+          "en"
+        ],
+        "comment_at_selection": null
+      },
       "outputs": {},
-      "logs": [],
+      "logs": [
+        {
+          "ts": "2026-11-21T01:33:35+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'default'"
+        },
+        {
+          "ts": "2026-11-21T01:33:35+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.8-flash, high complexity, thinking high)"
+        }
+      ],
       "errors": [],
       "feedback": [],
       "cost_usd": 0.0
@@ -473,11 +510,27 @@
       "type": "choice",
       "step": "research",
       "route_to": "research",
-      "status": "idle",
-      "options": [],
-      "choice": null,
+      "status": "approved",
+      "options": [
+        {
+          "id": "interactive-card-brain-glitch",
+          "label": "1. Pick Any Playing Card in 3 Seconds",
+          "detail": "The video challenges the viewer to pick any card from an imaginary deck in 3 seconds, priming them with subtle visual cues and verbal pacing to force the Queen of Hearts or Ace of Spades. Comment trigger: prompts viewers to comment immediately if the prediction matched, creating an explosive viral loop.\nHook (en): Pick any card right now.\nWhy: Direct interactive mind-reading tests command 110%+ APV as viewers re-watch to spot how they were primed. Psychological priming studies demonstrate that over 65% of people pick the Queen of Hearts or Ace of Spades when forced to decide under rapid cognitive pressure."
+        },
+        {
+          "id": "forehead-triangle-stare-trick",
+          "label": "2. The Triangle Gaze That Dominates Any Argument",
+          "detail": "Demonstrates the power of the 'Forehead Triangle' gaze technique vs. social gaze during negotiations or hostile confrontations to instantly silence aggression. Comment trigger: prompts viewers to test it in their next meeting and comment the exact reaction.\nHook (en): Look at their forehead right now.\nWhy: Actionable micro-behavior decoding videos boast 82%+ VVSA because they offer immediate, high-status social leverage. Shifting focus to the third-eye forehead area creates an unnerving nonverbal dominance cue that triggers social submission."
+        },
+        {
+          "id": "bizarre-blind-spot-disappearing-dot",
+          "label": "3. Make This Dot Vanish Before Your Eyes",
+          "detail": "Forces the viewer to cover one eye and stare at a cross on screen as a red dot vanishes into their optical scotoma (physiological blind spot). Built-in comment trigger asks viewers to write the exact screen distance where the dot disappeared.\nHook (en): Cover your left eye immediately.\nWhy: Direct physical action hooks immediately stop scrolling within the first 1.5 seconds. Replicating the Mariotte blind-spot test on a phone screen guarantees over 100% completion time because viewers calibrate their phone distance repeatedly."
+        }
+      ],
+      "choice": "interactive-card-brain-glitch",
       "comment": null,
-      "decided_at": null
+      "decided_at": "2026-11-21T01:33:35+00:00"
     },
     "B": {
       "title": "Approve the script",
@@ -505,7 +558,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-21T01:32:58+00:00",
+    "exported_at": "2026-11-21T01:33:45+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/44850704993"
   }
