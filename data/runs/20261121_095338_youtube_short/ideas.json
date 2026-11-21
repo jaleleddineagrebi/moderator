@@ -1,0 +1,68 @@
+{
+  "niche": "Mind Hacks, AI Secrets, Bizarre Body Science & Hidden Power Dynamics",
+  "languages": [
+    "en"
+  ],
+  "ideas": [
+    {
+      "id": "impossible-fist-glitch",
+      "title": "The Impossible Fist Glitch",
+      "angle": "An interactive challenge where the viewer tries to lift their ring finger while their middle finger is tucked under. It demonstrates a physical limitation of the human hand's tendons. It forces engagement as viewers fail and comment their results.",
+      "hook": {
+        "en": "You can't lift this finger."
+      },
+      "keywords": [
+        "brain test",
+        "human body glitch",
+        "interactive challenge",
+        "body science",
+        "hand glitch"
+      ],
+      "reason": "Interactive physical challenges have the highest VVSA because viewers must pause or loop the video to attempt the movement. The 'Paralyzed Ring Finger' variant is a proven viral hook format.",
+      "sources": [
+        "https://www.healthline.com/human-body-maps/extensor-digitorum-communis",
+        "Journal of Hand Surgery: Tendon Interdependence"
+      ]
+    },
+    {
+      "id": "ben-franklin-manipulation",
+      "title": "The Ben Franklin Request Hack",
+      "angle": "A dark psychology trick explaining why asking someone for a small favor actually makes them like you more. It leverages cognitive dissonance to flip an enemy into a friend. High comment potential for people sharing their success stories.",
+      "hook": {
+        "en": "Force them to like you."
+      },
+      "keywords": [
+        "dark psychology",
+        "body language",
+        "social hacks",
+        "manipulation tricks",
+        "persuasion"
+      ],
+      "reason": "Social power dynamics are currently trending on TikTok and Shorts. Actionable 'villain' advice performs better than standard self-help due to the 'edge' factor.",
+      "sources": [
+        "The Autobiography of Benjamin Franklin",
+        "Cognitive Dissonance Theory by Leon Festinger"
+      ]
+    },
+    {
+      "id": "the-f-counting-blindness",
+      "title": "The Letter F Brain Blindness",
+      "angle": "An interactive reading test showing a short sentence where the brain skip-reads the word 'OF'. It proves the brain processes 'OF' as a shape rather than a word. Viewers will rewatch to count again, driving APV over 100%.",
+      "hook": {
+        "en": "Your brain is lying to you."
+      },
+      "keywords": [
+        "optical illusion",
+        "brain test",
+        "mind game",
+        "psychology test",
+        "reading glitch"
+      ],
+      "reason": "Visual 'blindness' tests are classic high-retention content. By challenging the viewer's intelligence, you trigger a 'verify' loop where they watch the text 3-4 times to find the missing letters.",
+      "sources": [
+        "University of Cambridge: The Typoglycemia Study",
+        "Psychology Today: Why our brains skip words"
+      ]
+    }
+  ]
+}
