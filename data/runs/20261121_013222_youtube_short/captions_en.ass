@@ -1,0 +1,58 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:01.91,Headline,,0,0,0,,{\fad(150,150)}PICK A CARD NOW
+Dialogue: 1,0:00:02.01,0:00:06.30,Headline,,0,0,0,,{\fad(150,150)}LOCK IT IN
+Dialogue: 1,0:00:06.40,0:00:11.72,Headline,,0,0,0,,{\fad(150,150)}NO CHANGING
+Dialogue: 1,0:00:11.82,0:00:17.18,Headline,,0,0,0,,{\fad(150,150)}THE CREEPY PART
+Dialogue: 1,0:00:17.28,0:00:22.58,Headline,,0,0,0,,{\fad(150,150)}WAS THIS YOURS?
+Dialogue: 1,0:00:22.68,0:00:29.77,Headline,,0,0,0,,{\fad(150,150)}PSYCHOLOGICAL PRIMING
+Dialogue: 1,0:00:29.87,0:00:38.56,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 0,0:00:00.08,0:00:00.58,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Pick{\c&H00FFFFFF&} any card
+Dialogue: 0,0:00:00.58,0:00:01.04,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}right{\c&H00FFFFFF&} now
+Dialogue: 0,0:00:02.03,0:00:02.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Lock{\c&H00FFFFFF&} it in
+Dialogue: 0,0:00:02.34,0:00:02.81,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}mind{\c&H00FFFFFF&}
+Dialogue: 0,0:00:03.20,0:00:03.87,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}See the {\c&H0000E5FF&}color{\c&H00FFFFFF&}
+Dialogue: 0,0:00:04.08,0:00:04.66,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}suit{\c&H00FFFFFF&}
+Dialogue: 0,0:00:05.06,0:00:05.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and the {\c&H0000E5FF&}number{\c&H00FFFFFF&}
+Dialogue: 0,0:00:05.43,0:00:05.90,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}clearly
+Dialogue: 0,0:00:06.44,0:00:07.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Do not {\c&H0000E5FF&}change{\c&H00FFFFFF&}
+Dialogue: 0,0:00:07.02,0:00:07.46,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}mind{\c&H00FFFFFF&}
+Dialogue: 0,0:00:07.85,0:00:08.99,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}subconscious{\c&H00FFFFFF&} just
+Dialogue: 0,0:00:09.00,0:00:09.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}made an {\c&H0000E5FF&}automatic{\c&H00FFFFFF&}
+Dialogue: 0,0:00:09.84,0:00:11.32,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}split-second{\c&H00FFFFFF&} calculation
+Dialogue: 0,0:00:11.87,0:00:12.27,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Here
+Dialogue: 0,0:00:12.48,0:00:12.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is the {\c&H0000E5FF&}creepy{\c&H00FFFFFF&}
+Dialogue: 0,0:00:12.93,0:00:13.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}part
+Dialogue: 0,0:00:13.63,0:00:14.47,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You {\c&H0000E5FF&}genuinely{\c&H00FFFFFF&} believe
+Dialogue: 0,0:00:14.47,0:00:15.16,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you {\c&H0000E5FF&}chose{\c&H00FFFFFF&} that
+Dialogue: 0,0:00:15.17,0:00:16.78,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}card {\c&H0000E5FF&}completely{\c&H00FFFFFF&} freely
+Dialogue: 0,0:00:17.33,0:00:18.28,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Yet over {\c&H0000E5FF&}sixty-five{\c&H00FFFFFF&}
+Dialogue: 0,0:00:18.28,0:00:18.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}percent{\c&H00FFFFFF&} of you
+Dialogue: 0,0:00:18.94,0:00:19.86,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}just {\c&H0000E5FF&}locked{\c&H00FFFFFF&} onto
+Dialogue: 0,0:00:19.87,0:00:20.30,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}Queen{\c&H00FFFFFF&} of
+Dialogue: 0,0:00:20.30,0:00:21.27,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Hearts{\c&H00FFFFFF&} or the
+Dialogue: 0,0:00:21.27,0:00:22.17,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Ace of {\c&H0000E5FF&}Spades{\c&H00FFFFFF&}
+Dialogue: 0,0:00:22.72,0:00:24.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Psychologists{\c&H00FFFFFF&} prove that
+Dialogue: 0,0:00:24.12,0:00:25.16,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}rapid time {\c&H0000E5FF&}pressure{\c&H00FFFFFF&}
+Dialogue: 0,0:00:25.16,0:00:26.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}forces our {\c&H0000E5FF&}cognitive{\c&H00FFFFFF&}
+Dialogue: 0,0:00:26.43,0:00:28.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}bias toward {\c&H0000E5FF&}extreme{\c&H00FFFFFF&}
+Dialogue: 0,0:00:28.31,0:00:29.37,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}visual {\c&H0000E5FF&}archetypes{\c&H00FFFFFF&}
+Dialogue: 0,0:00:29.91,0:00:31.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Subscribe for {\c&H0000E5FF&}tomorrow's{\c&H00FFFFFF&}
+Dialogue: 0,0:00:31.18,0:00:31.87,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}brain{\c&H00FFFFFF&} hack
+Dialogue: 0,0:00:32.26,0:00:33.13,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and {\c&H0000E5FF&}comment{\c&H00FFFFFF&} if
+Dialogue: 0,0:00:33.13,0:00:33.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}I {\c&H0000E5FF&}caught{\c&H00FFFFFF&} you
+Dialogue: 0,0:00:34.12,0:00:35.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}because {\c&H0000E5FF&}subconscious{\c&H00FFFFFF&} manipulation
+Dialogue: 0,0:00:35.89,0:00:36.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is real {\c&H0000E5FF&}which{\c&H00FFFFFF&}
+Dialogue: 0,0:00:36.85,0:00:37.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is why you
