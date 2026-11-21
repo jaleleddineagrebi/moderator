@@ -3,70 +3,70 @@
     "scene": "scene_01",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-202743/",
-    "author": "Matthias_Groeneveld",
+    "page": "https://pixabay.com/videos/id-51807/",
+    "author": "mrbobdobolina",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "man pointing finger",
-    "description": "A man's hand pointing directly at the camera with an urgent, authoritative gesture."
+    "query": "hand clicking stopwatch",
+    "description": "A man's hand clicking a silver stopwatch in an extreme close-up."
   },
   {
     "scene": "scene_02",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-133801/",
-    "author": "Engin_Akyurt",
+    "page": "https://pixabay.com/videos/id-387578/",
+    "author": "JoshuaWoroniecki",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "chalkboard math writing",
-    "description": "A man quickly writing mathematical equations on a dusty chalkboard."
+    "query": "digital numbers falling",
+    "description": "Rapidly scrolling digital numbers and math equations on a dark screen."
   },
   {
     "scene": "scene_03",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-564/",
-    "author": "geralt",
+    "page": "https://pixabay.com/videos/id-3612/",
+    "author": "Coverr-Free-Footage",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "brain neural pulses",
-    "description": "An abstract 3D visualization of a human brain pulsing with bright blue light."
+    "query": "neural network glowing",
+    "description": "An abstract visualization of a human brain glowing with electric blue neural pathways."
   },
   {
     "scene": "scene_04",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-34855/",
-    "author": "Danil_Shostak",
+    "page": "https://pixabay.com/videos/id-62550/",
+    "author": "Engin_Akyurt",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "macro eye dilating",
-    "description": "An extreme macro close-up of a human eye with the pupil dilating rapidly."
+    "query": "mysterious man face",
+    "description": "A mysterious man in a dark hoodie looking directly into the camera lens."
   },
   {
     "scene": "scene_05",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-144362/",
-    "author": "makowica65_esteer",
+    "page": "https://pixabay.com/videos/id-3624/",
+    "author": "Coverr-Free-Footage",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "mechanical clock gears",
-    "description": "Intricate mechanical clock gears and cogs rotating in a complex system."
+    "query": "clock gears turning",
+    "description": "Golden mechanical clock gears rotating and intermeshing with precision."
   },
   {
     "scene": "scene_06",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-128125/",
-    "author": "adege",
+    "page": "https://pixabay.com/videos/id-16685/",
+    "author": "RoyBuri",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "fresh carrots pile",
-    "description": "A fresh bunch of bright orange carrots with green tops lying on a wooden table."
+    "query": "carrots harvest soil",
+    "description": "A close-up shot of several bright orange carrots being pulled from dark garden soil."
   },
   {
     "scene": "scene_07",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-64594/",
-    "author": "Josh_Malic",
+    "page": "https://pixabay.com/videos/id-94978/",
+    "author": "Kmeel_com",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "touch screen tapping",
-    "description": "A close-up of a person's thumb tapping a smartphone screen repeatedly."
+    "query": "thumb scrolling screen",
+    "description": "A person's thumb tapping and scrolling quickly on a bright smartphone screen."
   }
 ]

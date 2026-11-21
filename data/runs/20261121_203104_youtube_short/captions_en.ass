@@ -13,48 +13,43 @@ Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 Dialogue: 1,0:00:00.05,0:00:02.37,Headline,,0,0,0,,{\fad(150,150)}PICK A VEGETABLE NOW
-Dialogue: 1,0:00:02.47,0:00:08.82,Headline,,0,0,0,,{\fad(150,150)}DO THE MATH FAST
-Dialogue: 1,0:00:08.92,0:00:13.85,Headline,,0,0,0,,{\fad(150,150)}NAME IT NOW!
-Dialogue: 1,0:00:13.95,0:00:17.33,Headline,,0,0,0,,{\fad(150,150)}THE CREEPY PART...
-Dialogue: 1,0:00:17.43,0:00:24.57,Headline,,0,0,0,,{\fad(150,150)}BRAIN GLITCH ACTIVATED
-Dialogue: 1,0:00:24.67,0:00:29.87,Headline,,0,0,0,,{\fad(150,150)}YOU THOUGHT: CARROT
-Dialogue: 1,0:00:29.97,0:00:36.47,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
-Dialogue: 0,0:00:00.09,0:00:00.85,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Pick a {\c&H0000E5FF&}vegetable{\c&H00FFFFFF&}
-Dialogue: 0,0:00:00.86,0:00:01.98,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}in three {\c&H0000E5FF&}seconds{\c&H00FFFFFF&}
-Dialogue: 0,0:00:02.51,0:00:03.06,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Do this {\c&H0000E5FF&}math{\c&H00FFFFFF&}
-Dialogue: 0,0:00:03.07,0:00:03.60,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}fast
-Dialogue: 0,0:00:03.98,0:00:04.66,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Two plus two
-Dialogue: 0,0:00:05.06,0:00:05.71,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Four{\c&H00FFFFFF&} plus four
-Dialogue: 0,0:00:06.06,0:00:06.77,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Eight{\c&H00FFFFFF&} plus eight
-Dialogue: 0,0:00:07.15,0:00:08.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Sixteen{\c&H00FFFFFF&} plus sixteen
-Dialogue: 0,0:00:08.96,0:00:09.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Stop
-Dialogue: 0,0:00:09.71,0:00:10.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Now
-Dialogue: 0,0:00:10.43,0:00:10.94,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}shout{\c&H00FFFFFF&} out the
-Dialogue: 0,0:00:10.94,0:00:12.10,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}very first {\c&H0000E5FF&}vegetable{\c&H00FFFFFF&}
-Dialogue: 0,0:00:12.26,0:00:13.07,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}that {\c&H0000E5FF&}pops{\c&H00FFFFFF&} into
-Dialogue: 0,0:00:13.07,0:00:13.47,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}head{\c&H00FFFFFF&}
-Dialogue: 0,0:00:14.00,0:00:14.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Wait the {\c&H0000E5FF&}creepy{\c&H00FFFFFF&}
-Dialogue: 0,0:00:14.93,0:00:15.46,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}part{\c&H00FFFFFF&} is I
-Dialogue: 0,0:00:15.46,0:00:16.19,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}already{\c&H00FFFFFF&} knew what
-Dialogue: 0,0:00:16.20,0:00:16.94,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you'd {\c&H0000E5FF&}choose{\c&H00FFFFFF&}
-Dialogue: 0,0:00:17.47,0:00:18.37,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It's called {\c&H0000E5FF&}heuristic{\c&H00FFFFFF&}
-Dialogue: 0,0:00:18.37,0:00:18.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}priming
-Dialogue: 0,0:00:19.20,0:00:19.79,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}When your {\c&H0000E5FF&}brain{\c&H00FFFFFF&}
-Dialogue: 0,0:00:19.80,0:00:20.77,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is {\c&H0000E5FF&}overloaded{\c&H00FFFFFF&} with
-Dialogue: 0,0:00:20.77,0:00:21.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}rapid{\c&H00FFFFFF&} logic
-Dialogue: 0,0:00:21.99,0:00:22.58,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}it {\c&H0000E5FF&}defaults{\c&H00FFFFFF&} to
-Dialogue: 0,0:00:22.59,0:00:23.48,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the most {\c&H0000E5FF&}basic{\c&H00FFFFFF&}
-Dialogue: 0,0:00:23.48,0:00:24.19,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}prototype
-Dialogue: 0,0:00:24.71,0:00:24.98,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You {\c&H0000E5FF&}thought{\c&H00FFFFFF&} of
-Dialogue: 0,0:00:24.98,0:00:25.41,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a {\c&H0000E5FF&}carrot{\c&H00FFFFFF&}
-Dialogue: 0,0:00:25.79,0:00:26.26,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Am I {\c&H0000E5FF&}right{\c&H00FFFFFF&}
-Dialogue: 0,0:00:26.64,0:00:27.59,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}mind{\c&H00FFFFFF&} took
-Dialogue: 0,0:00:27.59,0:00:28.51,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}path{\c&H00FFFFFF&} of
-Dialogue: 0,0:00:28.52,0:00:29.48,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}least {\c&H0000E5FF&}resistance{\c&H00FFFFFF&}
-Dialogue: 0,0:00:30.01,0:00:31.05,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Subscribe for {\c&H0000E5FF&}tomorrow’s{\c&H00FFFFFF&}
-Dialogue: 0,0:00:31.06,0:00:32.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}brain{\c&H00FFFFFF&} test and
-Dialogue: 0,0:00:32.24,0:00:33.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} YES if
-Dialogue: 0,0:00:33.25,0:00:33.76,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}this {\c&H0000E5FF&}worked{\c&H00FFFFFF&} on
-Dialogue: 0,0:00:33.76,0:00:34.16,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you
-Dialogue: 0,0:00:34.33,0:00:35.17,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}This works {\c&H0000E5FF&}because{\c&H00FFFFFF&}
-Dialogue: 0,0:00:35.17,0:00:35.57,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you
+Dialogue: 1,0:00:02.47,0:00:11.24,Headline,,0,0,0,,{\fad(150,150)}DO THE MATH FAST
+Dialogue: 1,0:00:11.34,0:00:16.78,Headline,,0,0,0,,{\fad(150,150)}NAME IT NOW!
+Dialogue: 1,0:00:16.88,0:00:21.33,Headline,,0,0,0,,{\fad(150,150)}I KNEW THE RESULT
+Dialogue: 1,0:00:21.43,0:00:29.06,Headline,,0,0,0,,{\fad(150,150)}BRAIN GLITCH ACTIVATED
+Dialogue: 1,0:00:29.16,0:00:35.77,Headline,,0,0,0,,{\fad(150,150)}YOU THOUGHT: CARROT
+Dialogue: 1,0:00:35.87,0:00:42.83,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 0,0:00:00.10,0:00:00.92,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Pick a {\c&H0000E5FF&}vegetable{\c&H00FFFFFF&}
+Dialogue: 0,0:00:00.93,0:00:01.51,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}right{\c&H00FFFFFF&} now
+Dialogue: 0,0:00:02.52,0:00:03.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Quick
+Dialogue: 0,0:00:03.82,0:00:04.69,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Two plus two
+Dialogue: 0,0:00:05.51,0:00:06.50,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Four{\c&H00FFFFFF&} plus four
+Dialogue: 0,0:00:07.32,0:00:08.22,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Eight{\c&H00FFFFFF&} plus eight
+Dialogue: 0,0:00:09.03,0:00:10.38,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Sixteen{\c&H00FFFFFF&} plus sixteen
+Dialogue: 0,0:00:11.39,0:00:12.03,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Stop
+Dialogue: 0,0:00:12.82,0:00:13.80,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Now {\c&H0000E5FF&}shout{\c&H00FFFFFF&} out
+Dialogue: 0,0:00:13.82,0:00:14.73,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the first {\c&H0000E5FF&}vegetable{\c&H00FFFFFF&}
+Dialogue: 0,0:00:14.75,0:00:15.37,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}that {\c&H0000E5FF&}pops{\c&H00FFFFFF&} into
+Dialogue: 0,0:00:15.38,0:00:15.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}head{\c&H00FFFFFF&}
+Dialogue: 0,0:00:16.93,0:00:18.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Wait the {\c&H0000E5FF&}creepy{\c&H00FFFFFF&}
+Dialogue: 0,0:00:18.04,0:00:18.53,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}part{\c&H00FFFFFF&} is I
+Dialogue: 0,0:00:18.54,0:00:19.58,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}already{\c&H00FFFFFF&} knew exactly
+Dialogue: 0,0:00:19.59,0:00:20.45,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}what you'd {\c&H0000E5FF&}choose{\c&H00FFFFFF&}
+Dialogue: 0,0:00:21.48,0:00:22.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It’s a {\c&H0000E5FF&}glitch{\c&H00FFFFFF&}
+Dialogue: 0,0:00:22.16,0:00:23.44,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}called {\c&H0000E5FF&}heuristic{\c&H00FFFFFF&} priming
+Dialogue: 0,0:00:24.26,0:00:25.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your brain {\c&H0000E5FF&}overwhelmed{\c&H00FFFFFF&}
+Dialogue: 0,0:00:25.54,0:00:26.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}by math {\c&H0000E5FF&}defaults{\c&H00FFFFFF&}
+Dialogue: 0,0:00:26.71,0:00:27.16,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to the {\c&H0000E5FF&}most{\c&H00FFFFFF&}
+Dialogue: 0,0:00:27.17,0:00:28.19,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}common {\c&H0000E5FF&}prototype{\c&H00FFFFFF&}
+Dialogue: 0,0:00:29.20,0:00:29.69,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You {\c&H0000E5FF&}thought{\c&H00FFFFFF&} of
+Dialogue: 0,0:00:29.70,0:00:30.28,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a {\c&H0000E5FF&}carrot{\c&H00FFFFFF&}
+Dialogue: 0,0:00:31.09,0:00:31.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Am I {\c&H0000E5FF&}right{\c&H00FFFFFF&}
+Dialogue: 0,0:00:32.66,0:00:33.39,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}mind{\c&H00FFFFFF&} took
+Dialogue: 0,0:00:33.40,0:00:33.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}path{\c&H00FFFFFF&} of
+Dialogue: 0,0:00:33.92,0:00:34.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}least {\c&H0000E5FF&}resistance{\c&H00FFFFFF&}
+Dialogue: 0,0:00:35.92,0:00:37.17,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Subscribe for {\c&H0000E5FF&}tomorrow’s{\c&H00FFFFFF&}
+Dialogue: 0,0:00:37.18,0:00:37.92,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}brain{\c&H00FFFFFF&} test and
+Dialogue: 0,0:00:37.93,0:00:38.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} YES if
+Dialogue: 0,0:00:38.74,0:00:39.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}I got you
+Dialogue: 0,0:00:40.16,0:00:40.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}I {\c&H0000E5FF&}knew{\c&H00FFFFFF&} it
+Dialogue: 0,0:00:40.69,0:00:41.35,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}because{\c&H00FFFFFF&} you
