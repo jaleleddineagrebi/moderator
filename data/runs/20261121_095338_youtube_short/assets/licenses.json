@@ -3,70 +3,70 @@
     "scene": "scene_01",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-202743/",
-    "author": "Matthias_Groeneveld",
+    "page": "https://pixabay.com/videos/id-199623/",
+    "author": "MujtabaAhemad",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
     "query": "man pointing finger",
-    "description": "A man's hand pointing aggressively at the camera against a dark background."
+    "description": "A close-up of a man's hand pointing directly toward the camera with a dark, moody background."
   },
   {
     "scene": "scene_02",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-186195/",
-    "author": "NickyPe",
+    "page": "https://pixabay.com/videos/id-43559/",
+    "author": "PhotoDhaba",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
     "query": "hand on table",
-    "description": "Close-up of a hand on a wooden desk folding the middle finger underneath."
+    "description": "Macro shot of a male hand on a dark wooden surface, folding the middle finger underneath the palm."
   },
   {
     "scene": "scene_03",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-89795/",
-    "author": "TRAPHITHO",
+    "page": "https://pixabay.com/videos/id-21115/",
+    "author": "RafterJr72",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "hand effort",
-    "description": "Macro shot of fingers attempting to lift while one is pinned down, showing effort."
+    "query": "hand finger movement",
+    "description": "Close up of a hand where the thumb and index lift smoothly, but the ring finger remains stuck."
   },
   {
     "scene": "scene_04",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-86315/",
-    "author": "TRAPHITHO",
+    "page": "https://pixabay.com/videos/id-70962/",
+    "author": "bilalashrafmzon",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "neural network animation",
-    "description": "Abstract digital glitch overlaying a neural network animation representing brain signals."
+    "query": "digital glitch animation",
+    "description": "Abstract blue and yellow digital glitch overlay over a silhouette of a person's head."
   },
   {
     "scene": "scene_05",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-4041/",
-    "author": "F1Digitals",
+    "page": "https://pixabay.com/videos/id-98064/",
+    "author": "bellergy",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "human hand anatomy",
-    "description": "Medical style 3D animation of hand anatomy showing muscles and tendons moving."
+    "query": "hand anatomy 3d",
+    "description": "A clean 3D medical animation showing the internal tendons and muscles of a moving human hand."
   },
   {
     "scene": "scene_06",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-397/",
-    "author": "FlickrVideos",
+    "page": "https://pixabay.com/videos/id-213945/",
+    "author": "ChristianBodhi",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
     "query": "man looking confused",
-    "description": "A man looking at his hand with a confused and frustrated expression."
+    "description": "A man looking at his own hand with a look of pure confusion and disbelief."
   },
   {
     "scene": "scene_07",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-64594/",
+    "page": "https://pixabay.com/videos/id-64595/",
     "author": "Josh_Malic",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "scrolling phone",
-    "description": "Overhead view of a hand scrolling through a smartphone social media feed."
+    "query": "scrolling phone screen",
+    "description": "Overhead shot of a person's thumb scrolling rapidly through a social media feed on a smartphone."
   }
 ]
