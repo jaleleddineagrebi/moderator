@@ -1,0 +1,138 @@
+{
+  "title": "The 3-Second Vegetable Mind Reading Test",
+  "scenes": [
+    {
+      "vo": {
+        "en": "Pick a vegetable in three seconds."
+      },
+      "on_screen": {
+        "en": "PICK A VEGETABLE NOW"
+      },
+      "visual": {
+        "description": "A man's hand pointing directly at the camera with an urgent, authoritative gesture.",
+        "search_terms": [
+          "man pointing finger",
+          "urgent hand gesture",
+          "close up finger"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Do this math fast. Two plus two? Four plus four? Eight plus eight? Sixteen plus sixteen?"
+      },
+      "on_screen": {
+        "en": "DO THE MATH FAST"
+      },
+      "visual": {
+        "description": "A man quickly writing mathematical equations on a dusty chalkboard.",
+        "search_terms": [
+          "chalkboard math writing",
+          "fast calculations numbers",
+          "man solving equations"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Stop. Now, shout out the very first vegetable that pops into your head!"
+      },
+      "on_screen": {
+        "en": "NAME IT NOW!"
+      },
+      "visual": {
+        "description": "An abstract 3D visualization of a human brain pulsing with bright blue light.",
+        "search_terms": [
+          "brain neural pulses",
+          "abstract cognitive spark",
+          "human mind energy"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "Wait, the creepy part is I already knew what you'd choose."
+      },
+      "on_screen": {
+        "en": "THE CREEPY PART..."
+      },
+      "visual": {
+        "description": "An extreme macro close-up of a human eye with the pupil dilating rapidly.",
+        "search_terms": [
+          "macro eye dilating",
+          "extreme close up eye",
+          "human pupil contraction"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "It's called heuristic priming. When your brain is overloaded with rapid logic, it defaults to the most basic prototype."
+      },
+      "on_screen": {
+        "en": "BRAIN GLITCH ACTIVATED"
+      },
+      "visual": {
+        "description": "Intricate mechanical clock gears and cogs rotating in a complex system.",
+        "search_terms": [
+          "mechanical clock gears",
+          "golden watch parts",
+          "cogs rotating slowly"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "You thought of a carrot. Am I right? Your mind took the path of least resistance."
+      },
+      "on_screen": {
+        "en": "YOU THOUGHT: CARROT"
+      },
+      "visual": {
+        "description": "A fresh bunch of bright orange carrots with green tops lying on a wooden table.",
+        "search_terms": [
+          "fresh carrots pile",
+          "garden vegetables close",
+          "orange carrots basket"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for tomorrow’s brain test and comment YES if this worked on you. This works because you..."
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "A close-up of a person's thumb tapping a smartphone screen repeatedly.",
+        "search_terms": [
+          "touch screen tapping",
+          "smartphone interaction close",
+          "finger pressing button"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "vegetable-brain-glitch",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 35.6
+  }
+}
