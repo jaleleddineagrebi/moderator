@@ -1,0 +1,72 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-11606/",
+    "author": "XiaosKitchen",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hands shuffling cards",
+    "description": "Close-up of a magician's hands in dim cinematic lighting performing a fast riffle shuffle with playing cards."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-26452/",
+    "author": "MattHrusc",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "digital countdown timer red",
+    "description": "A sleek digital countdown timer glowing red and ticking rapidly against a dark moody backdrop."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-14900/",
+    "author": "cipnt",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "neural network firing",
+    "description": "Dynamic 3D animation of electric blue neural synapses firing rapid pulses through a human brain model."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-397/",
+    "author": "FlickrVideos",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man looking mirror shadow",
+    "description": "A man seen in silhouette gazing into a fractured antique mirror in a dimly lit cinematic room."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-181916/",
+    "author": "NickyPe",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "playing cards slow motion drop",
+    "description": "Slow motion shot of the Queen of Hearts and Ace of Spades landing on a luxurious dark felt surface."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-123514/",
+    "author": "Sang_Soi",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man turning book pages",
+    "description": "A man sitting at a dark mahogany desk under a warm lamp, flipping through pages of a thick psychology textbook."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-369811/",
+    "author": "Media_Hopper_Studio",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hand pressing neon button",
+    "description": "A close-up of a man's finger slamming down on an illuminated neon buzzer on a high-tech console."
+  }
+]
