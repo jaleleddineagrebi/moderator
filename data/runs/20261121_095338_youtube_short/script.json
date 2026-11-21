@@ -1,0 +1,138 @@
+{
+  "title": "The Impossible Fist Glitch",
+  "scenes": [
+    {
+      "vo": {
+        "en": "You can't lift this finger."
+      },
+      "on_screen": {
+        "en": "YOU CAN'T LIFT THIS"
+      },
+      "visual": {
+        "description": "A man's hand pointing aggressively at the camera against a dark background.",
+        "search_terms": [
+          "man pointing finger",
+          "hand close up",
+          "finger point"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Place your hand flat on a table. Now, tuck your middle finger all the way under your palm."
+      },
+      "on_screen": {
+        "en": "TUCK YOUR MIDDLE FINGER"
+      },
+      "visual": {
+        "description": "Close-up of a hand on a wooden desk folding the middle finger underneath.",
+        "search_terms": [
+          "hand on table",
+          "folded finger",
+          "hand pressing"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Try lifting your thumb and index finger. They move easily, right? But now, try lifting your ring finger."
+      },
+      "on_screen": {
+        "en": "TRY THE RING FINGER"
+      },
+      "visual": {
+        "description": "Macro shot of fingers attempting to lift while one is pinned down, showing effort.",
+        "search_terms": [
+          "hand effort",
+          "stretching fingers",
+          "muscle strain"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "Wait until you feel the tension. It’s like your finger is paralyzed, but here is the creepy part."
+      },
+      "on_screen": {
+        "en": "THE CREEPY PART"
+      },
+      "visual": {
+        "description": "Abstract digital glitch overlaying a neural network animation representing brain signals.",
+        "search_terms": [
+          "neural network animation",
+          "brain signals",
+          "connection failure"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Your middle and ring fingers share the same extensor tendon. When the middle is tucked, the ring is locked."
+      },
+      "on_screen": {
+        "en": "SHARED TENDONS LOCKED"
+      },
+      "visual": {
+        "description": "Medical style 3D animation of hand anatomy showing muscles and tendons moving.",
+        "search_terms": [
+          "human hand anatomy",
+          "muscle fibers",
+          "moving tendons"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "It’s a physical limitation of human anatomy. Your brain sends the signal, but your body says no."
+      },
+      "on_screen": {
+        "en": "BODY HARDWARE GLITCH"
+      },
+      "visual": {
+        "description": "A man looking at his hand with a confused and frustrated expression.",
+        "search_terms": [
+          "man looking confused",
+          "shaking head",
+          "frustrated expression"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for tomorrow's brain test and comment GLITCH if you failed. Most people fail because..."
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "Overhead view of a hand scrolling through a smartphone social media feed.",
+        "search_terms": [
+          "scrolling phone",
+          "typing comments",
+          "mobile interface"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "impossible-fist-glitch",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 40.0
+  }
+}
