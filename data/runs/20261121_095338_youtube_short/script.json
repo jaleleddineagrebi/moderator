@@ -9,11 +9,11 @@
         "en": "YOU CAN'T LIFT THIS"
       },
       "visual": {
-        "description": "A man's hand pointing aggressively at the camera against a dark background.",
+        "description": "A close-up of a man's hand pointing directly toward the camera with a dark, moody background.",
         "search_terms": [
           "man pointing finger",
-          "hand close up",
-          "finger point"
+          "hand pointing camera",
+          "finger point close up"
         ],
         "prefer": "video"
       },
@@ -27,11 +27,11 @@
         "en": "TUCK YOUR MIDDLE FINGER"
       },
       "visual": {
-        "description": "Close-up of a hand on a wooden desk folding the middle finger underneath.",
+        "description": "Macro shot of a male hand on a dark wooden surface, folding the middle finger underneath the palm.",
         "search_terms": [
           "hand on table",
-          "folded finger",
-          "hand pressing"
+          "folding fingers",
+          "hand posture close"
         ],
         "prefer": "video"
       },
@@ -39,17 +39,17 @@
     },
     {
       "vo": {
-        "en": "Try lifting your thumb and index finger. They move easily, right? But now, try lifting your ring finger."
+        "en": "Try lifting your thumb and index finger. Easy, right? Now, try lifting your ring finger."
       },
       "on_screen": {
         "en": "TRY THE RING FINGER"
       },
       "visual": {
-        "description": "Macro shot of fingers attempting to lift while one is pinned down, showing effort.",
+        "description": "Close up of a hand where the thumb and index lift smoothly, but the ring finger remains stuck.",
         "search_terms": [
-          "hand effort",
+          "hand finger movement",
           "stretching fingers",
-          "muscle strain"
+          "hand dexterity test"
         ],
         "prefer": "video"
       },
@@ -57,17 +57,17 @@
     },
     {
       "vo": {
-        "en": "Wait until you feel the tension. It’s like your finger is paralyzed, but here is the creepy part."
+        "en": "Wait until you feel the tension. It’s like your finger is paralyzed, but here’s the creepy part."
       },
       "on_screen": {
-        "en": "THE CREEPY PART"
+        "en": "BUT HERE'S THE CREEPY PART"
       },
       "visual": {
-        "description": "Abstract digital glitch overlaying a neural network animation representing brain signals.",
+        "description": "Abstract blue and yellow digital glitch overlay over a silhouette of a person's head.",
         "search_terms": [
-          "neural network animation",
-          "brain signals",
-          "connection failure"
+          "digital glitch animation",
+          "cyber holographic effect",
+          "abstract signal noise"
         ],
         "prefer": "video"
       },
@@ -75,17 +75,17 @@
     },
     {
       "vo": {
-        "en": "Your middle and ring fingers share the same extensor tendon. When the middle is tucked, the ring is locked."
+        "en": "Your middle and ring fingers share the same extensor digitorum tendon. When one is tucked, the other locks."
       },
       "on_screen": {
-        "en": "SHARED TENDONS LOCKED"
+        "en": "SHARED TENDON LOCK"
       },
       "visual": {
-        "description": "Medical style 3D animation of hand anatomy showing muscles and tendons moving.",
+        "description": "A clean 3D medical animation showing the internal tendons and muscles of a moving human hand.",
         "search_terms": [
-          "human hand anatomy",
-          "muscle fibers",
-          "moving tendons"
+          "hand anatomy 3d",
+          "human tendon movement",
+          "muscle fiber animation"
         ],
         "prefer": "video"
       },
@@ -93,17 +93,17 @@
     },
     {
       "vo": {
-        "en": "It’s a physical limitation of human anatomy. Your brain sends the signal, but your body says no."
+        "en": "It’s a physical hardware glitch in your anatomy. Your brain sends the signal, but the mechanics fail."
       },
       "on_screen": {
-        "en": "BODY HARDWARE GLITCH"
+        "en": "ANATOMY HARDWARE GLITCH"
       },
       "visual": {
-        "description": "A man looking at his hand with a confused and frustrated expression.",
+        "description": "A man looking at his own hand with a look of pure confusion and disbelief.",
         "search_terms": [
           "man looking confused",
-          "shaking head",
-          "frustrated expression"
+          "confused face close",
+          "shaking head disbelief"
         ],
         "prefer": "video"
       },
@@ -111,17 +111,17 @@
     },
     {
       "vo": {
-        "en": "Subscribe for tomorrow's brain test and comment GLITCH if you failed. Most people fail because..."
+        "en": "Subscribe for tomorrow's brain test and comment GLITCH if you failed, which is exactly why..."
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "Overhead view of a hand scrolling through a smartphone social media feed.",
+        "description": "Overhead shot of a person's thumb scrolling rapidly through a social media feed on a smartphone.",
         "search_terms": [
-          "scrolling phone",
-          "typing comments",
-          "mobile interface"
+          "scrolling phone screen",
+          "smartphone interface",
+          "app scrolling motion"
         ],
         "prefer": "video"
       },
@@ -133,6 +133,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 40.0
+    "en": 38.2
   }
 }
