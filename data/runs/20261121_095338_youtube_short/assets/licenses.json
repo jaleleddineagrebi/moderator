@@ -1,0 +1,72 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-202743/",
+    "author": "Matthias_Groeneveld",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man pointing finger",
+    "description": "A man's hand pointing aggressively at the camera against a dark background."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-186195/",
+    "author": "NickyPe",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hand on table",
+    "description": "Close-up of a hand on a wooden desk folding the middle finger underneath."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-89795/",
+    "author": "TRAPHITHO",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hand effort",
+    "description": "Macro shot of fingers attempting to lift while one is pinned down, showing effort."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-86315/",
+    "author": "TRAPHITHO",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "neural network animation",
+    "description": "Abstract digital glitch overlaying a neural network animation representing brain signals."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-4041/",
+    "author": "F1Digitals",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "human hand anatomy",
+    "description": "Medical style 3D animation of hand anatomy showing muscles and tendons moving."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-397/",
+    "author": "FlickrVideos",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man looking confused",
+    "description": "A man looking at his hand with a confused and frustrated expression."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-64594/",
+    "author": "Josh_Malic",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "scrolling phone",
+    "description": "Overhead view of a hand scrolling through a smartphone social media feed."
+  }
+]
