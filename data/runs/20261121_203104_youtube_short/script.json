@@ -3,17 +3,17 @@
   "scenes": [
     {
       "vo": {
-        "en": "Pick a vegetable in three seconds."
+        "en": "Pick a vegetable right now."
       },
       "on_screen": {
         "en": "PICK A VEGETABLE NOW"
       },
       "visual": {
-        "description": "A man's hand pointing directly at the camera with an urgent, authoritative gesture.",
+        "description": "A man's hand clicking a silver stopwatch in an extreme close-up.",
         "search_terms": [
-          "man pointing finger",
-          "urgent hand gesture",
-          "close up finger"
+          "hand clicking stopwatch",
+          "timer ticking fast",
+          "pressing silver button"
         ],
         "prefer": "video"
       },
@@ -21,17 +21,17 @@
     },
     {
       "vo": {
-        "en": "Do this math fast. Two plus two? Four plus four? Eight plus eight? Sixteen plus sixteen?"
+        "en": "Quick. Two plus two? Four plus four? Eight plus eight? Sixteen plus sixteen?"
       },
       "on_screen": {
         "en": "DO THE MATH FAST"
       },
       "visual": {
-        "description": "A man quickly writing mathematical equations on a dusty chalkboard.",
+        "description": "Rapidly scrolling digital numbers and math equations on a dark screen.",
         "search_terms": [
-          "chalkboard math writing",
-          "fast calculations numbers",
-          "man solving equations"
+          "digital numbers falling",
+          "mathematical data scroll",
+          "coding neon numbers"
         ],
         "prefer": "video"
       },
@@ -39,17 +39,17 @@
     },
     {
       "vo": {
-        "en": "Stop. Now, shout out the very first vegetable that pops into your head!"
+        "en": "Stop. Now, shout out the first vegetable that pops into your head!"
       },
       "on_screen": {
         "en": "NAME IT NOW!"
       },
       "visual": {
-        "description": "An abstract 3D visualization of a human brain pulsing with bright blue light.",
+        "description": "An abstract visualization of a human brain glowing with electric blue neural pathways.",
         "search_terms": [
-          "brain neural pulses",
-          "abstract cognitive spark",
-          "human mind energy"
+          "neural network glowing",
+          "electric brain pulse",
+          "abstract mind energy"
         ],
         "prefer": "video"
       },
@@ -57,17 +57,17 @@
     },
     {
       "vo": {
-        "en": "Wait, the creepy part is I already knew what you'd choose."
+        "en": "Wait, the creepy part is I already knew exactly what you'd choose."
       },
       "on_screen": {
-        "en": "THE CREEPY PART..."
+        "en": "I KNEW THE RESULT"
       },
       "visual": {
-        "description": "An extreme macro close-up of a human eye with the pupil dilating rapidly.",
+        "description": "A mysterious man in a dark hoodie looking directly into the camera lens.",
         "search_terms": [
-          "macro eye dilating",
-          "extreme close up eye",
-          "human pupil contraction"
+          "mysterious man face",
+          "intense look camera",
+          "shadowy figure staring"
         ],
         "prefer": "video"
       },
@@ -75,17 +75,17 @@
     },
     {
       "vo": {
-        "en": "It's called heuristic priming. When your brain is overloaded with rapid logic, it defaults to the most basic prototype."
+        "en": "It’s a glitch called heuristic priming. Your brain, overwhelmed by math, defaults to the most common prototype."
       },
       "on_screen": {
         "en": "BRAIN GLITCH ACTIVATED"
       },
       "visual": {
-        "description": "Intricate mechanical clock gears and cogs rotating in a complex system.",
+        "description": "Golden mechanical clock gears rotating and intermeshing with precision.",
         "search_terms": [
-          "mechanical clock gears",
-          "golden watch parts",
-          "cogs rotating slowly"
+          "clock gears turning",
+          "mechanical watch interior",
+          "brass cogs rotating"
         ],
         "prefer": "video"
       },
@@ -99,11 +99,11 @@
         "en": "YOU THOUGHT: CARROT"
       },
       "visual": {
-        "description": "A fresh bunch of bright orange carrots with green tops lying on a wooden table.",
+        "description": "A close-up shot of several bright orange carrots being pulled from dark garden soil.",
         "search_terms": [
-          "fresh carrots pile",
-          "garden vegetables close",
-          "orange carrots basket"
+          "carrots harvest soil",
+          "fresh orange vegetable",
+          "pulling carrots ground"
         ],
         "prefer": "video"
       },
@@ -111,17 +111,17 @@
     },
     {
       "vo": {
-        "en": "Subscribe for tomorrow’s brain test and comment YES if this worked on you. This works because you..."
+        "en": "Subscribe for tomorrow’s brain test and comment YES if I got you. I knew it because you..."
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "A close-up of a person's thumb tapping a smartphone screen repeatedly.",
+        "description": "A person's thumb tapping and scrolling quickly on a bright smartphone screen.",
         "search_terms": [
-          "touch screen tapping",
-          "smartphone interaction close",
-          "finger pressing button"
+          "thumb scrolling screen",
+          "phone interaction close",
+          "tapping mobile app"
         ],
         "prefer": "video"
       },
@@ -133,6 +133,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 35.6
+    "en": 33.5
   }
 }
