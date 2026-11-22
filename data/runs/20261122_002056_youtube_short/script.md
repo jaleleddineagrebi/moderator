@@ -1,23 +1,23 @@
 # Pick a Card: The 7 of Hearts Mind Hack
-Estimated narration: en 33.5s
+Estimated narration: en 33.1s
 
-## scene_01 · Close-up shot of a dealer's hands quickly cutting and riffling a deck of cards over a dark table.
+## scene_01 · Close-up of a man's hands professionally shuffling and cutting a deck of cards on a dark green felt surface.
 EN  [PICK A CARD NOW]  Pick a playing card right now.
 
-## scene_02 · A crimson neon heart glowing and reflecting across rain-slicked city pavement at night.
-EN  [MAKE IT RED]  Picture it clearly in your head. Make it a red card, hearts or diamonds.
+## scene_02 · Swirling clouds of thick red ink mixing into clear water in slow motion.
+EN  [MAKE IT RED]  Picture it clearly. Don't choose black cards—make it a red one, hearts or diamonds.
 
-## scene_03 · Fast mechanical tally counter numbers spinning rapidly through digits in macro focus.
-EN  [CHOOSE AN ODD NUMBER]  Now eliminate face cards. Lock in an odd number between two and ten.
+## scene_03 · A vintage mechanical number counter rapidly clicking through digits.
+EN  [CHOOSE ODD NUMBER]  Now, eliminate the face cards. Lock in an odd number between two and ten.
 
-## scene_04 · Extreme macro close-up of a man's eye with the pupil suddenly dilating under intense studio light.
-EN  [DON'T CHANGE YOUR MIND]  Wait, do not change your mind now! I already know your exact pick.
+## scene_04 · Extreme macro shot of a man's intense eyes staring directly into the camera lens with shifting shadows.
+EN  [DON'T CHANGE IT]  Stop right there! Don't change your mind. I'm tracking your subconscious right now.
 
-## scene_05 · A single playing card being dramatically flipped face up onto a dark rustic wooden table.
-EN  [SEVEN OF HEARTS]  Your subconscious feels free, but you are staring right at the seven of hearts.
+## scene_05 · A single seven of hearts playing card being slammed onto a rustic wooden table by a man.
+EN  [SEVEN OF HEARTS]  You think you chose freely, but you’re staring at the seven of hearts.
 
-## scene_06 · Glowing electric blue and purple neural pathways firing synapses across an abstract 3D brain structure.
-EN  [YOUR BRAIN HACKED]  Subtle psychological priming silently forces seventy percent of human minds to this card.
+## scene_06 · Abstract animation of bright blue energy pulses traveling through a complex neural network.
+EN  [YOUR BRAIN HACKED]  Seventy percent of people fall for this because of a psychological phenomenon called priming.
 
-## scene_07 · First-person view of a man's hand typing rapidly and tapping the glass screen of a modern smartphone.
-EN  [SUBSCRIBE 🔔]  Subscribe for tomorrow's brain test and comment YES if this got you, which is why I dare you to
+## scene_07 · Close-up of a thumb tapping the like button and then scrolling down on a modern smartphone screen.
+EN  [SUBSCRIBE 🔔]  Subscribe for tomorrow's brain test and comment YES if I got you. It all starts when you

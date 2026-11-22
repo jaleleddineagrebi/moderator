@@ -9,11 +9,11 @@
         "en": "PICK A CARD NOW"
       },
       "visual": {
-        "description": "Close-up shot of a dealer's hands quickly cutting and riffling a deck of cards over a dark table.",
+        "description": "Close-up of a man's hands professionally shuffling and cutting a deck of cards on a dark green felt surface.",
         "search_terms": [
-          "card shuffling motion",
-          "magician hands cards",
-          "deck of cards"
+          "magician hands shuffle",
+          "deck cards table",
+          "casino dealer cards"
         ],
         "prefer": "video"
       },
@@ -21,17 +21,17 @@
     },
     {
       "vo": {
-        "en": "Picture it clearly in your head. Make it a red card, hearts or diamonds."
+        "en": "Picture it clearly. Don't choose black cards—make it a red one, hearts or diamonds."
       },
       "on_screen": {
         "en": "MAKE IT RED"
       },
       "visual": {
-        "description": "A crimson neon heart glowing and reflecting across rain-slicked city pavement at night.",
+        "description": "Swirling clouds of thick red ink mixing into clear water in slow motion.",
         "search_terms": [
-          "red neon sign",
           "red ink water",
-          "crimson light beam"
+          "crimson light flare",
+          "liquid red swirl"
         ],
         "prefer": "video"
       },
@@ -39,17 +39,17 @@
     },
     {
       "vo": {
-        "en": "Now eliminate face cards. Lock in an odd number between two and ten."
+        "en": "Now, eliminate the face cards. Lock in an odd number between two and ten."
       },
       "on_screen": {
-        "en": "CHOOSE AN ODD NUMBER"
+        "en": "CHOOSE ODD NUMBER"
       },
       "visual": {
-        "description": "Fast mechanical tally counter numbers spinning rapidly through digits in macro focus.",
+        "description": "A vintage mechanical number counter rapidly clicking through digits.",
         "search_terms": [
-          "vintage clock gears",
-          "digital timer counting",
-          "mechanical counter numbers"
+          "mechanical counter digits",
+          "ticking vintage clock",
+          "turning number dial"
         ],
         "prefer": "video"
       },
@@ -57,17 +57,17 @@
     },
     {
       "vo": {
-        "en": "Wait, do not change your mind now! I already know your exact pick."
+        "en": "Stop right there! Don't change your mind. I'm tracking your subconscious right now."
       },
       "on_screen": {
-        "en": "DON'T CHANGE YOUR MIND"
+        "en": "DON'T CHANGE IT"
       },
       "visual": {
-        "description": "Extreme macro close-up of a man's eye with the pupil suddenly dilating under intense studio light.",
+        "description": "Extreme macro shot of a man's intense eyes staring directly into the camera lens with shifting shadows.",
         "search_terms": [
-          "eye pupil dilation",
-          "macro human eye",
-          "man eye closeup"
+          "man looking camera",
+          "intense eyes close-up",
+          "dark moody face"
         ],
         "prefer": "video"
       },
@@ -75,17 +75,17 @@
     },
     {
       "vo": {
-        "en": "Your subconscious feels free, but you are staring right at the seven of hearts."
+        "en": "You think you chose freely, but you’re staring at the seven of hearts."
       },
       "on_screen": {
         "en": "SEVEN OF HEARTS"
       },
       "visual": {
-        "description": "A single playing card being dramatically flipped face up onto a dark rustic wooden table.",
+        "description": "A single seven of hearts playing card being slammed onto a rustic wooden table by a man.",
         "search_terms": [
           "card reveal table",
-          "playing card slow motion",
-          "card slam table"
+          "flipping playing card",
+          "seven hearts focus"
         ],
         "prefer": "video"
       },
@@ -93,17 +93,17 @@
     },
     {
       "vo": {
-        "en": "Subtle psychological priming silently forces seventy percent of human minds to this card."
+        "en": "Seventy percent of people fall for this because of a psychological phenomenon called priming."
       },
       "on_screen": {
         "en": "YOUR BRAIN HACKED"
       },
       "visual": {
-        "description": "Glowing electric blue and purple neural pathways firing synapses across an abstract 3D brain structure.",
+        "description": "Abstract animation of bright blue energy pulses traveling through a complex neural network.",
         "search_terms": [
-          "brain neural network",
-          "synapse electricity firing",
-          "abstract brain scan"
+          "neural fiber optics",
+          "electricity brain pulse",
+          "abstract digital network"
         ],
         "prefer": "video"
       },
@@ -111,17 +111,17 @@
     },
     {
       "vo": {
-        "en": "Subscribe for tomorrow's brain test and comment YES if this got you, which is why I dare you to"
+        "en": "Subscribe for tomorrow's brain test and comment YES if I got you. It all starts when you"
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "First-person view of a man's hand typing rapidly and tapping the glass screen of a modern smartphone.",
+        "description": "Close-up of a thumb tapping the like button and then scrolling down on a modern smartphone screen.",
         "search_terms": [
           "finger tapping screen",
-          "smartphone touch screen",
-          "person holding phone"
+          "smartphone glowing display",
+          "scrolling phone hand"
         ],
         "prefer": "video"
       },
@@ -133,6 +133,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 33.5
+    "en": 33.1
   }
 }

@@ -69,11 +69,11 @@
   "ended_at": null,
   "revision_rounds": 1,
   "cost": {
-    "total_usd": 0.024849,
+    "total_usd": 0.037761,
     "budget_usd": 1.0,
     "by_agent": {
       "trend_researcher": 0.003936,
-      "scriptwriter": 0.017842,
+      "scriptwriter": 0.030753,
       "packaging": 0.000462,
       "qa_reviewer": 0.002609
     }
@@ -361,10 +361,10 @@
         "research"
       ],
       "checkpoint": "B",
-      "status": "running",
-      "progress": 10,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-22T00:33:06+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-22T00:33:22+00:00",
       "attempt": 2,
       "retries": 0,
       "max_retries": 2,
@@ -425,6 +425,26 @@
           "ts": "2026-11-22T00:33:06+00:00",
           "level": "info",
           "msg": "Asking Gemini (gemini-3.8-flash, high complexity, thinking high)"
+        },
+        {
+          "ts": "2026-11-22T00:33:22+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3-flash-preview) answered in 15.4s (tokens in 2099, out 968, thinking 2986)"
+        },
+        {
+          "ts": "2026-11-22T00:33:22+00:00",
+          "level": "info",
+          "msg": "Estimated narration: en 33.1s"
+        },
+        {
+          "ts": "2026-11-22T00:33:22+00:00",
+          "level": "info",
+          "msg": "Finished, waiting for your approval"
+        },
+        {
+          "ts": "2026-11-22T00:33:22+00:00",
+          "level": "info",
+          "msg": "Approved by schedule (auto-approve)"
         }
       ],
       "errors": [],
@@ -435,7 +455,7 @@
           "comment": "QA found:\n[en] grammar review: In scene_07, the narration ends with 'which is why I dare you to' followed by no action or object. Fix: Change to 'Subscribe for tomorrow's brain test and comment YES if this got you. I bet I can fool you again.'"
         }
       ],
-      "cost_usd": 0.017842
+      "cost_usd": 0.030753
     },
     "visuals": {
       "title": "Source scene visuals",
@@ -444,11 +464,11 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "queued",
+      "status": "running",
       "progress": 0,
-      "started_at": "2026-11-22T00:30:42+00:00",
-      "ended_at": "2026-11-22T00:31:50+00:00",
-      "attempt": 1,
+      "started_at": "2026-11-22T00:33:22+00:00",
+      "ended_at": null,
+      "attempt": 2,
       "retries": 0,
       "max_retries": 2,
       "strategy": "stock_video",
@@ -520,6 +540,16 @@
           "ts": "2026-11-22T00:33:06+00:00",
           "level": "info",
           "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-22T00:33:22+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'stock_video'"
+        },
+        {
+          "ts": "2026-11-22T00:33:22+00:00",
+          "level": "info",
+          "msg": "Visual diversity: excluding 300 footage sources used in recent Shorts"
         }
       ],
       "errors": [],
@@ -533,21 +563,21 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "queued",
+      "status": "running",
       "progress": 0,
-      "started_at": "2026-11-22T00:30:59+00:00",
-      "ended_at": "2026-11-22T00:31:25+00:00",
-      "attempt": 2,
+      "started_at": "2026-11-22T00:33:22+00:00",
+      "ended_at": null,
+      "attempt": 3,
       "retries": 0,
       "max_retries": 2,
-      "strategy": "alternate_voice",
+      "strategy": "primary_voice",
       "inputs": {
         "script": "script.json",
         "languages": [
           "en"
         ],
         "voices": {
-          "en": "en-US-AriaNeural"
+          "en": "en-US-AndrewMultilingualNeural"
         }
       },
       "outputs": {
@@ -598,6 +628,16 @@
           "ts": "2026-11-22T00:33:06+00:00",
           "level": "info",
           "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-22T00:33:22+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'primary_voice'"
+        },
+        {
+          "ts": "2026-11-22T00:33:22+00:00",
+          "level": "info",
+          "msg": "Narrating en with en-US-AndrewMultilingualNeural"
         }
       ],
       "errors": [
@@ -901,11 +941,11 @@
       "type": "approve",
       "step": "script",
       "route_to": "script",
-      "status": "idle",
+      "status": "approved",
       "options": [],
       "choice": null,
       "comment": null,
-      "decided_at": "2026-11-22T00:30:42+00:00"
+      "decided_at": "2026-11-22T00:33:22+00:00"
     },
     "C": {
       "title": "Approve the final videos (never uploaded without your OK)",
@@ -922,7 +962,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-22T00:33:09+00:00",
+    "exported_at": "2026-11-22T00:33:33+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/44966146121"
   }
