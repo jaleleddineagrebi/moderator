@@ -1,0 +1,138 @@
+{
+  "title": "Pick a Card: The 7 of Hearts Mind Hack",
+  "scenes": [
+    {
+      "vo": {
+        "en": "Pick a playing card right now."
+      },
+      "on_screen": {
+        "en": "PICK A CARD NOW"
+      },
+      "visual": {
+        "description": "Close-up shot of a dealer's hands quickly cutting and riffling a deck of cards over a dark table.",
+        "search_terms": [
+          "card shuffling motion",
+          "magician hands cards",
+          "deck of cards"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Picture it clearly in your head. Make it a red card, hearts or diamonds."
+      },
+      "on_screen": {
+        "en": "MAKE IT RED"
+      },
+      "visual": {
+        "description": "A crimson neon heart glowing and reflecting across rain-slicked city pavement at night.",
+        "search_terms": [
+          "red neon sign",
+          "red ink water",
+          "crimson light beam"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Now eliminate face cards. Lock in an odd number between two and ten."
+      },
+      "on_screen": {
+        "en": "CHOOSE AN ODD NUMBER"
+      },
+      "visual": {
+        "description": "Fast mechanical tally counter numbers spinning rapidly through digits in macro focus.",
+        "search_terms": [
+          "vintage clock gears",
+          "digital timer counting",
+          "mechanical counter numbers"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "Wait, do not change your mind now! I already know your exact pick."
+      },
+      "on_screen": {
+        "en": "DON'T CHANGE YOUR MIND"
+      },
+      "visual": {
+        "description": "Extreme macro close-up of a man's eye with the pupil suddenly dilating under intense studio light.",
+        "search_terms": [
+          "eye pupil dilation",
+          "macro human eye",
+          "man eye closeup"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Your subconscious feels free, but you are staring right at the seven of hearts."
+      },
+      "on_screen": {
+        "en": "SEVEN OF HEARTS"
+      },
+      "visual": {
+        "description": "A single playing card being dramatically flipped face up onto a dark rustic wooden table.",
+        "search_terms": [
+          "card reveal table",
+          "playing card slow motion",
+          "card slam table"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "Subtle psychological priming silently forces seventy percent of human minds to this card."
+      },
+      "on_screen": {
+        "en": "YOUR BRAIN HACKED"
+      },
+      "visual": {
+        "description": "Glowing electric blue and purple neural pathways firing synapses across an abstract 3D brain structure.",
+        "search_terms": [
+          "brain neural network",
+          "synapse electricity firing",
+          "abstract brain scan"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for tomorrow's brain test and comment YES if this got you, which is why I dare you to"
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "First-person view of a man's hand typing rapidly and tapping the glass screen of a modern smartphone.",
+        "search_terms": [
+          "finger tapping screen",
+          "smartphone touch screen",
+          "person holding phone"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "interactive-card-mind-hack",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 33.5
+  }
+}
