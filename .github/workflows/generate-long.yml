@@ -1,13 +1,12 @@
 name: Generate Long Video
 
 # Generates a 3-4 minute 16:9 widescreen YouTube Deep-Dive video (`youtube_long`).
-# Runs on schedule (Wednesday & Sunday at 16:47 UTC) or manually via "Run workflow".
+# Manual only ("Run workflow"): the weekly schedule was removed because long videos were not bringing views.
+# To bring it back, add under `on:` a schedule with cron "47 16 * * 3,0".
 # Supports either:
 # - `auto_upload: review_first` (default): stops at Checkpoint C and opens a review issue (comment `/approve public` to upload)
 # - `auto_upload: public | unlisted | private`: generates AND uploads the 16:9 Long Video to YouTube automatically in one run!
 on:
-  schedule:
-    - cron: "47 16 * * 3,0"   # Wednesday & Sunday at 16:47 UTC (Prime Time Long-Form Deep-Dive)
   workflow_dispatch:
     inputs:
       pillar:

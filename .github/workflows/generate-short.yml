@@ -1,18 +1,17 @@
 name: Generate Short
 
-# Runs on schedule (twice daily) or manually via "Run workflow".
+# Runs on schedule (8 times a day, every 3 hours) or manually via "Run workflow".
 # Executes Research -> Script -> Visuals + Audio -> Packaging + Editor -> QA,
 # with Gemini (default) or Claude as the text model (input `llm`, or repo variable MODERATOR_LLM),
 # uploads the finished MP4s & thumbnails as an Action artifact, and opens a `short-review` issue.
-# Nothing is published to YouTube until you approve Checkpoint C (comment `/approve` on the issue
-# or trigger the `Upload Short` workflow).
+# Publishing: by default the finished Short is uploaded to YouTube automatically (public) right after QA,
+# with no manual approval. Set the repository variable MODERATOR_AUTO_UPLOAD to `review_first` to go back to
+# approving each Short yourself (comment `/approve` on the `short-review` issue), or to `private` / `unlisted`.
+# If the automatic upload fails (e.g. YouTube daily quota), the run falls back to a `short-review` issue.
 on:
   schedule:
-    # 4 Viral Shorts per day (rotates across 4 viral pillars automatically; 100% 9:16 Shorts Feed)
-    - cron: "17 2 * * *"      # 02:17 UTC (Slot 1: Early Morning Short)
-    - cron: "17 8 * * *"      # 08:17 UTC (Slot 2: Morning Prime Short)
-    - cron: "17 14 * * *"     # 14:17 UTC (Slot 3: Afternoon Prime Short)
-    - cron: "17 20 * * *"     # 20:17 UTC (Slot 4: Evening Prime Short)
+    # 8 viral Shorts per day, one every 3 hours (rotates across the viral pillars automatically; 9:16 Shorts feed)
+    - cron: "17 0,3,6,9,12,15,18,21 * * *"
   workflow_dispatch:
     inputs:
       format:
@@ -61,6 +60,17 @@ on:
           - default
           - gemini
           - claude
+      auto_upload:
+        description: "Publishing: default = repo variable MODERATOR_AUTO_UPLOAD, else public (no approval). review_first = open an issue and wait for /approve"
+        required: false
+        default: "default"
+        type: choice
+        options:
+          - default
+          - public
+          - unlisted
+          - private
+          - review_first
       budget_usd:
         description: "Safety spend cap only (Free Tier keys always pay $0.00)"
         required: false
@@ -104,6 +114,18 @@ jobs:
               echo "::error::Unknown llm '$INPUT_LLM' (use gemini or claude)"; exit 1 ;;
           esac
           echo "provider=$INPUT_LLM" >> "$GITHUB_OUTPUT"
+
+      - name: Choose publishing mode
+        id: mode
+        env:
+          INPUT_UPLOAD: ${{ (inputs.auto_upload != 'default' && inputs.auto_upload) || vars.MODERATOR_AUTO_UPLOAD || 'public' }}
+        run: |
+          case "$INPUT_UPLOAD" in
+            public|unlisted|private|review_first) ;;
+            *) echo "::error::Unknown auto_upload '$INPUT_UPLOAD' (public, unlisted, private or review_first)"; exit 1 ;;
+          esac
+          echo "privacy=$INPUT_UPLOAD" >> "$GITHUB_OUTPUT"
+          echo "::notice::Publishing mode: $INPUT_UPLOAD"
 
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
 
@@ -190,6 +212,51 @@ jobs:
         if: always()
         run: bash .github/scripts/topics-history.sh save
 
+      - name: Upload to YouTube automatically (no approval)
+        id: autoup
+        if: steps.gen.outputs.outcome == 'waiting' && steps.mode.outputs.privacy != 'review_first'
+        continue-on-error: true   # on failure the run falls back to a review issue so nothing is lost
+        env:
+          YOUTUBE_TOKEN: ${{ secrets.YOUTUBE_TOKEN }}
+          YOUTUBE_TOKEN_EN: ${{ secrets.YOUTUBE_TOKEN_EN }}
+          YOUTUBE_TOKEN_FR: ${{ secrets.YOUTUBE_TOKEN_FR }}
+          YOUTUBE_TOKEN_AR: ${{ secrets.YOUTUBE_TOKEN_AR }}
+          RUN_DIR: ${{ steps.gen.outputs.run_dir }}
+          PRIVACY: ${{ steps.mode.outputs.privacy }}
+          PYTHONIOENCODING: utf-8
+        run: |
+          set +e
+          uv run python -m moderator upload "$RUN_DIR" --approved-by "auto-publish" --privacy "$PRIVACY" > upload_result.txt 2> upload_err.txt
+          rc=$?
+          set -e
+          cat upload_result.txt
+          if [ "$rc" -ne 0 ]; then
+            cat upload_err.txt >&2
+            exit "$rc"
+          fi
+          echo "uploaded=true" >> "$GITHUB_OUTPUT"
+
+      - name: Post to TikTok (only if TikTok secrets are configured)
+        if: steps.autoup.outputs.uploaded == 'true'
+        continue-on-error: true   # a TikTok problem must never affect the YouTube upload
+        env:
+          TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+          TIKTOK_TOKEN: ${{ secrets.TIKTOK_TOKEN }}
+          TIKTOK_TOKEN_EN: ${{ secrets.TIKTOK_TOKEN_EN }}
+          TIKTOK_TOKEN_FR: ${{ secrets.TIKTOK_TOKEN_FR }}
+          TIKTOK_TOKEN_AR: ${{ secrets.TIKTOK_TOKEN_AR }}
+          RUN_DIR: ${{ steps.gen.outputs.run_dir }}
+          PRIVACY: ${{ steps.mode.outputs.privacy }}
+          PYTHONIOENCODING: utf-8
+        run: |
+          if [ -z "$TIKTOK_TOKEN$TIKTOK_TOKEN_EN$TIKTOK_TOKEN_FR$TIKTOK_TOKEN_AR" ]; then
+            echo "::notice::No TikTok token secret configured; skipping TikTok."
+            exit 0
+          fi
+          uv run python -m moderator upload-tiktok "$RUN_DIR" --privacy "$PRIVACY" | tee tiktok.txt
+          { echo "### Posted to TikTok"; echo ""; sed 's/^/- /' tiktok.txt; } >> "$GITHUB_STEP_SUMMARY"
+
       - name: Publish Step Summary, Review Issue & GitHub Pages Dashboard
         if: always()
         env:
@@ -197,6 +264,8 @@ jobs:
           RUN_DIR: ${{ steps.gen.outputs.run_dir }}
           RUN_ID: ${{ steps.gen.outputs.run_id }}
           OUTCOME: ${{ steps.gen.outputs.outcome }}
+          AUTO_UPLOADED: ${{ steps.autoup.outputs.uploaded }}
+          AUTO_OUTCOME: ${{ steps.autoup.outcome }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           PAGES_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
           PYTHONIOENCODING: utf-8
@@ -213,7 +282,17 @@ jobs:
           if [ -n "$TARGET_DIR" ] && [ -f "$TARGET_DIR/state.json" ]; then
             CURR_RUN_ID=$(python3 -c "import json; print(json.load(open('$TARGET_DIR/state.json'))['run_id'])")
             uv run python -m moderator summary "$TARGET_DIR" > body.md
-            if [ "$OUTCOME" = "waiting" ]; then
+            if [ "$AUTO_UPLOADED" = "true" ]; then
+              # published automatically: record it on the dashboard, no review issue needed
+              {
+                echo ""
+                echo "### Published automatically to YouTube"
+                sed 's/^/- /' upload_result.txt
+              } >> body.md
+              cat body.md >> "$GITHUB_STEP_SUMMARY"
+              bash .github/scripts/push-gh-pages.sh --run-id "$CURR_RUN_ID" --gh-run-url "$RUN_URL" || true
+              exit 0
+            elif [ "$OUTCOME" = "waiting" ]; then
               label=short-review
               title="Review Short: $CURR_RUN_ID"
               {
@@ -223,6 +302,11 @@ jobs:
                 echo "- **GitHub Pages Dashboard:** $PAGES_URL"
                 echo "- **Action Artifact:** \`short-$CURR_RUN_ID\` at $RUN_URL"
                 echo ""
+                if [ "$AUTO_OUTCOME" = "failure" ]; then
+                  echo "> [!WARNING]"
+                  echo "> The automatic upload failed (see the run logs, often the YouTube daily quota or upload limit). The Short is saved: comment \`/approve public\` below to retry."
+                  echo ""
+                fi
                 echo "### Publish Commands (Checkpoint C Approval)"
                 echo "- \`/approve\` — upload all generated languages as **private**"
                 echo "- \`/approve unlisted\` — upload as **unlisted**"
