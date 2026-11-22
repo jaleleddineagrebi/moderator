@@ -12,4 +12,4 @@
 - ✅ **visual diversity**: all scenes use distinct footage
 - ✅ **audio licenses**: music: original work, no third-party rights; sfx: original work, no third-party rights; voice: synthetic voice; no third-party performance rights
 - ❌ **accuracy review** [en]: The visual query for scene_03 'male mouth close' is insufficient for the McGurk effect to work. The footage must specifically show a mouth making the 'Fa' shape (lips touching teeth) while the 'Ba' audio plays. Change query to 'mouth pronouncing fa sound' or 'person biting lower lip close up'. → sent to visuals
-- ❌ **people rule**: scene_01: a woman in a headscarf is clearly visible, showing her upper body and arms as she takes a photo in the second frame.. Replace with footage without women (a face-only close-up is the only exception). → sent to visuals
+- ✅ **people rule**: no women beyond face close-ups in 8 scenes and 1 thumbnail(s)
