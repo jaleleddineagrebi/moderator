@@ -1,0 +1,57 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:02.30,Headline,,0,0,0,,{\fad(150,150)}CLOSE YOUR EYES
+Dialogue: 1,0:00:02.40,0:00:10.69,Headline,,0,0,0,,{\fad(150,150)}HEAR THE SOUND
+Dialogue: 1,0:00:10.79,0:00:14.28,Headline,,0,0,0,,{\fad(150,150)}NOW LOOK
+Dialogue: 1,0:00:14.38,0:00:19.80,Headline,,0,0,0,,{\fad(150,150)}DID IT CHANGE?
+Dialogue: 1,0:00:19.90,0:00:25.94,Headline,,0,0,0,,{\fad(150,150)}BRAIN OVERRIDE
+Dialogue: 1,0:00:26.04,0:00:30.63,Headline,,0,0,0,,{\fad(150,150)}SENSES HACKED
+Dialogue: 1,0:00:30.73,0:00:35.40,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 1,0:00:35.50,0:00:39.82,Headline,,0,0,0,,{\fad(150,150)}WATCH AGAIN
+Dialogue: 0,0:00:00.10,0:00:00.85,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Close{\c&H00FFFFFF&} your eyes
+Dialogue: 0,0:00:00.86,0:00:01.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}right{\c&H00FFFFFF&} now
+Dialogue: 0,0:00:02.44,0:00:03.13,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Listen{\c&H00FFFFFF&} to this
+Dialogue: 0,0:00:03.14,0:00:03.99,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}sound{\c&H00FFFFFF&} on loop
+Dialogue: 0,0:00:04.80,0:00:05.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Ba
+Dialogue: 0,0:00:06.05,0:00:06.49,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Ba
+Dialogue: 0,0:00:07.30,0:00:07.74,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Ba
+Dialogue: 0,0:00:08.55,0:00:09.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Sounds{\c&H00FFFFFF&} clear right
+Dialogue: 0,0:00:10.84,0:00:11.60,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Now {\c&H0000E5FF&}open{\c&H00FFFFFF&} your
+Dialogue: 0,0:00:11.62,0:00:12.35,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}eyes{\c&H00FFFFFF&} and look
+Dialogue: 0,0:00:12.36,0:00:12.77,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}at the {\c&H0000E5FF&}mouth{\c&H00FFFFFF&}
+Dialogue: 0,0:00:12.78,0:00:13.42,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}on {\c&H0000E5FF&}screen{\c&H00FFFFFF&}
+Dialogue: 0,0:00:14.43,0:00:15.38,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Wait{\c&H00FFFFFF&} here is
+Dialogue: 0,0:00:15.39,0:00:16.29,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}creepy{\c&H00FFFFFF&} part
+Dialogue: 0,0:00:17.11,0:00:17.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Did the {\c&H0000E5FF&}sound{\c&H00FFFFFF&}
+Dialogue: 0,0:00:17.73,0:00:18.40,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}just {\c&H0000E5FF&}change{\c&H00FFFFFF&} to
+Dialogue: 0,0:00:18.41,0:00:18.92,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Fa
+Dialogue: 0,0:00:19.95,0:00:20.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Close{\c&H00FFFFFF&} them again
+Dialogue: 0,0:00:20.85,0:00:21.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and it {\c&H0000E5FF&}instantly{\c&H00FFFFFF&}
+Dialogue: 0,0:00:21.57,0:00:22.39,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}switches{\c&H00FFFFFF&} back
+Dialogue: 0,0:00:23.21,0:00:23.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}brain{\c&H00FFFFFF&} is
+Dialogue: 0,0:00:23.92,0:00:25.07,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}overriding{\c&H00FFFFFF&} your ears
+Dialogue: 0,0:00:26.08,0:00:26.73,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}eyes{\c&H00FFFFFF&} are
+Dialogue: 0,0:00:26.74,0:00:27.65,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}literally{\c&H00FFFFFF&} hacking your
+Dialogue: 0,0:00:27.66,0:00:28.32,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}hearing{\c&H00FFFFFF&} to make
+Dialogue: 0,0:00:28.34,0:00:28.81,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}sense{\c&H00FFFFFF&} of the
+Dialogue: 0,0:00:28.82,0:00:29.75,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}visual{\c&H00FFFFFF&} input
+Dialogue: 0,0:00:30.78,0:00:32.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Subscribe for {\c&H0000E5FF&}tomorrow's{\c&H00FFFFFF&}
+Dialogue: 0,0:00:32.01,0:00:32.75,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}brain{\c&H00FFFFFF&} test and
+Dialogue: 0,0:00:32.76,0:00:33.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} which word
+Dialogue: 0,0:00:33.69,0:00:34.53,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you {\c&H0000E5FF&}heard{\c&H00FFFFFF&} first
+Dialogue: 0,0:00:35.55,0:00:36.40,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}reality{\c&H00FFFFFF&} is
+Dialogue: 0,0:00:36.41,0:00:37.13,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}just a {\c&H0000E5FF&}guess{\c&H00FFFFFF&}
+Dialogue: 0,0:00:37.33,0:00:37.73,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}which{\c&H00FFFFFF&} is why
+Dialogue: 0,0:00:37.74,0:00:38.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you {\c&H0000E5FF&}must{\c&H00FFFFFF&}
