@@ -1,8 +1,23 @@
 {
-  "updated_at": "2026-11-21T20:36:19+00:00",
+  "updated_at": "2026-11-22T00:21:15+00:00",
   "repo": "jaleleddineagrebi/moderator",
-  "live_run_id": "20261121_203104_youtube_short",
+  "live_run_id": "20261122_002056_youtube_short",
   "runs": [
+    {
+      "run_id": "20261122_002056_youtube_short",
+      "workflow": "youtube_short",
+      "workflow_title": "YouTube Short",
+      "topic": "",
+      "status": "running",
+      "progress": 4,
+      "started_at": "2026-11-22T00:20:56+00:00",
+      "ended_at": null,
+      "cost_usd": 0.0,
+      "is_live": true,
+      "has_uploads": false,
+      "issue_url": "",
+      "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/44966146121"
+    },
     {
       "run_id": "20261121_203104_youtube_short",
       "workflow": "youtube_short",
@@ -13,7 +28,7 @@
       "started_at": "2026-11-21T20:31:04+00:00",
       "ended_at": null,
       "cost_usd": 0.0282,
-      "is_live": true,
+      "is_live": false,
       "has_uploads": false,
       "issue_url": "https://github.com/jaleleddineagrebi/moderator/issues/145",
       "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/44946640264"
@@ -137,21 +152,6 @@
       "has_uploads": true,
       "issue_url": "https://github.com/jaleleddineagrebi/moderator/issues/132",
       "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/44625683695"
-    },
-    {
-      "run_id": "20261119_172536_youtube_short",
-      "workflow": "youtube_short",
-      "workflow_title": "YouTube Short",
-      "topic": "",
-      "status": "done",
-      "progress": 100,
-      "started_at": "2026-11-19T17:25:36+00:00",
-      "ended_at": "2026-11-20T09:47:36+00:00",
-      "cost_usd": 0.0168,
-      "is_live": false,
-      "has_uploads": true,
-      "issue_url": "https://github.com/jaleleddineagrebi/moderator/issues/131",
-      "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/44576924290"
     }
   ],
   "seed_state": null
