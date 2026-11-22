@@ -1,12 +1,12 @@
 {
-  "passed": false,
-  "revision_round": 0,
+  "passed": true,
+  "revision_round": 1,
   "checks": [
     {
       "check": "length",
       "lang": "en",
       "ok": true,
-      "detail": "37.1s (must be under 60s; target 32-50s)",
+      "detail": "38.8s (must be under 60s; target 32-50s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -14,7 +14,7 @@
       "check": "target length",
       "lang": "en",
       "ok": true,
-      "detail": "37.1s",
+      "detail": "38.8s",
       "send_to": null,
       "severity": "minor"
     },
@@ -46,7 +46,7 @@
       "check": "loudness",
       "lang": "en",
       "ok": true,
-      "detail": "-14.1 LUFS, peak -1.4 dBFS (target -14 LUFS, peak <= -1)",
+      "detail": "-14.2 LUFS, peak -1.4 dBFS (target -14 LUFS, peak <= -1)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -62,7 +62,7 @@
       "check": "caption sync",
       "lang": "en",
       "ok": true,
-      "detail": "92 words, 34 caption events",
+      "detail": "92 words, 33 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -94,17 +94,25 @@
       "check": "grammar review",
       "lang": "en",
       "ok": false,
-      "detail": "In scene_07, the narration ends with 'which is why I dare you to' followed by no action or object. Fix: Change to 'Subscribe for tomorrow's brain test and comment YES if this got you. I bet I can fool you again.'",
+      "detail": "In scene 03 on-screen text, 'CHOOSE ODD NUMBER' is missing an article. Change to 'CHOOSE AN ODD NUMBER'.",
+      "send_to": "edit",
+      "severity": "minor"
+    },
+    {
+      "check": "grammar review",
+      "lang": "en",
+      "ok": false,
+      "detail": "Scene 07 narration ends abruptly with 'It all starts when you'. Remove this incomplete phrase.",
       "send_to": "script",
-      "severity": "blocker"
+      "severity": "minor"
     },
     {
       "check": "people rule",
       "lang": null,
-      "ok": true,
-      "detail": "no women beyond face close-ups in 7 scenes and 1 thumbnail(s)",
+      "ok": false,
+      "detail": "could not check images (LLMError: Gemini JSON parse failed: ); check manually",
       "send_to": null,
-      "severity": "blocker"
+      "severity": "minor"
     }
   ]
 }
