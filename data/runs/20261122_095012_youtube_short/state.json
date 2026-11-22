@@ -69,9 +69,11 @@
   "ended_at": null,
   "revision_rounds": 0,
   "cost": {
-    "total_usd": 0.0,
+    "total_usd": 0.019666,
     "budget_usd": 1.0,
-    "by_agent": {}
+    "by_agent": {
+      "trend_researcher": 0.019666
+    }
   },
   "agents": {
     "trend_researcher": {
@@ -274,10 +276,10 @@
       "agent": "trend_researcher",
       "depends_on": [],
       "checkpoint": "A",
-      "status": "running",
-      "progress": 25,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-22T09:58:22+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-22T10:00:11+00:00",
       "attempt": 2,
       "retries": 1,
       "max_retries": 2,
@@ -289,7 +291,10 @@
           "en"
         ]
       },
-      "outputs": {},
+      "outputs": {
+        "ideas": "ideas.md",
+        "data": "ideas.json"
+      },
       "logs": [
         {
           "ts": "2026-11-22T09:50:12+00:00",
@@ -360,6 +365,21 @@
           "ts": "2026-11-22T09:59:42+00:00",
           "level": "warning",
           "msg": "Model 'gemini-3.8-flash' returned 503; falling back to 'gemini-3-flash-preview'"
+        },
+        {
+          "ts": "2026-11-22T10:00:11+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3-flash-preview) answered in 108.1s (tokens in 1413, out 788, thinking 5532)"
+        },
+        {
+          "ts": "2026-11-22T10:00:11+00:00",
+          "level": "info",
+          "msg": "Finished, waiting for your approval"
+        },
+        {
+          "ts": "2026-11-22T10:00:11+00:00",
+          "level": "info",
+          "msg": "Approved by schedule (auto-approve) (choice: mcgurk-audio-brain-glitch)"
         }
       ],
       "errors": [
@@ -371,7 +391,7 @@
         }
       ],
       "feedback": [],
-      "cost_usd": 0.0
+      "cost_usd": 0.019666
     },
     "script": {
       "title": "Write the script",
@@ -380,17 +400,34 @@
         "research"
       ],
       "checkpoint": "B",
-      "status": "queued",
-      "progress": 0,
-      "started_at": null,
+      "status": "running",
+      "progress": 10,
+      "started_at": "2026-11-22T10:00:11+00:00",
       "ended_at": null,
-      "attempt": 0,
+      "attempt": 1,
       "retries": 0,
       "max_retries": 2,
-      "strategy": null,
-      "inputs": {},
+      "strategy": "default",
+      "inputs": {
+        "idea": "The McGurk Audio Glitch",
+        "languages": [
+          "en"
+        ],
+        "comment_at_selection": null
+      },
       "outputs": {},
-      "logs": [],
+      "logs": [
+        {
+          "ts": "2026-11-22T10:00:11+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'default'"
+        },
+        {
+          "ts": "2026-11-22T10:00:11+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.8-flash, high complexity, thinking high)"
+        }
+      ],
       "errors": [],
       "feedback": [],
       "cost_usd": 0.0
@@ -515,11 +552,27 @@
       "type": "choice",
       "step": "research",
       "route_to": "research",
-      "status": "idle",
-      "options": [],
-      "choice": null,
+      "status": "approved",
+      "options": [
+        {
+          "id": "mcgurk-audio-brain-glitch",
+          "label": "1. The McGurk Audio Glitch",
+          "detail": "Demonstrates the McGurk Effect where your eyes trick your ears into hearing different sounds. Viewer hears 'Ba' with eyes closed and 'Fa' with eyes open. Forces a rewatch to confirm the glitch and includes a call to subscribe and comment which word they heard first.\nHook (en): Close your eyes to hear it change.\nWhy: This is a classic high-retention interactive trick. Because the effect is so jarring, viewers almost always rewatch the video to toggle between eyes open and eyes closed, guaranteeing an APV well over 100%."
+        },
+        {
+          "id": "finger-magnet-ideomotor-test",
+          "label": "2. The Finger Magnet Brain Glitch",
+          "detail": "Uses the ideomotor effect to make the viewer's index fingers move toward each other without conscious effort. It feels like an invisible magnetic pull. Includes a call to subscribe for more hidden reflexes and comment 'TOUCHED' if their fingers met.\nHook (en): Your fingers are about to move themselves.\nWhy: Physical 'spooky' reactions perform exceptionally well in the Short-form format because they provide immediate proof of the video's claim. This interactive test triggers high comment volume from people confirming it worked."
+        },
+        {
+          "id": "elbow-skin-pain-glitch",
+          "label": "3. The Painless Elbow Skin Glitch",
+          "detail": "Challenges the viewer to pinch the skin on their elbow (the weebis) as hard as possible to prove it has almost no pain receptors. It's a bizarre biological blind spot. Encourages viewers to subscribe for more body secrets and rate their pain from 1 to 10 in the comments.\nHook (en): Pinch your elbow skin right now.\nWhy: This is a high-velocity 'challenge' hook that uses a specific command. It exploits curiosity about physical limits and is safe but surprising, leading to high VVSA as people stop to try it immediately."
+        }
+      ],
+      "choice": "mcgurk-audio-brain-glitch",
       "comment": null,
-      "decided_at": null
+      "decided_at": "2026-11-22T10:00:11+00:00"
     },
     "B": {
       "title": "Approve the script",
@@ -547,7 +600,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-22T09:59:43+00:00",
+    "exported_at": "2026-11-22T10:00:15+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/45009426014"
   }
