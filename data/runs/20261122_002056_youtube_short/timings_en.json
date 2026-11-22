@@ -1,0 +1,515 @@
+{
+  "voice": "en-US-AriaNeural",
+  "duration": 36.372041,
+  "scenes": [
+    {
+      "scene": "scene_01",
+      "start": 0.0,
+      "end": 2.448,
+      "words": [
+        {
+          "start": 0.097,
+          "end": 0.321,
+          "text": "Pick"
+        },
+        {
+          "start": 0.333,
+          "end": 0.392,
+          "text": "a"
+        },
+        {
+          "start": 0.404,
+          "end": 0.71,
+          "text": "playing"
+        },
+        {
+          "start": 0.722,
+          "end": 1.005,
+          "text": "card"
+        },
+        {
+          "start": 1.017,
+          "end": 1.241,
+          "text": "right"
+        },
+        {
+          "start": 1.253,
+          "end": 1.607,
+          "text": "now"
+        }
+      ]
+    },
+    {
+      "scene": "scene_02",
+      "start": 2.538,
+      "end": 8.226,
+      "words": [
+        {
+          "start": 2.635,
+          "end": 3.036,
+          "text": "Picture"
+        },
+        {
+          "start": 3.048,
+          "end": 3.154,
+          "text": "it"
+        },
+        {
+          "start": 3.166,
+          "end": 3.543,
+          "text": "clearly"
+        },
+        {
+          "start": 3.555,
+          "end": 3.661,
+          "text": "in"
+        },
+        {
+          "start": 3.673,
+          "end": 3.791,
+          "text": "your"
+        },
+        {
+          "start": 3.803,
+          "end": 4.192,
+          "text": "head"
+        },
+        {
+          "start": 5.003,
+          "end": 5.286,
+          "text": "Make"
+        },
+        {
+          "start": 5.297,
+          "end": 5.38,
+          "text": "it"
+        },
+        {
+          "start": 5.392,
+          "end": 5.427,
+          "text": "a"
+        },
+        {
+          "start": 5.439,
+          "end": 5.687,
+          "text": "red"
+        },
+        {
+          "start": 5.698,
+          "end": 6.029,
+          "text": "card"
+        },
+        {
+          "start": 6.229,
+          "end": 6.571,
+          "text": "hearts"
+        },
+        {
+          "start": 6.665,
+          "end": 6.783,
+          "text": "or"
+        },
+        {
+          "start": 6.795,
+          "end": 7.396,
+          "text": "diamonds"
+        }
+      ]
+    },
+    {
+      "scene": "scene_03",
+      "start": 8.316,
+      "end": 13.908,
+      "words": [
+        {
+          "start": 8.413,
+          "end": 8.732,
+          "text": "Now"
+        },
+        {
+          "start": 8.743,
+          "end": 9.227,
+          "text": "eliminate"
+        },
+        {
+          "start": 9.239,
+          "end": 9.522,
+          "text": "face"
+        },
+        {
+          "start": 9.533,
+          "end": 10.052,
+          "text": "cards"
+        },
+        {
+          "start": 10.863,
+          "end": 11.193,
+          "text": "Lock"
+        },
+        {
+          "start": 11.205,
+          "end": 11.299,
+          "text": "in"
+        },
+        {
+          "start": 11.311,
+          "end": 11.453,
+          "text": "an"
+        },
+        {
+          "start": 11.465,
+          "end": 11.677,
+          "text": "odd"
+        },
+        {
+          "start": 11.689,
+          "end": 11.972,
+          "text": "number"
+        },
+        {
+          "start": 11.983,
+          "end": 12.325,
+          "text": "between"
+        },
+        {
+          "start": 12.337,
+          "end": 12.549,
+          "text": "two"
+        },
+        {
+          "start": 12.561,
+          "end": 12.667,
+          "text": "and"
+        },
+        {
+          "start": 12.679,
+          "end": 13.08,
+          "text": "ten"
+        }
+      ]
+    },
+    {
+      "scene": "scene_04",
+      "start": 13.998,
+      "end": 19.566,
+      "words": [
+        {
+          "start": 14.095,
+          "end": 14.449,
+          "text": "Wait"
+        },
+        {
+          "start": 14.697,
+          "end": 14.814,
+          "text": "do"
+        },
+        {
+          "start": 14.826,
+          "end": 15.074,
+          "text": "not"
+        },
+        {
+          "start": 15.086,
+          "end": 15.392,
+          "text": "change"
+        },
+        {
+          "start": 15.404,
+          "end": 15.487,
+          "text": "your"
+        },
+        {
+          "start": 15.498,
+          "end": 15.781,
+          "text": "mind"
+        },
+        {
+          "start": 15.793,
+          "end": 16.159,
+          "text": "now"
+        },
+        {
+          "start": 16.97,
+          "end": 17.147,
+          "text": "I"
+        },
+        {
+          "start": 17.158,
+          "end": 17.5,
+          "text": "already"
+        },
+        {
+          "start": 17.512,
+          "end": 17.701,
+          "text": "know"
+        },
+        {
+          "start": 17.713,
+          "end": 17.889,
+          "text": "your"
+        },
+        {
+          "start": 17.901,
+          "end": 18.314,
+          "text": "exact"
+        },
+        {
+          "start": 18.326,
+          "end": 18.739,
+          "text": "pick"
+        }
+      ]
+    },
+    {
+      "scene": "scene_05",
+      "start": 19.656,
+      "end": 24.456,
+      "words": [
+        {
+          "start": 19.753,
+          "end": 19.93,
+          "text": "Your"
+        },
+        {
+          "start": 19.942,
+          "end": 20.626,
+          "text": "subconscious"
+        },
+        {
+          "start": 20.638,
+          "end": 20.956,
+          "text": "feels"
+        },
+        {
+          "start": 20.968,
+          "end": 21.286,
+          "text": "free"
+        },
+        {
+          "start": 21.522,
+          "end": 21.675,
+          "text": "but"
+        },
+        {
+          "start": 21.687,
+          "end": 21.793,
+          "text": "you"
+        },
+        {
+          "start": 21.805,
+          "end": 21.911,
+          "text": "are"
+        },
+        {
+          "start": 21.923,
+          "end": 22.324,
+          "text": "staring"
+        },
+        {
+          "start": 22.336,
+          "end": 22.583,
+          "text": "right"
+        },
+        {
+          "start": 22.595,
+          "end": 22.654,
+          "text": "at"
+        },
+        {
+          "start": 22.666,
+          "end": 22.748,
+          "text": "the"
+        },
+        {
+          "start": 22.76,
+          "end": 23.043,
+          "text": "seven"
+        },
+        {
+          "start": 23.055,
+          "end": 23.126,
+          "text": "of"
+        },
+        {
+          "start": 23.138,
+          "end": 23.633,
+          "text": "hearts"
+        }
+      ]
+    },
+    {
+      "scene": "scene_06",
+      "start": 24.546,
+      "end": 30.354,
+      "words": [
+        {
+          "start": 24.643,
+          "end": 25.009,
+          "text": "Subtle"
+        },
+        {
+          "start": 25.021,
+          "end": 25.752,
+          "text": "psychological"
+        },
+        {
+          "start": 25.763,
+          "end": 26.176,
+          "text": "priming"
+        },
+        {
+          "start": 26.188,
+          "end": 26.707,
+          "text": "silently"
+        },
+        {
+          "start": 26.719,
+          "end": 27.131,
+          "text": "forces"
+        },
+        {
+          "start": 27.143,
+          "end": 27.544,
+          "text": "seventy"
+        },
+        {
+          "start": 27.556,
+          "end": 28.028,
+          "text": "percent"
+        },
+        {
+          "start": 28.039,
+          "end": 28.11,
+          "text": "of"
+        },
+        {
+          "start": 28.122,
+          "end": 28.405,
+          "text": "human"
+        },
+        {
+          "start": 28.417,
+          "end": 28.794,
+          "text": "minds"
+        },
+        {
+          "start": 28.806,
+          "end": 28.888,
+          "text": "to"
+        },
+        {
+          "start": 28.9,
+          "end": 29.089,
+          "text": "this"
+        },
+        {
+          "start": 29.101,
+          "end": 29.537,
+          "text": "card"
+        }
+      ]
+    },
+    {
+      "scene": "scene_07",
+      "start": 30.444,
+      "end": 36.372,
+      "words": [
+        {
+          "start": 30.541,
+          "end": 31.154,
+          "text": "Subscribe"
+        },
+        {
+          "start": 31.166,
+          "end": 31.308,
+          "text": "for"
+        },
+        {
+          "start": 31.319,
+          "end": 31.768,
+          "text": "tomorrow's"
+        },
+        {
+          "start": 31.779,
+          "end": 32.051,
+          "text": "brain"
+        },
+        {
+          "start": 32.062,
+          "end": 32.44,
+          "text": "test"
+        },
+        {
+          "start": 32.452,
+          "end": 32.546,
+          "text": "and"
+        },
+        {
+          "start": 32.558,
+          "end": 32.935,
+          "text": "comment"
+        },
+        {
+          "start": 32.947,
+          "end": 33.218,
+          "text": "YES"
+        },
+        {
+          "start": 33.23,
+          "end": 33.324,
+          "text": "if"
+        },
+        {
+          "start": 33.336,
+          "end": 33.513,
+          "text": "this"
+        },
+        {
+          "start": 33.525,
+          "end": 33.749,
+          "text": "got"
+        },
+        {
+          "start": 33.761,
+          "end": 33.949,
+          "text": "you"
+        },
+        {
+          "start": 34.232,
+          "end": 34.397,
+          "text": "which"
+        },
+        {
+          "start": 34.409,
+          "end": 34.503,
+          "text": "is"
+        },
+        {
+          "start": 34.515,
+          "end": 34.727,
+          "text": "why"
+        },
+        {
+          "start": 34.739,
+          "end": 34.81,
+          "text": "I"
+        },
+        {
+          "start": 34.822,
+          "end": 35.069,
+          "text": "dare"
+        },
+        {
+          "start": 35.081,
+          "end": 35.187,
+          "text": "you"
+        },
+        {
+          "start": 35.199,
+          "end": 35.529,
+          "text": "to"
+        }
+      ]
+    }
+  ]
+}
