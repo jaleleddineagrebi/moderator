@@ -1,0 +1,72 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-44438/",
+    "author": "Vxdpics",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man staring intense",
+    "description": "A close up of a man's eyes staring intensely with digital data overlays."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-360527/",
+    "author": "MAdrian78",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "numbers flying animation",
+    "description": "Abstract numbers flying past the camera in a dark digital space."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-185092/",
+    "author": "stefaniejockschat",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man writing glass",
+    "description": "A man writing mathematical equations quickly on a glass pane."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-149449/",
+    "author": "Matthias_Groeneveld",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "dark hallway flickering",
+    "description": "CCTV style footage of a dark hallway with flickering lights."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-71567/",
+    "author": "hamzaaslammiczon",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "blueprint animation",
+    "description": "A 3D blueprint animation of a room being constructed digitally."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-16459/",
+    "author": "adonyig",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "red chair studio",
+    "description": "A sleek red designer chair spinning slowly in a bright white studio."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-142641/",
+    "author": "u_etjkkdz15b",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hand smartphone scroll",
+    "description": "A close up of a man's thumb tapping a phone screen repeatedly."
+  }
+]
