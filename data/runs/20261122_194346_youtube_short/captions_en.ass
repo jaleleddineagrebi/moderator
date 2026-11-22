@@ -12,51 +12,50 @@ Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 1,0:00:00.05,0:00:02.37,Headline,,0,0,0,,{\fad(150,150)}MIND READING TEST
-Dialogue: 1,0:00:02.47,0:00:09.47,Headline,,0,0,0,,{\fad(150,150)}PICK A NUMBER
-Dialogue: 1,0:00:09.57,0:00:16.68,Headline,,0,0,0,,{\fad(150,150)}YOUR NUMBER IS 4
-Dialogue: 1,0:00:16.78,0:00:22.10,Headline,,0,0,0,,{\fad(150,150)}THE CREEPY PART...
-Dialogue: 1,0:00:22.20,0:00:28.00,Headline,,0,0,0,,{\fad(150,150)}CLEAR YOUR HEAD
-Dialogue: 1,0:00:28.10,0:00:34.11,Headline,,0,0,0,,{\fad(150,150)}RED CHAIR
-Dialogue: 1,0:00:34.21,0:00:38.98,Headline,,0,0,0,,{\fad(150,150)}DID IT WORK?
-Dialogue: 1,0:00:39.08,0:00:45.30,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
-Dialogue: 0,0:00:00.10,0:00:00.60,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}I'll{\c&H00FFFFFF&} read your
-Dialogue: 0,0:00:00.62,0:00:01.50,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}mind {\c&H0000E5FF&}right{\c&H00FFFFFF&} now
-Dialogue: 0,0:00:02.52,0:00:03.32,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Quick{\c&H00FFFFFF&} pick a
-Dialogue: 0,0:00:03.33,0:00:04.21,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}number {\c&H0000E5FF&}between{\c&H00FFFFFF&} one
-Dialogue: 0,0:00:04.22,0:00:04.74,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and ten
-Dialogue: 0,0:00:05.57,0:00:06.42,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Multiply{\c&H00FFFFFF&} it by
-Dialogue: 0,0:00:06.43,0:00:06.86,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}two
-Dialogue: 0,0:00:07.69,0:00:08.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Now add {\c&H0000E5FF&}eight{\c&H00FFFFFF&}
-Dialogue: 0,0:00:09.61,0:00:10.45,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Divide{\c&H00FFFFFF&} the total
-Dialogue: 0,0:00:10.46,0:00:11.05,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}by two
-Dialogue: 0,0:00:11.86,0:00:13.03,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Subtract{\c&H00FFFFFF&} your original
-Dialogue: 0,0:00:13.04,0:00:13.48,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}number
-Dialogue: 0,0:00:14.29,0:00:14.92,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}You’re{\c&H00FFFFFF&} left with
-Dialogue: 0,0:00:14.93,0:00:15.81,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}four {\c&H0000E5FF&}right{\c&H00FFFFFF&}
-Dialogue: 0,0:00:16.83,0:00:17.50,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}That was {\c&H0000E5FF&}just{\c&H00FFFFFF&}
-Dialogue: 0,0:00:17.52,0:00:17.96,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}math
-Dialogue: 0,0:00:18.77,0:00:19.66,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}This {\c&H0000E5FF&}next{\c&H00FFFFFF&} part
-Dialogue: 0,0:00:19.67,0:00:20.07,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is {\c&H0000E5FF&}where{\c&H00FFFFFF&} it
-Dialogue: 0,0:00:20.08,0:00:21.23,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}gets truly {\c&H0000E5FF&}creepy{\c&H00FFFFFF&}
-Dialogue: 0,0:00:22.25,0:00:22.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Stare{\c&H00FFFFFF&} at the
-Dialogue: 0,0:00:22.84,0:00:23.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}center{\c&H00FFFFFF&} and clear
-Dialogue: 0,0:00:23.71,0:00:24.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}head{\c&H00FFFFFF&}
-Dialogue: 0,0:00:25.05,0:00:25.58,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Think{\c&H00FFFFFF&} of any
-Dialogue: 0,0:00:25.59,0:00:26.20,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}color{\c&H00FFFFFF&} and a
-Dialogue: 0,0:00:26.21,0:00:27.13,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}piece of {\c&H0000E5FF&}furniture{\c&H00FFFFFF&}
-Dialogue: 0,0:00:28.15,0:00:28.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You're {\c&H0000E5FF&}picturing{\c&H00FFFFFF&} a
-Dialogue: 0,0:00:28.94,0:00:29.62,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}red {\c&H0000E5FF&}chair{\c&H00FFFFFF&}
-Dialogue: 0,0:00:30.43,0:00:31.16,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}I {\c&H0000E5FF&}just{\c&H00FFFFFF&} used
-Dialogue: 0,0:00:31.18,0:00:32.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}semantic{\c&H00FFFFFF&} priming to
-Dialogue: 0,0:00:32.19,0:00:33.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}hijack{\c&H00FFFFFF&} your brain
-Dialogue: 0,0:00:34.26,0:00:34.86,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}mind{\c&H00FFFFFF&} is
-Dialogue: 0,0:00:34.87,0:00:35.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}easier{\c&H00FFFFFF&} to hack
-Dialogue: 0,0:00:35.69,0:00:36.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}than you {\c&H0000E5FF&}think{\c&H00FFFFFF&}
-Dialogue: 0,0:00:37.17,0:00:37.60,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Did I get
-Dialogue: 0,0:00:37.61,0:00:38.10,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}it {\c&H0000E5FF&}right{\c&H00FFFFFF&}
-Dialogue: 0,0:00:39.13,0:00:40.35,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Subscribe for {\c&H0000E5FF&}tomorrow's{\c&H00FFFFFF&}
-Dialogue: 0,0:00:40.37,0:00:41.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}brain{\c&H00FFFFFF&} test and
-Dialogue: 0,0:00:41.13,0:00:41.90,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} YES if
-Dialogue: 0,0:00:41.91,0:00:42.81,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}this {\c&H0000E5FF&}worked{\c&H00FFFFFF&} which
-Dialogue: 0,0:00:42.82,0:00:43.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is {\c&H0000E5FF&}exactly{\c&H00FFFFFF&} why
+Dialogue: 1,0:00:00.05,0:00:02.39,Headline,,0,0,0,,{\fad(150,150)}MIND READING TEST
+Dialogue: 1,0:00:02.49,0:00:07.16,Headline,,0,0,0,,{\fad(150,150)}PICK A NUMBER
+Dialogue: 1,0:00:07.26,0:00:13.01,Headline,,0,0,0,,{\fad(150,150)}THE RESULT IS 4
+Dialogue: 1,0:00:13.11,0:00:17.71,Headline,,0,0,0,,{\fad(150,150)}MIND HACK INCOMING
+Dialogue: 1,0:00:17.81,0:00:24.69,Headline,,0,0,0,,{\fad(150,150)}THINK OF AN OBJECT
+Dialogue: 1,0:00:24.79,0:00:30.56,Headline,,0,0,0,,{\fad(150,150)}RED CHAIR
+Dialogue: 1,0:00:30.66,0:00:36.70,Headline,,0,0,0,,{\fad(150,150)}BRAIN HACKED
+Dialogue: 1,0:00:36.80,0:00:43.14,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 0,0:00:00.10,0:00:00.50,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Think{\c&H00FFFFFF&} of a
+Dialogue: 0,0:00:00.51,0:00:01.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}random{\c&H00FFFFFF&} number now
+Dialogue: 0,0:00:02.54,0:00:03.23,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Double{\c&H00FFFFFF&} it
+Dialogue: 0,0:00:04.06,0:00:04.98,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Now add {\c&H0000E5FF&}eight{\c&H00FFFFFF&}
+Dialogue: 0,0:00:05.79,0:00:06.31,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Got it
+Dialogue: 0,0:00:07.31,0:00:08.23,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Divide{\c&H00FFFFFF&} by two
+Dialogue: 0,0:00:08.24,0:00:08.98,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and {\c&H0000E5FF&}subtract{\c&H00FFFFFF&} your
+Dialogue: 0,0:00:09.00,0:00:09.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}original{\c&H00FFFFFF&} number
+Dialogue: 0,0:00:10.63,0:00:11.26,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}You’re{\c&H00FFFFFF&} left with
+Dialogue: 0,0:00:11.27,0:00:12.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}four {\c&H0000E5FF&}right{\c&H00FFFFFF&}
+Dialogue: 0,0:00:13.16,0:00:13.69,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}But {\c&H0000E5FF&}here{\c&H00FFFFFF&} is
+Dialogue: 0,0:00:13.70,0:00:14.60,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}creepy{\c&H00FFFFFF&} part
+Dialogue: 0,0:00:15.41,0:00:15.94,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You {\c&H0000E5FF&}think{\c&H00FFFFFF&} your
+Dialogue: 0,0:00:15.95,0:00:16.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}mind is {\c&H0000E5FF&}private{\c&H00FFFFFF&}
+Dialogue: 0,0:00:17.86,0:00:18.60,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Clear{\c&H00FFFFFF&} your head
+Dialogue: 0,0:00:18.61,0:00:19.14,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}while {\c&H0000E5FF&}looking{\c&H00FFFFFF&} at
+Dialogue: 0,0:00:19.15,0:00:19.66,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}center{\c&H00FFFFFF&} of
+Dialogue: 0,0:00:19.67,0:00:20.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}screen{\c&H00FFFFFF&}
+Dialogue: 0,0:00:21.05,0:00:21.86,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Now {\c&H0000E5FF&}think{\c&H00FFFFFF&} of
+Dialogue: 0,0:00:21.88,0:00:22.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}any {\c&H0000E5FF&}color{\c&H00FFFFFF&} and
+Dialogue: 0,0:00:22.69,0:00:23.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}any {\c&H0000E5FF&}piece{\c&H00FFFFFF&} of
+Dialogue: 0,0:00:23.25,0:00:23.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}furniture
+Dialogue: 0,0:00:24.84,0:00:25.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You're {\c&H0000E5FF&}picturing{\c&H00FFFFFF&} a
+Dialogue: 0,0:00:25.62,0:00:26.31,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}red {\c&H0000E5FF&}chair{\c&H00FFFFFF&}
+Dialogue: 0,0:00:27.12,0:00:28.17,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}I used {\c&H0000E5FF&}linguistic{\c&H00FFFFFF&}
+Dialogue: 0,0:00:28.18,0:00:29.14,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}priming{\c&H00FFFFFF&} to hijack
+Dialogue: 0,0:00:29.15,0:00:29.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}brain{\c&H00FFFFFF&}
+Dialogue: 0,0:00:30.71,0:00:31.41,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It {\c&H0000E5FF&}feels{\c&H00FFFFFF&} like
+Dialogue: 0,0:00:31.42,0:00:32.38,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}magic{\c&H00FFFFFF&} but it’s
+Dialogue: 0,0:00:32.40,0:00:33.59,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}actually a {\c&H0000E5FF&}calculated{\c&H00FFFFFF&}
+Dialogue: 0,0:00:33.60,0:00:34.42,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}exploit{\c&H00FFFFFF&} of how
+Dialogue: 0,0:00:34.44,0:00:35.40,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your brain {\c&H0000E5FF&}processes{\c&H00FFFFFF&}
+Dialogue: 0,0:00:35.41,0:00:35.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}data
+Dialogue: 0,0:00:36.85,0:00:38.07,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Subscribe for {\c&H0000E5FF&}tomorrow's{\c&H00FFFFFF&}
+Dialogue: 0,0:00:38.09,0:00:38.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}brain{\c&H00FFFFFF&} test and
+Dialogue: 0,0:00:38.84,0:00:39.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} YES if
+Dialogue: 0,0:00:39.62,0:00:40.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}I {\c&H0000E5FF&}caught{\c&H00FFFFFF&} you
+Dialogue: 0,0:00:40.48,0:00:41.21,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}which is {\c&H0000E5FF&}exactly{\c&H00FFFFFF&}
+Dialogue: 0,0:00:41.22,0:00:41.65,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}why
