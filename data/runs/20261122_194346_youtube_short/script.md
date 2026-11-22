@@ -1,26 +1,26 @@
 # The Interactive Red Furniture Mind Hack
-Estimated narration: en 39.3s
+Estimated narration: en 37.8s
 
-## scene_01 · A extreme macro shot of a man's eye with digital data reflections in the iris.
-EN  [MIND READING TEST]  I'll read your mind right now.
+## scene_01 · An extreme macro close-up of a man's eye iris with digital light reflections.
+EN  [MIND READING TEST]  Think of a random number now.
 
-## scene_02 · Golden 3D numbers spinning and flying towards the camera in a dark void.
-EN  [PICK A NUMBER]  Quick, pick a number between one and ten. Multiply it by two. Now add eight.
+## scene_02 · 3D golden numbers spinning and floating in a dark, atmospheric space.
+EN  [PICK A NUMBER]  Double it. Now add eight. Got it?
 
-## scene_03 · A man’s hand writing complex mathematical equations on a transparent glass pane.
-EN  [YOUR NUMBER IS 4]  Divide the total by two. Subtract your original number. You’re left with four, right?
+## scene_03 · A man's finger writing mathematical equations on a transparent glass surface.
+EN  [THE RESULT IS 4]  Divide by two and subtract your original number. You’re left with four, right?
 
-## scene_04 · Heavy digital static and television distortion effects flickering rapidly.
-EN  [THE CREEPY PART...]  That was just math. This next part is where it gets truly creepy.
+## scene_04 · Rapid digital static and analog television glitch effects flickering over a dark screen.
+EN  [MIND HACK INCOMING]  But here is the creepy part. You think your mind is private?
 
-## scene_05 · Abstract geometric shapes morphing and pulsing in a hypnotic kaleidoscopic pattern.
-EN  [CLEAR YOUR HEAD]  Stare at the center and clear your head. Think of any color and a piece of furniture.
+## scene_05 · A hypnotic, trippy geometric tunnel moving infinitely towards the camera.
+EN  [THINK OF AN OBJECT]  Clear your head while looking at the center of the screen. Now, think of any color and any piece of furniture.
 
-## scene_06 · A single, minimalist red designer chair rotating slowly in a pure white studio space.
-EN  [RED CHAIR]  You're picturing a red chair. I just used semantic priming to hijack your brain.
+## scene_06 · A sleek, modern red armchair rotating slowly in a minimalist, brightly lit studio.
+EN  [RED CHAIR]  You're picturing a red chair. I used linguistic priming to hijack your brain.
 
-## scene_07 · A digital model of a human brain with glowing blue neurons firing rapidly.
-EN  [DID IT WORK?]  Your mind is easier to hack than you think. Did I get it right?
+## scene_07 · A digital 3D model of a human brain with blue electrical synapses firing rapidly.
+EN  [BRAIN HACKED]  It feels like magic, but it’s actually a calculated exploit of how your brain processes data.
 
-## scene_08 · Close up of a man's thumb scrolling through a smartphone social media feed.
-EN  [SUBSCRIBE 🔔]  Subscribe for tomorrow's brain test and comment YES if this worked, which is exactly why...
+## scene_08 · A man's thumb rapidly scrolling through a futuristic social media feed on a smartphone.
+EN  [SUBSCRIBE 🔔]  Subscribe for tomorrow's brain test and comment YES if I caught you, which is exactly why...

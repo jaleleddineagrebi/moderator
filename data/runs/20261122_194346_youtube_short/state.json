@@ -67,15 +67,15 @@
   },
   "started_at": "2026-11-22T19:43:46+00:00",
   "ended_at": null,
-  "revision_rounds": 1,
+  "revision_rounds": 2,
   "cost": {
-    "total_usd": 0.027095,
+    "total_usd": 0.042933,
     "budget_usd": 1.0,
     "by_agent": {
       "trend_researcher": 0.002795,
-      "scriptwriter": 0.018354,
+      "scriptwriter": 0.03242,
       "packaging": 0.000942,
-      "qa_reviewer": 0.005004
+      "qa_reviewer": 0.006776
     }
   },
   "agents": {
@@ -368,9 +368,9 @@
       "checkpoint": "B",
       "status": "done",
       "progress": 100,
-      "started_at": "2026-11-22T19:46:27+00:00",
-      "ended_at": "2026-11-22T19:46:37+00:00",
-      "attempt": 2,
+      "started_at": "2026-11-22T19:48:19+00:00",
+      "ended_at": "2026-11-22T19:48:36+00:00",
+      "attempt": 3,
       "retries": 0,
       "max_retries": 2,
       "strategy": "default",
@@ -450,6 +450,41 @@
           "ts": "2026-11-22T19:46:37+00:00",
           "level": "info",
           "msg": "Approved by schedule (auto-approve)"
+        },
+        {
+          "ts": "2026-11-22T19:48:19+00:00",
+          "level": "warning",
+          "msg": "Sent back by qa: QA found:\n[en] accuracy review: The math trick in scene 3 is incorrect. If the viewer adds 8 and then divides by 2, they have (x+8)/2 = x/2 + 4. Subtracting the original number (x) results in -x/2 + 4, not 4. To make the result always 4, the instruction in scene 3 must be 'Subtract half your original number' or the instruction in scene 2 must be changed to 'Add eight to your result' after multiplying by 2, then divide the whole thing by 2 and subtract the original number. The simplest fix for the script: in scene 2 say 'Double it. Now add eight.' and in scene 3 say 'Divide the total by two. Subtract your original number. You’re left with four.' (This works: ((2x+8)/2)-x = 4). However, the current script implies 'Add eight' to the original number or the product. If the user follows: ((x*2)+8)/2 - x, the answer is 4. The script is technically correct but the phrasing 'add eight' after 'multiply it by two' needs to be clearly part of the sequence. The bigger issue is scene 8's VO ends abruptly with 'which is exactly why...' without finishing the thought. Fix: Remove 'which is exactly why...' from the end of scene 8."
+        },
+        {
+          "ts": "2026-11-22T19:48:19+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'default'"
+        },
+        {
+          "ts": "2026-11-22T19:48:19+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.8-flash, high complexity, thinking high)"
+        },
+        {
+          "ts": "2026-11-22T19:48:36+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3-flash-preview) answered in 17.1s (tokens in 2650, out 1076, thinking 3171)"
+        },
+        {
+          "ts": "2026-11-22T19:48:36+00:00",
+          "level": "info",
+          "msg": "Estimated narration: en 37.8s"
+        },
+        {
+          "ts": "2026-11-22T19:48:36+00:00",
+          "level": "info",
+          "msg": "Finished, waiting for your approval"
+        },
+        {
+          "ts": "2026-11-22T19:48:36+00:00",
+          "level": "info",
+          "msg": "Approved by schedule (auto-approve)"
         }
       ],
       "errors": [],
@@ -458,9 +493,14 @@
           "ts": "2026-11-22T19:46:27+00:00",
           "from": "qa",
           "comment": "QA found:\n[en] accuracy review: The mathematical trick in scene 02 and 03 is incorrectly solved in the script. Following the steps: (x * 2 + 8) / 2 - x = (2x + 8) / 2 - x = x + 4 - x = 4. However, if the user picks 0, it works, but if they pick a number and the voiceover says 'You are left with four', and then the on-screen text in scene 05 says 'CHOOSE A COLOR' while the narration asks to visualize furniture, it is inconsistent. More importantly, the math result is 4, but the text 'YOUR NUMBER IS 4' is correct. The actual error is the claim of 'semantic priming' for a 'Red Chair' in scene 06 when no priming for 'red' or 'chair' occurred in the previous scenes. However, looking strictly at the math: (x*2+8)/2-x always equals 4. The math is correct."
+        },
+        {
+          "ts": "2026-11-22T19:48:19+00:00",
+          "from": "qa",
+          "comment": "QA found:\n[en] accuracy review: The math trick in scene 3 is incorrect. If the viewer adds 8 and then divides by 2, they have (x+8)/2 = x/2 + 4. Subtracting the original number (x) results in -x/2 + 4, not 4. To make the result always 4, the instruction in scene 3 must be 'Subtract half your original number' or the instruction in scene 2 must be changed to 'Add eight to your result' after multiplying by 2, then divide the whole thing by 2 and subtract the original number. The simplest fix for the script: in scene 2 say 'Double it. Now add eight.' and in scene 3 say 'Divide the total by two. Subtract your original number. You’re left with four.' (This works: ((2x+8)/2)-x = 4). However, the current script implies 'Add eight' to the original number or the product. If the user follows: ((x*2)+8)/2 - x, the answer is 4. The script is technically correct but the phrasing 'add eight' after 'multiply it by two' needs to be clearly part of the sequence. The bigger issue is scene 8's VO ends abruptly with 'which is exactly why...' without finishing the thought. Fix: Remove 'which is exactly why...' from the end of scene 8."
         }
       ],
-      "cost_usd": 0.018354
+      "cost_usd": 0.03242
     },
     "visuals": {
       "title": "Source scene visuals",
@@ -469,11 +509,11 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "done",
-      "progress": 100,
-      "started_at": "2026-11-22T19:46:37+00:00",
-      "ended_at": "2026-11-22T19:47:12+00:00",
-      "attempt": 2,
+      "status": "running",
+      "progress": 0,
+      "started_at": "2026-11-22T19:48:36+00:00",
+      "ended_at": null,
+      "attempt": 3,
       "retries": 0,
       "max_retries": 2,
       "strategy": "stock_video",
@@ -600,6 +640,21 @@
           "ts": "2026-11-22T19:47:12+00:00",
           "level": "info",
           "msg": "Finished"
+        },
+        {
+          "ts": "2026-11-22T19:48:19+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-22T19:48:36+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'stock_video'"
+        },
+        {
+          "ts": "2026-11-22T19:48:36+00:00",
+          "level": "info",
+          "msg": "Visual diversity: excluding 300 footage sources used in recent Shorts"
         }
       ],
       "errors": [],
@@ -613,21 +668,21 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "done",
-      "progress": 100,
-      "started_at": "2026-11-22T19:46:41+00:00",
-      "ended_at": "2026-11-22T19:47:03+00:00",
-      "attempt": 4,
-      "retries": 1,
+      "status": "running",
+      "progress": 0,
+      "started_at": "2026-11-22T19:48:36+00:00",
+      "ended_at": null,
+      "attempt": 5,
+      "retries": 0,
       "max_retries": 2,
-      "strategy": "alternate_voice",
+      "strategy": "primary_voice",
       "inputs": {
         "script": "script.json",
         "languages": [
           "en"
         ],
         "voices": {
-          "en": "en-US-AriaNeural"
+          "en": "en-US-AndrewMultilingualNeural"
         }
       },
       "outputs": {
@@ -718,6 +773,21 @@
           "ts": "2026-11-22T19:47:03+00:00",
           "level": "info",
           "msg": "Finished"
+        },
+        {
+          "ts": "2026-11-22T19:48:19+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-22T19:48:36+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'primary_voice'"
+        },
+        {
+          "ts": "2026-11-22T19:48:36+00:00",
+          "level": "info",
+          "msg": "Narrating en with en-US-AndrewMultilingualNeural"
         }
       ],
       "errors": [
@@ -745,8 +815,8 @@
         "visuals"
       ],
       "checkpoint": null,
-      "status": "done",
-      "progress": 100,
+      "status": "queued",
+      "progress": 0,
       "started_at": "2026-11-22T19:47:12+00:00",
       "ended_at": "2026-11-22T19:47:15+00:00",
       "attempt": 2,
@@ -865,6 +935,11 @@
           "ts": "2026-11-22T19:47:15+00:00",
           "level": "info",
           "msg": "Finished"
+        },
+        {
+          "ts": "2026-11-22T19:48:19+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'script' is being revised"
         }
       ],
       "errors": [],
@@ -879,8 +954,8 @@
         "audio"
       ],
       "checkpoint": null,
-      "status": "done",
-      "progress": 100,
+      "status": "queued",
+      "progress": 0,
       "started_at": "2026-11-22T19:47:12+00:00",
       "ended_at": "2026-11-22T19:47:53+00:00",
       "attempt": 2,
@@ -947,6 +1022,11 @@
           "ts": "2026-11-22T19:47:53+00:00",
           "level": "info",
           "msg": "Finished"
+        },
+        {
+          "ts": "2026-11-22T19:48:19+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'script' is being revised"
         }
       ],
       "errors": [],
@@ -961,10 +1041,10 @@
         "packaging"
       ],
       "checkpoint": "C",
-      "status": "running",
-      "progress": 60,
+      "status": "queued",
+      "progress": 0,
       "started_at": "2026-11-22T19:47:53+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-22T19:48:19+00:00",
       "attempt": 2,
       "retries": 0,
       "max_retries": 2,
@@ -1048,11 +1128,31 @@
           "ts": "2026-11-22T19:48:14+00:00",
           "level": "info",
           "msg": "Asking Gemini (gemini-3.8-flash, medium complexity, thinking low)"
+        },
+        {
+          "ts": "2026-11-22T19:48:19+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3-flash-preview) answered in 5.8s (tokens in 3514, out 5, thinking 0)"
+        },
+        {
+          "ts": "2026-11-22T19:48:19+00:00",
+          "level": "warning",
+          "msg": "1 blocking issue(s); sending back to: script"
+        },
+        {
+          "ts": "2026-11-22T19:48:19+00:00",
+          "level": "info",
+          "msg": "Finished, waiting for your approval"
+        },
+        {
+          "ts": "2026-11-22T19:48:19+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'script' is being revised"
         }
       ],
       "errors": [],
       "feedback": [],
-      "cost_usd": 0.005004
+      "cost_usd": 0.006776
     }
   },
   "checkpoints": {
@@ -1092,7 +1192,7 @@
       "options": [],
       "choice": null,
       "comment": null,
-      "decided_at": "2026-11-22T19:46:37+00:00"
+      "decided_at": "2026-11-22T19:48:36+00:00"
     },
     "C": {
       "title": "Approve the final videos (never uploaded without your OK)",
@@ -1109,7 +1209,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-22T19:48:18+00:00",
+    "exported_at": "2026-11-22T19:48:37+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/45062302069"
   }

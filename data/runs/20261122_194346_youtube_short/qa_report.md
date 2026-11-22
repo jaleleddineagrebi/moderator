@@ -1,16 +1,15 @@
 # QA report: CHANGES NEEDED
 
-- ✅ **length** [en]: 45.1s (must be under 60s; target 32-50s)
-- ✅ **target length** [en]: 45.1s
+- ✅ **length** [en]: 45.3s (must be under 60s; target 32-50s)
+- ✅ **target length** [en]: 45.3s
 - ✅ **aspect ratio** [en]: 1080x1920
 - ✅ **video codec** [en]: h264
 - ✅ **audio track** [en]: present
 - ✅ **loudness** [en]: -14.2 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)
-- ✅ **hook timing** [en]: scene_01 spoken in 2.5s (target <= 4s)
-- ✅ **caption sync** [en]: 101 words, 41 caption events
-- ✅ **visual licenses**: 7 assets: pixabay
+- ✅ **hook timing** [en]: scene_01 spoken in 2.3s (target <= 4s)
+- ✅ **caption sync** [en]: 108 words, 40 caption events
+- ✅ **visual licenses**: 8 assets: pixabay
 - ✅ **visual diversity**: all scenes use distinct footage
 - ✅ **audio licenses**: music: original work, no third-party rights; sfx: original work, no third-party rights; voice: synthetic voice; no third-party performance rights
-- ❌ **accuracy review** [en]: The mathematical trick in scene 02 and 03 is incorrectly solved in the script. Following the steps: (x * 2 + 8) / 2 - x = (2x + 8) / 2 - x = x + 4 - x = 4. However, if the user picks 0, it works, but if they pick a number and the voiceover says 'You are left with four', and then the on-screen text in scene 05 says 'CHOOSE A COLOR' while the narration asks to visualize furniture, it is inconsistent. More importantly, the math result is 4, but the text 'YOUR NUMBER IS 4' is correct. The actual error is the claim of 'semantic priming' for a 'Red Chair' in scene 06 when no priming for 'red' or 'chair' occurred in the previous scenes. However, looking strictly at the math: (x*2+8)/2-x always equals 4. The math is correct. → sent to script
-- ⚠️ **visual_fit review** [en]: In scene 05, the on-screen text says 'CHOOSE A COLOR' but the narration asks to visualize a 'piece of furniture' first and then a color. Change on-screen text to 'FURNITURE + COLOR' to match the dual instruction.
-- ✅ **people rule**: no women beyond face close-ups in 7 scenes and 1 thumbnail(s)
+- ❌ **accuracy review** [en]: The math trick in scene 3 is incorrect. If the viewer adds 8 and then divides by 2, they have (x+8)/2 = x/2 + 4. Subtracting the original number (x) results in -x/2 + 4, not 4. To make the result always 4, the instruction in scene 3 must be 'Subtract half your original number' or the instruction in scene 2 must be changed to 'Add eight to your result' after multiplying by 2, then divide the whole thing by 2 and subtract the original number. The simplest fix for the script: in scene 2 say 'Double it. Now add eight.' and in scene 3 say 'Divide the total by two. Subtract your original number. You’re left with four.' (This works: ((2x+8)/2)-x = 4). However, the current script implies 'Add eight' to the original number or the product. If the user follows: ((x*2)+8)/2 - x, the answer is 4. The script is technically correct but the phrasing 'add eight' after 'multiply it by two' needs to be clearly part of the sequence. The bigger issue is scene 8's VO ends abruptly with 'which is exactly why...' without finishing the thought. Fix: Remove 'which is exactly why...' from the end of scene 8. → sent to script
+- ✅ **people rule**: no women beyond face close-ups in 8 scenes and 1 thumbnail(s)
