@@ -1,0 +1,72 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-204035/",
+    "author": "Mezba96",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "card shuffling motion",
+    "description": "Close-up shot of a dealer's hands quickly cutting and riffling a deck of cards over a dark table."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-205344/",
+    "author": "Kanenori",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "red neon sign",
+    "description": "A crimson neon heart glowing and reflecting across rain-slicked city pavement at night."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-154410/",
+    "author": "fotoblend",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "vintage clock gears",
+    "description": "Fast mechanical tally counter numbers spinning rapidly through digits in macro focus."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-146644/",
+    "author": "u_qxb1q6wjyl",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "eye pupil dilation",
+    "description": "Extreme macro close-up of a man's eye with the pupil suddenly dilating under intense studio light."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-137136/",
+    "author": "Trek_Jason",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "card reveal table",
+    "description": "A single playing card being dramatically flipped face up onto a dark rustic wooden table."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-14900/",
+    "author": "cipnt",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "brain neural network",
+    "description": "Glowing electric blue and purple neural pathways firing synapses across an abstract 3D brain structure."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-6395/",
+    "author": "Coverr-Free-Footage",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "finger tapping screen",
+    "description": "First-person view of a man's hand typing rapidly and tapping the glass screen of a modern smartphone."
+  }
+]

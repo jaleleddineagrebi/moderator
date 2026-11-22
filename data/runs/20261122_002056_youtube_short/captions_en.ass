@@ -1,0 +1,55 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:02.49,Headline,,0,0,0,,{\fad(150,150)}PICK A CARD NOW
+Dialogue: 1,0:00:02.59,0:00:08.27,Headline,,0,0,0,,{\fad(150,150)}MAKE IT RED
+Dialogue: 1,0:00:08.37,0:00:13.95,Headline,,0,0,0,,{\fad(150,150)}CHOOSE AN ODD NUMBER
+Dialogue: 1,0:00:14.05,0:00:19.61,Headline,,0,0,0,,{\fad(150,150)}DON'T CHANGE YOUR MIND
+Dialogue: 1,0:00:19.71,0:00:24.50,Headline,,0,0,0,,{\fad(150,150)}SEVEN OF HEARTS
+Dialogue: 1,0:00:24.60,0:00:30.39,Headline,,0,0,0,,{\fad(150,150)}YOUR BRAIN HACKED
+Dialogue: 1,0:00:30.49,0:00:37.02,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 0,0:00:00.10,0:00:00.71,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Pick a {\c&H0000E5FF&}playing{\c&H00FFFFFF&}
+Dialogue: 0,0:00:00.72,0:00:01.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}card {\c&H0000E5FF&}right{\c&H00FFFFFF&} now
+Dialogue: 0,0:00:02.63,0:00:03.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Picture{\c&H00FFFFFF&} it clearly
+Dialogue: 0,0:00:03.56,0:00:04.19,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}in your {\c&H0000E5FF&}head{\c&H00FFFFFF&}
+Dialogue: 0,0:00:05.00,0:00:05.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Make{\c&H00FFFFFF&} it a
+Dialogue: 0,0:00:05.44,0:00:06.57,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}red card {\c&H0000E5FF&}hearts{\c&H00FFFFFF&}
+Dialogue: 0,0:00:06.67,0:00:07.40,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}or {\c&H0000E5FF&}diamonds{\c&H00FFFFFF&}
+Dialogue: 0,0:00:08.41,0:00:09.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Now {\c&H0000E5FF&}eliminate{\c&H00FFFFFF&} face
+Dialogue: 0,0:00:09.53,0:00:10.05,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}cards
+Dialogue: 0,0:00:10.86,0:00:11.45,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Lock{\c&H00FFFFFF&} in an
+Dialogue: 0,0:00:11.46,0:00:12.32,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}odd number {\c&H0000E5FF&}between{\c&H00FFFFFF&}
+Dialogue: 0,0:00:12.34,0:00:13.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}two and ten
+Dialogue: 0,0:00:14.10,0:00:15.07,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Wait{\c&H00FFFFFF&} do not
+Dialogue: 0,0:00:15.09,0:00:15.78,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}change{\c&H00FFFFFF&} your mind
+Dialogue: 0,0:00:15.79,0:00:16.19,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}now
+Dialogue: 0,0:00:16.97,0:00:17.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}I {\c&H0000E5FF&}already{\c&H00FFFFFF&} know
+Dialogue: 0,0:00:17.71,0:00:18.74,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}exact{\c&H00FFFFFF&} pick
+Dialogue: 0,0:00:19.75,0:00:20.96,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}subconscious{\c&H00FFFFFF&} feels
+Dialogue: 0,0:00:20.97,0:00:21.79,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}free{\c&H00FFFFFF&} but you
+Dialogue: 0,0:00:21.80,0:00:22.58,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}are {\c&H0000E5FF&}staring{\c&H00FFFFFF&} right
+Dialogue: 0,0:00:22.59,0:00:23.04,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}at the {\c&H0000E5FF&}seven{\c&H00FFFFFF&}
+Dialogue: 0,0:00:23.05,0:00:23.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}of {\c&H0000E5FF&}hearts{\c&H00FFFFFF&}
+Dialogue: 0,0:00:24.64,0:00:26.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Subtle {\c&H0000E5FF&}psychological{\c&H00FFFFFF&} priming
+Dialogue: 0,0:00:26.19,0:00:27.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}silently{\c&H00FFFFFF&} forces seventy
+Dialogue: 0,0:00:27.56,0:00:28.41,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}percent{\c&H00FFFFFF&} of human
+Dialogue: 0,0:00:28.42,0:00:29.09,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}minds{\c&H00FFFFFF&} to this
+Dialogue: 0,0:00:29.10,0:00:29.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}card
+Dialogue: 0,0:00:30.54,0:00:31.77,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Subscribe for {\c&H0000E5FF&}tomorrow's{\c&H00FFFFFF&}
+Dialogue: 0,0:00:31.78,0:00:32.55,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}brain{\c&H00FFFFFF&} test and
+Dialogue: 0,0:00:32.56,0:00:33.32,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} YES if
+Dialogue: 0,0:00:33.34,0:00:33.95,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}this got you
+Dialogue: 0,0:00:34.23,0:00:34.73,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}which{\c&H00FFFFFF&} is why
+Dialogue: 0,0:00:34.74,0:00:35.19,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}I {\c&H0000E5FF&}dare{\c&H00FFFFFF&} you
+Dialogue: 0,0:00:35.20,0:00:35.60,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to
