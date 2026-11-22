@@ -1,0 +1,156 @@
+{
+  "title": "The McGurk Audio Glitch",
+  "scenes": [
+    {
+      "vo": {
+        "en": "Close your eyes right now."
+      },
+      "on_screen": {
+        "en": "CLOSE YOUR EYES"
+      },
+      "visual": {
+        "description": "A close-up of a man's face as he slowly shuts his eyes in a dark, moody room.",
+        "search_terms": [
+          "man closing eyes",
+          "male face close",
+          "cinematic shadows"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Listen to this sound on loop. Ba. Ba. Ba. Sounds clear, right?"
+      },
+      "on_screen": {
+        "en": "HEAR THE SOUND"
+      },
+      "visual": {
+        "description": "Macro shot of a large black speaker subwoofer vibrating intensely from the bass.",
+        "search_terms": [
+          "speaker bass vibration",
+          "audio equipment macro",
+          "subwoofer moving"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Now open your eyes and look at the mouth on screen."
+      },
+      "on_screen": {
+        "en": "NOW LOOK"
+      },
+      "visual": {
+        "description": "Extreme close-up of a man's mouth speaking directly into the camera.",
+        "search_terms": [
+          "male mouth close",
+          "lips speaking movement",
+          "human speech macro"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "Wait, here is the creepy part. Did the sound just change to Fa?"
+      },
+      "on_screen": {
+        "en": "DID IT CHANGE?"
+      },
+      "visual": {
+        "description": "A digital glitch effect over a television screen showing static and distorted colors.",
+        "search_terms": [
+          "digital glitch texture",
+          "television static noise",
+          "screen distortion signal"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Close them again and it instantly switches back. Your brain is overriding your ears."
+      },
+      "on_screen": {
+        "en": "BRAIN OVERRIDE"
+      },
+      "visual": {
+        "description": "Animated blue neural pathways firing inside an abstract representation of a brain.",
+        "search_terms": [
+          "neural network motion",
+          "brain energy pulse",
+          "synapse firing animation"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "Your eyes are literally hacking your hearing to make sense of the visual input."
+      },
+      "on_screen": {
+        "en": "SENSES HACKED"
+      },
+      "visual": {
+        "description": "Light refracting through a glass prism, splitting into a spectrum of colors.",
+        "search_terms": [
+          "glass prism light",
+          "optical refraction motion",
+          "physics experiment light"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for tomorrow's brain test and comment which word you heard first."
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "A man's hand holding a smartphone and tapping the screen energetically.",
+        "search_terms": [
+          "hand tapping mobile",
+          "phone screen click",
+          "man using smartphone"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    },
+    {
+      "vo": {
+        "en": "Your reality is just a guess, which is why you must..."
+      },
+      "on_screen": {
+        "en": "WATCH AGAIN"
+      },
+      "visual": {
+        "description": "A fast-spinning hypnotic tunnel with swirling geometric patterns.",
+        "search_terms": [
+          "hypnotic tunnel loop",
+          "spinning vortex motion",
+          "geometric portal"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_08"
+    }
+  ],
+  "idea_id": "mcgurk-audio-brain-glitch",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 33.5
+  }
+}
