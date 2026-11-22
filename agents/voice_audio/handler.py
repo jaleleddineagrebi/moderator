@@ -10,8 +10,8 @@ from moderator.tools.languages import normalize_langs
 SCENE_GAP = 0.09  # crisp creator cut between scenes, seconds (eliminates dead air)
 MAX_VOICEOVER = 55.0  # above this, re-record faster (the editor adds a short tail; Shorts must stay under 60s)
 TARGET_VOICEOVER = 53.0
-LONG_MAX_VOICEOVER = 290.0
-LONG_TARGET_VOICEOVER = 270.0
+LONG_MAX_VOICEOVER = 400.0
+LONG_TARGET_VOICEOVER = 340.0
 MAX_SPEEDUP = 15  # percent; faster than this starts to sound rushed
 # A-minor / F / C / G pad, 4 seconds per chord. Generated here, so there is no copyright to worry about.
 CHORDS = [(220.00, 261.63, 329.63), (174.61, 220.00, 261.63), (261.63, 329.63, 392.00), (196.00, 246.94, 293.66)]
@@ -34,7 +34,9 @@ class Handler(Agent):
         is_long = str(ctx.params.get("format") or "short").lower() == "long"
         max_vo = LONG_MAX_VOICEOVER if is_long else MAX_VOICEOVER
         target_vo = LONG_TARGET_VOICEOVER if is_long else TARGET_VOICEOVER
-        rate = "-6%" if ctx.strategy == "third_voice_slower" else "+6%"
+        # Shorts are narrated a little fast; a 4-5 minute video needs a natural, unhurried pace
+        base_rate = 0 if is_long else 6
+        rate = f"{base_rate - 12:+d}%" if ctx.strategy == "third_voice_slower" else f"{base_rate:+d}%"
         if ctx.feedback:
             fb_low = ctx.feedback[-1]["comment"].lower()
             ctx.log(f"Revision feedback: {ctx.feedback[-1]['comment']}")

@@ -39,13 +39,13 @@ on:
         required: false
         type: string
       visual_mode:
-        description: "Scene visuals: stock = moving B-roll video only ($0), auto = stock video + AI art, ai = AI art first"
+        description: "Scene visuals: auto = stock video + AI art for abstract scenes (default for long videos), stock = moving B-roll only ($0), ai = AI art first"
         required: false
-        default: "stock"
+        default: "auto"
         type: choice
         options:
-          - stock
           - auto
+          - stock
           - ai
           - generated
       llm:
@@ -134,7 +134,7 @@ jobs:
           INPUT_TOPIC: ${{ inputs.topic }}
           INPUT_LANGS: ${{ inputs.languages || vars.MODERATOR_LANGUAGES }}
           INPUT_NICHE: ${{ vars.MODERATOR_NICHE }}
-          INPUT_VISUAL_MODE: ${{ inputs.visual_mode || vars.MODERATOR_VISUAL_MODE || 'stock' }}
+          INPUT_VISUAL_MODE: ${{ inputs.visual_mode || vars.MODERATOR_VISUAL_MODE || 'auto' }}
           INPUT_BUDGET: ${{ inputs.budget_usd || vars.MODERATOR_BUDGET_USD || '1.50' }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           PYTHONIOENCODING: utf-8
@@ -173,6 +173,7 @@ jobs:
           YOUTUBE_TOKEN_EN: ${{ secrets.YOUTUBE_TOKEN_EN }}
           YOUTUBE_TOKEN_FR: ${{ secrets.YOUTUBE_TOKEN_FR }}
           YOUTUBE_TOKEN_AR: ${{ secrets.YOUTUBE_TOKEN_AR }}
+          YOUTUBE_MANAGE_TOKEN: ${{ secrets.YOUTUBE_MANAGE_TOKEN }}
           RUN_DIR: ${{ steps.gen.outputs.run_dir }}
           PRIVACY: ${{ inputs.auto_upload }}
           APPROVER: ${{ github.actor }}

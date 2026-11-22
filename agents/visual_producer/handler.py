@@ -162,6 +162,11 @@ class Handler(Agent):
                     sv, sp = tiers.index("stock_video"), tiers.index("stock_photo")
                     if sv < sp:
                         tiers[sv], tiers[sp] = tiers[sp], tiers[sv]
+                # long videos: scenes the script marked `prefer: photo` (abstract ideas) try AI art first, for visual variety
+                is_long_run = str(ctx.params.get("format") or "short").lower() == "long"
+                if is_long_run and scene["visual"].get("prefer") == "photo" and "nano_banana" in tiers:
+                    tiers.remove("nano_banana")
+                    tiers.insert(0, "nano_banana")
                 for tier in tiers:
                     try:
                         lic = await self._tier(

@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 
 from .engine.state import StateStore, now_iso
-from .tools import youtube_upload
+from .tools import youtube_enhance, youtube_upload
 from .tools.languages import normalize_langs
 
 FINAL_CHECKPOINT = "C"
@@ -107,6 +107,10 @@ def approve_and_upload(store: StateStore, approved_by: str, privacy: str, langs:
         video = run_dir / qa_out[f"video_{lang}"]
         thumb = qa_out.get(f"thumbnail_{lang}")
         res = youtube_upload.upload(lang, video, meta[lang], privacy, Path(run_dir / thumb) if thumb else None)
+        if str(meta[lang].get("format") or "").lower() == "long":
+            cap_rel = (d["steps"]["packaging"]["outputs"] or {}).get(f"captions_{lang}")
+            extras = youtube_enhance.enhance_long_video(res["id"], lang, run_dir / cap_rel if cap_rel else None)
+            res.update({f"extra_{k}": v for k, v in extras.items()})
         entry = {"lang": lang, **res}
         results.append(entry)
         with store.mutate() as s:

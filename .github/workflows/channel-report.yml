@@ -1,0 +1,59 @@
+name: Channel Report
+
+# Every Monday: which of our videos get views? Shorts vs long videos, best and weakest ones.
+# The report goes to the run summary and to one open issue (`channel-report`), updated each week.
+# Uses only the public YouTube Data API (secret YOUTUBE_API_KEY); CTR and watch time stay in YouTube Studio.
+on:
+  schedule:
+    - cron: "5 7 * * 1"   # Monday 07:05 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+      YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+      YOUTUBE_CHANNEL_ID: ${{ vars.YOUTUBE_CHANNEL_ID || 'UCzjz2ArvjE4RgR_2k2o53mg' }}
+      PYTHONIOENCODING: utf-8
+    steps:
+      - name: Check the API key
+        run: |
+          if [ -z "$YOUTUBE_API_KEY" ]; then
+            echo "::error::Missing YOUTUBE_API_KEY repository secret (free key: Google Cloud Console -> YouTube Data API v3)."
+            exit 1
+          fi
+
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+
+      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6.8.0
+        with:
+          python-version: "3.12"
+
+      - name: Build the report
+        run: |
+          uv sync --locked -q
+          uv run python -m moderator channel-report > report.md
+          cat report.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Update the report issue
+        run: |
+          gh label create channel-report --force >/dev/null
+          title="Weekly channel report"
+          number=$(gh issue list --label channel-report --state open --json number --jq '.[0].number // empty')
+          {
+            echo "_Updated $(date -u +%Y-%m-%d) from the public YouTube Data API._"
+            echo ""
+            cat report.md
+          } > issue_body.md
+          if [ -n "$number" ]; then
+            gh issue edit "$number" --body-file issue_body.md
+            gh issue comment "$number" --body "Report refreshed on $(date -u +%Y-%m-%d): see the issue description."
+          else
+            gh issue create --title "$title" --label channel-report --body-file issue_body.md
+          fi

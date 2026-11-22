@@ -5,7 +5,7 @@ from PIL import Image, ImageDraw, ImageEnhance
 
 from moderator.engine import llm as llm_mod
 from moderator.engine.agent import Agent, StepContext
-from moderator.tools import ffmpeg, text
+from moderator.tools import ffmpeg, long_video, text
 from moderator.tools.visual_rules import IMAGE_PROMPT_RULE
 from moderator.tools.languages import describe, lang_schema, names, normalize_langs
 
@@ -45,7 +45,7 @@ FULL NARRATION:
 
 For each language, write natively (not a literal translation):
 - title: max {'65' if is_long else '50'} characters (so it never truncates on mobile feeds), {'high-intent YouTube Search query + curiosity payoff (e.g. "Why Your Brain Jerks Awake Before Sleep (The Science)")' if is_long else 'extreme curiosity gap + emotional stakes ("Why Your Brain...", "If Someone Does THIS...", "90% of People Fail This Test")'}, accurate to the video
-- description: {'5-8 lines including YouTube Search keywords in line 1, a "0:00" timestamp chapter list matching the key sections, and an interactive question at the end' if is_long else '3-4 short lines; Line 1 MUST be an interactive binary comment trigger that boosts algorithm engagement (e.g., "Did this work on you? Comment YES or NO below 👇"); the last line MUST be a high-converting Subscribe call-to-action (e.g. "🔔 Subscribe for your daily 30-second brain test 👇", in FR: "🔔 Abonne-toi pour ton test mental quotidien 👇", in AR: "🔔 اشترك الآن لاختبار عقلك يومياً 👇")'}; no links; no claims the video does not make
+- description: {'5-8 lines including the main YouTube Search keywords in line 1 and a specific question for the comments at the end. Do NOT write chapter timestamps: they are added automatically afterwards' if is_long else '3-4 short lines; Line 1 MUST be an interactive binary comment trigger that boosts algorithm engagement (e.g., "Did this work on you? Comment YES or NO below 👇"); the last line MUST be a high-converting Subscribe call-to-action (e.g. "🔔 Subscribe for your daily 30-second brain test 👇", in FR: "🔔 Abonne-toi pour ton test mental quotidien 👇", in AR: "🔔 اشترك الآن لاختبار عقلك يومياً 👇")'}; no links; no claims the video does not make
 - hashtags: 4-6, {'high-volume niche hashtags' if is_long else 'always include #Shorts first plus high-volume niche hashtags'}{ar_tag_note}
 - tags: 12-15 high-intent search phrases people actually type on YouTube
 - thumbnail_text: 2-4 words, huge high-contrast curiosity punchline (e.g. "DON'T BLINK", "FAKE SMILE?", "BRAIN GLITCH")
@@ -58,8 +58,26 @@ Avoid trademarked names, celebrity names and anything sensational or misleading.
                 meta[l]["hashtags"].append("#Shorts")
             meta[l]["title"] = meta[l]["title"][:100]
             meta[l]["format"] = "long" if is_long else "short"
+        outputs = {}
+        if is_long:
+            # real chapters and captions from the voiceover timings (never guessed by the model)
+            for l in langs:
+                try:
+                    timing = ctx.read_json(ctx.upstream("audio")[f"timings_{l}"])
+                except Exception as e:  # noqa: BLE001 - extras only
+                    ctx.log(f"No voiceover timings for chapters/captions ({l}): {e}", "warning")
+                    continue
+                chapters = long_video.chapter_lines(script["scenes"], timing["scenes"], l)
+                if chapters:
+                    meta[l]["description"] = meta[l]["description"].rstrip() + "\n\nChapters:\n" + "\n".join(chapters)
+                    meta[l]["chapters"] = chapters
+                else:
+                    ctx.log(f"Not enough valid chapters for {l}; description has no chapter list", "warning")
+                srt = ctx.path(f"captions_{l}.srt")
+                srt.write_text(long_video.build_srt(timing["scenes"]), encoding="utf-8")
+                outputs[f"captions_{l}"] = f"captions_{l}.srt"
         ctx.progress(55)
-        outputs = {"metadata": ctx.write_json("metadata.json", meta)}
+        outputs["metadata"] = ctx.write_json("metadata.json", meta)
 
         thumb_size = (1920, 1080) if is_long else (1080, 1920)
         thumb_ar = "16:9" if is_long else "9:16"
