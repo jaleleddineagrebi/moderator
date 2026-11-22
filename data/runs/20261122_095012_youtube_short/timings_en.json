@@ -1,0 +1,522 @@
+{
+  "voice": "en-US-AriaNeural",
+  "duration": 39.174059,
+  "scenes": [
+    {
+      "scene": "scene_01",
+      "start": 0.0,
+      "end": 2.256,
+      "words": [
+        {
+          "start": 0.097,
+          "end": 0.416,
+          "text": "Close"
+        },
+        {
+          "start": 0.427,
+          "end": 0.604,
+          "text": "your"
+        },
+        {
+          "start": 0.616,
+          "end": 0.852,
+          "text": "eyes"
+        },
+        {
+          "start": 0.864,
+          "end": 1.064,
+          "text": "right"
+        },
+        {
+          "start": 1.076,
+          "end": 1.43,
+          "text": "now"
+        }
+      ]
+    },
+    {
+      "scene": "scene_02",
+      "start": 2.346,
+      "end": 10.65,
+      "words": [
+        {
+          "start": 2.443,
+          "end": 2.821,
+          "text": "Listen"
+        },
+        {
+          "start": 2.832,
+          "end": 2.915,
+          "text": "to"
+        },
+        {
+          "start": 2.927,
+          "end": 3.127,
+          "text": "this"
+        },
+        {
+          "start": 3.139,
+          "end": 3.422,
+          "text": "sound"
+        },
+        {
+          "start": 3.434,
+          "end": 3.587,
+          "text": "on"
+        },
+        {
+          "start": 3.599,
+          "end": 3.988,
+          "text": "loop"
+        },
+        {
+          "start": 4.799,
+          "end": 5.235,
+          "text": "Ba"
+        },
+        {
+          "start": 6.049,
+          "end": 6.485,
+          "text": "Ba"
+        },
+        {
+          "start": 7.299,
+          "end": 7.735,
+          "text": "Ba"
+        },
+        {
+          "start": 8.549,
+          "end": 8.95,
+          "text": "Sounds"
+        },
+        {
+          "start": 8.962,
+          "end": 9.304,
+          "text": "clear"
+        },
+        {
+          "start": 9.469,
+          "end": 9.822,
+          "text": "right"
+        }
+      ]
+    },
+    {
+      "scene": "scene_03",
+      "start": 10.74,
+      "end": 14.244,
+      "words": [
+        {
+          "start": 10.837,
+          "end": 11.132,
+          "text": "Now"
+        },
+        {
+          "start": 11.144,
+          "end": 11.427,
+          "text": "open"
+        },
+        {
+          "start": 11.439,
+          "end": 11.604,
+          "text": "your"
+        },
+        {
+          "start": 11.615,
+          "end": 11.946,
+          "text": "eyes"
+        },
+        {
+          "start": 11.957,
+          "end": 12.17,
+          "text": "and"
+        },
+        {
+          "start": 12.182,
+          "end": 12.347,
+          "text": "look"
+        },
+        {
+          "start": 12.358,
+          "end": 12.406,
+          "text": "at"
+        },
+        {
+          "start": 12.417,
+          "end": 12.488,
+          "text": "the"
+        },
+        {
+          "start": 12.5,
+          "end": 12.771,
+          "text": "mouth"
+        },
+        {
+          "start": 12.783,
+          "end": 12.924,
+          "text": "on"
+        },
+        {
+          "start": 12.936,
+          "end": 13.42,
+          "text": "screen"
+        }
+      ]
+    },
+    {
+      "scene": "scene_04",
+      "start": 14.334,
+      "end": 19.758,
+      "words": [
+        {
+          "start": 14.431,
+          "end": 14.832,
+          "text": "Wait"
+        },
+        {
+          "start": 15.056,
+          "end": 15.268,
+          "text": "here"
+        },
+        {
+          "start": 15.28,
+          "end": 15.375,
+          "text": "is"
+        },
+        {
+          "start": 15.386,
+          "end": 15.481,
+          "text": "the"
+        },
+        {
+          "start": 15.493,
+          "end": 15.835,
+          "text": "creepy"
+        },
+        {
+          "start": 15.846,
+          "end": 16.294,
+          "text": "part"
+        },
+        {
+          "start": 17.105,
+          "end": 17.282,
+          "text": "Did"
+        },
+        {
+          "start": 17.294,
+          "end": 17.388,
+          "text": "the"
+        },
+        {
+          "start": 17.4,
+          "end": 17.718,
+          "text": "sound"
+        },
+        {
+          "start": 17.73,
+          "end": 17.931,
+          "text": "just"
+        },
+        {
+          "start": 17.942,
+          "end": 18.296,
+          "text": "change"
+        },
+        {
+          "start": 18.308,
+          "end": 18.402,
+          "text": "to"
+        },
+        {
+          "start": 18.414,
+          "end": 18.921,
+          "text": "Fa"
+        }
+      ]
+    },
+    {
+      "scene": "scene_05",
+      "start": 19.848,
+      "end": 25.896,
+      "words": [
+        {
+          "start": 19.945,
+          "end": 20.264,
+          "text": "Close"
+        },
+        {
+          "start": 20.275,
+          "end": 20.417,
+          "text": "them"
+        },
+        {
+          "start": 20.429,
+          "end": 20.841,
+          "text": "again"
+        },
+        {
+          "start": 20.853,
+          "end": 20.971,
+          "text": "and"
+        },
+        {
+          "start": 20.983,
+          "end": 21.089,
+          "text": "it"
+        },
+        {
+          "start": 21.101,
+          "end": 21.561,
+          "text": "instantly"
+        },
+        {
+          "start": 21.573,
+          "end": 21.938,
+          "text": "switches"
+        },
+        {
+          "start": 21.95,
+          "end": 22.386,
+          "text": "back"
+        },
+        {
+          "start": 23.209,
+          "end": 23.433,
+          "text": "Your"
+        },
+        {
+          "start": 23.445,
+          "end": 23.739,
+          "text": "brain"
+        },
+        {
+          "start": 23.751,
+          "end": 23.905,
+          "text": "is"
+        },
+        {
+          "start": 23.916,
+          "end": 24.447,
+          "text": "overriding"
+        },
+        {
+          "start": 24.459,
+          "end": 24.565,
+          "text": "your"
+        },
+        {
+          "start": 24.577,
+          "end": 25.072,
+          "text": "ears"
+        }
+      ]
+    },
+    {
+      "scene": "scene_06",
+      "start": 25.986,
+      "end": 30.594,
+      "words": [
+        {
+          "start": 26.083,
+          "end": 26.366,
+          "text": "Your"
+        },
+        {
+          "start": 26.378,
+          "end": 26.626,
+          "text": "eyes"
+        },
+        {
+          "start": 26.637,
+          "end": 26.732,
+          "text": "are"
+        },
+        {
+          "start": 26.744,
+          "end": 27.18,
+          "text": "literally"
+        },
+        {
+          "start": 27.192,
+          "end": 27.545,
+          "text": "hacking"
+        },
+        {
+          "start": 27.557,
+          "end": 27.652,
+          "text": "your"
+        },
+        {
+          "start": 27.663,
+          "end": 27.994,
+          "text": "hearing"
+        },
+        {
+          "start": 28.005,
+          "end": 28.1,
+          "text": "to"
+        },
+        {
+          "start": 28.111,
+          "end": 28.324,
+          "text": "make"
+        },
+        {
+          "start": 28.336,
+          "end": 28.642,
+          "text": "sense"
+        },
+        {
+          "start": 28.654,
+          "end": 28.725,
+          "text": "of"
+        },
+        {
+          "start": 28.736,
+          "end": 28.807,
+          "text": "the"
+        },
+        {
+          "start": 28.819,
+          "end": 29.173,
+          "text": "visual"
+        },
+        {
+          "start": 29.185,
+          "end": 29.751,
+          "text": "input"
+        }
+      ]
+    },
+    {
+      "scene": "scene_07",
+      "start": 30.684,
+      "end": 35.364,
+      "words": [
+        {
+          "start": 30.781,
+          "end": 31.394,
+          "text": "Subscribe"
+        },
+        {
+          "start": 31.406,
+          "end": 31.536,
+          "text": "for"
+        },
+        {
+          "start": 31.548,
+          "end": 31.996,
+          "text": "tomorrow's"
+        },
+        {
+          "start": 32.008,
+          "end": 32.279,
+          "text": "brain"
+        },
+        {
+          "start": 32.291,
+          "end": 32.644,
+          "text": "test"
+        },
+        {
+          "start": 32.656,
+          "end": 32.75,
+          "text": "and"
+        },
+        {
+          "start": 32.762,
+          "end": 33.234,
+          "text": "comment"
+        },
+        {
+          "start": 33.246,
+          "end": 33.411,
+          "text": "which"
+        },
+        {
+          "start": 33.423,
+          "end": 33.682,
+          "text": "word"
+        },
+        {
+          "start": 33.694,
+          "end": 33.776,
+          "text": "you"
+        },
+        {
+          "start": 33.788,
+          "end": 34.012,
+          "text": "heard"
+        },
+        {
+          "start": 34.024,
+          "end": 34.531,
+          "text": "first"
+        }
+      ]
+    },
+    {
+      "scene": "scene_08",
+      "start": 35.454,
+      "end": 39.174,
+      "words": [
+        {
+          "start": 35.551,
+          "end": 35.763,
+          "text": "Your"
+        },
+        {
+          "start": 35.775,
+          "end": 36.259,
+          "text": "reality"
+        },
+        {
+          "start": 36.271,
+          "end": 36.4,
+          "text": "is"
+        },
+        {
+          "start": 36.412,
+          "end": 36.66,
+          "text": "just"
+        },
+        {
+          "start": 36.671,
+          "end": 36.719,
+          "text": "a"
+        },
+        {
+          "start": 36.73,
+          "end": 37.131,
+          "text": "guess"
+        },
+        {
+          "start": 37.332,
+          "end": 37.473,
+          "text": "which"
+        },
+        {
+          "start": 37.485,
+          "end": 37.579,
+          "text": "is"
+        },
+        {
+          "start": 37.591,
+          "end": 37.733,
+          "text": "why"
+        },
+        {
+          "start": 37.745,
+          "end": 37.874,
+          "text": "you"
+        },
+        {
+          "start": 37.886,
+          "end": 38.358,
+          "text": "must"
+        }
+      ]
+    }
+  ]
+}
