@@ -3,17 +3,17 @@
   "scenes": [
     {
       "vo": {
-        "en": "I will read your mind right now."
+        "en": "I'll read your mind right now."
       },
       "on_screen": {
         "en": "MIND READING TEST"
       },
       "visual": {
-        "description": "A close up of a man's eyes staring intensely with digital data overlays.",
+        "description": "A extreme macro shot of a man's eye with digital data reflections in the iris.",
         "search_terms": [
-          "man staring intense",
-          "digital eye iris",
-          "glitch effect"
+          "man eyes extreme close up",
+          "human pupil dilating",
+          "cyberpunk glitch overlay"
         ],
         "prefer": "video"
       },
@@ -21,17 +21,17 @@
     },
     {
       "vo": {
-        "en": "Quick, pick a single-digit number. Multiply it by two. Now add eight to the total."
+        "en": "Quick, pick a number between one and ten. Multiply it by two. Now add eight."
       },
       "on_screen": {
         "en": "PICK A NUMBER"
       },
       "visual": {
-        "description": "Abstract numbers flying past the camera in a dark digital space.",
+        "description": "Golden 3D numbers spinning and flying towards the camera in a dark void.",
         "search_terms": [
-          "numbers flying animation",
-          "fast digital count",
-          "data stream"
+          "3D floating numbers",
+          "spinning digits",
+          "dark mathematical background"
         ],
         "prefer": "video"
       },
@@ -39,17 +39,17 @@
     },
     {
       "vo": {
-        "en": "Divide that by two. Subtract your original number. You are left with four, aren't you?"
+        "en": "Divide the total by two. Subtract your original number. You’re left with four, right?"
       },
       "on_screen": {
         "en": "YOUR NUMBER IS 4"
       },
       "visual": {
-        "description": "A man writing mathematical equations quickly on a glass pane.",
+        "description": "A man’s hand writing complex mathematical equations on a transparent glass pane.",
         "search_terms": [
-          "man writing glass",
-          "math formulas",
-          "solving problem"
+          "hand writing glass",
+          "marker on window",
+          "transparent board math"
         ],
         "prefer": "video"
       },
@@ -57,17 +57,17 @@
     },
     {
       "vo": {
-        "en": "That was just a warm-up. This next part is where it gets creepy. Don't blink."
+        "en": "That was just math. This next part is where it gets truly creepy."
       },
       "on_screen": {
         "en": "THE CREEPY PART..."
       },
       "visual": {
-        "description": "CCTV style footage of a dark hallway with flickering lights.",
+        "description": "Heavy digital static and television distortion effects flickering rapidly.",
         "search_terms": [
-          "dark hallway flickering",
-          "cctv footage",
-          "suspenseful shadow"
+          "analog glitch distortion",
+          "television static noise",
+          "broken signal monitor"
         ],
         "prefer": "video"
       },
@@ -75,17 +75,17 @@
     },
     {
       "vo": {
-        "en": "Instantly visualize a basic piece of furniture. Now, give it a vivid, solid color. Keep it locked."
+        "en": "Stare at the center and clear your head. Think of any color and a piece of furniture."
       },
       "on_screen": {
-        "en": "CHOOSE A COLOR"
+        "en": "CLEAR YOUR HEAD"
       },
       "visual": {
-        "description": "A 3D blueprint animation of a room being constructed digitally.",
+        "description": "Abstract geometric shapes morphing and pulsing in a hypnotic kaleidoscopic pattern.",
         "search_terms": [
-          "blueprint animation",
-          "wireframe furniture",
-          "digital construct"
+          "kaleidoscope abstract motion",
+          "geometric shape morphing",
+          "hypnotic tunnel loop"
         ],
         "prefer": "video"
       },
@@ -93,17 +93,17 @@
     },
     {
       "vo": {
-        "en": "You are thinking of a red chair. I just hijacked your subconscious using semantic priming."
+        "en": "You're picturing a red chair. I just used semantic priming to hijack your brain."
       },
       "on_screen": {
         "en": "RED CHAIR"
       },
       "visual": {
-        "description": "A sleek red designer chair spinning slowly in a bright white studio.",
+        "description": "A single, minimalist red designer chair rotating slowly in a pure white studio space.",
         "search_terms": [
-          "red chair studio",
-          "furniture rotate",
-          "minimalist furniture"
+          "red chair rotation",
+          "modern furniture studio",
+          "minimalist red object"
         ],
         "prefer": "video"
       },
@@ -111,21 +111,39 @@
     },
     {
       "vo": {
-        "en": "Subscribe for tomorrow's brain test and comment YES if this worked on you, which is exactly why..."
+        "en": "Your mind is easier to hack than you think. Did I get it right?"
+      },
+      "on_screen": {
+        "en": "DID IT WORK?"
+      },
+      "visual": {
+        "description": "A digital model of a human brain with glowing blue neurons firing rapidly.",
+        "search_terms": [
+          "human brain neurons firing",
+          "neural network pulsing",
+          "synapse electrical spark"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for tomorrow's brain test and comment YES if this worked, which is exactly why..."
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "A close up of a man's thumb tapping a phone screen repeatedly.",
+        "description": "Close up of a man's thumb scrolling through a smartphone social media feed.",
         "search_terms": [
-          "hand smartphone scroll",
-          "typing comment",
-          "finger tap screen"
+          "thumb scrolling smartphone",
+          "mobile app interface",
+          "hand tapping screen"
         ],
         "prefer": "video"
       },
-      "id": "scene_07"
+      "id": "scene_08"
     }
   ],
   "idea_id": "the-red-furniture-mind-hack",
@@ -133,6 +151,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 36.7
+    "en": 39.3
   }
 }
