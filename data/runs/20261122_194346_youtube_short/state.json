@@ -427,7 +427,7 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 0,
+      "progress": 54,
       "started_at": "2026-11-22T19:44:17+00:00",
       "ended_at": null,
       "attempt": 1,
@@ -454,6 +454,26 @@
           "ts": "2026-11-22T19:44:17+00:00",
           "level": "info",
           "msg": "Visual diversity: excluding 300 footage sources used in recent Shorts"
+        },
+        {
+          "ts": "2026-11-22T19:44:32+00:00",
+          "level": "info",
+          "msg": "scene_02: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-22T19:44:33+00:00",
+          "level": "info",
+          "msg": "scene_01: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-22T19:44:34+00:00",
+          "level": "info",
+          "msg": "scene_03: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-22T19:44:46+00:00",
+          "level": "info",
+          "msg": "scene_05: stock_video (pixabay)"
         }
       ],
       "errors": [],
@@ -467,10 +487,10 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "running",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-22T19:44:21+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-22T19:44:39+00:00",
       "attempt": 2,
       "retries": 1,
       "max_retries": 2,
@@ -484,7 +504,9 @@
           "en": "en-US-AriaNeural"
         }
       },
-      "outputs": {},
+      "outputs": {
+        "timings_en": "timings_en.json"
+      },
       "logs": [
         {
           "ts": "2026-11-22T19:44:17+00:00",
@@ -510,6 +532,21 @@
           "ts": "2026-11-22T19:44:21+00:00",
           "level": "info",
           "msg": "Narrating en with en-US-AriaNeural"
+        },
+        {
+          "ts": "2026-11-22T19:44:32+00:00",
+          "level": "info",
+          "msg": "en voiceover: 44.4s"
+        },
+        {
+          "ts": "2026-11-22T19:44:32+00:00",
+          "level": "info",
+          "msg": "Generating an ambient music bed (no library tracks with license files found)"
+        },
+        {
+          "ts": "2026-11-22T19:44:39+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [
@@ -647,7 +684,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-22T19:44:25+00:00",
+    "exported_at": "2026-11-22T19:44:46+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/45062302069"
   }
