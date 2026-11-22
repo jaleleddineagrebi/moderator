@@ -3,70 +3,80 @@
     "scene": "scene_01",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-44438/",
-    "author": "Vxdpics",
+    "page": "https://pixabay.com/videos/id-130424/",
+    "author": "MabelAmber",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "man staring intense",
-    "description": "A close up of a man's eyes staring intensely with digital data overlays."
+    "query": "man eyes extreme close up",
+    "description": "A extreme macro shot of a man's eye with digital data reflections in the iris."
   },
   {
     "scene": "scene_02",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-360527/",
-    "author": "MAdrian78",
+    "page": "https://pixabay.com/videos/id-100357/",
+    "author": "SoyKhaler",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "numbers flying animation",
-    "description": "Abstract numbers flying past the camera in a dark digital space."
+    "query": "3D floating numbers",
+    "description": "Golden 3D numbers spinning and flying towards the camera in a dark void."
   },
   {
     "scene": "scene_03",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-185092/",
-    "author": "stefaniejockschat",
+    "page": "https://pixabay.com/videos/id-10822/",
+    "author": "Coverr-Free-Footage",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "man writing glass",
-    "description": "A man writing mathematical equations quickly on a glass pane."
+    "query": "hand writing glass",
+    "description": "A man’s hand writing complex mathematical equations on a transparent glass pane."
   },
   {
     "scene": "scene_04",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-149449/",
+    "page": "https://pixabay.com/videos/id-8453/",
     "author": "Matthias_Groeneveld",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "dark hallway flickering",
-    "description": "CCTV style footage of a dark hallway with flickering lights."
+    "query": "analog glitch distortion",
+    "description": "Heavy digital static and television distortion effects flickering rapidly."
   },
   {
     "scene": "scene_05",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-71567/",
-    "author": "hamzaaslammiczon",
+    "page": "https://pixabay.com/videos/id-283533/",
+    "author": "BlenderTimer",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "blueprint animation",
-    "description": "A 3D blueprint animation of a room being constructed digitally."
+    "query": "kaleidoscope abstract motion",
+    "description": "Abstract geometric shapes morphing and pulsing in a hypnotic kaleidoscopic pattern."
   },
   {
     "scene": "scene_06",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-16459/",
-    "author": "adonyig",
+    "page": "https://pixabay.com/videos/id-14840/",
+    "author": "kieutruongphoto",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "red chair studio",
-    "description": "A sleek red designer chair spinning slowly in a bright white studio."
+    "query": "red chair rotation",
+    "description": "A single, minimalist red designer chair rotating slowly in a pure white studio space."
   },
   {
     "scene": "scene_07",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-142641/",
-    "author": "u_etjkkdz15b",
+    "page": "https://pixabay.com/videos/id-564/",
+    "author": "geralt",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "hand smartphone scroll",
-    "description": "A close up of a man's thumb tapping a phone screen repeatedly."
+    "query": "human brain neurons firing",
+    "description": "A digital model of a human brain with glowing blue neurons firing rapidly."
+  },
+  {
+    "scene": "scene_08",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-3176/",
+    "author": "Coverr-Free-Footage",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "thumb scrolling smartphone",
+    "description": "Close up of a man's thumb scrolling through a smartphone social media feed."
   }
 ]
