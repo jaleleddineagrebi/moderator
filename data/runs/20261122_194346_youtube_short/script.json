@@ -1,0 +1,138 @@
+{
+  "title": "The Interactive Red Furniture Mind Hack",
+  "scenes": [
+    {
+      "vo": {
+        "en": "I will read your mind right now."
+      },
+      "on_screen": {
+        "en": "MIND READING TEST"
+      },
+      "visual": {
+        "description": "A close up of a man's eyes staring intensely with digital data overlays.",
+        "search_terms": [
+          "man staring intense",
+          "digital eye iris",
+          "glitch effect"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Quick, pick a single-digit number. Multiply it by two. Now add eight to the total."
+      },
+      "on_screen": {
+        "en": "PICK A NUMBER"
+      },
+      "visual": {
+        "description": "Abstract numbers flying past the camera in a dark digital space.",
+        "search_terms": [
+          "numbers flying animation",
+          "fast digital count",
+          "data stream"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Divide that by two. Subtract your original number. You are left with four, aren't you?"
+      },
+      "on_screen": {
+        "en": "YOUR NUMBER IS 4"
+      },
+      "visual": {
+        "description": "A man writing mathematical equations quickly on a glass pane.",
+        "search_terms": [
+          "man writing glass",
+          "math formulas",
+          "solving problem"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "That was just a warm-up. This next part is where it gets creepy. Don't blink."
+      },
+      "on_screen": {
+        "en": "THE CREEPY PART..."
+      },
+      "visual": {
+        "description": "CCTV style footage of a dark hallway with flickering lights.",
+        "search_terms": [
+          "dark hallway flickering",
+          "cctv footage",
+          "suspenseful shadow"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Instantly visualize a basic piece of furniture. Now, give it a vivid, solid color. Keep it locked."
+      },
+      "on_screen": {
+        "en": "CHOOSE A COLOR"
+      },
+      "visual": {
+        "description": "A 3D blueprint animation of a room being constructed digitally.",
+        "search_terms": [
+          "blueprint animation",
+          "wireframe furniture",
+          "digital construct"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "You are thinking of a red chair. I just hijacked your subconscious using semantic priming."
+      },
+      "on_screen": {
+        "en": "RED CHAIR"
+      },
+      "visual": {
+        "description": "A sleek red designer chair spinning slowly in a bright white studio.",
+        "search_terms": [
+          "red chair studio",
+          "furniture rotate",
+          "minimalist furniture"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for tomorrow's brain test and comment YES if this worked on you, which is exactly why..."
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "A close up of a man's thumb tapping a phone screen repeatedly.",
+        "search_terms": [
+          "hand smartphone scroll",
+          "typing comment",
+          "finger tap screen"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "the-red-furniture-mind-hack",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 36.7
+  }
+}

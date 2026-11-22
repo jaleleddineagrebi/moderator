@@ -1,0 +1,68 @@
+{
+  "niche": "Mind Hacks, AI Secrets, Bizarre Body Science & Hidden Power Dynamics",
+  "languages": [
+    "en"
+  ],
+  "ideas": [
+    {
+      "id": "the-red-furniture-mind-hack",
+      "title": "The Interactive Red Furniture Mind Hack",
+      "angle": "The video uses a high-speed priming sequence of numbers and shapes to force the viewer to think of 'Red Chair'. It challenges the viewer to comment if it worked, creating a viral feedback loop.",
+      "hook": {
+        "en": "I bet I can read your mind right now."
+      },
+      "keywords": [
+        "mind reading",
+        "brain test",
+        "psychology trick",
+        "interactive game",
+        "optical illusion"
+      ],
+      "reason": "Interactive 'mind reading' tests are currently the highest-performing sub-genre in dark psychology, consistently hitting 100%+ APV because viewers re-watch to see how they were manipulated.",
+      "sources": [
+        "Priming (psychology) - Wikipedia",
+        "The Science of Psychological Priming - Nature"
+      ]
+    },
+    {
+      "id": "the-shoulder-touch-respect-trick",
+      "title": "The 3-Second Shoulder Touch Power Move",
+      "angle": "Shows a specific micro-behavior (The 'Upper Arm Squeeze') that instantly establishes dominance and rapport in a conversation. It triggers a comment debate on whether it's 'creepy' or 'powerful'.",
+      "hook": {
+        "en": "Touch their shoulder like this to win any argument."
+      },
+      "keywords": [
+        "body language",
+        "dark psychology",
+        "manipulation tricks",
+        "social skills",
+        "power dynamics"
+      ],
+      "reason": "Power dynamics and 'status hacks' are trending on TikTok and YouTube Shorts, particularly those involving physical micro-interactions which are highly visual and easy to demonstrate.",
+      "sources": [
+        "The Definitive Book of Body Language by Allan and Barbara Pease",
+        "Journal of Nonverbal Behavior - Tactile Communication"
+      ]
+    },
+    {
+      "id": "the-impossible-nose-itch-glitch",
+      "title": "The Impossible Nose Itch Brain Glitch",
+      "angle": "A live challenge where viewers stare at a specific point on the screen while the narrator describes an 'itch' on their nose. It exploits the 'Mirror Neuron' reflex to make their face actually itch.",
+      "hook": {
+        "en": "You are about to feel a ghost on your face."
+      },
+      "keywords": [
+        "brain glitch",
+        "mirror neurons",
+        "psychological trick",
+        "body hack",
+        "interactive challenge"
+      ],
+      "reason": "Sensory 'glitches' achieve high VVSA because they provide an immediate physical sensation, forcing the viewer to engage and comment 'It actually worked!' or 'I felt nothing'.",
+      "sources": [
+        "Mirror Neurons and Sympathetic Itching - British Journal of Dermatology",
+        "Psychology Today: The Science of Itching"
+      ]
+    }
+  ]
+}
