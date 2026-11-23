@@ -1,26 +1,26 @@
-# The Secret iPhone Code for Law Enforcement Tracking
-Estimated narration: en 39.6s
+# The Secret iPhone Code for Privacy Control
+Estimated narration: en 36.0s
 
-## scene_01 · A close-up shot of a man's hand typing the digits *#21# into a smartphone dialer.
+## scene_01 · A close-up shot of a man's hand typing the code *#21# on a smartphone keypad.
 EN  [TYPE *#21# NOW]  Type star-hash-twenty-one-hash right now.
 
-## scene_02 · Abstract digital data and binary code flowing across a dark background with a glowing lock icon.
-EN  [IS SOMEONE LISTENING?]  This secret MMI code reveals if your private calls or messages are being intercepted by anyone else.
+## scene_02 · Abstract binary code flowing vertically across a dark blue digital interface.
+EN  [WHERE ARE CALLS GOING?]  This code reveals where your calls and messages are automatically being forwarded when you're offline.
 
-## scene_03 · A man in a dimly lit tech office waiting patiently while a loading animation circles on a device.
-EN  [WAIT FOR THE MENU]  Just hit dial and wait for the hidden interrogation menu to pop up on your screen.
+## scene_03 · A man sitting at a desk at night, illuminated by the glow of a screen, waiting.
+EN  [WAIT FOR RESULTS]  Just hit the dial button and wait for the hidden status menu to pop up.
 
-## scene_04 · A man's face showing a realization of shock or concern as a security camera pans nearby.
-EN  [IT’S CREEPY]  But here is the creepy part: millions of users find their forwarding status is already active.
+## scene_04 · A cinematic shot of a professional surveillance camera rotating on a building corner.
+EN  [THE PRIVACY RESET]  But wait until you see the second code that resets your entire phone privacy.
 
-## scene_05 · Rows of glowing server racks in a cold, blue data center with blinking indicator lights.
-EN  [DATA IS REDIRECTED]  That means your data is silently being redirected to a third party without you ever giving permission.
+## scene_05 · Blue and white indicator lights flashing on a wall of servers in a data center.
+EN  [UNAUTHORIZED DATA FORWARDING]  If any category shows 'Enabled', your personal data is going to a number you didn't authorize.
 
-## scene_06 · Close-up of a finger aggressively swiping or resetting a phone screen with glitchy code overlay.
-EN  [KILL THE TRACKING]  If you see Enabled, dial hash-hash-zero-zero-two-hash right away to kill all active tracking instantly.
+## scene_06 · Close up of a hand performing a clean swipe across a smartphone screen.
+EN  [WIPE ALL SETTINGS]  To clear it, dial hash-hash-zero-zero-two-hash right now to wipe all active forwarding settings.
 
-## scene_07 · A mouse cursor clicking on a digital notification bell or a man typing quickly on a laptop keyboard.
-EN  [SUBSCRIBE 🔔]  Subscribe for more hidden digital defense hacks and comment SAFE if yours was disabled.
+## scene_07 · Close up of fingers typing rapidly on a modern mechanical laptop keyboard.
+EN  [COMMENT 'SAFE' BELOW]  Subscribe for tomorrow’s hidden digital defense and comment 'SAFE' if your status was disabled.
 
-## scene_08 · Fast-moving cinematic tunnel of neon lights and electronic circuits leading into darkness.
-EN  [PROTECT YOURSELF]  Privacy is a choice you make, which is why you must...
+## scene_08 · Fast-paced flight through a neon digital tunnel with glowing circuit patterns.
+EN  [SUBSCRIBE 🔔]  Keeping your identity protected starts the second you...

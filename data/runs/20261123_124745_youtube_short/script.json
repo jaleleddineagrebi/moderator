@@ -1,5 +1,5 @@
 {
-  "title": "The Secret iPhone Code for Law Enforcement Tracking",
+  "title": "The Secret iPhone Code for Privacy Control",
   "scenes": [
     {
       "vo": {
@@ -9,30 +9,30 @@
         "en": "TYPE *#21# NOW"
       },
       "visual": {
-        "description": "A close-up shot of a man's hand typing the digits *#21# into a smartphone dialer.",
+        "description": "A close-up shot of a man's hand typing the code *#21# on a smartphone keypad.",
         "search_terms": [
-          "man hand phone keypad",
-          "smartphone dialing screen",
-          "pressing phone buttons"
+          "man finger dialing",
+          "smartphone screen close",
+          "hand holding phone"
         ],
         "prefer": "video"
       },
-      "chapter": "Check Your Tracking",
+      "chapter": "Hidden Privacy Code",
       "id": "scene_01"
     },
     {
       "vo": {
-        "en": "This secret MMI code reveals if your private calls or messages are being intercepted by anyone else."
+        "en": "This code reveals where your calls and messages are automatically being forwarded when you're offline."
       },
       "on_screen": {
-        "en": "IS SOMEONE LISTENING?"
+        "en": "WHERE ARE CALLS GOING?"
       },
       "visual": {
-        "description": "Abstract digital data and binary code flowing across a dark background with a glowing lock icon.",
+        "description": "Abstract binary code flowing vertically across a dark blue digital interface.",
         "search_terms": [
-          "digital matrix background",
-          "lock icon glowing",
-          "cyber security code"
+          "mobile phone display",
+          "matrix data stream",
+          "digital lock icon"
         ],
         "prefer": "video"
       },
@@ -41,17 +41,17 @@
     },
     {
       "vo": {
-        "en": "Just hit dial and wait for the hidden interrogation menu to pop up on your screen."
+        "en": "Just hit the dial button and wait for the hidden status menu to pop up."
       },
       "on_screen": {
-        "en": "WAIT FOR THE MENU"
+        "en": "WAIT FOR RESULTS"
       },
       "visual": {
-        "description": "A man in a dimly lit tech office waiting patiently while a loading animation circles on a device.",
+        "description": "A man sitting at a desk at night, illuminated by the glow of a screen, waiting.",
         "search_terms": [
-          "man sitting dark office",
-          "data loading progress",
-          "waiting hand tapping"
+          "man waiting impatiently",
+          "loading circle animation",
+          "office desk night"
         ],
         "prefer": "video"
       },
@@ -60,17 +60,17 @@
     },
     {
       "vo": {
-        "en": "But here is the creepy part: millions of users find their forwarding status is already active."
+        "en": "But wait until you see the second code that resets your entire phone privacy."
       },
       "on_screen": {
-        "en": "IT’S CREEPY"
+        "en": "THE PRIVACY RESET"
       },
       "visual": {
-        "description": "A man's face showing a realization of shock or concern as a security camera pans nearby.",
+        "description": "A cinematic shot of a professional surveillance camera rotating on a building corner.",
         "search_terms": [
-          "man face surprise",
-          "cctv camera scanning",
-          "surveillance security video"
+          "cctv camera rotating",
+          "security system monitor",
+          "city surveillance view"
         ],
         "prefer": "video"
       },
@@ -79,17 +79,17 @@
     },
     {
       "vo": {
-        "en": "That means your data is silently being redirected to a third party without you ever giving permission."
+        "en": "If any category shows 'Enabled', your personal data is going to a number you didn't authorize."
       },
       "on_screen": {
-        "en": "DATA IS REDIRECTED"
+        "en": "UNAUTHORIZED DATA FORWARDING"
       },
       "visual": {
-        "description": "Rows of glowing server racks in a cold, blue data center with blinking indicator lights.",
+        "description": "Blue and white indicator lights flashing on a wall of servers in a data center.",
         "search_terms": [
-          "server rack blink",
-          "fiber optic lights",
-          "data center tech"
+          "blinking server lights",
+          "datacenter aisle tech",
+          "blue glowing wires"
         ],
         "prefer": "video"
       },
@@ -98,17 +98,17 @@
     },
     {
       "vo": {
-        "en": "If you see Enabled, dial hash-hash-zero-zero-two-hash right away to kill all active tracking instantly."
+        "en": "To clear it, dial hash-hash-zero-zero-two-hash right now to wipe all active forwarding settings."
       },
       "on_screen": {
-        "en": "KILL THE TRACKING"
+        "en": "WIPE ALL SETTINGS"
       },
       "visual": {
-        "description": "Close-up of a finger aggressively swiping or resetting a phone screen with glitchy code overlay.",
+        "description": "Close up of a hand performing a clean swipe across a smartphone screen.",
         "search_terms": [
-          "phone reset screen",
-          "glitch effect code",
-          "man hand smartphone"
+          "man hand swiping",
+          "deleting data screen",
+          "phone settings menu"
         ],
         "prefer": "video"
       },
@@ -117,17 +117,17 @@
     },
     {
       "vo": {
-        "en": "Subscribe for more hidden digital defense hacks and comment SAFE if yours was disabled."
+        "en": "Subscribe for tomorrow’s hidden digital defense and comment 'SAFE' if your status was disabled."
       },
       "on_screen": {
-        "en": "SUBSCRIBE 🔔"
+        "en": "COMMENT 'SAFE' BELOW"
       },
       "visual": {
-        "description": "A mouse cursor clicking on a digital notification bell or a man typing quickly on a laptop keyboard.",
+        "description": "Close up of fingers typing rapidly on a modern mechanical laptop keyboard.",
         "search_terms": [
-          "notification bell animation",
-          "man typing laptop",
-          "mouse click icon"
+          "mouse click animation",
+          "subscribe button press",
+          "computer keyboard man"
         ],
         "prefer": "video"
       },
@@ -136,17 +136,17 @@
     },
     {
       "vo": {
-        "en": "Privacy is a choice you make, which is why you must..."
+        "en": "Keeping your identity protected starts the second you..."
       },
       "on_screen": {
-        "en": "PROTECT YOURSELF"
+        "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "Fast-moving cinematic tunnel of neon lights and electronic circuits leading into darkness.",
+        "description": "Fast-paced flight through a neon digital tunnel with glowing circuit patterns.",
         "search_terms": [
-          "techno tunnel light",
-          "cyber security circuit",
-          "abstract digital motion"
+          "cyber tunnel motion",
+          "digital neon highway",
+          "electronic circuit background"
         ],
         "prefer": "video"
       },
@@ -159,6 +159,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 39.6
+    "en": 36.0
   }
 }
