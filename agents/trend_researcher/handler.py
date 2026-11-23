@@ -47,7 +47,7 @@ class Handler(Agent):
                     None,
                 )
             if not active_pillar:
-                active_pillar = pillars[len(done_before) % len(pillars)]
+                active_pillar = pillars[history.count() % len(pillars)]
             ctx.log(f"Rotating viral pillar for this run: {active_pillar.get('name')} ({active_pillar.get('id')})")
 
         effective_niche = f"{niche} — Focus Pillar: {active_pillar['name']}" if active_pillar else niche

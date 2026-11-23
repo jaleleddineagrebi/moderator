@@ -20,6 +20,14 @@ def recent(limit: int = 60, path: Path | None = None) -> list[dict]:
     return rows[-limit:]
 
 
+def count(path: Path | None = None) -> int:
+    """How many videos were made so far. Unlike len(recent()) this is not capped, so rotations keep moving."""
+    target = path or PATH
+    if not target.exists():
+        return 0
+    return sum(1 for line in target.read_text(encoding="utf-8").splitlines() if line.strip())
+
+
 def record(run_id: str, title: str, angle: str = "", path: Path | None = None) -> None:
     """Record or update the topic chosen for `run_id` (updates in-place if revised within the same run)."""
     target = path or PATH
