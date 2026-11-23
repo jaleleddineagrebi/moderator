@@ -69,13 +69,13 @@
   "ended_at": null,
   "revision_rounds": 1,
   "cost": {
-    "total_usd": 0.02101,
+    "total_usd": 0.02639,
     "budget_usd": 1.0,
     "by_agent": {
       "trend_researcher": 0.002737,
       "scriptwriter": 0.014502,
       "packaging": 0.000931,
-      "qa_reviewer": 0.002839
+      "qa_reviewer": 0.008219
     }
   },
   "agents": {
@@ -1124,6 +1124,16 @@
           "ts": "2026-11-23T02:03:32+00:00",
           "level": "warning",
           "msg": "Model 'gemini-3.7-flash' returned 503; falling back to 'gemini-3.6-flash'"
+        },
+        {
+          "ts": "2026-11-23T02:03:41+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3.6-flash) answered in 28.1s (tokens in 1325, out 106, thinking 1887)"
+        },
+        {
+          "ts": "2026-11-23T02:03:50+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.8-flash, high complexity, thinking high)"
         }
       ],
       "errors": [
@@ -1135,7 +1145,7 @@
         }
       ],
       "feedback": [],
-      "cost_usd": 0.002839
+      "cost_usd": 0.008219
     }
   },
   "checkpoints": {
@@ -1192,7 +1202,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-23T02:03:34+00:00",
+    "exported_at": "2026-11-23T02:03:52+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/45096319147"
   }
