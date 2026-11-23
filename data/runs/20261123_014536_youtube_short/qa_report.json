@@ -1,12 +1,12 @@
 {
-  "passed": false,
-  "revision_round": 0,
+  "passed": true,
+  "revision_round": 1,
   "checks": [
     {
       "check": "length",
       "lang": "en",
       "ok": true,
-      "detail": "38.6s (must be under 60s; target 32-50s)",
+      "detail": "40.7s (must be under 60s; target 32-50s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -14,7 +14,7 @@
       "check": "target length",
       "lang": "en",
       "ok": true,
-      "detail": "38.6s",
+      "detail": "40.7s",
       "send_to": null,
       "severity": "minor"
     },
@@ -46,7 +46,7 @@
       "check": "loudness",
       "lang": "en",
       "ok": true,
-      "detail": "-14.1 LUFS, peak -1.4 dBFS (target -14 LUFS, peak <= -1)",
+      "detail": "-14.2 LUFS, peak -1.4 dBFS (target -14 LUFS, peak <= -1)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -62,7 +62,7 @@
       "check": "caption sync",
       "lang": "en",
       "ok": true,
-      "detail": "104 words, 37 caption events",
+      "detail": "102 words, 36 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -94,16 +94,16 @@
       "check": "accuracy review",
       "lang": "en",
       "ok": false,
-      "detail": "The claim that it's a 'glitch in your brain hardware' or your 'brain panics' is scientifically inaccurate. You cannot produce the sounds because you are physically obstructing your articulators (the tongue), preventing the mechanical movement required for phonation, not because of a neural override or brain failure. Rephrase to focus on the physical impossibility rather than a neurological glitch.",
+      "detail": "In scene_06 VO, 'phonation' refers to sound production at the vocal cords, whereas shaping speech with the tongue against the palate is 'articulation'. Change 'Clear phonation requires' to 'Clear articulation requires'.",
       "send_to": "script",
-      "severity": "blocker"
+      "severity": "minor"
     },
     {
       "check": "people rule",
       "lang": null,
-      "ok": false,
-      "detail": "scene_06: a woman is shown including her shoulder, arm, and hand in the first and second frames. Replace with footage without women (a face-only close-up is the only exception).",
-      "send_to": "visuals",
+      "ok": true,
+      "detail": "no women beyond face close-ups in 8 scenes and 1 thumbnail(s)",
+      "send_to": null,
       "severity": "blocker"
     }
   ]
