@@ -13,47 +13,46 @@ Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 Dialogue: 1,0:00:00.05,0:00:02.58,Headline,,0,0,0,,{\fad(150,150)}YOU CANNOT SAY THIS
-Dialogue: 1,0:00:02.68,0:00:06.87,Headline,,0,0,0,,{\fad(150,150)}BRAIN HARDWARE GLITCH
-Dialogue: 1,0:00:06.97,0:00:11.62,Headline,,0,0,0,,{\fad(150,150)}HOLD YOUR TONGUE NOW
-Dialogue: 1,0:00:11.72,0:00:15.81,Headline,,0,0,0,,{\fad(150,150)}THE CREEPY PART
-Dialogue: 1,0:00:15.91,0:00:21.62,Headline,,0,0,0,,{\fad(150,150)}SPEECH COORDINATION LOST
-Dialogue: 1,0:00:21.72,0:00:27.39,Headline,,0,0,0,,{\fad(150,150)}HARD-WIRED MOTOR CORTEX
-Dialogue: 1,0:00:27.49,0:00:31.88,Headline,,0,0,0,,{\fad(150,150)}BRAIN PANIC TEST
-Dialogue: 1,0:00:31.98,0:00:38.55,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 1,0:00:02.68,0:00:07.83,Headline,,0,0,0,,{\fad(150,150)}PHYSICAL MECHANICAL LOCK
+Dialogue: 1,0:00:07.93,0:00:12.77,Headline,,0,0,0,,{\fad(150,150)}HOLD YOUR TONGUE
+Dialogue: 1,0:00:12.87,0:00:16.27,Headline,,0,0,0,,{\fad(150,150)}YOUR VOICE IS BROKEN
+Dialogue: 1,0:00:16.37,0:00:22.17,Headline,,0,0,0,,{\fad(150,150)}ARTICULATORS ARE BLOCKED
+Dialogue: 1,0:00:22.27,0:00:27.92,Headline,,0,0,0,,{\fad(150,150)}IMPOSSIBLE PLACEMENT
+Dialogue: 1,0:00:28.02,0:00:33.63,Headline,,0,0,0,,{\fad(150,150)}PATHWAY SHUT DOWN
+Dialogue: 1,0:00:33.73,0:00:40.66,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
 Dialogue: 0,0:00:00.10,0:00:01.10,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You {\c&H0000E5FF&}physically{\c&H00FFFFFF&} cannot
 Dialogue: 0,0:00:01.11,0:00:01.71,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}say this
-Dialogue: 0,0:00:02.73,0:00:03.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It is a
-Dialogue: 0,0:00:03.11,0:00:03.67,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}glitch{\c&H00FFFFFF&} in your
-Dialogue: 0,0:00:03.69,0:00:04.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}brain {\c&H0000E5FF&}hardware{\c&H00FFFFFF&} that
-Dialogue: 0,0:00:04.62,0:00:05.47,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}literally{\c&H00FFFFFF&} locks your
-Dialogue: 0,0:00:05.48,0:00:06.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}speech
-Dialogue: 0,0:00:07.02,0:00:07.69,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Grab your {\c&H0000E5FF&}tongue{\c&H00FFFFFF&}
-Dialogue: 0,0:00:07.71,0:00:08.48,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}with two {\c&H0000E5FF&}fingers{\c&H00FFFFFF&}
-Dialogue: 0,0:00:08.49,0:00:08.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and try to
-Dialogue: 0,0:00:08.94,0:00:09.89,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}say The {\c&H0000E5FF&}weather{\c&H00FFFFFF&}
-Dialogue: 0,0:00:09.90,0:00:10.75,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is nice {\c&H0000E5FF&}today{\c&H00FFFFFF&}
-Dialogue: 0,0:00:11.77,0:00:12.26,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}But {\c&H0000E5FF&}here{\c&H00FFFFFF&} is
-Dialogue: 0,0:00:12.27,0:00:13.06,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}creepy{\c&H00FFFFFF&} part
-Dialogue: 0,0:00:13.23,0:00:14.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you sound {\c&H0000E5FF&}exactly{\c&H00FFFFFF&}
-Dialogue: 0,0:00:14.16,0:00:14.94,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}like a {\c&H0000E5FF&}toddler{\c&H00FFFFFF&}
-Dialogue: 0,0:00:15.96,0:00:16.87,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}brain{\c&H00FFFFFF&} loses
-Dialogue: 0,0:00:16.88,0:00:17.57,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}ability{\c&H00FFFFFF&} to
-Dialogue: 0,0:00:17.58,0:00:18.77,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}coordinate{\c&H00FFFFFF&} your glottis
-Dialogue: 0,0:00:18.78,0:00:19.39,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and your {\c&H0000E5FF&}tongue{\c&H00FFFFFF&}
-Dialogue: 0,0:00:19.41,0:00:20.74,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}muscles {\c&H0000E5FF&}simultaneously{\c&H00FFFFFF&}
-Dialogue: 0,0:00:21.76,0:00:22.39,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It {\c&H0000E5FF&}proves{\c&H00FFFFFF&} your
-Dialogue: 0,0:00:22.40,0:00:23.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}motor {\c&H0000E5FF&}cortex{\c&H00FFFFFF&} is
-Dialogue: 0,0:00:23.36,0:00:24.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}hard-wired{\c&H00FFFFFF&} for specific
-Dialogue: 0,0:00:24.71,0:00:25.50,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}mouth {\c&H0000E5FF&}shapes{\c&H00FFFFFF&} that
-Dialogue: 0,0:00:25.51,0:00:26.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you can't {\c&H0000E5FF&}override{\c&H00FFFFFF&}
-Dialogue: 0,0:00:27.54,0:00:28.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Try it {\c&H0000E5FF&}again{\c&H00FFFFFF&}
-Dialogue: 0,0:00:28.25,0:00:28.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and {\c&H0000E5FF&}notice{\c&H00FFFFFF&} how
-Dialogue: 0,0:00:28.84,0:00:29.73,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your brain {\c&H0000E5FF&}panics{\c&H00FFFFFF&}
-Dialogue: 0,0:00:29.75,0:00:30.39,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}trying{\c&H00FFFFFF&} to find
-Dialogue: 0,0:00:30.41,0:00:31.01,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}letters{\c&H00FFFFFF&}
-Dialogue: 0,0:00:32.02,0:00:33.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Subscribe for {\c&H0000E5FF&}tomorrow's{\c&H00FFFFFF&}
-Dialogue: 0,0:00:33.26,0:00:33.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}brain{\c&H00FFFFFF&} hack and
-Dialogue: 0,0:00:33.92,0:00:34.78,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} FAILED if
-Dialogue: 0,0:00:34.79,0:00:35.64,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you {\c&H0000E5FF&}sounded{\c&H00FFFFFF&} weird
-Dialogue: 0,0:00:35.91,0:00:36.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}which is {\c&H0000E5FF&}exactly{\c&H00FFFFFF&}
-Dialogue: 0,0:00:36.65,0:00:37.07,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}why
+Dialogue: 0,0:00:02.73,0:00:03.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}This is a
+Dialogue: 0,0:00:03.19,0:00:04.35,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}mechanical{\c&H00FFFFFF&} lockout where
+Dialogue: 0,0:00:04.36,0:00:05.29,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your body’s {\c&H0000E5FF&}physical{\c&H00FFFFFF&}
+Dialogue: 0,0:00:05.30,0:00:06.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}architecture{\c&H00FFFFFF&} fails your
+Dialogue: 0,0:00:06.45,0:00:06.96,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}intent
+Dialogue: 0,0:00:07.98,0:00:08.65,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Pinch your {\c&H0000E5FF&}tongue{\c&H00FFFFFF&}
+Dialogue: 0,0:00:08.66,0:00:09.42,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}with two {\c&H0000E5FF&}fingers{\c&H00FFFFFF&}
+Dialogue: 0,0:00:09.43,0:00:10.03,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}right{\c&H00FFFFFF&} now and
+Dialogue: 0,0:00:10.04,0:00:11.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}say The {\c&H0000E5FF&}weather{\c&H00FFFFFF&}
+Dialogue: 0,0:00:11.04,0:00:11.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is nice {\c&H0000E5FF&}today{\c&H00FFFFFF&}
+Dialogue: 0,0:00:12.92,0:00:13.65,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Wait {\c&H0000E5FF&}until{\c&H00FFFFFF&} you
+Dialogue: 0,0:00:13.66,0:00:14.46,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}hear how {\c&H0000E5FF&}broken{\c&H00FFFFFF&}
+Dialogue: 0,0:00:14.48,0:00:15.41,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your voice {\c&H0000E5FF&}sounds{\c&H00FFFFFF&}
+Dialogue: 0,0:00:16.42,0:00:17.31,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You aren’t {\c&H0000E5FF&}glitching{\c&H00FFFFFF&}
+Dialogue: 0,0:00:17.59,0:00:18.28,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you are {\c&H0000E5FF&}physically{\c&H00FFFFFF&}
+Dialogue: 0,0:00:18.29,0:00:19.31,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}blocking{\c&H00FFFFFF&} the primary
+Dialogue: 0,0:00:19.32,0:00:20.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}articulator{\c&H00FFFFFF&} needed for
+Dialogue: 0,0:00:20.44,0:00:21.30,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}human {\c&H0000E5FF&}speech{\c&H00FFFFFF&}
+Dialogue: 0,0:00:22.32,0:00:23.67,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Clear {\c&H0000E5FF&}phonation{\c&H00FFFFFF&} requires
+Dialogue: 0,0:00:23.68,0:00:24.92,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}precise tongue {\c&H0000E5FF&}placements{\c&H00FFFFFF&}
+Dialogue: 0,0:00:24.93,0:00:25.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}against{\c&H00FFFFFF&} your palate
+Dialogue: 0,0:00:25.83,0:00:26.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}that you have
+Dialogue: 0,0:00:26.18,0:00:27.06,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}made {\c&H0000E5FF&}impossible{\c&H00FFFFFF&}
+Dialogue: 0,0:00:28.07,0:00:28.95,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}vocal{\c&H00FFFFFF&} cords
+Dialogue: 0,0:00:28.96,0:00:30.03,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}strain to {\c&H0000E5FF&}compensate{\c&H00FFFFFF&}
+Dialogue: 0,0:00:30.36,0:00:31.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}but the {\c&H0000E5FF&}mechanical{\c&H00FFFFFF&}
+Dialogue: 0,0:00:31.12,0:00:32.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}path is {\c&H0000E5FF&}completely{\c&H00FFFFFF&}
+Dialogue: 0,0:00:32.09,0:00:32.76,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}shut{\c&H00FFFFFF&} down
+Dialogue: 0,0:00:33.77,0:00:35.01,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Subscribe for {\c&H0000E5FF&}tomorrow’s{\c&H00FFFFFF&}
+Dialogue: 0,0:00:35.02,0:00:35.71,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}body{\c&H00FFFFFF&} hack and
+Dialogue: 0,0:00:35.72,0:00:36.58,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} FAILED if
+Dialogue: 0,0:00:36.59,0:00:37.20,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you {\c&H0000E5FF&}sounded{\c&H00FFFFFF&} like
+Dialogue: 0,0:00:37.21,0:00:38.16,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a {\c&H0000E5FF&}toddler{\c&H00FFFFFF&} which
+Dialogue: 0,0:00:38.17,0:00:39.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is {\c&H0000E5FF&}exactly{\c&H00FFFFFF&} why
