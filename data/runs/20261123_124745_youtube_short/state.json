@@ -510,7 +510,7 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 48,
+      "progress": 90,
       "started_at": "2026-11-23T12:53:21+00:00",
       "ended_at": null,
       "attempt": 3,
@@ -680,6 +680,26 @@
           "ts": "2026-11-23T12:53:43+00:00",
           "level": "info",
           "msg": "scene_04: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-23T12:54:04+00:00",
+          "level": "info",
+          "msg": "scene_05: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-23T12:54:04+00:00",
+          "level": "info",
+          "msg": "scene_06: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-23T12:54:08+00:00",
+          "level": "info",
+          "msg": "scene_07: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-23T12:54:10+00:00",
+          "level": "info",
+          "msg": "scene_08: stock_video (pixabay)"
         }
       ],
       "errors": [],
@@ -693,10 +713,10 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "running",
-      "progress": 80,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-23T12:53:21+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-23T12:54:05+00:00",
       "attempt": 3,
       "retries": 0,
       "max_retries": 2,
@@ -793,6 +813,11 @@
           "ts": "2026-11-23T12:53:47+00:00",
           "level": "info",
           "msg": "Generating an ambient music bed (no library tracks): progression #1, transpose +1, 6s chords"
+        },
+        {
+          "ts": "2026-11-23T12:54:05+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [],
@@ -1196,7 +1221,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-23T12:53:51+00:00",
+    "exported_at": "2026-11-23T12:54:11+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/45177594869"
   }

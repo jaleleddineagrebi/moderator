@@ -3,80 +3,80 @@
     "scene": "scene_01",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-3501/",
-    "author": "Nova_27",
+    "page": "https://pixabay.com/videos/id-9490/",
+    "author": "chayka1270",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
     "query": "man finger dialing",
-    "description": "A close-up shot of a man's hand typing the code *#21# on a smartphone keypad."
+    "description": "Macro shot of a man's thumb pressing the star and hash keys on a bright smartphone keypad."
   },
   {
     "scene": "scene_02",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-177/",
-    "author": "Republica",
+    "page": "https://pixabay.com/videos/id-697/",
+    "author": "geralt",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "mobile phone display",
-    "description": "Abstract binary code flowing vertically across a dark blue digital interface."
+    "query": "digital network connection",
+    "description": "A digital map of the world with glowing lines connecting different nodes across continents."
   },
   {
     "scene": "scene_03",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-1383/",
-    "author": "Activedia",
+    "page": "https://pixabay.com/videos/id-16166/",
+    "author": "anncapictures",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "man waiting impatiently",
-    "description": "A man sitting at a desk at night, illuminated by the glow of a screen, waiting."
+    "query": "fingertip hovering phone",
+    "description": "Close-up of a man's finger hovering over the green call button with a sense of anticipation."
   },
   {
     "scene": "scene_04",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-314643/",
-    "author": "TonyDias7",
+    "page": "https://pixabay.com/videos/id-126560/",
+    "author": "SoyKhaler",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "cctv camera rotating",
-    "description": "A cinematic shot of a professional surveillance camera rotating on a building corner."
+    "query": "man face reaction",
+    "description": "A man looking intensely at a phone screen in a dimly lit room, his face illuminated by the blue light."
   },
   {
     "scene": "scene_05",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-14385/",
-    "author": "kieutruongphoto",
+    "page": "https://pixabay.com/videos/id-274237/",
+    "author": "AVISOtaON",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "blinking server lights",
-    "description": "Blue and white indicator lights flashing on a wall of servers in a data center."
+    "query": "server error warning",
+    "description": "A digital server rack with red flashing warning lights and a glitch effect on screen."
   },
   {
     "scene": "scene_06",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-143416/",
-    "author": "NickyPe",
+    "page": "https://pixabay.com/videos/id-10822/",
+    "author": "Coverr-Free-Footage",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "man hand swiping",
-    "description": "Close up of a hand performing a clean swipe across a smartphone screen."
+    "query": "hand entering code",
+    "description": "A man's hands rapidly typing the hash-hash-zero-zero-two-hash code on a sleek mobile device."
   },
   {
     "scene": "scene_07",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-71562/",
-    "author": "hamzaaslammiczon",
+    "page": "https://pixabay.com/videos/id-21531/",
+    "author": "Christopher_OToole_Images",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "mouse click animation",
-    "description": "Close up of fingers typing rapidly on a modern mechanical laptop keyboard."
+    "query": "shield icon glow",
+    "description": "A glowing green shield icon pulsing in the center of a dark digital interface."
   },
   {
     "scene": "scene_08",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-145320/",
-    "author": "NickyPe",
+    "page": "https://pixabay.com/videos/id-172941/",
+    "author": "TahaImtiaz16",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "cyber tunnel motion",
-    "description": "Fast-paced flight through a neon digital tunnel with glowing circuit patterns."
+    "query": "abstract neon tunnel",
+    "description": "A fast-moving camera flight through a neon-lit digital tunnel of circuit board patterns."
   }
 ]
