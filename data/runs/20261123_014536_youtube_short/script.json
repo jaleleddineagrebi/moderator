@@ -1,0 +1,156 @@
+{
+  "title": "The Paralyzed Tongue Glitch",
+  "scenes": [
+    {
+      "vo": {
+        "en": "You physically cannot say this."
+      },
+      "on_screen": {
+        "en": "YOU CANNOT SAY THIS"
+      },
+      "visual": {
+        "description": "Extreme close-up of a man's eyes widening in shock against a dark background.",
+        "search_terms": [
+          "man shocked eyes",
+          "surprised face macro",
+          "staring intensely"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "It is a glitch in your brain hardware that literally locks your speech."
+      },
+      "on_screen": {
+        "en": "BRAIN HARDWARE GLITCH"
+      },
+      "visual": {
+        "description": "Abstract digital data streaming and glitching rapidly like a broken computer.",
+        "search_terms": [
+          "digital glitch effect",
+          "cyber code matrix",
+          "abstract data motion"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Grab your tongue with two fingers and try to say: The weather is nice today."
+      },
+      "on_screen": {
+        "en": "HOLD YOUR TONGUE NOW"
+      },
+      "visual": {
+        "description": "Close up of a man's hand reaching toward the camera as if to grab something.",
+        "search_terms": [
+          "man hand reaching",
+          "fingers grasping close-up",
+          "hand gesture motion"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "But here is the creepy part: you sound exactly like a toddler."
+      },
+      "on_screen": {
+        "en": "THE CREEPY PART"
+      },
+      "visual": {
+        "description": "Fast-paced shots of an old-fashioned tape recorder spinning its reels.",
+        "search_terms": [
+          "vintage tape recorder",
+          "audio reel spinning",
+          "analog device"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Your brain loses the ability to coordinate your glottis and your tongue muscles simultaneously."
+      },
+      "on_screen": {
+        "en": "SPEECH COORDINATION LOST"
+      },
+      "visual": {
+        "description": "Macro shot of mechanical gears grinding and struggling to turn together.",
+        "search_terms": [
+          "gears turning mechanism",
+          "industrial clockwork",
+          "metallic friction"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "It proves your motor cortex is hard-wired for specific mouth shapes that you can't override."
+      },
+      "on_screen": {
+        "en": "HARD-WIRED MOTOR CORTEX"
+      },
+      "visual": {
+        "description": "A dense network of glowing blue wires or neurons pulsing with electricity.",
+        "search_terms": [
+          "glowing neural network",
+          "electric circuit board",
+          "abstract blue wires"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Try it again and notice how your brain panics trying to find the letters."
+      },
+      "on_screen": {
+        "en": "BRAIN PANIC TEST"
+      },
+      "visual": {
+        "description": "A man rubbing his forehead in frustration while sitting in a dimly lit office.",
+        "search_terms": [
+          "man stressed thinking",
+          "frustrated person sitting",
+          "troubled expression"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for tomorrow's brain hack and comment FAILED if you sounded weird, which is exactly why..."
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "A finger pressing a glowing red button in a dark room.",
+        "search_terms": [
+          "finger pressing button",
+          "glowing red switch",
+          "action click close-up"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_08"
+    }
+  ],
+  "idea_id": "paralyzed-tongue-glitch",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 37.8
+  }
+}
