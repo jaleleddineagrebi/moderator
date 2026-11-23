@@ -1,0 +1,164 @@
+{
+  "title": "The Secret iPhone Code for Law Enforcement Tracking",
+  "scenes": [
+    {
+      "vo": {
+        "en": "Type star-hash-twenty-one-hash right now."
+      },
+      "on_screen": {
+        "en": "TYPE *#21# NOW"
+      },
+      "visual": {
+        "description": "A close-up shot of a man's hand typing the digits *#21# into a smartphone dialer.",
+        "search_terms": [
+          "man hand phone keypad",
+          "smartphone dialing screen",
+          "pressing phone buttons"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "Check Your Tracking",
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "This secret MMI code reveals if your private calls or messages are being intercepted by anyone else."
+      },
+      "on_screen": {
+        "en": "IS SOMEONE LISTENING?"
+      },
+      "visual": {
+        "description": "Abstract digital data and binary code flowing across a dark background with a glowing lock icon.",
+        "search_terms": [
+          "digital matrix background",
+          "lock icon glowing",
+          "cyber security code"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Just hit dial and wait for the hidden interrogation menu to pop up on your screen."
+      },
+      "on_screen": {
+        "en": "WAIT FOR THE MENU"
+      },
+      "visual": {
+        "description": "A man in a dimly lit tech office waiting patiently while a loading animation circles on a device.",
+        "search_terms": [
+          "man sitting dark office",
+          "data loading progress",
+          "waiting hand tapping"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "But here is the creepy part: millions of users find their forwarding status is already active."
+      },
+      "on_screen": {
+        "en": "IT’S CREEPY"
+      },
+      "visual": {
+        "description": "A man's face showing a realization of shock or concern as a security camera pans nearby.",
+        "search_terms": [
+          "man face surprise",
+          "cctv camera scanning",
+          "surveillance security video"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "That means your data is silently being redirected to a third party without you ever giving permission."
+      },
+      "on_screen": {
+        "en": "DATA IS REDIRECTED"
+      },
+      "visual": {
+        "description": "Rows of glowing server racks in a cold, blue data center with blinking indicator lights.",
+        "search_terms": [
+          "server rack blink",
+          "fiber optic lights",
+          "data center tech"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "If you see Enabled, dial hash-hash-zero-zero-two-hash right away to kill all active tracking instantly."
+      },
+      "on_screen": {
+        "en": "KILL THE TRACKING"
+      },
+      "visual": {
+        "description": "Close-up of a finger aggressively swiping or resetting a phone screen with glitchy code overlay.",
+        "search_terms": [
+          "phone reset screen",
+          "glitch effect code",
+          "man hand smartphone"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for more hidden digital defense hacks and comment SAFE if yours was disabled."
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "A mouse cursor clicking on a digital notification bell or a man typing quickly on a laptop keyboard.",
+        "search_terms": [
+          "notification bell animation",
+          "man typing laptop",
+          "mouse click icon"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_07"
+    },
+    {
+      "vo": {
+        "en": "Privacy is a choice you make, which is why you must..."
+      },
+      "on_screen": {
+        "en": "PROTECT YOURSELF"
+      },
+      "visual": {
+        "description": "Fast-moving cinematic tunnel of neon lights and electronic circuits leading into darkness.",
+        "search_terms": [
+          "techno tunnel light",
+          "cyber security circuit",
+          "abstract digital motion"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_08"
+    }
+  ],
+  "idea_id": "type-3-digits-privacy",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 39.6
+  }
+}
