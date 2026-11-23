@@ -1,6 +1,6 @@
 {
   "voice": "en-US-AriaNeural",
-  "duration": 37.902086,
+  "duration": 40.014059,
   "scenes": [
     {
       "scene": "scene_01",
@@ -37,543 +37,533 @@
     {
       "scene": "scene_02",
       "start": 2.634,
-      "end": 6.834,
+      "end": 7.794,
       "words": [
         {
           "start": 2.731,
-          "end": 2.884,
-          "text": "It"
+          "end": 3.002,
+          "text": "This"
         },
         {
-          "start": 2.896,
-          "end": 3.014,
+          "start": 3.014,
+          "end": 3.12,
           "text": "is"
         },
         {
-          "start": 3.026,
-          "end": 3.097,
+          "start": 3.132,
+          "end": 3.179,
           "text": "a"
         },
         {
-          "start": 3.109,
-          "end": 3.439,
-          "text": "glitch"
+          "start": 3.191,
+          "end": 3.757,
+          "text": "mechanical"
         },
         {
-          "start": 3.451,
-          "end": 3.545,
-          "text": "in"
+          "start": 3.769,
+          "end": 4.205,
+          "text": "lockout"
         },
         {
-          "start": 3.557,
-          "end": 3.675,
+          "start": 4.217,
+          "end": 4.347,
+          "text": "where"
+        },
+        {
+          "start": 4.359,
+          "end": 4.5,
           "text": "your"
         },
         {
-          "start": 3.686,
-          "end": 3.934,
-          "text": "brain"
+          "start": 4.512,
+          "end": 4.889,
+          "text": "body’s"
         },
         {
-          "start": 3.946,
-          "end": 4.417,
-          "text": "hardware"
+          "start": 4.901,
+          "end": 5.29,
+          "text": "physical"
         },
         {
-          "start": 4.429,
-          "end": 4.606,
-          "text": "that"
+          "start": 5.302,
+          "end": 5.962,
+          "text": "architecture"
         },
         {
-          "start": 4.618,
-          "end": 5.019,
-          "text": "literally"
+          "start": 5.974,
+          "end": 6.316,
+          "text": "fails"
         },
         {
-          "start": 5.031,
-          "end": 5.349,
-          "text": "locks"
-        },
-        {
-          "start": 5.361,
-          "end": 5.467,
+          "start": 6.328,
+          "end": 6.434,
           "text": "your"
         },
         {
-          "start": 5.479,
-          "end": 6.021,
-          "text": "speech"
+          "start": 6.446,
+          "end": 6.965,
+          "text": "intent"
         }
       ]
     },
     {
       "scene": "scene_03",
-      "start": 6.924,
-      "end": 11.58,
+      "start": 7.884,
+      "end": 12.732,
       "words": [
         {
-          "start": 7.021,
-          "end": 7.316,
-          "text": "Grab"
+          "start": 7.981,
+          "end": 8.264,
+          "text": "Pinch"
         },
         {
-          "start": 7.328,
-          "end": 7.434,
+          "start": 8.276,
+          "end": 8.394,
           "text": "your"
         },
         {
-          "start": 7.446,
-          "end": 7.693,
+          "start": 8.406,
+          "end": 8.653,
           "text": "tongue"
         },
         {
-          "start": 7.705,
-          "end": 7.847,
+          "start": 8.665,
+          "end": 8.807,
           "text": "with"
         },
         {
-          "start": 7.858,
-          "end": 8.047,
+          "start": 8.818,
+          "end": 9.019,
           "text": "two"
         },
         {
-          "start": 8.059,
-          "end": 8.483,
+          "start": 9.031,
+          "end": 9.42,
           "text": "fingers"
         },
         {
-          "start": 8.495,
-          "end": 8.637,
+          "start": 9.432,
+          "end": 9.632,
+          "text": "right"
+        },
+        {
+          "start": 9.644,
+          "end": 9.903,
+          "text": "now"
+        },
+        {
+          "start": 9.915,
+          "end": 10.033,
           "text": "and"
         },
         {
-          "start": 8.649,
-          "end": 8.849,
-          "text": "try"
-        },
-        {
-          "start": 8.861,
-          "end": 8.932,
-          "text": "to"
-        },
-        {
-          "start": 8.943,
-          "end": 9.238,
+          "start": 10.045,
+          "end": 10.328,
           "text": "say"
         },
         {
-          "start": 9.521,
-          "end": 9.615,
+          "start": 10.623,
+          "end": 10.717,
           "text": "The"
         },
         {
-          "start": 9.627,
-          "end": 9.887,
+          "start": 10.729,
+          "end": 11.024,
           "text": "weather"
         },
         {
-          "start": 9.899,
-          "end": 10.005,
+          "start": 11.035,
+          "end": 11.142,
           "text": "is"
         },
         {
-          "start": 10.016,
-          "end": 10.276,
+          "start": 11.153,
+          "end": 11.413,
           "text": "nice"
         },
         {
-          "start": 10.288,
-          "end": 10.748,
+          "start": 11.425,
+          "end": 11.908,
           "text": "today"
         }
       ]
     },
     {
       "scene": "scene_04",
-      "start": 11.67,
-      "end": 15.774,
+      "start": 12.822,
+      "end": 16.23,
       "words": [
         {
-          "start": 11.767,
-          "end": 11.92,
-          "text": "But"
+          "start": 12.919,
+          "end": 13.226,
+          "text": "Wait"
         },
         {
-          "start": 11.932,
-          "end": 12.144,
-          "text": "here"
+          "start": 13.238,
+          "end": 13.509,
+          "text": "until"
         },
         {
-          "start": 12.156,
-          "end": 12.262,
-          "text": "is"
-        },
-        {
-          "start": 12.274,
-          "end": 12.357,
-          "text": "the"
-        },
-        {
-          "start": 12.369,
-          "end": 12.711,
-          "text": "creepy"
-        },
-        {
-          "start": 12.722,
-          "end": 13.064,
-          "text": "part"
-        },
-        {
-          "start": 13.229,
-          "end": 13.359,
+          "start": 13.521,
+          "end": 13.65,
           "text": "you"
         },
         {
-          "start": 13.371,
-          "end": 13.666,
-          "text": "sound"
+          "start": 13.662,
+          "end": 13.933,
+          "text": "hear"
         },
         {
-          "start": 13.678,
-          "end": 14.149,
-          "text": "exactly"
+          "start": 13.945,
+          "end": 14.11,
+          "text": "how"
         },
         {
-          "start": 14.161,
-          "end": 14.35,
-          "text": "like"
+          "start": 14.122,
+          "end": 14.464,
+          "text": "broken"
         },
         {
-          "start": 14.362,
-          "end": 14.42,
-          "text": "a"
+          "start": 14.476,
+          "end": 14.582,
+          "text": "your"
         },
         {
-          "start": 14.432,
-          "end": 14.939,
-          "text": "toddler"
+          "start": 14.594,
+          "end": 14.865,
+          "text": "voice"
+        },
+        {
+          "start": 14.877,
+          "end": 15.407,
+          "text": "sounds"
         }
       ]
     },
     {
       "scene": "scene_05",
-      "start": 15.864,
-      "end": 21.576,
+      "start": 16.32,
+      "end": 22.128,
       "words": [
         {
-          "start": 15.961,
-          "end": 16.197,
-          "text": "Your"
+          "start": 16.417,
+          "end": 16.618,
+          "text": "You"
         },
         {
-          "start": 16.209,
-          "end": 16.527,
-          "text": "brain"
+          "start": 16.629,
+          "end": 16.865,
+          "text": "aren’t"
         },
         {
-          "start": 16.539,
-          "end": 16.869,
-          "text": "loses"
+          "start": 16.877,
+          "end": 17.313,
+          "text": "glitching"
         },
         {
-          "start": 16.881,
-          "end": 16.964,
+          "start": 17.585,
+          "end": 17.679,
+          "text": "you"
+        },
+        {
+          "start": 17.691,
+          "end": 17.809,
+          "text": "are"
+        },
+        {
+          "start": 17.82,
+          "end": 18.28,
+          "text": "physically"
+        },
+        {
+          "start": 18.292,
+          "end": 18.705,
+          "text": "blocking"
+        },
+        {
+          "start": 18.717,
+          "end": 18.799,
           "text": "the"
         },
         {
-          "start": 16.975,
-          "end": 17.423,
-          "text": "ability"
+          "start": 18.811,
+          "end": 19.306,
+          "text": "primary"
         },
         {
-          "start": 17.435,
-          "end": 17.565,
-          "text": "to"
+          "start": 19.318,
+          "end": 19.967,
+          "text": "articulator"
         },
         {
-          "start": 17.577,
-          "end": 18.143,
-          "text": "coordinate"
+          "start": 19.979,
+          "end": 20.297,
+          "text": "needed"
         },
         {
-          "start": 18.155,
-          "end": 18.272,
-          "text": "your"
+          "start": 20.309,
+          "end": 20.427,
+          "text": "for"
         },
         {
-          "start": 18.284,
-          "end": 18.768,
-          "text": "glottis"
+          "start": 20.438,
+          "end": 20.757,
+          "text": "human"
         },
         {
-          "start": 18.78,
-          "end": 19.004,
-          "text": "and"
-        },
-        {
-          "start": 19.015,
-          "end": 19.122,
-          "text": "your"
-        },
-        {
-          "start": 19.133,
-          "end": 19.393,
-          "text": "tongue"
-        },
-        {
-          "start": 19.405,
-          "end": 19.758,
-          "text": "muscles"
-        },
-        {
-          "start": 19.77,
-          "end": 20.737,
-          "text": "simultaneously"
+          "start": 20.769,
+          "end": 21.299,
+          "text": "speech"
         }
       ]
     },
     {
       "scene": "scene_06",
-      "start": 21.666,
-      "end": 27.354,
+      "start": 22.218,
+      "end": 27.882,
       "words": [
         {
-          "start": 21.763,
-          "end": 21.964,
-          "text": "It"
+          "start": 22.315,
+          "end": 22.61,
+          "text": "Clear"
         },
         {
-          "start": 21.975,
-          "end": 22.294,
-          "text": "proves"
+          "start": 22.622,
+          "end": 23.152,
+          "text": "phonation"
         },
         {
-          "start": 22.306,
-          "end": 22.388,
+          "start": 23.164,
+          "end": 23.671,
+          "text": "requires"
+        },
+        {
+          "start": 23.683,
+          "end": 24.155,
+          "text": "precise"
+        },
+        {
+          "start": 24.167,
+          "end": 24.402,
+          "text": "tongue"
+        },
+        {
+          "start": 24.414,
+          "end": 24.921,
+          "text": "placements"
+        },
+        {
+          "start": 24.933,
+          "end": 25.299,
+          "text": "against"
+        },
+        {
+          "start": 25.31,
+          "end": 25.417,
           "text": "your"
         },
         {
-          "start": 22.4,
-          "end": 22.695,
-          "text": "motor"
+          "start": 25.428,
+          "end": 25.818,
+          "text": "palate"
         },
         {
-          "start": 22.707,
-          "end": 23.225,
-          "text": "cortex"
-        },
-        {
-          "start": 23.237,
-          "end": 23.343,
-          "text": "is"
-        },
-        {
-          "start": 23.355,
-          "end": 24.004,
-          "text": "hard-wired"
-        },
-        {
-          "start": 24.016,
-          "end": 24.157,
-          "text": "for"
-        },
-        {
-          "start": 24.169,
-          "end": 24.699,
-          "text": "specific"
-        },
-        {
-          "start": 24.711,
-          "end": 24.959,
-          "text": "mouth"
-        },
-        {
-          "start": 24.971,
-          "end": 25.372,
-          "text": "shapes"
-        },
-        {
-          "start": 25.383,
-          "end": 25.501,
+          "start": 25.829,
+          "end": 25.947,
           "text": "that"
         },
         {
-          "start": 25.513,
-          "end": 25.607,
+          "start": 25.959,
+          "end": 26.053,
           "text": "you"
         },
         {
-          "start": 25.619,
-          "end": 25.879,
-          "text": "can't"
+          "start": 26.065,
+          "end": 26.171,
+          "text": "have"
         },
         {
-          "start": 25.891,
-          "end": 26.539,
-          "text": "override"
+          "start": 26.183,
+          "end": 26.395,
+          "text": "made"
+        },
+        {
+          "start": 26.407,
+          "end": 27.056,
+          "text": "impossible"
         }
       ]
     },
     {
       "scene": "scene_07",
-      "start": 27.444,
-      "end": 31.836,
+      "start": 27.972,
+      "end": 33.588,
       "words": [
         {
-          "start": 27.541,
-          "end": 27.812,
-          "text": "Try"
+          "start": 28.069,
+          "end": 28.281,
+          "text": "Your"
         },
         {
-          "start": 27.824,
-          "end": 27.907,
-          "text": "it"
+          "start": 28.293,
+          "end": 28.623,
+          "text": "vocal"
         },
         {
-          "start": 27.919,
-          "end": 28.237,
-          "text": "again"
+          "start": 28.635,
+          "end": 28.954,
+          "text": "cords"
         },
         {
-          "start": 28.249,
-          "end": 28.355,
-          "text": "and"
+          "start": 28.965,
+          "end": 29.284,
+          "text": "strain"
         },
         {
-          "start": 28.367,
-          "end": 28.709,
-          "text": "notice"
-        },
-        {
-          "start": 28.72,
-          "end": 28.827,
-          "text": "how"
-        },
-        {
-          "start": 28.838,
-          "end": 29.003,
-          "text": "your"
-        },
-        {
-          "start": 29.015,
-          "end": 29.275,
-          "text": "brain"
-        },
-        {
-          "start": 29.286,
-          "end": 29.735,
-          "text": "panics"
-        },
-        {
-          "start": 29.746,
-          "end": 30.029,
-          "text": "trying"
-        },
-        {
-          "start": 30.041,
-          "end": 30.112,
+          "start": 29.296,
+          "end": 29.366,
           "text": "to"
         },
         {
-          "start": 30.124,
-          "end": 30.395,
-          "text": "find"
+          "start": 29.378,
+          "end": 30.027,
+          "text": "compensate"
         },
         {
-          "start": 30.407,
-          "end": 30.489,
+          "start": 30.357,
+          "end": 30.487,
+          "text": "but"
+        },
+        {
+          "start": 30.498,
+          "end": 30.569,
           "text": "the"
         },
         {
-          "start": 30.501,
-          "end": 31.008,
-          "text": "letters"
+          "start": 30.581,
+          "end": 31.112,
+          "text": "mechanical"
+        },
+        {
+          "start": 31.123,
+          "end": 31.465,
+          "text": "path"
+        },
+        {
+          "start": 31.477,
+          "end": 31.583,
+          "text": "is"
+        },
+        {
+          "start": 31.595,
+          "end": 32.079,
+          "text": "completely"
+        },
+        {
+          "start": 32.09,
+          "end": 32.35,
+          "text": "shut"
+        },
+        {
+          "start": 32.362,
+          "end": 32.763,
+          "text": "down"
         }
       ]
     },
     {
       "scene": "scene_08",
-      "start": 31.926,
-      "end": 37.902,
+      "start": 33.678,
+      "end": 40.014,
       "words": [
         {
-          "start": 32.023,
-          "end": 32.636,
+          "start": 33.775,
+          "end": 34.388,
           "text": "Subscribe"
         },
         {
-          "start": 32.648,
-          "end": 32.778,
+          "start": 34.4,
+          "end": 34.542,
           "text": "for"
         },
         {
-          "start": 32.79,
-          "end": 33.25,
-          "text": "tomorrow's"
+          "start": 34.553,
+          "end": 35.013,
+          "text": "tomorrow’s"
         },
         {
-          "start": 33.261,
-          "end": 33.544,
-          "text": "brain"
+          "start": 35.025,
+          "end": 35.332,
+          "text": "body"
         },
         {
-          "start": 33.556,
-          "end": 33.804,
+          "start": 35.344,
+          "end": 35.603,
           "text": "hack"
         },
         {
-          "start": 33.816,
-          "end": 33.91,
+          "start": 35.615,
+          "end": 35.709,
           "text": "and"
         },
         {
-          "start": 33.922,
-          "end": 34.335,
+          "start": 35.721,
+          "end": 36.134,
           "text": "comment"
         },
         {
-          "start": 34.346,
-          "end": 34.688,
+          "start": 36.145,
+          "end": 36.487,
           "text": "FAILED"
         },
         {
-          "start": 34.7,
-          "end": 34.783,
+          "start": 36.499,
+          "end": 36.582,
           "text": "if"
         },
         {
-          "start": 34.794,
-          "end": 34.901,
+          "start": 36.594,
+          "end": 36.688,
           "text": "you"
         },
         {
-          "start": 34.912,
-          "end": 35.278,
+          "start": 36.7,
+          "end": 37.03,
           "text": "sounded"
         },
         {
-          "start": 35.29,
-          "end": 35.643,
-          "text": "weird"
+          "start": 37.042,
+          "end": 37.195,
+          "text": "like"
         },
         {
-          "start": 35.915,
-          "end": 36.068,
+          "start": 37.207,
+          "end": 37.266,
+          "text": "a"
+        },
+        {
+          "start": 37.278,
+          "end": 37.726,
+          "text": "toddler"
+        },
+        {
+          "start": 38.009,
+          "end": 38.162,
           "text": "which"
         },
         {
-          "start": 36.08,
-          "end": 36.162,
+          "start": 38.174,
+          "end": 38.256,
           "text": "is"
         },
         {
-          "start": 36.174,
-          "end": 36.634,
+          "start": 38.268,
+          "end": 38.74,
           "text": "exactly"
         },
         {
-          "start": 36.646,
-          "end": 37.07,
+          "start": 38.752,
+          "end": 39.176,
           "text": "why"
         }
       ]

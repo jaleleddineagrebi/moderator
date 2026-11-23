@@ -475,7 +475,7 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 0,
+      "progress": 37,
       "started_at": "2026-11-23T01:51:09+00:00",
       "ended_at": null,
       "attempt": 2,
@@ -580,6 +580,21 @@
           "ts": "2026-11-23T01:51:09+00:00",
           "level": "info",
           "msg": "Replacing scene_06; keeping 0 unchanged scene(s)"
+        },
+        {
+          "ts": "2026-11-23T01:51:28+00:00",
+          "level": "info",
+          "msg": "scene_02: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-23T01:51:35+00:00",
+          "level": "info",
+          "msg": "scene_01: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-23T01:51:35+00:00",
+          "level": "info",
+          "msg": "scene_03: stock_video (pixabay)"
         }
       ],
       "errors": [],
@@ -599,10 +614,10 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "running",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-23T01:51:19+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-23T01:51:42+00:00",
       "attempt": 4,
       "retries": 1,
       "max_retries": 2,
@@ -689,6 +704,21 @@
           "ts": "2026-11-23T01:51:19+00:00",
           "level": "info",
           "msg": "Narrating en with en-US-AriaNeural"
+        },
+        {
+          "ts": "2026-11-23T01:51:28+00:00",
+          "level": "info",
+          "msg": "en voiceover: 40.0s"
+        },
+        {
+          "ts": "2026-11-23T01:51:28+00:00",
+          "level": "info",
+          "msg": "Generating an ambient music bed (no library tracks with license files found)"
+        },
+        {
+          "ts": "2026-11-23T01:51:42+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [
@@ -1025,7 +1055,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-23T01:51:22+00:00",
+    "exported_at": "2026-11-23T01:51:46+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/45096319147"
   }
