@@ -3,80 +3,80 @@
     "scene": "scene_01",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-142641/",
-    "author": "u_etjkkdz15b",
+    "page": "https://pixabay.com/videos/id-3501/",
+    "author": "Nova_27",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "man hand phone keypad",
-    "description": "A close-up shot of a man's hand typing the digits *#21# into a smartphone dialer."
+    "query": "man finger dialing",
+    "description": "A close-up shot of a man's hand typing the code *#21# on a smartphone keypad."
   },
   {
     "scene": "scene_02",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-199015/",
-    "author": "draisthetic",
+    "page": "https://pixabay.com/videos/id-177/",
+    "author": "Republica",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "digital matrix background",
-    "description": "Abstract digital data and binary code flowing across a dark background with a glowing lock icon."
+    "query": "mobile phone display",
+    "description": "Abstract binary code flowing vertically across a dark blue digital interface."
   },
   {
     "scene": "scene_03",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-216696/",
-    "author": "NickyPe",
+    "page": "https://pixabay.com/videos/id-1383/",
+    "author": "Activedia",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "man sitting dark office",
-    "description": "A man in a dimly lit tech office waiting patiently while a loading animation circles on a device."
+    "query": "man waiting impatiently",
+    "description": "A man sitting at a desk at night, illuminated by the glow of a screen, waiting."
   },
   {
     "scene": "scene_04",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-126560/",
-    "author": "SoyKhaler",
+    "page": "https://pixabay.com/videos/id-314643/",
+    "author": "TonyDias7",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "man face surprise",
-    "description": "A man's face showing a realization of shock or concern as a security camera pans nearby."
+    "query": "cctv camera rotating",
+    "description": "A cinematic shot of a professional surveillance camera rotating on a building corner."
   },
   {
     "scene": "scene_05",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-14906/",
-    "author": "cipnt",
+    "page": "https://pixabay.com/videos/id-14385/",
+    "author": "kieutruongphoto",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "server rack blink",
-    "description": "Rows of glowing server racks in a cold, blue data center with blinking indicator lights."
+    "query": "blinking server lights",
+    "description": "Blue and white indicator lights flashing on a wall of servers in a data center."
   },
   {
     "scene": "scene_06",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-3176/",
-    "author": "Coverr-Free-Footage",
+    "page": "https://pixabay.com/videos/id-143416/",
+    "author": "NickyPe",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "phone reset screen",
-    "description": "Close-up of a finger aggressively swiping or resetting a phone screen with glitchy code overlay."
+    "query": "man hand swiping",
+    "description": "Close up of a hand performing a clean swipe across a smartphone screen."
   },
   {
     "scene": "scene_07",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-71563/",
+    "page": "https://pixabay.com/videos/id-71562/",
     "author": "hamzaaslammiczon",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "notification bell animation",
-    "description": "A mouse cursor clicking on a digital notification bell or a man typing quickly on a laptop keyboard."
+    "query": "mouse click animation",
+    "description": "Close up of fingers typing rapidly on a modern mechanical laptop keyboard."
   },
   {
     "scene": "scene_08",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-137357/",
-    "author": "Kmeel_com",
+    "page": "https://pixabay.com/videos/id-145320/",
+    "author": "NickyPe",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "techno tunnel light",
-    "description": "Fast-moving cinematic tunnel of neon lights and electronic circuits leading into darkness."
+    "query": "cyber tunnel motion",
+    "description": "Fast-paced flight through a neon digital tunnel with glowing circuit patterns."
   }
 ]
