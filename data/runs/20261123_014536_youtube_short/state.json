@@ -1004,10 +1004,10 @@
       "checkpoint": "C",
       "status": "running",
       "progress": 60,
-      "started_at": "2026-11-23T01:53:05+00:00",
+      "started_at": "2026-11-23T02:03:10+00:00",
       "ended_at": null,
-      "attempt": 2,
-      "retries": 0,
+      "attempt": 3,
+      "retries": 1,
       "max_retries": 2,
       "strategy": "full_review",
       "inputs": {
@@ -1089,9 +1089,31 @@
           "ts": "2026-11-23T01:53:09+00:00",
           "level": "warning",
           "msg": "Model 'gemini-3-flash-preview' returned 429; falling back to 'gemini-3.8-flash'"
+        },
+        {
+          "ts": "2026-11-23T02:03:09+00:00",
+          "level": "error",
+          "msg": "ReadTimeout: "
+        },
+        {
+          "ts": "2026-11-23T02:03:10+00:00",
+          "level": "info",
+          "msg": "Attempt 2/3, strategy 'full_review'"
+        },
+        {
+          "ts": "2026-11-23T02:03:13+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.8-flash, high complexity, thinking high)"
         }
       ],
-      "errors": [],
+      "errors": [
+        {
+          "ts": "2026-11-23T02:03:09+00:00",
+          "attempt": 1,
+          "strategy": "full_review",
+          "error": "ReadTimeout: "
+        }
+      ],
       "feedback": [],
       "cost_usd": 0.002839
     }
@@ -1150,7 +1172,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-23T01:53:14+00:00",
+    "exported_at": "2026-11-23T02:03:17+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/45096319147"
   }
