@@ -70,7 +70,7 @@ class Handler(Agent):
             a = next((s for s in info["streams"] if s["codec_type"] == "audio"), None)
             dur = float(info["format"]["duration"])
             if is_long:
-                check("length", 90 <= dur <= 360, f"{dur:.1f}s (target 150-240s)", "script", lang)
+                check("length", 200 <= dur <= 430, f"{dur:.1f}s (target 240-360s)", "script", lang)
                 check("target length", 120 <= dur <= 300, f"{dur:.1f}s", "script", lang, "minor")
             else:
                 check("length", 15 <= dur < 60, f"{dur:.1f}s (must be under 60s; target 32-50s)", "script", lang)

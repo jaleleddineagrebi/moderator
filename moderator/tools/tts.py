@@ -9,10 +9,11 @@ import edge_tts
 from .languages import LANGS
 
 
-def voice_for(lang: str, index: int) -> str:
-    """index 0 is the normal voice; higher indexes are retry fallbacks (clamped to what exists)."""
+def voice_for(lang: str, index: int, rotation: int = 0) -> str:
+    """The voice of this video: `rotation` (how many videos were made before) walks through the language's voice pool so
+    consecutive videos do not sound the same; `index` > 0 is a retry or an owner `/edit voice`, which moves to the next voice."""
     voices = LANGS[lang]["voices"]
-    return voices[min(index, len(voices) - 1)]
+    return voices[(rotation + index) % len(voices)]
 
 
 def fallback_word_timings(text: str, duration: float) -> list[dict]:

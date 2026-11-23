@@ -4,25 +4,55 @@ import shutil
 
 from moderator import ROOT
 from moderator.engine.agent import Agent, StepContext
-from moderator.tools import ffmpeg, tts
+from moderator.tools import ffmpeg, history, tts
 from moderator.tools.languages import normalize_langs
 
 SCENE_GAP = 0.09  # crisp creator cut between scenes, seconds (eliminates dead air)
 MAX_VOICEOVER = 55.0  # above this, re-record faster (the editor adds a short tail; Shorts must stay under 60s)
 TARGET_VOICEOVER = 53.0
-LONG_MAX_VOICEOVER = 290.0
-LONG_TARGET_VOICEOVER = 270.0
+LONG_MAX_VOICEOVER = 400.0
+LONG_TARGET_VOICEOVER = 340.0
 MAX_SPEEDUP = 15  # percent; faster than this starts to sound rushed
-# A-minor / F / C / G pad, 4 seconds per chord. Generated here, so there is no copyright to worry about.
-CHORDS = [(220.00, 261.63, 329.63), (174.61, 220.00, 261.63), (261.63, 329.63, 392.00), (196.00, 246.94, 293.66)]
+# Chord progressions for the generated pad: (semitones from A3, "M"ajor or "m"inor) x 4 chords. Generated here, so there is
+# no copyright to worry about. Each video gets a different progression, key, chord length and timbre (see music_variant).
+PROGRESSIONS = [
+    [(0, "m"), (-4, "M"), (3, "M"), (-2, "M")],   # Am F C G
+    [(3, "M"), (-2, "M"), (0, "m"), (-4, "M")],   # C G Am F
+    [(5, "m"), (1, "M"), (-4, "M"), (3, "M")],    # Dm Bb F C
+    [(-5, "m"), (3, "M"), (-2, "M"), (5, "M")],   # Em C G D
+    [(-2, "M"), (5, "M"), (7, "m"), (3, "M")],    # G D Em C
+    [(-4, "M"), (3, "M"), (5, "m"), (1, "M")],    # F C Dm Bb
+]
 
 
-def pad_expression() -> str:
+def music_variant(n: int, rng: random.Random) -> dict:
+    """Pick this video's music: the progression walks through the list video after video, the rest is random."""
+    return {
+        "progression": PROGRESSIONS[n % len(PROGRESSIONS)],
+        "transpose": rng.choice([-2, -1, 0, 1, 2]),
+        "chord_seconds": rng.choice([4, 5, 6]),
+        "overtone": rng.choice([0.2, 0.35, 0.5]),
+        "lowpass": rng.choice([1500, 1800, 2200]),
+        "echo": rng.choice(["0.8:0.7:120|240:0.25|0.15", "0.8:0.75:160|320:0.3|0.18", "0.8:0.6:90|180:0.2|0.1"]),
+    }
+
+
+def _chord_freqs(root_semitones: int, quality: str) -> tuple[float, float, float]:
+    third = 3 if quality == "m" else 4
+    return tuple(220.0 * 2 ** ((root_semitones + step) / 12) for step in (0, third, 7))
+
+
+def pad_expression(variant: dict | None = None) -> str:
+    v = variant or {"progression": PROGRESSIONS[0], "transpose": 0, "chord_seconds": 4, "overtone": 0.35}
+    length, cycle = v["chord_seconds"], v["chord_seconds"] * 4
+    chords = [_chord_freqs(root + v["transpose"], quality) for root, quality in v["progression"]]
+
     def note(i: int) -> str:
-        f = [c[i] for c in CHORDS]
-        return f"if(lt(mod(t,16),4),{f[0]},if(lt(mod(t,16),8),{f[1]},if(lt(mod(t,16),12),{f[2]},{f[3]})))"
-    env = "(0.55+0.45*sin(PI*mod(t,4)/4))"  # swell inside each chord
-    voices = "+".join(f"sin(2*PI*t*{note(i)})+0.35*sin(4*PI*t*{note(i)})" for i in range(3))
+        f = [round(c[i], 2) for c in chords]
+        return (f"if(lt(mod(t,{cycle}),{length}),{f[0]},if(lt(mod(t,{cycle}),{2 * length}),{f[1]},"
+                f"if(lt(mod(t,{cycle}),{3 * length}),{f[2]},{f[3]})))")
+    env = f"(0.55+0.45*sin(PI*mod(t,{length})/{length}))"  # swell inside each chord
+    voices = "+".join(f"sin(2*PI*t*{note(i)})+{v['overtone']}*sin(4*PI*t*{note(i)})" for i in range(3))
     return f"0.09*{env}*({voices})"
 
 
@@ -34,7 +64,12 @@ class Handler(Agent):
         is_long = str(ctx.params.get("format") or "short").lower() == "long"
         max_vo = LONG_MAX_VOICEOVER if is_long else MAX_VOICEOVER
         target_vo = LONG_TARGET_VOICEOVER if is_long else TARGET_VOICEOVER
-        rate = "-6%" if ctx.strategy == "third_voice_slower" else "+6%"
+        # Shorts are narrated a little fast; a 4-5 minute video needs a natural, unhurried pace
+        base_rate = 0 if is_long else 6
+        # videos made so far: walks the voice pool and the music progressions so consecutive videos sound different
+        n = history.count()
+        base_rate += (0, 2, -1, 3)[n % 4]  # tiny delivery variation on top of the voice change
+        rate = f"{base_rate - 12:+d}%" if ctx.strategy == "third_voice_slower" else f"{base_rate:+d}%"
         if ctx.feedback:
             fb_low = ctx.feedback[-1]["comment"].lower()
             ctx.log(f"Revision feedback: {ctx.feedback[-1]['comment']}")
@@ -48,11 +83,11 @@ class Handler(Agent):
                 voice_idx = 1 if voice_idx == 0 else 0
             ctx.log(f"Voice settings for this revision: voice #{voice_idx + 1}, rate {rate}")
         ctx.set_inputs(script=ctx.upstream("script")["data"], languages=langs,
-                       voices={l: tts.voice_for(l, voice_idx) for l in langs})
+                       voices={l: tts.voice_for(l, voice_idx, n) for l in langs})
         outputs = {}
         max_total = 0.0
         for li, lang in enumerate(langs):
-            voice = tts.voice_for(lang, voice_idx)
+            voice = tts.voice_for(lang, voice_idx, n)
             ctx.log(f"Narrating {lang} with {voice}")
             vo, timings, total = await self._narrate(ctx, script, lang, voice, rate)
             if total > max_vo:
@@ -69,7 +104,7 @@ class Handler(Agent):
             ctx.log(f"{lang} voiceover: {total:.1f}s")
             ctx.progress(5 + 75 * (li + 1) / len(langs))
 
-        outputs["music"], licenses = await self._music(ctx, max_dur=max_total)
+        outputs["music"], licenses = await self._music(ctx, max_dur=max_total, n=n)
         ctx.progress(90)
         outputs["whoosh"] = "sfx/whoosh.mp3"
         ctx.path("sfx/whoosh.mp3")
@@ -110,7 +145,7 @@ class Handler(Agent):
         await ffmpeg.run([*inputs, "-filter_complex", graph, "-map", "[out]", "-c:a", "libmp3lame", "-q:a", "2", vo], ctx.run_dir)
         return vo, timings, await ffmpeg.duration(ctx.run_dir / vo)
 
-    async def _music(self, ctx: StepContext, max_dur: float = 55.0) -> tuple[str, dict]:
+    async def _music(self, ctx: StepContext, max_dur: float = 55.0, n: int = 0) -> tuple[str, dict]:
         bed_sec = max(70, int(max_dur) + 15)
         fade_st = bed_sec - 4
         library = ROOT / "library" / "music"
@@ -122,9 +157,11 @@ class Handler(Agent):
             await ffmpeg.run(["-i", str(track), "-t", str(bed_sec), "-af", f"afade=t=out:st={fade_st}:d=4", "-c:a", "libmp3lame", "-q:a", "4", "music.mp3"], ctx.run_dir)
             licenses = {"music": {"source": track.name, **meta}}
         else:
-            ctx.log("Generating an ambient music bed (no library tracks with license files found)")
-            await ffmpeg.run(["-f", "lavfi", "-i", f"aevalsrc='{pad_expression()}':s=44100:d={bed_sec}", "-af",
-                              f"lowpass=f=1800,aecho=0.8:0.7:120|240:0.25|0.15,afade=t=in:d=2,afade=t=out:st={fade_st}:d=4,volume=0.8",
+            variant = music_variant(n, random.Random(ctx.store.data.get("run_id", "")))
+            ctx.log(f"Generating an ambient music bed (no library tracks): progression #{n % len(PROGRESSIONS) + 1}, "
+                    f"transpose {variant['transpose']:+d}, {variant['chord_seconds']}s chords")
+            await ffmpeg.run(["-f", "lavfi", "-i", f"aevalsrc='{pad_expression(variant)}':s=44100:d={bed_sec}", "-af",
+                              f"lowpass=f={variant['lowpass']},aecho={variant['echo']},afade=t=in:d=2,afade=t=out:st={fade_st}:d=4,volume=0.8",
                               "-c:a", "libmp3lame", "-q:a", "4", "music.mp3"], ctx.run_dir)
             licenses = {"music": {"source": "generated by voice_audio agent (ffmpeg synthesis)", "license": "original work, no third-party rights"}}
         licenses["sfx"] = {"source": "generated by voice_audio agent (ffmpeg noise synthesis)", "license": "original work, no third-party rights"}

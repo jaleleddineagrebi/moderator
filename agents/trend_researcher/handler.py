@@ -47,14 +47,42 @@ class Handler(Agent):
                     None,
                 )
             if not active_pillar:
-                active_pillar = pillars[len(done_before) % len(pillars)]
+                active_pillar = pillars[history.count() % len(pillars)]
             ctx.log(f"Rotating viral pillar for this run: {active_pillar.get('name')} ({active_pillar.get('id')})")
 
         effective_niche = f"{niche} — Focus Pillar: {active_pillar['name']}" if active_pillar else niche
         ctx.set_inputs(niche=effective_niche, topic=topic, languages=langs)
 
+        is_long_run = str(p.get("format") or "short").lower() == "long"
         evidence = ""
-        if ctx.strategy == "web_and_youtube" and youtube.available():
+        if is_long_run and ctx.strategy == "web_and_youtube":
+            # long videos are found through search and suggested videos, so study long videos and what people type
+            search_focus = topic or (active_pillar["name"] if active_pillar else niche)
+            seed = " ".join(search_focus.split()[:4])
+            parts: list[str] = []
+            for lang in langs:
+                try:
+                    suggestions = await youtube.search_suggestions(seed, lang)
+                    if suggestions:
+                        parts.append(f"WHAT PEOPLE TYPE INTO YOUTUBE SEARCH ({lang}, autocomplete for '{seed}'):\n" + "\n".join(f"- {s}" for s in suggestions))
+                except Exception as e:  # noqa: BLE001 - evidence is optional
+                    ctx.log(f"YouTube suggestions failed ({lang}): {e}", "warning")
+                if youtube.available():
+                    try:
+                        top = await youtube.top_recent_long(search_focus, lang)
+                        if top:
+                            parts.append(f"TOP LONG VIDEOS (4-20 min) IN THE NICHE, last 120 days, by views per day ({lang}):\n" + json.dumps(top, ensure_ascii=False)[:9000])
+                    except Exception as e:  # noqa: BLE001
+                        ctx.log(f"YouTube long-video lookup failed ({lang}): {e}", "warning")
+            try:
+                from moderator.tools import channel_stats
+                own = await channel_stats.own_best("long")
+                if own:
+                    parts.append("OUR OWN BEST LONG VIDEOS SO FAR (learn what works for THIS channel):\n" + json.dumps(own, ensure_ascii=False))
+            except Exception as e:  # noqa: BLE001
+                ctx.log(f"Own channel stats unavailable: {e}", "warning")
+            evidence = "\n\n".join(parts)
+        elif ctx.strategy == "web_and_youtube" and youtube.available():
             ctx.log("Checking what performed in the niche over the last 14 days")
             data = {}
             search_focus = topic or (active_pillar["name"] if active_pillar else niche)
@@ -78,11 +106,13 @@ class Handler(Agent):
         tools = [] if ctx.strategy == "no_web" else ["WebSearch", "WebFetch"]
         is_long = str(p.get("format") or "short").lower() == "long"
         format_instructions = (
-            """Propose exactly 3 high-CTR 16:9 Long-Form Deep-Dive video ideas (3 to 4 minutes each), ranked best first for YouTube Home Page (Browse) impressions & subscriber conversion. Each must:
-- use a proven high-CTR multi-part or deep-dive structure (e.g. "7 Psychological Tricks That Work On 99% of People", "5 Hidden AI & Phone Tricks That Feel Illegal To Know", "What Happens To Your Body When You Don't Sleep For 36 Hours")
+            """Propose exactly 3 Long-Form Deep-Dive video ideas (4 to 5 minutes each), ranked best first. Long videos are discovered through YouTube SEARCH and SUGGESTED videos, so each idea must target something people actually search for: use the autocomplete phrases and the top long videos in the evidence below, and put the main search phrase in the first words of the working title. Each must:
+- be a focused explainer of ONE specific phenomenon, mystery, myth or mini-documentary story ("Why Your Brain Wakes You Up Right Before Your Alarm", "The Real Reason Supermarkets Have No Windows"), NOT a generic "7 tricks" list unless the evidence shows real demand for that exact list
+- have a clear promise a viewer can repeat in one sentence and a payoff that justifies 4-5 minutes
+- be clearly different from the channel's own earlier videos and from what the top videos already say: add a fresh angle, a surprising fact or a better explanation
 - work with dynamic stock video footage and AI visuals (no film clips, brands, celebrities, or copyrighted characters)
 - appeal to {langs} audiences ({sens})
-- have a gripping 5-second cold open hook that promises a life-changing edge or self-discovery test
+- have a gripping first 15 seconds that states the stakes and the promise
 - be factually solid (backed by real science, technology, or documented studies; note sources)"""
             if is_long else
             """Propose exactly 3 viral YouTube Short ideas, ranked best first for 80%+ Viewed-vs-Swiped-Away (VVSA), >105% Average Percentage Viewed (APV), and explosive subscriber & comment conversion.

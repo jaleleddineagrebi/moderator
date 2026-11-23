@@ -114,6 +114,9 @@ def main() -> None:
     up_p.add_argument("--approved-by", required=True, help="who approved the videos (recorded in state.json)")
     up_p.add_argument("--privacy", choices=["private", "unlisted", "public"], default="private")
     up_p.add_argument("--langs", help="comma-separated, default: the run's languages")
+    rep_p = sub.add_parser("channel-report", help="print a views report of the channel's Shorts vs long videos (needs YOUTUBE_API_KEY)")
+    rep_p.add_argument("--channel-id", default=None, help="default: YOUTUBE_CHANNEL_ID or the project's channel")
+    rep_p.add_argument("--json", action="store_true", help="print the raw statistics as JSON")
     th_p = sub.add_parser("set-thumbnail", help="upload the generated thumbnail(s) for an already-uploaded run")
     th_p.add_argument("run_dir", type=Path)
     tup_p = sub.add_parser("upload-tiktok", help="post an already-approved youtube_short run to TikTok")
@@ -200,6 +203,17 @@ def main() -> None:
         print(f"Scopes: upload + read-only (cannot edit or delete videos). For GitHub Actions, store the whole file "
               f"content as the repository secret {secret_name}.")
         return
+    if args.cmd == "channel-report":
+        import asyncio
+        import json as _json
+        from .tools import channel_stats
+        if not channel_stats.available():
+            raise SystemExit("YOUTUBE_API_KEY is not set (free key: Google Cloud Console -> YouTube Data API v3)")
+        name, videos = asyncio.run(channel_stats.fetch_videos(args.channel_id))
+        stats = channel_stats.summarize(videos)
+        sys.stdout.reconfigure(encoding="utf-8")
+        print(_json.dumps(stats, ensure_ascii=False, indent=2) if args.json else channel_stats.render_markdown(stats, name))
+        return
     if args.cmd == "tiktok-auth":
         from .tools import tiktok_upload
         path = tiktok_upload.authorize(args.redirect_uri, args.lang)
@@ -254,6 +268,9 @@ def main() -> None:
         sys.stdout.reconfigure(encoding="utf-8")
         for r in results:
             print(f"{r['lang']}: {r['url']} ({r['privacy']}) on '{r['channel']}'" + (f", thumbnail {r['thumbnail']}" if r.get("thumbnail") else ""))
+            for k, v in r.items():
+                if k.startswith("extra_"):
+                    print(f"{r['lang']}: {k[6:]}: {v}")
         return
     if args.cmd == "set-thumbnail":
         from googleapiclient.discovery import build

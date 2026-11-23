@@ -203,3 +203,20 @@ Until TikTok audits your app, TikTok forces every post to private (`SELF_ONLY`).
 UPDATE "Post" SET "youtubeShortId" = NULL WHERE "youtubeShortId" IS NOT NULL AND "youtubeShortId" !~ '^[A-Za-z0-9_-]{11}$';
 DELETE FROM "YouTubeShort" WHERE id !~ '^[A-Za-z0-9_-]{11}$';
 ```
+
+## 10. Long Videos That Get Views
+
+Long videos are discovered through YouTube **search** and **suggested videos**, so they follow different rules from Shorts. The `youtube_long` workflow now:
+
+- makes a **4 to 5.5 minute story** (cold open, chapters, open loops, pattern interrupts, a single question for the comments), narrated at a natural pace;
+- researches ideas from **search demand**: YouTube autocomplete, the top long videos of the last 120 days by views per day, and your own best long videos (needs `YOUTUBE_API_KEY`);
+- writes **real chapters** (`0:00 Intro`, ...) into the description and an **SRT caption file**, both built from the real voiceover timings;
+- mixes real footage with **AI concept images** for abstract scenes (visual mode `auto`, needs `GEMINI_API_KEY`).
+
+Long videos are **manual only** (Actions → *Generate Long Video* → Run workflow). The weekly schedule was removed because long videos were not getting views; publish one good video a week instead of many average ones.
+
+**Playlist and captions (optional).** Adding a video to a "Deep Dives" playlist and uploading its captions needs a broader YouTube permission than the upload token has (kept narrow on purpose, so a leaked secret cannot edit the channel). To turn it on, run `uv run python -m moderator optimize-channel` once locally (it creates `tokens/youtube_manage.json`) and store that file's content as the repository secret `YOUTUBE_MANAGE_TOKEN`. Without it, uploads work exactly as before and the extras are skipped. YouTube has no API for pinned comments or end screens: set an end-screen template once in YouTube Studio.
+
+**Weekly report.** The `Channel Report` workflow (Mondays, or run it by hand) lists your Shorts and long videos with views, the best and the weakest, in the run summary and in one open issue named *Weekly channel report*. It needs the secret `YOUTUBE_API_KEY`. Locally: `uv run python -m moderator channel-report`. CTR and average view duration are only in YouTube Studio, because they need a different permission.
+
+**If views stay at zero**, check YouTube Studio first: videos uploaded through an API project that has not passed YouTube's audit are locked as private.

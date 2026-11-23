@@ -9,8 +9,9 @@ LANGS = {
         "audience": "Global English-speaking audience (US, UK, Canada, Australia, international viewers)",
         "writing": ("Natural spoken English, addressing the viewer directly as 'you'. "
                     "Short punchy sentences, everyday words, active voice, easy to say aloud."),
-        # first voice is used normally; the others are retry fallbacks
-        "voices": ["en-US-AndrewMultilingualNeural", "en-US-AriaNeural", "en-GB-RyanNeural"],
+        # pool of voices: each video uses the next one in turn (see tts.voice_for); a retry moves on to the following voice
+        "voices": ["en-US-AndrewMultilingualNeural", "en-US-AvaMultilingualNeural", "en-US-BrianMultilingualNeural",
+                   "en-US-EmmaMultilingualNeural", "en-GB-RyanNeural"],
         "words_per_second": 2.75,
         "sensitive_notes": "Avoid misleading medical/financial claims, hate speech, or graphic topics.",
     },
@@ -18,7 +19,8 @@ LANGS = {
         "name": "French",
         "audience": "French-speaking audience (France, Belgium, Switzerland, Québec, francophone Africa)",
         "writing": 'Natural spoken French, addressing the viewer as "tu". Short sentences, everyday words.',
-        "voices": ["fr-FR-HenriNeural", "fr-FR-DeniseNeural", "fr-FR-RemyMultilingualNeural"],
+        "voices": ["fr-FR-HenriNeural", "fr-FR-DeniseNeural", "fr-FR-RemyMultilingualNeural",
+                   "fr-FR-VivienneMultilingualNeural", "fr-FR-EloiseNeural"],
         "words_per_second": 2.35,
         "sensitive_notes": "Avoid misleading medical/financial claims or sensationalist clickbait.",
     },
