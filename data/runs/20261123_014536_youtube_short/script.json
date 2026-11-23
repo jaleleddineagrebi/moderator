@@ -9,11 +9,11 @@
         "en": "YOU CANNOT SAY THIS"
       },
       "visual": {
-        "description": "Extreme close-up of a man's eyes widening in shock against a dark background.",
+        "description": "Macro close-up of a man's intense, wide-open eyes staring directly into the lens.",
         "search_terms": [
-          "man shocked eyes",
-          "surprised face macro",
-          "staring intensely"
+          "man staring intense",
+          "eyes wide open",
+          "macro eye pupil"
         ],
         "prefer": "video"
       },
@@ -21,17 +21,17 @@
     },
     {
       "vo": {
-        "en": "It is a glitch in your brain hardware that literally locks your speech."
+        "en": "This is a mechanical lockout where your body’s physical architecture fails your intent."
       },
       "on_screen": {
-        "en": "BRAIN HARDWARE GLITCH"
+        "en": "PHYSICAL MECHANICAL LOCK"
       },
       "visual": {
-        "description": "Abstract digital data streaming and glitching rapidly like a broken computer.",
+        "description": "A heavy vintage iron padlock snapping shut in slow motion against a dark background.",
         "search_terms": [
-          "digital glitch effect",
-          "cyber code matrix",
-          "abstract data motion"
+          "padlock locking close",
+          "iron lock mechanism",
+          "security bolt snapping"
         ],
         "prefer": "video"
       },
@@ -39,17 +39,17 @@
     },
     {
       "vo": {
-        "en": "Grab your tongue with two fingers and try to say: The weather is nice today."
+        "en": "Pinch your tongue with two fingers right now and say: The weather is nice today."
       },
       "on_screen": {
-        "en": "HOLD YOUR TONGUE NOW"
+        "en": "HOLD YOUR TONGUE"
       },
       "visual": {
-        "description": "Close up of a man's hand reaching toward the camera as if to grab something.",
+        "description": "Extreme close-up of a man's fingers performing a pinching motion toward the viewer.",
         "search_terms": [
-          "man hand reaching",
-          "fingers grasping close-up",
-          "hand gesture motion"
+          "fingers pinching motion",
+          "hand gesture closeup",
+          "man hands grasping"
         ],
         "prefer": "video"
       },
@@ -57,17 +57,17 @@
     },
     {
       "vo": {
-        "en": "But here is the creepy part: you sound exactly like a toddler."
+        "en": "Wait until you hear how broken your voice sounds."
       },
       "on_screen": {
-        "en": "THE CREEPY PART"
+        "en": "YOUR VOICE IS BROKEN"
       },
       "visual": {
-        "description": "Fast-paced shots of an old-fashioned tape recorder spinning its reels.",
+        "description": "Dynamic digital audio waveform glitching and jumping erratically on a screen.",
         "search_terms": [
-          "vintage tape recorder",
-          "audio reel spinning",
-          "analog device"
+          "audio waveform glitch",
+          "sound frequency moving",
+          "digital signal noise"
         ],
         "prefer": "video"
       },
@@ -75,17 +75,17 @@
     },
     {
       "vo": {
-        "en": "Your brain loses the ability to coordinate your glottis and your tongue muscles simultaneously."
+        "en": "You aren’t glitching; you are physically blocking the primary articulator needed for human speech."
       },
       "on_screen": {
-        "en": "SPEECH COORDINATION LOST"
+        "en": "ARTICULATORS ARE BLOCKED"
       },
       "visual": {
-        "description": "Macro shot of mechanical gears grinding and struggling to turn together.",
+        "description": "A 3D medical animation of a human jaw and skeletal structure showing movement.",
         "search_terms": [
-          "gears turning mechanism",
-          "industrial clockwork",
-          "metallic friction"
+          "human skull jaw",
+          "anatomical mouth model",
+          "skeletal head movement"
         ],
         "prefer": "video"
       },
@@ -93,17 +93,17 @@
     },
     {
       "vo": {
-        "en": "It proves your motor cortex is hard-wired for specific mouth shapes that you can't override."
+        "en": "Clear phonation requires precise tongue placements against your palate that you have made impossible."
       },
       "on_screen": {
-        "en": "HARD-WIRED MOTOR CORTEX"
+        "en": "IMPOSSIBLE PLACEMENT"
       },
       "visual": {
-        "description": "A dense network of glowing blue wires or neurons pulsing with electricity.",
+        "description": "Rapid scrolling through complex architectural blueprints and technical schematics.",
         "search_terms": [
-          "glowing neural network",
-          "electric circuit board",
-          "abstract blue wires"
+          "blueprint technical plan",
+          "complex schematic drawing",
+          "architectural details scrolling"
         ],
         "prefer": "video"
       },
@@ -111,17 +111,17 @@
     },
     {
       "vo": {
-        "en": "Try it again and notice how your brain panics trying to find the letters."
+        "en": "Your vocal cords strain to compensate, but the mechanical path is completely shut down."
       },
       "on_screen": {
-        "en": "BRAIN PANIC TEST"
+        "en": "PATHWAY SHUT DOWN"
       },
       "visual": {
-        "description": "A man rubbing his forehead in frustration while sitting in a dimly lit office.",
+        "description": "Internal view of massive mechanical gears grinding to a halt with sparks.",
         "search_terms": [
-          "man stressed thinking",
-          "frustrated person sitting",
-          "troubled expression"
+          "gears grinding stop",
+          "industrial machine failure",
+          "metallic clockwork motion"
         ],
         "prefer": "video"
       },
@@ -129,17 +129,17 @@
     },
     {
       "vo": {
-        "en": "Subscribe for tomorrow's brain hack and comment FAILED if you sounded weird, which is exactly why..."
+        "en": "Subscribe for tomorrow’s body hack and comment FAILED if you sounded like a toddler, which is exactly why..."
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "A finger pressing a glowing red button in a dark room.",
+        "description": "A man's hand pressing a large glowing red button in a dark room.",
         "search_terms": [
           "finger pressing button",
-          "glowing red switch",
-          "action click close-up"
+          "red light switch",
+          "hand hitting trigger"
         ],
         "prefer": "video"
       },
@@ -151,6 +151,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 37.8
+    "en": 37.1
   }
 }

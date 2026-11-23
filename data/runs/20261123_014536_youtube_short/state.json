@@ -69,11 +69,11 @@
   "ended_at": null,
   "revision_rounds": 1,
   "cost": {
-    "total_usd": 0.012229,
+    "total_usd": 0.020552,
     "budget_usd": 1.0,
     "by_agent": {
       "trend_researcher": 0.002737,
-      "scriptwriter": 0.00618,
+      "scriptwriter": 0.014502,
       "packaging": 0.000473,
       "qa_reviewer": 0.002839
     }
@@ -366,10 +366,10 @@
         "research"
       ],
       "checkpoint": "B",
-      "status": "running",
-      "progress": 10,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-23T01:48:17+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-23T01:51:09+00:00",
       "attempt": 2,
       "retries": 0,
       "max_retries": 2,
@@ -435,6 +435,26 @@
           "ts": "2026-11-23T01:48:47+00:00",
           "level": "warning",
           "msg": "Gemini connection timed out on default route; retrying over IPv4"
+        },
+        {
+          "ts": "2026-11-23T01:51:09+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3-flash-preview) answered in 172.0s (tokens in 2197, out 1075, thinking 1333)"
+        },
+        {
+          "ts": "2026-11-23T01:51:09+00:00",
+          "level": "info",
+          "msg": "Estimated narration: en 37.1s"
+        },
+        {
+          "ts": "2026-11-23T01:51:09+00:00",
+          "level": "info",
+          "msg": "Finished, waiting for your approval"
+        },
+        {
+          "ts": "2026-11-23T01:51:09+00:00",
+          "level": "info",
+          "msg": "Approved by schedule (auto-approve)"
         }
       ],
       "errors": [],
@@ -445,7 +465,7 @@
           "comment": "QA found:\n[en] accuracy review: The claim that it's a 'glitch in your brain hardware' or your 'brain panics' is scientifically inaccurate. You cannot produce the sounds because you are physically obstructing your articulators (the tongue), preventing the mechanical movement required for phonation, not because of a neural override or brain failure. Rephrase to focus on the physical impossibility rather than a neurological glitch."
         }
       ],
-      "cost_usd": 0.00618
+      "cost_usd": 0.014502
     },
     "visuals": {
       "title": "Source scene visuals",
@@ -454,11 +474,11 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "needs_revision",
+      "status": "running",
       "progress": 0,
-      "started_at": "2026-11-23T01:46:25+00:00",
-      "ended_at": "2026-11-23T01:47:24+00:00",
-      "attempt": 1,
+      "started_at": "2026-11-23T01:51:09+00:00",
+      "ended_at": null,
+      "attempt": 2,
       "retries": 0,
       "max_retries": 2,
       "strategy": "stock_video",
@@ -540,6 +560,26 @@
           "ts": "2026-11-23T01:48:17+00:00",
           "level": "warning",
           "msg": "Sent back by qa: QA found:\n[all] people rule: scene_06: a woman is shown including her shoulder, arm, and hand in the first and second frames. Replace with footage without women (a face-only close-up is the only exception)."
+        },
+        {
+          "ts": "2026-11-23T01:51:09+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'stock_video'"
+        },
+        {
+          "ts": "2026-11-23T01:51:09+00:00",
+          "level": "info",
+          "msg": "Revision feedback: QA found:\n[all] people rule: scene_06: a woman is shown including her shoulder, arm, and hand in the first and second frames. Replace with footage without women (a face-only close-up is the only exception)."
+        },
+        {
+          "ts": "2026-11-23T01:51:09+00:00",
+          "level": "info",
+          "msg": "Visual diversity: excluding 300 footage sources used in recent Shorts"
+        },
+        {
+          "ts": "2026-11-23T01:51:09+00:00",
+          "level": "info",
+          "msg": "Replacing scene_06; keeping 0 unchanged scene(s)"
         }
       ],
       "errors": [],
@@ -559,12 +599,12 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "queued",
+      "status": "running",
       "progress": 0,
-      "started_at": "2026-11-23T01:46:34+00:00",
-      "ended_at": "2026-11-23T01:46:59+00:00",
-      "attempt": 2,
-      "retries": 0,
+      "started_at": "2026-11-23T01:51:19+00:00",
+      "ended_at": null,
+      "attempt": 4,
+      "retries": 1,
       "max_retries": 2,
       "strategy": "alternate_voice",
       "inputs": {
@@ -624,11 +664,42 @@
           "ts": "2026-11-23T01:48:17+00:00",
           "level": "info",
           "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-23T01:51:09+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'primary_voice'"
+        },
+        {
+          "ts": "2026-11-23T01:51:09+00:00",
+          "level": "info",
+          "msg": "Narrating en with en-US-AndrewMultilingualNeural"
+        },
+        {
+          "ts": "2026-11-23T01:51:18+00:00",
+          "level": "error",
+          "msg": "NoAudioReceived: No audio was received. Please verify that your parameters are correct."
+        },
+        {
+          "ts": "2026-11-23T01:51:19+00:00",
+          "level": "info",
+          "msg": "Attempt 2/3, strategy 'alternate_voice'"
+        },
+        {
+          "ts": "2026-11-23T01:51:19+00:00",
+          "level": "info",
+          "msg": "Narrating en with en-US-AriaNeural"
         }
       ],
       "errors": [
         {
           "ts": "2026-11-23T01:46:33+00:00",
+          "attempt": 1,
+          "strategy": "primary_voice",
+          "error": "NoAudioReceived: No audio was received. Please verify that your parameters are correct."
+        },
+        {
+          "ts": "2026-11-23T01:51:18+00:00",
           "attempt": 1,
           "strategy": "primary_voice",
           "error": "NoAudioReceived: No audio was received. Please verify that your parameters are correct."
@@ -933,11 +1004,11 @@
       "type": "approve",
       "step": "script",
       "route_to": "script",
-      "status": "idle",
+      "status": "approved",
       "options": [],
       "choice": null,
       "comment": null,
-      "decided_at": "2026-11-23T01:46:25+00:00"
+      "decided_at": "2026-11-23T01:51:09+00:00"
     },
     "C": {
       "title": "Approve the final videos (never uploaded without your OK)",
@@ -954,7 +1025,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-23T01:49:00+00:00",
+    "exported_at": "2026-11-23T01:51:22+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/45096319147"
   }

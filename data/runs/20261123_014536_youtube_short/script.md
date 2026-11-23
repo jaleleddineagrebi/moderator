@@ -1,26 +1,26 @@
 # The Paralyzed Tongue Glitch
-Estimated narration: en 37.8s
+Estimated narration: en 37.1s
 
-## scene_01 · Extreme close-up of a man's eyes widening in shock against a dark background.
+## scene_01 · Macro close-up of a man's intense, wide-open eyes staring directly into the lens.
 EN  [YOU CANNOT SAY THIS]  You physically cannot say this.
 
-## scene_02 · Abstract digital data streaming and glitching rapidly like a broken computer.
-EN  [BRAIN HARDWARE GLITCH]  It is a glitch in your brain hardware that literally locks your speech.
+## scene_02 · A heavy vintage iron padlock snapping shut in slow motion against a dark background.
+EN  [PHYSICAL MECHANICAL LOCK]  This is a mechanical lockout where your body’s physical architecture fails your intent.
 
-## scene_03 · Close up of a man's hand reaching toward the camera as if to grab something.
-EN  [HOLD YOUR TONGUE NOW]  Grab your tongue with two fingers and try to say: The weather is nice today.
+## scene_03 · Extreme close-up of a man's fingers performing a pinching motion toward the viewer.
+EN  [HOLD YOUR TONGUE]  Pinch your tongue with two fingers right now and say: The weather is nice today.
 
-## scene_04 · Fast-paced shots of an old-fashioned tape recorder spinning its reels.
-EN  [THE CREEPY PART]  But here is the creepy part: you sound exactly like a toddler.
+## scene_04 · Dynamic digital audio waveform glitching and jumping erratically on a screen.
+EN  [YOUR VOICE IS BROKEN]  Wait until you hear how broken your voice sounds.
 
-## scene_05 · Macro shot of mechanical gears grinding and struggling to turn together.
-EN  [SPEECH COORDINATION LOST]  Your brain loses the ability to coordinate your glottis and your tongue muscles simultaneously.
+## scene_05 · A 3D medical animation of a human jaw and skeletal structure showing movement.
+EN  [ARTICULATORS ARE BLOCKED]  You aren’t glitching; you are physically blocking the primary articulator needed for human speech.
 
-## scene_06 · A dense network of glowing blue wires or neurons pulsing with electricity.
-EN  [HARD-WIRED MOTOR CORTEX]  It proves your motor cortex is hard-wired for specific mouth shapes that you can't override.
+## scene_06 · Rapid scrolling through complex architectural blueprints and technical schematics.
+EN  [IMPOSSIBLE PLACEMENT]  Clear phonation requires precise tongue placements against your palate that you have made impossible.
 
-## scene_07 · A man rubbing his forehead in frustration while sitting in a dimly lit office.
-EN  [BRAIN PANIC TEST]  Try it again and notice how your brain panics trying to find the letters.
+## scene_07 · Internal view of massive mechanical gears grinding to a halt with sparks.
+EN  [PATHWAY SHUT DOWN]  Your vocal cords strain to compensate, but the mechanical path is completely shut down.
 
-## scene_08 · A finger pressing a glowing red button in a dark room.
-EN  [SUBSCRIBE 🔔]  Subscribe for tomorrow's brain hack and comment FAILED if you sounded weird, which is exactly why...
+## scene_08 · A man's hand pressing a large glowing red button in a dark room.
+EN  [SUBSCRIBE 🔔]  Subscribe for tomorrow’s body hack and comment FAILED if you sounded like a toddler, which is exactly why...
