@@ -510,7 +510,7 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 0,
+      "progress": 48,
       "started_at": "2026-11-23T12:53:21+00:00",
       "ended_at": null,
       "attempt": 3,
@@ -660,6 +660,26 @@
           "ts": "2026-11-23T12:53:21+00:00",
           "level": "info",
           "msg": "Visual diversity: excluding 300 footage sources used in recent Shorts"
+        },
+        {
+          "ts": "2026-11-23T12:53:31+00:00",
+          "level": "info",
+          "msg": "scene_02: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-23T12:53:39+00:00",
+          "level": "info",
+          "msg": "scene_01: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-23T12:53:41+00:00",
+          "level": "info",
+          "msg": "scene_03: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-23T12:53:43+00:00",
+          "level": "info",
+          "msg": "scene_04: stock_video (pixabay)"
         }
       ],
       "errors": [],
@@ -674,7 +694,7 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 0,
+      "progress": 80,
       "started_at": "2026-11-23T12:53:21+00:00",
       "ended_at": null,
       "attempt": 3,
@@ -763,6 +783,16 @@
           "ts": "2026-11-23T12:53:21+00:00",
           "level": "info",
           "msg": "Narrating en with en-US-EmmaMultilingualNeural"
+        },
+        {
+          "ts": "2026-11-23T12:53:47+00:00",
+          "level": "info",
+          "msg": "en voiceover: 41.5s"
+        },
+        {
+          "ts": "2026-11-23T12:53:47+00:00",
+          "level": "info",
+          "msg": "Generating an ambient music bed (no library tracks): progression #1, transpose +1, 6s chords"
         }
       ],
       "errors": [],
@@ -1166,7 +1196,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-23T12:53:27+00:00",
+    "exported_at": "2026-11-23T12:53:51+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/45177594869"
   }
