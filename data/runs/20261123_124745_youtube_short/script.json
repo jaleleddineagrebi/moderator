@@ -3,36 +3,36 @@
   "scenes": [
     {
       "vo": {
-        "en": "Type star-hash-twenty-one-hash right now."
+        "en": "Type star-hash-twenty-one-hash into your phone right now."
       },
       "on_screen": {
         "en": "TYPE *#21# NOW"
       },
       "visual": {
-        "description": "A close-up shot of a man's hand typing the code *#21# on a smartphone keypad.",
+        "description": "Macro shot of a man's thumb pressing the star and hash keys on a bright smartphone keypad.",
         "search_terms": [
           "man finger dialing",
-          "smartphone screen close",
-          "hand holding phone"
+          "phone keypad close",
+          "smartphone hand"
         ],
         "prefer": "video"
       },
-      "chapter": "Hidden Privacy Code",
+      "chapter": "Check Your Status",
       "id": "scene_01"
     },
     {
       "vo": {
-        "en": "This code reveals where your calls and messages are automatically being forwarded when you're offline."
+        "en": "This command checks if your calls or text messages are secretly being forwarded to another number."
       },
       "on_screen": {
-        "en": "WHERE ARE CALLS GOING?"
+        "en": "CHECK YOUR FORWARDING"
       },
       "visual": {
-        "description": "Abstract binary code flowing vertically across a dark blue digital interface.",
+        "description": "A digital map of the world with glowing lines connecting different nodes across continents.",
         "search_terms": [
-          "mobile phone display",
-          "matrix data stream",
-          "digital lock icon"
+          "digital network connection",
+          "signal waves blue",
+          "map data dots"
         ],
         "prefer": "video"
       },
@@ -41,17 +41,17 @@
     },
     {
       "vo": {
-        "en": "Just hit the dial button and wait for the hidden status menu to pop up."
+        "en": "Hit dial and wait for the hidden settings menu to appear on your screen."
       },
       "on_screen": {
-        "en": "WAIT FOR RESULTS"
+        "en": "WAIT FOR MENU"
       },
       "visual": {
-        "description": "A man sitting at a desk at night, illuminated by the glow of a screen, waiting.",
+        "description": "Close-up of a man's finger hovering over the green call button with a sense of anticipation.",
         "search_terms": [
-          "man waiting impatiently",
-          "loading circle animation",
-          "office desk night"
+          "fingertip hovering phone",
+          "man waiting screen",
+          "digital clock ticking"
         ],
         "prefer": "video"
       },
@@ -60,17 +60,17 @@
     },
     {
       "vo": {
-        "en": "But wait until you see the second code that resets your entire phone privacy."
+        "en": "But wait until you see the second code that clears everything instantly."
       },
       "on_screen": {
-        "en": "THE PRIVACY RESET"
+        "en": "THE SECOND CODE"
       },
       "visual": {
-        "description": "A cinematic shot of a professional surveillance camera rotating on a building corner.",
+        "description": "A man looking intensely at a phone screen in a dimly lit room, his face illuminated by the blue light.",
         "search_terms": [
-          "cctv camera rotating",
-          "security system monitor",
-          "city surveillance view"
+          "man face reaction",
+          "surprised person close",
+          "security light flash"
         ],
         "prefer": "video"
       },
@@ -79,36 +79,36 @@
     },
     {
       "vo": {
-        "en": "If any category shows 'Enabled', your personal data is going to a number you didn't authorize."
+        "en": "If any category says 'Enabled', your personal incoming calls are going to an unauthorized destination."
       },
       "on_screen": {
-        "en": "UNAUTHORIZED DATA FORWARDING"
+        "en": "IS IT ENABLED?"
       },
       "visual": {
-        "description": "Blue and white indicator lights flashing on a wall of servers in a data center.",
+        "description": "A digital server rack with red flashing warning lights and a glitch effect on screen.",
         "search_terms": [
-          "blinking server lights",
-          "datacenter aisle tech",
-          "blue glowing wires"
+          "server error warning",
+          "red digital glitch",
+          "data lock alert"
         ],
         "prefer": "video"
       },
-      "chapter": "",
+      "chapter": "Secure Your Line",
       "id": "scene_05"
     },
     {
       "vo": {
-        "en": "To clear it, dial hash-hash-zero-zero-two-hash right now to wipe all active forwarding settings."
+        "en": "To fix it, dial hash-hash-zero-zero-two-hash to immediately disable all active call forwarding."
       },
       "on_screen": {
-        "en": "WIPE ALL SETTINGS"
+        "en": "DISABLE IT NOW"
       },
       "visual": {
-        "description": "Close up of a hand performing a clean swipe across a smartphone screen.",
+        "description": "A man's hands rapidly typing the hash-hash-zero-zero-two-hash code on a sleek mobile device.",
         "search_terms": [
-          "man hand swiping",
-          "deleting data screen",
-          "phone settings menu"
+          "hand entering code",
+          "phone screen swipe",
+          "technology keypad"
         ],
         "prefer": "video"
       },
@@ -117,17 +117,17 @@
     },
     {
       "vo": {
-        "en": "Subscribe for tomorrow’s hidden digital defense and comment 'SAFE' if your status was disabled."
+        "en": "This simple reset ensures your privacy stays yours and your data remains local."
       },
       "on_screen": {
-        "en": "COMMENT 'SAFE' BELOW"
+        "en": "SECURE YOUR PHONE"
       },
       "visual": {
-        "description": "Close up of fingers typing rapidly on a modern mechanical laptop keyboard.",
+        "description": "A glowing green shield icon pulsing in the center of a dark digital interface.",
         "search_terms": [
-          "mouse click animation",
-          "subscribe button press",
-          "computer keyboard man"
+          "shield icon glow",
+          "green binary check",
+          "cyber security lock"
         ],
         "prefer": "video"
       },
@@ -136,17 +136,17 @@
     },
     {
       "vo": {
-        "en": "Keeping your identity protected starts the second you..."
+        "en": "Subscribe for tomorrow's hidden digital defense and comment 'SAFE' if yours was disabled, which is exactly why you should..."
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "Fast-paced flight through a neon digital tunnel with glowing circuit patterns.",
+        "description": "A fast-moving camera flight through a neon-lit digital tunnel of circuit board patterns.",
         "search_terms": [
-          "cyber tunnel motion",
-          "digital neon highway",
-          "electronic circuit background"
+          "abstract neon tunnel",
+          "digital stream fast",
+          "keyboard typing man"
         ],
         "prefer": "video"
       },
@@ -159,6 +159,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 36.0
+    "en": 39.3
   }
 }
