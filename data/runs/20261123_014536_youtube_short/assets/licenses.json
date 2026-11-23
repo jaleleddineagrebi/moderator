@@ -1,0 +1,82 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-302098/",
+    "author": "TonyDias7",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man shocked eyes",
+    "description": "Extreme close-up of a man's eyes widening in shock against a dark background."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-199015/",
+    "author": "draisthetic",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "digital glitch effect",
+    "description": "Abstract digital data streaming and glitching rapidly like a broken computer."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-183449/",
+    "author": "Amorn_mimi",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man hand reaching",
+    "description": "Close up of a man's hand reaching toward the camera as if to grab something."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-8573/",
+    "author": "FlanellKamerasFilm",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "vintage tape recorder",
+    "description": "Fast-paced shots of an old-fashioned tape recorder spinning its reels."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-212000/",
+    "author": "TungArt7",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "gears turning mechanism",
+    "description": "Macro shot of mechanical gears grinding and struggling to turn together."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-210573/",
+    "author": "u_xhp5h45w73",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "glowing neural network",
+    "description": "A dense network of glowing blue wires or neurons pulsing with electricity."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-126558/",
+    "author": "SoyKhaler",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man stressed thinking",
+    "description": "A man rubbing his forehead in frustration while sitting in a dimly lit office."
+  },
+  {
+    "scene": "scene_08",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-224387/",
+    "author": "Engin_Akyurt",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "finger pressing button",
+    "description": "A finger pressing a glowing red button in a dark room."
+  }
+]

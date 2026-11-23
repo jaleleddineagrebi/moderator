@@ -1,0 +1,59 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:02.58,Headline,,0,0,0,,{\fad(150,150)}YOU CANNOT SAY THIS
+Dialogue: 1,0:00:02.68,0:00:06.87,Headline,,0,0,0,,{\fad(150,150)}BRAIN HARDWARE GLITCH
+Dialogue: 1,0:00:06.97,0:00:11.62,Headline,,0,0,0,,{\fad(150,150)}HOLD YOUR TONGUE NOW
+Dialogue: 1,0:00:11.72,0:00:15.81,Headline,,0,0,0,,{\fad(150,150)}THE CREEPY PART
+Dialogue: 1,0:00:15.91,0:00:21.62,Headline,,0,0,0,,{\fad(150,150)}SPEECH COORDINATION LOST
+Dialogue: 1,0:00:21.72,0:00:27.39,Headline,,0,0,0,,{\fad(150,150)}HARD-WIRED MOTOR CORTEX
+Dialogue: 1,0:00:27.49,0:00:31.88,Headline,,0,0,0,,{\fad(150,150)}BRAIN PANIC TEST
+Dialogue: 1,0:00:31.98,0:00:38.55,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 0,0:00:00.10,0:00:01.10,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You {\c&H0000E5FF&}physically{\c&H00FFFFFF&} cannot
+Dialogue: 0,0:00:01.11,0:00:01.71,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}say this
+Dialogue: 0,0:00:02.73,0:00:03.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It is a
+Dialogue: 0,0:00:03.11,0:00:03.67,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}glitch{\c&H00FFFFFF&} in your
+Dialogue: 0,0:00:03.69,0:00:04.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}brain {\c&H0000E5FF&}hardware{\c&H00FFFFFF&} that
+Dialogue: 0,0:00:04.62,0:00:05.47,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}literally{\c&H00FFFFFF&} locks your
+Dialogue: 0,0:00:05.48,0:00:06.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}speech
+Dialogue: 0,0:00:07.02,0:00:07.69,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Grab your {\c&H0000E5FF&}tongue{\c&H00FFFFFF&}
+Dialogue: 0,0:00:07.71,0:00:08.48,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}with two {\c&H0000E5FF&}fingers{\c&H00FFFFFF&}
+Dialogue: 0,0:00:08.49,0:00:08.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and try to
+Dialogue: 0,0:00:08.94,0:00:09.89,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}say The {\c&H0000E5FF&}weather{\c&H00FFFFFF&}
+Dialogue: 0,0:00:09.90,0:00:10.75,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is nice {\c&H0000E5FF&}today{\c&H00FFFFFF&}
+Dialogue: 0,0:00:11.77,0:00:12.26,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}But {\c&H0000E5FF&}here{\c&H00FFFFFF&} is
+Dialogue: 0,0:00:12.27,0:00:13.06,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}creepy{\c&H00FFFFFF&} part
+Dialogue: 0,0:00:13.23,0:00:14.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you sound {\c&H0000E5FF&}exactly{\c&H00FFFFFF&}
+Dialogue: 0,0:00:14.16,0:00:14.94,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}like a {\c&H0000E5FF&}toddler{\c&H00FFFFFF&}
+Dialogue: 0,0:00:15.96,0:00:16.87,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}brain{\c&H00FFFFFF&} loses
+Dialogue: 0,0:00:16.88,0:00:17.57,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}ability{\c&H00FFFFFF&} to
+Dialogue: 0,0:00:17.58,0:00:18.77,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}coordinate{\c&H00FFFFFF&} your glottis
+Dialogue: 0,0:00:18.78,0:00:19.39,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and your {\c&H0000E5FF&}tongue{\c&H00FFFFFF&}
+Dialogue: 0,0:00:19.41,0:00:20.74,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}muscles {\c&H0000E5FF&}simultaneously{\c&H00FFFFFF&}
+Dialogue: 0,0:00:21.76,0:00:22.39,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It {\c&H0000E5FF&}proves{\c&H00FFFFFF&} your
+Dialogue: 0,0:00:22.40,0:00:23.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}motor {\c&H0000E5FF&}cortex{\c&H00FFFFFF&} is
+Dialogue: 0,0:00:23.36,0:00:24.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}hard-wired{\c&H00FFFFFF&} for specific
+Dialogue: 0,0:00:24.71,0:00:25.50,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}mouth {\c&H0000E5FF&}shapes{\c&H00FFFFFF&} that
+Dialogue: 0,0:00:25.51,0:00:26.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you can't {\c&H0000E5FF&}override{\c&H00FFFFFF&}
+Dialogue: 0,0:00:27.54,0:00:28.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Try it {\c&H0000E5FF&}again{\c&H00FFFFFF&}
+Dialogue: 0,0:00:28.25,0:00:28.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and {\c&H0000E5FF&}notice{\c&H00FFFFFF&} how
+Dialogue: 0,0:00:28.84,0:00:29.73,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your brain {\c&H0000E5FF&}panics{\c&H00FFFFFF&}
+Dialogue: 0,0:00:29.75,0:00:30.39,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}trying{\c&H00FFFFFF&} to find
+Dialogue: 0,0:00:30.41,0:00:31.01,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}letters{\c&H00FFFFFF&}
+Dialogue: 0,0:00:32.02,0:00:33.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Subscribe for {\c&H0000E5FF&}tomorrow's{\c&H00FFFFFF&}
+Dialogue: 0,0:00:33.26,0:00:33.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}brain{\c&H00FFFFFF&} hack and
+Dialogue: 0,0:00:33.92,0:00:34.78,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} FAILED if
+Dialogue: 0,0:00:34.79,0:00:35.64,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you {\c&H0000E5FF&}sounded{\c&H00FFFFFF&} weird
+Dialogue: 0,0:00:35.91,0:00:36.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}which is {\c&H0000E5FF&}exactly{\c&H00FFFFFF&}
+Dialogue: 0,0:00:36.65,0:00:37.07,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}why
