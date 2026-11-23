@@ -470,7 +470,7 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 37,
+      "progress": 69,
       "started_at": "2026-11-23T12:50:54+00:00",
       "ended_at": null,
       "attempt": 2,
@@ -575,6 +575,21 @@
           "ts": "2026-11-23T12:51:15+00:00",
           "level": "info",
           "msg": "scene_02: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-23T12:51:22+00:00",
+          "level": "info",
+          "msg": "scene_05: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-23T12:51:34+00:00",
+          "level": "info",
+          "msg": "scene_06: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-23T12:51:37+00:00",
+          "level": "info",
+          "msg": "scene_04: stock_video (pixabay)"
         }
       ],
       "errors": [],
@@ -589,7 +604,7 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 0,
+      "progress": 80,
       "started_at": "2026-11-23T12:50:54+00:00",
       "ended_at": null,
       "attempt": 2,
@@ -648,6 +663,16 @@
           "ts": "2026-11-23T12:50:54+00:00",
           "level": "info",
           "msg": "Narrating en with en-US-EmmaMultilingualNeural"
+        },
+        {
+          "ts": "2026-11-23T12:51:24+00:00",
+          "level": "info",
+          "msg": "en voiceover: 38.1s"
+        },
+        {
+          "ts": "2026-11-23T12:51:24+00:00",
+          "level": "info",
+          "msg": "Generating an ambient music bed (no library tracks): progression #1, transpose +1, 6s chords"
         }
       ],
       "errors": [],
@@ -956,7 +981,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-23T12:51:19+00:00",
+    "exported_at": "2026-11-23T12:51:40+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/45177594869"
   }
