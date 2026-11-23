@@ -1,0 +1,82 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-142641/",
+    "author": "u_etjkkdz15b",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man hand phone keypad",
+    "description": "A close-up shot of a man's hand typing the digits *#21# into a smartphone dialer."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-199015/",
+    "author": "draisthetic",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "digital matrix background",
+    "description": "Abstract digital data and binary code flowing across a dark background with a glowing lock icon."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-216696/",
+    "author": "NickyPe",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man sitting dark office",
+    "description": "A man in a dimly lit tech office waiting patiently while a loading animation circles on a device."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-126560/",
+    "author": "SoyKhaler",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man face surprise",
+    "description": "A man's face showing a realization of shock or concern as a security camera pans nearby."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-14906/",
+    "author": "cipnt",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "server rack blink",
+    "description": "Rows of glowing server racks in a cold, blue data center with blinking indicator lights."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-3176/",
+    "author": "Coverr-Free-Footage",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "phone reset screen",
+    "description": "Close-up of a finger aggressively swiping or resetting a phone screen with glitchy code overlay."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-71563/",
+    "author": "hamzaaslammiczon",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "notification bell animation",
+    "description": "A mouse cursor clicking on a digital notification bell or a man typing quickly on a laptop keyboard."
+  },
+  {
+    "scene": "scene_08",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-137357/",
+    "author": "Kmeel_com",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "techno tunnel light",
+    "description": "Fast-moving cinematic tunnel of neon lights and electronic circuits leading into darkness."
+  }
+]

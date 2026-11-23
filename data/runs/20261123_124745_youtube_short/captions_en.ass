@@ -1,0 +1,62 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:02.56,Headline,,0,0,0,,{\fad(150,150)}TYPE *#21# NOW
+Dialogue: 1,0:00:02.66,0:00:08.70,Headline,,0,0,0,,{\fad(150,150)}IS SOMEONE LISTENING?
+Dialogue: 1,0:00:08.80,0:00:13.42,Headline,,0,0,0,,{\fad(150,150)}WAIT FOR THE MENU
+Dialogue: 1,0:00:13.52,0:00:19.39,Headline,,0,0,0,,{\fad(150,150)}IT’S CREEPY
+Dialogue: 1,0:00:19.49,0:00:25.19,Headline,,0,0,0,,{\fad(150,150)}DATA IS REDIRECTED
+Dialogue: 1,0:00:25.29,0:00:31.62,Headline,,0,0,0,,{\fad(150,150)}KILL THE TRACKING
+Dialogue: 1,0:00:31.72,0:00:36.68,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 1,0:00:36.78,0:00:40.69,Headline,,0,0,0,,{\fad(150,150)}PROTECT YOURSELF
+Dialogue: 0,0:00:00.08,0:00:01.77,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Type {\c&H0000E5FF&}star-hash-twenty-one-hash{\c&H00FFFFFF&} right
+Dialogue: 0,0:00:01.79,0:00:02.19,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}now
+Dialogue: 0,0:00:02.71,0:00:03.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}This {\c&H0000E5FF&}secret{\c&H00FFFFFF&} MMI
+Dialogue: 0,0:00:03.73,0:00:04.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}code {\c&H0000E5FF&}reveals{\c&H00FFFFFF&} if
+Dialogue: 0,0:00:04.57,0:00:05.50,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}private{\c&H00FFFFFF&} calls
+Dialogue: 0,0:00:05.51,0:00:06.30,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}or {\c&H0000E5FF&}messages{\c&H00FFFFFF&} are
+Dialogue: 0,0:00:06.31,0:00:07.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}being {\c&H0000E5FF&}intercepted{\c&H00FFFFFF&} by
+Dialogue: 0,0:00:07.44,0:00:08.29,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}anyone{\c&H00FFFFFF&} else
+Dialogue: 0,0:00:08.82,0:00:09.66,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Just{\c&H00FFFFFF&} hit dial
+Dialogue: 0,0:00:09.75,0:00:10.22,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and {\c&H0000E5FF&}wait{\c&H00FFFFFF&} for
+Dialogue: 0,0:00:10.24,0:00:11.40,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the hidden {\c&H0000E5FF&}interrogation{\c&H00FFFFFF&}
+Dialogue: 0,0:00:11.41,0:00:12.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}menu{\c&H00FFFFFF&} to pop
+Dialogue: 0,0:00:12.13,0:00:12.53,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}up on your
+Dialogue: 0,0:00:12.53,0:00:13.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}screen
+Dialogue: 0,0:00:13.55,0:00:13.99,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}But {\c&H0000E5FF&}here{\c&H00FFFFFF&} is
+Dialogue: 0,0:00:14.01,0:00:14.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}creepy{\c&H00FFFFFF&} part
+Dialogue: 0,0:00:15.42,0:00:16.40,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}millions{\c&H00FFFFFF&} of users
+Dialogue: 0,0:00:16.41,0:00:17.30,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}find their {\c&H0000E5FF&}forwarding{\c&H00FFFFFF&}
+Dialogue: 0,0:00:17.32,0:00:18.46,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}status is {\c&H0000E5FF&}already{\c&H00FFFFFF&}
+Dialogue: 0,0:00:18.47,0:00:18.99,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}active
+Dialogue: 0,0:00:19.54,0:00:20.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}That {\c&H0000E5FF&}means{\c&H00FFFFFF&} your
+Dialogue: 0,0:00:20.13,0:00:21.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}data is {\c&H0000E5FF&}silently{\c&H00FFFFFF&}
+Dialogue: 0,0:00:21.25,0:00:22.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}being {\c&H0000E5FF&}redirected{\c&H00FFFFFF&} to
+Dialogue: 0,0:00:22.36,0:00:23.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a {\c&H0000E5FF&}third{\c&H00FFFFFF&} party
+Dialogue: 0,0:00:23.09,0:00:23.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}without{\c&H00FFFFFF&} you ever
+Dialogue: 0,0:00:23.86,0:00:24.79,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}giving {\c&H0000E5FF&}permission{\c&H00FFFFFF&}
+Dialogue: 0,0:00:25.34,0:00:25.81,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}If you see
+Dialogue: 0,0:00:25.82,0:00:28.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Enabled dial {\c&H0000E5FF&}hash-hash-zero-zero-two-hash{\c&H00FFFFFF&}
+Dialogue: 0,0:00:28.67,0:00:29.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}right{\c&H00FFFFFF&} away to
+Dialogue: 0,0:00:29.27,0:00:30.17,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}kill all {\c&H0000E5FF&}active{\c&H00FFFFFF&}
+Dialogue: 0,0:00:30.18,0:00:31.23,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}tracking {\c&H0000E5FF&}instantly{\c&H00FFFFFF&}
+Dialogue: 0,0:00:31.75,0:00:32.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Subscribe{\c&H00FFFFFF&} for more
+Dialogue: 0,0:00:32.72,0:00:33.81,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}hidden {\c&H0000E5FF&}digital{\c&H00FFFFFF&} defense
+Dialogue: 0,0:00:33.82,0:00:34.76,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}hacks and {\c&H0000E5FF&}comment{\c&H00FFFFFF&}
+Dialogue: 0,0:00:34.77,0:00:35.47,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}SAFE if {\c&H0000E5FF&}yours{\c&H00FFFFFF&}
+Dialogue: 0,0:00:35.48,0:00:36.27,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}was {\c&H0000E5FF&}disabled{\c&H00FFFFFF&}
+Dialogue: 0,0:00:36.82,0:00:37.57,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Privacy{\c&H00FFFFFF&} is a
+Dialogue: 0,0:00:37.58,0:00:38.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}choice{\c&H00FFFFFF&} you make
+Dialogue: 0,0:00:38.55,0:00:39.04,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}which{\c&H00FFFFFF&} is why
+Dialogue: 0,0:00:39.05,0:00:39.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you {\c&H0000E5FF&}must{\c&H00FFFFFF&}
