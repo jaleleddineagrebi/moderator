@@ -3,32 +3,32 @@
   "scenes": [
     {
       "vo": {
-        "en": "You cannot lift this finger. Your body has a secret hardware glitch you never noticed."
+        "en": "You cannot lift this finger."
       },
       "on_screen": {
         "en": "YOU CAN'T DO THIS"
       },
       "visual": {
-        "description": "A man's hand trembling slightly against a dark background with a subtle digital glitch overlay.",
+        "description": "Extreme close-up of a man's hand on a dark table, attempting to lift his ring finger with a subtle digital glitch effect.",
         "search_terms": [
           "man hand macro",
-          "digital glitch effect",
+          "digital glitch overlay",
           "hand twitching"
         ],
         "prefer": "video"
       },
-      "chapter": "The Finger Glitch",
+      "chapter": "The Body Glitch",
       "id": "scene_01"
     },
     {
       "vo": {
-        "en": "Put your hand flat on a table right now. Now, fold your middle finger all the way under your palm."
+        "en": "Put your hand flat on a table. Now, fold your middle finger all the way under your palm."
       },
       "on_screen": {
         "en": "HAND FLAT NOW"
       },
       "visual": {
-        "description": "A man placing his palm flat on a rustic wooden desk, preparing for a test.",
+        "description": "A man's hand pressing firmly onto a rustic wooden surface, middle finger tucking inward.",
         "search_terms": [
           "hand on table",
           "man folding finger",
@@ -41,17 +41,17 @@
     },
     {
       "vo": {
-        "en": "Press your knuckles down firm. Now, try to lift your ring finger off the table while keeping the others flat."
+        "en": "Press your knuckles down hard. Now, try to lift your ring finger off the table. It won't move."
       },
       "on_screen": {
         "en": "LIFT THE RING FINGER"
       },
       "visual": {
-        "description": "Extreme macro of a man's fingers trying to lift off a surface, muscles tensing visibly.",
+        "description": "A close-up shot of a man's hand muscles straining and tensing on a desk surface.",
         "search_terms": [
-          "straining fingers",
-          "hand close up",
-          "finger movement"
+          "straining hand muscles",
+          "finger lifting struggle",
+          "hand veins detail"
         ],
         "prefer": "video"
       },
@@ -60,17 +60,17 @@
     },
     {
       "vo": {
-        "en": "It’s literally impossible, right? But here is the creepy part: you are witnessing a biological design flaw."
+        "en": "Wait until you feel the tension. This isn't a trick; it's a real biological design flaw."
       },
       "on_screen": {
-        "en": "BODY SOFTWARE GLITCH"
+        "en": "BIOLOGICAL DESIGN FLAW"
       },
       "visual": {
-        "description": "Abstract glowing blue neural network or digital circuit board firing pulses rapidly.",
+        "description": "Abstract neon digital circuit lines pulsing rapidly like a computer processing data.",
         "search_terms": [
-          "abstract digital pulse",
-          "matrix background",
-          "cyber circuits"
+          "cyan circuit board",
+          "data processing animation",
+          "digital matrix pulse"
         ],
         "prefer": "video"
       },
@@ -79,17 +79,17 @@
     },
     {
       "vo": {
-        "en": "Your middle and ring fingers share the same deep flexor tendon. It's like two puppets controlled by one string."
+        "en": "Your middle and ring fingers share the same deep flexor tendon. They are literally tied together."
       },
       "on_screen": {
-        "en": "SHARED TENDONS"
+        "en": "TIED TOGETHER"
       },
       "visual": {
-        "description": "Hand-operated puppet strings being pulled together by a wooden crossbar in a dark room.",
+        "description": "A mechanical pulley system with thick cables moving in unison within an industrial setting.",
         "search_terms": [
-          "puppet strings moving",
-          "mechanical link",
-          "wooden puppet"
+          "mechanical pulley cable",
+          "industrial gears moving",
+          "connected wire system"
         ],
         "prefer": "video"
       },
@@ -98,17 +98,17 @@
     },
     {
       "vo": {
-        "en": "Since they are mechanically linked, tucking one paralyzes the other. Your hand is literally locked by its own anatomy."
+        "en": "Tucking one locks the other. It’s like a software error in your own human anatomy."
       },
       "on_screen": {
-        "en": "ANATOMICAL LOCKDOWN"
+        "en": "ANATOMY ERROR"
       },
       "visual": {
-        "description": "A heavy metal padlock snapping shut in slow motion with grit and sparks.",
+        "description": "A blue-tinted 3D medical render of a human hand skeleton showing the tendons.",
         "search_terms": [
-          "padlock locking",
-          "chain tension",
-          "metal lock"
+          "human hand skeleton",
+          "medical anatomy scan",
+          "hand tendons animation"
         ],
         "prefer": "video"
       },
@@ -117,17 +117,17 @@
     },
     {
       "vo": {
-        "en": "Subscribe for tomorrow's brain test and comment STUCK if you failed, which is exactly why..."
+        "en": "Subscribe for tomorrow's body hack and comment FAILED if you're stuck, which is exactly why..."
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "A man's thumb scrolling rapidly through a social media feed on a smartphone screen.",
+        "description": "A man's thumb rapidly scrolling through a smartphone screen with glowing light.",
         "search_terms": [
-          "man typing phone",
-          "commenting on screen",
-          "smartphone scroll"
+          "man scrolling phone",
+          "smartphone screen glow",
+          "fast hand movement"
         ],
         "prefer": "video"
       },
@@ -140,6 +140,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 45.5
+    "en": 37.5
   }
 }
