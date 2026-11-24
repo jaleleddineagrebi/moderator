@@ -790,10 +790,10 @@
         "audio"
       ],
       "checkpoint": null,
-      "status": "running",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-24T14:10:21+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-24T14:10:54+00:00",
       "attempt": 1,
       "retries": 0,
       "max_retries": 2,
@@ -818,7 +818,9 @@
         ],
         "strategy": "transitions"
       },
-      "outputs": {},
+      "outputs": {
+        "captions_en": "captions_en.ass"
+      },
       "logs": [
         {
           "ts": "2026-11-24T14:10:21+00:00",
@@ -829,6 +831,11 @@
           "ts": "2026-11-24T14:10:21+00:00",
           "level": "info",
           "msg": "Rendering en: 6 scenes, 35.9s, xfade transitions"
+        },
+        {
+          "ts": "2026-11-24T14:10:54+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [],
@@ -913,7 +920,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-24T14:10:38+00:00",
+    "exported_at": "2026-11-24T14:10:57+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/45406758183"
   }
