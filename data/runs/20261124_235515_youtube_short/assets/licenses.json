@@ -1,0 +1,72 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-314643/",
+    "author": "TonyDias7",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man pointing camera",
+    "description": "A man pointing intensely directly at the camera with an energetic expression."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-84878/",
+    "author": "eyefactory",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "glitch effect video",
+    "description": "Fast-paced digital glitch effects and abstract data streams flickering on a dark background."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-348123/",
+    "author": "Engin_Akyurt",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "deep blue waves",
+    "description": "Cinematic shots of crashing deep blue ocean waves followed by neon blue lights."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-210766/",
+    "author": "Matthias_Groeneveld",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hypnotic spiral spinning",
+    "description": "A hypnotic spinning spiral in high contrast black and white or deep blue."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-52823/",
+    "author": "dayanandgarg",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "digital countdown timer",
+    "description": "A high-tech digital countdown timer ticking down rapidly on a dark screen."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-128125/",
+    "author": "adege",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "fresh carrots pile",
+    "description": "A close-up shot of a bunch of fresh orange carrots with green tops on a wooden table."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-88687/",
+    "author": "Firmbee",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "finger tapping screen",
+    "description": "A close-up of a hand tapping a smartphone screen to hit a subscribe button and notification bell."
+  }
+]
