@@ -12,56 +12,49 @@ Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 1,0:00:00.05,0:00:05.80,Headline,,0,0,0,,{\fad(150,150)}YOU CAN'T DO THIS
-Dialogue: 1,0:00:05.90,0:00:12.49,Headline,,0,0,0,,{\fad(150,150)}HAND FLAT NOW
-Dialogue: 1,0:00:12.59,0:00:19.61,Headline,,0,0,0,,{\fad(150,150)}LIFT THE RING FINGER
-Dialogue: 1,0:00:19.71,0:00:27.00,Headline,,0,0,0,,{\fad(150,150)}BODY SOFTWARE GLITCH
-Dialogue: 1,0:00:27.10,0:00:34.10,Headline,,0,0,0,,{\fad(150,150)}SHARED TENDONS
-Dialogue: 1,0:00:34.20,0:00:41.43,Headline,,0,0,0,,{\fad(150,150)}ANATOMICAL LOCKDOWN
-Dialogue: 1,0:00:41.53,0:00:47.46,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 1,0:00:00.05,0:00:02.32,Headline,,0,0,0,,{\fad(150,150)}YOU CAN'T DO THIS
+Dialogue: 1,0:00:02.42,0:00:08.48,Headline,,0,0,0,,{\fad(150,150)}HAND FLAT NOW
+Dialogue: 1,0:00:08.58,0:00:16.08,Headline,,0,0,0,,{\fad(150,150)}LIFT THE RING FINGER
+Dialogue: 1,0:00:16.18,0:00:22.44,Headline,,0,0,0,,{\fad(150,150)}BIOLOGICAL DESIGN FLAW
+Dialogue: 1,0:00:22.54,0:00:28.62,Headline,,0,0,0,,{\fad(150,150)}TIED TOGETHER
+Dialogue: 1,0:00:28.72,0:00:34.21,Headline,,0,0,0,,{\fad(150,150)}ANATOMY ERROR
+Dialogue: 1,0:00:34.31,0:00:40.07,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
 Dialogue: 0,0:00:00.10,0:00:00.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You {\c&H0000E5FF&}cannot{\c&H00FFFFFF&} lift
 Dialogue: 0,0:00:00.86,0:00:01.48,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}this {\c&H0000E5FF&}finger{\c&H00FFFFFF&}
-Dialogue: 0,0:00:02.26,0:00:02.94,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}body{\c&H00FFFFFF&} has
-Dialogue: 0,0:00:02.95,0:00:03.78,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a secret {\c&H0000E5FF&}hardware{\c&H00FFFFFF&}
-Dialogue: 0,0:00:03.79,0:00:04.38,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}glitch{\c&H00FFFFFF&} you never
-Dialogue: 0,0:00:04.40,0:00:04.97,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}noticed
-Dialogue: 0,0:00:05.95,0:00:06.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Put your {\c&H0000E5FF&}hand{\c&H00FFFFFF&}
-Dialogue: 0,0:00:06.55,0:00:07.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}flat{\c&H00FFFFFF&} on a
-Dialogue: 0,0:00:07.02,0:00:08.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}table{\c&H00FFFFFF&} right now
-Dialogue: 0,0:00:08.79,0:00:09.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Now {\c&H0000E5FF&}fold{\c&H00FFFFFF&} your
-Dialogue: 0,0:00:09.70,0:00:10.49,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}middle{\c&H00FFFFFF&} finger all
-Dialogue: 0,0:00:10.50,0:00:11.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the way {\c&H0000E5FF&}under{\c&H00FFFFFF&}
-Dialogue: 0,0:00:11.02,0:00:11.66,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}palm{\c&H00FFFFFF&}
-Dialogue: 0,0:00:12.64,0:00:13.45,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Press your {\c&H0000E5FF&}knuckles{\c&H00FFFFFF&}
-Dialogue: 0,0:00:13.47,0:00:14.21,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}down{\c&H00FFFFFF&} firm
-Dialogue: 0,0:00:15.00,0:00:15.90,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Now try to
-Dialogue: 0,0:00:15.92,0:00:16.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}lift{\c&H00FFFFFF&} your ring
-Dialogue: 0,0:00:16.55,0:00:17.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}finger{\c&H00FFFFFF&} off the
-Dialogue: 0,0:00:17.13,0:00:17.99,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}table while {\c&H0000E5FF&}keeping{\c&H00FFFFFF&}
-Dialogue: 0,0:00:18.00,0:00:18.78,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}others{\c&H00FFFFFF&} flat
-Dialogue: 0,0:00:19.76,0:00:21.04,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It’s literally {\c&H0000E5FF&}impossible{\c&H00FFFFFF&}
-Dialogue: 0,0:00:21.23,0:00:21.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}right
-Dialogue: 0,0:00:22.38,0:00:22.97,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}But {\c&H0000E5FF&}here{\c&H00FFFFFF&} is
-Dialogue: 0,0:00:22.98,0:00:23.76,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}creepy{\c&H00FFFFFF&} part
-Dialogue: 0,0:00:23.94,0:00:24.59,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you are {\c&H0000E5FF&}witnessing{\c&H00FFFFFF&}
-Dialogue: 0,0:00:24.60,0:00:25.69,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a {\c&H0000E5FF&}biological{\c&H00FFFFFF&} design
-Dialogue: 0,0:00:25.70,0:00:26.17,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}flaw
-Dialogue: 0,0:00:27.15,0:00:27.78,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}middle{\c&H00FFFFFF&} and
-Dialogue: 0,0:00:27.79,0:00:28.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}ring {\c&H0000E5FF&}fingers{\c&H00FFFFFF&} share
-Dialogue: 0,0:00:28.57,0:00:29.22,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}same{\c&H00FFFFFF&} deep
-Dialogue: 0,0:00:29.23,0:00:30.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}flexor{\c&H00FFFFFF&} tendon
-Dialogue: 0,0:00:30.87,0:00:31.51,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}It's{\c&H00FFFFFF&} like two
-Dialogue: 0,0:00:31.52,0:00:32.53,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}puppets {\c&H0000E5FF&}controlled{\c&H00FFFFFF&} by
-Dialogue: 0,0:00:32.55,0:00:33.26,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}one {\c&H0000E5FF&}string{\c&H00FFFFFF&}
-Dialogue: 0,0:00:34.25,0:00:34.77,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Since{\c&H00FFFFFF&} they are
-Dialogue: 0,0:00:34.78,0:00:36.14,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}mechanically{\c&H00FFFFFF&} linked tucking
-Dialogue: 0,0:00:36.15,0:00:37.07,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}one {\c&H0000E5FF&}paralyzes{\c&H00FFFFFF&} the
-Dialogue: 0,0:00:37.08,0:00:37.48,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}other
-Dialogue: 0,0:00:38.20,0:00:38.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}hand{\c&H00FFFFFF&} is
-Dialogue: 0,0:00:38.89,0:00:39.77,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}literally{\c&H00FFFFFF&} locked by
-Dialogue: 0,0:00:39.78,0:00:40.59,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}its own {\c&H0000E5FF&}anatomy{\c&H00FFFFFF&}
-Dialogue: 0,0:00:41.58,0:00:42.75,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Subscribe for {\c&H0000E5FF&}tomorrow's{\c&H00FFFFFF&}
-Dialogue: 0,0:00:42.77,0:00:43.47,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}brain{\c&H00FFFFFF&} test and
-Dialogue: 0,0:00:43.48,0:00:44.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} STUCK if
-Dialogue: 0,0:00:44.16,0:00:44.99,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you {\c&H0000E5FF&}failed{\c&H00FFFFFF&} which
-Dialogue: 0,0:00:45.00,0:00:46.01,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is {\c&H0000E5FF&}exactly{\c&H00FFFFFF&} why
+Dialogue: 0,0:00:02.47,0:00:03.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Put your {\c&H0000E5FF&}hand{\c&H00FFFFFF&}
+Dialogue: 0,0:00:03.09,0:00:03.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}flat{\c&H00FFFFFF&} on a
+Dialogue: 0,0:00:03.54,0:00:03.98,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}table
+Dialogue: 0,0:00:04.77,0:00:05.67,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Now {\c&H0000E5FF&}fold{\c&H00FFFFFF&} your
+Dialogue: 0,0:00:05.68,0:00:06.47,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}middle{\c&H00FFFFFF&} finger all
+Dialogue: 0,0:00:06.48,0:00:06.98,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the way {\c&H0000E5FF&}under{\c&H00FFFFFF&}
+Dialogue: 0,0:00:07.00,0:00:07.64,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}palm{\c&H00FFFFFF&}
+Dialogue: 0,0:00:08.63,0:00:09.46,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Press your {\c&H0000E5FF&}knuckles{\c&H00FFFFFF&}
+Dialogue: 0,0:00:09.47,0:00:10.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}down{\c&H00FFFFFF&} hard
+Dialogue: 0,0:00:10.97,0:00:11.87,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Now try to
+Dialogue: 0,0:00:11.88,0:00:12.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}lift{\c&H00FFFFFF&} your ring
+Dialogue: 0,0:00:12.53,0:00:13.10,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}finger{\c&H00FFFFFF&} off the
+Dialogue: 0,0:00:13.11,0:00:13.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}table
+Dialogue: 0,0:00:14.35,0:00:15.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It {\c&H0000E5FF&}won't{\c&H00FFFFFF&} move
+Dialogue: 0,0:00:16.23,0:00:16.90,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Wait {\c&H0000E5FF&}until{\c&H00FFFFFF&} you
+Dialogue: 0,0:00:16.91,0:00:17.76,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}feel the {\c&H0000E5FF&}tension{\c&H00FFFFFF&}
+Dialogue: 0,0:00:18.55,0:00:19.05,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}This {\c&H0000E5FF&}isn't{\c&H00FFFFFF&} a
+Dialogue: 0,0:00:19.06,0:00:19.75,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}trick{\c&H00FFFFFF&} it's a
+Dialogue: 0,0:00:19.76,0:00:21.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}real {\c&H0000E5FF&}biological{\c&H00FFFFFF&} design
+Dialogue: 0,0:00:21.13,0:00:21.60,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}flaw
+Dialogue: 0,0:00:22.59,0:00:23.22,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}middle{\c&H00FFFFFF&} and
+Dialogue: 0,0:00:23.23,0:00:24.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}ring {\c&H0000E5FF&}fingers{\c&H00FFFFFF&} share
+Dialogue: 0,0:00:24.01,0:00:24.66,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}same{\c&H00FFFFFF&} deep
+Dialogue: 0,0:00:24.68,0:00:25.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}flexor{\c&H00FFFFFF&} tendon
+Dialogue: 0,0:00:26.31,0:00:27.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}They are {\c&H0000E5FF&}literally{\c&H00FFFFFF&}
+Dialogue: 0,0:00:27.01,0:00:27.78,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}tied {\c&H0000E5FF&}together{\c&H00FFFFFF&}
+Dialogue: 0,0:00:28.77,0:00:29.62,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Tucking{\c&H00FFFFFF&} one locks
+Dialogue: 0,0:00:29.63,0:00:30.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}other{\c&H00FFFFFF&}
+Dialogue: 0,0:00:30.87,0:00:31.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}It’s{\c&H00FFFFFF&} like a
+Dialogue: 0,0:00:31.37,0:00:32.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}software{\c&H00FFFFFF&} error in
+Dialogue: 0,0:00:32.19,0:00:32.90,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your own {\c&H0000E5FF&}human{\c&H00FFFFFF&}
+Dialogue: 0,0:00:32.91,0:00:33.37,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}anatomy
+Dialogue: 0,0:00:34.36,0:00:35.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Subscribe for {\c&H0000E5FF&}tomorrow's{\c&H00FFFFFF&}
+Dialogue: 0,0:00:35.55,0:00:36.09,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}body{\c&H00FFFFFF&} hack and
+Dialogue: 0,0:00:36.10,0:00:36.78,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} FAILED if
+Dialogue: 0,0:00:36.79,0:00:37.59,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}you're{\c&H00FFFFFF&} stuck which
+Dialogue: 0,0:00:37.60,0:00:38.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is {\c&H0000E5FF&}exactly{\c&H00FFFFFF&} why
