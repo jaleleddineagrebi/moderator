@@ -3,17 +3,17 @@
   "scenes": [
     {
       "vo": {
-        "en": "Quick, name a vegetable right now!"
+        "en": "Stop! Name a vegetable right now!"
       },
       "on_screen": {
-        "en": "NAME A VEGETABLE!"
+        "en": "NAME A VEGETABLE"
       },
       "visual": {
-        "description": "A man pointing intensely directly at the camera with an energetic expression.",
+        "description": "A man looking intensely and pointing directly at the camera in a sharp studio setting.",
         "search_terms": [
           "man pointing camera",
-          "aggressive finger point",
-          "person looking directly"
+          "person looking intense",
+          "man face close"
         ],
         "prefer": "video"
       },
@@ -22,17 +22,17 @@
     },
     {
       "vo": {
-        "en": "Don't blink. I’m hacking your subconscious in ten seconds using a technique called psychological priming."
+        "en": "Don't blink. I’m hacking your subconscious in ten seconds using simple psychological priming."
       },
       "on_screen": {
-        "en": "BRAIN GLITCH INCOMING"
+        "en": "HACKING YOUR MIND"
       },
       "visual": {
-        "description": "Fast-paced digital glitch effects and abstract data streams flickering on a dark background.",
+        "description": "Abstract visualization of neural networks and firing synapses in a dark digital space.",
         "search_terms": [
-          "glitch effect video",
-          "abstract data motion",
-          "static noise texture"
+          "neural network animation",
+          "brain synapses firing",
+          "abstract data flow"
         ],
         "prefer": "video"
       },
@@ -41,17 +41,17 @@
     },
     {
       "vo": {
-        "en": "Visualize the color blue. Deep blue ocean waves, a bright blue sky, and flashing blue neon signs."
+        "en": "Visualize the color orange. Think of a glowing sunset, a crackling fire, and a basketball."
       },
       "on_screen": {
-        "en": "THINK OF BLUE"
+        "en": "THINK OF ORANGE"
       },
       "visual": {
-        "description": "Cinematic shots of crashing deep blue ocean waves followed by neon blue lights.",
+        "description": "A rapid montage of a vibrant sunset, moving campfire flames, and a spinning basketball.",
         "search_terms": [
-          "deep blue waves",
-          "blue neon flickering",
-          "blue ink water"
+          "sunset ocean timelapse",
+          "campfire flames moving",
+          "spinning basketball close"
         ],
         "prefer": "video"
       },
@@ -63,14 +63,14 @@
         "en": "Wait until you see the result, because your brain is currently trapped in a massive logic loop."
       },
       "on_screen": {
-        "en": "YOU'RE BEING CONTROLLED"
+        "en": "BRAIN LOGIC LOOP"
       },
       "visual": {
-        "description": "A hypnotic spinning spiral in high contrast black and white or deep blue.",
+        "description": "A high-contrast hypnotic spiral spinning rapidly to create a tunnel effect.",
         "search_terms": [
-          "hypnotic spiral spinning",
-          "optical illusion motion",
-          "tunnel vision effect"
+          "hypnotic tunnel motion",
+          "black white spiral",
+          "optical illusion loop"
         ],
         "prefer": "video"
       },
@@ -79,17 +79,17 @@
     },
     {
       "vo": {
-        "en": "I’m counting down from three. Three, two, one... Say the first vegetable that hits your mind!"
+        "en": "Focus hard. I’m counting down from three. Three, two, one... Say the first vegetable that hits your mind!"
       },
       "on_screen": {
-        "en": "PICK ONE NOW"
+        "en": "THREE... TWO... ONE..."
       },
       "visual": {
-        "description": "A high-tech digital countdown timer ticking down rapidly on a dark screen.",
+        "description": "A bright digital countdown on a dark screen with glowing neon light numbers.",
         "search_terms": [
-          "digital countdown timer",
-          "stopwatch ticking",
-          "neon number countdown"
+          "digital countdown glowing",
+          "neon number timer",
+          "mechanical clock ticking"
         ],
         "prefer": "video"
       },
@@ -104,11 +104,11 @@
         "en": "YOU THOUGHT: CARROT"
       },
       "visual": {
-        "description": "A close-up shot of a bunch of fresh orange carrots with green tops on a wooden table.",
+        "description": "A pile of fresh, vibrant orange carrots with green tops sitting on a wooden surface.",
         "search_terms": [
-          "fresh carrots pile",
-          "man holding vegetable",
-          "carrots on table"
+          "fresh carrots basket",
+          "bunch of carrots",
+          "vegetable pile close"
         ],
         "prefer": "video"
       },
@@ -117,17 +117,17 @@
     },
     {
       "vo": {
-        "en": "Subscribe for tomorrow's brain test and comment YES if I caught you... which is exactly why..."
+        "en": "Subscribe for tomorrow's brain test and comment YES if this worked on you... which is exactly why..."
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "A close-up of a hand tapping a smartphone screen to hit a subscribe button and notification bell.",
+        "description": "A hand using a smartphone to tap a button on a brightly lit screen.",
         "search_terms": [
-          "finger tapping screen",
-          "notification bell icon",
-          "using smartphone app"
+          "man using smartphone",
+          "hand tapping screen",
+          "phone notification pulse"
         ],
         "prefer": "video"
       },
@@ -140,6 +140,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 37.8
+    "en": 37.5
   }
 }
