@@ -1,0 +1,145 @@
+{
+  "title": "The Blue Vegetable Brain Blindness",
+  "scenes": [
+    {
+      "vo": {
+        "en": "Quick, name a vegetable right now!"
+      },
+      "on_screen": {
+        "en": "NAME A VEGETABLE!"
+      },
+      "visual": {
+        "description": "A man pointing intensely directly at the camera with an energetic expression.",
+        "search_terms": [
+          "man pointing camera",
+          "aggressive finger point",
+          "person looking directly"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "The Brain Test",
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Don't blink. I’m hacking your subconscious in ten seconds using a technique called psychological priming."
+      },
+      "on_screen": {
+        "en": "BRAIN GLITCH INCOMING"
+      },
+      "visual": {
+        "description": "Fast-paced digital glitch effects and abstract data streams flickering on a dark background.",
+        "search_terms": [
+          "glitch effect video",
+          "abstract data motion",
+          "static noise texture"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Visualize the color blue. Deep blue ocean waves, a bright blue sky, and flashing blue neon signs."
+      },
+      "on_screen": {
+        "en": "THINK OF BLUE"
+      },
+      "visual": {
+        "description": "Cinematic shots of crashing deep blue ocean waves followed by neon blue lights.",
+        "search_terms": [
+          "deep blue waves",
+          "blue neon flickering",
+          "blue ink water"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "Wait until you see the result, because your brain is currently trapped in a massive logic loop."
+      },
+      "on_screen": {
+        "en": "YOU'RE BEING CONTROLLED"
+      },
+      "visual": {
+        "description": "A hypnotic spinning spiral in high contrast black and white or deep blue.",
+        "search_terms": [
+          "hypnotic spiral spinning",
+          "optical illusion motion",
+          "tunnel vision effect"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "I’m counting down from three. Three, two, one... Say the first vegetable that hits your mind!"
+      },
+      "on_screen": {
+        "en": "PICK ONE NOW"
+      },
+      "visual": {
+        "description": "A high-tech digital countdown timer ticking down rapidly on a dark screen.",
+        "search_terms": [
+          "digital countdown timer",
+          "stopwatch ticking",
+          "neon number countdown"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "You just thought of a Carrot. Your brain bypassed unique options and defaulted to the standard archetype."
+      },
+      "on_screen": {
+        "en": "YOU THOUGHT: CARROT"
+      },
+      "visual": {
+        "description": "A close-up shot of a bunch of fresh orange carrots with green tops on a wooden table.",
+        "search_terms": [
+          "fresh carrots pile",
+          "man holding vegetable",
+          "carrots on table"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for tomorrow's brain test and comment YES if I caught you... which is exactly why..."
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "A close-up of a hand tapping a smartphone screen to hit a subscribe button and notification bell.",
+        "search_terms": [
+          "finger tapping screen",
+          "notification bell icon",
+          "using smartphone app"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "blue-vegetable-glitch",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 37.8
+  }
+}
