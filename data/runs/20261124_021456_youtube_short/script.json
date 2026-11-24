@@ -1,0 +1,145 @@
+{
+  "title": "The Paralyzed Middle Finger Glitch",
+  "scenes": [
+    {
+      "vo": {
+        "en": "You cannot lift this finger. Your body has a secret hardware glitch you never noticed."
+      },
+      "on_screen": {
+        "en": "YOU CAN'T DO THIS"
+      },
+      "visual": {
+        "description": "A man's hand trembling slightly against a dark background with a subtle digital glitch overlay.",
+        "search_terms": [
+          "man hand macro",
+          "digital glitch effect",
+          "hand twitching"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "The Finger Glitch",
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Put your hand flat on a table right now. Now, fold your middle finger all the way under your palm."
+      },
+      "on_screen": {
+        "en": "HAND FLAT NOW"
+      },
+      "visual": {
+        "description": "A man placing his palm flat on a rustic wooden desk, preparing for a test.",
+        "search_terms": [
+          "hand on table",
+          "man folding finger",
+          "top down hand"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Press your knuckles down firm. Now, try to lift your ring finger off the table while keeping the others flat."
+      },
+      "on_screen": {
+        "en": "LIFT THE RING FINGER"
+      },
+      "visual": {
+        "description": "Extreme macro of a man's fingers trying to lift off a surface, muscles tensing visibly.",
+        "search_terms": [
+          "straining fingers",
+          "hand close up",
+          "finger movement"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "It’s literally impossible, right? But here is the creepy part: you are witnessing a biological design flaw."
+      },
+      "on_screen": {
+        "en": "BODY SOFTWARE GLITCH"
+      },
+      "visual": {
+        "description": "Abstract glowing blue neural network or digital circuit board firing pulses rapidly.",
+        "search_terms": [
+          "abstract digital pulse",
+          "matrix background",
+          "cyber circuits"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "Biological Flaw",
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Your middle and ring fingers share the same deep flexor tendon. It's like two puppets controlled by one string."
+      },
+      "on_screen": {
+        "en": "SHARED TENDONS"
+      },
+      "visual": {
+        "description": "Hand-operated puppet strings being pulled together by a wooden crossbar in a dark room.",
+        "search_terms": [
+          "puppet strings moving",
+          "mechanical link",
+          "wooden puppet"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "Since they are mechanically linked, tucking one paralyzes the other. Your hand is literally locked by its own anatomy."
+      },
+      "on_screen": {
+        "en": "ANATOMICAL LOCKDOWN"
+      },
+      "visual": {
+        "description": "A heavy metal padlock snapping shut in slow motion with grit and sparks.",
+        "search_terms": [
+          "padlock locking",
+          "chain tension",
+          "metal lock"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for tomorrow's brain test and comment STUCK if you failed, which is exactly why..."
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "A man's thumb scrolling rapidly through a social media feed on a smartphone screen.",
+        "search_terms": [
+          "man typing phone",
+          "commenting on screen",
+          "smartphone scroll"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "paralyzed-middle-finger-glitch",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 45.5
+  }
+}
