@@ -475,7 +475,7 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 29,
+      "progress": 66,
       "started_at": "2026-11-24T23:59:04+00:00",
       "ended_at": null,
       "attempt": 2,
@@ -570,6 +570,21 @@
           "ts": "2026-11-24T23:59:18+00:00",
           "level": "info",
           "msg": "scene_01: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-24T23:59:25+00:00",
+          "level": "info",
+          "msg": "scene_03: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-24T23:59:31+00:00",
+          "level": "info",
+          "msg": "scene_05: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-24T23:59:43+00:00",
+          "level": "info",
+          "msg": "scene_04: stock_video (pixabay)"
         }
       ],
       "errors": [],
@@ -950,7 +965,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-24T23:59:24+00:00",
+    "exported_at": "2026-11-24T23:59:46+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/45513874858"
   }
