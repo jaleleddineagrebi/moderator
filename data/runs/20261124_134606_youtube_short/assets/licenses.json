@@ -1,0 +1,62 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-11750/",
+    "author": "chayka1270",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hand cutting card",
+    "description": "Close up of a man's hands using sharp scissors to cut a plastic card in half."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-46989/",
+    "author": "NickyPe",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "money counter machine",
+    "description": "Fast-paced shot of cash overflowing from an automatic money counting machine."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-846/",
+    "author": "klimkin",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man reading receipt",
+    "description": "A man staring intently at a long receipt in a dark room while looking confused."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-185341/",
+    "author": "KM007_",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "corporate silhouette man",
+    "description": "Silhouettes of corporate executives standing before massive financial data screens in a dark office."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-1823/",
+    "author": "HeLLuX",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hand opening drawer",
+    "description": "A man's hand throwing a plastic card into a cluttered junk drawer and shutting it."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-149452/",
+    "author": "Matthias_Groeneveld",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man holding wallet",
+    "description": "A man searching through a thick leather wallet full of old plastic cards."
+  }
+]
