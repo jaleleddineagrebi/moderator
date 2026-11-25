@@ -1,23 +1,23 @@
 # The AI Pupil Response Trap
-Estimated narration: en 33.8s
+Estimated narration: en 36.7s
 
-## scene_01 · Ultra close-up of a man's eye with the pupil contracting and dilating dramatically.
+## scene_01 · Macro shot of a man's eye with the pupil contracting sharply.
 EN  [STOP BLINKING]  Stop blinking. AI is watching you.
 
-## scene_02 · A man in a formal suit looking nervous and sweating while sitting at a desk.
-EN  [AI HONESTY SCAN]  Banks and job interviewers are using hidden software to scan your internal honesty score.
+## scene_02 · A man in a suit looking at a glowing laptop screen in a dark office.
+EN  [AI HONESTY SCAN]  Right now, job interviewers and banks use stealth software to scan your internal honesty score.
 
-## scene_03 · Digital blue biometric scanner lines moving across a man's face interface.
-EN  [PUPILS NEVER LIE]  When you lie or feel stress, your pupils widen. It’s an involuntary biometric tell you can’t fake.
+## scene_03 · Digital biometric patterns and data points mapped over a man's face.
+EN  [PUPILS NEVER LIE]  When you feel stress, your pupils widen. It’s an involuntary biometric leak that no human can hide.
 
-## scene_04 · Fast-paced digital glitch effect with red warning lights and flashing abstract data.
-EN  [THE CREEPY PART...]  But here is the creepy part. You’re being tested right now.
+## scene_04 · A fast-moving abstract digital glitch with flashing blue and cyan light.
+EN  [THE CREEPY PART]  But here’s the creepy part. This technology is being used right now in secret.
 
-## scene_05 · Dark room with green binary code streaming down and a hand typing on a laptop.
-EN  [CALCULATING YOUR RISK]  Advanced software tracks how your gaze shifts to calculate if you’re a high-risk person.
+## scene_05 · High-speed scrolling green code and data visualizations on a dark monitor.
+EN  [CALCULATING YOUR RISK]  Advanced algorithms track every micro-shift in your gaze to decide if you’re a high-risk person.
 
-## scene_06 · A man staring directly into the lens with a neutral, unblinking expression.
-EN  [SUBSCRIBE 🔔]  Subscribe for more dark tech secrets and comment 'PASSED' if you kept your eyes still.
+## scene_06 · Close up of a man's hand signing a formal document with a fountain pen.
+EN  [YOUR FUTURE DECIDED]  It’s called Eye-tracking Analysis, and it determines your future before you even finish speaking.
 
-## scene_07 · A security camera rotating slowly on a building corner against a dark sky.
-EN  [IT IS WATCHING]  Invisible surveillance is the new standard for everything you do, which is exactly why you must...
+## scene_07 · A modern security camera lens rotating slowly against a city background.
+EN  [SUBSCRIBE 🔔]  Subscribe for more dark tech secrets and comment STILL if you didn't blink. Biometrics are watching, which is exactly why...

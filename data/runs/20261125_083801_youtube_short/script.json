@@ -9,30 +9,30 @@
         "en": "STOP BLINKING"
       },
       "visual": {
-        "description": "Ultra close-up of a man's eye with the pupil contracting and dilating dramatically.",
+        "description": "Macro shot of a man's eye with the pupil contracting sharply.",
         "search_terms": [
-          "macro eye pupil",
-          "man staring intense",
-          "eye dilation close"
+          "macro human eye",
+          "pupil contracting",
+          "intense stare man"
         ],
         "prefer": "video"
       },
-      "chapter": "The AI Gaze Test",
+      "chapter": "The Silent Watcher",
       "id": "scene_01"
     },
     {
       "vo": {
-        "en": "Banks and job interviewers are using hidden software to scan your internal honesty score."
+        "en": "Right now, job interviewers and banks use stealth software to scan your internal honesty score."
       },
       "on_screen": {
         "en": "AI HONESTY SCAN"
       },
       "visual": {
-        "description": "A man in a formal suit looking nervous and sweating while sitting at a desk.",
+        "description": "A man in a suit looking at a glowing laptop screen in a dark office.",
         "search_terms": [
-          "man job interview",
-          "nervous sweating man",
-          "office stress"
+          "man video conference",
+          "professional office setting",
+          "laptop screen glowing"
         ],
         "prefer": "video"
       },
@@ -41,17 +41,17 @@
     },
     {
       "vo": {
-        "en": "When you lie or feel stress, your pupils widen. It’s an involuntary biometric tell you can’t fake."
+        "en": "When you feel stress, your pupils widen. It’s an involuntary biometric leak that no human can hide."
       },
       "on_screen": {
         "en": "PUPILS NEVER LIE"
       },
       "visual": {
-        "description": "Digital blue biometric scanner lines moving across a man's face interface.",
+        "description": "Digital biometric patterns and data points mapped over a man's face.",
         "search_terms": [
-          "biometric facial scanning",
-          "digital grid overlay",
-          "tech interface face"
+          "biometric face scan",
+          "digital data overlay",
+          "human nervous system"
         ],
         "prefer": "video"
       },
@@ -60,36 +60,36 @@
     },
     {
       "vo": {
-        "en": "But here is the creepy part. You’re being tested right now."
+        "en": "But here’s the creepy part. This technology is being used right now in secret."
       },
       "on_screen": {
-        "en": "THE CREEPY PART..."
+        "en": "THE CREEPY PART"
       },
       "visual": {
-        "description": "Fast-paced digital glitch effect with red warning lights and flashing abstract data.",
+        "description": "A fast-moving abstract digital glitch with flashing blue and cyan light.",
         "search_terms": [
-          "red digital glitch",
-          "warning signal flashing",
-          "abstract data error"
+          "abstract digital glitch",
+          "dark server room",
+          "flashing blue lights"
         ],
         "prefer": "video"
       },
-      "chapter": "Invisible Surveillance",
+      "chapter": "Invisible Scoring",
       "id": "scene_04"
     },
     {
       "vo": {
-        "en": "Advanced software tracks how your gaze shifts to calculate if you’re a high-risk person."
+        "en": "Advanced algorithms track every micro-shift in your gaze to decide if you’re a high-risk person."
       },
       "on_screen": {
         "en": "CALCULATING YOUR RISK"
       },
       "visual": {
-        "description": "Dark room with green binary code streaming down and a hand typing on a laptop.",
+        "description": "High-speed scrolling green code and data visualizations on a dark monitor.",
         "search_terms": [
-          "cyber security code",
-          "hands typing fast",
-          "hacker green code"
+          "coding fast motion",
+          "cyber security data",
+          "complex algorithm visual"
         ],
         "prefer": "video"
       },
@@ -98,17 +98,17 @@
     },
     {
       "vo": {
-        "en": "Subscribe for more dark tech secrets and comment 'PASSED' if you kept your eyes still."
+        "en": "It’s called Eye-tracking Analysis, and it determines your future before you even finish speaking."
       },
       "on_screen": {
-        "en": "SUBSCRIBE 🔔"
+        "en": "YOUR FUTURE DECIDED"
       },
       "visual": {
-        "description": "A man staring directly into the lens with a neutral, unblinking expression.",
+        "description": "Close up of a man's hand signing a formal document with a fountain pen.",
         "search_terms": [
-          "man looking camera",
-          "serious man face",
-          "unblinking stare"
+          "hand signing document",
+          "financial stock chart",
+          "business meeting man"
         ],
         "prefer": "video"
       },
@@ -117,17 +117,17 @@
     },
     {
       "vo": {
-        "en": "Invisible surveillance is the new standard for everything you do, which is exactly why you must..."
+        "en": "Subscribe for more dark tech secrets and comment STILL if you didn't blink. Biometrics are watching, which is exactly why..."
       },
       "on_screen": {
-        "en": "IT IS WATCHING"
+        "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "A security camera rotating slowly on a building corner against a dark sky.",
+        "description": "A modern security camera lens rotating slowly against a city background.",
         "search_terms": [
-          "cctv camera moving",
-          "digital surveillance street",
-          "security camera night"
+          "cctv camera lens",
+          "surveillance drone flying",
+          "security monitor screen"
         ],
         "prefer": "video"
       },
@@ -140,6 +140,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 33.8
+    "en": 36.7
   }
 }
