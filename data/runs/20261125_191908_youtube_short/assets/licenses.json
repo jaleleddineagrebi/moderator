@@ -3,70 +3,70 @@
     "scene": "scene_01",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-183449/",
-    "author": "Amorn_mimi",
+    "page": "https://pixabay.com/videos/id-143416/",
+    "author": "NickyPe",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "man hands flexing",
-    "description": "Close-up of a man's hand pointing directly at the camera with a slight flex."
+    "query": "man hand pointing",
+    "description": "A close-up shot of a man's hand with fingers spread, pointing directly at the camera."
   },
   {
     "scene": "scene_02",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-34260/",
-    "author": "DesignwithRiyas",
+    "page": "https://pixabay.com/videos/id-233399/",
+    "author": "Yasir1120",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "folding hands prayer",
-    "description": "Hands coming together in a prayer position then folding the middle fingers inward."
+    "query": "folding hands together",
+    "description": "Two hands coming together and folding the middle fingers down into the palms."
   },
   {
     "scene": "scene_03",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-109821/",
-    "author": "ChristianBodhi",
+    "page": "https://pixabay.com/videos/id-286/",
+    "author": "Life-Of-Vids",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "thumb moving",
-    "description": "Close up of thumbs and then pinky fingers moving freely while the rest of the hand stays locked."
+    "query": "moving thumbs",
+    "description": "Close up of a person's thumbs and index fingers moving freely while the middle fingers stay folded."
   },
   {
     "scene": "scene_04",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-38079/",
-    "author": "mephala1980",
+    "page": "https://pixabay.com/videos/id-1129/",
+    "author": "Tabble",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
     "query": "strained hand muscle",
-    "description": "A person struggling to lift their index fingers while their middle knuckles are pressed together."
+    "description": "A man's hand visibly straining to move the ring finger while other fingers stay pressed."
   },
   {
     "scene": "scene_05",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-135025/",
-    "author": "u_elrfh70smu",
+    "page": "https://pixabay.com/videos/id-220940/",
+    "author": "TungArt7",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "human brain glowing",
-    "description": "Stylized animation of a human brain with electrical pulses representing signals sent to the hand."
+    "query": "neural network glowing",
+    "description": "Abstract visualization of glowing blue neural pathways and electric signals firing rapidly."
   },
   {
     "scene": "scene_06",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-19600/",
-    "author": "OrcaTec",
+    "page": "https://pixabay.com/videos/id-177206/",
+    "author": "intersubjektiv",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "hand skeletal animation",
-    "description": "3D anatomical model of a human hand showing the internal tendon structure."
+    "query": "hand anatomy 3d",
+    "description": "An anatomical 3D render of a human hand showing the tendons and bones moving."
   },
   {
     "scene": "scene_07",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-3176/",
+    "page": "https://pixabay.com/videos/id-3172/",
     "author": "Coverr-Free-Footage",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "man typing phone",
-    "description": "Close up of a man's thumb hitting the subscribe button on a phone screen."
+    "query": "tapping phone screen",
+    "description": "A person's thumb clicking the subscribe button on a modern smartphone screen."
   }
 ]
