@@ -1,7 +1,7 @@
 # QA report: CHANGES NEEDED
 
-- ✅ **length** [en]: 39.5s (must be under 60s; target 32-50s)
-- ✅ **target length** [en]: 39.5s
+- ✅ **length** [en]: 39.8s (must be under 60s; target 32-50s)
+- ✅ **target length** [en]: 39.8s
 - ✅ **aspect ratio** [en]: 1080x1920
 - ✅ **video codec** [en]: h264
 - ✅ **audio track** [en]: present
@@ -11,6 +11,5 @@
 - ✅ **visual licenses**: 7 assets: pixabay
 - ✅ **visual diversity**: all scenes use distinct footage
 - ✅ **audio licenses**: music: original work, no third-party rights; sfx: original work, no third-party rights; voice: synthetic voice; no third-party performance rights
-- ❌ **accuracy review** [en]: The scene 04 narration claims the brain is currently trapped in a massive logic loop, which is factually incorrect and not part of psychological priming. Change 'massive logic loop' to 'priming sequence'. → sent to script
-- ⚠️ **grammar review** [en]: In scene 06, 'Carrot' is unnecessarily capitalized in the middle of a sentence. Change it to lowercase 'carrot'.
-- ❌ **people rule**: scene_02: woman's profile and hand holding a phone, showing her hair, face, and shoulder in the first two frames. Replace with footage without women (a face-only close-up is the only exception). → sent to visuals
+- ❌ **accuracy review** [en]: The scene 01 voiceover asks the user to name a vegetable 'right now', but scene 02 immediately says 'Don't blink' and 'Hacking your subconscious in ten seconds'. This is confusing because scene 05 is the actual moment the user should answer. Fix: Change scene 01 vo to 'Quick! Think of a vegetable...' and keep the prompt until the end. → sent to script
+- ✅ **people rule**: no women beyond face close-ups in 7 scenes and 1 thumbnail(s)

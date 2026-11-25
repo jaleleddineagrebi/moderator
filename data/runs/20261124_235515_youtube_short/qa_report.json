@@ -1,12 +1,12 @@
 {
   "passed": false,
-  "revision_round": 1,
+  "revision_round": 2,
   "checks": [
     {
       "check": "length",
       "lang": "en",
       "ok": true,
-      "detail": "39.5s (must be under 60s; target 32-50s)",
+      "detail": "39.8s (must be under 60s; target 32-50s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -14,7 +14,7 @@
       "check": "target length",
       "lang": "en",
       "ok": true,
-      "detail": "39.5s",
+      "detail": "39.8s",
       "send_to": null,
       "severity": "minor"
     },
@@ -94,24 +94,16 @@
       "check": "accuracy review",
       "lang": "en",
       "ok": false,
-      "detail": "The scene 04 narration claims the brain is currently trapped in a massive logic loop, which is factually incorrect and not part of psychological priming. Change 'massive logic loop' to 'priming sequence'.",
+      "detail": "The scene 01 voiceover asks the user to name a vegetable 'right now', but scene 02 immediately says 'Don't blink' and 'Hacking your subconscious in ten seconds'. This is confusing because scene 05 is the actual moment the user should answer. Fix: Change scene 01 vo to 'Quick! Think of a vegetable...' and keep the prompt until the end.",
       "send_to": "script",
       "severity": "blocker"
     },
     {
-      "check": "grammar review",
-      "lang": "en",
-      "ok": false,
-      "detail": "In scene 06, 'Carrot' is unnecessarily capitalized in the middle of a sentence. Change it to lowercase 'carrot'.",
-      "send_to": "script",
-      "severity": "minor"
-    },
-    {
       "check": "people rule",
       "lang": null,
-      "ok": false,
-      "detail": "scene_02: woman's profile and hand holding a phone, showing her hair, face, and shoulder in the first two frames. Replace with footage without women (a face-only close-up is the only exception).",
-      "send_to": "visuals",
+      "ok": true,
+      "detail": "no women beyond face close-ups in 7 scenes and 1 thumbnail(s)",
+      "send_to": null,
       "severity": "blocker"
     }
   ]
