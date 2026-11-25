@@ -1,0 +1,68 @@
+{
+  "niche": "Mind Hacks, AI Secrets, Bizarre Body Science & Hidden Power Dynamics",
+  "languages": [
+    "en"
+  ],
+  "ideas": [
+    {
+      "id": "paralyzed-index-glitch",
+      "title": "The Paralyzed Index Finger Glitch",
+      "angle": "An interactive body glitch where viewers must press their middle fingers together while folding their hands. It demonstrates how certain tendons are physically linked, making it impossible to lift the index finger. This forces a 100% completion rate and a flood of 'It actually works' comments.",
+      "hook": {
+        "en": "You physically cannot lift this finger."
+      },
+      "keywords": [
+        "body glitch",
+        "human anatomy",
+        "interactive test",
+        "brain hack",
+        "survival science"
+      ],
+      "reason": "Interactive physical challenges (like the 'ring finger glitch') are currently the highest-performing shorts because they force the viewer to stop scrolling and physically engage with the screen, leading to >100% APV.",
+      "sources": [
+        "Anatomy of the Extensor Digitorum and Juncturae Tendinum",
+        "Hand kinesiology studies on independent finger movement"
+      ]
+    },
+    {
+      "id": "the-sneezing-light-glitch",
+      "title": "The Solar Sneeze Brain Glitch",
+      "angle": "A revelation about the 'Photic Sneeze Reflex' where 1 in 4 people sneeze when looking at the sun. It explains the 'glitch' where the optic nerve crosses with the trigeminal nerve. The comment trigger asks viewers to 'Type BLESS YOU if you have this glitch.'",
+      "hook": {
+        "en": "You have a wiring error in your brain."
+      },
+      "keywords": [
+        "photic sneeze reflex",
+        "brain glitch",
+        "human body secrets",
+        "evolutionary science",
+        "nerve cross-talk"
+      ],
+      "reason": "The 'us vs. them' dynamic creates high engagement. Since 25% of the population has this, it creates a massive debate in the comments between those who find it relatable and those who think it sounds fake.",
+      "sources": [
+        "National Center for Biotechnology Information (NCBI) on ACHOO Syndrome",
+        "Scientific American: Why does bright light make some people sneeze?"
+      ]
+    },
+    {
+      "id": "the-peripheral-blindness-glitch",
+      "title": "The Peripheral Vision Eraser",
+      "angle": "An interactive 'Troxler Effect' test. The video shows a steady image with a center dot and peripheral colors. If the viewer stares for 10 seconds, the colors disappear. It demonstrates how the brain deletes 'useless' data to save energy, forcing a full-watch to see the effect.",
+      "hook": {
+        "en": "Stare at this dot—watch the colors vanish."
+      },
+      "keywords": [
+        "Troxler effect",
+        "optical illusion",
+        "brain hack",
+        "vision glitch",
+        "interactive challenge"
+      ],
+      "reason": "Optical illusions that happen 'live' on screen have a massive 'shareability' factor. This specific effect is perfect for the 34-42 second format because the 'erasing' takes exactly 10-15 seconds of focused staring.",
+      "sources": [
+        "Troxler's Fading Phenomenon (1804)",
+        "Journal of Vision: Neural adaptation and peripheral fading"
+      ]
+    }
+  ]
+}
