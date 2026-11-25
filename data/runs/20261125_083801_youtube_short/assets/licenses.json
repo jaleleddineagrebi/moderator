@@ -1,0 +1,72 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-40739/",
+    "author": "RoyBuri",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "macro eye pupil",
+    "description": "Ultra close-up of a man's eye with the pupil contracting and dilating dramatically."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-42923/",
+    "author": "chuduyen215",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man job interview",
+    "description": "A man in a formal suit looking nervous and sweating while sitting at a desk."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-26967/",
+    "author": "Matthias_Groeneveld",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "biometric facial scanning",
+    "description": "Digital blue biometric scanner lines moving across a man's face interface."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-209818/",
+    "author": "VideoAnimals",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "red digital glitch",
+    "description": "Fast-paced digital glitch effect with red warning lights and flashing abstract data."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-142363/",
+    "author": "31963655",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "cyber security code",
+    "description": "Dark room with green binary code streaming down and a hand typing on a laptop."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-318654/",
+    "author": "TonyDias7",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man looking camera",
+    "description": "A man staring directly into the lens with a neutral, unblinking expression."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-198/",
+    "author": "Life-Of-Vids",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "cctv camera moving",
+    "description": "A security camera rotating slowly on a building corner against a dark sky."
+  }
+]
