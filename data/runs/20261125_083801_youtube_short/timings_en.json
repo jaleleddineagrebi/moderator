@@ -1,557 +1,587 @@
 {
   "voice": "en-US-BrianMultilingualNeural",
-  "duration": 38.916077,
+  "duration": 40.404036,
   "scenes": [
     {
       "scene": "scene_01",
       "start": 0.0,
-      "end": 2.88,
+      "end": 3.072,
       "words": [
         {
-          "start": 0.049,
-          "end": 0.394,
-          "text": "Stop"
+          "start": 0.06,
+          "end": 0.298,
+          "text": "Don't"
         },
         {
-          "start": 0.406,
-          "end": 0.93,
-          "text": "blinking"
+          "start": 0.31,
+          "end": 0.774,
+          "text": "blink"
         },
         {
-          "start": 1.298,
-          "end": 1.619,
+          "start": 1.155,
+          "end": 1.476,
           "text": "AI"
         },
         {
-          "start": 1.631,
-          "end": 1.81,
+          "start": 1.488,
+          "end": 1.679,
           "text": "is"
         },
         {
-          "start": 1.821,
-          "end": 2.25,
-          "text": "watching"
+          "start": 1.69,
+          "end": 2.107,
+          "text": "tracking"
         },
         {
-          "start": 2.262,
-          "end": 2.536,
-          "text": "you"
+          "start": 2.119,
+          "end": 2.309,
+          "text": "your"
+        },
+        {
+          "start": 2.321,
+          "end": 2.714,
+          "text": "eyes"
         }
       ]
     },
     {
       "scene": "scene_02",
-      "start": 2.97,
-      "end": 8.682,
+      "start": 3.162,
+      "end": 9.33,
       "words": [
         {
-          "start": 3.053,
-          "end": 3.256,
-          "text": "Right"
+          "start": 3.245,
+          "end": 3.495,
+          "text": "Some"
         },
         {
-          "start": 3.268,
-          "end": 3.577,
+          "start": 3.507,
+          "end": 3.983,
+          "text": "companies"
+        },
+        {
+          "start": 3.995,
+          "end": 4.257,
           "text": "now"
         },
         {
-          "start": 4.018,
-          "end": 4.291,
-          "text": "job"
+          "start": 4.269,
+          "end": 4.769,
+          "text": "explore"
         },
         {
-          "start": 4.303,
-          "end": 4.887,
-          "text": "interviewers"
+          "start": 4.781,
+          "end": 5.305,
+          "text": "eye-tracking"
         },
         {
-          "start": 4.899,
-          "end": 5.03,
-          "text": "and"
+          "start": 5.317,
+          "end": 5.602,
+          "text": "tech"
         },
         {
-          "start": 5.041,
-          "end": 5.446,
-          "text": "banks"
-        },
-        {
-          "start": 5.458,
-          "end": 5.649,
-          "text": "use"
-        },
-        {
-          "start": 5.66,
-          "end": 5.982,
-          "text": "stealth"
-        },
-        {
-          "start": 5.994,
-          "end": 6.482,
-          "text": "software"
-        },
-        {
-          "start": 6.494,
-          "end": 6.577,
+          "start": 5.614,
+          "end": 5.721,
           "text": "to"
         },
         {
-          "start": 6.589,
-          "end": 6.946,
-          "text": "scan"
+          "start": 5.733,
+          "end": 6.067,
+          "text": "measure"
         },
         {
-          "start": 6.958,
-          "end": 7.077,
+          "start": 6.079,
+          "end": 6.21,
           "text": "your"
         },
         {
-          "start": 7.089,
-          "end": 7.565,
-          "text": "internal"
+          "start": 6.222,
+          "end": 6.567,
+          "text": "stress"
         },
         {
-          "start": 7.577,
-          "end": 7.922,
-          "text": "honesty"
+          "start": 6.579,
+          "end": 6.96,
+          "text": "levels"
         },
         {
-          "start": 7.934,
-          "end": 8.327,
-          "text": "score"
+          "start": 6.972,
+          "end": 7.102,
+          "text": "and"
+        },
+        {
+          "start": 7.114,
+          "end": 7.602,
+          "text": "focus"
+        },
+        {
+          "start": 7.614,
+          "end": 7.876,
+          "text": "during"
+        },
+        {
+          "start": 7.888,
+          "end": 8.412,
+          "text": "high-stakes"
+        },
+        {
+          "start": 8.424,
+          "end": 8.983,
+          "text": "interviews"
         }
       ]
     },
     {
       "scene": "scene_03",
-      "start": 8.772,
-      "end": 15.204,
+      "start": 9.42,
+      "end": 17.028,
       "words": [
         {
-          "start": 8.855,
-          "end": 8.974,
+          "start": 9.503,
+          "end": 9.61,
           "text": "When"
         },
         {
-          "start": 8.986,
-          "end": 9.105,
+          "start": 9.622,
+          "end": 9.741,
           "text": "you"
         },
         {
-          "start": 9.117,
-          "end": 9.355,
+          "start": 9.753,
+          "end": 10.015,
           "text": "feel"
         },
         {
-          "start": 9.367,
-          "end": 9.903,
-          "text": "stress"
+          "start": 10.027,
+          "end": 10.599,
+          "text": "pressure"
         },
         {
-          "start": 9.927,
-          "end": 10.105,
+          "start": 10.622,
+          "end": 10.825,
           "text": "your"
         },
         {
-          "start": 10.117,
-          "end": 10.51,
+          "start": 10.837,
+          "end": 11.337,
           "text": "pupils"
         },
         {
-          "start": 10.522,
-          "end": 11.034,
-          "text": "widen"
+          "start": 11.349,
+          "end": 12.182,
+          "text": "involuntarily"
         },
         {
-          "start": 11.382,
-          "end": 11.548,
+          "start": 12.194,
+          "end": 12.765,
+          "text": "dilate"
+        },
+        {
+          "start": 13.113,
+          "end": 13.268,
           "text": "It’s"
         },
         {
-          "start": 11.56,
-          "end": 11.631,
-          "text": "an"
+          "start": 13.28,
+          "end": 13.363,
+          "text": "a"
         },
         {
-          "start": 11.643,
-          "end": 12.37,
-          "text": "involuntary"
-        },
-        {
-          "start": 12.382,
-          "end": 13.06,
+          "start": 13.375,
+          "end": 14.101,
           "text": "biometric"
         },
         {
-          "start": 13.072,
-          "end": 13.429,
-          "text": "leak"
+          "start": 14.113,
+          "end": 14.756,
+          "text": "response"
         },
         {
-          "start": 13.453,
-          "end": 13.632,
-          "text": "that"
+          "start": 14.768,
+          "end": 15.018,
+          "text": "that’s"
         },
         {
-          "start": 13.643,
-          "end": 13.858,
-          "text": "no"
+          "start": 15.03,
+          "end": 15.458,
+          "text": "nearly"
         },
         {
-          "start": 13.87,
-          "end": 14.227,
-          "text": "human"
+          "start": 15.47,
+          "end": 16.077,
+          "text": "impossible"
         },
         {
-          "start": 14.239,
-          "end": 14.37,
-          "text": "can"
+          "start": 16.089,
+          "end": 16.172,
+          "text": "to"
         },
         {
-          "start": 14.382,
-          "end": 14.846,
+          "start": 16.184,
+          "end": 16.672,
           "text": "hide"
         }
       ]
     },
     {
       "scene": "scene_04",
-      "start": 15.294,
-      "end": 20.334,
+      "start": 17.118,
+      "end": 22.758,
       "words": [
         {
-          "start": 15.365,
-          "end": 15.461,
+          "start": 17.189,
+          "end": 17.285,
           "text": "But"
         },
         {
-          "start": 15.473,
-          "end": 15.794,
-          "text": "here’s"
+          "start": 17.297,
+          "end": 17.618,
+          "text": "here"
         },
         {
-          "start": 15.806,
-          "end": 15.901,
-          "text": "the"
-        },
-        {
-          "start": 15.913,
-          "end": 16.258,
-          "text": "creepy"
-        },
-        {
-          "start": 16.27,
-          "end": 16.699,
-          "text": "part"
-        },
-        {
-          "start": 17.092,
-          "end": 17.258,
-          "text": "This"
-        },
-        {
-          "start": 17.27,
-          "end": 17.973,
-          "text": "technology"
-        },
-        {
-          "start": 17.984,
-          "end": 18.151,
+          "start": 17.63,
+          "end": 17.808,
           "text": "is"
         },
         {
-          "start": 18.163,
-          "end": 18.401,
-          "text": "being"
+          "start": 17.82,
+          "end": 17.916,
+          "text": "the"
         },
         {
-          "start": 18.413,
-          "end": 18.806,
-          "text": "used"
+          "start": 17.928,
+          "end": 18.273,
+          "text": "creepy"
         },
         {
-          "start": 18.818,
-          "end": 19.02,
-          "text": "right"
+          "start": 18.285,
+          "end": 18.725,
+          "text": "part"
         },
         {
-          "start": 19.032,
-          "end": 19.294,
-          "text": "now"
+          "start": 19.106,
+          "end": 19.273,
+          "text": "This"
         },
         {
-          "start": 19.306,
-          "end": 19.413,
+          "start": 19.285,
+          "end": 19.928,
+          "text": "analysis"
+        },
+        {
+          "start": 19.939,
+          "end": 20.07,
+          "text": "is"
+        },
+        {
+          "start": 20.082,
+          "end": 20.582,
+          "text": "happening"
+        },
+        {
+          "start": 20.594,
+          "end": 20.737,
           "text": "in"
         },
         {
-          "start": 19.425,
-          "end": 19.984,
-          "text": "secret"
+          "start": 20.749,
+          "end": 20.987,
+          "text": "more"
+        },
+        {
+          "start": 20.999,
+          "end": 21.523,
+          "text": "places"
+        },
+        {
+          "start": 21.535,
+          "end": 21.678,
+          "text": "than"
+        },
+        {
+          "start": 21.689,
+          "end": 21.82,
+          "text": "you"
+        },
+        {
+          "start": 21.832,
+          "end": 22.416,
+          "text": "realize"
         }
       ]
     },
     {
       "scene": "scene_05",
-      "start": 20.424,
-      "end": 25.848,
+      "start": 22.848,
+      "end": 28.008,
       "words": [
         {
-          "start": 20.507,
-          "end": 21.007,
-          "text": "Advanced"
+          "start": 22.931,
+          "end": 23.443,
+          "text": "Researchers"
         },
         {
-          "start": 21.031,
-          "end": 21.543,
-          "text": "algorithms"
+          "start": 23.455,
+          "end": 23.824,
+          "text": "study"
         },
         {
-          "start": 21.555,
-          "end": 21.936,
-          "text": "track"
+          "start": 23.836,
+          "end": 24.027,
+          "text": "how"
         },
         {
-          "start": 21.96,
-          "end": 22.245,
-          "text": "every"
+          "start": 24.038,
+          "end": 24.217,
+          "text": "these"
         },
         {
-          "start": 22.257,
-          "end": 22.924,
-          "text": "micro-shift"
+          "start": 24.229,
+          "end": 24.527,
+          "text": "subtle"
         },
         {
-          "start": 22.936,
-          "end": 23.043,
-          "text": "in"
-        },
-        {
-          "start": 23.055,
-          "end": 23.186,
-          "text": "your"
-        },
-        {
-          "start": 23.198,
-          "end": 23.543,
+          "start": 24.538,
+          "end": 24.812,
           "text": "gaze"
         },
         {
-          "start": 23.555,
-          "end": 23.662,
-          "text": "to"
+          "start": 24.824,
+          "end": 25.217,
+          "text": "shifts"
         },
         {
-          "start": 23.674,
-          "end": 24.15,
-          "text": "decide"
+          "start": 25.229,
+          "end": 25.777,
+          "text": "indicate"
         },
         {
-          "start": 24.162,
-          "end": 24.317,
-          "text": "if"
+          "start": 25.788,
+          "end": 26.027,
+          "text": "whether"
         },
         {
-          "start": 24.329,
-          "end": 24.472,
-          "text": "you’re"
+          "start": 26.038,
+          "end": 26.157,
+          "text": "you"
         },
         {
-          "start": 24.484,
-          "end": 24.519,
-          "text": "a"
+          "start": 26.169,
+          "end": 26.288,
+          "text": "are"
         },
         {
-          "start": 24.531,
-          "end": 25.043,
-          "text": "high-risk"
+          "start": 26.3,
+          "end": 26.741,
+          "text": "calm"
         },
         {
-          "start": 25.055,
-          "end": 25.495,
-          "text": "person"
+          "start": 26.765,
+          "end": 26.967,
+          "text": "or"
+        },
+        {
+          "start": 26.979,
+          "end": 27.646,
+          "text": "overwhelmed"
         }
       ]
     },
     {
       "scene": "scene_06",
-      "start": 25.938,
-      "end": 31.41,
+      "start": 28.098,
+      "end": 33.186,
       "words": [
         {
-          "start": 25.988,
-          "end": 26.119,
-          "text": "It’s"
+          "start": 28.169,
+          "end": 28.336,
+          "text": "This"
         },
         {
-          "start": 26.131,
-          "end": 26.393,
-          "text": "called"
+          "start": 28.348,
+          "end": 28.693,
+          "text": "data"
         },
         {
-          "start": 26.417,
-          "end": 26.964,
-          "text": "Eye-tracking"
+          "start": 28.705,
+          "end": 28.872,
+          "text": "could"
         },
         {
-          "start": 26.976,
-          "end": 27.69,
-          "text": "Analysis"
+          "start": 28.884,
+          "end": 29.396,
+          "text": "eventually"
         },
         {
-          "start": 27.964,
-          "end": 28.178,
-          "text": "and"
+          "start": 29.408,
+          "end": 29.836,
+          "text": "determine"
         },
         {
-          "start": 28.19,
-          "end": 28.321,
-          "text": "it"
-        },
-        {
-          "start": 28.333,
-          "end": 28.833,
-          "text": "determines"
-        },
-        {
-          "start": 28.845,
-          "end": 28.964,
+          "start": 29.848,
+          "end": 29.979,
           "text": "your"
         },
         {
-          "start": 28.976,
-          "end": 29.44,
-          "text": "future"
+          "start": 29.991,
+          "end": 30.634,
+          "text": "suitability"
         },
         {
-          "start": 29.452,
-          "end": 29.798,
+          "start": 30.646,
+          "end": 30.824,
+          "text": "for"
+        },
+        {
+          "start": 30.836,
+          "end": 30.884,
+          "text": "a"
+        },
+        {
+          "start": 30.896,
+          "end": 31.324,
+          "text": "job"
+        },
+        {
+          "start": 31.336,
+          "end": 31.669,
           "text": "before"
         },
         {
-          "start": 29.809,
-          "end": 29.964,
+          "start": 31.681,
+          "end": 31.812,
           "text": "you"
         },
         {
-          "start": 29.976,
-          "end": 30.238,
+          "start": 31.824,
+          "end": 32.062,
           "text": "even"
         },
         {
-          "start": 30.25,
-          "end": 30.548,
-          "text": "finish"
+          "start": 32.074,
+          "end": 32.348,
+          "text": "speak"
         },
         {
-          "start": 30.559,
-          "end": 31.047,
-          "text": "speaking"
+          "start": 32.36,
+          "end": 32.419,
+          "text": "a"
+        },
+        {
+          "start": 32.431,
+          "end": 32.836,
+          "text": "word"
         }
       ]
     },
     {
       "scene": "scene_07",
-      "start": 31.5,
-      "end": 38.916,
+      "start": 33.276,
+      "end": 40.404,
       "words": [
         {
-          "start": 31.549,
-          "end": 32.144,
+          "start": 33.325,
+          "end": 33.92,
           "text": "Subscribe"
         },
         {
-          "start": 32.156,
-          "end": 32.311,
+          "start": 33.932,
+          "end": 34.087,
           "text": "for"
         },
         {
-          "start": 32.323,
-          "end": 32.549,
+          "start": 34.099,
+          "end": 34.325,
           "text": "more"
         },
         {
-          "start": 32.561,
-          "end": 32.846,
+          "start": 34.337,
+          "end": 34.622,
           "text": "dark"
         },
         {
-          "start": 32.858,
-          "end": 33.049,
+          "start": 34.634,
+          "end": 34.825,
           "text": "tech"
         },
         {
-          "start": 33.061,
-          "end": 33.596,
+          "start": 34.837,
+          "end": 35.372,
           "text": "secrets"
         },
         {
-          "start": 33.608,
-          "end": 33.763,
+          "start": 35.384,
+          "end": 35.539,
           "text": "and"
         },
         {
-          "start": 33.775,
-          "end": 34.156,
+          "start": 35.551,
+          "end": 35.932,
           "text": "comment"
         },
         {
-          "start": 34.168,
-          "end": 34.537,
+          "start": 35.944,
+          "end": 36.313,
           "text": "STILL"
         },
         {
-          "start": 34.549,
-          "end": 34.68,
+          "start": 36.325,
+          "end": 36.456,
           "text": "if"
         },
         {
-          "start": 34.692,
-          "end": 34.775,
+          "start": 36.468,
+          "end": 36.551,
           "text": "you"
         },
         {
-          "start": 34.787,
-          "end": 35.037,
+          "start": 36.563,
+          "end": 36.813,
           "text": "didn't"
         },
         {
-          "start": 35.049,
-          "end": 35.489,
+          "start": 36.825,
+          "end": 37.265,
           "text": "blink"
         },
         {
-          "start": 35.869,
-          "end": 36.476,
-          "text": "Biometrics"
+          "start": 37.621,
+          "end": 37.812,
+          "text": "Keep"
         },
         {
-          "start": 36.488,
-          "end": 36.607,
-          "text": "are"
+          "start": 37.824,
+          "end": 37.99,
+          "text": "your"
         },
         {
-          "start": 36.619,
-          "end": 37.131,
-          "text": "watching"
+          "start": 38.002,
+          "end": 38.205,
+          "text": "eyes"
         },
         {
-          "start": 37.155,
-          "end": 37.345,
+          "start": 38.216,
+          "end": 38.633,
+          "text": "sharp"
+        },
+        {
+          "start": 38.657,
+          "end": 38.836,
           "text": "which"
         },
         {
-          "start": 37.357,
-          "end": 37.476,
+          "start": 38.847,
+          "end": 38.966,
           "text": "is"
         },
         {
-          "start": 37.488,
-          "end": 38.059,
+          "start": 38.978,
+          "end": 39.562,
           "text": "exactly"
         },
         {
-          "start": 38.071,
-          "end": 38.548,
+          "start": 39.574,
+          "end": 40.038,
           "text": "why"
         }
       ]
