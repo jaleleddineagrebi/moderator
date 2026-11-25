@@ -2,7 +2,7 @@
   "run_id": "20261125_191908_youtube_short",
   "workflow": "youtube_short",
   "workflow_title": "YouTube Short",
-  "status": "running",
+  "status": "done",
   "params": {
     "languages": [
       "en"
@@ -66,16 +66,16 @@
     "llm": "gemini"
   },
   "started_at": "2026-11-25T19:19:08+00:00",
-  "ended_at": null,
+  "ended_at": "2026-11-25T19:29:07+00:00",
   "revision_rounds": 2,
   "cost": {
-    "total_usd": 0.035057,
+    "total_usd": 0.036817,
     "budget_usd": 1.0,
     "by_agent": {
       "trend_researcher": 0.00309,
       "scriptwriter": 0.02355,
       "packaging": 0.001433,
-      "qa_reviewer": 0.006982
+      "qa_reviewer": 0.008742
     }
   },
   "agents": {
@@ -742,6 +742,7 @@
         }
       },
       "outputs": {
+        "voiceover_en": "voiceover_en.mp3",
         "timings_en": "timings_en.json"
       },
       "logs": [
@@ -1047,6 +1048,7 @@
         "strategy": "transitions"
       },
       "outputs": {
+        "video_en": "final_short_en.mp4",
         "captions_en": "captions_en.ass"
       },
       "logs": [
@@ -1123,10 +1125,10 @@
         "packaging"
       ],
       "checkpoint": "C",
-      "status": "running",
-      "progress": 60,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-25T19:28:37+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-25T19:28:59+00:00",
       "attempt": 3,
       "retries": 0,
       "max_retries": 2,
@@ -1143,6 +1145,7 @@
       "outputs": {
         "report": "qa_report.md",
         "data": "qa_report.json",
+        "video_en": "final_short_en.mp4",
         "thumbnail_en": "thumbnail_en.png"
       },
       "logs": [
@@ -1250,11 +1253,36 @@
           "ts": "2026-11-25T19:28:42+00:00",
           "level": "info",
           "msg": "Gemini (gemini-3-flash-preview) answered in 1.9s (tokens in 1266, out 171, thinking 0)"
+        },
+        {
+          "ts": "2026-11-25T19:28:48+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.8-flash, medium complexity, thinking low)"
+        },
+        {
+          "ts": "2026-11-25T19:28:59+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3-flash-preview) answered in 10.6s (tokens in 3490, out 5, thinking 0)"
+        },
+        {
+          "ts": "2026-11-25T19:28:59+00:00",
+          "level": "warning",
+          "msg": "1 blocking issue(s); sending back to: script"
+        },
+        {
+          "ts": "2026-11-25T19:28:59+00:00",
+          "level": "info",
+          "msg": "Finished, waiting for your approval"
+        },
+        {
+          "ts": "2026-11-25T19:28:59+00:00",
+          "level": "warning",
+          "msg": "Revision limit (2 rounds) reached; passing the issues to you instead"
         }
       ],
       "errors": [],
       "feedback": [],
-      "cost_usd": 0.006982
+      "cost_usd": 0.008742
     }
   },
   "checkpoints": {
@@ -1301,18 +1329,56 @@
       "type": "approve",
       "step": "qa",
       "route_to": "edit",
-      "status": "idle",
+      "status": "approved",
       "options": [],
       "choice": null,
-      "comment": null,
-      "decided_at": null
+      "comment": "approved by auto-publish",
+      "decided_at": "2026-11-25T19:29:07+00:00"
     }
   },
-  "notifications": [],
+  "notifications": [
+    {
+      "ts": "2026-11-25T19:28:59+00:00",
+      "level": "warning",
+      "msg": "Reviewer still had issues after 2 revision rounds. Check its report.",
+      "step": "qa"
+    },
+    {
+      "ts": "2026-11-25T19:28:59+00:00",
+      "level": "action",
+      "msg": "Approval needed: Approve the final videos (never uploaded without your OK)",
+      "step": "qa"
+    },
+    {
+      "ts": "2026-11-25T19:29:14+00:00",
+      "level": "success",
+      "msg": "Uploaded en to 'Mind Decoder' as public: https://youtube.com/shorts/gF0ye9nz6w4",
+      "step": null
+    }
+  ],
+  "uploads": [
+    {
+      "lang": "en",
+      "id": "gF0ye9nz6w4",
+      "url": "https://youtube.com/shorts/gF0ye9nz6w4",
+      "privacy": "public",
+      "channel": "Mind Decoder",
+      "thumbnail": "set"
+    }
+  ],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-25T19:28:45+00:00",
-    "uploads": [],
+    "exported_at": "2026-11-25T19:29:15+00:00",
+    "uploads": [
+      {
+        "lang": "en",
+        "id": "gF0ye9nz6w4",
+        "url": "https://youtube.com/shorts/gF0ye9nz6w4",
+        "privacy": "public",
+        "channel": "Mind Decoder",
+        "thumbnail": "set"
+      }
+    ],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/45683901678"
   }
 }
