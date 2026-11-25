@@ -1,0 +1,145 @@
+{
+  "title": "The AI Pupil Response Trap",
+  "scenes": [
+    {
+      "vo": {
+        "en": "Stop blinking. AI is watching you."
+      },
+      "on_screen": {
+        "en": "STOP BLINKING"
+      },
+      "visual": {
+        "description": "Ultra close-up of a man's eye with the pupil contracting and dilating dramatically.",
+        "search_terms": [
+          "macro eye pupil",
+          "man staring intense",
+          "eye dilation close"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "The AI Gaze Test",
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Banks and job interviewers are using hidden software to scan your internal honesty score."
+      },
+      "on_screen": {
+        "en": "AI HONESTY SCAN"
+      },
+      "visual": {
+        "description": "A man in a formal suit looking nervous and sweating while sitting at a desk.",
+        "search_terms": [
+          "man job interview",
+          "nervous sweating man",
+          "office stress"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "When you lie or feel stress, your pupils widen. It’s an involuntary biometric tell you can’t fake."
+      },
+      "on_screen": {
+        "en": "PUPILS NEVER LIE"
+      },
+      "visual": {
+        "description": "Digital blue biometric scanner lines moving across a man's face interface.",
+        "search_terms": [
+          "biometric facial scanning",
+          "digital grid overlay",
+          "tech interface face"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "But here is the creepy part. You’re being tested right now."
+      },
+      "on_screen": {
+        "en": "THE CREEPY PART..."
+      },
+      "visual": {
+        "description": "Fast-paced digital glitch effect with red warning lights and flashing abstract data.",
+        "search_terms": [
+          "red digital glitch",
+          "warning signal flashing",
+          "abstract data error"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "Invisible Surveillance",
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Advanced software tracks how your gaze shifts to calculate if you’re a high-risk person."
+      },
+      "on_screen": {
+        "en": "CALCULATING YOUR RISK"
+      },
+      "visual": {
+        "description": "Dark room with green binary code streaming down and a hand typing on a laptop.",
+        "search_terms": [
+          "cyber security code",
+          "hands typing fast",
+          "hacker green code"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for more dark tech secrets and comment 'PASSED' if you kept your eyes still."
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "A man staring directly into the lens with a neutral, unblinking expression.",
+        "search_terms": [
+          "man looking camera",
+          "serious man face",
+          "unblinking stare"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Invisible surveillance is the new standard for everything you do, which is exactly why you must..."
+      },
+      "on_screen": {
+        "en": "IT IS WATCHING"
+      },
+      "visual": {
+        "description": "A security camera rotating slowly on a building corner against a dark sky.",
+        "search_terms": [
+          "cctv camera moving",
+          "digital surveillance street",
+          "security camera night"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "ai-pupil-tracking-trap",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 33.8
+  }
+}
