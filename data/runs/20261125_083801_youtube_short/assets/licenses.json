@@ -3,70 +3,70 @@
     "scene": "scene_01",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-40739/",
-    "author": "RoyBuri",
+    "page": "https://pixabay.com/videos/id-14815/",
+    "author": "TRAPHITHO",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "macro eye pupil",
-    "description": "Ultra close-up of a man's eye with the pupil contracting and dilating dramatically."
+    "query": "macro human eye",
+    "description": "Macro shot of a man's eye with the pupil contracting sharply."
   },
   {
     "scene": "scene_02",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-42923/",
-    "author": "chuduyen215",
+    "page": "https://pixabay.com/videos/id-24497/",
+    "author": "ninosouza",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "man job interview",
-    "description": "A man in a formal suit looking nervous and sweating while sitting at a desk."
+    "query": "man video conference",
+    "description": "A man in a suit looking at a glowing laptop screen in a dark office."
   },
   {
     "scene": "scene_03",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-26967/",
-    "author": "Matthias_Groeneveld",
+    "page": "https://pixabay.com/videos/id-232185/",
+    "author": "videohive",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "biometric facial scanning",
-    "description": "Digital blue biometric scanner lines moving across a man's face interface."
+    "query": "biometric face scan",
+    "description": "Digital biometric patterns and data points mapped over a man's face."
   },
   {
     "scene": "scene_04",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-209818/",
-    "author": "VideoAnimals",
+    "page": "https://pixabay.com/videos/id-199015/",
+    "author": "draisthetic",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "red digital glitch",
-    "description": "Fast-paced digital glitch effect with red warning lights and flashing abstract data."
+    "query": "abstract digital glitch",
+    "description": "A fast-moving abstract digital glitch with flashing blue and cyan light."
   },
   {
     "scene": "scene_05",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-142363/",
-    "author": "31963655",
+    "page": "https://pixabay.com/videos/id-145320/",
+    "author": "NickyPe",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "cyber security code",
-    "description": "Dark room with green binary code streaming down and a hand typing on a laptop."
+    "query": "coding fast motion",
+    "description": "High-speed scrolling green code and data visualizations on a dark monitor."
   },
   {
     "scene": "scene_06",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-318654/",
-    "author": "TonyDias7",
+    "page": "https://pixabay.com/videos/id-224387/",
+    "author": "Engin_Akyurt",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "man looking camera",
-    "description": "A man staring directly into the lens with a neutral, unblinking expression."
+    "query": "hand signing document",
+    "description": "Close up of a man's hand signing a formal document with a fountain pen."
   },
   {
     "scene": "scene_07",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-198/",
-    "author": "Life-Of-Vids",
+    "page": "https://pixabay.com/videos/id-50176/",
+    "author": "roldavidespin",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "cctv camera moving",
-    "description": "A security camera rotating slowly on a building corner against a dark sky."
+    "query": "cctv camera lens",
+    "description": "A modern security camera lens rotating slowly against a city background."
   }
 ]

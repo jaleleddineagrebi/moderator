@@ -13,43 +13,47 @@ Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 Dialogue: 1,0:00:00.05,0:00:02.92,Headline,,0,0,0,,{\fad(150,150)}STOP BLINKING
-Dialogue: 1,0:00:03.02,0:00:08.34,Headline,,0,0,0,,{\fad(150,150)}AI HONESTY SCAN
-Dialogue: 1,0:00:08.44,0:00:14.57,Headline,,0,0,0,,{\fad(150,150)}PUPILS NEVER LIE
-Dialogue: 1,0:00:14.67,0:00:18.48,Headline,,0,0,0,,{\fad(150,150)}THE CREEPY PART...
-Dialogue: 1,0:00:18.58,0:00:23.15,Headline,,0,0,0,,{\fad(150,150)}CALCULATING YOUR RISK
-Dialogue: 1,0:00:23.25,0:00:28.81,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
-Dialogue: 1,0:00:28.91,0:00:34.84,Headline,,0,0,0,,{\fad(150,150)}IT IS WATCHING
+Dialogue: 1,0:00:03.02,0:00:08.72,Headline,,0,0,0,,{\fad(150,150)}AI HONESTY SCAN
+Dialogue: 1,0:00:08.82,0:00:15.24,Headline,,0,0,0,,{\fad(150,150)}PUPILS NEVER LIE
+Dialogue: 1,0:00:15.34,0:00:20.37,Headline,,0,0,0,,{\fad(150,150)}THE CREEPY PART
+Dialogue: 1,0:00:20.47,0:00:25.89,Headline,,0,0,0,,{\fad(150,150)}CALCULATING YOUR RISK
+Dialogue: 1,0:00:25.99,0:00:31.45,Headline,,0,0,0,,{\fad(150,150)}YOUR FUTURE DECIDED
+Dialogue: 1,0:00:31.55,0:00:39.57,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
 Dialogue: 0,0:00:00.05,0:00:00.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Stop {\c&H0000E5FF&}blinking{\c&H00FFFFFF&}
 Dialogue: 0,0:00:01.30,0:00:02.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}AI is {\c&H0000E5FF&}watching{\c&H00FFFFFF&}
 Dialogue: 0,0:00:02.26,0:00:02.66,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you
-Dialogue: 0,0:00:03.05,0:00:03.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Banks{\c&H00FFFFFF&} and job
-Dialogue: 0,0:00:03.92,0:00:05.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}interviewers{\c&H00FFFFFF&} are using
-Dialogue: 0,0:00:05.03,0:00:06.07,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}hidden {\c&H0000E5FF&}software{\c&H00FFFFFF&} to
-Dialogue: 0,0:00:06.08,0:00:07.17,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}scan your {\c&H0000E5FF&}internal{\c&H00FFFFFF&}
-Dialogue: 0,0:00:07.18,0:00:07.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}honesty{\c&H00FFFFFF&} score
-Dialogue: 0,0:00:08.47,0:00:09.10,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}When you lie
-Dialogue: 0,0:00:09.11,0:00:10.01,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}or feel {\c&H0000E5FF&}stress{\c&H00FFFFFF&}
-Dialogue: 0,0:00:10.03,0:00:11.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}pupils{\c&H00FFFFFF&} widen
-Dialogue: 0,0:00:11.43,0:00:12.39,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It’s an {\c&H0000E5FF&}involuntary{\c&H00FFFFFF&}
-Dialogue: 0,0:00:12.40,0:00:13.41,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}biometric{\c&H00FFFFFF&} tell you
-Dialogue: 0,0:00:13.43,0:00:14.19,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}can’t{\c&H00FFFFFF&} fake
-Dialogue: 0,0:00:14.69,0:00:15.31,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}But {\c&H0000E5FF&}here{\c&H00FFFFFF&} is
-Dialogue: 0,0:00:15.32,0:00:16.23,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}creepy{\c&H00FFFFFF&} part
-Dialogue: 0,0:00:16.60,0:00:17.47,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}You’re{\c&H00FFFFFF&} being tested
-Dialogue: 0,0:00:17.48,0:00:18.07,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}right{\c&H00FFFFFF&} now
-Dialogue: 0,0:00:18.60,0:00:19.80,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Advanced{\c&H00FFFFFF&} software tracks
-Dialogue: 0,0:00:19.81,0:00:20.41,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}how your {\c&H0000E5FF&}gaze{\c&H00FFFFFF&}
-Dialogue: 0,0:00:20.42,0:00:21.46,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}shifts to {\c&H0000E5FF&}calculate{\c&H00FFFFFF&}
-Dialogue: 0,0:00:21.48,0:00:21.85,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}if {\c&H0000E5FF&}you’re{\c&H00FFFFFF&} a
-Dialogue: 0,0:00:21.85,0:00:22.77,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}high-risk{\c&H00FFFFFF&} person
-Dialogue: 0,0:00:23.29,0:00:24.17,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Subscribe{\c&H00FFFFFF&} for more
-Dialogue: 0,0:00:24.18,0:00:25.19,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}dark tech {\c&H0000E5FF&}secrets{\c&H00FFFFFF&}
-Dialogue: 0,0:00:25.20,0:00:26.65,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and {\c&H0000E5FF&}comment{\c&H00FFFFFF&} PASSED
-Dialogue: 0,0:00:27.20,0:00:27.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}if you {\c&H0000E5FF&}kept{\c&H00FFFFFF&}
-Dialogue: 0,0:00:27.64,0:00:28.40,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your eyes {\c&H0000E5FF&}still{\c&H00FFFFFF&}
-Dialogue: 0,0:00:28.95,0:00:30.32,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Invisible {\c&H0000E5FF&}surveillance{\c&H00FFFFFF&} is
-Dialogue: 0,0:00:30.34,0:00:31.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the new {\c&H0000E5FF&}standard{\c&H00FFFFFF&}
-Dialogue: 0,0:00:31.16,0:00:31.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}for {\c&H0000E5FF&}everything{\c&H00FFFFFF&} you
-Dialogue: 0,0:00:31.90,0:00:32.50,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}do {\c&H0000E5FF&}which{\c&H00FFFFFF&} is
-Dialogue: 0,0:00:32.52,0:00:33.42,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}exactly{\c&H00FFFFFF&} why you
-Dialogue: 0,0:00:33.43,0:00:33.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}must
+Dialogue: 0,0:00:03.05,0:00:03.58,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Right{\c&H00FFFFFF&} now
+Dialogue: 0,0:00:04.02,0:00:05.03,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}job {\c&H0000E5FF&}interviewers{\c&H00FFFFFF&} and
+Dialogue: 0,0:00:05.04,0:00:05.98,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}banks use {\c&H0000E5FF&}stealth{\c&H00FFFFFF&}
+Dialogue: 0,0:00:05.99,0:00:06.95,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}software{\c&H00FFFFFF&} to scan
+Dialogue: 0,0:00:06.96,0:00:07.92,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}internal{\c&H00FFFFFF&} honesty
+Dialogue: 0,0:00:07.93,0:00:08.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}score
+Dialogue: 0,0:00:08.86,0:00:09.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}When you {\c&H0000E5FF&}feel{\c&H00FFFFFF&}
+Dialogue: 0,0:00:09.37,0:00:10.51,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}stress{\c&H00FFFFFF&} your pupils
+Dialogue: 0,0:00:10.52,0:00:11.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}widen{\c&H00FFFFFF&} It’s an
+Dialogue: 0,0:00:11.64,0:00:13.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}involuntary{\c&H00FFFFFF&} biometric leak
+Dialogue: 0,0:00:13.45,0:00:14.23,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}that no {\c&H0000E5FF&}human{\c&H00FFFFFF&}
+Dialogue: 0,0:00:14.24,0:00:14.85,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}can {\c&H0000E5FF&}hide{\c&H00FFFFFF&}
+Dialogue: 0,0:00:15.37,0:00:15.90,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}But {\c&H0000E5FF&}here’s{\c&H00FFFFFF&} the
+Dialogue: 0,0:00:15.91,0:00:16.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}creepy{\c&H00FFFFFF&} part
+Dialogue: 0,0:00:17.09,0:00:18.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}This {\c&H0000E5FF&}technology{\c&H00FFFFFF&} is
+Dialogue: 0,0:00:18.16,0:00:19.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}being{\c&H00FFFFFF&} used right
+Dialogue: 0,0:00:19.03,0:00:19.98,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}now in {\c&H0000E5FF&}secret{\c&H00FFFFFF&}
+Dialogue: 0,0:00:20.51,0:00:21.94,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Advanced {\c&H0000E5FF&}algorithms{\c&H00FFFFFF&} track
+Dialogue: 0,0:00:21.96,0:00:23.04,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}every {\c&H0000E5FF&}micro-shift{\c&H00FFFFFF&} in
+Dialogue: 0,0:00:23.05,0:00:23.66,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}gaze{\c&H00FFFFFF&} to
+Dialogue: 0,0:00:23.67,0:00:24.47,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}decide{\c&H00FFFFFF&} if you’re
+Dialogue: 0,0:00:24.48,0:00:25.50,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a {\c&H0000E5FF&}high-risk{\c&H00FFFFFF&} person
+Dialogue: 0,0:00:25.99,0:00:26.96,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It’s called {\c&H0000E5FF&}Eye-tracking{\c&H00FFFFFF&}
+Dialogue: 0,0:00:26.98,0:00:28.32,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Analysis{\c&H00FFFFFF&} and it
+Dialogue: 0,0:00:28.33,0:00:29.44,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}determines{\c&H00FFFFFF&} your future
+Dialogue: 0,0:00:29.45,0:00:30.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}before{\c&H00FFFFFF&} you even
+Dialogue: 0,0:00:30.25,0:00:31.05,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}finish {\c&H0000E5FF&}speaking{\c&H00FFFFFF&}
+Dialogue: 0,0:00:31.55,0:00:32.55,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Subscribe{\c&H00FFFFFF&} for more
+Dialogue: 0,0:00:32.56,0:00:33.60,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}dark tech {\c&H0000E5FF&}secrets{\c&H00FFFFFF&}
+Dialogue: 0,0:00:33.61,0:00:34.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and {\c&H0000E5FF&}comment{\c&H00FFFFFF&} STILL
+Dialogue: 0,0:00:34.55,0:00:35.04,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}if you {\c&H0000E5FF&}didn't{\c&H00FFFFFF&}
+Dialogue: 0,0:00:35.05,0:00:35.49,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}blink
+Dialogue: 0,0:00:35.87,0:00:37.13,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Biometrics{\c&H00FFFFFF&} are watching
+Dialogue: 0,0:00:37.16,0:00:38.06,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}which is {\c&H0000E5FF&}exactly{\c&H00FFFFFF&}
+Dialogue: 0,0:00:38.07,0:00:38.55,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}why
