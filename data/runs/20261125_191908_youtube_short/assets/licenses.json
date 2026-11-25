@@ -3,70 +3,70 @@
     "scene": "scene_01",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-143416/",
-    "author": "NickyPe",
+    "page": "https://pixabay.com/videos/id-183449/",
+    "author": "Amorn_mimi",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
     "query": "man hand pointing",
-    "description": "A close-up shot of a man's hand with fingers spread, pointing directly at the camera."
+    "description": "A close-up shot of a man's hand with fingers spread, pointing directly at the camera with intensity."
   },
   {
     "scene": "scene_02",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-233399/",
-    "author": "Yasir1120",
+    "page": "https://pixabay.com/videos/id-286644/",
+    "author": "Matias_Luge",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
     "query": "folding hands together",
-    "description": "Two hands coming together and folding the middle fingers down into the palms."
+    "description": "Two hands coming together in a prayer position and folding the middle fingers down into the palms."
   },
   {
     "scene": "scene_03",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-286/",
-    "author": "Life-Of-Vids",
+    "page": "https://pixabay.com/videos/id-123409/",
+    "author": "MabelAmber",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
     "query": "moving thumbs",
-    "description": "Close up of a person's thumbs and index fingers moving freely while the middle fingers stay folded."
+    "description": "Close up of a person's thumbs and pinky fingers moving freely while the middle fingers stay folded."
   },
   {
     "scene": "scene_04",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-1129/",
-    "author": "Tabble",
+    "page": "https://pixabay.com/videos/id-38079/",
+    "author": "mephala1980",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
     "query": "strained hand muscle",
-    "description": "A man's hand visibly straining to move the ring finger while other fingers stay pressed."
+    "description": "A man's hand visibly straining to move the ring finger while the middle fingers stay pressed together."
   },
   {
     "scene": "scene_05",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-220940/",
-    "author": "TungArt7",
+    "page": "https://pixabay.com/videos/id-122/",
+    "author": "Coverr-Free-Footage",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
     "query": "neural network glowing",
-    "description": "Abstract visualization of glowing blue neural pathways and electric signals firing rapidly."
+    "description": "Abstract visualization of glowing blue neural pathways and electric signals firing rapidly in a digital brain."
   },
   {
     "scene": "scene_06",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-177206/",
-    "author": "intersubjektiv",
+    "page": "https://pixabay.com/videos/id-98044/",
+    "author": "bellergy",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
     "query": "hand anatomy 3d",
-    "description": "An anatomical 3D render of a human hand showing the tendons and bones moving."
+    "description": "An anatomical 3D render of a human hand showing the internal tendons and bones moving."
   },
   {
     "scene": "scene_07",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-3172/",
+    "page": "https://pixabay.com/videos/id-3176/",
     "author": "Coverr-Free-Footage",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
     "query": "tapping phone screen",
-    "description": "A person's thumb clicking the subscribe button on a modern smartphone screen."
+    "description": "A person's thumb clicking the subscribe button on a modern smartphone screen in a dark room."
   }
 ]
