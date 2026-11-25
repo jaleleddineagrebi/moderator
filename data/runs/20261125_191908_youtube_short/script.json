@@ -1,5 +1,5 @@
 {
-  "title": "The Paralyzed Index Finger Glitch",
+  "title": "The Paralyzed Ring Finger Glitch",
   "scenes": [
     {
       "vo": {
@@ -9,30 +9,30 @@
         "en": "YOU CAN'T DO THIS"
       },
       "visual": {
-        "description": "Close-up of a man's hand pointing directly at the camera with a slight flex.",
+        "description": "A close-up shot of a man's hand with fingers spread, pointing directly at the camera.",
         "search_terms": [
-          "man hands flexing",
-          "finger pointing camera",
-          "hand motion blur"
+          "man hand pointing",
+          "finger gesturing camera",
+          "hand detail motion"
         ],
         "prefer": "video"
       },
-      "chapter": "The Glitch Test",
+      "chapter": "The Anatomy Glitch",
       "id": "scene_01"
     },
     {
       "vo": {
-        "en": "Put your hands together like this, then fold your middle fingers down so the knuckles touch."
+        "en": "Fold your hands together like a prayer, then tuck your middle fingers inside so your knuckles touch."
       },
       "on_screen": {
-        "en": "STEP 1: FOLD HANDS"
+        "en": "FOLD YOUR HANDS"
       },
       "visual": {
-        "description": "Hands coming together in a prayer position then folding the middle fingers inward.",
+        "description": "Two hands coming together and folding the middle fingers down into the palms.",
         "search_terms": [
-          "folding hands prayer",
-          "knuckles touching close",
-          "man hand position"
+          "folding hands together",
+          "fingers interlocking",
+          "hand exercise close"
         ],
         "prefer": "video"
       },
@@ -41,17 +41,17 @@
     },
     {
       "vo": {
-        "en": "Now, try separating your thumbs. Easy. Then your pinkies. Simple. They move because their tendons are independent."
+        "en": "Now, try lifting your thumbs. Easy. Your index fingers? No problem. They have independent tendons."
       },
       "on_screen": {
-        "en": "THUMBS AND PINKIES"
+        "en": "THUMBS AND INDEX"
       },
       "visual": {
-        "description": "Close up of thumbs and then pinky fingers moving freely while the rest of the hand stays locked.",
+        "description": "Close up of a person's thumbs and index fingers moving freely while the middle fingers stay folded.",
         "search_terms": [
-          "thumb moving",
-          "pinky finger motion",
-          "hand flexibility test"
+          "moving thumbs",
+          "index finger tapping",
+          "hand flexibility"
         ],
         "prefer": "video"
       },
@@ -60,17 +60,17 @@
     },
     {
       "vo": {
-        "en": "Wait until you test this part. Keep those middle fingers locked and try lifting your index fingers."
+        "en": "But here is the creepy part. Keep those middle fingers locked and try to lift your ring fingers."
       },
       "on_screen": {
-        "en": "TRY THE INDEX"
+        "en": "LIFT THE RING FINGER"
       },
       "visual": {
-        "description": "A person struggling to lift their index fingers while their middle knuckles are pressed together.",
+        "description": "A man's hand visibly straining to move the ring finger while other fingers stay pressed.",
         "search_terms": [
           "strained hand muscle",
-          "attempting lift finger",
-          "hand isometric tension"
+          "finger muscle tension",
+          "hand struggle motion"
         ],
         "prefer": "video"
       },
@@ -79,17 +79,17 @@
     },
     {
       "vo": {
-        "en": "See that? They’re stuck. No matter how hard your brain screams, your index fingers are literally paralyzed."
+        "en": "See? Your brain is screaming, but they won't budge. They are literally paralyzed by your own anatomy."
       },
       "on_screen": {
         "en": "BRAIN VS BODY"
       },
       "visual": {
-        "description": "Stylized animation of a human brain with electrical pulses representing signals sent to the hand.",
+        "description": "Abstract visualization of glowing blue neural pathways and electric signals firing rapidly.",
         "search_terms": [
-          "human brain glowing",
-          "neuron activity",
-          "electrical impulses brain"
+          "neural network glowing",
+          "electric brain pulses",
+          "abstract data flow"
         ],
         "prefer": "video"
       },
@@ -98,17 +98,17 @@
     },
     {
       "vo": {
-        "en": "This glitch happens because those specific tendons are physically linked together deep inside your hand."
+        "en": "This happens because your ring finger and middle finger share the exact same extensor tendon."
       },
       "on_screen": {
-        "en": "FUSED TENDONS"
+        "en": "SHARED TENDONS"
       },
       "visual": {
-        "description": "3D anatomical model of a human hand showing the internal tendon structure.",
+        "description": "An anatomical 3D render of a human hand showing the tendons and bones moving.",
         "search_terms": [
-          "hand skeletal animation",
-          "anatomical hand model",
-          "tendon movement visual"
+          "hand anatomy 3d",
+          "human skeleton hand",
+          "muscle structure video"
         ],
         "prefer": "video"
       },
@@ -117,17 +117,17 @@
     },
     {
       "vo": {
-        "en": "Subscribe for more body glitches and comment STUCK if this worked—which is exactly why..."
+        "en": "Subscribe for tomorrow's brain test and comment GLITCH if you’re stuck—which is exactly why..."
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "Close up of a man's thumb hitting the subscribe button on a phone screen.",
+        "description": "A person's thumb clicking the subscribe button on a modern smartphone screen.",
         "search_terms": [
-          "man typing phone",
-          "notification bell icon",
-          "smartphone screen tapping"
+          "tapping phone screen",
+          "smartphone interaction",
+          "clicking button"
         ],
         "prefer": "video"
       },

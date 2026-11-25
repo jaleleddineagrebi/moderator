@@ -67,15 +67,15 @@
   },
   "started_at": "2026-11-25T19:19:08+00:00",
   "ended_at": null,
-  "revision_rounds": 0,
+  "revision_rounds": 1,
   "cost": {
-    "total_usd": 0.012304,
+    "total_usd": 0.022913,
     "budget_usd": 1.0,
     "by_agent": {
       "trend_researcher": 0.00309,
-      "scriptwriter": 0.007821,
+      "scriptwriter": 0.016672,
       "packaging": 0.000484,
-      "qa_reviewer": 0.000909
+      "qa_reviewer": 0.002666
     }
   },
   "agents": {
@@ -368,9 +368,9 @@
       "checkpoint": "B",
       "status": "done",
       "progress": 100,
-      "started_at": "2026-11-25T19:19:17+00:00",
-      "ended_at": "2026-11-25T19:19:28+00:00",
-      "attempt": 1,
+      "started_at": "2026-11-25T19:22:31+00:00",
+      "ended_at": "2026-11-25T19:22:43+00:00",
+      "attempt": 2,
       "retries": 0,
       "max_retries": 2,
       "strategy": "default",
@@ -415,11 +415,52 @@
           "ts": "2026-11-25T19:19:28+00:00",
           "level": "info",
           "msg": "Approved by schedule (auto-approve)"
+        },
+        {
+          "ts": "2026-11-25T19:22:31+00:00",
+          "level": "warning",
+          "msg": "Sent back by qa: QA found:\n[en] accuracy review: The script incorrectly identifies the index finger as the one that cannot move. In the folded middle finger position, the index and pinky fingers move easily; it is the ring finger that cannot be lifted because it shares the extensor digitorum communis tendon with the middle finger. Change all mentions of 'index fingers' to 'ring fingers'."
+        },
+        {
+          "ts": "2026-11-25T19:22:31+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'default'"
+        },
+        {
+          "ts": "2026-11-25T19:22:31+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.8-flash, high complexity, thinking high)"
+        },
+        {
+          "ts": "2026-11-25T19:22:43+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3-flash-preview) answered in 11.6s (tokens in 2157, out 1017, thinking 1574)"
+        },
+        {
+          "ts": "2026-11-25T19:22:43+00:00",
+          "level": "info",
+          "msg": "Estimated narration: en 37.1s"
+        },
+        {
+          "ts": "2026-11-25T19:22:43+00:00",
+          "level": "info",
+          "msg": "Finished, waiting for your approval"
+        },
+        {
+          "ts": "2026-11-25T19:22:43+00:00",
+          "level": "info",
+          "msg": "Approved by schedule (auto-approve)"
         }
       ],
       "errors": [],
-      "feedback": [],
-      "cost_usd": 0.007821
+      "feedback": [
+        {
+          "ts": "2026-11-25T19:22:31+00:00",
+          "from": "qa",
+          "comment": "QA found:\n[en] accuracy review: The script incorrectly identifies the index finger as the one that cannot move. In the folded middle finger position, the index and pinky fingers move easily; it is the ring finger that cannot be lifted because it shares the extensor digitorum communis tendon with the middle finger. Change all mentions of 'index fingers' to 'ring fingers'."
+        }
+      ],
+      "cost_usd": 0.016672
     },
     "visuals": {
       "title": "Source scene visuals",
@@ -428,11 +469,11 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "done",
-      "progress": 100,
-      "started_at": "2026-11-25T19:19:28+00:00",
-      "ended_at": "2026-11-25T19:20:27+00:00",
-      "attempt": 1,
+      "status": "running",
+      "progress": 0,
+      "started_at": "2026-11-25T19:22:43+00:00",
+      "ended_at": null,
+      "attempt": 2,
       "retries": 0,
       "max_retries": 2,
       "strategy": "stock_video",
@@ -499,6 +540,21 @@
           "ts": "2026-11-25T19:20:27+00:00",
           "level": "info",
           "msg": "Finished"
+        },
+        {
+          "ts": "2026-11-25T19:22:31+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-25T19:22:43+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'stock_video'"
+        },
+        {
+          "ts": "2026-11-25T19:22:43+00:00",
+          "level": "info",
+          "msg": "Visual diversity: excluding 300 footage sources used in recent Shorts"
         }
       ],
       "errors": [],
@@ -512,11 +568,11 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "done",
-      "progress": 100,
-      "started_at": "2026-11-25T19:19:28+00:00",
-      "ended_at": "2026-11-25T19:20:16+00:00",
-      "attempt": 1,
+      "status": "running",
+      "progress": 0,
+      "started_at": "2026-11-25T19:22:43+00:00",
+      "ended_at": null,
+      "attempt": 2,
       "retries": 0,
       "max_retries": 2,
       "strategy": "primary_voice",
@@ -557,6 +613,21 @@
           "ts": "2026-11-25T19:20:16+00:00",
           "level": "info",
           "msg": "Finished"
+        },
+        {
+          "ts": "2026-11-25T19:22:31+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-25T19:22:43+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'primary_voice'"
+        },
+        {
+          "ts": "2026-11-25T19:22:43+00:00",
+          "level": "info",
+          "msg": "Narrating en with en-US-EmmaMultilingualNeural"
         }
       ],
       "errors": [],
@@ -571,8 +642,8 @@
         "visuals"
       ],
       "checkpoint": null,
-      "status": "done",
-      "progress": 100,
+      "status": "queued",
+      "progress": 0,
       "started_at": "2026-11-25T19:20:27+00:00",
       "ended_at": "2026-11-25T19:20:29+00:00",
       "attempt": 1,
@@ -656,6 +727,11 @@
           "ts": "2026-11-25T19:20:29+00:00",
           "level": "info",
           "msg": "Finished"
+        },
+        {
+          "ts": "2026-11-25T19:22:31+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'script' is being revised"
         }
       ],
       "errors": [],
@@ -670,8 +746,8 @@
         "audio"
       ],
       "checkpoint": null,
-      "status": "done",
-      "progress": 100,
+      "status": "queued",
+      "progress": 0,
       "started_at": "2026-11-25T19:20:27+00:00",
       "ended_at": "2026-11-25T19:21:16+00:00",
       "attempt": 1,
@@ -717,6 +793,11 @@
           "ts": "2026-11-25T19:21:16+00:00",
           "level": "info",
           "msg": "Finished"
+        },
+        {
+          "ts": "2026-11-25T19:22:31+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'script' is being revised"
         }
       ],
       "errors": [],
@@ -731,10 +812,10 @@
         "packaging"
       ],
       "checkpoint": "C",
-      "status": "running",
-      "progress": 60,
+      "status": "queued",
+      "progress": 0,
       "started_at": "2026-11-25T19:21:16+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-25T19:22:31+00:00",
       "attempt": 1,
       "retries": 0,
       "max_retries": 2,
@@ -748,7 +829,11 @@
         ],
         "metadata": "metadata.json"
       },
-      "outputs": {},
+      "outputs": {
+        "report": "qa_report.md",
+        "data": "qa_report.json",
+        "thumbnail_en": "thumbnail_en.png"
+      },
       "logs": [
         {
           "ts": "2026-11-25T19:21:16+00:00",
@@ -774,11 +859,31 @@
           "ts": "2026-11-25T19:21:56+00:00",
           "level": "warning",
           "msg": "Gemini connection timed out on default route; retrying over IPv4"
+        },
+        {
+          "ts": "2026-11-25T19:22:31+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3-flash-preview) answered in 64.9s (tokens in 3490, out 4, thinking 0)"
+        },
+        {
+          "ts": "2026-11-25T19:22:31+00:00",
+          "level": "warning",
+          "msg": "1 blocking issue(s); sending back to: script"
+        },
+        {
+          "ts": "2026-11-25T19:22:31+00:00",
+          "level": "info",
+          "msg": "Finished, waiting for your approval"
+        },
+        {
+          "ts": "2026-11-25T19:22:31+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'script' is being revised"
         }
       ],
       "errors": [],
       "feedback": [],
-      "cost_usd": 0.000909
+      "cost_usd": 0.002666
     }
   },
   "checkpoints": {
@@ -818,7 +923,7 @@
       "options": [],
       "choice": null,
       "comment": null,
-      "decided_at": "2026-11-25T19:19:28+00:00"
+      "decided_at": "2026-11-25T19:22:43+00:00"
     },
     "C": {
       "title": "Approve the final videos (never uploaded without your OK)",
@@ -835,7 +940,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-25T19:21:59+00:00",
+    "exported_at": "2026-11-25T19:22:53+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/45683901678"
   }

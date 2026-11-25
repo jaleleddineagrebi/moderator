@@ -1,0 +1,110 @@
+{
+  "passed": false,
+  "revision_round": 0,
+  "checks": [
+    {
+      "check": "length",
+      "lang": "en",
+      "ok": true,
+      "detail": "39.5s (must be under 60s; target 32-50s)",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "target length",
+      "lang": "en",
+      "ok": true,
+      "detail": "39.5s",
+      "send_to": null,
+      "severity": "minor"
+    },
+    {
+      "check": "aspect ratio",
+      "lang": "en",
+      "ok": true,
+      "detail": "1080x1920",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "video codec",
+      "lang": "en",
+      "ok": true,
+      "detail": "h264",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "audio track",
+      "lang": "en",
+      "ok": true,
+      "detail": "present",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "loudness",
+      "lang": "en",
+      "ok": true,
+      "detail": "-14.0 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "hook timing",
+      "lang": "en",
+      "ok": true,
+      "detail": "scene_01 spoken in 2.4s (target <= 4s)",
+      "send_to": null,
+      "severity": "minor"
+    },
+    {
+      "check": "caption sync",
+      "lang": "en",
+      "ok": true,
+      "detail": "103 words, 39 caption events",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "visual licenses",
+      "lang": null,
+      "ok": true,
+      "detail": "7 assets: pixabay",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "visual diversity",
+      "lang": null,
+      "ok": true,
+      "detail": "all scenes use distinct footage",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "audio licenses",
+      "lang": null,
+      "ok": true,
+      "detail": "music: original work, no third-party rights; sfx: original work, no third-party rights; voice: synthetic voice; no third-party performance rights",
+      "send_to": null,
+      "severity": "blocker"
+    },
+    {
+      "check": "accuracy review",
+      "lang": "en",
+      "ok": false,
+      "detail": "The script incorrectly identifies the index finger as the one that cannot move. In the folded middle finger position, the index and pinky fingers move easily; it is the ring finger that cannot be lifted because it shares the extensor digitorum communis tendon with the middle finger. Change all mentions of 'index fingers' to 'ring fingers'.",
+      "send_to": "script",
+      "severity": "blocker"
+    },
+    {
+      "check": "people rule",
+      "lang": null,
+      "ok": true,
+      "detail": "no women beyond face close-ups in 7 scenes and 1 thumbnail(s)",
+      "send_to": null,
+      "severity": "blocker"
+    }
+  ]
+}
