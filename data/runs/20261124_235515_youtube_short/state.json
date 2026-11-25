@@ -515,7 +515,7 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 0,
+      "progress": 78,
       "started_at": "2026-11-25T00:00:49+00:00",
       "ended_at": null,
       "attempt": 3,
@@ -670,6 +670,26 @@
           "ts": "2026-11-25T00:00:49+00:00",
           "level": "info",
           "msg": "Replacing scene_02; keeping 2 unchanged scene(s)"
+        },
+        {
+          "ts": "2026-11-25T00:01:07+00:00",
+          "level": "info",
+          "msg": "scene_03: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-25T00:01:08+00:00",
+          "level": "info",
+          "msg": "scene_04: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-25T00:01:08+00:00",
+          "level": "info",
+          "msg": "scene_02: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-25T00:01:22+00:00",
+          "level": "info",
+          "msg": "scene_06: stock_video (pixabay)"
         }
       ],
       "errors": [],
@@ -689,10 +709,10 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "running",
-      "progress": 80,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-25T00:00:49+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-25T00:01:13+00:00",
       "attempt": 3,
       "retries": 0,
       "max_retries": 2,
@@ -789,6 +809,11 @@
           "ts": "2026-11-25T00:01:00+00:00",
           "level": "info",
           "msg": "Generating an ambient music bed (no library tracks): progression #4, transpose +2, 4s chords"
+        },
+        {
+          "ts": "2026-11-25T00:01:13+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [],
@@ -1206,7 +1231,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-25T00:01:02+00:00",
+    "exported_at": "2026-11-25T00:01:22+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/45513874858"
   }
