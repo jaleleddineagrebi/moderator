@@ -1,0 +1,145 @@
+{
+  "title": "The Paralyzed Index Finger Glitch",
+  "scenes": [
+    {
+      "vo": {
+        "en": "You physically cannot lift this finger."
+      },
+      "on_screen": {
+        "en": "YOU CAN'T DO THIS"
+      },
+      "visual": {
+        "description": "Close-up of a man's hand pointing directly at the camera with a slight flex.",
+        "search_terms": [
+          "man hands flexing",
+          "finger pointing camera",
+          "hand motion blur"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "The Glitch Test",
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Put your hands together like this, then fold your middle fingers down so the knuckles touch."
+      },
+      "on_screen": {
+        "en": "STEP 1: FOLD HANDS"
+      },
+      "visual": {
+        "description": "Hands coming together in a prayer position then folding the middle fingers inward.",
+        "search_terms": [
+          "folding hands prayer",
+          "knuckles touching close",
+          "man hand position"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Now, try separating your thumbs. Easy. Then your pinkies. Simple. They move because their tendons are independent."
+      },
+      "on_screen": {
+        "en": "THUMBS AND PINKIES"
+      },
+      "visual": {
+        "description": "Close up of thumbs and then pinky fingers moving freely while the rest of the hand stays locked.",
+        "search_terms": [
+          "thumb moving",
+          "pinky finger motion",
+          "hand flexibility test"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "Wait until you test this part. Keep those middle fingers locked and try lifting your index fingers."
+      },
+      "on_screen": {
+        "en": "TRY THE INDEX"
+      },
+      "visual": {
+        "description": "A person struggling to lift their index fingers while their middle knuckles are pressed together.",
+        "search_terms": [
+          "strained hand muscle",
+          "attempting lift finger",
+          "hand isometric tension"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "The Physical Lock",
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "See that? They’re stuck. No matter how hard your brain screams, your index fingers are literally paralyzed."
+      },
+      "on_screen": {
+        "en": "BRAIN VS BODY"
+      },
+      "visual": {
+        "description": "Stylized animation of a human brain with electrical pulses representing signals sent to the hand.",
+        "search_terms": [
+          "human brain glowing",
+          "neuron activity",
+          "electrical impulses brain"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "This glitch happens because those specific tendons are physically linked together deep inside your hand."
+      },
+      "on_screen": {
+        "en": "FUSED TENDONS"
+      },
+      "visual": {
+        "description": "3D anatomical model of a human hand showing the internal tendon structure.",
+        "search_terms": [
+          "hand skeletal animation",
+          "anatomical hand model",
+          "tendon movement visual"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for more body glitches and comment STUCK if this worked—which is exactly why..."
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "Close up of a man's thumb hitting the subscribe button on a phone screen.",
+        "search_terms": [
+          "man typing phone",
+          "notification bell icon",
+          "smartphone screen tapping"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "paralyzed-index-glitch",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 37.1
+  }
+}
