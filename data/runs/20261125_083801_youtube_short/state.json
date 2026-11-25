@@ -432,7 +432,7 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 0,
+      "progress": 54,
       "started_at": "2026-11-25T08:38:57+00:00",
       "ended_at": null,
       "attempt": 1,
@@ -459,6 +459,26 @@
           "ts": "2026-11-25T08:38:57+00:00",
           "level": "info",
           "msg": "Visual diversity: excluding 300 footage sources used in recent Shorts"
+        },
+        {
+          "ts": "2026-11-25T08:39:20+00:00",
+          "level": "info",
+          "msg": "scene_01: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-25T08:39:21+00:00",
+          "level": "info",
+          "msg": "scene_03: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-25T08:39:25+00:00",
+          "level": "info",
+          "msg": "scene_02: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-25T08:39:35+00:00",
+          "level": "info",
+          "msg": "scene_04: stock_video (pixabay)"
         }
       ],
       "errors": [],
@@ -472,10 +492,10 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "running",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-25T08:38:57+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-25T08:39:32+00:00",
       "attempt": 1,
       "retries": 0,
       "max_retries": 2,
@@ -489,7 +509,9 @@
           "en": "en-US-BrianMultilingualNeural"
         }
       },
-      "outputs": {},
+      "outputs": {
+        "timings_en": "timings_en.json"
+      },
       "logs": [
         {
           "ts": "2026-11-25T08:38:57+00:00",
@@ -500,6 +522,21 @@
           "ts": "2026-11-25T08:38:57+00:00",
           "level": "info",
           "msg": "Narrating en with en-US-BrianMultilingualNeural"
+        },
+        {
+          "ts": "2026-11-25T08:39:21+00:00",
+          "level": "info",
+          "msg": "en voiceover: 34.2s"
+        },
+        {
+          "ts": "2026-11-25T08:39:22+00:00",
+          "level": "info",
+          "msg": "Generating an ambient music bed (no library tracks): progression #5, transpose -1, 5s chords"
+        },
+        {
+          "ts": "2026-11-25T08:39:32+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [],
@@ -630,7 +667,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-25T08:39:19+00:00",
+    "exported_at": "2026-11-25T08:39:42+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/45577921814"
   }
