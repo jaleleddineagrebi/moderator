@@ -13,8 +13,8 @@
     "scene": "scene_02",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-210573/",
-    "author": "u_xhp5h45w73",
+    "page": "https://pixabay.com/videos/id-10839/",
+    "author": "Coverr-Free-Footage",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
     "query": "neural network animation",
     "description": "Abstract visualization of neural networks and firing synapses in a dark digital space."
@@ -23,21 +23,21 @@
     "scene": "scene_03",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-28975/",
-    "author": "adege",
+    "page": "https://pixabay.com/videos/id-1971/",
+    "author": "RelaxVideos",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "sunset ocean timelapse",
-    "description": "A rapid montage of a vibrant sunset, moving campfire flames, and a spinning basketball."
+    "query": "campfire flames moving",
+    "description": "A rapid montage of moving campfire flames and a glowing sunset over the horizon."
   },
   {
     "scene": "scene_04",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-231259/",
-    "author": "santorihan",
+    "page": "https://pixabay.com/videos/id-284568/",
+    "author": "antonlukin",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "hypnotic tunnel motion",
-    "description": "A high-contrast hypnotic spiral spinning rapidly to create a tunnel effect."
+    "query": "hourglass sand falling",
+    "description": "An hourglass with sand falling rapidly against a dark, moody background."
   },
   {
     "scene": "scene_05",
@@ -53,20 +53,20 @@
     "scene": "scene_06",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-177138/",
-    "author": "NickyPe",
+    "page": "https://pixabay.com/videos/id-128125/",
+    "author": "adege",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "fresh carrots basket",
-    "description": "A pile of fresh, vibrant orange carrots with green tops sitting on a wooden surface."
+    "query": "fresh carrots pile",
+    "description": "A close-up of fresh, vibrant orange carrots with green tops sitting on a wooden surface."
   },
   {
     "scene": "scene_07",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-3172/",
-    "author": "Coverr-Free-Footage",
+    "page": "https://pixabay.com/videos/id-736/",
+    "author": "elchao",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
     "query": "man using smartphone",
-    "description": "A hand using a smartphone to tap a button on a brightly lit screen."
+    "description": "A man's hand using a smartphone to tap a button on a brightly lit screen."
   }
 ]
