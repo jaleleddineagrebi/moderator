@@ -1,12 +1,12 @@
 {
   "passed": false,
-  "revision_round": 0,
+  "revision_round": 1,
   "checks": [
     {
       "check": "length",
       "lang": "en",
       "ok": true,
-      "detail": "34.9s (must be under 60s; target 32-50s)",
+      "detail": "39.6s (must be under 60s; target 32-50s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -14,7 +14,7 @@
       "check": "target length",
       "lang": "en",
       "ok": true,
-      "detail": "34.9s",
+      "detail": "39.6s",
       "send_to": null,
       "severity": "minor"
     },
@@ -46,7 +46,7 @@
       "check": "loudness",
       "lang": "en",
       "ok": true,
-      "detail": "-14.2 LUFS, peak -1.4 dBFS (target -14 LUFS, peak <= -1)",
+      "detail": "-14.1 LUFS, peak -1.4 dBFS (target -14 LUFS, peak <= -1)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -62,7 +62,7 @@
       "check": "caption sync",
       "lang": "en",
       "ok": true,
-      "detail": "93 words, 34 caption events",
+      "detail": "101 words, 38 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -91,12 +91,28 @@
       "severity": "blocker"
     },
     {
+      "check": "accuracy review",
+      "lang": "en",
+      "ok": false,
+      "detail": "The claim that banks use stealth software to scan an 'internal honesty score' via eye tracking is factually incorrect and misleading. Change to 'Some companies explore eye-tracking tech to measure focus or stress response' to maintain accuracy.",
+      "send_to": "script",
+      "severity": "blocker"
+    },
+    {
       "check": "sensitivity review",
       "lang": "en",
       "ok": false,
-      "detail": "The script makes a misleading and alarmist claim that 'You’re being tested right now' by software tracking the viewer through the YouTube Short. This is a false claim about the video's functionality. Remove the direct claim 'You’re being tested right now' and replace with 'This technology is being used right now'.",
+      "detail": "The script implies a universal 'biometric leak' that determines if someone is a 'high-risk person' in secret. This is a misleading privacy/surveillance claim. Soften the phrasing to 'Researchers study how gaze shifts indicate stress levels.'",
       "send_to": "script",
       "severity": "blocker"
+    },
+    {
+      "check": "metadata review",
+      "lang": "en",
+      "ok": false,
+      "detail": "The description asks users to comment YES or NO, while the script narration asks them to comment STILL. Align both to use 'STILL' for consistency.",
+      "send_to": "packaging",
+      "severity": "minor"
     },
     {
       "check": "people rule",
