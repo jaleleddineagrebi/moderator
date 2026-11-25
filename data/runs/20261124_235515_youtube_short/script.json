@@ -17,7 +17,7 @@
         ],
         "prefer": "video"
       },
-      "chapter": "The Brain Test",
+      "chapter": "The Priming Test",
       "id": "scene_01"
     },
     {
@@ -47,11 +47,11 @@
         "en": "THINK OF ORANGE"
       },
       "visual": {
-        "description": "A rapid montage of a vibrant sunset, moving campfire flames, and a spinning basketball.",
+        "description": "A rapid montage of moving campfire flames and a glowing sunset over the horizon.",
         "search_terms": [
-          "sunset ocean timelapse",
           "campfire flames moving",
-          "spinning basketball close"
+          "sunset orange sky",
+          "lava flowing slow"
         ],
         "prefer": "video"
       },
@@ -60,17 +60,17 @@
     },
     {
       "vo": {
-        "en": "Wait until you see the result, because your brain is currently trapped in a massive logic loop."
+        "en": "But here is the creepy part: you’re currently caught in a massive priming sequence you can’t escape."
       },
       "on_screen": {
-        "en": "BRAIN LOGIC LOOP"
+        "en": "PRIMING SEQUENCE ACTIVE"
       },
       "visual": {
-        "description": "A high-contrast hypnotic spiral spinning rapidly to create a tunnel effect.",
+        "description": "An hourglass with sand falling rapidly against a dark, moody background.",
         "search_terms": [
-          "hypnotic tunnel motion",
-          "black white spiral",
-          "optical illusion loop"
+          "hourglass sand falling",
+          "time passing fast",
+          "ticking clock movement"
         ],
         "prefer": "video"
       },
@@ -104,11 +104,11 @@
         "en": "YOU THOUGHT: CARROT"
       },
       "visual": {
-        "description": "A pile of fresh, vibrant orange carrots with green tops sitting on a wooden surface.",
+        "description": "A close-up of fresh, vibrant orange carrots with green tops sitting on a wooden surface.",
         "search_terms": [
-          "fresh carrots basket",
-          "bunch of carrots",
-          "vegetable pile close"
+          "fresh carrots pile",
+          "vegetable harvest close",
+          "chopping orange carrots"
         ],
         "prefer": "video"
       },
@@ -123,7 +123,7 @@
         "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "A hand using a smartphone to tap a button on a brightly lit screen.",
+        "description": "A man's hand using a smartphone to tap a button on a brightly lit screen.",
         "search_terms": [
           "man using smartphone",
           "hand tapping screen",

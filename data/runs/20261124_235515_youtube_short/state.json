@@ -67,15 +67,15 @@
   },
   "started_at": "2026-11-24T23:55:15+00:00",
   "ended_at": null,
-  "revision_rounds": 1,
+  "revision_rounds": 2,
   "cost": {
-    "total_usd": 0.025506,
+    "total_usd": 0.034189,
     "budget_usd": 1.0,
     "by_agent": {
       "trend_researcher": 0.002801,
-      "scriptwriter": 0.018058,
+      "scriptwriter": 0.024885,
       "packaging": 0.00095,
-      "qa_reviewer": 0.003696
+      "qa_reviewer": 0.005552
     }
   },
   "agents": {
@@ -373,9 +373,9 @@
       "checkpoint": "B",
       "status": "done",
       "progress": 100,
-      "started_at": "2026-11-24T23:58:53+00:00",
-      "ended_at": "2026-11-24T23:59:04+00:00",
-      "attempt": 2,
+      "started_at": "2026-11-25T00:00:42+00:00",
+      "ended_at": "2026-11-25T00:00:49+00:00",
+      "attempt": 3,
       "retries": 0,
       "max_retries": 2,
       "strategy": "default",
@@ -455,6 +455,41 @@
           "ts": "2026-11-24T23:59:04+00:00",
           "level": "info",
           "msg": "Approved by schedule (auto-approve)"
+        },
+        {
+          "ts": "2026-11-25T00:00:42+00:00",
+          "level": "warning",
+          "msg": "Sent back by qa: QA found:\n[en] accuracy review: The scene 04 narration claims the brain is currently trapped in a massive logic loop, which is factually incorrect and not part of psychological priming. Change 'massive logic loop' to 'priming sequence'."
+        },
+        {
+          "ts": "2026-11-25T00:00:42+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'default'"
+        },
+        {
+          "ts": "2026-11-25T00:00:42+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.8-flash, high complexity, thinking high)"
+        },
+        {
+          "ts": "2026-11-25T00:00:49+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3-flash-preview) answered in 7.5s (tokens in 2188, out 1012, thinking 899)"
+        },
+        {
+          "ts": "2026-11-25T00:00:49+00:00",
+          "level": "info",
+          "msg": "Estimated narration: en 37.5s"
+        },
+        {
+          "ts": "2026-11-25T00:00:49+00:00",
+          "level": "info",
+          "msg": "Finished, waiting for your approval"
+        },
+        {
+          "ts": "2026-11-25T00:00:49+00:00",
+          "level": "info",
+          "msg": "Approved by schedule (auto-approve)"
         }
       ],
       "errors": [],
@@ -463,9 +498,14 @@
           "ts": "2026-11-24T23:58:53+00:00",
           "from": "qa",
           "comment": "QA found:\n[en] accuracy review: The script claims to use 'psychological priming' with the color blue to make someone think of a carrot, but there is no semantic or psychological link between blue and carrots. The 'Carrot' trick usually involves repeated mathematical addition or priming with the color orange. Fix: Change scene_03 to visualize the color orange or vegetables."
+        },
+        {
+          "ts": "2026-11-25T00:00:42+00:00",
+          "from": "qa",
+          "comment": "QA found:\n[en] accuracy review: The scene 04 narration claims the brain is currently trapped in a massive logic loop, which is factually incorrect and not part of psychological priming. Change 'massive logic loop' to 'priming sequence'."
         }
       ],
-      "cost_usd": 0.018058
+      "cost_usd": 0.024885
     },
     "visuals": {
       "title": "Source scene visuals",
@@ -474,11 +514,11 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "done",
-      "progress": 100,
-      "started_at": "2026-11-24T23:59:04+00:00",
-      "ended_at": "2026-11-24T23:59:50+00:00",
-      "attempt": 2,
+      "status": "running",
+      "progress": 0,
+      "started_at": "2026-11-25T00:00:49+00:00",
+      "ended_at": null,
+      "attempt": 3,
       "retries": 0,
       "max_retries": 2,
       "strategy": "stock_video",
@@ -600,10 +640,46 @@
           "ts": "2026-11-24T23:59:50+00:00",
           "level": "info",
           "msg": "Finished"
+        },
+        {
+          "ts": "2026-11-25T00:00:42+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-25T00:00:42+00:00",
+          "level": "warning",
+          "msg": "Sent back by qa: QA found:\n[all] people rule: scene_02: woman's profile and hand holding a phone, showing her hair, face, and shoulder in the first two frames. Replace with footage without women (a face-only close-up is the only exception)."
+        },
+        {
+          "ts": "2026-11-25T00:00:49+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'stock_video'"
+        },
+        {
+          "ts": "2026-11-25T00:00:49+00:00",
+          "level": "info",
+          "msg": "Revision feedback: QA found:\n[all] people rule: scene_02: woman's profile and hand holding a phone, showing her hair, face, and shoulder in the first two frames. Replace with footage without women (a face-only close-up is the only exception)."
+        },
+        {
+          "ts": "2026-11-25T00:00:49+00:00",
+          "level": "info",
+          "msg": "Visual diversity: excluding 300 footage sources used in recent Shorts"
+        },
+        {
+          "ts": "2026-11-25T00:00:49+00:00",
+          "level": "info",
+          "msg": "Replacing scene_02; keeping 2 unchanged scene(s)"
         }
       ],
       "errors": [],
-      "feedback": [],
+      "feedback": [
+        {
+          "ts": "2026-11-25T00:00:42+00:00",
+          "from": "qa",
+          "comment": "QA found:\n[all] people rule: scene_02: woman's profile and hand holding a phone, showing her hair, face, and shoulder in the first two frames. Replace with footage without women (a face-only close-up is the only exception)."
+        }
+      ],
       "cost_usd": 0.0
     },
     "audio": {
@@ -613,11 +689,11 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "done",
-      "progress": 100,
-      "started_at": "2026-11-24T23:59:04+00:00",
-      "ended_at": "2026-11-24T23:59:50+00:00",
-      "attempt": 2,
+      "status": "running",
+      "progress": 80,
+      "started_at": "2026-11-25T00:00:49+00:00",
+      "ended_at": null,
+      "attempt": 3,
       "retries": 0,
       "max_retries": 2,
       "strategy": "primary_voice",
@@ -688,6 +764,31 @@
           "ts": "2026-11-24T23:59:50+00:00",
           "level": "info",
           "msg": "Finished"
+        },
+        {
+          "ts": "2026-11-25T00:00:42+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-25T00:00:49+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'primary_voice'"
+        },
+        {
+          "ts": "2026-11-25T00:00:49+00:00",
+          "level": "info",
+          "msg": "Narrating en with en-US-AvaMultilingualNeural"
+        },
+        {
+          "ts": "2026-11-25T00:01:00+00:00",
+          "level": "info",
+          "msg": "en voiceover: 39.1s"
+        },
+        {
+          "ts": "2026-11-25T00:01:00+00:00",
+          "level": "info",
+          "msg": "Generating an ambient music bed (no library tracks): progression #4, transpose +2, 4s chords"
         }
       ],
       "errors": [],
@@ -702,8 +803,8 @@
         "visuals"
       ],
       "checkpoint": null,
-      "status": "done",
-      "progress": 100,
+      "status": "queued",
+      "progress": 0,
       "started_at": "2026-11-24T23:59:50+00:00",
       "ended_at": "2026-11-24T23:59:52+00:00",
       "attempt": 2,
@@ -822,6 +923,16 @@
           "ts": "2026-11-24T23:59:53+00:00",
           "level": "info",
           "msg": "Finished"
+        },
+        {
+          "ts": "2026-11-25T00:00:42+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-25T00:00:42+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'visuals' is being revised"
         }
       ],
       "errors": [],
@@ -836,8 +947,8 @@
         "audio"
       ],
       "checkpoint": null,
-      "status": "done",
-      "progress": 100,
+      "status": "queued",
+      "progress": 0,
       "started_at": "2026-11-24T23:59:50+00:00",
       "ended_at": "2026-11-25T00:00:29+00:00",
       "attempt": 2,
@@ -903,6 +1014,16 @@
           "ts": "2026-11-25T00:00:29+00:00",
           "level": "info",
           "msg": "Finished"
+        },
+        {
+          "ts": "2026-11-25T00:00:42+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-25T00:00:42+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'visuals' is being revised"
         }
       ],
       "errors": [],
@@ -917,10 +1038,10 @@
         "packaging"
       ],
       "checkpoint": "C",
-      "status": "running",
-      "progress": 60,
+      "status": "queued",
+      "progress": 0,
       "started_at": "2026-11-25T00:00:29+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-25T00:00:42+00:00",
       "attempt": 2,
       "retries": 0,
       "max_retries": 2,
@@ -999,11 +1120,36 @@
           "ts": "2026-11-25T00:00:39+00:00",
           "level": "info",
           "msg": "Asking Gemini (gemini-3.8-flash, medium complexity, thinking low)"
+        },
+        {
+          "ts": "2026-11-25T00:00:42+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3-flash-preview) answered in 2.7s (tokens in 3490, out 37, thinking 0)"
+        },
+        {
+          "ts": "2026-11-25T00:00:42+00:00",
+          "level": "warning",
+          "msg": "2 blocking issue(s); sending back to: script, visuals"
+        },
+        {
+          "ts": "2026-11-25T00:00:42+00:00",
+          "level": "info",
+          "msg": "Finished, waiting for your approval"
+        },
+        {
+          "ts": "2026-11-25T00:00:42+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-25T00:00:42+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'visuals' is being revised"
         }
       ],
       "errors": [],
       "feedback": [],
-      "cost_usd": 0.003696
+      "cost_usd": 0.005552
     }
   },
   "checkpoints": {
@@ -1043,7 +1189,7 @@
       "options": [],
       "choice": null,
       "comment": null,
-      "decided_at": "2026-11-24T23:59:04+00:00"
+      "decided_at": "2026-11-25T00:00:49+00:00"
     },
     "C": {
       "title": "Approve the final videos (never uploaded without your OK)",
@@ -1060,7 +1206,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-25T00:00:39+00:00",
+    "exported_at": "2026-11-25T00:01:02+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/45513874858"
   }

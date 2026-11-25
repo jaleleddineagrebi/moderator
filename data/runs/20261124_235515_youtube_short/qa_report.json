@@ -1,12 +1,12 @@
 {
   "passed": false,
-  "revision_round": 0,
+  "revision_round": 1,
   "checks": [
     {
       "check": "length",
       "lang": "en",
       "ok": true,
-      "detail": "39.4s (must be under 60s; target 32-50s)",
+      "detail": "39.5s (must be under 60s; target 32-50s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -14,7 +14,7 @@
       "check": "target length",
       "lang": "en",
       "ok": true,
-      "detail": "39.4s",
+      "detail": "39.5s",
       "send_to": null,
       "severity": "minor"
     },
@@ -46,7 +46,7 @@
       "check": "loudness",
       "lang": "en",
       "ok": true,
-      "detail": "-14.1 LUFS, peak -1.4 dBFS (target -14 LUFS, peak <= -1)",
+      "detail": "-14.1 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -54,7 +54,7 @@
       "check": "hook timing",
       "lang": "en",
       "ok": true,
-      "detail": "scene_01 spoken in 2.4s (target <= 4s)",
+      "detail": "scene_01 spoken in 2.9s (target <= 4s)",
       "send_to": null,
       "severity": "minor"
     },
@@ -62,7 +62,7 @@
       "check": "caption sync",
       "lang": "en",
       "ok": true,
-      "detail": "104 words, 39 caption events",
+      "detail": "103 words, 39 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -94,16 +94,24 @@
       "check": "accuracy review",
       "lang": "en",
       "ok": false,
-      "detail": "The script claims to use 'psychological priming' with the color blue to make someone think of a carrot, but there is no semantic or psychological link between blue and carrots. The 'Carrot' trick usually involves repeated mathematical addition or priming with the color orange. Fix: Change scene_03 to visualize the color orange or vegetables.",
+      "detail": "The scene 04 narration claims the brain is currently trapped in a massive logic loop, which is factually incorrect and not part of psychological priming. Change 'massive logic loop' to 'priming sequence'.",
       "send_to": "script",
       "severity": "blocker"
     },
     {
+      "check": "grammar review",
+      "lang": "en",
+      "ok": false,
+      "detail": "In scene 06, 'Carrot' is unnecessarily capitalized in the middle of a sentence. Change it to lowercase 'carrot'.",
+      "send_to": "script",
+      "severity": "minor"
+    },
+    {
       "check": "people rule",
       "lang": null,
-      "ok": true,
-      "detail": "no women beyond face close-ups in 7 scenes and 1 thumbnail(s)",
-      "send_to": null,
+      "ok": false,
+      "detail": "scene_02: woman's profile and hand holding a phone, showing her hair, face, and shoulder in the first two frames. Replace with footage without women (a face-only close-up is the only exception).",
+      "send_to": "visuals",
       "severity": "blocker"
     }
   ]
