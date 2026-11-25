@@ -1,12 +1,12 @@
 {
   "passed": false,
-  "revision_round": 0,
+  "revision_round": 1,
   "checks": [
     {
       "check": "length",
       "lang": "en",
       "ok": true,
-      "detail": "39.5s (must be under 60s; target 32-50s)",
+      "detail": "38.1s (must be under 60s; target 32-50s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -14,7 +14,7 @@
       "check": "target length",
       "lang": "en",
       "ok": true,
-      "detail": "39.5s",
+      "detail": "38.1s",
       "send_to": null,
       "severity": "minor"
     },
@@ -62,7 +62,7 @@
       "check": "caption sync",
       "lang": "en",
       "ok": true,
-      "detail": "103 words, 39 caption events",
+      "detail": "103 words, 40 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -94,16 +94,32 @@
       "check": "accuracy review",
       "lang": "en",
       "ok": false,
-      "detail": "The script incorrectly identifies the index finger as the one that cannot move. In the folded middle finger position, the index and pinky fingers move easily; it is the ring finger that cannot be lifted because it shares the extensor digitorum communis tendon with the middle finger. Change all mentions of 'index fingers' to 'ring fingers'.",
+      "detail": "The script incorrectly states the ring and middle fingers share the 'exact same extensor tendon'. They actually share a flexor tendon (the flexor digitorum profundus) and have interconnected tendons via the juncturae tendinum. Update scene 6 VO to: 'This happens because your ring finger and middle finger are physically connected by a shared tendon.'",
       "send_to": "script",
       "severity": "blocker"
     },
     {
+      "check": "visual_fit review",
+      "lang": "en",
+      "ok": false,
+      "detail": "The query 'man hand pointing' in scene 1 doesn't match the specific 'ring finger' hook. Change query to 'hand showing ring finger' to align with the VO and title.",
+      "send_to": "visuals",
+      "severity": "minor"
+    },
+    {
+      "check": "visual_fit review",
+      "lang": "en",
+      "ok": false,
+      "detail": "The query 'strained hand muscle' in scene 4 may not show the specific hand position described. Change query to 'hands folded middle fingers tucked' to ensure the viewer sees the setup they are supposed to copy.",
+      "send_to": "visuals",
+      "severity": "minor"
+    },
+    {
       "check": "people rule",
       "lang": null,
-      "ok": true,
-      "detail": "no women beyond face close-ups in 7 scenes and 1 thumbnail(s)",
-      "send_to": null,
+      "ok": false,
+      "detail": "scene_02: A woman is shown sitting on a bed, visible from the waist up (including body and arms), alongside a man.. Replace with footage without women (a face-only close-up is the only exception).",
+      "send_to": "visuals",
       "severity": "blocker"
     }
   ]
