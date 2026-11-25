@@ -1,0 +1,68 @@
+{
+  "niche": "Mind Hacks, AI Secrets, Bizarre Body Science & Hidden Power Dynamics",
+  "languages": [
+    "en"
+  ],
+  "ideas": [
+    {
+      "id": "ai-pupil-tracking-trap",
+      "title": "The AI Pupil Response Trap",
+      "angle": "Explain how AI video software now detects subtle pupil dilations to determine your 'honesty score' in remote interviews or bank loan apps. Viewers are challenged to keep their eyes still while an on-screen stimulus changes, leading to massive engagement in the comments about their 'score'.",
+      "hook": {
+        "en": "Stop blinking. AI is watching your pupils."
+      },
+      "keywords": [
+        "AI secrets",
+        "privacy hacks",
+        "pupil dilation",
+        "tech secrets",
+        "digital survival"
+      ],
+      "reason": "AI biometric surveillance is a high-velocity fear/curiosity topic. Current software like HireVue and similar AI platforms use 'micro-expression' analysis, making this a timely and urgent 'survival' secret.",
+      "sources": [
+        "MIT Technology Review on Emotion AI",
+        "Biometric data analysis in remote hiring research"
+      ]
+    },
+    {
+      "id": "keyboard-acoustic-hack",
+      "title": "The Keyboard Acoustic Spy Secret",
+      "angle": "Reveal that AI can now identify your passwords just by 'listening' to the sound of your typing through a laptop microphone or phone. It demonstrates how different keys have unique acoustic signatures. It forces users to comment with their 'laptop model' to see if they are at risk.",
+      "hook": {
+        "en": "AI can hear your password right now."
+      },
+      "keywords": [
+        "cybersecurity",
+        "AI breakthrough",
+        "hidden tech",
+        "hacking secrets",
+        "phone privacy"
+      ],
+      "reason": "A recent study from Cornell University showed AI can identify keystrokes with 95% accuracy via microphone. This 'forbidden' tech secret triggers the digital survival pillar and high VVSA.",
+      "sources": [
+        "Cornell University arXiv study on acoustic side-channel attacks",
+        "IEEE European Symposium on Security and Privacy"
+      ]
+    },
+    {
+      "id": "the-clipboard-leak-test",
+      "title": "The 3-Second Clipboard Privacy Test",
+      "angle": "An interactive challenge where viewers are told to 'Copy any text right now' and then shown how hidden website scripts can scrape their clipboard without a click. It teaches a 'survival' habit of clearing the clipboard and triggers people to type 'safe' in the comments once they clear it.",
+      "hook": {
+        "en": "Copy this text to save your data."
+      },
+      "keywords": [
+        "smartphone settings",
+        "privacy test",
+        "hacker secrets",
+        "data security",
+        "iPhone hacks"
+      ],
+      "reason": "Interactive 'live' tests have the highest retention. Privacy 'leaks' are evergreen viral triggers. Explaining 'Pastejacking' or clipboard hijacking is high-value and slightly terrifying, driving shares.",
+      "sources": [
+        "OWASP Clipboard Hijacking documentation",
+        "Apple iOS 14+ clipboard notification updates"
+      ]
+    }
+  ]
+}
