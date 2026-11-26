@@ -1,12 +1,12 @@
 {
   "passed": false,
-  "revision_round": 0,
+  "revision_round": 1,
   "checks": [
     {
       "check": "length",
       "lang": "en",
       "ok": true,
-      "detail": "35.7s (must be under 60s; target 32-50s)",
+      "detail": "37.3s (must be under 60s; target 32-50s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -14,7 +14,7 @@
       "check": "target length",
       "lang": "en",
       "ok": true,
-      "detail": "35.7s",
+      "detail": "37.3s",
       "send_to": null,
       "severity": "minor"
     },
@@ -62,7 +62,7 @@
       "check": "caption sync",
       "lang": "en",
       "ok": true,
-      "detail": "96 words, 34 caption events",
+      "detail": "100 words, 36 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -70,7 +70,7 @@
       "check": "visual licenses",
       "lang": null,
       "ok": true,
-      "detail": "7 assets: pixabay",
+      "detail": "8 assets: pixabay",
       "send_to": null,
       "severity": "blocker"
     },
@@ -94,17 +94,25 @@
       "check": "accuracy review",
       "lang": "en",
       "ok": false,
-      "detail": "The claim that vapor recovery systems suck back gas you paid for and return it to the underground tank is an urban legend debunked by fuel equipment engineers and regulatory agencies (like API and Snopes). Flow meters measure fuel at the nozzle exit or compensate, and vapor recovery primarily handles air displaced from the vehicle's fuel tank, not liquid fuel you paid for. Rephrase the advice to avoid making false claims about fuel theft/metering, or focus accurately on minimizing splashing/foaming triggering early shutoffs.",
+      "detail": "The claim that foam 'costs you money' is false. Gas pumps measure volume through a meter before it reaches the nozzle; while foam may cause a premature click, you are only billed for the liquid that passed through the meter, not the air/foam in the tank. Change to: 'But here is the secret that wastes your time.'",
+      "send_to": "script",
+      "severity": "blocker"
+    },
+    {
+      "check": "accuracy review",
+      "lang": "en",
+      "ok": false,
+      "detail": "The claim that air pockets make mileage look 'terrible' is misleading. Not filling the tank completely doesn't change fuel efficiency (MPG), it just means you have less total range until the next fill-up. Change to: 'You leave with air pockets instead of fuel, meaning more trips to the station.'",
       "send_to": "script",
       "severity": "blocker"
     },
     {
       "check": "people rule",
       "lang": null,
-      "ok": true,
-      "detail": "no women beyond face close-ups in 7 scenes and 1 thumbnail(s)",
+      "ok": false,
+      "detail": "could not check images (ReadTimeout: ); check manually",
       "send_to": null,
-      "severity": "blocker"
+      "severity": "minor"
     }
   ]
 }
