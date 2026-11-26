@@ -1,16 +1,16 @@
 # QA report: CHANGES NEEDED
 
-- ✅ **length** [en]: 37.3s (must be under 60s; target 32-50s)
-- ✅ **target length** [en]: 37.3s
+- ✅ **length** [en]: 38.0s (must be under 60s; target 32-50s)
+- ✅ **target length** [en]: 38.0s
 - ✅ **aspect ratio** [en]: 1080x1920
 - ✅ **video codec** [en]: h264
 - ✅ **audio track** [en]: present
-- ✅ **loudness** [en]: -14.2 LUFS, peak -1.4 dBFS (target -14 LUFS, peak <= -1)
+- ✅ **loudness** [en]: -14.1 LUFS, peak -1.2 dBFS (target -14 LUFS, peak <= -1)
 - ✅ **hook timing** [en]: scene_01 spoken in 2.8s (target <= 4s)
-- ✅ **caption sync** [en]: 100 words, 36 caption events
-- ✅ **visual licenses**: 8 assets: pixabay
+- ✅ **caption sync** [en]: 102 words, 36 caption events
+- ✅ **visual licenses**: 6 assets: pixabay
 - ✅ **visual diversity**: all scenes use distinct footage
 - ✅ **audio licenses**: music: original work, no third-party rights; sfx: original work, no third-party rights; voice: synthetic voice; no third-party performance rights
-- ❌ **accuracy review** [en]: The claim that foam 'costs you money' is false. Gas pumps measure volume through a meter before it reaches the nozzle; while foam may cause a premature click, you are only billed for the liquid that passed through the meter, not the air/foam in the tank. Change to: 'But here is the secret that wastes your time.' → sent to script
-- ❌ **accuracy review** [en]: The claim that air pockets make mileage look 'terrible' is misleading. Not filling the tank completely doesn't change fuel efficiency (MPG), it just means you have less total range until the next fill-up. Change to: 'You leave with air pockets instead of fuel, meaning more trips to the station.' → sent to script
-- ⚠️ **people rule**: could not check images (ReadTimeout: ); check manually
+- ❌ **accuracy review** [en]: The claim that pumping gas fast makes you pay for air or causes significant premature shutoff leaving empty space due to frothing is an infamous urban legend/myth debunked by consumer reports and fuel standards (meters measure liquid displacement regardless of speed, and modern vehicle filler necks prevent foam-induced early shutoffs). In the packaging, change 'Why You Are Wasting Gas' to 'Why You Might Not Be Filling Up Fully' and rephrase script scene 05 to clarify it is about premature nozzle clicks rather than literally wasting money on air. → sent to packaging
+- ⚠️ **accuracy review** [en]: In scene_06, the prompt ends with an awkward incomplete thought 'which is why you...' intended as a loop lead-in that clashes with the CTA. Change to '...comment if you noticed a difference, which is why you need to...' to smoothly loop into 'Stop pumping gas at full speed.'
+- ✅ **people rule**: no women beyond face close-ups in 6 scenes and 1 thumbnail(s)
