@@ -3,70 +3,80 @@
     "scene": "scene_01",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-210933/",
-    "author": "Nerd_Nonsense",
+    "page": "https://pixabay.com/videos/id-41828/",
+    "author": "LadislavBur",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "gas pump nozzle",
-    "description": "Close-up of a man's gloved hand violently squeezing a fuel pump trigger all the way down at a gas station."
+    "query": "gas pump handle",
+    "description": "Close-up of a man's hand firmly gripping a gas pump handle at a station."
   },
   {
     "scene": "scene_02",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-28395/",
-    "author": "Ambient_Nature_Atmosphere",
+    "page": "https://pixabay.com/videos/id-213132/",
+    "author": "Mario_Krimer",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "turbulent liquid splash",
-    "description": "Macro shot of turbulent liquid splashing rapidly inside a glass container, releasing micro-droplets and rising vapor."
+    "query": "liquid splash motion",
+    "description": "High-speed footage of liquid splashing violently inside a dark container."
   },
   {
     "scene": "scene_03",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-254787/",
-    "author": "nirjharbasakuet",
+    "page": "https://pixabay.com/videos/id-9807/",
+    "author": "terimakasih0",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "industrial air suction",
-    "description": "Metallic industrial intake pipe with high-velocity air suction drawing in smoke and vapor particles."
+    "query": "liquid foam surface",
+    "description": "Close-up of bubbles and foam rising rapidly in a glass vessel."
   },
   {
     "scene": "scene_04",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-27465/",
-    "author": "Bastien86",
+    "page": "https://pixabay.com/videos/id-50628/",
+    "author": "Hassas_Arts",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "gas pump meter",
-    "description": "Rapidly spinning digital numbers on a gas pump meter readout as money tallies up on screen."
+    "query": "man holding wallet",
+    "description": "A man looking frustrated while looking at a wallet with only a few bills left."
   },
   {
     "scene": "scene_05",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-1003/",
-    "author": "Coverr-Free-Footage",
+    "page": "https://pixabay.com/videos/id-2154/",
+    "author": "michele_volpin",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "underground storage tank",
-    "description": "Dark underground industrial fuel storage reservoir with pipelines directing liquid downward."
+    "query": "gas nozzle click",
+    "description": "Close-up of the gas pump nozzle clicking upward automatically to stop the flow."
   },
   {
     "scene": "scene_06",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-143859/",
-    "author": "SamuelFJohanns",
+    "page": "https://pixabay.com/videos/id-43629/",
+    "author": "GreenCardShow",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "adjusting metal latch",
-    "description": "Extreme close-up of a hand gently adjusting the metal latch of a pump handle to the first slowest notch."
+    "query": "fuel gauge needle",
+    "description": "Close-up of a car fuel gauge needle dropping toward the empty red line."
   },
   {
     "scene": "scene_07",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-2165/",
-    "author": "VariousPhotography",
+    "page": "https://pixabay.com/videos/id-212001/",
+    "author": "TungArt7",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "car dashboard odometer",
-    "description": "Driver's hand pressing the odometer trip reset button on a lit vehicle dashboard before driving onto the highway."
+    "query": "mechanical metal latch",
+    "description": "Extreme close-up of a man's finger setting the small metal latch on the pump handle to the first notch."
+  },
+  {
+    "scene": "scene_08",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-136462/",
+    "author": "Matthias_Groeneveld",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "car highway driving",
+    "description": "A car driving smoothly down a long, open highway during sunset."
   }
 ]
