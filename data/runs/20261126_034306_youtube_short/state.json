@@ -363,12 +363,12 @@
       "checkpoint": "B",
       "status": "running",
       "progress": 10,
-      "started_at": "2026-11-26T04:01:25+00:00",
+      "started_at": "2026-11-26T04:11:47+00:00",
       "ended_at": null,
-      "attempt": 3,
-      "retries": 0,
+      "attempt": 4,
+      "retries": 1,
       "max_retries": 2,
-      "strategy": "default",
+      "strategy": "tighter_word_budget",
       "inputs": {
         "idea": "The Gas Pump Speed Trap Stealing Your Money",
         "languages": [
@@ -480,9 +480,31 @@
           "ts": "2026-11-26T04:01:44+00:00",
           "level": "warning",
           "msg": "'gemini-3.7-flash' returned 503; retrying once in 2s"
+        },
+        {
+          "ts": "2026-11-26T04:11:46+00:00",
+          "level": "error",
+          "msg": "ReadTimeout: "
+        },
+        {
+          "ts": "2026-11-26T04:11:47+00:00",
+          "level": "info",
+          "msg": "Attempt 2/3, strategy 'tighter_word_budget'"
+        },
+        {
+          "ts": "2026-11-26T04:11:47+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.8-flash, high complexity, thinking high)"
         }
       ],
-      "errors": [],
+      "errors": [
+        {
+          "ts": "2026-11-26T04:11:46+00:00",
+          "attempt": 1,
+          "strategy": "default",
+          "error": "ReadTimeout: "
+        }
+      ],
       "feedback": [
         {
           "ts": "2026-11-26T03:49:21+00:00",
@@ -1151,7 +1173,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-26T04:01:48+00:00",
+    "exported_at": "2026-11-26T04:11:51+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/45749895401"
   }
