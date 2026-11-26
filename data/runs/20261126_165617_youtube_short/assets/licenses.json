@@ -1,0 +1,72 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-39125/",
+    "author": "Josh_Malic",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man hand macro",
+    "description": "Extreme macro close-up of a man's hand struggling to move a single finger."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-35005/",
+    "author": "gcova",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hands interlocking",
+    "description": "A man's hands slowly interlocking and pressing palms together firmly."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-40334/",
+    "author": "Integrofilms",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hand muscle strain",
+    "description": "View of a man straining to lift a pinky finger while the rest of the hand is clamped."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-214986/",
+    "author": "livemedia_7",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "digital glitch overlay",
+    "description": "Fast-paced digital glitch effect over an abstract representation of a nervous system."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-131615/",
+    "author": "PNA7",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hand anatomy tendon",
+    "description": "Anatomical 3D animation of a hand's internal tendons moving under the skin."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-266971/",
+    "author": "Alban_Gogh",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "data stream flow",
+    "description": "Binary code and data streams flowing rapidly across a dark background."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-314643/",
+    "author": "TonyDias7",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man pointing camera",
+    "description": "A man pointing directly at the camera with a confident expression."
+  }
+]
