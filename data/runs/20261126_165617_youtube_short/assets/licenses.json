@@ -3,70 +3,70 @@
     "scene": "scene_01",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-143416/",
-    "author": "NickyPe",
+    "page": "https://pixabay.com/videos/id-48969/",
+    "author": "aghyadnajjar",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "man hand macro",
-    "description": "An extreme macro shot of a man's hand with fingers twitching slightly against a dark background."
+    "query": "man hands clenching",
+    "description": "An extreme close-up of a man's hands tensing up against a dark, moody background with yellow lighting."
   },
   {
     "scene": "scene_02",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-48968/",
-    "author": "aghyadnajjar",
+    "page": "https://pixabay.com/videos/id-34260/",
+    "author": "DesignwithRiyas",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "hands interlocking",
-    "description": "Clear demonstration of a man's hands interlocking and folding the middle fingers inward."
+    "query": "hands prayer position",
+    "description": "A clear demonstration of a man's hands coming together in a prayer position and folding the middle fingers inward."
   },
   {
     "scene": "scene_03",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-44857/",
-    "author": "FlorenceCdeM",
+    "page": "https://pixabay.com/videos/id-19600/",
+    "author": "OrcaTec",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
     "query": "hand muscle strain",
-    "description": "A man's hand struggling intensely to lift the ring finger while the rest are clamped."
+    "description": "Macro shot of a man's hand visibly struggling and shaking while trying to lift the ring finger alone."
   },
   {
     "scene": "scene_04",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-214990/",
-    "author": "livemedia_7",
+    "page": "https://pixabay.com/videos/id-21536/",
+    "author": "Engin_Akyurt",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "digital glitch overlay",
-    "description": "Fast-paced digital glitch effect with blue and yellow light streaks over an abstract brain."
+    "query": "abstract brain pulse",
+    "description": "Fast-paced digital glitch effect over an abstract 3D neural network glowing with yellow energy."
   },
   {
     "scene": "scene_05",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-131993/",
-    "author": "Dx21",
+    "page": "https://pixabay.com/videos/id-14205/",
+    "author": "OjasweinGuptaOJG",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "hand anatomy tendon",
-    "description": "Detailed 3D anatomical model showing the tendons and muscles of a human hand in motion."
+    "query": "hand anatomy video",
+    "description": "A 3D medical animation showing the interior muscles and tendons of a human hand moving."
   },
   {
     "scene": "scene_06",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-217096/",
-    "author": "Matthias_Groeneveld",
+    "page": "https://pixabay.com/videos/id-204582/",
+    "author": "crows",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "iron chains rattling",
-    "description": "Abstract shot of heavy iron chains rattling or a red warning light flashing in a dark room."
+    "query": "mechanical gears turning",
+    "description": "Industrial gears grinding together or a heavy chain being pulled tight in a dark workshop."
   },
   {
     "scene": "scene_07",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-318654/",
-    "author": "TonyDias7",
+    "page": "https://pixabay.com/videos/id-18244/",
+    "author": "Lirofilm",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "man pointing camera",
-    "description": "A man pointing directly into the lens with a confident expression and a quick nod."
+    "query": "man nodding head",
+    "description": "A man in a dark hoodie looking directly at the camera with a slight, knowing smile and a nod."
   }
 ]

@@ -12,46 +12,46 @@ Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 1,0:00:00.05,0:00:02.49,Headline,,0,0,0,,{\fad(150,150)}YOU ARE PARALYZED
-Dialogue: 1,0:00:02.59,0:00:08.72,Headline,,0,0,0,,{\fad(150,150)}LOCK YOUR HANDS
-Dialogue: 1,0:00:08.82,0:00:13.71,Headline,,0,0,0,,{\fad(150,150)}TRY TO LIFT
-Dialogue: 1,0:00:13.81,0:00:17.30,Headline,,0,0,0,,{\fad(150,150)}THE CREEPY PART
-Dialogue: 1,0:00:17.40,0:00:24.45,Headline,,0,0,0,,{\fad(150,150)}SHARED HAND TENDON
-Dialogue: 1,0:00:24.55,0:00:29.75,Headline,,0,0,0,,{\fad(150,150)}BIOLOGICAL PRISONER
-Dialogue: 1,0:00:29.85,0:00:36.21,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
-Dialogue: 0,0:00:00.09,0:00:01.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You {\c&H0000E5FF&}physically{\c&H00FFFFFF&} cannot
-Dialogue: 0,0:00:01.08,0:00:02.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}move this {\c&H0000E5FF&}finger{\c&H00FFFFFF&}
-Dialogue: 0,0:00:02.63,0:00:03.38,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Press{\c&H00FFFFFF&} your palms
-Dialogue: 0,0:00:03.38,0:00:03.86,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}together
-Dialogue: 0,0:00:04.29,0:00:05.41,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}interlock{\c&H00FFFFFF&} your fingers
-Dialogue: 0,0:00:05.61,0:00:06.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and {\c&H0000E5FF&}tuck{\c&H00FFFFFF&} your
-Dialogue: 0,0:00:06.36,0:00:07.42,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}middle {\c&H0000E5FF&}fingers{\c&H00FFFFFF&} down
-Dialogue: 0,0:00:07.55,0:00:08.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}so they {\c&H0000E5FF&}touch{\c&H00FFFFFF&}
-Dialogue: 0,0:00:08.85,0:00:09.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Now
-Dialogue: 0,0:00:09.62,0:00:10.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}try to {\c&H0000E5FF&}lift{\c&H00FFFFFF&}
-Dialogue: 0,0:00:10.09,0:00:10.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}just{\c&H00FFFFFF&} your ring
-Dialogue: 0,0:00:10.63,0:00:11.86,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}finger while {\c&H0000E5FF&}keeping{\c&H00FFFFFF&}
-Dialogue: 0,0:00:11.96,0:00:12.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}all other {\c&H0000E5FF&}fingers{\c&H00FFFFFF&}
-Dialogue: 0,0:00:12.68,0:00:13.32,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}glued{\c&H00FFFFFF&} shut
-Dialogue: 0,0:00:13.85,0:00:14.86,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It’s {\c&H0000E5FF&}completely{\c&H00FFFFFF&} frozen
-Dialogue: 0,0:00:15.11,0:00:15.51,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}right
-Dialogue: 0,0:00:15.76,0:00:16.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}But {\c&H0000E5FF&}here{\c&H00FFFFFF&} is
-Dialogue: 0,0:00:16.12,0:00:16.92,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}creepy{\c&H00FFFFFF&} part
-Dialogue: 0,0:00:17.45,0:00:18.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your ring {\c&H0000E5FF&}finger{\c&H00FFFFFF&}
-Dialogue: 0,0:00:18.25,0:00:19.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}lacks{\c&H00FFFFFF&} its own
-Dialogue: 0,0:00:19.55,0:00:21.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}independent{\c&H00FFFFFF&} extensor muscle
-Dialogue: 0,0:00:21.50,0:00:22.05,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}It is {\c&H0000E5FF&}tethered{\c&H00FFFFFF&}
-Dialogue: 0,0:00:22.05,0:00:22.42,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to the {\c&H0000E5FF&}middle{\c&H00FFFFFF&}
-Dialogue: 0,0:00:22.42,0:00:23.07,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}finger{\c&H00FFFFFF&} by a
-Dialogue: 0,0:00:23.07,0:00:24.05,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}shared{\c&H00FFFFFF&} tendon
-Dialogue: 0,0:00:24.59,0:00:25.50,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}While other {\c&H0000E5FF&}fingers{\c&H00FFFFFF&}
-Dialogue: 0,0:00:25.52,0:00:26.79,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}move {\c&H0000E5FF&}freely{\c&H00FFFFFF&}
-Dialogue: 0,0:00:27.18,0:00:27.92,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}this one is
-Dialogue: 0,0:00:27.92,0:00:28.48,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a {\c&H0000E5FF&}prisoner{\c&H00FFFFFF&} of
-Dialogue: 0,0:00:28.48,0:00:29.37,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your own {\c&H0000E5FF&}biology{\c&H00FFFFFF&}
-Dialogue: 0,0:00:29.89,0:00:30.92,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Subscribe for {\c&H0000E5FF&}tomorrow's{\c&H00FFFFFF&}
-Dialogue: 0,0:00:30.93,0:00:31.79,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}body {\c&H0000E5FF&}glitch{\c&H00FFFFFF&} and
-Dialogue: 0,0:00:31.79,0:00:33.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} TRAPPED if
-Dialogue: 0,0:00:33.02,0:00:33.65,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you {\c&H0000E5FF&}failed{\c&H00FFFFFF&}
-Dialogue: 0,0:00:34.16,0:00:34.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}which is {\c&H0000E5FF&}exactly{\c&H00FFFFFF&}
-Dialogue: 0,0:00:34.85,0:00:35.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}why
+Dialogue: 1,0:00:00.05,0:00:02.44,Headline,,0,0,0,,{\fad(150,150)}LOCKED IN PLACE
+Dialogue: 1,0:00:02.54,0:00:07.98,Headline,,0,0,0,,{\fad(150,150)}LOCK YOUR HANDS
+Dialogue: 1,0:00:08.08,0:00:14.14,Headline,,0,0,0,,{\fad(150,150)}TRY TO LIFT
+Dialogue: 1,0:00:14.24,0:00:17.83,Headline,,0,0,0,,{\fad(150,150)}BRAIN IS CHEATING
+Dialogue: 1,0:00:17.93,0:00:23.66,Headline,,0,0,0,,{\fad(150,150)}SHARED TENDON
+Dialogue: 1,0:00:23.76,0:00:29.17,Headline,,0,0,0,,{\fad(150,150)}BIOLOGY GLITCH
+Dialogue: 1,0:00:29.27,0:00:34.67,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 0,0:00:00.08,0:00:01.20,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You {\c&H0000E5FF&}physically{\c&H00FFFFFF&} cannot
+Dialogue: 0,0:00:01.22,0:00:02.06,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}lift this {\c&H0000E5FF&}finger{\c&H00FFFFFF&}
+Dialogue: 0,0:00:02.58,0:00:03.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Press{\c&H00FFFFFF&} your palms
+Dialogue: 0,0:00:03.27,0:00:04.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}together {\c&H0000E5FF&}interlock{\c&H00FFFFFF&} your
+Dialogue: 0,0:00:04.45,0:00:05.59,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}fingers{\c&H00FFFFFF&} and tuck
+Dialogue: 0,0:00:05.59,0:00:06.41,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your middle {\c&H0000E5FF&}fingers{\c&H00FFFFFF&}
+Dialogue: 0,0:00:06.42,0:00:07.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}flat {\c&H0000E5FF&}against{\c&H00FFFFFF&} each
+Dialogue: 0,0:00:07.26,0:00:07.66,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}other
+Dialogue: 0,0:00:08.11,0:00:09.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Now try to
+Dialogue: 0,0:00:09.01,0:00:09.75,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}lift{\c&H00FFFFFF&} just your
+Dialogue: 0,0:00:09.76,0:00:10.65,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}ring {\c&H0000E5FF&}fingers{\c&H00FFFFFF&} while
+Dialogue: 0,0:00:10.67,0:00:11.67,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}keeping{\c&H00FFFFFF&} every other
+Dialogue: 0,0:00:11.69,0:00:12.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}finger{\c&H00FFFFFF&} glued shut
+Dialogue: 0,0:00:12.98,0:00:13.77,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You {\c&H0000E5FF&}can't{\c&H00FFFFFF&} right
+Dialogue: 0,0:00:14.27,0:00:15.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Wait {\c&H0000E5FF&}until{\c&H00FFFFFF&} you
+Dialogue: 0,0:00:15.01,0:00:15.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}see how your
+Dialogue: 0,0:00:15.61,0:00:16.89,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}biology is {\c&H0000E5FF&}actually{\c&H00FFFFFF&}
+Dialogue: 0,0:00:16.90,0:00:17.46,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}cheating{\c&H00FFFFFF&} you
+Dialogue: 0,0:00:17.96,0:00:18.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Most {\c&H0000E5FF&}fingers{\c&H00FFFFFF&} have
+Dialogue: 0,0:00:18.89,0:00:20.21,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}independent{\c&H00FFFFFF&} muscles but
+Dialogue: 0,0:00:20.22,0:00:20.95,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your ring {\c&H0000E5FF&}finger{\c&H00FFFFFF&}
+Dialogue: 0,0:00:20.96,0:00:21.62,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is {\c&H0000E5FF&}tethered{\c&H00FFFFFF&} to
+Dialogue: 0,0:00:21.62,0:00:22.29,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}others{\c&H00FFFFFF&} by
+Dialogue: 0,0:00:22.30,0:00:23.30,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a {\c&H0000E5FF&}shared{\c&H00FFFFFF&} tendon
+Dialogue: 0,0:00:23.76,0:00:24.29,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}When you {\c&H0000E5FF&}lock{\c&H00FFFFFF&}
+Dialogue: 0,0:00:24.30,0:00:24.96,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}that {\c&H0000E5FF&}middle{\c&H00FFFFFF&} finger
+Dialogue: 0,0:00:24.97,0:00:25.37,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}down
+Dialogue: 0,0:00:25.84,0:00:26.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}it {\c&H0000E5FF&}anchors{\c&H00FFFFFF&} the
+Dialogue: 0,0:00:26.43,0:00:27.65,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}tendon{\c&H00FFFFFF&} and traps
+Dialogue: 0,0:00:27.66,0:00:28.23,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your ring {\c&H0000E5FF&}finger{\c&H00FFFFFF&}
+Dialogue: 0,0:00:28.23,0:00:28.79,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}in {\c&H0000E5FF&}place{\c&H00FFFFFF&}
+Dialogue: 0,0:00:29.30,0:00:30.31,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Subscribe for {\c&H0000E5FF&}tomorrow’s{\c&H00FFFFFF&}
+Dialogue: 0,0:00:30.31,0:00:31.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}brain{\c&H00FFFFFF&} hack and
+Dialogue: 0,0:00:31.19,0:00:31.98,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} FAILED if
+Dialogue: 0,0:00:31.98,0:00:32.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}you’re{\c&H00FFFFFF&} stuck which
+Dialogue: 0,0:00:32.83,0:00:33.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is {\c&H0000E5FF&}exactly{\c&H00FFFFFF&} why
