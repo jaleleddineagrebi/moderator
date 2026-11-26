@@ -1,0 +1,145 @@
+{
+  "title": "The Paralyzed Pinky Glitch",
+  "scenes": [
+    {
+      "vo": {
+        "en": "You physically cannot move your pinky."
+      },
+      "on_screen": {
+        "en": "YOU ARE PARALYZED"
+      },
+      "visual": {
+        "description": "Extreme macro close-up of a man's hand struggling to move a single finger.",
+        "search_terms": [
+          "man hand macro",
+          "finger twitching",
+          "skin texture hand"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "The Impossible Test",
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Interlock your fingers tightly, pressing your palms together, and tuck your middle fingers inward."
+      },
+      "on_screen": {
+        "en": "LOCK YOUR HANDS"
+      },
+      "visual": {
+        "description": "A man's hands slowly interlocking and pressing palms together firmly.",
+        "search_terms": [
+          "hands interlocking",
+          "clasping palms",
+          "male hand gesture"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Now, try to lift just your left pinky finger while keeping all other fingers pressed together."
+      },
+      "on_screen": {
+        "en": "TRY TO LIFT IT"
+      },
+      "visual": {
+        "description": "View of a man straining to lift a pinky finger while the rest of the hand is clamped.",
+        "search_terms": [
+          "hand muscle strain",
+          "finger effort motion",
+          "isometric hand hold"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "Did you feel that? It’s completely stuck. But here is the creepy part."
+      },
+      "on_screen": {
+        "en": "THE CREEPY PART"
+      },
+      "visual": {
+        "description": "Fast-paced digital glitch effect over an abstract representation of a nervous system.",
+        "search_terms": [
+          "digital glitch overlay",
+          "static screen flash",
+          "blue neon pulse"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "The Science Glitch",
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Your ring and pinky fingers share a single tendon called the extensor digiti minimi. When one is locked, the other is trapped."
+      },
+      "on_screen": {
+        "en": "SHARED BODY TENDON"
+      },
+      "visual": {
+        "description": "Anatomical 3D animation of a hand's internal tendons moving under the skin.",
+        "search_terms": [
+          "hand anatomy tendon",
+          "skeleton hand motion",
+          "medical muscle model"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "Most people fail this test because their brain sends the signal, but the physical link is jammed."
+      },
+      "on_screen": {
+        "en": "SIGNAL IS JAMMED"
+      },
+      "visual": {
+        "description": "Binary code and data streams flowing rapidly across a dark background.",
+        "search_terms": [
+          "data stream flow",
+          "binary code raining",
+          "server room lights"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for tomorrow's body hack and comment STUCK if this worked on you... which is exactly why"
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "A man pointing directly at the camera with a confident expression.",
+        "search_terms": [
+          "man pointing camera",
+          "person nodding head",
+          "fast keyboard typing"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "paralyzed-pinky-glitch",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 38.2
+  }
+}
