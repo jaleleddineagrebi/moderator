@@ -1,0 +1,55 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:02.82,Headline,,0,0,0,,{\fad(150,150)}NEVER PUMP FULL SPEED
+Dialogue: 1,0:00:02.92,0:00:08.24,Headline,,0,0,0,,{\fad(150,150)}TURNING FUEL INTO MIST
+Dialogue: 1,0:00:08.34,0:00:13.85,Headline,,0,0,0,,{\fad(150,150)}BUILT-IN VACUUM TRAP
+Dialogue: 1,0:00:13.95,0:00:18.57,Headline,,0,0,0,,{\fad(150,150)}YOU PAID FOR THAT
+Dialogue: 1,0:00:18.67,0:00:24.95,Headline,,0,0,0,,{\fad(150,150)}FUEL RETURNED UNDERGROUND
+Dialogue: 1,0:00:25.05,0:00:29.63,Headline,,0,0,0,,{\fad(150,150)}CLICK THE SLOWEST SETTING
+Dialogue: 1,0:00:29.73,0:00:35.68,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 0,0:00:00.10,0:00:01.07,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Stop {\c&H0000E5FF&}pumping{\c&H00FFFFFF&} gas
+Dialogue: 0,0:00:01.08,0:00:01.96,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}at full {\c&H0000E5FF&}speed{\c&H00FFFFFF&}
+Dialogue: 0,0:00:02.97,0:00:03.92,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Squeezing{\c&H00FFFFFF&} that trigger
+Dialogue: 0,0:00:03.93,0:00:04.40,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to the max
+Dialogue: 0,0:00:04.41,0:00:05.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}violently{\c&H00FFFFFF&} churns gasoline
+Dialogue: 0,0:00:05.73,0:00:06.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}into an {\c&H0000E5FF&}invisible{\c&H00FFFFFF&}
+Dialogue: 0,0:00:06.57,0:00:07.38,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}vapor{\c&H00FFFFFF&} cloud
+Dialogue: 0,0:00:08.39,0:00:09.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Every {\c&H0000E5FF&}modern{\c&H00FFFFFF&} pump
+Dialogue: 0,0:00:09.27,0:00:10.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}nozzle has {\c&H0000E5FF&}built-in{\c&H00FFFFFF&}
+Dialogue: 0,0:00:10.14,0:00:11.32,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}suction tubes {\c&H0000E5FF&}designed{\c&H00FFFFFF&}
+Dialogue: 0,0:00:11.33,0:00:11.94,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to {\c&H0000E5FF&}vacuum{\c&H00FFFFFF&} up
+Dialogue: 0,0:00:11.95,0:00:12.99,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}escaping{\c&H00FFFFFF&} fumes
+Dialogue: 0,0:00:14.00,0:00:14.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Here{\c&H00FFFFFF&} is the
+Dialogue: 0,0:00:14.53,0:00:15.58,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}insane{\c&H00FFFFFF&} part you
+Dialogue: 0,0:00:15.59,0:00:16.42,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}already{\c&H00FFFFFF&} paid for
+Dialogue: 0,0:00:16.43,0:00:17.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}that {\c&H0000E5FF&}evaporated{\c&H00FFFFFF&} gas
+Dialogue: 0,0:00:18.72,0:00:19.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}The {\c&H0000E5FF&}digital{\c&H00FFFFFF&} meter
+Dialogue: 0,0:00:19.55,0:00:20.48,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}charges{\c&H00FFFFFF&} your wallet
+Dialogue: 0,0:00:20.59,0:00:21.37,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}but those {\c&H0000E5FF&}sucked-back{\c&H00FFFFFF&}
+Dialogue: 0,0:00:21.38,0:00:22.47,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}fumes return {\c&H0000E5FF&}straight{\c&H00FFFFFF&}
+Dialogue: 0,0:00:22.49,0:00:23.26,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to the {\c&H0000E5FF&}underground{\c&H00FFFFFF&}
+Dialogue: 0,0:00:23.28,0:00:24.09,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}station{\c&H00FFFFFF&} tank
+Dialogue: 0,0:00:25.10,0:00:25.67,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Lock{\c&H00FFFFFF&} the pump
+Dialogue: 0,0:00:25.68,0:00:26.20,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}handle{\c&H00FFFFFF&} on the
+Dialogue: 0,0:00:26.21,0:00:26.85,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}lowest{\c&H00FFFFFF&} click to
+Dialogue: 0,0:00:26.86,0:00:27.60,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}keep {\c&H0000E5FF&}every{\c&H00FFFFFF&} drop
+Dialogue: 0,0:00:27.61,0:00:28.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}dense{\c&H00FFFFFF&} and in
+Dialogue: 0,0:00:28.13,0:00:28.76,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}tank{\c&H00FFFFFF&}
+Dialogue: 0,0:00:29.78,0:00:30.75,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Subscribe{\c&H00FFFFFF&} now and
+Dialogue: 0,0:00:30.77,0:00:31.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} your mileage
+Dialogue: 0,0:00:31.71,0:00:32.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}boost after {\c&H0000E5FF&}testing{\c&H00FFFFFF&}
+Dialogue: 0,0:00:32.62,0:00:33.37,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}this {\c&H0000E5FF&}trick{\c&H00FFFFFF&} which
+Dialogue: 0,0:00:33.38,0:00:33.86,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is why you
+Dialogue: 0,0:00:33.87,0:00:34.27,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}should
