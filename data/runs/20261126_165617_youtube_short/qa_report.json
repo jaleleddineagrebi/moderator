@@ -1,12 +1,12 @@
 {
   "passed": false,
-  "revision_round": 1,
+  "revision_round": 2,
   "checks": [
     {
       "check": "length",
       "lang": "en",
       "ok": true,
-      "detail": "36.3s (must be under 60s; target 32-50s)",
+      "detail": "34.7s (must be under 60s; target 32-50s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -14,7 +14,7 @@
       "check": "target length",
       "lang": "en",
       "ok": true,
-      "detail": "36.3s",
+      "detail": "34.7s",
       "send_to": null,
       "severity": "minor"
     },
@@ -46,7 +46,7 @@
       "check": "loudness",
       "lang": "en",
       "ok": true,
-      "detail": "-14.3 LUFS, peak -1.4 dBFS (target -14 LUFS, peak <= -1)",
+      "detail": "-13.9 LUFS, peak -1.1 dBFS (target -14 LUFS, peak <= -1)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -62,7 +62,7 @@
       "check": "caption sync",
       "lang": "en",
       "ok": true,
-      "detail": "96 words, 36 caption events",
+      "detail": "102 words, 36 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -91,20 +91,12 @@
       "severity": "blocker"
     },
     {
-      "check": "sensitivity review",
+      "check": "accuracy review",
       "lang": "en",
       "ok": false,
-      "detail": "The text 'YOU ARE PARALYZED' in scene_01 is an exaggerated medical claim and could be flagged as misleading or insensitive. Change to 'LOCKED IN PLACE'.",
+      "detail": "The description of the finger positioning is incorrect. To perform this trick (the middle finger trick), you must fold the middle fingers down so their knuckles touch, not tuck them 'flat against each other' (which describes prayer hands). Fix script to: 'Press your palms together, interlock your fingers, then fold your middle fingers down so the knuckles touch.'",
       "send_to": "script",
       "severity": "blocker"
-    },
-    {
-      "check": "grammar review",
-      "lang": "en",
-      "ok": false,
-      "detail": "In scene_07, the narration ends abruptly with '... which is exactly why' without finishing the thought. Remove '... which is exactly why' to ensure a clean loop or ending.",
-      "send_to": "script",
-      "severity": "minor"
     },
     {
       "check": "people rule",
