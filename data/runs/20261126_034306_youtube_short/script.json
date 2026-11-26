@@ -1,0 +1,138 @@
+{
+  "title": "The Gas Pump Speed Trap Stealing Your Money",
+  "scenes": [
+    {
+      "vo": {
+        "en": "Stop pumping gas at full speed."
+      },
+      "on_screen": {
+        "en": "NEVER PUMP FULL SPEED"
+      },
+      "visual": {
+        "description": "Close-up of a man's gloved hand violently squeezing a fuel pump trigger all the way down at a gas station.",
+        "search_terms": [
+          "gas pump nozzle",
+          "man fueling car",
+          "fuel dispenser handle"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Squeezing that trigger to the max violently churns gasoline into an invisible vapor cloud."
+      },
+      "on_screen": {
+        "en": "TURNING FUEL INTO MIST"
+      },
+      "visual": {
+        "description": "Macro shot of turbulent liquid splashing rapidly inside a glass container, releasing micro-droplets and rising vapor.",
+        "search_terms": [
+          "turbulent liquid splash",
+          "liquid vaporization chamber",
+          "mist rising macro"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Every modern pump nozzle has built-in suction tubes designed to vacuum up escaping fumes."
+      },
+      "on_screen": {
+        "en": "BUILT-IN VACUUM TRAP"
+      },
+      "visual": {
+        "description": "Metallic industrial intake pipe with high-velocity air suction drawing in smoke and vapor particles.",
+        "search_terms": [
+          "industrial air suction",
+          "intake vacuum pipe",
+          "mechanical air suction"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "Here is the insane part: you already paid for that evaporated gas."
+      },
+      "on_screen": {
+        "en": "YOU PAID FOR THAT"
+      },
+      "visual": {
+        "description": "Rapidly spinning digital numbers on a gas pump meter readout as money tallies up on screen.",
+        "search_terms": [
+          "gas pump meter",
+          "digital cash counter",
+          "fuel pump display"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "The digital meter charges your wallet, but those sucked-back fumes return straight to the underground station tank."
+      },
+      "on_screen": {
+        "en": "FUEL RETURNED UNDERGROUND"
+      },
+      "visual": {
+        "description": "Dark underground industrial fuel storage reservoir with pipelines directing liquid downward.",
+        "search_terms": [
+          "underground storage tank",
+          "industrial pipeline system",
+          "oil storage facility"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "Lock the pump handle on the lowest click to keep every drop dense and in your tank."
+      },
+      "on_screen": {
+        "en": "CLICK THE SLOWEST SETTING"
+      },
+      "visual": {
+        "description": "Extreme close-up of a hand gently adjusting the metal latch of a pump handle to the first slowest notch.",
+        "search_terms": [
+          "adjusting metal latch",
+          "hand clicking mechanism",
+          "pump handle lock"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Subscribe now and comment your mileage boost after testing this trick, which is why you should..."
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "Driver's hand pressing the odometer trip reset button on a lit vehicle dashboard before driving onto the highway.",
+        "search_terms": [
+          "car dashboard odometer",
+          "driver hand steering",
+          "car highway cruising"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "gas-pump-speed-trap",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 34.9
+  }
+}

@@ -1,0 +1,535 @@
+{
+  "voice": "en-GB-RyanNeural",
+  "duration": 35.028073,
+  "scenes": [
+    {
+      "scene": "scene_01",
+      "start": 0.0,
+      "end": 2.784,
+      "words": [
+        {
+          "start": 0.1,
+          "end": 0.454,
+          "text": "Stop"
+        },
+        {
+          "start": 0.466,
+          "end": 0.772,
+          "text": "pumping"
+        },
+        {
+          "start": 0.784,
+          "end": 1.067,
+          "text": "gas"
+        },
+        {
+          "start": 1.079,
+          "end": 1.173,
+          "text": "at"
+        },
+        {
+          "start": 1.185,
+          "end": 1.468,
+          "text": "full"
+        },
+        {
+          "start": 1.48,
+          "end": 1.963,
+          "text": "speed"
+        }
+      ]
+    },
+    {
+      "scene": "scene_02",
+      "start": 2.874,
+      "end": 8.202,
+      "words": [
+        {
+          "start": 2.974,
+          "end": 3.493,
+          "text": "Squeezing"
+        },
+        {
+          "start": 3.505,
+          "end": 3.658,
+          "text": "that"
+        },
+        {
+          "start": 3.67,
+          "end": 3.917,
+          "text": "trigger"
+        },
+        {
+          "start": 3.929,
+          "end": 4.012,
+          "text": "to"
+        },
+        {
+          "start": 4.024,
+          "end": 4.106,
+          "text": "the"
+        },
+        {
+          "start": 4.118,
+          "end": 4.401,
+          "text": "max"
+        },
+        {
+          "start": 4.413,
+          "end": 4.884,
+          "text": "violently"
+        },
+        {
+          "start": 4.896,
+          "end": 5.226,
+          "text": "churns"
+        },
+        {
+          "start": 5.238,
+          "end": 5.722,
+          "text": "gasoline"
+        },
+        {
+          "start": 5.733,
+          "end": 5.993,
+          "text": "into"
+        },
+        {
+          "start": 6.005,
+          "end": 6.075,
+          "text": "an"
+        },
+        {
+          "start": 6.087,
+          "end": 6.559,
+          "text": "invisible"
+        },
+        {
+          "start": 6.571,
+          "end": 6.854,
+          "text": "vapor"
+        },
+        {
+          "start": 6.865,
+          "end": 7.384,
+          "text": "cloud"
+        }
+      ]
+    },
+    {
+      "scene": "scene_03",
+      "start": 8.292,
+      "end": 13.812,
+      "words": [
+        {
+          "start": 8.392,
+          "end": 8.675,
+          "text": "Every"
+        },
+        {
+          "start": 8.687,
+          "end": 8.982,
+          "text": "modern"
+        },
+        {
+          "start": 8.993,
+          "end": 9.253,
+          "text": "pump"
+        },
+        {
+          "start": 9.265,
+          "end": 9.595,
+          "text": "nozzle"
+        },
+        {
+          "start": 9.607,
+          "end": 9.748,
+          "text": "has"
+        },
+        {
+          "start": 9.76,
+          "end": 10.125,
+          "text": "built-in"
+        },
+        {
+          "start": 10.137,
+          "end": 10.538,
+          "text": "suction"
+        },
+        {
+          "start": 10.55,
+          "end": 10.868,
+          "text": "tubes"
+        },
+        {
+          "start": 10.88,
+          "end": 11.317,
+          "text": "designed"
+        },
+        {
+          "start": 11.328,
+          "end": 11.399,
+          "text": "to"
+        },
+        {
+          "start": 11.411,
+          "end": 11.812,
+          "text": "vacuum"
+        },
+        {
+          "start": 11.824,
+          "end": 11.941,
+          "text": "up"
+        },
+        {
+          "start": 11.953,
+          "end": 12.437,
+          "text": "escaping"
+        },
+        {
+          "start": 12.449,
+          "end": 12.991,
+          "text": "fumes"
+        }
+      ]
+    },
+    {
+      "scene": "scene_04",
+      "start": 13.902,
+      "end": 18.534,
+      "words": [
+        {
+          "start": 14.002,
+          "end": 14.297,
+          "text": "Here"
+        },
+        {
+          "start": 14.309,
+          "end": 14.415,
+          "text": "is"
+        },
+        {
+          "start": 14.427,
+          "end": 14.521,
+          "text": "the"
+        },
+        {
+          "start": 14.533,
+          "end": 14.91,
+          "text": "insane"
+        },
+        {
+          "start": 14.922,
+          "end": 15.276,
+          "text": "part"
+        },
+        {
+          "start": 15.488,
+          "end": 15.582,
+          "text": "you"
+        },
+        {
+          "start": 15.594,
+          "end": 16.007,
+          "text": "already"
+        },
+        {
+          "start": 16.018,
+          "end": 16.337,
+          "text": "paid"
+        },
+        {
+          "start": 16.349,
+          "end": 16.419,
+          "text": "for"
+        },
+        {
+          "start": 16.431,
+          "end": 16.608,
+          "text": "that"
+        },
+        {
+          "start": 16.62,
+          "end": 17.221,
+          "text": "evaporated"
+        },
+        {
+          "start": 17.233,
+          "end": 17.705,
+          "text": "gas"
+        }
+      ]
+    },
+    {
+      "scene": "scene_05",
+      "start": 18.624,
+      "end": 24.912,
+      "words": [
+        {
+          "start": 18.724,
+          "end": 18.865,
+          "text": "The"
+        },
+        {
+          "start": 18.877,
+          "end": 19.266,
+          "text": "digital"
+        },
+        {
+          "start": 19.278,
+          "end": 19.538,
+          "text": "meter"
+        },
+        {
+          "start": 19.549,
+          "end": 19.95,
+          "text": "charges"
+        },
+        {
+          "start": 19.962,
+          "end": 20.068,
+          "text": "your"
+        },
+        {
+          "start": 20.08,
+          "end": 20.481,
+          "text": "wallet"
+        },
+        {
+          "start": 20.587,
+          "end": 20.693,
+          "text": "but"
+        },
+        {
+          "start": 20.705,
+          "end": 20.917,
+          "text": "those"
+        },
+        {
+          "start": 20.929,
+          "end": 21.366,
+          "text": "sucked-back"
+        },
+        {
+          "start": 21.377,
+          "end": 21.731,
+          "text": "fumes"
+        },
+        {
+          "start": 21.743,
+          "end": 22.144,
+          "text": "return"
+        },
+        {
+          "start": 22.156,
+          "end": 22.474,
+          "text": "straight"
+        },
+        {
+          "start": 22.486,
+          "end": 22.557,
+          "text": "to"
+        },
+        {
+          "start": 22.568,
+          "end": 22.686,
+          "text": "the"
+        },
+        {
+          "start": 22.698,
+          "end": 23.264,
+          "text": "underground"
+        },
+        {
+          "start": 23.276,
+          "end": 23.665,
+          "text": "station"
+        },
+        {
+          "start": 23.677,
+          "end": 24.09,
+          "text": "tank"
+        }
+      ]
+    },
+    {
+      "scene": "scene_06",
+      "start": 25.002,
+      "end": 29.586,
+      "words": [
+        {
+          "start": 25.102,
+          "end": 25.338,
+          "text": "Lock"
+        },
+        {
+          "start": 25.35,
+          "end": 25.432,
+          "text": "the"
+        },
+        {
+          "start": 25.444,
+          "end": 25.668,
+          "text": "pump"
+        },
+        {
+          "start": 25.68,
+          "end": 26.034,
+          "text": "handle"
+        },
+        {
+          "start": 26.045,
+          "end": 26.128,
+          "text": "on"
+        },
+        {
+          "start": 26.14,
+          "end": 26.199,
+          "text": "the"
+        },
+        {
+          "start": 26.21,
+          "end": 26.552,
+          "text": "lowest"
+        },
+        {
+          "start": 26.564,
+          "end": 26.765,
+          "text": "click"
+        },
+        {
+          "start": 26.777,
+          "end": 26.847,
+          "text": "to"
+        },
+        {
+          "start": 26.859,
+          "end": 27.095,
+          "text": "keep"
+        },
+        {
+          "start": 27.107,
+          "end": 27.331,
+          "text": "every"
+        },
+        {
+          "start": 27.343,
+          "end": 27.602,
+          "text": "drop"
+        },
+        {
+          "start": 27.614,
+          "end": 27.92,
+          "text": "dense"
+        },
+        {
+          "start": 27.932,
+          "end": 28.027,
+          "text": "and"
+        },
+        {
+          "start": 28.038,
+          "end": 28.121,
+          "text": "in"
+        },
+        {
+          "start": 28.133,
+          "end": 28.274,
+          "text": "your"
+        },
+        {
+          "start": 28.286,
+          "end": 28.758,
+          "text": "tank"
+        }
+      ]
+    },
+    {
+      "scene": "scene_07",
+      "start": 29.676,
+      "end": 35.028,
+      "words": [
+        {
+          "start": 29.776,
+          "end": 30.366,
+          "text": "Subscribe"
+        },
+        {
+          "start": 30.377,
+          "end": 30.649,
+          "text": "now"
+        },
+        {
+          "start": 30.66,
+          "end": 30.755,
+          "text": "and"
+        },
+        {
+          "start": 30.767,
+          "end": 31.12,
+          "text": "comment"
+        },
+        {
+          "start": 31.132,
+          "end": 31.25,
+          "text": "your"
+        },
+        {
+          "start": 31.262,
+          "end": 31.698,
+          "text": "mileage"
+        },
+        {
+          "start": 31.71,
+          "end": 31.993,
+          "text": "boost"
+        },
+        {
+          "start": 32.005,
+          "end": 32.229,
+          "text": "after"
+        },
+        {
+          "start": 32.241,
+          "end": 32.606,
+          "text": "testing"
+        },
+        {
+          "start": 32.618,
+          "end": 32.748,
+          "text": "this"
+        },
+        {
+          "start": 32.759,
+          "end": 33.031,
+          "text": "trick"
+        },
+        {
+          "start": 33.208,
+          "end": 33.373,
+          "text": "which"
+        },
+        {
+          "start": 33.384,
+          "end": 33.479,
+          "text": "is"
+        },
+        {
+          "start": 33.491,
+          "end": 33.691,
+          "text": "why"
+        },
+        {
+          "start": 33.703,
+          "end": 33.856,
+          "text": "you"
+        },
+        {
+          "start": 33.868,
+          "end": 34.21,
+          "text": "should"
+        }
+      ]
+    }
+  ]
+}
