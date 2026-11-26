@@ -1,5 +1,5 @@
 {
-  "title": "The Gas Pump Speed Trap Stealing Your Money",
+  "title": "The Gas Pump Speed Trap Wasting Your Time",
   "scenes": [
     {
       "vo": {
@@ -9,30 +9,30 @@
         "en": "STOP PUMPING FULL SPEED"
       },
       "visual": {
-        "description": "Close-up of a man's hand firmly gripping a gas pump handle at a station.",
+        "description": "Close-up of a man's hand squeezing a fuel pump handle aggressively at a gas station.",
         "search_terms": [
-          "gas pump handle",
+          "gas pump nozzle",
           "man fueling car",
-          "fueling station"
+          "fuel dispenser handle"
         ],
         "prefer": "video"
       },
-      "chapter": "The Speed Trap",
+      "chapter": "The Fuel Trap",
       "id": "scene_01"
     },
     {
       "vo": {
-        "en": "Blasting fuel at max pressure creates a chaotic splash zone inside your tank."
+        "en": "Blasting fuel at maximum velocity creates heavy turbulence and churning inside your tank."
       },
       "on_screen": {
-        "en": "CHAOTIC SPLASH ZONE"
+        "en": "TURBULENT FUEL FLOW"
       },
       "visual": {
-        "description": "High-speed footage of liquid splashing violently inside a dark container.",
+        "description": "Turbulent liquid swirling violently inside a transparent industrial pipe.",
         "search_terms": [
-          "liquid splash motion",
-          "turbulent water flow",
-          "oil splashing"
+          "turbulent liquid flow",
+          "swirling water vortex",
+          "fluid dynamics motion"
         ],
         "prefer": "video"
       },
@@ -41,17 +41,17 @@
     },
     {
       "vo": {
-        "en": "This turbulence turns liquid gas into a frothy foam, much like a poured soda."
+        "en": "This violent agitation whips the fuel into a thick layer of frothy vapor and bubbles."
       },
       "on_screen": {
-        "en": "LIQUID TURNS TO FOAM"
+        "en": "BUBBLES AND FOAM"
       },
       "visual": {
-        "description": "Close-up of bubbles and foam rising rapidly in a glass vessel.",
+        "description": "Extreme macro shot of dense foam and bubbles expanding rapidly in a container.",
         "search_terms": [
-          "liquid foam surface",
-          "bubbles rising fast",
-          "frothy liquid texture"
+          "liquid foam bubbling",
+          "fast rising bubbles",
+          "fizzy liquid surface"
         ],
         "prefer": "video"
       },
@@ -60,36 +60,36 @@
     },
     {
       "vo": {
-        "en": "But here is the secret that costs you money."
+        "en": "Wait, here is the secret that wastes your time."
       },
       "on_screen": {
-        "en": "THE HIDDEN COST"
+        "en": "WASTING YOUR TIME"
       },
       "visual": {
-        "description": "A man looking frustrated while looking at a wallet with only a few bills left.",
+        "description": "An impatient driver tapping his fingers on a car steering wheel in traffic.",
         "search_terms": [
-          "man holding wallet",
-          "empty wallet close-up",
-          "stressed man money"
+          "driver tapping steering",
+          "impatient man traffic",
+          "car dashboard clock"
         ],
         "prefer": "video"
       },
-      "chapter": "The Real Secret",
+      "chapter": "",
       "id": "scene_04"
     },
     {
       "vo": {
-        "en": "That foam triggers the nozzle’s auto-stop sensor long before the tank is actually full."
+        "en": "That foam splashes against the nozzle sensor, triggering an early shutoff before your tank is truly full. You leave with air pockets instead of fuel, meaning more trips to the station."
       },
       "on_screen": {
         "en": "PREMATURE AUTO-STOP"
       },
       "visual": {
-        "description": "Close-up of the gas pump nozzle clicking upward automatically to stop the flow.",
+        "description": "Close-up of a fuel pump nozzle snapping shut automatically while inserted into a car fuel door.",
         "search_terms": [
-          "gas nozzle click",
-          "fuel dispenser stop",
-          "nozzle sensor tip"
+          "nozzle snapping shut",
+          "fuel pump meter",
+          "gas station dispenser"
         ],
         "prefer": "video"
       },
@@ -98,60 +98,22 @@
     },
     {
       "vo": {
-        "en": "You leave with air pockets instead of fuel, making your mileage look terrible."
-      },
-      "on_screen": {
-        "en": "LOSING YOUR MILEAGE"
-      },
-      "visual": {
-        "description": "Close-up of a car fuel gauge needle dropping toward the empty red line.",
-        "search_terms": [
-          "fuel gauge needle",
-          "car dashboard display",
-          "low gas indicator"
-        ],
-        "prefer": "video"
-      },
-      "chapter": "",
-      "id": "scene_06"
-    },
-    {
-      "vo": {
-        "en": "Use the lowest click for a dense, steady flow that fills every inch."
-      },
-      "on_screen": {
-        "en": "USE THE LOWEST CLICK"
-      },
-      "visual": {
-        "description": "Extreme close-up of a man's finger setting the small metal latch on the pump handle to the first notch.",
-        "search_terms": [
-          "mechanical metal latch",
-          "hand adjusting tool",
-          "clicking mechanism"
-        ],
-        "prefer": "video"
-      },
-      "chapter": "",
-      "id": "scene_07"
-    },
-    {
-      "vo": {
-        "en": "Subscribe for more hidden hacks and comment your mileage difference after trying this, which is exactly why you..."
+        "en": "Click the handle on the lowest notch for a dense, smooth fill. Subscribe for daily car hacks and comment if you noticed fewer fill-ups, which is why you..."
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "A car driving smoothly down a long, open highway during sunset.",
+        "description": "A modern sedan cruising smoothly down a picturesque open desert highway at sunrise.",
         "search_terms": [
-          "car highway driving",
-          "road trip sunset",
-          "vehicle cruising"
+          "car driving highway",
+          "vehicle cruising road",
+          "open highway sunrise"
         ],
         "prefer": "video"
       },
       "chapter": "",
-      "id": "scene_08"
+      "id": "scene_06"
     }
   ],
   "idea_id": "gas-pump-speed-trap",
@@ -159,6 +121,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 36.4
+    "en": 37.1
   }
 }
