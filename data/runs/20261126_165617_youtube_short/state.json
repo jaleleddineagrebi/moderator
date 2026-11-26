@@ -510,7 +510,7 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 0,
+      "progress": 29,
       "started_at": "2026-11-26T17:01:20+00:00",
       "ended_at": null,
       "attempt": 3,
@@ -650,6 +650,16 @@
           "ts": "2026-11-26T17:01:20+00:00",
           "level": "info",
           "msg": "Visual diversity: excluding 300 footage sources used in recent Shorts"
+        },
+        {
+          "ts": "2026-11-26T17:01:30+00:00",
+          "level": "info",
+          "msg": "scene_03: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-26T17:01:41+00:00",
+          "level": "info",
+          "msg": "scene_02: stock_video (pixabay)"
         }
       ],
       "errors": [],
@@ -665,19 +675,19 @@
       "checkpoint": null,
       "status": "running",
       "progress": 0,
-      "started_at": "2026-11-26T17:01:20+00:00",
+      "started_at": "2026-11-26T17:01:28+00:00",
       "ended_at": null,
-      "attempt": 4,
-      "retries": 0,
+      "attempt": 5,
+      "retries": 1,
       "max_retries": 2,
-      "strategy": "primary_voice",
+      "strategy": "alternate_voice",
       "inputs": {
         "script": "script.json",
         "languages": [
           "en"
         ],
         "voices": {
-          "en": "en-US-AndrewMultilingualNeural"
+          "en": "en-US-AvaMultilingualNeural"
         }
       },
       "outputs": {
@@ -768,11 +778,32 @@
           "ts": "2026-11-26T17:01:20+00:00",
           "level": "info",
           "msg": "Narrating en with en-US-AndrewMultilingualNeural"
+        },
+        {
+          "ts": "2026-11-26T17:01:27+00:00",
+          "level": "error",
+          "msg": "NoAudioReceived: No audio was received. Please verify that your parameters are correct."
+        },
+        {
+          "ts": "2026-11-26T17:01:28+00:00",
+          "level": "info",
+          "msg": "Attempt 2/3, strategy 'alternate_voice'"
+        },
+        {
+          "ts": "2026-11-26T17:01:28+00:00",
+          "level": "info",
+          "msg": "Narrating en with en-US-AvaMultilingualNeural"
         }
       ],
       "errors": [
         {
           "ts": "2026-11-26T16:56:58+00:00",
+          "attempt": 1,
+          "strategy": "primary_voice",
+          "error": "NoAudioReceived: No audio was received. Please verify that your parameters are correct."
+        },
+        {
+          "ts": "2026-11-26T17:01:27+00:00",
           "attempt": 1,
           "strategy": "primary_voice",
           "error": "NoAudioReceived: No audio was received. Please verify that your parameters are correct."
@@ -1177,7 +1208,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-26T17:01:20+00:00",
+    "exported_at": "2026-11-26T17:01:43+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/45863241238"
   }
