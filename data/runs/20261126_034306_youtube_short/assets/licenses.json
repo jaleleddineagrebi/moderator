@@ -3,80 +3,60 @@
     "scene": "scene_01",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-41828/",
-    "author": "LadislavBur",
+    "page": "https://pixabay.com/videos/id-141854/",
+    "author": "Amina_Salim",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "gas pump handle",
-    "description": "Close-up of a man's hand firmly gripping a gas pump handle at a station."
+    "query": "gas pump nozzle",
+    "description": "Close-up of a man's hand squeezing a fuel pump handle aggressively at a gas station."
   },
   {
     "scene": "scene_02",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-213132/",
-    "author": "Mario_Krimer",
+    "page": "https://pixabay.com/videos/id-261/",
+    "author": "Life-Of-Vids",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "liquid splash motion",
-    "description": "High-speed footage of liquid splashing violently inside a dark container."
+    "query": "turbulent liquid flow",
+    "description": "Turbulent liquid swirling violently inside a transparent industrial pipe."
   },
   {
     "scene": "scene_03",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-9807/",
-    "author": "terimakasih0",
+    "page": "https://pixabay.com/videos/id-234029/",
+    "author": "Mario_Krimer",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "liquid foam surface",
-    "description": "Close-up of bubbles and foam rising rapidly in a glass vessel."
+    "query": "liquid foam bubbling",
+    "description": "Extreme macro shot of dense foam and bubbles expanding rapidly in a container."
   },
   {
     "scene": "scene_04",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-50628/",
-    "author": "Hassas_Arts",
+    "page": "https://pixabay.com/videos/id-47023/",
+    "author": "bhumitt",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "man holding wallet",
-    "description": "A man looking frustrated while looking at a wallet with only a few bills left."
+    "query": "driver tapping steering",
+    "description": "An impatient driver tapping his fingers on a car steering wheel in traffic."
   },
   {
     "scene": "scene_05",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-2154/",
-    "author": "michele_volpin",
+    "page": "https://pixabay.com/videos/id-19354/",
+    "author": "kahbazar2",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "gas nozzle click",
-    "description": "Close-up of the gas pump nozzle clicking upward automatically to stop the flow."
+    "query": "nozzle snapping shut",
+    "description": "Close-up of a fuel pump nozzle snapping shut automatically while inserted into a car fuel door."
   },
   {
     "scene": "scene_06",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-43629/",
-    "author": "GreenCardShow",
-    "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "fuel gauge needle",
-    "description": "Close-up of a car fuel gauge needle dropping toward the empty red line."
-  },
-  {
-    "scene": "scene_07",
-    "tier": "stock_video",
-    "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-212001/",
-    "author": "TungArt7",
-    "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "mechanical metal latch",
-    "description": "Extreme close-up of a man's finger setting the small metal latch on the pump handle to the first notch."
-  },
-  {
-    "scene": "scene_08",
-    "tier": "stock_video",
-    "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-136462/",
+    "page": "https://pixabay.com/videos/id-136461/",
     "author": "Matthias_Groeneveld",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "car highway driving",
-    "description": "A car driving smoothly down a long, open highway during sunset."
+    "query": "car driving highway",
+    "description": "A modern sedan cruising smoothly down a picturesque open desert highway at sunrise."
   }
 ]

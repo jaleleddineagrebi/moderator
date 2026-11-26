@@ -13,46 +13,44 @@ Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 Dialogue: 1,0:00:00.05,0:00:02.82,Headline,,0,0,0,,{\fad(150,150)}STOP PUMPING FULL SPEED
-Dialogue: 1,0:00:02.92,0:00:08.00,Headline,,0,0,0,,{\fad(150,150)}CHAOTIC SPLASH ZONE
-Dialogue: 1,0:00:08.10,0:00:13.16,Headline,,0,0,0,,{\fad(150,150)}LIQUID TURNS TO FOAM
-Dialogue: 1,0:00:13.26,0:00:16.15,Headline,,0,0,0,,{\fad(150,150)}THE HIDDEN COST
-Dialogue: 1,0:00:16.25,0:00:21.30,Headline,,0,0,0,,{\fad(150,150)}PREMATURE AUTO-STOP
-Dialogue: 1,0:00:21.40,0:00:25.81,Headline,,0,0,0,,{\fad(150,150)}LOSING YOUR MILEAGE
-Dialogue: 1,0:00:25.91,0:00:30.34,Headline,,0,0,0,,{\fad(150,150)}USE THE LOWEST CLICK
-Dialogue: 1,0:00:30.44,0:00:37.23,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 1,0:00:02.92,0:00:08.51,Headline,,0,0,0,,{\fad(150,150)}TURBULENT FUEL FLOW
+Dialogue: 1,0:00:08.61,0:00:13.92,Headline,,0,0,0,,{\fad(150,150)}BUBBLES AND FOAM
+Dialogue: 1,0:00:14.02,0:00:17.49,Headline,,0,0,0,,{\fad(150,150)}WASTING YOUR TIME
+Dialogue: 1,0:00:17.59,0:00:28.00,Headline,,0,0,0,,{\fad(150,150)}PREMATURE AUTO-STOP
+Dialogue: 1,0:00:28.10,0:00:37.96,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
 Dialogue: 0,0:00:00.10,0:00:01.07,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Stop {\c&H0000E5FF&}pumping{\c&H00FFFFFF&} gas
 Dialogue: 0,0:00:01.08,0:00:01.96,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}at full {\c&H0000E5FF&}speed{\c&H00FFFFFF&}
-Dialogue: 0,0:00:02.97,0:00:03.94,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Blasting{\c&H00FFFFFF&} fuel at
-Dialogue: 0,0:00:03.95,0:00:04.86,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}max {\c&H0000E5FF&}pressure{\c&H00FFFFFF&} creates
-Dialogue: 0,0:00:04.87,0:00:05.78,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a {\c&H0000E5FF&}chaotic{\c&H00FFFFFF&} splash
-Dialogue: 0,0:00:05.79,0:00:06.65,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}zone {\c&H0000E5FF&}inside{\c&H00FFFFFF&} your
-Dialogue: 0,0:00:06.67,0:00:07.14,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}tank
-Dialogue: 0,0:00:08.15,0:00:09.28,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}This {\c&H0000E5FF&}turbulence{\c&H00FFFFFF&} turns
-Dialogue: 0,0:00:09.30,0:00:10.16,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}liquid{\c&H00FFFFFF&} gas into
-Dialogue: 0,0:00:10.17,0:00:10.90,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a {\c&H0000E5FF&}frothy{\c&H00FFFFFF&} foam
-Dialogue: 0,0:00:11.06,0:00:11.55,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}much{\c&H00FFFFFF&} like a
-Dialogue: 0,0:00:11.56,0:00:12.29,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}poured{\c&H00FFFFFF&} soda
-Dialogue: 0,0:00:13.31,0:00:13.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}But {\c&H0000E5FF&}here{\c&H00FFFFFF&} is
-Dialogue: 0,0:00:13.85,0:00:14.48,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}secret{\c&H00FFFFFF&} that
-Dialogue: 0,0:00:14.50,0:00:15.30,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}costs{\c&H00FFFFFF&} you money
-Dialogue: 0,0:00:16.30,0:00:17.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}That foam {\c&H0000E5FF&}triggers{\c&H00FFFFFF&}
-Dialogue: 0,0:00:17.16,0:00:18.26,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the nozzle’s {\c&H0000E5FF&}auto-stop{\c&H00FFFFFF&}
-Dialogue: 0,0:00:18.27,0:00:19.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}sensor{\c&H00FFFFFF&} long before
-Dialogue: 0,0:00:19.17,0:00:19.66,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}tank{\c&H00FFFFFF&} is
-Dialogue: 0,0:00:19.67,0:00:20.44,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}actually{\c&H00FFFFFF&} full
-Dialogue: 0,0:00:21.45,0:00:22.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You {\c&H0000E5FF&}leave{\c&H00FFFFFF&} with
-Dialogue: 0,0:00:22.03,0:00:22.74,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}air {\c&H0000E5FF&}pockets{\c&H00FFFFFF&} instead
-Dialogue: 0,0:00:22.75,0:00:23.67,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}of fuel {\c&H0000E5FF&}making{\c&H00FFFFFF&}
-Dialogue: 0,0:00:23.68,0:00:24.44,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}mileage{\c&H00FFFFFF&} look
-Dialogue: 0,0:00:24.45,0:00:24.95,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}terrible
-Dialogue: 0,0:00:25.96,0:00:26.73,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Use the {\c&H0000E5FF&}lowest{\c&H00FFFFFF&}
-Dialogue: 0,0:00:26.74,0:00:27.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}click{\c&H00FFFFFF&} for a
-Dialogue: 0,0:00:27.16,0:00:28.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}dense {\c&H0000E5FF&}steady{\c&H00FFFFFF&} flow
-Dialogue: 0,0:00:28.34,0:00:29.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}that {\c&H0000E5FF&}fills{\c&H00FFFFFF&} every
-Dialogue: 0,0:00:29.13,0:00:29.53,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}inch
-Dialogue: 0,0:00:30.49,0:00:31.40,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Subscribe{\c&H00FFFFFF&} for more
-Dialogue: 0,0:00:31.41,0:00:32.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}hidden{\c&H00FFFFFF&} hacks and
-Dialogue: 0,0:00:32.12,0:00:33.02,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} your mileage
-Dialogue: 0,0:00:33.04,0:00:34.04,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}difference{\c&H00FFFFFF&} after trying
-Dialogue: 0,0:00:34.05,0:00:34.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}this {\c&H0000E5FF&}which{\c&H00FFFFFF&} is
-Dialogue: 0,0:00:34.73,0:00:35.77,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}exactly{\c&H00FFFFFF&} why you
+Dialogue: 0,0:00:02.97,0:00:03.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Blasting{\c&H00FFFFFF&} fuel at
+Dialogue: 0,0:00:03.94,0:00:05.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}maximum {\c&H0000E5FF&}velocity{\c&H00FFFFFF&} creates
+Dialogue: 0,0:00:05.25,0:00:06.19,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}heavy {\c&H0000E5FF&}turbulence{\c&H00FFFFFF&} and
+Dialogue: 0,0:00:06.21,0:00:07.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}churning{\c&H00FFFFFF&} inside your
+Dialogue: 0,0:00:07.16,0:00:07.64,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}tank
+Dialogue: 0,0:00:08.66,0:00:09.96,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}This violent {\c&H0000E5FF&}agitation{\c&H00FFFFFF&}
+Dialogue: 0,0:00:09.98,0:00:10.67,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}whips{\c&H00FFFFFF&} the fuel
+Dialogue: 0,0:00:10.68,0:00:11.26,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}into a {\c&H0000E5FF&}thick{\c&H00FFFFFF&}
+Dialogue: 0,0:00:11.27,0:00:11.98,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}layer of {\c&H0000E5FF&}frothy{\c&H00FFFFFF&}
+Dialogue: 0,0:00:11.99,0:00:13.05,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}vapor and {\c&H0000E5FF&}bubbles{\c&H00FFFFFF&}
+Dialogue: 0,0:00:14.07,0:00:15.01,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Wait{\c&H00FFFFFF&} here is
+Dialogue: 0,0:00:15.02,0:00:15.65,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}secret{\c&H00FFFFFF&} that
+Dialogue: 0,0:00:15.67,0:00:16.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}wastes{\c&H00FFFFFF&} your time
+Dialogue: 0,0:00:17.64,0:00:18.65,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}That foam {\c&H0000E5FF&}splashes{\c&H00FFFFFF&}
+Dialogue: 0,0:00:18.66,0:00:19.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}against{\c&H00FFFFFF&} the nozzle
+Dialogue: 0,0:00:19.35,0:00:20.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}sensor {\c&H0000E5FF&}triggering{\c&H00FFFFFF&} an
+Dialogue: 0,0:00:20.53,0:00:21.48,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}early {\c&H0000E5FF&}shutoff{\c&H00FFFFFF&} before
+Dialogue: 0,0:00:21.49,0:00:22.09,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}tank{\c&H00FFFFFF&} is
+Dialogue: 0,0:00:22.10,0:00:22.86,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}truly{\c&H00FFFFFF&} full
+Dialogue: 0,0:00:23.67,0:00:24.22,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You {\c&H0000E5FF&}leave{\c&H00FFFFFF&} with
+Dialogue: 0,0:00:24.23,0:00:24.95,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}air {\c&H0000E5FF&}pockets{\c&H00FFFFFF&} instead
+Dialogue: 0,0:00:24.96,0:00:25.94,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}of fuel {\c&H0000E5FF&}meaning{\c&H00FFFFFF&}
+Dialogue: 0,0:00:25.95,0:00:26.53,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}more {\c&H0000E5FF&}trips{\c&H00FFFFFF&} to
+Dialogue: 0,0:00:26.54,0:00:27.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}station{\c&H00FFFFFF&}
+Dialogue: 0,0:00:28.15,0:00:28.86,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Click the {\c&H0000E5FF&}handle{\c&H00FFFFFF&}
+Dialogue: 0,0:00:28.87,0:00:29.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}on the {\c&H0000E5FF&}lowest{\c&H00FFFFFF&}
+Dialogue: 0,0:00:29.38,0:00:29.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}notch{\c&H00FFFFFF&} for a
+Dialogue: 0,0:00:29.85,0:00:31.16,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}dense {\c&H0000E5FF&}smooth{\c&H00FFFFFF&} fill
+Dialogue: 0,0:00:31.97,0:00:33.04,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Subscribe{\c&H00FFFFFF&} for daily
+Dialogue: 0,0:00:33.05,0:00:33.77,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}car {\c&H0000E5FF&}hacks{\c&H00FFFFFF&} and
+Dialogue: 0,0:00:33.78,0:00:34.30,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} if you
+Dialogue: 0,0:00:34.31,0:00:35.49,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}noticed fewer {\c&H0000E5FF&}fill-ups{\c&H00FFFFFF&}
+Dialogue: 0,0:00:35.62,0:00:36.13,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}which{\c&H00FFFFFF&} is why
+Dialogue: 0,0:00:36.14,0:00:36.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you
