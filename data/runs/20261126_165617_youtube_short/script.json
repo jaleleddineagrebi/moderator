@@ -1,19 +1,19 @@
 {
-  "title": "The Paralyzed Pinky Glitch",
+  "title": "The Paralyzed Finger Glitch",
   "scenes": [
     {
       "vo": {
-        "en": "You physically cannot move your pinky."
+        "en": "You physically cannot move this finger."
       },
       "on_screen": {
         "en": "YOU ARE PARALYZED"
       },
       "visual": {
-        "description": "Extreme macro close-up of a man's hand struggling to move a single finger.",
+        "description": "An extreme macro shot of a man's hand with fingers twitching slightly against a dark background.",
         "search_terms": [
           "man hand macro",
           "finger twitching",
-          "skin texture hand"
+          "skin texture closeup"
         ],
         "prefer": "video"
       },
@@ -22,13 +22,13 @@
     },
     {
       "vo": {
-        "en": "Interlock your fingers tightly, pressing your palms together, and tuck your middle fingers inward."
+        "en": "Press your palms together, interlock your fingers, and tuck your middle fingers down so they touch."
       },
       "on_screen": {
         "en": "LOCK YOUR HANDS"
       },
       "visual": {
-        "description": "A man's hands slowly interlocking and pressing palms together firmly.",
+        "description": "Clear demonstration of a man's hands interlocking and folding the middle fingers inward.",
         "search_terms": [
           "hands interlocking",
           "clasping palms",
@@ -41,13 +41,13 @@
     },
     {
       "vo": {
-        "en": "Now, try to lift just your left pinky finger while keeping all other fingers pressed together."
+        "en": "Now, try to lift just your ring finger while keeping all other fingers glued shut."
       },
       "on_screen": {
-        "en": "TRY TO LIFT IT"
+        "en": "TRY TO LIFT"
       },
       "visual": {
-        "description": "View of a man straining to lift a pinky finger while the rest of the hand is clamped.",
+        "description": "A man's hand struggling intensely to lift the ring finger while the rest are clamped.",
         "search_terms": [
           "hand muscle strain",
           "finger effort motion",
@@ -60,13 +60,13 @@
     },
     {
       "vo": {
-        "en": "Did you feel that? It’s completely stuck. But here is the creepy part."
+        "en": "It’s completely frozen, right? But here is the creepy part."
       },
       "on_screen": {
         "en": "THE CREEPY PART"
       },
       "visual": {
-        "description": "Fast-paced digital glitch effect over an abstract representation of a nervous system.",
+        "description": "Fast-paced digital glitch effect with blue and yellow light streaks over an abstract brain.",
         "search_terms": [
           "digital glitch overlay",
           "static screen flash",
@@ -79,13 +79,13 @@
     },
     {
       "vo": {
-        "en": "Your ring and pinky fingers share a single tendon called the extensor digiti minimi. When one is locked, the other is trapped."
+        "en": "Your ring finger lacks its own independent extensor muscle. It is tethered to the middle finger by a shared tendon."
       },
       "on_screen": {
-        "en": "SHARED BODY TENDON"
+        "en": "SHARED HAND TENDON"
       },
       "visual": {
-        "description": "Anatomical 3D animation of a hand's internal tendons moving under the skin.",
+        "description": "Detailed 3D anatomical model showing the tendons and muscles of a human hand in motion.",
         "search_terms": [
           "hand anatomy tendon",
           "skeleton hand motion",
@@ -98,17 +98,17 @@
     },
     {
       "vo": {
-        "en": "Most people fail this test because their brain sends the signal, but the physical link is jammed."
+        "en": "While other fingers move freely, this one is a prisoner of your own biology."
       },
       "on_screen": {
-        "en": "SIGNAL IS JAMMED"
+        "en": "BIOLOGICAL PRISONER"
       },
       "visual": {
-        "description": "Binary code and data streams flowing rapidly across a dark background.",
+        "description": "Abstract shot of heavy iron chains rattling or a red warning light flashing in a dark room.",
         "search_terms": [
-          "data stream flow",
-          "binary code raining",
-          "server room lights"
+          "iron chains rattling",
+          "red warning light",
+          "industrial machinery motion"
         ],
         "prefer": "video"
       },
@@ -117,17 +117,17 @@
     },
     {
       "vo": {
-        "en": "Subscribe for tomorrow's body hack and comment STUCK if this worked on you... which is exactly why"
+        "en": "Subscribe for tomorrow's body glitch and comment TRAPPED if you failed... which is exactly why"
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "A man pointing directly at the camera with a confident expression.",
+        "description": "A man pointing directly into the lens with a confident expression and a quick nod.",
         "search_terms": [
           "man pointing camera",
           "person nodding head",
-          "fast keyboard typing"
+          "close up male face"
         ],
         "prefer": "video"
       },
@@ -140,6 +140,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 38.2
+    "en": 34.9
   }
 }
