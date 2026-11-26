@@ -1,12 +1,12 @@
 {
   "passed": false,
-  "revision_round": 0,
+  "revision_round": 1,
   "checks": [
     {
       "check": "length",
       "lang": "en",
       "ok": true,
-      "detail": "36.4s (must be under 60s; target 32-50s)",
+      "detail": "36.3s (must be under 60s; target 32-50s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -14,7 +14,7 @@
       "check": "target length",
       "lang": "en",
       "ok": true,
-      "detail": "36.4s",
+      "detail": "36.3s",
       "send_to": null,
       "severity": "minor"
     },
@@ -46,7 +46,7 @@
       "check": "loudness",
       "lang": "en",
       "ok": true,
-      "detail": "-14.1 LUFS, peak -1.5 dBFS (target -14 LUFS, peak <= -1)",
+      "detail": "-14.3 LUFS, peak -1.4 dBFS (target -14 LUFS, peak <= -1)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -54,7 +54,7 @@
       "check": "hook timing",
       "lang": "en",
       "ok": true,
-      "detail": "scene_01 spoken in 2.3s (target <= 4s)",
+      "detail": "scene_01 spoken in 2.4s (target <= 4s)",
       "send_to": null,
       "severity": "minor"
     },
@@ -62,7 +62,7 @@
       "check": "caption sync",
       "lang": "en",
       "ok": true,
-      "detail": "105 words, 39 caption events",
+      "detail": "96 words, 36 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -91,12 +91,20 @@
       "severity": "blocker"
     },
     {
-      "check": "accuracy review",
+      "check": "sensitivity review",
       "lang": "en",
       "ok": false,
-      "detail": "The script incorrectly states the pinky finger is the one that gets stuck and that it shares the extensor digiti minimi with the ring finger. In this specific 'finger lock' trick (middle fingers tucked), it is the ring finger that cannot be lifted because its primary extensor (extensor digitorum) is shared with the middle finger which is held down, while the pinky has its own independent extensor (extensor digiti minimi). Change 'pinky' to 'ring finger' and clarify the tendon connection.",
+      "detail": "The text 'YOU ARE PARALYZED' in scene_01 is an exaggerated medical claim and could be flagged as misleading or insensitive. Change to 'LOCKED IN PLACE'.",
       "send_to": "script",
       "severity": "blocker"
+    },
+    {
+      "check": "grammar review",
+      "lang": "en",
+      "ok": false,
+      "detail": "In scene_07, the narration ends abruptly with '... which is exactly why' without finishing the thought. Remove '... which is exactly why' to ensure a clean loop or ending.",
+      "send_to": "script",
+      "severity": "minor"
     },
     {
       "check": "people rule",

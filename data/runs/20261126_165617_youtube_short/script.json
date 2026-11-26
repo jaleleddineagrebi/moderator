@@ -3,17 +3,17 @@
   "scenes": [
     {
       "vo": {
-        "en": "You physically cannot move this finger."
+        "en": "You physically cannot lift this finger."
       },
       "on_screen": {
-        "en": "YOU ARE PARALYZED"
+        "en": "LOCKED IN PLACE"
       },
       "visual": {
-        "description": "An extreme macro shot of a man's hand with fingers twitching slightly against a dark background.",
+        "description": "An extreme close-up of a man's hands tensing up against a dark, moody background with yellow lighting.",
         "search_terms": [
-          "man hand macro",
-          "finger twitching",
-          "skin texture closeup"
+          "man hands clenching",
+          "tense fingers",
+          "fist close up"
         ],
         "prefer": "video"
       },
@@ -22,17 +22,17 @@
     },
     {
       "vo": {
-        "en": "Press your palms together, interlock your fingers, and tuck your middle fingers down so they touch."
+        "en": "Press your palms together, interlock your fingers, and tuck your middle fingers flat against each other."
       },
       "on_screen": {
         "en": "LOCK YOUR HANDS"
       },
       "visual": {
-        "description": "Clear demonstration of a man's hands interlocking and folding the middle fingers inward.",
+        "description": "A clear demonstration of a man's hands coming together in a prayer position and folding the middle fingers inward.",
         "search_terms": [
-          "hands interlocking",
-          "clasping palms",
-          "male hand gesture"
+          "hands prayer position",
+          "interlocking fingers man",
+          "palm contact"
         ],
         "prefer": "video"
       },
@@ -41,17 +41,17 @@
     },
     {
       "vo": {
-        "en": "Now, try to lift just your ring finger while keeping all other fingers glued shut."
+        "en": "Now, try to lift just your ring fingers while keeping every other finger glued shut. You can't, right?"
       },
       "on_screen": {
         "en": "TRY TO LIFT"
       },
       "visual": {
-        "description": "A man's hand struggling intensely to lift the ring finger while the rest are clamped.",
+        "description": "Macro shot of a man's hand visibly struggling and shaking while trying to lift the ring finger alone.",
         "search_terms": [
           "hand muscle strain",
-          "finger effort motion",
-          "isometric hand hold"
+          "finger effort",
+          "hand isometric"
         ],
         "prefer": "video"
       },
@@ -60,36 +60,36 @@
     },
     {
       "vo": {
-        "en": "It’s completely frozen, right? But here is the creepy part."
+        "en": "Wait until you see how your biology is actually cheating you."
       },
       "on_screen": {
-        "en": "THE CREEPY PART"
+        "en": "BRAIN IS CHEATING"
       },
       "visual": {
-        "description": "Fast-paced digital glitch effect with blue and yellow light streaks over an abstract brain.",
+        "description": "Fast-paced digital glitch effect over an abstract 3D neural network glowing with yellow energy.",
         "search_terms": [
-          "digital glitch overlay",
-          "static screen flash",
-          "blue neon pulse"
+          "abstract brain pulse",
+          "digital data stream",
+          "electric neural network"
         ],
         "prefer": "video"
       },
-      "chapter": "The Science Glitch",
+      "chapter": "The Body Glitch",
       "id": "scene_04"
     },
     {
       "vo": {
-        "en": "Your ring finger lacks its own independent extensor muscle. It is tethered to the middle finger by a shared tendon."
+        "en": "Most fingers have independent muscles, but your ring finger is tethered to the others by a shared tendon."
       },
       "on_screen": {
-        "en": "SHARED HAND TENDON"
+        "en": "SHARED TENDON"
       },
       "visual": {
-        "description": "Detailed 3D anatomical model showing the tendons and muscles of a human hand in motion.",
+        "description": "A 3D medical animation showing the interior muscles and tendons of a human hand moving.",
         "search_terms": [
-          "hand anatomy tendon",
-          "skeleton hand motion",
-          "medical muscle model"
+          "hand anatomy video",
+          "muscle fibers moving",
+          "medical 3d hand"
         ],
         "prefer": "video"
       },
@@ -98,17 +98,17 @@
     },
     {
       "vo": {
-        "en": "While other fingers move freely, this one is a prisoner of your own biology."
+        "en": "When you lock that middle finger down, it anchors the tendon and traps your ring finger in place."
       },
       "on_screen": {
-        "en": "BIOLOGICAL PRISONER"
+        "en": "BIOLOGY GLITCH"
       },
       "visual": {
-        "description": "Abstract shot of heavy iron chains rattling or a red warning light flashing in a dark room.",
+        "description": "Industrial gears grinding together or a heavy chain being pulled tight in a dark workshop.",
         "search_terms": [
-          "iron chains rattling",
-          "red warning light",
-          "industrial machinery motion"
+          "mechanical gears turning",
+          "clockwork movement",
+          "rusty metal chains"
         ],
         "prefer": "video"
       },
@@ -117,17 +117,17 @@
     },
     {
       "vo": {
-        "en": "Subscribe for tomorrow's body glitch and comment TRAPPED if you failed... which is exactly why"
+        "en": "Subscribe for tomorrow’s brain hack and comment FAILED if you’re stuck... which is exactly why"
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "A man pointing directly into the lens with a confident expression and a quick nod.",
+        "description": "A man in a dark hoodie looking directly at the camera with a slight, knowing smile and a nod.",
         "search_terms": [
-          "man pointing camera",
-          "person nodding head",
-          "close up male face"
+          "man nodding head",
+          "confident male face",
+          "urban city background"
         ],
         "prefer": "video"
       },
@@ -140,6 +140,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 34.9
+    "en": 37.1
   }
 }
