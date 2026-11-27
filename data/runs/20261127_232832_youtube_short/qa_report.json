@@ -1,12 +1,12 @@
 {
-  "passed": false,
-  "revision_round": 0,
+  "passed": true,
+  "revision_round": 1,
   "checks": [
     {
       "check": "length",
       "lang": "en",
       "ok": true,
-      "detail": "39.2s (must be under 60s; target 32-50s)",
+      "detail": "36.4s (must be under 60s; target 32-50s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -14,7 +14,7 @@
       "check": "target length",
       "lang": "en",
       "ok": true,
-      "detail": "39.2s",
+      "detail": "36.4s",
       "send_to": null,
       "severity": "minor"
     },
@@ -46,7 +46,7 @@
       "check": "loudness",
       "lang": "en",
       "ok": true,
-      "detail": "-14.2 LUFS, peak -2.4 dBFS (target -14 LUFS, peak <= -1)",
+      "detail": "-14.2 LUFS, peak -1.9 dBFS (target -14 LUFS, peak <= -1)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -54,7 +54,7 @@
       "check": "hook timing",
       "lang": "en",
       "ok": true,
-      "detail": "scene_01 spoken in 2.3s (target <= 4s)",
+      "detail": "scene_01 spoken in 2.5s (target <= 4s)",
       "send_to": null,
       "severity": "minor"
     },
@@ -62,7 +62,7 @@
       "check": "caption sync",
       "lang": "en",
       "ok": true,
-      "detail": "103 words, 38 caption events",
+      "detail": "100 words, 35 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -91,35 +91,11 @@
       "severity": "blocker"
     },
     {
-      "check": "accuracy review",
-      "lang": "en",
-      "ok": false,
-      "detail": "In scene_01, the hook says 'You must stop picking the middle option', but the script explains the Decoy Effect where the middle option is intentionally unappealing so that buyers choose the most expensive option (the large), not the middle option. Fix scene_01 narration to match the decoy effect logic, e.g.: 'Companies love when you ignore the middle option.' or 'Here is why you always buy the most expensive option.'",
-      "send_to": "script",
-      "severity": "blocker"
-    },
-    {
-      "check": "grammar review",
-      "lang": "en",
-      "ok": false,
-      "detail": "In scene_07, ending with 'which is exactly why...' creates an awkward loop into scene_01 ('which is exactly why you must stop picking the middle option'), especially when combined with a call to action. Remove ', which is exactly why...' or adjust the loop transition so the CTA sentence stays clean and grammatical.",
-      "send_to": "script",
-      "severity": "minor"
-    },
-    {
       "check": "people rule",
       "lang": null,
-      "ok": false,
-      "detail": "scene_04: A woman wearing a headscarf/coat taking a photo is shown with her upper/full body visible among pedestrians in the middle frame.. Replace with footage without women (a face-only close-up is the only exception).",
-      "send_to": "visuals",
-      "severity": "blocker"
-    },
-    {
-      "check": "people rule",
-      "lang": null,
-      "ok": false,
-      "detail": "scene_05: Full body of a woman with long hair sitting on the grassy ridge overlooking the mountains.. Replace with footage without women (a face-only close-up is the only exception).",
-      "send_to": "visuals",
+      "ok": true,
+      "detail": "no women beyond face close-ups in 7 scenes and 1 thumbnail(s)",
+      "send_to": null,
       "severity": "blocker"
     }
   ]
