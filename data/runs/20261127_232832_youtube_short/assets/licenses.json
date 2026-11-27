@@ -3,70 +3,70 @@
     "scene": "scene_01",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-88223/",
-    "author": "Digital_Expert",
+    "page": "https://pixabay.com/videos/id-205519/",
+    "author": "conte_public",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "hand pressing vending machine",
-    "description": "Close-up of a man's hand hovering indecisively over illuminated payment buttons on a modern vending machine."
+    "query": "finger pressing screen",
+    "description": "Close-up of a man's finger tapping the highest tier on a digital self-checkout terminal screen."
   },
   {
     "scene": "scene_02",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-34/",
-    "author": "DistillVideos",
+    "page": "https://pixabay.com/videos/id-13100/",
+    "author": "StefWithAnF",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "pouring hot coffee steam",
-    "description": "Steam rising from freshly brewed black coffee being poured from an overhead kettle into a minimalist ceramic mug."
+    "query": "pouring black coffee",
+    "description": "Steaming dark coffee pouring smoothly from an elegant steel gooseneck kettle into a glass cup."
   },
   {
     "scene": "scene_03",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-50628/",
-    "author": "Hassas_Arts",
+    "page": "https://pixabay.com/videos/id-215096/",
+    "author": "u_mv4esujzr4",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "counting paper money cash",
-    "description": "Fast-motion sliding of dollar bills across a polished dark counter next to commercial price tags."
+    "query": "counting cash money",
+    "description": "Time-lapse of crisp paper dollar bills being stacked and slid across a smooth wooden table."
   },
   {
     "scene": "scene_04",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-202368/",
-    "author": "Whitechappel79",
+    "page": "https://pixabay.com/videos/id-123178/",
+    "author": "BlenderTimer",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "dilated pupil macro eye",
-    "description": "Extreme macro close-up of a man's dilated pupil reflecting flashing digital data streams in darkness."
+    "query": "macro human eye",
+    "description": "Extreme macro shot of a male pupil sharply constricting as bright cyber-blue light flashes across the eye."
   },
   {
     "scene": "scene_05",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-225419/",
-    "author": "AttilaPergel",
+    "page": "https://pixabay.com/videos/id-16160/",
+    "author": "Macb3t",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
     "query": "marble rolling maze",
-    "description": "Overhead mechanical shot of a steel ball bearing rapidly navigating through a complex wooden maze."
+    "description": "Overhead view of a metallic ball bearing racing through a complex wooden labyrinth maze."
   },
   {
     "scene": "scene_06",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-200692/",
-    "author": "MagicTV",
+    "page": "https://pixabay.com/videos/id-110924/",
+    "author": "gammeholton84",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "financial district skyscrapers",
-    "description": "Rapid upward tilt of towering financial district glass skyscrapers illuminated against a dusk skyline."
+    "query": "financial district buildings",
+    "description": "Low-angle time-lapse of glowing commercial skyscrapers in a major financial district at twilight."
   },
   {
     "scene": "scene_07",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-19598/",
+    "page": "https://pixabay.com/videos/id-19459/",
     "author": "OrcaTec",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "hand moving chess piece",
-    "description": "Overhead view of a man's hand sliding a gleaming gold token decisively across a dark slate chessboard."
+    "query": "hand moving chess",
+    "description": "Overhead shot of a man's hand strategically moving a heavy metal chess piece across a dark board."
   }
 ]
