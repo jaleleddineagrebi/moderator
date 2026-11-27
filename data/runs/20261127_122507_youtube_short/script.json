@@ -1,0 +1,145 @@
+{
+  "title": "The Aristotle Two-Nose Illusion",
+  "scenes": [
+    {
+      "vo": {
+        "en": "You actually have two noses."
+      },
+      "on_screen": {
+        "en": "YOU HAVE TWO NOSES"
+      },
+      "visual": {
+        "description": "A dramatic close-up of a man's face looking directly at the camera with an intense expression.",
+        "search_terms": [
+          "man face close up",
+          "intense look",
+          "human eyes staring"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "The Glitch",
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Try this right now to glitch your brain. Cross your middle finger over your index finger."
+      },
+      "on_screen": {
+        "en": "CROSS YOUR FINGERS"
+      },
+      "visual": {
+        "description": "A clear shot of a man's hand slowly crossing the middle finger over the index finger.",
+        "search_terms": [
+          "crossing fingers",
+          "hand gestures",
+          "close up hand"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Now, close your eyes and rub the very tip of your nose between those two crossed fingers."
+      },
+      "on_screen": {
+        "en": "RUB YOUR NOSE"
+      },
+      "visual": {
+        "description": "A man with his eyes closed using his crossed fingers to feel the tip of his nose.",
+        "search_terms": [
+          "man closing eyes",
+          "touching nose",
+          "sensory test"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "Wait, it gets even creepier once your brain panics. Your mind cannot process these crossed touch points."
+      },
+      "on_screen": {
+        "en": "BRAIN IS PANICKING"
+      },
+      "visual": {
+        "description": "Abstract digital glitch overlay moving rapidly across a dark background.",
+        "search_terms": [
+          "digital glitch effect",
+          "abstract data motion",
+          "neon interference"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "The Secret",
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Because your fingers are reversed, your sensory map breaks. You’ll feel two distinct noses under your fingertips."
+      },
+      "on_screen": {
+        "en": "DOUBLE SENSATION"
+      },
+      "visual": {
+        "description": "Two identical round objects or marbles rolling side by side on a table.",
+        "search_terms": [
+          "two spheres rolling",
+          "double objects",
+          "symmetry motion"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "Aristotle discovered this body hack thousands of years ago to prove how easily our senses lie."
+      },
+      "on_screen": {
+        "en": "ANCIENT BODY HACK"
+      },
+      "visual": {
+        "description": "A classic marble statue of an ancient philosopher in a dimly lit museum setting.",
+        "search_terms": [
+          "ancient greek statue",
+          "marble bust",
+          "museum lighting"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for tomorrow's brain test and comment DOUBLE if this worked on you, which is exactly why..."
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "A hand holding a smartphone and tapping a red notification icon.",
+        "search_terms": [
+          "hand phone tap",
+          "mobile app interaction",
+          "clicking button"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "two-noses-body-glitch",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 38.2
+  }
+}
