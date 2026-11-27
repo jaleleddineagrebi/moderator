@@ -1,12 +1,12 @@
 {
-  "passed": false,
-  "revision_round": 0,
+  "passed": true,
+  "revision_round": 1,
   "checks": [
     {
       "check": "length",
       "lang": "en",
       "ok": true,
-      "detail": "39.5s (must be under 60s; target 32-50s)",
+      "detail": "43.9s (must be under 60s; target 32-50s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -14,7 +14,7 @@
       "check": "target length",
       "lang": "en",
       "ok": true,
-      "detail": "39.5s",
+      "detail": "43.9s",
       "send_to": null,
       "severity": "minor"
     },
@@ -54,7 +54,7 @@
       "check": "hook timing",
       "lang": "en",
       "ok": true,
-      "detail": "scene_01 spoken in 2.2s (target <= 4s)",
+      "detail": "scene_01 spoken in 2.7s (target <= 4s)",
       "send_to": null,
       "severity": "minor"
     },
@@ -62,7 +62,7 @@
       "check": "caption sync",
       "lang": "en",
       "ok": true,
-      "detail": "101 words, 37 caption events",
+      "detail": "112 words, 41 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -91,19 +91,11 @@
       "severity": "blocker"
     },
     {
-      "check": "accuracy review",
+      "check": "grammar review",
       "lang": "en",
       "ok": false,
-      "detail": "The claim that browsers grant sensor access by default is outdated; modern versions of iOS (Safari) and Android (Chrome) require explicit user permission or have disabled motion sensor access for websites by default since 2019/2020. Change scene 06 to 'Many older browsers or unpatched apps grant sensor access by default'.",
+      "detail": "The outro in scene_08 contains an incomplete thought '—which is exactly why...' that doesn't connect to the start of the video. Remove the trailing phrase.",
       "send_to": "script",
-      "severity": "blocker"
-    },
-    {
-      "check": "visual_fit review",
-      "lang": "en",
-      "ok": false,
-      "detail": "The query 'water ripple macro' for scene 02 is too abstract for a tech/cybersecurity video. Change query to 'smartphone internal vibration animation' or 'haptic feedback visualization' to better match the narration about micro-vibrations.",
-      "send_to": "visuals",
       "severity": "minor"
     },
     {
