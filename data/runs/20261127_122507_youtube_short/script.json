@@ -3,135 +3,128 @@
   "scenes": [
     {
       "vo": {
-        "en": "You actually have two noses."
+        "en": "You can actually feel two noses."
       },
       "on_screen": {
-        "en": "YOU HAVE TWO NOSES"
+        "en": "FEEL TWO NOSES"
       },
       "visual": {
-        "description": "A dramatic close-up of a man's face looking directly at the camera with an intense expression.",
+        "description": "A dramatic close-up of a man looking straight into the camera with an intense expression.",
         "search_terms": [
           "man face close up",
-          "intense look",
-          "human eyes staring"
+          "intense eye contact",
+          "focused man portrait"
         ],
         "prefer": "video"
       },
-      "chapter": "The Glitch",
       "id": "scene_01"
     },
     {
       "vo": {
-        "en": "Try this right now to glitch your brain. Cross your middle finger over your index finger."
+        "en": "Try this right now to glitch your sensory map. Cross your middle finger over your index finger."
       },
       "on_screen": {
         "en": "CROSS YOUR FINGERS"
       },
       "visual": {
-        "description": "A clear shot of a man's hand slowly crossing the middle finger over the index finger.",
+        "description": "Close-up of male hands slowly crossing the middle finger over the index finger.",
         "search_terms": [
-          "crossing fingers",
-          "hand gestures",
-          "close up hand"
+          "crossing fingers close up",
+          "male hand gesture",
+          "finger movement"
         ],
         "prefer": "video"
       },
-      "chapter": "",
       "id": "scene_02"
     },
     {
       "vo": {
-        "en": "Now, close your eyes and rub the very tip of your nose between those two crossed fingers."
+        "en": "Now close your eyes and gently rub the tip of your nose right between those crossed fingertips."
       },
       "on_screen": {
-        "en": "RUB YOUR NOSE"
+        "en": "TOUCH YOUR NOSE"
       },
       "visual": {
-        "description": "A man with his eyes closed using his crossed fingers to feel the tip of his nose.",
+        "description": "A man with closed eyes touching his face in a dimly lit studio.",
         "search_terms": [
-          "man closing eyes",
-          "touching nose",
-          "sensory test"
+          "man touching face",
+          "closed eyes macro",
+          "sensory perception"
         ],
         "prefer": "video"
       },
-      "chapter": "",
       "id": "scene_03"
     },
     {
       "vo": {
-        "en": "Wait, it gets even creepier once your brain panics. Your mind cannot process these crossed touch points."
+        "en": "Wait, it gets even creepier once your nervous system panics. Your brain cannot process these reversed touch signals."
       },
       "on_screen": {
         "en": "BRAIN IS PANICKING"
       },
       "visual": {
-        "description": "Abstract digital glitch overlay moving rapidly across a dark background.",
+        "description": "Abstract macro shot of glowing blue neon circuits pulsating rapidly in pitch darkness.",
         "search_terms": [
-          "digital glitch effect",
-          "abstract data motion",
-          "neon interference"
+          "glowing circuit board",
+          "neon pulse animation",
+          "abstract cyber motion"
         ],
         "prefer": "video"
       },
-      "chapter": "The Secret",
       "id": "scene_04"
     },
     {
       "vo": {
-        "en": "Because your fingers are reversed, your sensory map breaks. You’ll feel two distinct noses under your fingertips."
+        "en": "Because your fingers are swapped, your sensory cortex glitches and sends two separate spatial signals."
       },
       "on_screen": {
         "en": "DOUBLE SENSATION"
       },
       "visual": {
-        "description": "Two identical round objects or marbles rolling side by side on a table.",
+        "description": "Two shiny steel spheres rolling smoothly across a dark wooden table in slow motion.",
         "search_terms": [
-          "two spheres rolling",
-          "double objects",
-          "symmetry motion"
+          "steel spheres rolling",
+          "marbles on wood",
+          "twin motion macro"
         ],
         "prefer": "video"
       },
-      "chapter": "",
       "id": "scene_05"
     },
     {
       "vo": {
-        "en": "Aristotle discovered this body hack thousands of years ago to prove how easily our senses lie."
+        "en": "Aristotle discovered this ancient body hack thousands of years ago to show how easily touch tricks the mind."
       },
       "on_screen": {
         "en": "ANCIENT BODY HACK"
       },
       "visual": {
-        "description": "A classic marble statue of an ancient philosopher in a dimly lit museum setting.",
+        "description": "A detailed camera pan over a classical Greek marble bust in an art museum.",
         "search_terms": [
-          "ancient greek statue",
-          "marble bust",
-          "museum lighting"
+          "ancient greek sculpture",
+          "marble statue camera pan",
+          "museum artifact light"
         ],
         "prefer": "video"
       },
-      "chapter": "",
       "id": "scene_06"
     },
     {
       "vo": {
-        "en": "Subscribe for tomorrow's brain test and comment DOUBLE if this worked on you, which is exactly why..."
+        "en": "Subscribe for tomorrow's mind test and comment DOUBLE if this worked on you, which is why..."
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "A hand holding a smartphone and tapping a red notification icon.",
+        "description": "A male hand tapping a smartphone screen with glowing digital interface light.",
         "search_terms": [
-          "hand phone tap",
-          "mobile app interaction",
-          "clicking button"
+          "male hand smartphone tap",
+          "mobile screen press",
+          "finger touching display"
         ],
         "prefer": "video"
       },
-      "chapter": "",
       "id": "scene_07"
     }
   ],
@@ -140,6 +133,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 38.2
+    "en": 38.9
   }
 }

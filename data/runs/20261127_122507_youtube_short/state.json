@@ -69,11 +69,11 @@
   "ended_at": null,
   "revision_rounds": 1,
   "cost": {
-    "total_usd": 0.017751,
+    "total_usd": 0.026874,
     "budget_usd": 1.0,
     "by_agent": {
       "trend_researcher": 0.007811,
-      "scriptwriter": 0.006685,
+      "scriptwriter": 0.015808,
       "packaging": 0.000472,
       "qa_reviewer": 0.002784
     }
@@ -403,10 +403,10 @@
         "research"
       ],
       "checkpoint": "B",
-      "status": "running",
-      "progress": 10,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-27T12:32:06+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-27T12:40:58+00:00",
       "attempt": 2,
       "retries": 0,
       "max_retries": 2,
@@ -497,6 +497,26 @@
           "ts": "2026-11-27T12:39:11+00:00",
           "level": "warning",
           "msg": "Model 'gemini-3.7-flash' returned 503; falling back to 'gemini-3.6-flash'"
+        },
+        {
+          "ts": "2026-11-27T12:40:58+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3.6-flash) answered in 532.8s (tokens in 2095, out 561, thinking 2837)"
+        },
+        {
+          "ts": "2026-11-27T12:40:58+00:00",
+          "level": "info",
+          "msg": "Estimated narration: en 38.9s"
+        },
+        {
+          "ts": "2026-11-27T12:40:58+00:00",
+          "level": "info",
+          "msg": "Finished, waiting for your approval"
+        },
+        {
+          "ts": "2026-11-27T12:40:58+00:00",
+          "level": "info",
+          "msg": "Approved by schedule (auto-approve)"
         }
       ],
       "errors": [],
@@ -507,7 +527,7 @@
           "comment": "QA found:\n[en] accuracy review: The script claims 'You actually have two noses' in scene 01, which is factually incorrect and misleading. Change to 'You can actually feel two noses.'"
         }
       ],
-      "cost_usd": 0.006685
+      "cost_usd": 0.015808
     },
     "visuals": {
       "title": "Source scene visuals",
@@ -516,11 +536,11 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "queued",
-      "progress": 0,
-      "started_at": "2026-11-27T12:29:00+00:00",
-      "ended_at": "2026-11-27T12:30:02+00:00",
-      "attempt": 1,
+      "status": "running",
+      "progress": 17,
+      "started_at": "2026-11-27T12:40:58+00:00",
+      "ended_at": null,
+      "attempt": 2,
       "retries": 0,
       "max_retries": 2,
       "strategy": "stock_video",
@@ -592,6 +612,21 @@
           "ts": "2026-11-27T12:32:06+00:00",
           "level": "info",
           "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-27T12:40:59+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'stock_video'"
+        },
+        {
+          "ts": "2026-11-27T12:40:59+00:00",
+          "level": "info",
+          "msg": "Visual diversity: excluding 300 footage sources used in recent Shorts"
+        },
+        {
+          "ts": "2026-11-27T12:41:16+00:00",
+          "level": "info",
+          "msg": "scene_02: stock_video (pixabay)"
         }
       ],
       "errors": [],
@@ -605,11 +640,11 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "queued",
+      "status": "running",
       "progress": 0,
-      "started_at": "2026-11-27T12:29:00+00:00",
-      "ended_at": "2026-11-27T12:29:49+00:00",
-      "attempt": 1,
+      "started_at": "2026-11-27T12:40:59+00:00",
+      "ended_at": null,
+      "attempt": 2,
       "retries": 0,
       "max_retries": 2,
       "strategy": "primary_voice",
@@ -655,6 +690,16 @@
           "ts": "2026-11-27T12:32:06+00:00",
           "level": "info",
           "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-27T12:40:59+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'primary_voice'"
+        },
+        {
+          "ts": "2026-11-27T12:40:59+00:00",
+          "level": "info",
+          "msg": "Narrating en with en-US-BrianMultilingualNeural"
         }
       ],
       "errors": [],
@@ -941,11 +986,11 @@
       "type": "approve",
       "step": "script",
       "route_to": "script",
-      "status": "idle",
+      "status": "approved",
       "options": [],
       "choice": null,
       "comment": null,
-      "decided_at": "2026-11-27T12:29:00+00:00"
+      "decided_at": "2026-11-27T12:40:58+00:00"
     },
     "C": {
       "title": "Approve the final videos (never uploaded without your OK)",
@@ -962,7 +1007,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-27T12:39:24+00:00",
+    "exported_at": "2026-11-27T12:41:16+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/45998420827"
   }
