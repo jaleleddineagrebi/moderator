@@ -1,0 +1,82 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-86866/",
+    "author": "atiqurrahman0047",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man typing phone",
+    "description": "Extreme close-up of a man's thumb tapping on a glowing smartphone screen in a dark room."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-36951/",
+    "author": "tomalauphi",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "water ripple macro",
+    "description": "Macro shot of a drop of water creating ripples on a black surface to simulate vibrations."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-38388/",
+    "author": "Matthias_Groeneveld",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "gyroscope spinning",
+    "description": "A 3D mechanical gyroscope spinning rapidly on a wooden table."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-122389/",
+    "author": "u_n92ynpt32e",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "suspicious man",
+    "description": "A man in a hoodie looking suspiciously over his shoulder into the camera."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-358693/",
+    "author": "McPix22",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hacker code green",
+    "description": "Digital binary code scrolling vertically at high speed on a monitor."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-111280/",
+    "author": "AttilaPergel",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "scrolling phone settings",
+    "description": "A hand scrolling through a long list of technical settings on a phone screen."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-120255/",
+    "author": "Engin_Akyurt",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "metal vault door",
+    "description": "A heavy metal vault door closing and locking securely."
+  },
+  {
+    "scene": "scene_08",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-24497/",
+    "author": "ninosouza",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "man pointing camera",
+    "description": "A man pointing directly at the camera with a confident smile."
+  }
+]
