@@ -1,564 +1,619 @@
 {
   "voice": "en-US-AvaMultilingualNeural",
-  "duration": 38.76678,
+  "duration": 43.158095,
   "scenes": [
     {
       "scene": "scene_01",
       "start": 0.0,
-      "end": 2.232,
+      "end": 2.712,
       "words": [
         {
-          "start": 0.06,
-          "end": 0.179,
+          "start": 0.083,
+          "end": 0.19,
           "text": "Your"
         },
         {
-          "start": 0.19,
-          "end": 0.548,
+          "start": 0.202,
+          "end": 0.571,
           "text": "phone"
         },
         {
-          "start": 0.56,
-          "end": 0.81,
+          "start": 0.583,
+          "end": 0.893,
           "text": "knows"
         },
         {
-          "start": 0.821,
-          "end": 1.298,
-          "text": "exactly"
+          "start": 1.012,
+          "end": 1.321,
+          "text": "every"
         },
         {
-          "start": 1.31,
-          "end": 1.417,
-          "text": "what"
+          "start": 1.333,
+          "end": 1.655,
+          "text": "single"
         },
         {
-          "start": 1.429,
-          "end": 1.512,
+          "start": 1.655,
+          "end": 1.869,
+          "text": "word"
+        },
+        {
+          "start": 1.869,
+          "end": 1.952,
           "text": "you"
         },
         {
-          "start": 1.512,
-          "end": 1.893,
+          "start": 1.964,
+          "end": 2.357,
           "text": "type"
         }
       ]
     },
     {
       "scene": "scene_02",
-      "start": 2.322,
-      "end": 7.77,
+      "start": 2.802,
+      "end": 10.194,
       "words": [
         {
-          "start": 2.417,
-          "end": 2.655,
+          "start": 2.897,
+          "end": 3.135,
           "text": "Every"
         },
         {
-          "start": 2.667,
-          "end": 3.06,
+          "start": 3.147,
+          "end": 3.481,
           "text": "tap"
         },
         {
-          "start": 3.31,
-          "end": 3.739,
-          "text": "creates"
+          "start": 3.516,
+          "end": 3.85,
+          "text": "sends"
         },
         {
-          "start": 3.81,
-          "end": 3.846,
+          "start": 3.909,
+          "end": 3.969,
           "text": "a"
         },
         {
-          "start": 3.858,
-          "end": 4.334,
-          "text": "unique"
-        },
-        {
-          "start": 4.346,
-          "end": 5.334,
+          "start": 3.981,
+          "end": 4.992,
           "text": "micro-vibration"
         },
         {
-          "start": 5.346,
-          "end": 5.477,
-          "text": "that"
+          "start": 5.004,
+          "end": 5.123,
+          "text": "through"
         },
         {
-          "start": 5.489,
-          "end": 5.917,
-          "text": "reveals"
+          "start": 5.135,
+          "end": 5.219,
+          "text": "the"
         },
         {
-          "start": 5.929,
-          "end": 6.06,
-          "text": "your"
+          "start": 5.231,
+          "end": 5.742,
+          "text": "frame"
         },
         {
-          "start": 6.072,
-          "end": 6.536,
-          "text": "finger's"
+          "start": 6.1,
+          "end": 6.243,
+          "text": "Your"
         },
         {
-          "start": 6.536,
-          "end": 6.917,
-          "text": "exact"
+          "start": 6.254,
+          "end": 6.921,
+          "text": "gyroscope"
         },
         {
-          "start": 6.917,
-          "end": 7.417,
-          "text": "position"
+          "start": 6.933,
+          "end": 7.338,
+          "text": "tracks"
+        },
+        {
+          "start": 7.35,
+          "end": 7.576,
+          "text": "these"
+        },
+        {
+          "start": 7.588,
+          "end": 8.1,
+          "text": "tiny"
+        },
+        {
+          "start": 8.112,
+          "end": 8.445,
+          "text": "tilts"
+        },
+        {
+          "start": 8.457,
+          "end": 8.647,
+          "text": "with"
+        },
+        {
+          "start": 8.647,
+          "end": 9.302,
+          "text": "terrifying"
+        },
+        {
+          "start": 9.314,
+          "end": 9.85,
+          "text": "precision"
         }
       ]
     },
     {
       "scene": "scene_03",
-      "start": 7.86,
-      "end": 13.812,
+      "start": 10.284,
+      "end": 15.324,
       "words": [
         {
-          "start": 7.908,
-          "end": 8.051,
-          "text": "Your"
+          "start": 10.367,
+          "end": 10.522,
+          "text": "You"
         },
         {
-          "start": 8.062,
-          "end": 8.729,
-          "text": "gyroscope"
+          "start": 10.522,
+          "end": 10.736,
+          "text": "worry"
         },
         {
-          "start": 8.789,
-          "end": 8.931,
-          "text": "and"
+          "start": 10.748,
+          "end": 10.939,
+          "text": "about"
         },
         {
-          "start": 8.991,
-          "end": 9.705,
-          "text": "accelerometer"
+          "start": 10.951,
+          "end": 11.058,
+          "text": "your"
         },
         {
-          "start": 9.717,
-          "end": 10.217,
-          "text": "record"
+          "start": 11.058,
+          "end": 11.486,
+          "text": "camera"
         },
         {
-          "start": 10.229,
-          "end": 10.455,
+          "start": 11.534,
+          "end": 11.713,
+          "text": "but"
+        },
+        {
+          "start": 11.724,
+          "end": 11.939,
           "text": "these"
         },
         {
-          "start": 10.467,
-          "end": 10.884,
-          "text": "tilts"
+          "start": 11.951,
+          "end": 12.308,
+          "text": "motion"
         },
         {
-          "start": 11.039,
-          "end": 11.42,
-          "text": "without"
+          "start": 12.32,
+          "end": 12.82,
+          "text": "sensors"
         },
         {
-          "start": 11.539,
-          "end": 11.789,
-          "text": "ever"
+          "start": 12.832,
+          "end": 13.022,
+          "text": "are"
         },
         {
-          "start": 11.8,
-          "end": 12.205,
-          "text": "asking"
+          "start": 13.034,
+          "end": 13.177,
+          "text": "the"
         },
         {
-          "start": 12.217,
-          "end": 12.36,
-          "text": "for"
+          "start": 13.248,
+          "end": 13.724,
+          "text": "ultimate"
         },
         {
-          "start": 12.372,
-          "end": 12.8,
-          "text": "security"
+          "start": 13.772,
+          "end": 14.248,
+          "text": "invisible"
         },
         {
-          "start": 12.812,
-          "end": 13.479,
-          "text": "permissions"
+          "start": 14.248,
+          "end": 14.998,
+          "text": "keyloggers"
         }
       ]
     },
     {
       "scene": "scene_04",
-      "start": 13.902,
-      "end": 16.038,
+      "start": 15.414,
+      "end": 18.102,
       "words": [
         {
-          "start": 13.985,
-          "end": 14.271,
-          "text": "Wait"
+          "start": 15.497,
+          "end": 15.616,
+          "text": "But"
         },
         {
-          "start": 14.283,
-          "end": 14.521,
-          "text": "until"
+          "start": 15.616,
+          "end": 16.033,
+          "text": "here"
         },
         {
-          "start": 14.533,
-          "end": 14.628,
-          "text": "you"
+          "start": 16.128,
+          "end": 16.378,
+          "text": "is"
         },
         {
-          "start": 14.64,
-          "end": 14.902,
-          "text": "see"
+          "start": 16.39,
+          "end": 16.509,
+          "text": "the"
         },
         {
-          "start": 14.914,
-          "end": 15.045,
-          "text": "how"
+          "start": 16.521,
+          "end": 16.985,
+          "text": "truly"
         },
         {
-          "start": 15.057,
-          "end": 15.176,
-          "text": "they"
+          "start": 16.997,
+          "end": 17.343,
+          "text": "creepy"
         },
         {
-          "start": 15.188,
-          "end": 15.509,
-          "text": "steal"
-        },
-        {
-          "start": 15.521,
-          "end": 15.688,
-          "text": "it"
+          "start": 17.354,
+          "end": 17.747,
+          "text": "part"
         }
       ]
     },
     {
       "scene": "scene_05",
-      "start": 16.128,
-      "end": 22.44,
+      "start": 18.192,
+      "end": 25.344,
       "words": [
         {
-          "start": 16.199,
-          "end": 16.842,
+          "start": 18.263,
+          "end": 18.906,
           "text": "Researchers"
         },
         {
-          "start": 16.842,
-          "end": 17.152,
+          "start": 18.918,
+          "end": 19.18,
           "text": "proved"
         },
         {
-          "start": 17.164,
-          "end": 17.723,
-          "text": "websites"
+          "start": 19.192,
+          "end": 19.644,
+          "text": "hackers"
         },
         {
-          "start": 17.735,
-          "end": 17.902,
+          "start": 19.656,
+          "end": 19.847,
           "text": "can"
         },
         {
-          "start": 17.914,
-          "end": 18.39,
+          "start": 19.859,
+          "end": 20.394,
           "text": "decode"
         },
         {
-          "start": 18.402,
-          "end": 18.509,
+          "start": 20.406,
+          "end": 20.502,
           "text": "your"
         },
         {
-          "start": 18.521,
-          "end": 18.83,
+          "start": 20.513,
+          "end": 20.882,
+          "text": "private"
+        },
+        {
+          "start": 20.882,
+          "end": 21.18,
           "text": "PIN"
         },
         {
-          "start": 18.842,
-          "end": 19.021,
+          "start": 21.192,
+          "end": 21.359,
           "text": "with"
         },
         {
-          "start": 19.14,
-          "end": 19.759,
+          "start": 21.537,
+          "end": 22.133,
           "text": "80%"
         },
         {
-          "start": 19.771,
-          "end": 20.366,
+          "start": 22.144,
+          "end": 22.74,
           "text": "accuracy"
         },
         {
-          "start": 20.509,
-          "end": 20.747,
+          "start": 22.942,
+          "end": 23.204,
           "text": "just"
         },
         {
-          "start": 20.759,
-          "end": 20.938,
+          "start": 23.216,
+          "end": 23.371,
           "text": "by"
         },
         {
-          "start": 20.949,
-          "end": 21.39,
-          "text": "tracking"
+          "start": 23.382,
+          "end": 23.966,
+          "text": "analyzing"
         },
         {
-          "start": 21.402,
-          "end": 21.711,
-          "text": "motion"
+          "start": 23.978,
+          "end": 24.109,
+          "text": "how"
         },
         {
-          "start": 21.723,
-          "end": 22.116,
-          "text": "data"
+          "start": 24.109,
+          "end": 24.24,
+          "text": "your"
+        },
+        {
+          "start": 24.252,
+          "end": 24.513,
+          "text": "phone"
+        },
+        {
+          "start": 24.525,
+          "end": 24.99,
+          "text": "moves"
         }
       ]
     },
     {
       "scene": "scene_06",
-      "start": 22.53,
-      "end": 28.674,
+      "start": 25.434,
+      "end": 32.13,
       "words": [
         {
-          "start": 22.625,
-          "end": 22.923,
-          "text": "Most"
+          "start": 25.529,
+          "end": 25.803,
+          "text": "Many"
         },
         {
-          "start": 22.923,
-          "end": 23.22,
-          "text": "mobile"
+          "start": 25.803,
+          "end": 26.029,
+          "text": "older"
         },
         {
-          "start": 23.22,
-          "end": 23.72,
+          "start": 26.041,
+          "end": 26.577,
           "text": "browsers"
         },
         {
-          "start": 23.732,
-          "end": 23.994,
+          "start": 26.589,
+          "end": 26.851,
+          "text": "or"
+        },
+        {
+          "start": 26.863,
+          "end": 27.363,
+          "text": "unpatched"
+        },
+        {
+          "start": 27.374,
+          "end": 27.684,
+          "text": "apps"
+        },
+        {
+          "start": 27.696,
+          "end": 28.017,
+          "text": "still"
+        },
+        {
+          "start": 28.029,
+          "end": 28.291,
           "text": "grant"
         },
         {
-          "start": 23.994,
-          "end": 24.316,
+          "start": 28.291,
+          "end": 28.434,
+          "text": "this"
+        },
+        {
+          "start": 28.446,
+          "end": 28.755,
           "text": "sensor"
         },
         {
-          "start": 24.328,
-          "end": 24.792,
+          "start": 28.767,
+          "end": 29.232,
           "text": "access"
         },
         {
-          "start": 24.804,
-          "end": 24.935,
+          "start": 29.244,
+          "end": 29.374,
           "text": "by"
         },
         {
-          "start": 24.947,
-          "end": 25.435,
+          "start": 29.386,
+          "end": 29.874,
           "text": "default"
         },
         {
-          "start": 25.851,
-          "end": 26.089,
+          "start": 30.291,
+          "end": 30.529,
           "text": "leaving"
         },
         {
-          "start": 26.101,
-          "end": 26.197,
+          "start": 30.541,
+          "end": 30.636,
           "text": "your"
         },
         {
-          "start": 26.209,
-          "end": 26.816,
+          "start": 30.636,
+          "end": 31.124,
           "text": "passwords"
         },
         {
-          "start": 26.828,
-          "end": 27.185,
-          "text": "wide"
-        },
-        {
-          "start": 27.459,
-          "end": 27.697,
-          "text": "open"
-        },
-        {
-          "start": 27.697,
-          "end": 27.756,
-          "text": "to"
-        },
-        {
-          "start": 27.768,
-          "end": 28.328,
-          "text": "hackers"
+          "start": 31.136,
+          "end": 31.779,
+          "text": "exposed"
         }
       ]
     },
     {
       "scene": "scene_07",
-      "start": 28.764,
-      "end": 33.516,
+      "start": 32.22,
+      "end": 37.764,
       "words": [
         {
-          "start": 28.847,
-          "end": 28.99,
-          "text": "Go"
+          "start": 32.303,
+          "end": 32.518,
+          "text": "Check"
         },
         {
-          "start": 29.002,
-          "end": 29.085,
-          "text": "to"
-        },
-        {
-          "start": 29.085,
-          "end": 29.181,
+          "start": 32.518,
+          "end": 32.625,
           "text": "your"
         },
         {
-          "start": 29.193,
-          "end": 29.538,
-          "text": "browser"
+          "start": 32.637,
+          "end": 32.875,
+          "text": "site"
         },
         {
-          "start": 29.538,
-          "end": 30.026,
+          "start": 32.887,
+          "end": 33.315,
           "text": "settings"
         },
         {
-          "start": 30.038,
-          "end": 30.323,
+          "start": 33.601,
+          "end": 33.875,
           "text": "and"
         },
         {
-          "start": 30.335,
-          "end": 30.585,
-          "text": "kill"
+          "start": 34.018,
+          "end": 34.458,
+          "text": "disable"
         },
         {
-          "start": 30.597,
-          "end": 30.978,
+          "start": 34.458,
+          "end": 34.791,
           "text": "motion"
         },
         {
-          "start": 30.99,
-          "end": 31.288,
-          "text": "sensor"
+          "start": 34.803,
+          "end": 35.28,
+          "text": "access"
         },
         {
-          "start": 31.3,
-          "end": 31.859,
-          "text": "permissions"
+          "start": 35.363,
+          "end": 35.97,
+          "text": "immediately"
         },
         {
-          "start": 31.871,
-          "end": 32.121,
-          "text": "right"
-        },
-        {
-          "start": 32.133,
-          "end": 32.347,
-          "text": "now"
-        },
-        {
-          "start": 32.359,
-          "end": 32.443,
+          "start": 36.03,
+          "end": 36.16,
           "text": "to"
         },
         {
-          "start": 32.443,
-          "end": 32.693,
-          "text": "stay"
+          "start": 36.16,
+          "end": 36.387,
+          "text": "lock"
         },
         {
-          "start": 32.704,
-          "end": 33.169,
-          "text": "safe"
+          "start": 36.399,
+          "end": 36.577,
+          "text": "down"
+        },
+        {
+          "start": 36.589,
+          "end": 36.696,
+          "text": "your"
+        },
+        {
+          "start": 36.708,
+          "end": 37.029,
+          "text": "personal"
+        },
+        {
+          "start": 37.041,
+          "end": 37.422,
+          "text": "data"
         }
       ]
     },
     {
       "scene": "scene_08",
-      "start": 33.606,
-      "end": 38.766,
+      "start": 37.854,
+      "end": 43.158,
       "words": [
         {
-          "start": 33.666,
-          "end": 34.177,
+          "start": 37.914,
+          "end": 38.437,
           "text": "Subscribe"
         },
         {
-          "start": 34.177,
-          "end": 34.285,
+          "start": 38.437,
+          "end": 38.544,
           "text": "for"
         },
         {
-          "start": 34.296,
-          "end": 34.511,
+          "start": 38.556,
+          "end": 38.771,
           "text": "more"
         },
         {
-          "start": 34.511,
-          "end": 34.856,
+          "start": 38.783,
+          "end": 39.092,
           "text": "cyber"
         },
         {
-          "start": 34.868,
-          "end": 35.32,
+          "start": 39.104,
+          "end": 39.592,
           "text": "secrets"
         },
         {
-          "start": 35.332,
-          "end": 35.582,
+          "start": 39.664,
+          "end": 39.949,
           "text": "and"
         },
         {
-          "start": 35.582,
-          "end": 36.011,
+          "start": 39.961,
+          "end": 40.366,
           "text": "comment"
         },
         {
-          "start": 36.011,
-          "end": 36.463,
-          "text": "PROTECTED"
+          "start": 40.378,
+          "end": 40.687,
+          "text": "SAFE"
         },
         {
-          "start": 36.475,
-          "end": 36.546,
+          "start": 40.759,
+          "end": 40.842,
           "text": "if"
         },
         {
-          "start": 36.558,
-          "end": 36.63,
-          "text": "you"
+          "start": 40.854,
+          "end": 40.997,
+          "text": "you’ve"
         },
         {
-          "start": 36.642,
-          "end": 36.939,
+          "start": 41.009,
+          "end": 41.271,
           "text": "checked"
         },
         {
-          "start": 36.951,
-          "end": 37.237,
+          "start": 41.271,
+          "end": 41.604,
           "text": "yours"
         },
         {
-          "start": 37.249,
-          "end": 37.404,
+          "start": 41.616,
+          "end": 41.783,
           "text": "which"
         },
         {
-          "start": 37.416,
-          "end": 37.511,
+          "start": 41.783,
+          "end": 41.878,
           "text": "is"
         },
         {
-          "start": 37.523,
-          "end": 37.999,
+          "start": 41.89,
+          "end": 42.39,
           "text": "exactly"
         },
         {
-          "start": 38.011,
-          "end": 38.415,
+          "start": 42.402,
+          "end": 42.818,
           "text": "why"
         }
       ]
