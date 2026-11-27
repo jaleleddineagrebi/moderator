@@ -3,17 +3,17 @@
   "scenes": [
     {
       "vo": {
-        "en": "You must stop picking the middle option."
+        "en": "You always buy the most expensive option."
       },
       "on_screen": {
-        "en": "STOP DOING THIS"
+        "en": "STOP OVERPAYING"
       },
       "visual": {
-        "description": "Close-up of a man's hand hovering indecisively over illuminated payment buttons on a modern vending machine.",
+        "description": "Close-up of a man's finger tapping the highest tier on a digital self-checkout terminal screen.",
         "search_terms": [
-          "hand pressing vending machine",
-          "glowing push buttons",
-          "person selecting payment"
+          "finger pressing screen",
+          "digital kiosk checkout",
+          "touchscreen payment terminal"
         ],
         "prefer": "video"
       },
@@ -21,17 +21,17 @@
     },
     {
       "vo": {
-        "en": "Quick test. A small coffee costs three dollars, and a large costs seven."
+        "en": "Quick test. A small coffee is three dollars, and a large is seven."
       },
       "on_screen": {
         "en": "A SIMPLE CHOICE"
       },
       "visual": {
-        "description": "Steam rising from freshly brewed black coffee being poured from an overhead kettle into a minimalist ceramic mug.",
+        "description": "Steaming dark coffee pouring smoothly from an elegant steel gooseneck kettle into a glass cup.",
         "search_terms": [
-          "pouring hot coffee steam",
-          "fresh drip coffee",
-          "coffee brewing kettle"
+          "pouring black coffee",
+          "drip coffee maker",
+          "hot beverage steam"
         ],
         "prefer": "video"
       },
@@ -39,17 +39,17 @@
     },
     {
       "vo": {
-        "en": "Now add a medium for six-fifty. Suddenly, the seven-dollar cup feels like an obvious bargain."
+        "en": "Now add a medium for six-fifty. Suddenly, that seven-dollar cup looks like an absolute steal."
       },
       "on_screen": {
         "en": "THE DECOY EFFECT"
       },
       "visual": {
-        "description": "Fast-motion sliding of dollar bills across a polished dark counter next to commercial price tags.",
+        "description": "Time-lapse of crisp paper dollar bills being stacked and slid across a smooth wooden table.",
         "search_terms": [
-          "counting paper money cash",
-          "dollar bills table motion",
-          "cash transaction counter"
+          "counting cash money",
+          "stacking dollar bills",
+          "currency on table"
         ],
         "prefer": "video"
       },
@@ -57,16 +57,16 @@
     },
     {
       "vo": {
-        "en": "Wait until you realize the creepy secret behind this."
+        "en": "Wait until you see the creepy truth behind this."
       },
       "on_screen": {
-        "en": "THE CREEPY SECRET"
+        "en": "THE CREEPY TRUTH"
       },
       "visual": {
-        "description": "Extreme macro close-up of a man's dilated pupil reflecting flashing digital data streams in darkness.",
+        "description": "Extreme macro shot of a male pupil sharply constricting as bright cyber-blue light flashes across the eye.",
         "search_terms": [
-          "dilated pupil macro eye",
-          "eye reflecting screen",
+          "macro human eye",
+          "pupil contracting iris",
           "eyeball blinking macro"
         ],
         "prefer": "video"
@@ -75,17 +75,17 @@
     },
     {
       "vo": {
-        "en": "MIT behavioral studies proved nobody actually wants the medium. It exists purely as an asymmetric decoy, driving you straight into the highest price."
+        "en": "MIT behavioral studies proved nobody buys the medium. It is an engineered decoy built to force your brain into picking the highest price."
       },
       "on_screen": {
-        "en": "RIGGED ARCHITECTURE"
+        "en": "PSYCHOLOGICAL TRAP"
       },
       "visual": {
-        "description": "Overhead mechanical shot of a steel ball bearing rapidly navigating through a complex wooden maze.",
+        "description": "Overhead view of a metallic ball bearing racing through a complex wooden labyrinth maze.",
         "search_terms": [
           "marble rolling maze",
           "wooden labyrinth puzzle",
-          "ball rolling through maze"
+          "ball rolling through"
         ],
         "prefer": "video"
       },
@@ -93,17 +93,17 @@
     },
     {
       "vo": {
-        "en": "Streaming services, cinema popcorn, and tech upgrades use this exact trick to drain billions from your wallet every year."
+        "en": "Streaming apps, movie theaters, and tech giants use this asymmetric trick daily to pull billions from your pocket."
       },
       "on_screen": {
-        "en": "THEY HACK YOU"
+        "en": "BILLION DOLLAR TRICK"
       },
       "visual": {
-        "description": "Rapid upward tilt of towering financial district glass skyscrapers illuminated against a dusk skyline.",
+        "description": "Low-angle time-lapse of glowing commercial skyscrapers in a major financial district at twilight.",
         "search_terms": [
-          "financial district skyscrapers",
-          "city buildings timelapse dusk",
-          "corporate headquarters architecture"
+          "financial district buildings",
+          "city architecture night",
+          "corporate towers timelapse"
         ],
         "prefer": "video"
       },
@@ -111,17 +111,17 @@
     },
     {
       "vo": {
-        "en": "Subscribe for tomorrow's brain test and comment YES if this worked on you, which is exactly why..."
+        "en": "Subscribe for tomorrow's mind trick and comment YES if this fooled you, which is why..."
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "Overhead view of a man's hand sliding a gleaming gold token decisively across a dark slate chessboard.",
+        "description": "Overhead shot of a man's hand strategically moving a heavy metal chess piece across a dark board.",
         "search_terms": [
-          "hand moving chess piece",
-          "golden coin sliding",
-          "hand sliding token"
+          "hand moving chess",
+          "chessboard strategic move",
+          "chess piece sliding"
         ],
         "prefer": "video"
       },
@@ -133,6 +133,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 37.5
+    "en": 36.4
   }
 }
