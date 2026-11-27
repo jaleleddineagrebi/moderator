@@ -1,0 +1,68 @@
+{
+  "niche": "Mind Hacks, AI Secrets, Bizarre Body Science & Hidden Power Dynamics",
+  "languages": [
+    "en"
+  ],
+  "ideas": [
+    {
+      "id": "two-noses-body-glitch",
+      "title": "The Aristotle Two-Nose Illusion",
+      "angle": "An interactive tactile test where crossing your fingers and touching your nose makes your brain believe you have two distinct noses. It forces the viewer to pause and try it, driving 100% retention and a flood of 'it actually worked' comments.",
+      "hook": {
+        "en": "You actually have two noses."
+      },
+      "keywords": [
+        "brain glitch",
+        "body hack",
+        "Aristotle illusion",
+        "tactile trick",
+        "human body secrets"
+      ],
+      "reason": "Interactive tactile illusions are currently outperforming visual ones because they require physical participation, which keeps the viewer on the video for the full duration. The Aristotle Illusion is a classic sensory 'bug' that feels like magic.",
+      "sources": [
+        "University of London - The Aristotle Illusion Research",
+        "Frontiers in Psychology - Tactile Perception and the Crossed-Fingers Illusion"
+      ]
+    },
+    {
+      "id": "ear-thunder-genetic-glitch",
+      "title": "The Rare Ear Rumbling Muscle",
+      "angle": "A 'rare trait' challenge identifying viewers who can flex their tensor tympani muscle to create a thunder sound. It leverages the 'elite percentage' trope to drive high comment engagement as people argue over whether they can hear it.",
+      "hook": {
+        "en": "Make your ears thunder right now."
+      },
+      "keywords": [
+        "ear rumbling",
+        "tensor tympani",
+        "rare body traits",
+        "body glitches",
+        "superhuman features"
+      ],
+      "reason": "Rare body trait videos (like the 'Golden Blood' or 'Preauricular Sinus') consistently go viral because they trigger a 'unique identity' response in viewers. This specific glitch has a massive cult following online (r/EarRumblersAssemble).",
+      "sources": [
+        "StatPearls - Anatomy, Head and Neck, Ear Tensor Tympani Muscle",
+        "NCBI - Voluntary control of middle ear muscles"
+      ]
+    },
+    {
+      "id": "hole-in-palm-glitch",
+      "title": "The Binocular Rivalry Palm Hole",
+      "angle": "The viewer uses a simple hand-tube trick to make a hole appear in their own palm. This 'Sensory Fusion' glitch is visually shocking and forces the viewer to stay until the end to see the final result, perfect for 100%+ APV.",
+      "hook": {
+        "en": "Put a hole through your palm."
+      },
+      "keywords": [
+        "vision glitch",
+        "binocular rivalry",
+        "eye trick",
+        "brain hack",
+        "optical illusion"
+      ],
+      "reason": "Visual sensory fusion tests are high-velocity on TikTok and YouTube Shorts right now because they transform the viewer's immediate environment. It uses the 'seeing is believing' psychological trigger.",
+      "sources": [
+        "Harvard University - Department of Psychology: Binocular Rivalry Studies",
+        "American Academy of Ophthalmology - How Binocular Vision Works"
+      ]
+    }
+  ]
+}
