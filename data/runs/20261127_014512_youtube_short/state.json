@@ -437,7 +437,7 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 37,
+      "progress": 48,
       "started_at": "2026-11-27T01:54:57+00:00",
       "ended_at": null,
       "attempt": 1,
@@ -479,6 +479,11 @@
           "ts": "2026-11-27T01:55:29+00:00",
           "level": "info",
           "msg": "scene_02: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-27T01:55:40+00:00",
+          "level": "info",
+          "msg": "scene_04: stock_video (pixabay)"
         }
       ],
       "errors": [],
@@ -493,7 +498,7 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 0,
+      "progress": 80,
       "started_at": "2026-11-27T01:54:58+00:00",
       "ended_at": null,
       "attempt": 1,
@@ -520,6 +525,16 @@
           "ts": "2026-11-27T01:54:58+00:00",
           "level": "info",
           "msg": "Narrating en with en-US-AvaMultilingualNeural"
+        },
+        {
+          "ts": "2026-11-27T01:55:32+00:00",
+          "level": "info",
+          "msg": "en voiceover: 38.8s"
+        },
+        {
+          "ts": "2026-11-27T01:55:32+00:00",
+          "level": "info",
+          "msg": "Generating an ambient music bed (no library tracks): progression #3, transpose +0, 6s chords"
         }
       ],
       "errors": [],
@@ -650,7 +665,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-27T01:55:30+00:00",
+    "exported_at": "2026-11-27T01:55:54+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/45924319078"
   }
