@@ -3,36 +3,36 @@
   "scenes": [
     {
       "vo": {
-        "en": "Your phone knows exactly what you type."
+        "en": "Your phone knows every single word you type."
       },
       "on_screen": {
-        "en": "PHONE KNOWS EVERYTHING"
+        "en": "YOUR PHONE IS WATCHING"
       },
       "visual": {
-        "description": "Extreme close-up of a man's thumb tapping on a glowing smartphone screen in a dark room.",
+        "description": "Macro shot of a man's fingers tapping rapidly on a smartphone screen in a dimly lit room.",
         "search_terms": [
           "man typing phone",
-          "smartphone glow",
-          "thumb scrolling"
+          "smartphone screen glow",
+          "finger tapping mobile"
         ],
         "prefer": "video"
       },
-      "chapter": "The Secret Keylogger",
+      "chapter": "The Invisible Keylogger",
       "id": "scene_01"
     },
     {
       "vo": {
-        "en": "Every tap creates a unique micro-vibration that reveals your finger's exact position."
+        "en": "Every tap sends a micro-vibration through the frame. Your gyroscope tracks these tiny tilts with terrifying precision."
       },
       "on_screen": {
-        "en": "VIBRATIONS REVEAL ALL"
+        "en": "VIBRATIONS REVEAL EVERYTHING"
       },
       "visual": {
-        "description": "Macro shot of a drop of water creating ripples on a black surface to simulate vibrations.",
+        "description": "Slow motion footage of ripples forming on the surface of dark liquid from a vibration.",
         "search_terms": [
-          "water ripple macro",
-          "vibration effect",
-          "sound wave liquid"
+          "vibrating water surface",
+          "sound wave liquid",
+          "micro vibration ripples"
         ],
         "prefer": "video"
       },
@@ -41,17 +41,17 @@
     },
     {
       "vo": {
-        "en": "Your gyroscope and accelerometer record these tilts without ever asking for security permissions."
+        "en": "You worry about your camera, but these motion sensors are the ultimate invisible keyloggers."
       },
       "on_screen": {
-        "en": "SENSORS ARE WATCHING"
+        "en": "THE HIDDEN THREAT"
       },
       "visual": {
-        "description": "A 3D mechanical gyroscope spinning rapidly on a wooden table.",
+        "description": "A vintage metal gyroscope spinning rapidly on a dark wooden table.",
         "search_terms": [
-          "gyroscope spinning",
-          "mechanical device",
-          "precision instrument"
+          "spinning gyroscope metal",
+          "precision motion device",
+          "rotating sensor"
         ],
         "prefer": "video"
       },
@@ -60,36 +60,36 @@
     },
     {
       "vo": {
-        "en": "Wait until you see how they steal it."
+        "en": "But here is the truly creepy part."
       },
       "on_screen": {
         "en": "THE CREEPY PART"
       },
       "visual": {
-        "description": "A man in a hoodie looking suspiciously over his shoulder into the camera.",
+        "description": "A man in a dark hoodie looking directly into the lens with a serious, intense expression.",
         "search_terms": [
-          "suspicious man",
-          "looking over shoulder",
-          "dark alleyway"
+          "man serious face",
+          "mysterious man shadow",
+          "intense look camera"
         ],
         "prefer": "video"
       },
-      "chapter": "How Hackers Listen",
+      "chapter": "Decoding Your Data",
       "id": "scene_04"
     },
     {
       "vo": {
-        "en": "Researchers proved websites can decode your PIN with 80% accuracy just by tracking motion data."
+        "en": "Researchers proved hackers can decode your private PIN with 80% accuracy just by analyzing how your phone moves."
       },
       "on_screen": {
-        "en": "80% ACCURACY"
+        "en": "80% ACCURACY REACHED"
       },
       "visual": {
-        "description": "Digital binary code scrolling vertically at high speed on a monitor.",
+        "description": "Green digital numbers and code scrolling rapidly down a computer monitor.",
         "search_terms": [
-          "hacker code green",
-          "digital binary",
-          "matrix data"
+          "digital code scrolling",
+          "hacking data stream",
+          "binary numbers fast"
         ],
         "prefer": "video"
       },
@@ -98,17 +98,17 @@
     },
     {
       "vo": {
-        "en": "Most mobile browsers grant sensor access by default, leaving your passwords wide open to hackers."
+        "en": "Many older browsers or unpatched apps still grant this sensor access by default, leaving your passwords exposed."
       },
       "on_screen": {
-        "en": "NO PERMISSION NEEDED"
+        "en": "SECURITY HOLE FOUND"
       },
       "visual": {
-        "description": "A hand scrolling through a long list of technical settings on a phone screen.",
+        "description": "A magnifying glass moving across a screen showing complex lines of code.",
         "search_terms": [
-          "scrolling phone settings",
-          "user interface tapping",
-          "digital menu"
+          "magnifying glass code",
+          "searching for bugs",
+          "data security scan"
         ],
         "prefer": "video"
       },
@@ -117,36 +117,36 @@
     },
     {
       "vo": {
-        "en": "Go to your browser settings and kill motion sensor permissions right now to stay safe."
+        "en": "Check your site settings and disable motion access immediately to lock down your personal data."
       },
       "on_screen": {
         "en": "DISABLE IT NOW"
       },
       "visual": {
-        "description": "A heavy metal vault door closing and locking securely.",
+        "description": "A heavy steel vault door swinging shut and locking with large gears turning.",
         "search_terms": [
-          "metal vault door",
-          "locking padlock",
-          "bank vault"
+          "bank vault closing",
+          "locking metal door",
+          "safe box security"
         ],
         "prefer": "video"
       },
-      "chapter": "Protect Your Data",
+      "chapter": "Protect Yourself",
       "id": "scene_07"
     },
     {
       "vo": {
-        "en": "Subscribe for more cyber secrets and comment PROTECTED if you checked yours—which is exactly why..."
+        "en": "Subscribe for more cyber secrets and comment SAFE if you’ve checked yours—which is exactly why..."
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "A man pointing directly at the camera with a confident smile.",
+        "description": "A man pointing his finger towards the camera and giving a firm nod of approval.",
         "search_terms": [
           "man pointing camera",
-          "confident man",
-          "thumbs up"
+          "confident man nod",
+          "thumbs up man"
         ],
         "prefer": "video"
       },
@@ -159,6 +159,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 36.4
+    "en": 40.4
   }
 }

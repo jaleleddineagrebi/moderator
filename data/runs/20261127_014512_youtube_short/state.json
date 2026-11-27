@@ -67,15 +67,15 @@
   },
   "started_at": "2026-11-27T01:45:12+00:00",
   "ended_at": null,
-  "revision_rounds": 0,
+  "revision_rounds": 1,
   "cost": {
-    "total_usd": 0.013362,
+    "total_usd": 0.023763,
     "budget_usd": 1.0,
     "by_agent": {
       "trend_researcher": 0.003722,
-      "scriptwriter": 0.007913,
+      "scriptwriter": 0.016543,
       "packaging": 0.000489,
-      "qa_reviewer": 0.001239
+      "qa_reviewer": 0.003011
     }
   },
   "agents": {
@@ -368,9 +368,9 @@
       "checkpoint": "B",
       "status": "done",
       "progress": 100,
-      "started_at": "2026-11-27T01:48:50+00:00",
-      "ended_at": "2026-11-27T01:54:57+00:00",
-      "attempt": 1,
+      "started_at": "2026-11-27T01:58:27+00:00",
+      "ended_at": "2026-11-27T01:58:39+00:00",
+      "attempt": 2,
       "retries": 0,
       "max_retries": 2,
       "strategy": "default",
@@ -425,11 +425,52 @@
           "ts": "2026-11-27T01:54:57+00:00",
           "level": "info",
           "msg": "Approved by schedule (auto-approve)"
+        },
+        {
+          "ts": "2026-11-27T01:58:27+00:00",
+          "level": "warning",
+          "msg": "Sent back by qa: QA found:\n[en] accuracy review: The claim that browsers grant sensor access by default is outdated; modern versions of iOS (Safari) and Android (Chrome) require explicit user permission or have disabled motion sensor access for websites by default since 2019/2020. Change scene 06 to 'Many older browsers or unpatched apps grant sensor access by default'."
+        },
+        {
+          "ts": "2026-11-27T01:58:27+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'default'"
+        },
+        {
+          "ts": "2026-11-27T01:58:27+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.8-flash, high complexity, thinking high)"
+        },
+        {
+          "ts": "2026-11-27T01:58:39+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3-flash-preview) answered in 12.0s (tokens in 2247, out 1139, thinking 1363)"
+        },
+        {
+          "ts": "2026-11-27T01:58:39+00:00",
+          "level": "info",
+          "msg": "Estimated narration: en 40.4s"
+        },
+        {
+          "ts": "2026-11-27T01:58:39+00:00",
+          "level": "info",
+          "msg": "Finished, waiting for your approval"
+        },
+        {
+          "ts": "2026-11-27T01:58:39+00:00",
+          "level": "info",
+          "msg": "Approved by schedule (auto-approve)"
         }
       ],
       "errors": [],
-      "feedback": [],
-      "cost_usd": 0.007913
+      "feedback": [
+        {
+          "ts": "2026-11-27T01:58:27+00:00",
+          "from": "qa",
+          "comment": "QA found:\n[en] accuracy review: The claim that browsers grant sensor access by default is outdated; modern versions of iOS (Safari) and Android (Chrome) require explicit user permission or have disabled motion sensor access for websites by default since 2019/2020. Change scene 06 to 'Many older browsers or unpatched apps grant sensor access by default'."
+        }
+      ],
+      "cost_usd": 0.016543
     },
     "visuals": {
       "title": "Source scene visuals",
@@ -438,11 +479,11 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "done",
-      "progress": 100,
-      "started_at": "2026-11-27T01:54:57+00:00",
-      "ended_at": "2026-11-27T01:56:26+00:00",
-      "attempt": 1,
+      "status": "running",
+      "progress": 0,
+      "started_at": "2026-11-27T01:58:39+00:00",
+      "ended_at": null,
+      "attempt": 2,
       "retries": 0,
       "max_retries": 2,
       "strategy": "stock_video",
@@ -514,6 +555,21 @@
           "ts": "2026-11-27T01:56:26+00:00",
           "level": "info",
           "msg": "Finished"
+        },
+        {
+          "ts": "2026-11-27T01:58:27+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-27T01:58:39+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'stock_video'"
+        },
+        {
+          "ts": "2026-11-27T01:58:39+00:00",
+          "level": "info",
+          "msg": "Visual diversity: excluding 300 footage sources used in recent Shorts"
         }
       ],
       "errors": [],
@@ -527,11 +583,11 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "done",
-      "progress": 100,
-      "started_at": "2026-11-27T01:54:58+00:00",
-      "ended_at": "2026-11-27T01:55:59+00:00",
-      "attempt": 1,
+      "status": "running",
+      "progress": 0,
+      "started_at": "2026-11-27T01:58:39+00:00",
+      "ended_at": null,
+      "attempt": 2,
       "retries": 0,
       "max_retries": 2,
       "strategy": "primary_voice",
@@ -572,6 +628,21 @@
           "ts": "2026-11-27T01:55:59+00:00",
           "level": "info",
           "msg": "Finished"
+        },
+        {
+          "ts": "2026-11-27T01:58:27+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'script' is being revised"
+        },
+        {
+          "ts": "2026-11-27T01:58:39+00:00",
+          "level": "info",
+          "msg": "Attempt 1/3, strategy 'primary_voice'"
+        },
+        {
+          "ts": "2026-11-27T01:58:39+00:00",
+          "level": "info",
+          "msg": "Narrating en with en-US-AvaMultilingualNeural"
         }
       ],
       "errors": [],
@@ -586,8 +657,8 @@
         "visuals"
       ],
       "checkpoint": null,
-      "status": "done",
-      "progress": 100,
+      "status": "queued",
+      "progress": 0,
       "started_at": "2026-11-27T01:56:26+00:00",
       "ended_at": "2026-11-27T01:56:29+00:00",
       "attempt": 1,
@@ -671,6 +742,11 @@
           "ts": "2026-11-27T01:56:29+00:00",
           "level": "info",
           "msg": "Finished"
+        },
+        {
+          "ts": "2026-11-27T01:58:27+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'script' is being revised"
         }
       ],
       "errors": [],
@@ -685,8 +761,8 @@
         "audio"
       ],
       "checkpoint": null,
-      "status": "done",
-      "progress": 100,
+      "status": "queued",
+      "progress": 0,
       "started_at": "2026-11-27T01:56:26+00:00",
       "ended_at": "2026-11-27T01:57:29+00:00",
       "attempt": 1,
@@ -733,6 +809,11 @@
           "ts": "2026-11-27T01:57:29+00:00",
           "level": "info",
           "msg": "Finished"
+        },
+        {
+          "ts": "2026-11-27T01:58:27+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'script' is being revised"
         }
       ],
       "errors": [],
@@ -747,10 +828,10 @@
         "packaging"
       ],
       "checkpoint": "C",
-      "status": "running",
-      "progress": 60,
+      "status": "queued",
+      "progress": 0,
       "started_at": "2026-11-27T01:57:29+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-27T01:58:27+00:00",
       "attempt": 1,
       "retries": 0,
       "max_retries": 2,
@@ -764,7 +845,11 @@
         ],
         "metadata": "metadata.json"
       },
-      "outputs": {},
+      "outputs": {
+        "report": "qa_report.md",
+        "data": "qa_report.json",
+        "thumbnail_en": "thumbnail_en.png"
+      },
       "logs": [
         {
           "ts": "2026-11-27T01:57:29+00:00",
@@ -780,11 +865,36 @@
           "ts": "2026-11-27T01:58:13+00:00",
           "level": "info",
           "msg": "Gemini (gemini-3-flash-preview) answered in 40.1s (tokens in 1337, out 190, thinking 0)"
+        },
+        {
+          "ts": "2026-11-27T01:58:23+00:00",
+          "level": "info",
+          "msg": "Asking Gemini (gemini-3.8-flash, medium complexity, thinking low)"
+        },
+        {
+          "ts": "2026-11-27T01:58:27+00:00",
+          "level": "info",
+          "msg": "Gemini (gemini-3-flash-preview) answered in 4.3s (tokens in 3514, out 5, thinking 0)"
+        },
+        {
+          "ts": "2026-11-27T01:58:27+00:00",
+          "level": "warning",
+          "msg": "1 blocking issue(s); sending back to: script"
+        },
+        {
+          "ts": "2026-11-27T01:58:27+00:00",
+          "level": "info",
+          "msg": "Finished, waiting for your approval"
+        },
+        {
+          "ts": "2026-11-27T01:58:27+00:00",
+          "level": "info",
+          "msg": "Reset: upstream step 'script' is being revised"
         }
       ],
       "errors": [],
       "feedback": [],
-      "cost_usd": 0.001239
+      "cost_usd": 0.003011
     }
   },
   "checkpoints": {
@@ -824,7 +934,7 @@
       "options": [],
       "choice": null,
       "comment": null,
-      "decided_at": "2026-11-27T01:54:57+00:00"
+      "decided_at": "2026-11-27T01:58:39+00:00"
     },
     "C": {
       "title": "Approve the final videos (never uploaded without your OK)",
@@ -841,7 +951,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-27T01:58:22+00:00",
+    "exported_at": "2026-11-27T01:58:44+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/45924319078"
   }

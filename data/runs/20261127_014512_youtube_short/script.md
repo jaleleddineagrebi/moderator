@@ -1,26 +1,26 @@
 # Your Phone Motion Sensor Is Reading Your Passwords
-Estimated narration: en 36.4s
+Estimated narration: en 40.4s
 
-## scene_01 · Extreme close-up of a man's thumb tapping on a glowing smartphone screen in a dark room.
-EN  [PHONE KNOWS EVERYTHING]  Your phone knows exactly what you type.
+## scene_01 · Macro shot of a man's fingers tapping rapidly on a smartphone screen in a dimly lit room.
+EN  [YOUR PHONE IS WATCHING]  Your phone knows every single word you type.
 
-## scene_02 · Macro shot of a drop of water creating ripples on a black surface to simulate vibrations.
-EN  [VIBRATIONS REVEAL ALL]  Every tap creates a unique micro-vibration that reveals your finger's exact position.
+## scene_02 · Slow motion footage of ripples forming on the surface of dark liquid from a vibration.
+EN  [VIBRATIONS REVEAL EVERYTHING]  Every tap sends a micro-vibration through the frame. Your gyroscope tracks these tiny tilts with terrifying precision.
 
-## scene_03 · A 3D mechanical gyroscope spinning rapidly on a wooden table.
-EN  [SENSORS ARE WATCHING]  Your gyroscope and accelerometer record these tilts without ever asking for security permissions.
+## scene_03 · A vintage metal gyroscope spinning rapidly on a dark wooden table.
+EN  [THE HIDDEN THREAT]  You worry about your camera, but these motion sensors are the ultimate invisible keyloggers.
 
-## scene_04 · A man in a hoodie looking suspiciously over his shoulder into the camera.
-EN  [THE CREEPY PART]  Wait until you see how they steal it.
+## scene_04 · A man in a dark hoodie looking directly into the lens with a serious, intense expression.
+EN  [THE CREEPY PART]  But here is the truly creepy part.
 
-## scene_05 · Digital binary code scrolling vertically at high speed on a monitor.
-EN  [80% ACCURACY]  Researchers proved websites can decode your PIN with 80% accuracy just by tracking motion data.
+## scene_05 · Green digital numbers and code scrolling rapidly down a computer monitor.
+EN  [80% ACCURACY REACHED]  Researchers proved hackers can decode your private PIN with 80% accuracy just by analyzing how your phone moves.
 
-## scene_06 · A hand scrolling through a long list of technical settings on a phone screen.
-EN  [NO PERMISSION NEEDED]  Most mobile browsers grant sensor access by default, leaving your passwords wide open to hackers.
+## scene_06 · A magnifying glass moving across a screen showing complex lines of code.
+EN  [SECURITY HOLE FOUND]  Many older browsers or unpatched apps still grant this sensor access by default, leaving your passwords exposed.
 
-## scene_07 · A heavy metal vault door closing and locking securely.
-EN  [DISABLE IT NOW]  Go to your browser settings and kill motion sensor permissions right now to stay safe.
+## scene_07 · A heavy steel vault door swinging shut and locking with large gears turning.
+EN  [DISABLE IT NOW]  Check your site settings and disable motion access immediately to lock down your personal data.
 
-## scene_08 · A man pointing directly at the camera with a confident smile.
-EN  [SUBSCRIBE 🔔]  Subscribe for more cyber secrets and comment PROTECTED if you checked yours—which is exactly why...
+## scene_08 · A man pointing his finger towards the camera and giving a firm nod of approval.
+EN  [SUBSCRIBE 🔔]  Subscribe for more cyber secrets and comment SAFE if you’ve checked yours—which is exactly why...
