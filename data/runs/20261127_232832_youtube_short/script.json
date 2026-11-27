@@ -1,0 +1,138 @@
+{
+  "title": "The 3-Price Trap Making You Overspend",
+  "scenes": [
+    {
+      "vo": {
+        "en": "You must stop picking the middle option."
+      },
+      "on_screen": {
+        "en": "STOP DOING THIS"
+      },
+      "visual": {
+        "description": "Close-up of a man's hand hovering indecisively over illuminated payment buttons on a modern vending machine.",
+        "search_terms": [
+          "hand pressing vending machine",
+          "glowing push buttons",
+          "person selecting payment"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Quick test. A small coffee costs three dollars, and a large costs seven."
+      },
+      "on_screen": {
+        "en": "A SIMPLE CHOICE"
+      },
+      "visual": {
+        "description": "Steam rising from freshly brewed black coffee being poured from an overhead kettle into a minimalist ceramic mug.",
+        "search_terms": [
+          "pouring hot coffee steam",
+          "fresh drip coffee",
+          "coffee brewing kettle"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Now add a medium for six-fifty. Suddenly, the seven-dollar cup feels like an obvious bargain."
+      },
+      "on_screen": {
+        "en": "THE DECOY EFFECT"
+      },
+      "visual": {
+        "description": "Fast-motion sliding of dollar bills across a polished dark counter next to commercial price tags.",
+        "search_terms": [
+          "counting paper money cash",
+          "dollar bills table motion",
+          "cash transaction counter"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "Wait until you realize the creepy secret behind this."
+      },
+      "on_screen": {
+        "en": "THE CREEPY SECRET"
+      },
+      "visual": {
+        "description": "Extreme macro close-up of a man's dilated pupil reflecting flashing digital data streams in darkness.",
+        "search_terms": [
+          "dilated pupil macro eye",
+          "eye reflecting screen",
+          "eyeball blinking macro"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "MIT behavioral studies proved nobody actually wants the medium. It exists purely as an asymmetric decoy, driving you straight into the highest price."
+      },
+      "on_screen": {
+        "en": "RIGGED ARCHITECTURE"
+      },
+      "visual": {
+        "description": "Overhead mechanical shot of a steel ball bearing rapidly navigating through a complex wooden maze.",
+        "search_terms": [
+          "marble rolling maze",
+          "wooden labyrinth puzzle",
+          "ball rolling through maze"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "Streaming services, cinema popcorn, and tech upgrades use this exact trick to drain billions from your wallet every year."
+      },
+      "on_screen": {
+        "en": "THEY HACK YOU"
+      },
+      "visual": {
+        "description": "Rapid upward tilt of towering financial district glass skyscrapers illuminated against a dusk skyline.",
+        "search_terms": [
+          "financial district skyscrapers",
+          "city buildings timelapse dusk",
+          "corporate headquarters architecture"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for tomorrow's brain test and comment YES if this worked on you, which is exactly why..."
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "Overhead view of a man's hand sliding a gleaming gold token decisively across a dark slate chessboard.",
+        "search_terms": [
+          "hand moving chess piece",
+          "golden coin sliding",
+          "hand sliding token"
+        ],
+        "prefer": "video"
+      },
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "the-decoy-subscription-trap",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 37.5
+  }
+}
