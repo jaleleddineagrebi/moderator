@@ -3,80 +3,80 @@
     "scene": "scene_01",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-86866/",
-    "author": "atiqurrahman0047",
+    "page": "https://pixabay.com/videos/id-3576/",
+    "author": "Pexels",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
     "query": "man typing phone",
-    "description": "Extreme close-up of a man's thumb tapping on a glowing smartphone screen in a dark room."
+    "description": "Macro shot of a man's fingers tapping rapidly on a smartphone screen in a dimly lit room."
   },
   {
     "scene": "scene_02",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-36951/",
-    "author": "tomalauphi",
+    "page": "https://pixabay.com/videos/id-342229/",
+    "author": "Kanenori",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "water ripple macro",
-    "description": "Macro shot of a drop of water creating ripples on a black surface to simulate vibrations."
+    "query": "vibrating water surface",
+    "description": "Slow motion footage of ripples forming on the surface of dark liquid from a vibration."
   },
   {
     "scene": "scene_03",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-38388/",
-    "author": "Matthias_Groeneveld",
+    "page": "https://pixabay.com/videos/id-119/",
+    "author": "Coverr-Free-Footage",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "gyroscope spinning",
-    "description": "A 3D mechanical gyroscope spinning rapidly on a wooden table."
+    "query": "spinning gyroscope metal",
+    "description": "A vintage metal gyroscope spinning rapidly on a dark wooden table."
   },
   {
     "scene": "scene_04",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-122389/",
-    "author": "u_n92ynpt32e",
+    "page": "https://pixabay.com/videos/id-37620/",
+    "author": "pnepalensis",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "suspicious man",
-    "description": "A man in a hoodie looking suspiciously over his shoulder into the camera."
+    "query": "man serious face",
+    "description": "A man in a dark hoodie looking directly into the lens with a serious, intense expression."
   },
   {
     "scene": "scene_05",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-358693/",
-    "author": "McPix22",
+    "page": "https://pixabay.com/videos/id-735/",
+    "author": "elchao",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "hacker code green",
-    "description": "Digital binary code scrolling vertically at high speed on a monitor."
+    "query": "digital code scrolling",
+    "description": "Green digital numbers and code scrolling rapidly down a computer monitor."
   },
   {
     "scene": "scene_06",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-111280/",
-    "author": "AttilaPergel",
+    "page": "https://pixabay.com/videos/id-189290/",
+    "author": "NickyPe",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "scrolling phone settings",
-    "description": "A hand scrolling through a long list of technical settings on a phone screen."
+    "query": "magnifying glass code",
+    "description": "A magnifying glass moving across a screen showing complex lines of code."
   },
   {
     "scene": "scene_07",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-120255/",
+    "page": "https://pixabay.com/videos/id-230033/",
     "author": "Engin_Akyurt",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "metal vault door",
-    "description": "A heavy metal vault door closing and locking securely."
+    "query": "bank vault closing",
+    "description": "A heavy steel vault door swinging shut and locking with large gears turning."
   },
   {
     "scene": "scene_08",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-24497/",
-    "author": "ninosouza",
+    "page": "https://pixabay.com/videos/id-318654/",
+    "author": "TonyDias7",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
     "query": "man pointing camera",
-    "description": "A man pointing directly at the camera with a confident smile."
+    "description": "A man pointing his finger towards the camera and giving a firm nod of approval."
   }
 ]

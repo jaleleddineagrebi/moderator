@@ -12,48 +12,52 @@ Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 1,0:00:00.05,0:00:02.27,Headline,,0,0,0,,{\fad(150,150)}PHONE KNOWS EVERYTHING
-Dialogue: 1,0:00:02.37,0:00:07.81,Headline,,0,0,0,,{\fad(150,150)}VIBRATIONS REVEAL ALL
-Dialogue: 1,0:00:07.91,0:00:13.85,Headline,,0,0,0,,{\fad(150,150)}SENSORS ARE WATCHING
-Dialogue: 1,0:00:13.95,0:00:16.08,Headline,,0,0,0,,{\fad(150,150)}THE CREEPY PART
-Dialogue: 1,0:00:16.18,0:00:22.48,Headline,,0,0,0,,{\fad(150,150)}80% ACCURACY
-Dialogue: 1,0:00:22.58,0:00:28.71,Headline,,0,0,0,,{\fad(150,150)}NO PERMISSION NEEDED
-Dialogue: 1,0:00:28.81,0:00:33.56,Headline,,0,0,0,,{\fad(150,150)}DISABLE IT NOW
-Dialogue: 1,0:00:33.66,0:00:39.42,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
-Dialogue: 0,0:00:00.06,0:00:00.81,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}phone{\c&H00FFFFFF&} knows
-Dialogue: 0,0:00:00.82,0:00:01.51,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}exactly{\c&H00FFFFFF&} what you
-Dialogue: 0,0:00:01.51,0:00:01.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}type
-Dialogue: 0,0:00:02.42,0:00:03.74,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Every tap {\c&H0000E5FF&}creates{\c&H00FFFFFF&}
-Dialogue: 0,0:00:03.81,0:00:05.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a unique {\c&H0000E5FF&}micro-vibration{\c&H00FFFFFF&}
-Dialogue: 0,0:00:05.35,0:00:06.06,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}that {\c&H0000E5FF&}reveals{\c&H00FFFFFF&} your
-Dialogue: 0,0:00:06.07,0:00:07.42,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}finger's{\c&H00FFFFFF&} exact position
-Dialogue: 0,0:00:07.91,0:00:08.93,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}gyroscope{\c&H00FFFFFF&} and
-Dialogue: 0,0:00:08.99,0:00:10.46,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}accelerometer{\c&H00FFFFFF&} record these
-Dialogue: 0,0:00:10.47,0:00:11.79,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}tilts {\c&H0000E5FF&}without{\c&H00FFFFFF&} ever
-Dialogue: 0,0:00:11.80,0:00:12.80,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}asking for {\c&H0000E5FF&}security{\c&H00FFFFFF&}
-Dialogue: 0,0:00:12.81,0:00:13.48,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}permissions
-Dialogue: 0,0:00:13.98,0:00:14.63,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Wait {\c&H0000E5FF&}until{\c&H00FFFFFF&} you
-Dialogue: 0,0:00:14.64,0:00:15.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}see how {\c&H0000E5FF&}they{\c&H00FFFFFF&}
-Dialogue: 0,0:00:15.19,0:00:15.69,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}steal{\c&H00FFFFFF&} it
-Dialogue: 0,0:00:16.20,0:00:17.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Researchers{\c&H00FFFFFF&} proved websites
-Dialogue: 0,0:00:17.73,0:00:18.51,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}can {\c&H0000E5FF&}decode{\c&H00FFFFFF&} your
-Dialogue: 0,0:00:18.52,0:00:19.76,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}PIN with {\c&H0000E5FF&}80%{\c&H00FFFFFF&}
-Dialogue: 0,0:00:19.77,0:00:20.94,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}accuracy{\c&H00FFFFFF&} just by
-Dialogue: 0,0:00:20.95,0:00:22.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}tracking{\c&H00FFFFFF&} motion data
-Dialogue: 0,0:00:22.62,0:00:23.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Most mobile {\c&H0000E5FF&}browsers{\c&H00FFFFFF&}
-Dialogue: 0,0:00:23.73,0:00:24.79,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}grant {\c&H0000E5FF&}sensor{\c&H00FFFFFF&} access
-Dialogue: 0,0:00:24.80,0:00:25.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}by {\c&H0000E5FF&}default{\c&H00FFFFFF&}
-Dialogue: 0,0:00:25.85,0:00:26.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}leaving your {\c&H0000E5FF&}passwords{\c&H00FFFFFF&}
-Dialogue: 0,0:00:26.83,0:00:27.76,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}wide{\c&H00FFFFFF&} open to
-Dialogue: 0,0:00:27.77,0:00:28.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}hackers
-Dialogue: 0,0:00:28.85,0:00:29.19,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Go to your
-Dialogue: 0,0:00:29.19,0:00:30.32,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}browser {\c&H0000E5FF&}settings{\c&H00FFFFFF&} and
-Dialogue: 0,0:00:30.34,0:00:31.29,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}kill {\c&H0000E5FF&}motion{\c&H00FFFFFF&} sensor
-Dialogue: 0,0:00:31.30,0:00:32.35,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}permissions{\c&H00FFFFFF&} right now
-Dialogue: 0,0:00:32.36,0:00:33.17,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to {\c&H0000E5FF&}stay{\c&H00FFFFFF&} safe
-Dialogue: 0,0:00:33.67,0:00:34.51,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Subscribe{\c&H00FFFFFF&} for more
-Dialogue: 0,0:00:34.51,0:00:35.58,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}cyber {\c&H0000E5FF&}secrets{\c&H00FFFFFF&} and
-Dialogue: 0,0:00:35.58,0:00:36.55,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}comment {\c&H0000E5FF&}PROTECTED{\c&H00FFFFFF&} if
-Dialogue: 0,0:00:36.56,0:00:37.24,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you {\c&H0000E5FF&}checked{\c&H00FFFFFF&} yours
-Dialogue: 0,0:00:37.25,0:00:38.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}which is {\c&H0000E5FF&}exactly{\c&H00FFFFFF&}
-Dialogue: 0,0:00:38.01,0:00:38.41,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}why
+Dialogue: 1,0:00:00.05,0:00:02.75,Headline,,0,0,0,,{\fad(150,150)}YOUR PHONE IS WATCHING
+Dialogue: 1,0:00:02.85,0:00:10.23,Headline,,0,0,0,,{\fad(150,150)}VIBRATIONS REVEAL EVERYTHING
+Dialogue: 1,0:00:10.33,0:00:15.36,Headline,,0,0,0,,{\fad(150,150)}THE HIDDEN THREAT
+Dialogue: 1,0:00:15.46,0:00:18.14,Headline,,0,0,0,,{\fad(150,150)}THE CREEPY PART
+Dialogue: 1,0:00:18.24,0:00:25.38,Headline,,0,0,0,,{\fad(150,150)}80% ACCURACY REACHED
+Dialogue: 1,0:00:25.48,0:00:32.17,Headline,,0,0,0,,{\fad(150,150)}SECURITY HOLE FOUND
+Dialogue: 1,0:00:32.27,0:00:37.80,Headline,,0,0,0,,{\fad(150,150)}DISABLE IT NOW
+Dialogue: 1,0:00:37.90,0:00:43.81,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 0,0:00:00.08,0:00:00.89,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}phone{\c&H00FFFFFF&} knows
+Dialogue: 0,0:00:01.01,0:00:01.87,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}every {\c&H0000E5FF&}single{\c&H00FFFFFF&} word
+Dialogue: 0,0:00:01.87,0:00:02.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you {\c&H0000E5FF&}type{\c&H00FFFFFF&}
+Dialogue: 0,0:00:02.90,0:00:03.85,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Every{\c&H00FFFFFF&} tap sends
+Dialogue: 0,0:00:03.91,0:00:05.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}a {\c&H0000E5FF&}micro-vibration{\c&H00FFFFFF&} through
+Dialogue: 0,0:00:05.13,0:00:05.74,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}frame{\c&H00FFFFFF&}
+Dialogue: 0,0:00:06.10,0:00:07.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}gyroscope{\c&H00FFFFFF&} tracks
+Dialogue: 0,0:00:07.35,0:00:08.45,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}these{\c&H00FFFFFF&} tiny tilts
+Dialogue: 0,0:00:08.46,0:00:09.85,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}with {\c&H0000E5FF&}terrifying{\c&H00FFFFFF&} precision
+Dialogue: 0,0:00:10.37,0:00:10.94,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You {\c&H0000E5FF&}worry{\c&H00FFFFFF&} about
+Dialogue: 0,0:00:10.95,0:00:11.71,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}camera{\c&H00FFFFFF&} but
+Dialogue: 0,0:00:11.72,0:00:12.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}these motion {\c&H0000E5FF&}sensors{\c&H00FFFFFF&}
+Dialogue: 0,0:00:12.83,0:00:13.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}are the {\c&H0000E5FF&}ultimate{\c&H00FFFFFF&}
+Dialogue: 0,0:00:13.77,0:00:15.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}invisible {\c&H0000E5FF&}keyloggers{\c&H00FFFFFF&}
+Dialogue: 0,0:00:15.50,0:00:16.38,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}But {\c&H0000E5FF&}here{\c&H00FFFFFF&} is
+Dialogue: 0,0:00:16.39,0:00:17.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the truly {\c&H0000E5FF&}creepy{\c&H00FFFFFF&}
+Dialogue: 0,0:00:17.35,0:00:17.75,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}part
+Dialogue: 0,0:00:18.26,0:00:19.64,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Researchers{\c&H00FFFFFF&} proved hackers
+Dialogue: 0,0:00:19.66,0:00:20.50,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}can {\c&H0000E5FF&}decode{\c&H00FFFFFF&} your
+Dialogue: 0,0:00:20.51,0:00:21.36,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}private{\c&H00FFFFFF&} PIN with
+Dialogue: 0,0:00:21.54,0:00:23.20,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}80%{\c&H00FFFFFF&} accuracy just
+Dialogue: 0,0:00:23.22,0:00:24.11,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}by {\c&H0000E5FF&}analyzing{\c&H00FFFFFF&} how
+Dialogue: 0,0:00:24.11,0:00:24.99,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}phone{\c&H00FFFFFF&} moves
+Dialogue: 0,0:00:25.53,0:00:26.58,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Many older {\c&H0000E5FF&}browsers{\c&H00FFFFFF&}
+Dialogue: 0,0:00:26.59,0:00:27.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}or {\c&H0000E5FF&}unpatched{\c&H00FFFFFF&} apps
+Dialogue: 0,0:00:27.70,0:00:28.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}still{\c&H00FFFFFF&} grant this
+Dialogue: 0,0:00:28.45,0:00:29.37,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}sensor{\c&H00FFFFFF&} access by
+Dialogue: 0,0:00:29.39,0:00:29.87,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}default
+Dialogue: 0,0:00:30.29,0:00:31.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}leaving your {\c&H0000E5FF&}passwords{\c&H00FFFFFF&}
+Dialogue: 0,0:00:31.14,0:00:31.78,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}exposed
+Dialogue: 0,0:00:32.30,0:00:32.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Check{\c&H00FFFFFF&} your site
+Dialogue: 0,0:00:32.89,0:00:34.46,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}settings{\c&H00FFFFFF&} and disable
+Dialogue: 0,0:00:34.46,0:00:35.97,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}motion access {\c&H0000E5FF&}immediately{\c&H00FFFFFF&}
+Dialogue: 0,0:00:36.03,0:00:36.58,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to {\c&H0000E5FF&}lock{\c&H00FFFFFF&} down
+Dialogue: 0,0:00:36.59,0:00:37.42,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}personal{\c&H00FFFFFF&} data
+Dialogue: 0,0:00:37.91,0:00:38.77,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Subscribe{\c&H00FFFFFF&} for more
+Dialogue: 0,0:00:38.78,0:00:39.95,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}cyber {\c&H0000E5FF&}secrets{\c&H00FFFFFF&} and
+Dialogue: 0,0:00:39.96,0:00:40.84,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} SAFE if
+Dialogue: 0,0:00:40.85,0:00:41.60,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you’ve {\c&H0000E5FF&}checked{\c&H00FFFFFF&} yours
+Dialogue: 0,0:00:41.62,0:00:42.39,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}which is {\c&H0000E5FF&}exactly{\c&H00FFFFFF&}
+Dialogue: 0,0:00:42.40,0:00:42.82,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}why
