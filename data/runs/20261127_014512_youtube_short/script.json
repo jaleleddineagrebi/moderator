@@ -1,0 +1,164 @@
+{
+  "title": "Your Phone Motion Sensor Is Reading Your Passwords",
+  "scenes": [
+    {
+      "vo": {
+        "en": "Your phone knows exactly what you type."
+      },
+      "on_screen": {
+        "en": "PHONE KNOWS EVERYTHING"
+      },
+      "visual": {
+        "description": "Extreme close-up of a man's thumb tapping on a glowing smartphone screen in a dark room.",
+        "search_terms": [
+          "man typing phone",
+          "smartphone glow",
+          "thumb scrolling"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "The Secret Keylogger",
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Every tap creates a unique micro-vibration that reveals your finger's exact position."
+      },
+      "on_screen": {
+        "en": "VIBRATIONS REVEAL ALL"
+      },
+      "visual": {
+        "description": "Macro shot of a drop of water creating ripples on a black surface to simulate vibrations.",
+        "search_terms": [
+          "water ripple macro",
+          "vibration effect",
+          "sound wave liquid"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Your gyroscope and accelerometer record these tilts without ever asking for security permissions."
+      },
+      "on_screen": {
+        "en": "SENSORS ARE WATCHING"
+      },
+      "visual": {
+        "description": "A 3D mechanical gyroscope spinning rapidly on a wooden table.",
+        "search_terms": [
+          "gyroscope spinning",
+          "mechanical device",
+          "precision instrument"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "Wait until you see how they steal it."
+      },
+      "on_screen": {
+        "en": "THE CREEPY PART"
+      },
+      "visual": {
+        "description": "A man in a hoodie looking suspiciously over his shoulder into the camera.",
+        "search_terms": [
+          "suspicious man",
+          "looking over shoulder",
+          "dark alleyway"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "How Hackers Listen",
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Researchers proved websites can decode your PIN with 80% accuracy just by tracking motion data."
+      },
+      "on_screen": {
+        "en": "80% ACCURACY"
+      },
+      "visual": {
+        "description": "Digital binary code scrolling vertically at high speed on a monitor.",
+        "search_terms": [
+          "hacker code green",
+          "digital binary",
+          "matrix data"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "Most mobile browsers grant sensor access by default, leaving your passwords wide open to hackers."
+      },
+      "on_screen": {
+        "en": "NO PERMISSION NEEDED"
+      },
+      "visual": {
+        "description": "A hand scrolling through a long list of technical settings on a phone screen.",
+        "search_terms": [
+          "scrolling phone settings",
+          "user interface tapping",
+          "digital menu"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Go to your browser settings and kill motion sensor permissions right now to stay safe."
+      },
+      "on_screen": {
+        "en": "DISABLE IT NOW"
+      },
+      "visual": {
+        "description": "A heavy metal vault door closing and locking securely.",
+        "search_terms": [
+          "metal vault door",
+          "locking padlock",
+          "bank vault"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "Protect Your Data",
+      "id": "scene_07"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for more cyber secrets and comment PROTECTED if you checked yours—which is exactly why..."
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "A man pointing directly at the camera with a confident smile.",
+        "search_terms": [
+          "man pointing camera",
+          "confident man",
+          "thumbs up"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_08"
+    }
+  ],
+  "idea_id": "gyroscope-keylogger-secret",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 36.4
+  }
+}
