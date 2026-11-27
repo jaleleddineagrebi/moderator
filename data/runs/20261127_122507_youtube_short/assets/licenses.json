@@ -3,70 +3,70 @@
     "scene": "scene_01",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-199545/",
-    "author": "Kaffeesüchtig",
+    "page": "https://pixabay.com/videos/id-212453/",
+    "author": "JoshuaWoroniecki",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
     "query": "man face close up",
-    "description": "A dramatic close-up of a man's face looking directly at the camera with an intense expression."
+    "description": "A dramatic close-up of a man looking straight into the camera with an intense expression."
   },
   {
     "scene": "scene_02",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-224387/",
-    "author": "Engin_Akyurt",
+    "page": "https://pixabay.com/videos/id-30470/",
+    "author": "mike-media",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "crossing fingers",
-    "description": "A clear shot of a man's hand slowly crossing the middle finger over the index finger."
+    "query": "crossing fingers close up",
+    "description": "Close-up of male hands slowly crossing the middle finger over the index finger."
   },
   {
     "scene": "scene_03",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-141673/",
-    "author": "WizArto",
+    "page": "https://pixabay.com/videos/id-42963/",
+    "author": "MaxMedyk",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "man closing eyes",
-    "description": "A man with his eyes closed using his crossed fingers to feel the tip of his nose."
+    "query": "man touching face",
+    "description": "A man with closed eyes touching his face in a dimly lit studio."
   },
   {
     "scene": "scene_04",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-45249/",
-    "author": "simovina",
+    "page": "https://pixabay.com/videos/id-159674/",
+    "author": "CreativeCommonsCentral",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "digital glitch effect",
-    "description": "Abstract digital glitch overlay moving rapidly across a dark background."
+    "query": "glowing circuit board",
+    "description": "Abstract macro shot of glowing blue neon circuits pulsating rapidly in pitch darkness."
   },
   {
     "scene": "scene_05",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-119178/",
-    "author": "MabelAmber",
+    "page": "https://pixabay.com/videos/id-353078/",
+    "author": "Mario_Krimer",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "two spheres rolling",
-    "description": "Two identical round objects or marbles rolling side by side on a table."
+    "query": "steel spheres rolling",
+    "description": "Two shiny steel spheres rolling smoothly across a dark wooden table in slow motion."
   },
   {
     "scene": "scene_06",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-30124/",
+    "page": "https://pixabay.com/videos/id-45926/",
     "author": "caelan",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "ancient greek statue",
-    "description": "A classic marble statue of an ancient philosopher in a dimly lit museum setting."
+    "query": "ancient greek sculpture",
+    "description": "A detailed camera pan over a classical Greek marble bust in an art museum."
   },
   {
     "scene": "scene_07",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-180728/",
-    "author": "E_S_Mayorga",
+    "page": "https://pixabay.com/videos/id-3168/",
+    "author": "Coverr-Free-Footage",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "hand phone tap",
-    "description": "A hand holding a smartphone and tapping a red notification icon."
+    "query": "male hand smartphone tap",
+    "description": "A male hand tapping a smartphone screen with glowing digital interface light."
   }
 ]

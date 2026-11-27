@@ -12,48 +12,48 @@ Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 1,0:00:00.05,0:00:01.91,Headline,,0,0,0,,{\fad(150,150)}YOU HAVE TWO NOSES
-Dialogue: 1,0:00:02.01,0:00:07.33,Headline,,0,0,0,,{\fad(150,150)}CROSS YOUR FINGERS
-Dialogue: 1,0:00:07.43,0:00:12.22,Headline,,0,0,0,,{\fad(150,150)}RUB YOUR NOSE
-Dialogue: 1,0:00:12.32,0:00:18.29,Headline,,0,0,0,,{\fad(150,150)}BRAIN IS PANICKING
-Dialogue: 1,0:00:18.39,0:00:24.81,Headline,,0,0,0,,{\fad(150,150)}DOUBLE SENSATION
-Dialogue: 1,0:00:24.91,0:00:30.30,Headline,,0,0,0,,{\fad(150,150)}ANCIENT BODY HACK
-Dialogue: 1,0:00:30.40,0:00:36.16,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
-Dialogue: 0,0:00:00.06,0:00:00.72,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You {\c&H0000E5FF&}actually{\c&H00FFFFFF&} have
-Dialogue: 0,0:00:00.73,0:00:01.46,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}two {\c&H0000E5FF&}noses{\c&H00FFFFFF&}
-Dialogue: 0,0:00:02.04,0:00:02.81,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Try this {\c&H0000E5FF&}right{\c&H00FFFFFF&}
-Dialogue: 0,0:00:02.82,0:00:03.48,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}now to {\c&H0000E5FF&}glitch{\c&H00FFFFFF&}
-Dialogue: 0,0:00:03.49,0:00:04.05,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}brain{\c&H00FFFFFF&}
-Dialogue: 0,0:00:04.42,0:00:05.14,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Cross your {\c&H0000E5FF&}middle{\c&H00FFFFFF&}
-Dialogue: 0,0:00:05.15,0:00:06.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}finger{\c&H00FFFFFF&} over your
-Dialogue: 0,0:00:06.09,0:00:06.95,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}index {\c&H0000E5FF&}finger{\c&H00FFFFFF&}
-Dialogue: 0,0:00:07.46,0:00:08.29,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Now {\c&H0000E5FF&}close{\c&H00FFFFFF&} your
-Dialogue: 0,0:00:08.30,0:00:09.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}eyes{\c&H00FFFFFF&} and rub
-Dialogue: 0,0:00:09.16,0:00:09.71,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the {\c&H0000E5FF&}very{\c&H00FFFFFF&} tip
-Dialogue: 0,0:00:09.72,0:00:10.29,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}of your {\c&H0000E5FF&}nose{\c&H00FFFFFF&}
-Dialogue: 0,0:00:10.30,0:00:10.99,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}between{\c&H00FFFFFF&} those two
-Dialogue: 0,0:00:11.00,0:00:11.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}crossed{\c&H00FFFFFF&} fingers
-Dialogue: 0,0:00:12.35,0:00:12.99,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Wait{\c&H00FFFFFF&} it gets
-Dialogue: 0,0:00:13.00,0:00:13.96,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}even {\c&H0000E5FF&}creepier{\c&H00FFFFFF&} once
-Dialogue: 0,0:00:13.97,0:00:14.94,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your brain {\c&H0000E5FF&}panics{\c&H00FFFFFF&}
-Dialogue: 0,0:00:15.31,0:00:16.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your mind {\c&H0000E5FF&}cannot{\c&H00FFFFFF&}
-Dialogue: 0,0:00:16.19,0:00:17.18,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}process{\c&H00FFFFFF&} these crossed
-Dialogue: 0,0:00:17.19,0:00:17.90,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}touch {\c&H0000E5FF&}points{\c&H00FFFFFF&}
-Dialogue: 0,0:00:18.41,0:00:19.21,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Because{\c&H00FFFFFF&} your fingers
-Dialogue: 0,0:00:19.22,0:00:20.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}are {\c&H0000E5FF&}reversed{\c&H00FFFFFF&} your
-Dialogue: 0,0:00:20.14,0:00:21.30,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}sensory{\c&H00FFFFFF&} map breaks
-Dialogue: 0,0:00:21.65,0:00:22.32,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}You’ll{\c&H00FFFFFF&} feel two
-Dialogue: 0,0:00:22.33,0:00:23.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}distinct{\c&H00FFFFFF&} noses under
-Dialogue: 0,0:00:23.62,0:00:24.41,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}fingertips{\c&H00FFFFFF&}
-Dialogue: 0,0:00:24.94,0:00:26.16,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Aristotle {\c&H0000E5FF&}discovered{\c&H00FFFFFF&} this
-Dialogue: 0,0:00:26.18,0:00:27.23,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}body hack {\c&H0000E5FF&}thousands{\c&H00FFFFFF&}
-Dialogue: 0,0:00:27.24,0:00:27.85,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}of {\c&H0000E5FF&}years{\c&H00FFFFFF&} ago
-Dialogue: 0,0:00:27.86,0:00:28.55,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}to {\c&H0000E5FF&}prove{\c&H00FFFFFF&} how
-Dialogue: 0,0:00:28.56,0:00:29.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}easily{\c&H00FFFFFF&} our senses
-Dialogue: 0,0:00:29.57,0:00:29.97,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}lie
-Dialogue: 0,0:00:30.40,0:00:31.52,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Subscribe for {\c&H0000E5FF&}tomorrow's{\c&H00FFFFFF&}
-Dialogue: 0,0:00:31.53,0:00:32.32,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}brain{\c&H00FFFFFF&} test and
-Dialogue: 0,0:00:32.33,0:00:33.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} DOUBLE if
-Dialogue: 0,0:00:33.14,0:00:33.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}this {\c&H0000E5FF&}worked{\c&H00FFFFFF&} on
-Dialogue: 0,0:00:33.71,0:00:34.20,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you {\c&H0000E5FF&}which{\c&H00FFFFFF&} is
-Dialogue: 0,0:00:34.22,0:00:35.17,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}exactly{\c&H00FFFFFF&} why
+Dialogue: 1,0:00:00.05,0:00:02.06,Headline,,0,0,0,,{\fad(150,150)}FEEL TWO NOSES
+Dialogue: 1,0:00:02.16,0:00:07.93,Headline,,0,0,0,,{\fad(150,150)}CROSS YOUR FINGERS
+Dialogue: 1,0:00:08.03,0:00:13.13,Headline,,0,0,0,,{\fad(150,150)}TOUCH YOUR NOSE
+Dialogue: 1,0:00:13.23,0:00:19.77,Headline,,0,0,0,,{\fad(150,150)}BRAIN IS PANICKING
+Dialogue: 1,0:00:19.87,0:00:25.36,Headline,,0,0,0,,{\fad(150,150)}DOUBLE SENSATION
+Dialogue: 1,0:00:25.46,0:00:31.31,Headline,,0,0,0,,{\fad(150,150)}ANCIENT BODY HACK
+Dialogue: 1,0:00:31.41,0:00:36.66,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 0,0:00:00.06,0:00:00.64,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}You can {\c&H0000E5FF&}actually{\c&H00FFFFFF&}
+Dialogue: 0,0:00:00.65,0:00:01.67,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}feel two {\c&H0000E5FF&}noses{\c&H00FFFFFF&}
+Dialogue: 0,0:00:02.19,0:00:02.94,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Try this {\c&H0000E5FF&}right{\c&H00FFFFFF&}
+Dialogue: 0,0:00:02.96,0:00:03.71,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}now to {\c&H0000E5FF&}glitch{\c&H00FFFFFF&}
+Dialogue: 0,0:00:03.72,0:00:04.65,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}sensory{\c&H00FFFFFF&} map
+Dialogue: 0,0:00:05.02,0:00:05.74,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Cross your {\c&H0000E5FF&}middle{\c&H00FFFFFF&}
+Dialogue: 0,0:00:05.75,0:00:06.68,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}finger{\c&H00FFFFFF&} over your
+Dialogue: 0,0:00:06.69,0:00:07.55,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}index {\c&H0000E5FF&}finger{\c&H00FFFFFF&}
+Dialogue: 0,0:00:08.06,0:00:09.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Now {\c&H0000E5FF&}close{\c&H00FFFFFF&} your eyes
+Dialogue: 0,0:00:09.16,0:00:10.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and {\c&H0000E5FF&}gently{\c&H00FFFFFF&} rub
+Dialogue: 0,0:00:10.01,0:00:10.41,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the tip of
+Dialogue: 0,0:00:10.41,0:00:11.25,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your nose {\c&H0000E5FF&}right{\c&H00FFFFFF&}
+Dialogue: 0,0:00:11.26,0:00:12.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}between{\c&H00FFFFFF&} those crossed
+Dialogue: 0,0:00:12.13,0:00:12.75,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}fingertips
+Dialogue: 0,0:00:13.26,0:00:13.90,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Wait{\c&H00FFFFFF&} it gets
+Dialogue: 0,0:00:13.92,0:00:14.89,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}even {\c&H0000E5FF&}creepier{\c&H00FFFFFF&} once
+Dialogue: 0,0:00:14.90,0:00:15.66,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}nervous{\c&H00FFFFFF&} system
+Dialogue: 0,0:00:15.67,0:00:16.20,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}panics
+Dialogue: 0,0:00:16.55,0:00:17.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your brain {\c&H0000E5FF&}cannot{\c&H00FFFFFF&}
+Dialogue: 0,0:00:17.44,0:00:18.61,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}process these {\c&H0000E5FF&}reversed{\c&H00FFFFFF&}
+Dialogue: 0,0:00:18.62,0:00:19.39,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}touch {\c&H0000E5FF&}signals{\c&H00FFFFFF&}
+Dialogue: 0,0:00:19.89,0:00:20.64,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Because{\c&H00FFFFFF&} your fingers
+Dialogue: 0,0:00:20.65,0:00:21.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}are {\c&H0000E5FF&}swapped{\c&H00FFFFFF&} your
+Dialogue: 0,0:00:21.72,0:00:23.05,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}sensory cortex {\c&H0000E5FF&}glitches{\c&H00FFFFFF&}
+Dialogue: 0,0:00:23.06,0:00:23.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}and {\c&H0000E5FF&}sends{\c&H00FFFFFF&} two
+Dialogue: 0,0:00:23.71,0:00:24.98,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}separate{\c&H00FFFFFF&} spatial signals
+Dialogue: 0,0:00:25.49,0:00:26.74,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Aristotle {\c&H0000E5FF&}discovered{\c&H00FFFFFF&} this
+Dialogue: 0,0:00:26.76,0:00:27.71,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}ancient{\c&H00FFFFFF&} body hack
+Dialogue: 0,0:00:27.73,0:00:28.47,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}thousands{\c&H00FFFFFF&} of years
+Dialogue: 0,0:00:28.48,0:00:29.17,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}ago to {\c&H0000E5FF&}show{\c&H00FFFFFF&}
+Dialogue: 0,0:00:29.18,0:00:30.08,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}how {\c&H0000E5FF&}easily{\c&H00FFFFFF&} touch
+Dialogue: 0,0:00:30.09,0:00:30.91,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}tricks{\c&H00FFFFFF&} the mind
+Dialogue: 0,0:00:31.44,0:00:32.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Subscribe for {\c&H0000E5FF&}tomorrow's{\c&H00FFFFFF&}
+Dialogue: 0,0:00:32.55,0:00:33.31,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}mind{\c&H00FFFFFF&} test and
+Dialogue: 0,0:00:33.32,0:00:34.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} DOUBLE if
+Dialogue: 0,0:00:34.13,0:00:34.70,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}this {\c&H0000E5FF&}worked{\c&H00FFFFFF&} on
+Dialogue: 0,0:00:34.72,0:00:35.23,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you {\c&H0000E5FF&}which{\c&H00FFFFFF&} is
+Dialogue: 0,0:00:35.24,0:00:35.67,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}why
