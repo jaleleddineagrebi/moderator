@@ -1,0 +1,72 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-88223/",
+    "author": "Digital_Expert",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hand pressing vending machine",
+    "description": "Close-up of a man's hand hovering indecisively over illuminated payment buttons on a modern vending machine."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-34/",
+    "author": "DistillVideos",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "pouring hot coffee steam",
+    "description": "Steam rising from freshly brewed black coffee being poured from an overhead kettle into a minimalist ceramic mug."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-50628/",
+    "author": "Hassas_Arts",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "counting paper money cash",
+    "description": "Fast-motion sliding of dollar bills across a polished dark counter next to commercial price tags."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-202368/",
+    "author": "Whitechappel79",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "dilated pupil macro eye",
+    "description": "Extreme macro close-up of a man's dilated pupil reflecting flashing digital data streams in darkness."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-225419/",
+    "author": "AttilaPergel",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "marble rolling maze",
+    "description": "Overhead mechanical shot of a steel ball bearing rapidly navigating through a complex wooden maze."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-200692/",
+    "author": "MagicTV",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "financial district skyscrapers",
+    "description": "Rapid upward tilt of towering financial district glass skyscrapers illuminated against a dusk skyline."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-19598/",
+    "author": "OrcaTec",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hand moving chess piece",
+    "description": "Overhead view of a man's hand sliding a gleaming gold token decisively across a dark slate chessboard."
+  }
+]
