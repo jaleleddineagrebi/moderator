@@ -1,0 +1,72 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-142370/",
+    "author": "u_50q7hv51at",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "male hand flat desk",
+    "description": "A close-up of a man's hand placed firmly and flat on a dark wooden desk."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-282995/",
+    "author": "Matthias_Groeneveld",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "bending middle finger",
+    "description": "Macro shot of a finger joint bending inward until the knuckle touches the table surface."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-64295/",
+    "author": "danydory",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "lifting pinky finger",
+    "description": "The hand strains as the person attempts to lift their small finger while others remain pinned."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-35005/",
+    "author": "gcova",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hand anatomy tendons",
+    "description": "A blue 3D medical animation showing the internal tendons of a human hand."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-214801/",
+    "author": "Peter_Hanzo",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "intertwined thick ropes",
+    "description": "Two heavy industrial ropes intertwined and pulling against each other under tension."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-217092/",
+    "author": "Matthias_Groeneveld",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "mechanical bolt locking",
+    "description": "A heavy metal mechanical bolt snapping into a locked position on a machine."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-3172/",
+    "author": "Coverr-Free-Footage",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "typing on smartphone",
+    "description": "A man's thumb scrolling through a phone screen and tapping the comment section."
+  }
+]
