@@ -1,38 +1,38 @@
 {
-  "title": "The Paralyzed Pinky Glitch",
+  "title": "The Paralyzed Ring Finger Glitch",
   "scenes": [
     {
       "vo": {
-        "en": "You can’t move your pinky. Ready?"
+        "en": "You can’t move your ring finger. Don’t believe me? Put your hand flat on a table right now."
       },
       "on_screen": {
-        "en": "CAN'T MOVE PINKY"
+        "en": "YOU CAN'T MOVE IT"
       },
       "visual": {
-        "description": "A close-up of a man's hand placed firmly and flat on a dark wooden desk.",
+        "description": "A close-up shot of a man's hand pressing firmly onto a dark, polished wooden surface.",
         "search_terms": [
-          "male hand flat desk",
-          "man hand wooden table",
-          "palm on surface"
+          "male hand table",
+          "hand resting flat",
+          "human palm surface"
         ],
         "prefer": "video"
       },
-      "chapter": "",
+      "chapter": "The Challenge",
       "id": "scene_01"
     },
     {
       "vo": {
-        "en": "Put your hand flat and fold your middle finger all the way under."
+        "en": "Take your middle finger and fold it under until the knuckle touches the desk."
       },
       "on_screen": {
         "en": "FOLD MIDDLE FINGER"
       },
       "visual": {
-        "description": "Macro shot of a finger joint bending inward until the knuckle touches the table surface.",
+        "description": "Macro view of a finger bending at the joint to tuck underneath the palm.",
         "search_terms": [
-          "bending middle finger",
-          "hand knuckle surface",
-          "finger joint folding"
+          "folding finger knuckle",
+          "finger joint bend",
+          "close up hand"
         ],
         "prefer": "video"
       },
@@ -41,17 +41,17 @@
     },
     {
       "vo": {
-        "en": "Keep your other fingers pressed down and try to lift your pinky finger."
+        "en": "Press your other fingers down. Now, try to lift only your ring finger. It won't budge."
       },
       "on_screen": {
-        "en": "TRY LIFTING IT"
+        "en": "TRY TO LIFT"
       },
       "visual": {
-        "description": "The hand strains as the person attempts to lift their small finger while others remain pinned.",
+        "description": "The hand visible on the table, straining and shaking slightly as the person attempts to lift the ring finger.",
         "search_terms": [
-          "lifting pinky finger",
-          "straining hand muscle",
-          "shaking finger effort"
+          "hand muscle strain",
+          "shaking fingers",
+          "hand effort"
         ],
         "prefer": "video"
       },
@@ -60,36 +60,36 @@
     },
     {
       "vo": {
-        "en": "But here is the creepy part. Your hand is physically locked."
+        "en": "But here’s the creepy part—your hand is physically locked. Your brain is shouting, but your body isn't listening."
       },
       "on_screen": {
-        "en": "HAND IS LOCKED"
+        "en": "YOUR HAND IS LOCKED"
       },
       "visual": {
-        "description": "A blue 3D medical animation showing the internal tendons of a human hand.",
+        "description": "An abstract blue digital animation of neural pathways and brain activity firing rapidly.",
         "search_terms": [
-          "hand anatomy tendons",
-          "3d skeletal hand",
-          "medical muscle animation"
+          "neural pathway brain",
+          "neurons firing animation",
+          "cognitive process"
         ],
         "prefer": "video"
       },
-      "chapter": "",
+      "chapter": "The Science",
       "id": "scene_04"
     },
     {
       "vo": {
-        "en": "Your ring and pinky fingers are physically linked by a single shared tendon."
+        "en": "It’s a biological glitch. Your middle and ring fingers are actually tethered by a shared tendon."
       },
       "on_screen": {
         "en": "SHARED TENDONS"
       },
       "visual": {
-        "description": "Two heavy industrial ropes intertwined and pulling against each other under tension.",
+        "description": "Two heavy industrial steel cables pulling tight against one another under extreme tension.",
         "search_terms": [
-          "intertwined thick ropes",
-          "nautical rope tension",
-          "connected metal links"
+          "steel cables tension",
+          "heavy rope link",
+          "industrial chain"
         ],
         "prefer": "video"
       },
@@ -98,17 +98,17 @@
     },
     {
       "vo": {
-        "en": "When that middle finger is pinned, it anchors the connection, trapping your pinky."
+        "en": "When the middle finger is pinned, it anchors that connection, trapping the ring finger in place."
       },
       "on_screen": {
-        "en": "TENDON ANCHOR"
+        "en": "BIOLOGICAL ANCHOR"
       },
       "visual": {
-        "description": "A heavy metal mechanical bolt snapping into a locked position on a machine.",
+        "description": "A heavy metal padlock snapping shut or an industrial bolt locking into place.",
         "search_terms": [
-          "mechanical bolt locking",
-          "industrial latch closing",
-          "metal clamp shut"
+          "padlock locking shut",
+          "ship anchor dropping",
+          "heavy metal bolt"
         ],
         "prefer": "video"
       },
@@ -117,17 +117,17 @@
     },
     {
       "vo": {
-        "en": "Only the rare one percent can move it. Subscribe for daily brain tests and comment YES if it worked, which is exactly why"
+        "en": "Only the top one percent can bypass this. Subscribe for daily brain tests and comment YES if you failed, which is exactly why"
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "A man's thumb scrolling through a phone screen and tapping the comment section.",
+        "description": "A person's hand interacting with a smartphone, quickly tapping the screen to leave a comment.",
         "search_terms": [
           "typing on smartphone",
-          "hand using mobile app",
-          "tapping phone screen"
+          "phone screen interaction",
+          "scrolling feed"
         ],
         "prefer": "video"
       },
@@ -140,6 +140,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 33.5
+    "en": 44.0
   }
 }
