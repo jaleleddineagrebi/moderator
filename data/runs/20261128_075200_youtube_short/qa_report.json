@@ -1,12 +1,12 @@
 {
   "passed": false,
-  "revision_round": 1,
+  "revision_round": 2,
   "checks": [
     {
       "check": "length",
       "lang": "en",
       "ok": true,
-      "detail": "46.3s (must be under 60s; target 32-50s)",
+      "detail": "43.7s (must be under 60s; target 32-50s)",
       "send_to": null,
       "severity": "blocker"
     },
@@ -14,7 +14,7 @@
       "check": "target length",
       "lang": "en",
       "ok": true,
-      "detail": "46.3s",
+      "detail": "43.7s",
       "send_to": null,
       "severity": "minor"
     },
@@ -53,16 +53,16 @@
     {
       "check": "hook timing",
       "lang": "en",
-      "ok": false,
-      "detail": "scene_01 spoken in 6.9s (target <= 4s)",
-      "send_to": "script",
-      "severity": "blocker"
+      "ok": true,
+      "detail": "scene_01 spoken in 2.5s (target <= 4s)",
+      "send_to": null,
+      "severity": "minor"
     },
     {
       "check": "caption sync",
       "lang": "en",
       "ok": true,
-      "detail": "122 words, 44 caption events",
+      "detail": "116 words, 42 caption events",
       "send_to": null,
       "severity": "blocker"
     },
@@ -94,25 +94,9 @@
       "check": "accuracy review",
       "lang": "en",
       "ok": false,
-      "detail": "The claim that only the top one percent can bypass this is a fabricated statistic. Change to Only a rare few can bypass this to maintain integrity.",
+      "detail": "The script claims the brain is losing control of the body in scene 04. This is factually incorrect as it is a mechanical limitation of the extensor digitorum communis and the extensor indicis tendons, not a neurological failure. Fix: Change 'how your brain is actually losing control' to 'how your anatomy actually locks you out' or 'how your body is actually built to fail this'.",
       "send_to": "script",
       "severity": "blocker"
-    },
-    {
-      "check": "accuracy review",
-      "lang": "en",
-      "ok": false,
-      "detail": "The ring and middle fingers share a common extensor muscle but are connected by intertendinous bridges (juncturae tendinum) rather than one single shared tendon. Change shared tendon to shared connection or intertendinous bridges for accuracy.",
-      "send_to": "script",
-      "severity": "minor"
-    },
-    {
-      "check": "metadata review",
-      "lang": "en",
-      "ok": false,
-      "detail": "The tag hidden power dynamics is irrelevant to the video content about biology/finger anatomy. Remove it.",
-      "send_to": "packaging",
-      "severity": "minor"
     },
     {
       "check": "people rule",
