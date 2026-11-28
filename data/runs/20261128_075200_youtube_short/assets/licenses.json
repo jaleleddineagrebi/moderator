@@ -3,70 +3,70 @@
     "scene": "scene_01",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-142370/",
-    "author": "u_50q7hv51at",
+    "page": "https://pixabay.com/videos/id-2339/",
+    "author": "Life-Of-Vids",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "male hand flat desk",
-    "description": "A close-up of a man's hand placed firmly and flat on a dark wooden desk."
+    "query": "male hand table",
+    "description": "A close-up shot of a man's hand pressing firmly onto a dark, polished wooden surface."
   },
   {
     "scene": "scene_02",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-282995/",
-    "author": "Matthias_Groeneveld",
+    "page": "https://pixabay.com/videos/id-3501/",
+    "author": "Nova_27",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "bending middle finger",
-    "description": "Macro shot of a finger joint bending inward until the knuckle touches the table surface."
+    "query": "folding finger knuckle",
+    "description": "Macro view of a finger bending at the joint to tuck underneath the palm."
   },
   {
     "scene": "scene_03",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-64295/",
-    "author": "danydory",
+    "page": "https://pixabay.com/videos/id-40334/",
+    "author": "Integrofilms",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "lifting pinky finger",
-    "description": "The hand strains as the person attempts to lift their small finger while others remain pinned."
+    "query": "hand muscle strain",
+    "description": "The hand visible on the table, straining and shaking slightly as the person attempts to lift the ring finger."
   },
   {
     "scene": "scene_04",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-35005/",
-    "author": "gcova",
+    "page": "https://pixabay.com/videos/id-169560/",
+    "author": "Matthias_Groeneveld",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "hand anatomy tendons",
-    "description": "A blue 3D medical animation showing the internal tendons of a human hand."
+    "query": "neural pathway brain",
+    "description": "An abstract blue digital animation of neural pathways and brain activity firing rapidly."
   },
   {
     "scene": "scene_05",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-214801/",
-    "author": "Peter_Hanzo",
+    "page": "https://pixabay.com/videos/id-375838/",
+    "author": "Matthias_Groeneveld",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "intertwined thick ropes",
-    "description": "Two heavy industrial ropes intertwined and pulling against each other under tension."
+    "query": "steel cables tension",
+    "description": "Two heavy industrial steel cables pulling tight against one another under extreme tension."
   },
   {
     "scene": "scene_06",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-217092/",
+    "page": "https://pixabay.com/videos/id-217104/",
     "author": "Matthias_Groeneveld",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
-    "query": "mechanical bolt locking",
-    "description": "A heavy metal mechanical bolt snapping into a locked position on a machine."
+    "query": "padlock locking shut",
+    "description": "A heavy metal padlock snapping shut or an industrial bolt locking into place."
   },
   {
     "scene": "scene_07",
     "tier": "stock_video",
     "provider": "pixabay",
-    "page": "https://pixabay.com/videos/id-3172/",
+    "page": "https://pixabay.com/videos/id-103/",
     "author": "Coverr-Free-Footage",
     "license": "Pixabay Content License (free commercial use, no attribution required)",
     "query": "typing on smartphone",
-    "description": "A man's thumb scrolling through a phone screen and tapping the comment section."
+    "description": "A person's hand interacting with a smartphone, quickly tapping the screen to leave a comment."
   }
 ]
