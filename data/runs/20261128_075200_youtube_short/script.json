@@ -3,17 +3,17 @@
   "scenes": [
     {
       "vo": {
-        "en": "You can’t move your ring finger. Don’t believe me? Put your hand flat on a table right now."
+        "en": "You can’t move your ring finger."
       },
       "on_screen": {
         "en": "YOU CAN'T MOVE IT"
       },
       "visual": {
-        "description": "A close-up shot of a man's hand pressing firmly onto a dark, polished wooden surface.",
+        "description": "A close-up shot of a man's hand resting palm-down on a dark wooden table.",
         "search_terms": [
-          "male hand table",
-          "hand resting flat",
-          "human palm surface"
+          "male hand flat",
+          "dark wood surface",
+          "resting palm"
         ],
         "prefer": "video"
       },
@@ -22,17 +22,17 @@
     },
     {
       "vo": {
-        "en": "Take your middle finger and fold it under until the knuckle touches the desk."
+        "en": "Don’t believe me? Put your hand flat on a table right now. Fold your middle finger under like this."
       },
       "on_screen": {
         "en": "FOLD MIDDLE FINGER"
       },
       "visual": {
-        "description": "Macro view of a finger bending at the joint to tuck underneath the palm.",
+        "description": "Macro shot of a finger bending at the knuckle to tuck underneath the palm against the desk.",
         "search_terms": [
-          "folding finger knuckle",
-          "finger joint bend",
-          "close up hand"
+          "tucking middle finger",
+          "hand knuckle flex",
+          "joint close-up"
         ],
         "prefer": "video"
       },
@@ -41,17 +41,17 @@
     },
     {
       "vo": {
-        "en": "Press your other fingers down. Now, try to lift only your ring finger. It won't budge."
+        "en": "Keep your other fingers pressed down. Now, try to lift only your ring finger. It won’t move an inch."
       },
       "on_screen": {
         "en": "TRY TO LIFT"
       },
       "visual": {
-        "description": "The hand visible on the table, straining and shaking slightly as the person attempts to lift the ring finger.",
+        "description": "A hand straining on a table, with visible muscle tremors as they try to lift the ring finger.",
         "search_terms": [
-          "hand muscle strain",
-          "shaking fingers",
-          "hand effort"
+          "hand shaking effort",
+          "finger struggling lift",
+          "muscle tension"
         ],
         "prefer": "video"
       },
@@ -60,17 +60,17 @@
     },
     {
       "vo": {
-        "en": "But here’s the creepy part—your hand is physically locked. Your brain is shouting, but your body isn't listening."
+        "en": "Wait until you realize how your brain is actually losing control of your body right now."
       },
       "on_screen": {
-        "en": "YOUR HAND IS LOCKED"
+        "en": "BRAIN IS LOCKED"
       },
       "visual": {
-        "description": "An abstract blue digital animation of neural pathways and brain activity firing rapidly.",
+        "description": "A high-tech digital animation of blue neural pathways firing inside a human brain silhouette.",
         "search_terms": [
-          "neural pathway brain",
-          "neurons firing animation",
-          "cognitive process"
+          "brain neurons firing",
+          "neural network digital",
+          "blue cognitive pulses"
         ],
         "prefer": "video"
       },
@@ -79,17 +79,17 @@
     },
     {
       "vo": {
-        "en": "It’s a biological glitch. Your middle and ring fingers are actually tethered by a shared tendon."
+        "en": "This is a biological glitch. Your middle and ring fingers share a single connected tendon path."
       },
       "on_screen": {
-        "en": "SHARED TENDONS"
+        "en": "SHARED TENDON LINK"
       },
       "visual": {
-        "description": "Two heavy industrial steel cables pulling tight against one another under extreme tension.",
+        "description": "Macro shot of thick industrial steel cables intertwined and pulling tight under tension.",
         "search_terms": [
-          "steel cables tension",
-          "heavy rope link",
-          "industrial chain"
+          "heavy steel cables",
+          "industrial chain linked",
+          "metallic wire tension"
         ],
         "prefer": "video"
       },
@@ -98,17 +98,17 @@
     },
     {
       "vo": {
-        "en": "When the middle finger is pinned, it anchors that connection, trapping the ring finger in place."
+        "en": "When the middle finger is tucked, it acts as a physical anchor, locking your ring finger in place."
       },
       "on_screen": {
         "en": "BIOLOGICAL ANCHOR"
       },
       "visual": {
-        "description": "A heavy metal padlock snapping shut or an industrial bolt locking into place.",
+        "description": "A heavy vintage iron padlock snapping shut or a large metal bolt sliding into a locked position.",
         "search_terms": [
-          "padlock locking shut",
-          "ship anchor dropping",
-          "heavy metal bolt"
+          "iron padlock closing",
+          "metal bolt locking",
+          "secure latch shut"
         ],
         "prefer": "video"
       },
@@ -117,17 +117,17 @@
     },
     {
       "vo": {
-        "en": "Only the top one percent can bypass this. Subscribe for daily brain tests and comment YES if you failed, which is exactly why"
+        "en": "Only a rare few can bypass this. Subscribe for daily brain tests and comment YES if you failed, which is exactly why"
       },
       "on_screen": {
         "en": "SUBSCRIBE 🔔"
       },
       "visual": {
-        "description": "A person's hand interacting with a smartphone, quickly tapping the screen to leave a comment.",
+        "description": "A close-up of a hand holding a smartphone, thumb tapping the screen to interact.",
         "search_terms": [
-          "typing on smartphone",
-          "phone screen interaction",
-          "scrolling feed"
+          "smartphone hand typing",
+          "phone screen thumb",
+          "scrolling app feed"
         ],
         "prefer": "video"
       },
@@ -140,6 +140,6 @@
     "en"
   ],
   "estimated_seconds": {
-    "en": 44.0
+    "en": 42.2
   }
 }
