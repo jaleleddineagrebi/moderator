@@ -432,7 +432,7 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 17,
+      "progress": 54,
       "started_at": "2026-11-28T07:53:05+00:00",
       "ended_at": null,
       "attempt": 1,
@@ -464,6 +464,21 @@
           "ts": "2026-11-28T07:53:15+00:00",
           "level": "info",
           "msg": "scene_01: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-28T07:53:35+00:00",
+          "level": "info",
+          "msg": "scene_02: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-28T07:53:36+00:00",
+          "level": "info",
+          "msg": "scene_03: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-28T07:53:43+00:00",
+          "level": "info",
+          "msg": "scene_04: stock_video (pixabay)"
         }
       ],
       "errors": [],
@@ -477,10 +492,10 @@
         "script"
       ],
       "checkpoint": null,
-      "status": "running",
-      "progress": 0,
+      "status": "done",
+      "progress": 100,
       "started_at": "2026-11-28T07:53:05+00:00",
-      "ended_at": null,
+      "ended_at": "2026-11-28T07:53:40+00:00",
       "attempt": 1,
       "retries": 0,
       "max_retries": 2,
@@ -494,7 +509,9 @@
           "en": "en-GB-RyanNeural"
         }
       },
-      "outputs": {},
+      "outputs": {
+        "timings_en": "timings_en.json"
+      },
       "logs": [
         {
           "ts": "2026-11-28T07:53:05+00:00",
@@ -505,6 +522,21 @@
           "ts": "2026-11-28T07:53:05+00:00",
           "level": "info",
           "msg": "Narrating en with en-GB-RyanNeural"
+        },
+        {
+          "ts": "2026-11-28T07:53:21+00:00",
+          "level": "info",
+          "msg": "en voiceover: 33.8s"
+        },
+        {
+          "ts": "2026-11-28T07:53:21+00:00",
+          "level": "info",
+          "msg": "Generating an ambient music bed (no library tracks): progression #6, transpose -2, 5s chords"
+        },
+        {
+          "ts": "2026-11-28T07:53:40+00:00",
+          "level": "info",
+          "msg": "Finished"
         }
       ],
       "errors": [],
@@ -635,7 +667,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-28T07:53:20+00:00",
+    "exported_at": "2026-11-28T07:53:44+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/46123104233"
   }
