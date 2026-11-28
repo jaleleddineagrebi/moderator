@@ -1,0 +1,58 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Noto Sans Black,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,9,3,2,70,70,560,1
+Style: Headline,Noto Sans Black,84,&H0000E5FF,&H0000E5FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,6,2,8,70,70,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.05,0:00:02.94,Headline,,0,0,0,,{\fad(150,150)}FLIP YOUR PHONE NOW
+Dialogue: 1,0:00:03.04,0:00:08.75,Headline,,0,0,0,,{\fad(150,150)}SENSORS ARE LEAKING
+Dialogue: 1,0:00:08.85,0:00:15.32,Headline,,0,0,0,,{\fad(150,150)}TRACKING EVERY TAP
+Dialogue: 1,0:00:15.42,0:00:22.20,Headline,,0,0,0,,{\fad(150,150)}THEY SEE PASSWORDS
+Dialogue: 1,0:00:22.30,0:00:28.65,Headline,,0,0,0,,{\fad(150,150)}THE HACKER’S BLUEPRINT
+Dialogue: 1,0:00:28.75,0:00:35.10,Headline,,0,0,0,,{\fad(150,150)}NO PERMISSION NEEDED
+Dialogue: 1,0:00:35.20,0:00:42.09,Headline,,0,0,0,,{\fad(150,150)}SUBSCRIBE 🔔
+Dialogue: 0,0:00:00.05,0:00:01.34,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Stop {\c&H0000E5FF&}typing{\c&H00FFFFFF&} until
+Dialogue: 0,0:00:01.35,0:00:01.97,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you {\c&H0000E5FF&}flip{\c&H00FFFFFF&} your
+Dialogue: 0,0:00:01.99,0:00:02.50,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}phone
+Dialogue: 0,0:00:03.09,0:00:04.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Your {\c&H0000E5FF&}phone’s{\c&H00FFFFFF&} motion
+Dialogue: 0,0:00:04.02,0:00:05.14,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}sensors{\c&H00FFFFFF&} are leaking
+Dialogue: 0,0:00:05.16,0:00:06.15,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}private{\c&H00FFFFFF&} data
+Dialogue: 0,0:00:06.17,0:00:07.23,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}every {\c&H0000E5FF&}single{\c&H00FFFFFF&} time
+Dialogue: 0,0:00:07.24,0:00:07.74,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}you {\c&H0000E5FF&}tilt{\c&H00FFFFFF&} the
+Dialogue: 0,0:00:07.75,0:00:08.30,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}screen
+Dialogue: 0,0:00:08.89,0:00:09.99,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Hackers{\c&H00FFFFFF&} use your
+Dialogue: 0,0:00:10.01,0:00:11.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}accelerometer{\c&H00FFFFFF&} to measure
+Dialogue: 0,0:00:11.55,0:00:12.83,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}the tiny {\c&H0000E5FF&}vibrations{\c&H00FFFFFF&}
+Dialogue: 0,0:00:12.84,0:00:13.46,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}made{\c&H00FFFFFF&} by your
+Dialogue: 0,0:00:13.47,0:00:14.39,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}fingers{\c&H00FFFFFF&} as you
+Dialogue: 0,0:00:14.40,0:00:14.88,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}type
+Dialogue: 0,0:00:15.46,0:00:16.27,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Wait {\c&H0000E5FF&}until{\c&H00FFFFFF&} you
+Dialogue: 0,0:00:16.28,0:00:17.07,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}see the {\c&H0000E5FF&}creepy{\c&H00FFFFFF&}
+Dialogue: 0,0:00:17.09,0:00:17.56,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}part
+Dialogue: 0,0:00:18.23,0:00:19.28,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}they can {\c&H0000E5FF&}reconstruct{\c&H00FFFFFF&}
+Dialogue: 0,0:00:19.29,0:00:20.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}your {\c&H0000E5FF&}passwords{\c&H00FFFFFF&} with
+Dialogue: 0,0:00:20.35,0:00:21.75,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}eighty percent {\c&H0000E5FF&}accuracy{\c&H00FFFFFF&}
+Dialogue: 0,0:00:22.33,0:00:23.30,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}Rotate{\c&H00FFFFFF&} your phone
+Dialogue: 0,0:00:23.31,0:00:24.65,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}sideways{\c&H00FFFFFF&} right now
+Dialogue: 0,0:00:25.08,0:00:26.00,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}That {\c&H0000E5FF&}movement{\c&H00FFFFFF&} is
+Dialogue: 0,0:00:26.01,0:00:27.05,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}exactly{\c&H00FFFFFF&} how they
+Dialogue: 0,0:00:27.06,0:00:28.22,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}map your {\c&H0000E5FF&}keyboard{\c&H00FFFFFF&}
+Dialogue: 0,0:00:28.79,0:00:30.12,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Most mobile {\c&H0000E5FF&}browsers{\c&H00FFFFFF&}
+Dialogue: 0,0:00:30.14,0:00:31.33,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}give {\c&H0000E5FF&}websites{\c&H00FFFFFF&} full
+Dialogue: 0,0:00:31.35,0:00:32.19,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}access{\c&H00FFFFFF&} to these
+Dialogue: 0,0:00:32.21,0:00:33.54,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}sensors{\c&H00FFFFFF&} without ever
+Dialogue: 0,0:00:33.55,0:00:34.67,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}asking your {\c&H0000E5FF&}permission{\c&H00FFFFFF&}
+Dialogue: 0,0:00:35.24,0:00:36.67,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}Subscribe for {\c&H0000E5FF&}tomorrow's{\c&H00FFFFFF&}
+Dialogue: 0,0:00:36.68,0:00:37.58,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}brain{\c&H00FFFFFF&} test and
+Dialogue: 0,0:00:37.59,0:00:38.43,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}comment{\c&H00FFFFFF&} your phone
+Dialogue: 0,0:00:38.44,0:00:39.09,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}model{\c&H00FFFFFF&} for a
+Dialogue: 0,0:00:39.10,0:00:40.23,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}{\c&H0000E5FF&}security{\c&H00FFFFFF&} rating which
+Dialogue: 0,0:00:40.24,0:00:41.03,Caption,,0,0,0,,{\fscx92\fscy92\t(0,90,\fscx100\fscy100)}is why you
