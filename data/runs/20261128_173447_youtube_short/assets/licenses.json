@@ -1,0 +1,72 @@
+[
+  {
+    "scene": "scene_01",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-3172/",
+    "author": "Coverr-Free-Footage",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hand rotating smartphone",
+    "description": "A close-up of a man's hand rotating a smartphone from vertical to horizontal orientation."
+  },
+  {
+    "scene": "scene_02",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-226955/",
+    "author": "Pradipsingh00",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "cyber data stream",
+    "description": "Abstract blue and yellow data streams flowing rapidly across a dark background."
+  },
+  {
+    "scene": "scene_03",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-359535/",
+    "author": "Kanenori",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "male hands typing",
+    "description": "Extreme close-up of male fingers tapping rapidly on a smartphone keyboard."
+  },
+  {
+    "scene": "scene_04",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-26793/",
+    "author": "SamuelFJohanns",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "hacker silhouette dark",
+    "description": "A silhouette of a man in a dark room illuminated only by the glow of a computer screen."
+  },
+  {
+    "scene": "scene_05",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-133508/",
+    "author": "Marsel_beijing",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "oscilloscope wave",
+    "description": "An oscilloscope showing green sound waves or vibration patterns moving across a grid."
+  },
+  {
+    "scene": "scene_06",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-51803/",
+    "author": "davidargeta",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "digital padlock icon",
+    "description": "A digital padlock icon on a screen flickering red as it is bypassed."
+  },
+  {
+    "scene": "scene_07",
+    "tier": "stock_video",
+    "provider": "pixabay",
+    "page": "https://pixabay.com/videos/id-35594/",
+    "author": "pnepalensis",
+    "license": "Pixabay Content License (free commercial use, no attribution required)",
+    "query": "serious man portrait",
+    "description": "A serious-looking man pointing directly at the camera in a modern tech-lit environment."
+  }
+]
