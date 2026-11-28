@@ -1,0 +1,28 @@
+# Video ideas: Mind Hacks, AI Secrets, Bizarre Body Science & Hidden Power Dynamics
+
+## 1. Your Phone Motion Sensor Is a Hidden Spy
+Explain that malicious websites use your phone's tilt sensors to reconstruct what you're typing. Includes a challenge for the viewer to rotate their phone to see a visual simulation of the data flow, prompting them to comment their phone model for a 'security rating'.
+
+Hook (en): Stop typing until you flip your phone.
+Why now: Privacy-focused tech shorts are peaking due to recent zero-click exploit news. This specific angle uses the 'Interactive' archetype by making the viewer physically move their device, boosting retention.
+Keywords: phone tracking, smartphone privacy, accelerometer hack, cyber security tips, hidden tech secrets
+- Newcastle University Research on Accelerometer Keystroke Logging
+- MIT Technology Review: How sensors leak your data
+
+## 2. The Creepy Way AI Detects Lies
+Reveals that your pupils dilate by 0.5mm when you lie, and phone cameras can now track this in real-time. Challenges the viewer to stare into their camera lens and blink twice to 'recalibrate', which forces a 100%+ rewatch as they try the test.
+
+Hook (en): Look into your camera right now.
+Why now: The 'Bizarre Body Science' combined with 'AI Secret' is a high-velocity hybrid. Viewers are obsessed with how AI interacts with their biological responses.
+Keywords: AI lie detection, pupil dilation, body language secrets, privacy alerts, future tech
+- Journal of Nonverbal Behavior: Pupil Dilation and Deception
+- Biometric Research on Eye-Tracking AI
+
+## 3. Why You Shouldn't Book Flights with Low Battery
+Explains how travel apps use your battery percentage to detect desperation and raise prices. Forces engagement by asking viewers to 'Type your battery percentage' in the comments to see if they're currently being targeted for higher prices.
+
+Hook (en): Never book flights with low battery.
+Why now: The 'Hidden Money Traps' pillar combined with a 'forbidden' tech secret triggers immediate urgency and high comment volume via the battery percentage call-to-action.
+Keywords: money traps, travel hacks, battery percentage trick, hidden price surges, digital survival
+- Princeton University Study on Dark Patterns in E-commerce
+- Data Privacy Lab: Battery Status API Exploitation
