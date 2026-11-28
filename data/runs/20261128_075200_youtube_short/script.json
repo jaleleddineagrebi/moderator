@@ -1,0 +1,145 @@
+{
+  "title": "The Paralyzed Pinky Glitch",
+  "scenes": [
+    {
+      "vo": {
+        "en": "You can’t move your pinky. Ready?"
+      },
+      "on_screen": {
+        "en": "CAN'T MOVE PINKY"
+      },
+      "visual": {
+        "description": "A close-up of a man's hand placed firmly and flat on a dark wooden desk.",
+        "search_terms": [
+          "male hand flat desk",
+          "man hand wooden table",
+          "palm on surface"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Put your hand flat and fold your middle finger all the way under."
+      },
+      "on_screen": {
+        "en": "FOLD MIDDLE FINGER"
+      },
+      "visual": {
+        "description": "Macro shot of a finger joint bending inward until the knuckle touches the table surface.",
+        "search_terms": [
+          "bending middle finger",
+          "hand knuckle surface",
+          "finger joint folding"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Keep your other fingers pressed down and try to lift your pinky finger."
+      },
+      "on_screen": {
+        "en": "TRY LIFTING IT"
+      },
+      "visual": {
+        "description": "The hand strains as the person attempts to lift their small finger while others remain pinned.",
+        "search_terms": [
+          "lifting pinky finger",
+          "straining hand muscle",
+          "shaking finger effort"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "But here is the creepy part. Your hand is physically locked."
+      },
+      "on_screen": {
+        "en": "HAND IS LOCKED"
+      },
+      "visual": {
+        "description": "A blue 3D medical animation showing the internal tendons of a human hand.",
+        "search_terms": [
+          "hand anatomy tendons",
+          "3d skeletal hand",
+          "medical muscle animation"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Your ring and pinky fingers are physically linked by a single shared tendon."
+      },
+      "on_screen": {
+        "en": "SHARED TENDONS"
+      },
+      "visual": {
+        "description": "Two heavy industrial ropes intertwined and pulling against each other under tension.",
+        "search_terms": [
+          "intertwined thick ropes",
+          "nautical rope tension",
+          "connected metal links"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "When that middle finger is pinned, it anchors the connection, trapping your pinky."
+      },
+      "on_screen": {
+        "en": "TENDON ANCHOR"
+      },
+      "visual": {
+        "description": "A heavy metal mechanical bolt snapping into a locked position on a machine.",
+        "search_terms": [
+          "mechanical bolt locking",
+          "industrial latch closing",
+          "metal clamp shut"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Only the rare one percent can move it. Subscribe for daily brain tests and comment YES if it worked, which is exactly why"
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "A man's thumb scrolling through a phone screen and tapping the comment section.",
+        "search_terms": [
+          "typing on smartphone",
+          "hand using mobile app",
+          "tapping phone screen"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "paralyzed-pinky-glitch",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 33.5
+  }
+}
