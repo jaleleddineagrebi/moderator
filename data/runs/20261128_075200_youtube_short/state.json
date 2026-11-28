@@ -475,7 +475,7 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 29,
+      "progress": 66,
       "started_at": "2026-11-28T07:55:17+00:00",
       "ended_at": null,
       "attempt": 2,
@@ -570,6 +570,21 @@
           "ts": "2026-11-28T07:55:36+00:00",
           "level": "info",
           "msg": "scene_01: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-28T07:55:41+00:00",
+          "level": "info",
+          "msg": "scene_03: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-28T07:56:00+00:00",
+          "level": "info",
+          "msg": "scene_04: stock_video (pixabay)"
+        },
+        {
+          "ts": "2026-11-28T07:56:00+00:00",
+          "level": "info",
+          "msg": "scene_05: stock_video (pixabay)"
         }
       ],
       "errors": [],
@@ -584,7 +599,7 @@
       ],
       "checkpoint": null,
       "status": "running",
-      "progress": 0,
+      "progress": 80,
       "started_at": "2026-11-28T07:55:17+00:00",
       "ended_at": null,
       "attempt": 2,
@@ -643,6 +658,16 @@
           "ts": "2026-11-28T07:55:17+00:00",
           "level": "info",
           "msg": "Narrating en with en-GB-RyanNeural"
+        },
+        {
+          "ts": "2026-11-28T07:55:42+00:00",
+          "level": "info",
+          "msg": "en voiceover: 45.6s"
+        },
+        {
+          "ts": "2026-11-28T07:55:42+00:00",
+          "level": "info",
+          "msg": "Generating an ambient music bed (no library tracks): progression #6, transpose -2, 5s chords"
         }
       ],
       "errors": [],
@@ -950,7 +975,7 @@
   "notifications": [],
   "pages_meta": {
     "repo": "jaleleddineagrebi/moderator",
-    "exported_at": "2026-11-28T07:55:36+00:00",
+    "exported_at": "2026-11-28T07:56:00+00:00",
     "uploads": [],
     "gh_run_url": "https://github.com/jaleleddineagrebi/moderator/actions/runs/46123104233"
   }
