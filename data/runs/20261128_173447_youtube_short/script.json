@@ -1,0 +1,145 @@
+{
+  "title": "Your Phone Motion Sensor Is a Hidden Spy",
+  "scenes": [
+    {
+      "vo": {
+        "en": "Stop typing until you flip your phone."
+      },
+      "on_screen": {
+        "en": "FLIP YOUR PHONE NOW"
+      },
+      "visual": {
+        "description": "A close-up of a man's hand rotating a smartphone from vertical to horizontal orientation.",
+        "search_terms": [
+          "hand rotating smartphone",
+          "phone tilt movement",
+          "rotating phone screen"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "The Hidden Sensor",
+      "id": "scene_01"
+    },
+    {
+      "vo": {
+        "en": "Your phone’s motion sensors are leaking your private data every single time you tilt the screen."
+      },
+      "on_screen": {
+        "en": "SENSORS ARE LEAKING"
+      },
+      "visual": {
+        "description": "Abstract blue and yellow data streams flowing rapidly across a dark background.",
+        "search_terms": [
+          "cyber data stream",
+          "digital binary flow",
+          "abstract technology motion"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_02"
+    },
+    {
+      "vo": {
+        "en": "Hackers use your accelerometer to measure the tiny vibrations made by your fingers as you type."
+      },
+      "on_screen": {
+        "en": "TRACKING EVERY TAP"
+      },
+      "visual": {
+        "description": "Extreme close-up of male fingers tapping rapidly on a smartphone keyboard.",
+        "search_terms": [
+          "male hands typing",
+          "smartphone screen close-up",
+          "fingers tapping"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_03"
+    },
+    {
+      "vo": {
+        "en": "Wait until you see the creepy part: they can reconstruct your passwords with eighty percent accuracy."
+      },
+      "on_screen": {
+        "en": "THEY SEE PASSWORDS"
+      },
+      "visual": {
+        "description": "A silhouette of a man in a dark room illuminated only by the glow of a computer screen.",
+        "search_terms": [
+          "hacker silhouette dark",
+          "cyber security concept",
+          "person in dark room"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "The Security Breach",
+      "id": "scene_04"
+    },
+    {
+      "vo": {
+        "en": "Rotate your phone sideways right now. That movement is exactly how they map your keyboard."
+      },
+      "on_screen": {
+        "en": "THE HACKER’S BLUEPRINT"
+      },
+      "visual": {
+        "description": "An oscilloscope showing green sound waves or vibration patterns moving across a grid.",
+        "search_terms": [
+          "oscilloscope wave",
+          "motion sensor graph",
+          "vibration visualization"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_05"
+    },
+    {
+      "vo": {
+        "en": "Most mobile browsers give websites full access to these sensors without ever asking your permission."
+      },
+      "on_screen": {
+        "en": "NO PERMISSION NEEDED"
+      },
+      "visual": {
+        "description": "A digital padlock icon on a screen flickering red as it is bypassed.",
+        "search_terms": [
+          "digital padlock icon",
+          "cyber security warning",
+          "system alert background"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "",
+      "id": "scene_06"
+    },
+    {
+      "vo": {
+        "en": "Subscribe for tomorrow's brain test and comment your phone model for a security rating, which is why you..."
+      },
+      "on_screen": {
+        "en": "SUBSCRIBE 🔔"
+      },
+      "visual": {
+        "description": "A serious-looking man pointing directly at the camera in a modern tech-lit environment.",
+        "search_terms": [
+          "serious man portrait",
+          "man pointing camera",
+          "tech expert look"
+        ],
+        "prefer": "video"
+      },
+      "chapter": "Protect Your Data",
+      "id": "scene_07"
+    }
+  ],
+  "idea_id": "accelerometer-keyboard-hack",
+  "languages": [
+    "en"
+  ],
+  "estimated_seconds": {
+    "en": 37.5
+  }
+}
